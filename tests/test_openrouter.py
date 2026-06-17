@@ -96,6 +96,21 @@ class OpenRouterTests(unittest.TestCase):
 
         self.assertIn("after 4 attempts", str(ctx.exception))
 
+    def test_node_subprocess_decodes_as_utf8(self):
+        # Node emits UTF-8; on Windows text=True defaults to cp1252 and crashes
+        # on non-ASCII model output. The client must pin encoding to utf-8.
+        client = OpenRouterClient(api_key="test-key")
+        completed = subprocess.CompletedProcess(
+            args=["node"],
+            returncode=0,
+            stdout="{\"choices\": [{\"message\": {\"content\": \"{\\\"ok\\\": true}\"}}]}",
+            stderr="",
+        )
+        with patch("codenames_benchmark.llm.openrouter.subprocess.run", return_value=completed) as run_mock:
+            client.complete(LLMRequest(model="fake-model", messages=[{"role": "user", "content": "Return json."}], json_schema={"type": "object"}))
+
+        self.assertEqual(run_mock.call_args.kwargs.get("encoding"), "utf-8")
+
 
 if __name__ == "__main__":
     unittest.main()

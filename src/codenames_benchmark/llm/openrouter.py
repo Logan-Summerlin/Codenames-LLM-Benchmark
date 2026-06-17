@@ -110,7 +110,15 @@ class OpenRouterClient:
             env["OPENROUTER_BODY_PATH"] = body_path
             for attempt in range(1, attempts + 1):
                 try:
-                    proc = subprocess.run(["node", "-e", _NODE_FETCH_SCRIPT], env=env, text=True, capture_output=True, timeout=timeout_seconds)
+                    proc = subprocess.run(
+                        ["node", "-e", _NODE_FETCH_SCRIPT],
+                        env=env,
+                        text=True,
+                        encoding="utf-8",
+                        errors="replace",
+                        capture_output=True,
+                        timeout=timeout_seconds,
+                    )
                 except subprocess.TimeoutExpired as exc:
                     last_error = f"node fetch timed out after {exc.timeout} seconds"
                     if attempt == attempts:
