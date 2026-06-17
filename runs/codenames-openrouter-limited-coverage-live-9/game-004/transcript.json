@@ -1,0 +1,1911 @@
+{
+  "board": {
+    "identities": {
+      "atlantis": "red",
+      "bill": "red",
+      "capital": "neutral",
+      "chair": "blue",
+      "charge": "blue",
+      "circle": "red",
+      "concert": "neutral",
+      "doctor": "red",
+      "draft": "assassin",
+      "france": "blue",
+      "glove": "neutral",
+      "green": "blue",
+      "new york": "neutral",
+      "night": "red",
+      "novel": "red",
+      "organ": "blue",
+      "parachute": "blue",
+      "plate": "neutral",
+      "plot": "neutral",
+      "saturn": "red",
+      "scorpion": "neutral",
+      "skyscraper": "blue",
+      "sock": "blue",
+      "spine": "red",
+      "tick": "red"
+    },
+    "revealed": [
+      "atlantis",
+      "charge",
+      "circle",
+      "doctor",
+      "draft",
+      "glove",
+      "green",
+      "new york",
+      "night",
+      "novel",
+      "plot",
+      "saturn",
+      "skyscraper"
+    ],
+    "words": {
+      "atlantis": "red",
+      "bill": "red",
+      "capital": "neutral",
+      "chair": "blue",
+      "charge": "blue",
+      "circle": "red",
+      "concert": "neutral",
+      "doctor": "red",
+      "draft": "assassin",
+      "france": "blue",
+      "glove": "neutral",
+      "green": "blue",
+      "new york": "neutral",
+      "night": "red",
+      "novel": "red",
+      "organ": "blue",
+      "parachute": "blue",
+      "plate": "neutral",
+      "plot": "neutral",
+      "saturn": "red",
+      "scorpion": "neutral",
+      "skyscraper": "blue",
+      "sock": "blue",
+      "spine": "red",
+      "tick": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "ring",
+        "count": 4,
+        "rationale": "Targets 'atlantis' (mythical lost city often associated with circular imagery), 'circle' (direct), 'saturn' (planet with rings), and 'spine' (vertebral rings). Avoids assassin ('draft') and neutral/opponent words. High-efficiency clue for red team."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.85,
+          "circle": 0.95,
+          "plate": 0.75,
+          "saturn": 0.8
+        },
+        "ranked_guesses": [
+          "circle",
+          "charge",
+          "saturn",
+          "plate"
+        ],
+        "rationale": "'ring' strongly connects to **circle** (0.95: a ring is a circular band), **charge** (0.85: 'ring a charge' or boxing ring), **saturn** (0.80: Saturn\u2019s rings), and **plate** (0.75: 'ring' as in a dinner plate\u2019s rim or 'ring plate' in mechanics). Top 4 exceed 0.70 confidence; lower-ranked words lack clear/strong ties. No opponent clues to avoid.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "capital": 0.8,
+          "charge": 0.85,
+          "circle": 0.95,
+          "concert": 0.75
+        },
+        "ranked_guesses": [
+          "circle",
+          "charge",
+          "capital",
+          "concert"
+        ],
+        "rationale": "'ring' most directly associates with **circle** (e.g., wedding ring, ring shape = 0.95). **Charge** (e.g., 'ring up a charge' = 0.85), **capital** (e.g., 'Capital One' ring logo = 0.80), and **concert** (e.g., 'ring of fire' or arena concerts = 0.75) are strong secondary matches. Only these four meet the \u22650.70 threshold. Lower-confidence words (e.g., 'plate' as in 'ring plate') are excluded. No opponent clue conflicts exist.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "capital": 0.8,
+          "charge": 0.85,
+          "circle": 0.95,
+          "concert": 0.75
+        },
+        "ranked_guesses": [
+          "circle",
+          "charge",
+          "capital",
+          "concert"
+        ],
+        "rationale": "'ring' strongly connects to **circle** (0.95) as a direct synonym, followed by **charge** (0.85, e.g., 'ring a charge' in boxing), **capital** (0.80, e.g., 'Ring of Kerry' or capital as a central 'ring'-like hub), and **concert** (0.75, e.g., 'ring of singers' or 'in the round' performances). Top 4 exceed 0.70 threshold; lower-confidence words (e.g., **plate**, **saturn**) are excluded. No opponent clue conflicts exist.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "electric",
+        "count": 2,
+        "rationale": "'Electric' relates to 'charge' and 'green' as in 'electricity' and 'green energy'."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "skyscraper": 0.75
+        },
+        "ranked_guesses": [
+          "charge",
+          "skyscraper"
+        ],
+        "rationale": "Charge relates to electricity, and skyscraper can relate to electric power lines or infrastructure.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "skyscraper": 0.75
+        },
+        "ranked_guesses": [
+          "charge",
+          "skyscraper"
+        ],
+        "rationale": "Charge relates to electricity, and skyscraper can be associated with electric power lines.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "skyscraper": 0.8
+        },
+        "ranked_guesses": [
+          "doctor",
+          "skyscraper"
+        ],
+        "rationale": "The clue 'electric 2' suggests words related to electricity or electrical concepts. 'Doctor' and 'skyscraper' are directly related to electricity, with 'doctor' potentially referring to electrical devices or terms and 'skyscraper' to electrical structures or systems.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 2,
+        "rationale": "Targets 'doctor' and 'spine' as red words, avoiding direct matches or substrings of board words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "'doctor' is the strongest and most direct association with 'medical' (0.95 confidence). No other unrevealed word reaches the 0.70 threshold, but 'doctor' alone justifies a guess. Avoid 'charge' (opponent's prior clue: 'electric') and already-revealed words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "'doctor' is the strongest and most direct association with 'medical' (0.95 confidence). 'Spine' (0.75) and 'organ' (0.80) are also plausible but less direct. Prioritizing the clearest match first to minimize risk.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "'doctor' is the strongest direct match to 'medical' (0.95 confidence). 'organ' is also plausible (0.85) but less direct than 'doctor'. 'spine' is borderline (0.72) but secondary. Prioritizing the clearest link first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celestial",
+        "count": 2,
+        "rationale": "Hints at 'saturn' (red) and 'green' (blue) without using substrings of unrevealed words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "saturn": 0.8
+        },
+        "ranked_guesses": [
+          "saturn"
+        ],
+        "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or themes. 'Saturn' is a direct match to the clue as it is a celestial body, and it is not tied to the opponent's clues. It is also a safe word for the blue team.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "saturn": 0.8,
+          "scorpion": 0.8
+        },
+        "ranked_guesses": [
+          "saturn",
+          "scorpion"
+        ],
+        "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or constellations. 'Saturn' and 'scorpion' are celestial-themed words with confidence levels >= 0.70, making them strong matches for the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "saturn": 0.8
+        },
+        "ranked_guesses": [
+          "saturn"
+        ],
+        "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or phenomena. 'Saturn' is a direct match to the clue as it is a celestial body, and it is not tied to any opponent clues. The confidence level is high enough to be considered a safe guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "story",
+        "count": 2,
+        "rationale": "links 'novel' and 'plot' as red words, avoids all board substrings and forbidden words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.92,
+          "plot": 0.88
+        },
+        "ranked_guesses": [
+          "novel",
+          "plot"
+        ],
+        "rationale": "'novel' and 'plot' are the strongest direct matches to 'story' (both core narrative/literary terms). Confidence in these exceeds 0.80, while all other words fall below the 0.70 threshold. Opponent clues ('electric', 'celestial') have no overlap here. No need to stop.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.92,
+          "plot": 0.88
+        },
+        "ranked_guesses": [
+          "novel",
+          "plot"
+        ],
+        "rationale": "'novel' and 'plot' are the strongest direct matches to 'story' (literary narrative and storyline, respectively). Both exceed 0.80 confidence, with no interference from opponent clues ('electric', 'celestial'). No other unrevealed words reach the 0.70 threshold for guessing.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.95,
+          "plot": 0.9
+        },
+        "ranked_guesses": [
+          "novel",
+          "plot"
+        ],
+        "rationale": "'novel' and 'plot' are the strongest, most direct associations with 'story' (e.g., a *novel* is a long *story*; a *plot* is the *story*line). All other words either weakly connect (e.g., 'atlantis' as a mythical *story*) or are unrelated. Opponent clues ('electric', 'celestial') and prior red/blue reveals pose no conflict here. Confidence in top 2 exceeds 0.90.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "high",
+        "count": 2,
+        "rationale": "Refers to 'skyscraper' and 'spine' without using substrings of unrevealed words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "skyscraper": 0.8
+        },
+        "ranked_guesses": [
+          "skyscraper"
+        ],
+        "rationale": "Skyscraper is directly related to 'high' and is a strong match.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "skyscraper": 0.9
+        },
+        "ranked_guesses": [
+          "skyscraper",
+          "charge"
+        ],
+        "rationale": "Both 'skyscraper' and 'charge' relate to 'high' and have high confidence scores.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "skyscraper": 0.8
+        },
+        "ranked_guesses": [
+          "skyscraper"
+        ],
+        "rationale": "The clue 'high' suggests words related to elevation or height. 'Skyscraper' is a direct match due to its association with height. 'Green' and 'charge' are also related to the clue 'electric 2' from the spymaster, but 'skyscraper' is prioritized due to its direct relevance to 'high'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "billing",
+        "count": 3,
+        "rationale": "links 'atlantis' (mythical city, like a lost bill), 'bill' (direct), and 'tick' (as in billing cycles or clock ticks)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celestial",
+        "count": 2,
+        "rationale": "The clue 'celestial' links to 'skyscraper' (directly revealed) and 'saturn' (revealed by the red team)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "saturn": 0.8
+        },
+        "ranked_guesses": [
+          "saturn"
+        ],
+        "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or concepts. 'Saturn' is a direct match as it is a celestial body, and it has a high confidence score of 0.8, indicating a strong match. Other words like 'skyscraper' and 'new york' are related to celestial but not directly celestial bodies themselves, making 'saturn' the best choice.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "saturn": 0.8
+        },
+        "ranked_guesses": [
+          "saturn"
+        ],
+        "rationale": "Saturn is a celestial body, matching the 'celestial 2' clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "saturn": 0.8
+        },
+        "ranked_guesses": [
+          "saturn"
+        ],
+        "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or themes. 'Saturn' is directly related to the clue as it is a celestial body, and it has a high confidence score of 0.8, indicating a strong match. The other words do not align as directly with the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "myth",
+        "count": 2,
+        "rationale": "connects 'atlantis' (mythical city) and 'spine' (as in backbone of myths like 'spin a tale'). Avoids 'bill' and other board words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.95
+        },
+        "ranked_guesses": [
+          "atlantis"
+        ],
+        "rationale": "'atlantis' is a legendary mythical city with a **0.95 confidence**\u2014the strongest direct match to 'myth 2'. No other unrevealed word ties as clearly to mythology (e.g., 'scorpion' is a zodiac/myth link but weaker). Avoiding opponent-related words (e.g., 'charge'/'electric' or 'saturn'/'celestial').",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.95
+        },
+        "ranked_guesses": [
+          "atlantis"
+        ],
+        "rationale": "'atlantis' is the strongest and most direct mythological association (lost city of Atlantis). No other unrevealed word ties as clearly to 'myth' with >=0.70 confidence. Opponent clues ('electric', 'celestial', 'high') do not conflict with this guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.95
+        },
+        "ranked_guesses": [
+          "atlantis"
+        ],
+        "rationale": "'atlantis' is the strongest and most direct mythological association on the board (0.95 confidence). It is a legendary city, fitting the 'myth' clue perfectly. No other unrevealed word ties as clearly to mythology. The next closest, 'scorpion' (0.60), is a mythological constellation but too weak to guess. Avoiding opponent-related words (e.g., 'charge'/'electric') and prioritizing directness, 'atlantis' is the only valid guess here.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "urban",
+        "count": 2,
+        "rationale": "Links 'skyscraper' (direct) and 'parachute' (often associated with urban environments)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "new york": 0.8,
+          "skyscraper": 0.75
+        },
+        "ranked_guesses": [
+          "new york",
+          "skyscraper"
+        ],
+        "rationale": "Both 'new york' and 'skyscraper' are strongly associated with urban environments.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "new york": 0.8,
+          "skyscraper": 0.75
+        },
+        "ranked_guesses": [
+          "new york",
+          "skyscraper"
+        ],
+        "rationale": "Both 'new york' and 'skyscraper' are strongly associated with urban environments.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "capital": 0.75,
+          "new york": 0.8
+        },
+        "ranked_guesses": [
+          "new york",
+          "capital"
+        ],
+        "rationale": "Both 'new york' and 'capital' are strongly associated with urban environments.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "time",
+        "count": 3,
+        "rationale": "'night' (as in nighttime), 'tick' (as in clock tick), and 'spine' (as in 'spine-chilling' or 'backbone of time' metaphorically). Avoids assassin 'draft' and neutral/blue words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "concert": 0.75,
+          "draft": 0.7,
+          "night": 0.85
+        },
+        "ranked_guesses": [
+          "night",
+          "concert",
+          "draft"
+        ],
+        "rationale": "'night' is the strongest direct match for 'time' (e.g., 'nighttime,' 'midnight'). 'Concert' ties to 'time' via scheduling/showtime (0.75). 'Draft' links to 'time' via deadlines/drafting periods (0.70). Lower-confidence words (e.g., 'tick,' 'chair') are excluded per rules. Opponent clues ('electric,' 'celestial') are avoided; no overlaps detected here.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 2,
+        "rationale": "Links 'green' (color of nature) and 'spine' (vertebrate part, often associated with animals in nature)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "glove": 0.75,
+          "green": 0.8
+        },
+        "ranked_guesses": [
+          "green",
+          "glove"
+        ],
+        "rationale": "Both 'green' and 'glove' relate to nature; 'green' as a color and 'glove' as a natural material.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.8,
+          "scorpion": 0.75
+        },
+        "ranked_guesses": [
+          "green",
+          "scorpion"
+        ],
+        "rationale": "Green and scorpion are nature-related and fit the clue 'nature 2'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "glove": 0.75,
+          "green": 0.72,
+          "scorpion": 0.7
+        },
+        "ranked_guesses": [
+          "glove",
+          "green",
+          "scorpion"
+        ],
+        "rationale": "These words are related to nature and have confidence >= 0.70.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sleep",
+        "count": 2,
+        "rationale": "links 'night' (time for sleep) and 'spine' (sleeping posture)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "draft": 0.71,
+          "night": 0.92
+        },
+        "ranked_guesses": [
+          "night",
+          "draft"
+        ],
+        "rationale": "'sleep 2' most strongly connects to **night** (0.92: primary association with sleep) and **draft** (0.71: secondary via 'sleep draft' as a colloquial term for airflow while sleeping or 'draft beer' at night contexts). No opponent-clue conflicts; 'night' is the safest first guess. Avoid lower-confidence words like 'chair' (0.65) or 'concert' (0.60) per rules.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "draft": 0.71,
+          "night": 0.92
+        },
+        "ranked_guesses": [
+          "night",
+          "draft"
+        ],
+        "rationale": "'sleep 2' most strongly connects to **night** (primary association: bedtime/nighttime) and **draft** (secondary: 'sleep draft' as slang for airflow while sleeping, though weaker). No other unrevealed words exceed 0.70 confidence after these. Avoid opponent-linked words (e.g., 'capital' could tie to 'urban'/'electric' clues). Proceed with top 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "draft": 0.71,
+          "night": 0.92
+        },
+        "ranked_guesses": [
+          "night",
+          "draft"
+        ],
+        "rationale": "'sleep 2' most directly ties to **night** (high confidence; sleep occurs at night) and **draft** (secondary: 'draft' as in a cold breeze at night or 'sleeping draft' in some contexts). 'Chair' (e.g., recliner) and 'concert' (e.g., sleepy audience) are weaker. No opponent-clue conflicts (e.g., 'electric'/'celestial'/'urban'/'nature' unrelated). Only 'night' and 'draft' meet the \u22650.70 threshold for guessing.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "ring"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "circle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "charge"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "electric"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "skyscraper"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celestial"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "saturn"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "story"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "novel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "plot"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "high"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "billing",
+        "count": 3,
+        "rationale": "links 'atlantis' (mythical city, like a lost bill), 'bill' (direct), and 'tick' (as in billing cycles or clock ticks)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "bill",
+      "reason": "morphological_variant",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celestial"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlantis"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "urban"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "new york"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "time"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "green"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "glove"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sleep"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "night"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "draft"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 49,
+    "public_event_count": 32,
+    "reason": "assassin",
+    "seed": "codenames-live-9-004-mistralai_mistral_medium_3_1-vs-microsoft_phi_4",
+    "team_blue": "Phi-4",
+    "team_red": "Mistral Medium 3.1",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "ring"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.85,
+              "circle": 0.95,
+              "plate": 0.75,
+              "saturn": 0.8
+            },
+            "ranked_guesses": [
+              "circle",
+              "charge",
+              "saturn",
+              "plate"
+            ],
+            "rationale": "'ring' strongly connects to **circle** (0.95: a ring is a circular band), **charge** (0.85: 'ring a charge' or boxing ring), **saturn** (0.80: Saturn\u2019s rings), and **plate** (0.75: 'ring' as in a dinner plate\u2019s rim or 'ring plate' in mechanics). Top 4 exceed 0.70 confidence; lower-ranked words lack clear/strong ties. No opponent clues to avoid.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "capital": 0.8,
+              "charge": 0.85,
+              "circle": 0.95,
+              "concert": 0.75
+            },
+            "ranked_guesses": [
+              "circle",
+              "charge",
+              "capital",
+              "concert"
+            ],
+            "rationale": "'ring' most directly associates with **circle** (e.g., wedding ring, ring shape = 0.95). **Charge** (e.g., 'ring up a charge' = 0.85), **capital** (e.g., 'Capital One' ring logo = 0.80), and **concert** (e.g., 'ring of fire' or arena concerts = 0.75) are strong secondary matches. Only these four meet the \u22650.70 threshold. Lower-confidence words (e.g., 'plate' as in 'ring plate') are excluded. No opponent clue conflicts exist.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "capital": 0.8,
+              "charge": 0.85,
+              "circle": 0.95,
+              "concert": 0.75
+            },
+            "ranked_guesses": [
+              "circle",
+              "charge",
+              "capital",
+              "concert"
+            ],
+            "rationale": "'ring' strongly connects to **circle** (0.95) as a direct synonym, followed by **charge** (0.85, e.g., 'ring a charge' in boxing), **capital** (0.80, e.g., 'Ring of Kerry' or capital as a central 'ring'-like hub), and **concert** (0.75, e.g., 'ring of singers' or 'in the round' performances). Top 4 exceed 0.70 threshold; lower-confidence words (e.g., **plate**, **saturn**) are excluded. No opponent clue conflicts exist.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "circle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "charge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ring",
+          "count": 4,
+          "rationale": "Targets 'atlantis' (mythical lost city often associated with circular imagery), 'circle' (direct), 'saturn' (planet with rings), and 'spine' (vertebral rings). Avoids assassin ('draft') and neutral/opponent words. High-efficiency clue for red team."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "electric"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "skyscraper": 0.75
+            },
+            "ranked_guesses": [
+              "charge",
+              "skyscraper"
+            ],
+            "rationale": "Charge relates to electricity, and skyscraper can relate to electric power lines or infrastructure.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "skyscraper": 0.75
+            },
+            "ranked_guesses": [
+              "charge",
+              "skyscraper"
+            ],
+            "rationale": "Charge relates to electricity, and skyscraper can be associated with electric power lines.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "skyscraper": 0.8
+            },
+            "ranked_guesses": [
+              "doctor",
+              "skyscraper"
+            ],
+            "rationale": "The clue 'electric 2' suggests words related to electricity or electrical concepts. 'Doctor' and 'skyscraper' are directly related to electricity, with 'doctor' potentially referring to electrical devices or terms and 'skyscraper' to electrical structures or systems.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "skyscraper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "electric",
+          "count": 2,
+          "rationale": "'Electric' relates to 'charge' and 'green' as in 'electricity' and 'green energy'."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "'doctor' is the strongest and most direct association with 'medical' (0.95 confidence). No other unrevealed word reaches the 0.70 threshold, but 'doctor' alone justifies a guess. Avoid 'charge' (opponent's prior clue: 'electric') and already-revealed words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "'doctor' is the strongest and most direct association with 'medical' (0.95 confidence). 'Spine' (0.75) and 'organ' (0.80) are also plausible but less direct. Prioritizing the clearest match first to minimize risk.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "'doctor' is the strongest direct match to 'medical' (0.95 confidence). 'organ' is also plausible (0.85) but less direct than 'doctor'. 'spine' is borderline (0.72) but secondary. Prioritizing the clearest link first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 2,
+          "rationale": "Targets 'doctor' and 'spine' as red words, avoiding direct matches or substrings of board words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celestial"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "saturn": 0.8
+            },
+            "ranked_guesses": [
+              "saturn"
+            ],
+            "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or themes. 'Saturn' is a direct match to the clue as it is a celestial body, and it is not tied to the opponent's clues. It is also a safe word for the blue team.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "saturn": 0.8,
+              "scorpion": 0.8
+            },
+            "ranked_guesses": [
+              "saturn",
+              "scorpion"
+            ],
+            "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or constellations. 'Saturn' and 'scorpion' are celestial-themed words with confidence levels >= 0.70, making them strong matches for the clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "saturn": 0.8
+            },
+            "ranked_guesses": [
+              "saturn"
+            ],
+            "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or phenomena. 'Saturn' is a direct match to the clue as it is a celestial body, and it is not tied to any opponent clues. The confidence level is high enough to be considered a safe guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "saturn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celestial",
+          "count": 2,
+          "rationale": "Hints at 'saturn' (red) and 'green' (blue) without using substrings of unrevealed words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "story"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.92,
+              "plot": 0.88
+            },
+            "ranked_guesses": [
+              "novel",
+              "plot"
+            ],
+            "rationale": "'novel' and 'plot' are the strongest direct matches to 'story' (both core narrative/literary terms). Confidence in these exceeds 0.80, while all other words fall below the 0.70 threshold. Opponent clues ('electric', 'celestial') have no overlap here. No need to stop.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.92,
+              "plot": 0.88
+            },
+            "ranked_guesses": [
+              "novel",
+              "plot"
+            ],
+            "rationale": "'novel' and 'plot' are the strongest direct matches to 'story' (literary narrative and storyline, respectively). Both exceed 0.80 confidence, with no interference from opponent clues ('electric', 'celestial'). No other unrevealed words reach the 0.70 threshold for guessing.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.95,
+              "plot": 0.9
+            },
+            "ranked_guesses": [
+              "novel",
+              "plot"
+            ],
+            "rationale": "'novel' and 'plot' are the strongest, most direct associations with 'story' (e.g., a *novel* is a long *story*; a *plot* is the *story*line). All other words either weakly connect (e.g., 'atlantis' as a mythical *story*) or are unrelated. Opponent clues ('electric', 'celestial') and prior red/blue reveals pose no conflict here. Confidence in top 2 exceeds 0.90.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "novel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "plot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "story",
+          "count": 2,
+          "rationale": "links 'novel' and 'plot' as red words, avoids all board substrings and forbidden words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "high"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "skyscraper": 0.8
+            },
+            "ranked_guesses": [
+              "skyscraper"
+            ],
+            "rationale": "Skyscraper is directly related to 'high' and is a strong match.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "skyscraper": 0.9
+            },
+            "ranked_guesses": [
+              "skyscraper",
+              "charge"
+            ],
+            "rationale": "Both 'skyscraper' and 'charge' relate to 'high' and have high confidence scores.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "skyscraper": 0.8
+            },
+            "ranked_guesses": [
+              "skyscraper"
+            ],
+            "rationale": "The clue 'high' suggests words related to elevation or height. 'Skyscraper' is a direct match due to its association with height. 'Green' and 'charge' are also related to the clue 'electric 2' from the spymaster, but 'skyscraper' is prioritized due to its direct relevance to 'high'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "high",
+          "count": 2,
+          "rationale": "Refers to 'skyscraper' and 'spine' without using substrings of unrevealed words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celestial"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "myth"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlantis"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "billing",
+          "count": 3,
+          "rationale": "links 'atlantis' (mythical city, like a lost bill), 'bill' (direct), and 'tick' (as in billing cycles or clock ticks)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "urban"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "saturn": 0.8
+            },
+            "ranked_guesses": [
+              "saturn"
+            ],
+            "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or concepts. 'Saturn' is a direct match as it is a celestial body, and it has a high confidence score of 0.8, indicating a strong match. Other words like 'skyscraper' and 'new york' are related to celestial but not directly celestial bodies themselves, making 'saturn' the best choice.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "saturn": 0.8
+            },
+            "ranked_guesses": [
+              "saturn"
+            ],
+            "rationale": "Saturn is a celestial body, matching the 'celestial 2' clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "saturn": 0.8
+            },
+            "ranked_guesses": [
+              "saturn"
+            ],
+            "rationale": "The clue 'celestial 2' suggests words related to celestial bodies or themes. 'Saturn' is directly related to the clue as it is a celestial body, and it has a high confidence score of 0.8, indicating a strong match. The other words do not align as directly with the clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "new york"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celestial",
+          "count": 2,
+          "rationale": "The clue 'celestial' links to 'skyscraper' (directly revealed) and 'saturn' (revealed by the red team)."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "time"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.95
+            },
+            "ranked_guesses": [
+              "atlantis"
+            ],
+            "rationale": "'atlantis' is a legendary mythical city with a **0.95 confidence**\u2014the strongest direct match to 'myth 2'. No other unrevealed word ties as clearly to mythology (e.g., 'scorpion' is a zodiac/myth link but weaker). Avoiding opponent-related words (e.g., 'charge'/'electric' or 'saturn'/'celestial').",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.95
+            },
+            "ranked_guesses": [
+              "atlantis"
+            ],
+            "rationale": "'atlantis' is the strongest and most direct mythological association (lost city of Atlantis). No other unrevealed word ties as clearly to 'myth' with >=0.70 confidence. Opponent clues ('electric', 'celestial', 'high') do not conflict with this guess.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.95
+            },
+            "ranked_guesses": [
+              "atlantis"
+            ],
+            "rationale": "'atlantis' is the strongest and most direct mythological association on the board (0.95 confidence). It is a legendary city, fitting the 'myth' clue perfectly. No other unrevealed word ties as clearly to mythology. The next closest, 'scorpion' (0.60), is a mythological constellation but too weak to guess. Avoiding opponent-related words (e.g., 'charge'/'electric') and prioritizing directness, 'atlantis' is the only valid guess here.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "myth",
+          "count": 2,
+          "rationale": "connects 'atlantis' (mythical city) and 'spine' (as in backbone of myths like 'spin a tale'). Avoids 'bill' and other board words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "new york": 0.8,
+              "skyscraper": 0.75
+            },
+            "ranked_guesses": [
+              "new york",
+              "skyscraper"
+            ],
+            "rationale": "Both 'new york' and 'skyscraper' are strongly associated with urban environments.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "new york": 0.8,
+              "skyscraper": 0.75
+            },
+            "ranked_guesses": [
+              "new york",
+              "skyscraper"
+            ],
+            "rationale": "Both 'new york' and 'skyscraper' are strongly associated with urban environments.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "capital": 0.75,
+              "new york": 0.8
+            },
+            "ranked_guesses": [
+              "new york",
+              "capital"
+            ],
+            "rationale": "Both 'new york' and 'capital' are strongly associated with urban environments.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "green"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "glove"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "urban",
+          "count": 2,
+          "rationale": "Links 'skyscraper' (direct) and 'parachute' (often associated with urban environments)."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sleep"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "concert": 0.75,
+              "draft": 0.7,
+              "night": 0.85
+            },
+            "ranked_guesses": [
+              "night",
+              "concert",
+              "draft"
+            ],
+            "rationale": "'night' is the strongest direct match for 'time' (e.g., 'nighttime,' 'midnight'). 'Concert' ties to 'time' via scheduling/showtime (0.75). 'Draft' links to 'time' via deadlines/drafting periods (0.70). Lower-confidence words (e.g., 'tick,' 'chair') are excluded per rules. Opponent clues ('electric,' 'celestial') are avoided; no overlaps detected here.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "night"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "draft"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "time",
+          "count": 3,
+          "rationale": "'night' (as in nighttime), 'tick' (as in clock tick), and 'spine' (as in 'spine-chilling' or 'backbone of time' metaphorically). Avoids assassin 'draft' and neutral/blue words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

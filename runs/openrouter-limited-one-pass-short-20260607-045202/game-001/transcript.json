@@ -1,0 +1,914 @@
+{
+  "board": {
+    "identities": {
+      "alien": "blue",
+      "animal": "red",
+      "atlas": "red",
+      "battery": "neutral",
+      "butter": "red",
+      "castle": "red",
+      "doctor": "red",
+      "engine": "red",
+      "flower": "neutral",
+      "forest": "blue",
+      "fox": "blue",
+      "machine": "blue",
+      "memory": "neutral",
+      "mirror": "blue",
+      "nurse": "blue",
+      "palace": "neutral",
+      "poet": "neutral",
+      "river": "assassin",
+      "rocket": "blue",
+      "stone": "red",
+      "sugar": "red",
+      "temple": "neutral",
+      "tiger": "neutral",
+      "winter": "red",
+      "wizard": "blue"
+    },
+    "revealed": [
+      "castle",
+      "doctor",
+      "engine",
+      "rocket",
+      "wizard"
+    ],
+    "words": {
+      "alien": "blue",
+      "animal": "red",
+      "atlas": "red",
+      "battery": "neutral",
+      "butter": "red",
+      "castle": "red",
+      "doctor": "red",
+      "engine": "red",
+      "flower": "neutral",
+      "forest": "blue",
+      "fox": "blue",
+      "machine": "blue",
+      "memory": "neutral",
+      "mirror": "blue",
+      "nurse": "blue",
+      "palace": "neutral",
+      "poet": "neutral",
+      "river": "assassin",
+      "rocket": "blue",
+      "stone": "red",
+      "sugar": "red",
+      "temple": "neutral",
+      "tiger": "neutral",
+      "winter": "red",
+      "wizard": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "structure",
+        "count": 3,
+        "rationale": "Multiple words on the board relate to buildings or constructions."
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.8,
+          "palace": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "castle",
+          "palace",
+          "temple"
+        ],
+        "rationale": "All three words are related to structures, which matches the clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.8,
+          "palace": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "castle",
+          "palace",
+          "temple"
+        ],
+        "rationale": "All three words are related to structures, which matches the active clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.8,
+          "palace": 0.6,
+          "temple": 0.4
+        },
+        "ranked_guesses": [
+          "castle",
+          "palace",
+          "temple"
+        ],
+        "rationale": "All three words are related to structures, which matches the active clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fantasy",
+        "count": 2,
+        "rationale": "Both 'wizard' and 'alien' fit within the fantasy genre."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "palace"
+        ],
+        "rationale": "Both words relate to fantasy themes, with 'wizard' being a strong association and 'palace' also fitting the fantasy genre.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "palace"
+        ],
+        "rationale": "Both words relate to fantasy themes, with 'wizard' being a strong association and 'palace' also fitting the fantasy setting.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "palace"
+        ],
+        "rationale": "Both words relate to fantasy themes, with 'wizard' being a strong association and 'palace' fitting the fantasy setting.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "power",
+        "count": 2,
+        "rationale": "related to machines"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "machine": 0.7
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both words are related to the concept of power, which is the current clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "machine": 0.7
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both words are related to power, like a powerful engine or a machine that uses power.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both words are related to 'power' and are on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Refers to the concept of exploration and technology, linking to alien and rocket."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "rocket",
+          "alien"
+        ],
+        "rationale": "Both words relate to space; rocket is a strong association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "rocket",
+          "alien"
+        ],
+        "rationale": "Both words relate to space; rocket is a strong association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "rocket",
+          "alien"
+        ],
+        "rationale": "Both words relate to space; rocket is a strong association, alien is a secondary but relevant connection.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 2,
+        "rationale": "doctor and nurse"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "nurse": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "nurse"
+        ],
+        "rationale": "Both words are related to the medical field",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "nurse": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "nurse"
+        ],
+        "rationale": "Both words are related to the medical field, which is the current clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "nurse": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "nurse"
+        ],
+        "rationale": "Both words are related to the medical field, which is the current clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "structure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "castle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fantasy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wizard"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "power"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "engine"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 20,
+    "public_event_count": 15,
+    "reason": null,
+    "seed": "one-pass-001-meta_llama_llama_3_70b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "structure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.8,
+              "palace": 0.7,
+              "temple": 0.6
+            },
+            "ranked_guesses": [
+              "castle",
+              "palace",
+              "temple"
+            ],
+            "rationale": "All three words are related to structures, which matches the clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.8,
+              "palace": 0.7,
+              "temple": 0.6
+            },
+            "ranked_guesses": [
+              "castle",
+              "palace",
+              "temple"
+            ],
+            "rationale": "All three words are related to structures, which matches the active clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.8,
+              "palace": 0.6,
+              "temple": 0.4
+            },
+            "ranked_guesses": [
+              "castle",
+              "palace",
+              "temple"
+            ],
+            "rationale": "All three words are related to structures, which matches the active clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "castle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "structure",
+          "count": 3,
+          "rationale": "Multiple words on the board relate to buildings or constructions."
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fantasy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.7,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "palace"
+            ],
+            "rationale": "Both words relate to fantasy themes, with 'wizard' being a strong association and 'palace' also fitting the fantasy genre.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.7,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "palace"
+            ],
+            "rationale": "Both words relate to fantasy themes, with 'wizard' being a strong association and 'palace' also fitting the fantasy setting.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.7,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "palace"
+            ],
+            "rationale": "Both words relate to fantasy themes, with 'wizard' being a strong association and 'palace' fitting the fantasy setting.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fantasy",
+          "count": 2,
+          "rationale": "Both 'wizard' and 'alien' fit within the fantasy genre."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "power"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "machine": 0.7
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both words are related to the concept of power, which is the current clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "machine": 0.7
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both words are related to power, like a powerful engine or a machine that uses power.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "machine": 0.6
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both words are related to 'power' and are on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "engine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "power",
+          "count": 2,
+          "rationale": "related to machines"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "rocket",
+              "alien"
+            ],
+            "rationale": "Both words relate to space; rocket is a strong association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "rocket",
+              "alien"
+            ],
+            "rationale": "Both words relate to space; rocket is a strong association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "rocket",
+              "alien"
+            ],
+            "rationale": "Both words relate to space; rocket is a strong association, alien is a secondary but relevant connection.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "Refers to the concept of exploration and technology, linking to alien and rocket."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "nurse": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "nurse"
+            ],
+            "rationale": "Both words are related to the medical field",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "nurse": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "nurse"
+            ],
+            "rationale": "Both words are related to the medical field, which is the current clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "nurse": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "nurse"
+            ],
+            "rationale": "Both words are related to the medical field, which is the current clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 2,
+          "rationale": "doctor and nurse"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    }
+  ]
+}

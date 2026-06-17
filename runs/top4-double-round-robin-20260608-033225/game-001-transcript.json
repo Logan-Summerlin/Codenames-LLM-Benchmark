@@ -1,0 +1,430 @@
+{
+  "board": {
+    "identities": {
+      "atlas": "red",
+      "autumn": "blue",
+      "balloon": "blue",
+      "captain": "red",
+      "compass": "blue",
+      "copper": "red",
+      "doctor": "blue",
+      "dream": "blue",
+      "eagle": "assassin",
+      "flower": "red",
+      "fox": "neutral",
+      "leather": "neutral",
+      "museum": "red",
+      "novel": "blue",
+      "nurse": "neutral",
+      "paper": "red",
+      "pilot": "blue",
+      "secret": "red",
+      "singer": "neutral",
+      "spring": "neutral",
+      "sugar": "neutral",
+      "temple": "neutral",
+      "voyage": "red",
+      "water": "blue",
+      "wizard": "red"
+    },
+    "revealed": [
+      "eagle",
+      "museum",
+      "temple"
+    ],
+    "words": {
+      "atlas": "red",
+      "autumn": "blue",
+      "balloon": "blue",
+      "captain": "red",
+      "compass": "blue",
+      "copper": "red",
+      "doctor": "blue",
+      "dream": "blue",
+      "eagle": "assassin",
+      "flower": "red",
+      "fox": "neutral",
+      "leather": "neutral",
+      "museum": "red",
+      "novel": "blue",
+      "nurse": "neutral",
+      "paper": "red",
+      "pilot": "blue",
+      "secret": "red",
+      "singer": "neutral",
+      "spring": "neutral",
+      "sugar": "neutral",
+      "temple": "neutral",
+      "voyage": "red",
+      "water": "blue",
+      "wizard": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "history",
+        "count": 4,
+        "rationale": "Museum, atlas, paper, and voyage are all strongly associated with historical records and exploration."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "museum": 0.9,
+          "novel": 0.6,
+          "temple": 0.7
+        },
+        "ranked_guesses": [
+          "museum",
+          "atlas",
+          "temple",
+          "novel"
+        ],
+        "rationale": "Museum, atlas, temple, and novel are strongly associated with historical study and records.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.85,
+          "museum": 0.9,
+          "temple": 0.75,
+          "voyage": 0.7
+        },
+        "ranked_guesses": [
+          "museum",
+          "atlas",
+          "temple",
+          "voyage"
+        ],
+        "rationale": "Museum, atlas, temple, and voyage are strongly associated with historical study and exploration.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.9,
+          "novel": 0.8,
+          "temple": 0.7,
+          "voyage": 0.7
+        },
+        "ranked_guesses": [
+          "museum",
+          "novel",
+          "temple",
+          "voyage"
+        ],
+        "rationale": "Museum, novel, temple, and voyage are strongly associated with historical contexts.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 2,
+        "rationale": "Both balloon and pilot are associated with the sky."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.78,
+          "eagle": 0.72
+        },
+        "ranked_guesses": [
+          "balloon",
+          "eagle"
+        ],
+        "rationale": "Both balloon and eagle are directly associated with the sky; balloon floats in the air and eagles fly high.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.73,
+          "pilot": 0.78
+        },
+        "ranked_guesses": [
+          "pilot",
+          "eagle"
+        ],
+        "rationale": "Both relate to sky: pilots fly in the sky and eagles soar in the sky.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "history"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "museum"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "eagle"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 5,
+    "reason": "assassin",
+    "seed": "top4-double-round-robin-001-google_gemini_3_1_flash_lite-vs-openai_gpt_oss_120b",
+    "team_blue": "GPT-OSS 120B",
+    "team_red": "Gemini 3.1 Flash Lite",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "history"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "museum": 0.9,
+              "novel": 0.6,
+              "temple": 0.7
+            },
+            "ranked_guesses": [
+              "museum",
+              "atlas",
+              "temple",
+              "novel"
+            ],
+            "rationale": "Museum, atlas, temple, and novel are strongly associated with historical study and records.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.85,
+              "museum": 0.9,
+              "temple": 0.75,
+              "voyage": 0.7
+            },
+            "ranked_guesses": [
+              "museum",
+              "atlas",
+              "temple",
+              "voyage"
+            ],
+            "rationale": "Museum, atlas, temple, and voyage are strongly associated with historical study and exploration.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.9,
+              "novel": 0.8,
+              "temple": 0.7,
+              "voyage": 0.7
+            },
+            "ranked_guesses": [
+              "museum",
+              "novel",
+              "temple",
+              "voyage"
+            ],
+            "rationale": "Museum, novel, temple, and voyage are strongly associated with historical contexts.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "museum"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "history",
+          "count": 4,
+          "rationale": "Museum, atlas, paper, and voyage are all strongly associated with historical records and exploration."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.78,
+              "eagle": 0.72
+            },
+            "ranked_guesses": [
+              "balloon",
+              "eagle"
+            ],
+            "rationale": "Both balloon and eagle are directly associated with the sky; balloon floats in the air and eagles fly high.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.73,
+              "pilot": 0.78
+            },
+            "ranked_guesses": [
+              "pilot",
+              "eagle"
+            ],
+            "rationale": "Both relate to sky: pilots fly in the sky and eagles soar in the sky.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 2,
+          "rationale": "Both balloon and pilot are associated with the sky."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

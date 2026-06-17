@@ -1,0 +1,2326 @@
+{
+  "board": {
+    "identities": {
+      "cat": "neutral",
+      "charge": "blue",
+      "check": "red",
+      "cliff": "neutral",
+      "compound": "red",
+      "date": "blue",
+      "deck": "neutral",
+      "egypt": "red",
+      "gas": "blue",
+      "iron": "neutral",
+      "lawyer": "assassin",
+      "lead": "red",
+      "london": "neutral",
+      "nail": "red",
+      "organ": "blue",
+      "pan": "red",
+      "rome": "red",
+      "ruler": "neutral",
+      "school": "neutral",
+      "server": "blue",
+      "spot": "red",
+      "temple": "blue",
+      "theater": "blue",
+      "vacuum": "red",
+      "wall": "blue"
+    },
+    "revealed": [
+      "charge",
+      "compound",
+      "date",
+      "deck",
+      "egypt",
+      "gas",
+      "iron",
+      "lead",
+      "london",
+      "nail",
+      "organ",
+      "rome",
+      "server",
+      "spot",
+      "temple",
+      "theater",
+      "vacuum",
+      "wall"
+    ],
+    "words": {
+      "cat": "neutral",
+      "charge": "blue",
+      "check": "red",
+      "cliff": "neutral",
+      "compound": "red",
+      "date": "blue",
+      "deck": "neutral",
+      "egypt": "red",
+      "gas": "blue",
+      "iron": "neutral",
+      "lawyer": "assassin",
+      "lead": "red",
+      "london": "neutral",
+      "nail": "red",
+      "organ": "blue",
+      "pan": "red",
+      "rome": "red",
+      "ruler": "neutral",
+      "school": "neutral",
+      "server": "blue",
+      "spot": "red",
+      "temple": "blue",
+      "theater": "blue",
+      "vacuum": "red",
+      "wall": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "history",
+        "count": 2,
+        "rationale": "Connects the ancient civilizations of Egypt and Rome, both red team words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "egypt": 0.9,
+          "rome": 0.85,
+          "ruler": 0.7,
+          "temple": 0.8,
+          "theater": 0.75
+        },
+        "ranked_guesses": [
+          "egypt",
+          "rome",
+          "temple",
+          "theater",
+          "ruler"
+        ],
+        "rationale": "Clue 'history' with count 2 suggests two historical entities or periods. 'egypt' and 'rome' are strong historical associations, followed by historical structures like 'temple' and 'theater', and roles like 'ruler'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "egypt": 0.85
+        },
+        "ranked_guesses": [
+          "egypt"
+        ],
+        "rationale": "'egypt' is strongly tied to ancient history and likely one of the two target words given the clue 'history' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "egypt": 0.95,
+          "rome": 0.9
+        },
+        "ranked_guesses": [
+          "egypt",
+          "rome"
+        ],
+        "rationale": "'history' strongly suggests ancient civilizations or historical periods. 'egypt' and 'rome' are the most direct matches for historical entities.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "The words 'organ' and 'theater' are both strongly associated with music. 'Organ' is a musical instrument, and 'theater' is a venue where musical performances often take place."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "organ": 0.9,
+          "theater": 0.7
+        },
+        "ranked_guesses": [
+          "organ",
+          "theater"
+        ],
+        "rationale": "'organ' is strongly associated with music, and 'theater' often hosts musical performances.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "organ": 0.9,
+          "theater": 0.7
+        },
+        "ranked_guesses": [
+          "organ",
+          "theater"
+        ],
+        "rationale": "'organ' is strongly associated with music, and 'theater' often hosts musical performances.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "organ": 0.9,
+          "theater": 0.7
+        },
+        "ranked_guesses": [
+          "organ",
+          "theater"
+        ],
+        "rationale": "'organ' is strongly associated with music, both as an instrument and part of the body. 'theater' is a venue where music is often performed, though less directly related.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "spot",
+        "count": 5,
+        "rationale": "Connects to 5 red words: spot charge, spot compound, spot lead, spot nail, spot vacuum"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "electric",
+        "count": 2,
+        "rationale": "Connects to 'charge' and 'gas', both blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.9,
+          "lead": 0.7
+        },
+        "ranked_guesses": [
+          "charge",
+          "lead"
+        ],
+        "rationale": "'charge' and 'lead' are strongly associated with 'electric', as in electric charge and lead (Pb) used in batteries.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.9,
+          "iron": 0.7
+        },
+        "ranked_guesses": [
+          "charge",
+          "iron"
+        ],
+        "rationale": "'charge' is strongly associated with 'electric' (as in electric charge), and 'iron' can be related to electricity (as in iron conducting electricity).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.7,
+          "vacuum": 0.6
+        },
+        "ranked_guesses": [
+          "charge",
+          "vacuum"
+        ],
+        "rationale": "'charge' relates to electric charge, and 'vacuum' connects to vacuum tubes which are related to electricity.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "work",
+        "count": 6,
+        "rationale": "Connects to all 6 remaining red words: compound (work compound), lead (work lead), nail (work nail), pan (work pan), spot (work spot), vacuum (work vacuum)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.9,
+          "lead": 0.7,
+          "nail": 0.7,
+          "spot": 0.5,
+          "vacuum": 0.6
+        },
+        "ranked_guesses": [
+          "compound",
+          "lead",
+          "nail",
+          "vacuum",
+          "spot"
+        ],
+        "rationale": "'compound' is the strongest connection to 'work' (work compound/chemical compound). 'lead' and 'nail' are plausible work-related terms. 'vacuum' and 'spot' are weaker but possible. Previous illegal clue attempt suggests 'spot' was considered but rejected.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.75,
+          "lawyer": 0.65,
+          "lead": 0.7,
+          "server": 0.6
+        },
+        "ranked_guesses": [
+          "compound",
+          "lead",
+          "lawyer",
+          "server"
+        ],
+        "rationale": "Clue 'work' with count 6 suggests 6 words related to work. Compound directly relates to 'work compound'. Lead, lawyer, and server also connect to work contexts.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.95,
+          "gas": 0.85,
+          "iron": 0.8,
+          "lead": 0.9,
+          "nail": 0.9,
+          "vacuum": 0.9
+        },
+        "ranked_guesses": [
+          "compound",
+          "lead",
+          "nail",
+          "vacuum",
+          "gas",
+          "iron"
+        ],
+        "rationale": "The clue 'work' with count 6 suggests 6 red words associated with work. 'compound', 'lead', 'nail', and 'vacuum' are strong associations (work compound, work lead, work nail, work vacuum). 'gas' and 'iron' are weaker but plausible (gas work, iron work). All are unrevealed and fit the count.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "city",
+        "count": 3,
+        "rationale": "Connects to 'date', 'temple', and 'theater' which are all blue words and can be associated with cities."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "london": 0.9,
+          "temple": 0.7,
+          "theater": 0.6
+        },
+        "ranked_guesses": [
+          "london",
+          "temple",
+          "theater"
+        ],
+        "rationale": "'london' is a clear city, 'temple' and 'theater' can be associated with city landmarks.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "london": 0.9,
+          "temple": 0.7,
+          "wall": 0.5
+        },
+        "ranked_guesses": [
+          "london",
+          "temple",
+          "wall"
+        ],
+        "rationale": "'london' is a clear city, 'temple' can be associated with cities like Jerusalem, and 'wall' might refer to city walls.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cat": 0.6,
+          "check": 0.4,
+          "london": 0.9
+        },
+        "ranked_guesses": [
+          "london",
+          "cat",
+          "check"
+        ],
+        "rationale": "'london' is a clear city match. 'cat' could relate to 'city' via 'cathedral' or 'catacombs', but weaker. 'check' is less clear but might relate to 'check-in' or 'checkpoint' in a city context.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "food",
+        "count": 3,
+        "rationale": "Connects to all 3 remaining red words: gas (used in food industry), pan (cooking pan), and server (food server)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "date": 0.9,
+          "gas": 0.8,
+          "pan": 0.85
+        },
+        "ranked_guesses": [
+          "date",
+          "pan",
+          "gas"
+        ],
+        "rationale": "'date' and 'pan' are directly related to food (fruit and cooking pan). 'gas' connects to cooking via gas stoves. All three fit the clue 'food' with count 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "date": 0.95,
+          "pan": 0.9,
+          "server": 0.6
+        },
+        "ranked_guesses": [
+          "date",
+          "pan",
+          "server"
+        ],
+        "rationale": "Clue 'food' with count 3 suggests 3 food-related words. 'date' (fruit) and 'pan' (cooking) are clear matches. 'server' could relate to food service as a stretch.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "date": 0.9,
+          "gas": 0.7,
+          "pan": 0.85
+        },
+        "ranked_guesses": [
+          "date",
+          "pan",
+          "gas"
+        ],
+        "rationale": "'date' and 'pan' are strongly associated with food (fruit and cooking pan). 'gas' relates to cooking gas. All are plausible given the 'food' clue with count 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "building",
+        "count": 3,
+        "rationale": "Connects to 'temple', 'theater', and 'wall' which are all types of buildings or structures, relevant to the blue team."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.5,
+          "temple": 0.7,
+          "theater": 0.6,
+          "wall": 0.4
+        },
+        "ranked_guesses": [
+          "temple",
+          "theater",
+          "school",
+          "wall"
+        ],
+        "rationale": "'building' suggests structures like temple, theater, school, and wall.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.7,
+          "temple": 0.9,
+          "theater": 0.8,
+          "wall": 0.6
+        },
+        "ranked_guesses": [
+          "temple",
+          "theater",
+          "school",
+          "wall"
+        ],
+        "rationale": "The clue 'building' suggests structures. 'Temple' and 'theater' are strong matches, followed by 'school' and 'wall'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.6,
+          "temple": 0.9,
+          "theater": 0.8,
+          "wall": 0.7
+        },
+        "ranked_guesses": [
+          "temple",
+          "theater",
+          "wall",
+          "school"
+        ],
+        "rationale": "'building' strongly relates to 'temple' and 'theater', with 'wall' and 'school' as secondary options.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 4,
+        "rationale": "Connects to 4 red words: lead (metal), pan (metal pan), nail (metal nail), vacuum (metal parts)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "deck": 0.3,
+          "iron": 0.95,
+          "pan": 0.65,
+          "ruler": 0.75,
+          "server": 0.35
+        },
+        "ranked_guesses": [
+          "iron",
+          "ruler",
+          "pan",
+          "server",
+          "deck"
+        ],
+        "rationale": "metal clue with count 4; iron is definitive metal, ruler and pan are common metal objects, others are weaker associations",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "iron": 0.95,
+          "pan": 0.4,
+          "ruler": 0.35,
+          "server": 0.3,
+          "wall": 0.25
+        },
+        "ranked_guesses": [
+          "iron",
+          "pan",
+          "ruler",
+          "server",
+          "wall"
+        ],
+        "rationale": "'iron' is the strongest metal connection remaining; others have weak associations but fit the count of 4.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "iron": 0.95,
+          "pan": 0.7
+        },
+        "ranked_guesses": [
+          "iron",
+          "pan"
+        ],
+        "rationale": "'metal' clue with count 4 suggests 4 metal words. 'lead' and 'nail' are already revealed metals, leaving 'iron' (clear metal) and 'pan' (likely metal pan) as top candidates.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "energy",
+        "count": 2,
+        "rationale": "Connects to 'gas' and 'server' (as in server energy consumption), both blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.6,
+          "gas": 0.9
+        },
+        "ranked_guesses": [
+          "gas",
+          "check"
+        ],
+        "rationale": "'gas' is strongly related to 'energy'. 'check' is a secondary guess with lower confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.6,
+          "gas": 0.9
+        },
+        "ranked_guesses": [
+          "gas",
+          "check"
+        ],
+        "rationale": "'gas' is strongly associated with 'energy' as a fuel source. 'check' is a weaker association, possibly related to energy checks or verifications.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cat": 0.6,
+          "gas": 0.9
+        },
+        "ranked_guesses": [
+          "gas",
+          "cat"
+        ],
+        "rationale": "'gas' is strongly associated with 'energy'. 'cat' is a weaker association, possibly hinting at 'energy' in a playful context.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "restaurant",
+        "count": 3,
+        "rationale": "Connects to 3 red words: restaurant check, frying pan, and a spot at a restaurant"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.9,
+          "pan": 0.7,
+          "server": 0.9
+        },
+        "ranked_guesses": [
+          "server",
+          "check",
+          "pan"
+        ],
+        "rationale": "'server' and 'check' are strongly associated with restaurants (waitstaff and bill/check). 'pan' relates to restaurant cooking equipment. The clue 'restaurant' with count 3 suggests these three are likely red team targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.9,
+          "pan": 0.6,
+          "server": 0.95
+        },
+        "ranked_guesses": [
+          "server",
+          "check",
+          "pan"
+        ],
+        "rationale": "'server' and 'check' directly relate to restaurant service and billing. 'pan' connects to cooking/restaurant equipment.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.85,
+          "pan": 0.7,
+          "server": 0.9
+        },
+        "ranked_guesses": [
+          "server",
+          "check",
+          "pan"
+        ],
+        "rationale": "'server' directly relates to restaurants, 'check' refers to a restaurant bill, and 'pan' is kitchen equipment used in restaurants. All three are still hidden on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "computer",
+        "count": 2,
+        "rationale": "Connects to 'server' and 'wall' (as in firewall or computer wall)"
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.7,
+          "deck": 0.6
+        },
+        "ranked_guesses": [
+          "check",
+          "deck"
+        ],
+        "rationale": "'computer' likely relates to 'check' (as in check a computer) and 'deck' (as in computer deck).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.7,
+          "server": 0.6
+        },
+        "ranked_guesses": [
+          "check",
+          "server"
+        ],
+        "rationale": "'check' relates to computer operations like 'checking' data or systems. 'server' is already revealed as blue but fits 'computer' well.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "check": 0.6,
+          "server": 0.9
+        },
+        "ranked_guesses": [
+          "server",
+          "check"
+        ],
+        "rationale": "'server' is strongly associated with 'computer'. 'check' is a secondary guess as it can relate to computer checks or verifications.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "surface",
+        "count": 2,
+        "rationale": "Connects to both remaining red words: pan (bottom surface) and spot (location on a surface)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.5,
+          "deck": 0.9,
+          "spot": 0.7,
+          "wall": 0.6
+        },
+        "ranked_guesses": [
+          "deck",
+          "spot",
+          "wall",
+          "cliff"
+        ],
+        "rationale": "'deck' directly refers to a surface (ship deck), 'spot' is a type of surface, 'wall' has a surface, and 'cliff' has a surface. These are the strongest connections to the clue 'surface' among remaining words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spot": 0.9,
+          "wall": 0.6
+        },
+        "ranked_guesses": [
+          "spot",
+          "wall"
+        ],
+        "rationale": "'spot' is the most direct connection to 'surface', and 'wall' is another surface-related word. The count of 2 suggests these two.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.7,
+          "deck": 0.65
+        },
+        "ranked_guesses": [
+          "cliff",
+          "deck"
+        ],
+        "rationale": "'surface' strongly connects to 'cliff' (rock surface) and 'deck' (flat surface), both plausible red targets with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "structure",
+        "count": 1,
+        "rationale": "Connects to 'wall', the remaining blue word."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wall": 0.7
+        },
+        "ranked_guesses": [
+          "wall"
+        ],
+        "rationale": "'wall' is a strong match for 'structure' among remaining words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wall": 0.9
+        },
+        "ranked_guesses": [
+          "wall"
+        ],
+        "rationale": "'wall' is a clear structure and fits the clue well.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wall": 0.7
+        },
+        "ranked_guesses": [
+          "wall"
+        ],
+        "rationale": "'wall' is a strong candidate for 'structure' as it is a common architectural element.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "history"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "egypt"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "rome"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "organ"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "spot",
+        "count": 5,
+        "rationale": "Connects to 5 red words: spot charge, spot compound, spot lead, spot nail, spot vacuum"
+      },
+      "event": "illegal_clue",
+      "matched_word": "spot",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "electric"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "charge"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 6,
+        "word": "work"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "compound"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lead"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "vacuum"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "city"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "london"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "food"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "date"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "building"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "theater"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "iron"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "energy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "gas"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "restaurant"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "server"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "computer"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "surface"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spot"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "deck"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "structure"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "wall"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 53,
+    "public_event_count": 39,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-038-mistralai_mistral_small_2603-vs-deepseek_deepseek_chat_v3_0324",
+    "team_blue": "DeepSeek V3 0324",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "history"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "egypt": 0.9,
+              "rome": 0.85,
+              "ruler": 0.7,
+              "temple": 0.8,
+              "theater": 0.75
+            },
+            "ranked_guesses": [
+              "egypt",
+              "rome",
+              "temple",
+              "theater",
+              "ruler"
+            ],
+            "rationale": "Clue 'history' with count 2 suggests two historical entities or periods. 'egypt' and 'rome' are strong historical associations, followed by historical structures like 'temple' and 'theater', and roles like 'ruler'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "egypt": 0.85
+            },
+            "ranked_guesses": [
+              "egypt"
+            ],
+            "rationale": "'egypt' is strongly tied to ancient history and likely one of the two target words given the clue 'history' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "egypt": 0.95,
+              "rome": 0.9
+            },
+            "ranked_guesses": [
+              "egypt",
+              "rome"
+            ],
+            "rationale": "'history' strongly suggests ancient civilizations or historical periods. 'egypt' and 'rome' are the most direct matches for historical entities.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "egypt"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "rome"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "history",
+          "count": 2,
+          "rationale": "Connects the ancient civilizations of Egypt and Rome, both red team words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "organ": 0.9,
+              "theater": 0.7
+            },
+            "ranked_guesses": [
+              "organ",
+              "theater"
+            ],
+            "rationale": "'organ' is strongly associated with music, and 'theater' often hosts musical performances.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "organ": 0.9,
+              "theater": 0.7
+            },
+            "ranked_guesses": [
+              "organ",
+              "theater"
+            ],
+            "rationale": "'organ' is strongly associated with music, and 'theater' often hosts musical performances.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "organ": 0.9,
+              "theater": 0.7
+            },
+            "ranked_guesses": [
+              "organ",
+              "theater"
+            ],
+            "rationale": "'organ' is strongly associated with music, both as an instrument and part of the body. 'theater' is a venue where music is often performed, though less directly related.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "organ"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "The words 'organ' and 'theater' are both strongly associated with music. 'Organ' is a musical instrument, and 'theater' is a venue where musical performances often take place."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "electric"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "charge"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 6,
+        "word": "work"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "compound"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lead"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "vacuum"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spot",
+          "count": 5,
+          "rationale": "Connects to 5 red words: spot charge, spot compound, spot lead, spot nail, spot vacuum"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "city"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.9,
+              "lead": 0.7
+            },
+            "ranked_guesses": [
+              "charge",
+              "lead"
+            ],
+            "rationale": "'charge' and 'lead' are strongly associated with 'electric', as in electric charge and lead (Pb) used in batteries.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.9,
+              "iron": 0.7
+            },
+            "ranked_guesses": [
+              "charge",
+              "iron"
+            ],
+            "rationale": "'charge' is strongly associated with 'electric' (as in electric charge), and 'iron' can be related to electricity (as in iron conducting electricity).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.7,
+              "vacuum": 0.6
+            },
+            "ranked_guesses": [
+              "charge",
+              "vacuum"
+            ],
+            "rationale": "'charge' relates to electric charge, and 'vacuum' connects to vacuum tubes which are related to electricity.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "london"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "electric",
+          "count": 2,
+          "rationale": "Connects to 'charge' and 'gas', both blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "food"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.9,
+              "lead": 0.7,
+              "nail": 0.7,
+              "spot": 0.5,
+              "vacuum": 0.6
+            },
+            "ranked_guesses": [
+              "compound",
+              "lead",
+              "nail",
+              "vacuum",
+              "spot"
+            ],
+            "rationale": "'compound' is the strongest connection to 'work' (work compound/chemical compound). 'lead' and 'nail' are plausible work-related terms. 'vacuum' and 'spot' are weaker but possible. Previous illegal clue attempt suggests 'spot' was considered but rejected.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.75,
+              "lawyer": 0.65,
+              "lead": 0.7,
+              "server": 0.6
+            },
+            "ranked_guesses": [
+              "compound",
+              "lead",
+              "lawyer",
+              "server"
+            ],
+            "rationale": "Clue 'work' with count 6 suggests 6 words related to work. Compound directly relates to 'work compound'. Lead, lawyer, and server also connect to work contexts.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.95,
+              "gas": 0.85,
+              "iron": 0.8,
+              "lead": 0.9,
+              "nail": 0.9,
+              "vacuum": 0.9
+            },
+            "ranked_guesses": [
+              "compound",
+              "lead",
+              "nail",
+              "vacuum",
+              "gas",
+              "iron"
+            ],
+            "rationale": "The clue 'work' with count 6 suggests 6 red words associated with work. 'compound', 'lead', 'nail', and 'vacuum' are strong associations (work compound, work lead, work nail, work vacuum). 'gas' and 'iron' are weaker but plausible (gas work, iron work). All are unrevealed and fit the count.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "date"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "work",
+          "count": 6,
+          "rationale": "Connects to all 6 remaining red words: compound (work compound), lead (work lead), nail (work nail), pan (work pan), spot (work spot), vacuum (work vacuum)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "building"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "london": 0.9,
+              "temple": 0.7,
+              "theater": 0.6
+            },
+            "ranked_guesses": [
+              "london",
+              "temple",
+              "theater"
+            ],
+            "rationale": "'london' is a clear city, 'temple' and 'theater' can be associated with city landmarks.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "london": 0.9,
+              "temple": 0.7,
+              "wall": 0.5
+            },
+            "ranked_guesses": [
+              "london",
+              "temple",
+              "wall"
+            ],
+            "rationale": "'london' is a clear city, 'temple' can be associated with cities like Jerusalem, and 'wall' might refer to city walls.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cat": 0.6,
+              "check": 0.4,
+              "london": 0.9
+            },
+            "ranked_guesses": [
+              "london",
+              "cat",
+              "check"
+            ],
+            "rationale": "'london' is a clear city match. 'cat' could relate to 'city' via 'cathedral' or 'catacombs', but weaker. 'check' is less clear but might relate to 'check-in' or 'checkpoint' in a city context.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "theater"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "city",
+          "count": 3,
+          "rationale": "Connects to 'date', 'temple', and 'theater' which are all blue words and can be associated with cities."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "date": 0.9,
+              "gas": 0.8,
+              "pan": 0.85
+            },
+            "ranked_guesses": [
+              "date",
+              "pan",
+              "gas"
+            ],
+            "rationale": "'date' and 'pan' are directly related to food (fruit and cooking pan). 'gas' connects to cooking via gas stoves. All three fit the clue 'food' with count 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "date": 0.95,
+              "pan": 0.9,
+              "server": 0.6
+            },
+            "ranked_guesses": [
+              "date",
+              "pan",
+              "server"
+            ],
+            "rationale": "Clue 'food' with count 3 suggests 3 food-related words. 'date' (fruit) and 'pan' (cooking) are clear matches. 'server' could relate to food service as a stretch.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "date": 0.9,
+              "gas": 0.7,
+              "pan": 0.85
+            },
+            "ranked_guesses": [
+              "date",
+              "pan",
+              "gas"
+            ],
+            "rationale": "'date' and 'pan' are strongly associated with food (fruit and cooking pan). 'gas' relates to cooking gas. All are plausible given the 'food' clue with count 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "iron"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "food",
+          "count": 3,
+          "rationale": "Connects to all 3 remaining red words: gas (used in food industry), pan (cooking pan), and server (food server)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "energy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "school": 0.5,
+              "temple": 0.7,
+              "theater": 0.6,
+              "wall": 0.4
+            },
+            "ranked_guesses": [
+              "temple",
+              "theater",
+              "school",
+              "wall"
+            ],
+            "rationale": "'building' suggests structures like temple, theater, school, and wall.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.7,
+              "temple": 0.9,
+              "theater": 0.8,
+              "wall": 0.6
+            },
+            "ranked_guesses": [
+              "temple",
+              "theater",
+              "school",
+              "wall"
+            ],
+            "rationale": "The clue 'building' suggests structures. 'Temple' and 'theater' are strong matches, followed by 'school' and 'wall'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.6,
+              "temple": 0.9,
+              "theater": 0.8,
+              "wall": 0.7
+            },
+            "ranked_guesses": [
+              "temple",
+              "theater",
+              "wall",
+              "school"
+            ],
+            "rationale": "'building' strongly relates to 'temple' and 'theater', with 'wall' and 'school' as secondary options.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "gas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "building",
+          "count": 3,
+          "rationale": "Connects to 'temple', 'theater', and 'wall' which are all types of buildings or structures, relevant to the blue team."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "restaurant"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "deck": 0.3,
+              "iron": 0.95,
+              "pan": 0.65,
+              "ruler": 0.75,
+              "server": 0.35
+            },
+            "ranked_guesses": [
+              "iron",
+              "ruler",
+              "pan",
+              "server",
+              "deck"
+            ],
+            "rationale": "metal clue with count 4; iron is definitive metal, ruler and pan are common metal objects, others are weaker associations",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "iron": 0.95,
+              "pan": 0.4,
+              "ruler": 0.35,
+              "server": 0.3,
+              "wall": 0.25
+            },
+            "ranked_guesses": [
+              "iron",
+              "pan",
+              "ruler",
+              "server",
+              "wall"
+            ],
+            "rationale": "'iron' is the strongest metal connection remaining; others have weak associations but fit the count of 4.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "iron": 0.95,
+              "pan": 0.7
+            },
+            "ranked_guesses": [
+              "iron",
+              "pan"
+            ],
+            "rationale": "'metal' clue with count 4 suggests 4 metal words. 'lead' and 'nail' are already revealed metals, leaving 'iron' (clear metal) and 'pan' (likely metal pan) as top candidates.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "server"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 4,
+          "rationale": "Connects to 4 red words: lead (metal), pan (metal pan), nail (metal nail), vacuum (metal parts)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "computer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "check": 0.6,
+              "gas": 0.9
+            },
+            "ranked_guesses": [
+              "gas",
+              "check"
+            ],
+            "rationale": "'gas' is strongly related to 'energy'. 'check' is a secondary guess with lower confidence.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "check": 0.6,
+              "gas": 0.9
+            },
+            "ranked_guesses": [
+              "gas",
+              "check"
+            ],
+            "rationale": "'gas' is strongly associated with 'energy' as a fuel source. 'check' is a weaker association, possibly related to energy checks or verifications.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cat": 0.6,
+              "gas": 0.9
+            },
+            "ranked_guesses": [
+              "gas",
+              "cat"
+            ],
+            "rationale": "'gas' is strongly associated with 'energy'. 'cat' is a weaker association, possibly hinting at 'energy' in a playful context.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "energy",
+          "count": 2,
+          "rationale": "Connects to 'gas' and 'server' (as in server energy consumption), both blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "surface"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "check": 0.9,
+              "pan": 0.7,
+              "server": 0.9
+            },
+            "ranked_guesses": [
+              "server",
+              "check",
+              "pan"
+            ],
+            "rationale": "'server' and 'check' are strongly associated with restaurants (waitstaff and bill/check). 'pan' relates to restaurant cooking equipment. The clue 'restaurant' with count 3 suggests these three are likely red team targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "check": 0.9,
+              "pan": 0.6,
+              "server": 0.95
+            },
+            "ranked_guesses": [
+              "server",
+              "check",
+              "pan"
+            ],
+            "rationale": "'server' and 'check' directly relate to restaurant service and billing. 'pan' connects to cooking/restaurant equipment.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "check": 0.85,
+              "pan": 0.7,
+              "server": 0.9
+            },
+            "ranked_guesses": [
+              "server",
+              "check",
+              "pan"
+            ],
+            "rationale": "'server' directly relates to restaurants, 'check' refers to a restaurant bill, and 'pan' is kitchen equipment used in restaurants. All three are still hidden on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spot"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "deck"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "restaurant",
+          "count": 3,
+          "rationale": "Connects to 3 red words: restaurant check, frying pan, and a spot at a restaurant"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "structure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "check": 0.7,
+              "deck": 0.6
+            },
+            "ranked_guesses": [
+              "check",
+              "deck"
+            ],
+            "rationale": "'computer' likely relates to 'check' (as in check a computer) and 'deck' (as in computer deck).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "check": 0.7,
+              "server": 0.6
+            },
+            "ranked_guesses": [
+              "check",
+              "server"
+            ],
+            "rationale": "'check' relates to computer operations like 'checking' data or systems. 'server' is already revealed as blue but fits 'computer' well.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "check": 0.6,
+              "server": 0.9
+            },
+            "ranked_guesses": [
+              "server",
+              "check"
+            ],
+            "rationale": "'server' is strongly associated with 'computer'. 'check' is a secondary guess as it can relate to computer checks or verifications.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "wall"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "computer",
+          "count": 2,
+          "rationale": "Connects to 'server' and 'wall' (as in firewall or computer wall)"
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

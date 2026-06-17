@@ -1,0 +1,2254 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "blue",
+      "beacon": "blue",
+      "camera": "blue",
+      "circle": "red",
+      "cloud": "neutral",
+      "comet": "neutral",
+      "dream": "blue",
+      "festival": "red",
+      "fox": "neutral",
+      "highway": "red",
+      "kernel": "red",
+      "library": "neutral",
+      "memory": "blue",
+      "paper": "red",
+      "poet": "blue",
+      "pyramid": "neutral",
+      "robot": "neutral",
+      "sailor": "blue",
+      "secret": "assassin",
+      "sugar": "red",
+      "summer": "red",
+      "telescope": "red",
+      "temple": "red",
+      "village": "blue",
+      "violin": "neutral"
+    },
+    "revealed": [
+      "anchor",
+      "beacon",
+      "camera",
+      "circle",
+      "cloud",
+      "comet",
+      "dream",
+      "festival",
+      "highway",
+      "memory",
+      "poet",
+      "pyramid",
+      "sailor",
+      "summer",
+      "telescope",
+      "village"
+    ],
+    "words": {
+      "anchor": "blue",
+      "beacon": "blue",
+      "camera": "blue",
+      "circle": "red",
+      "cloud": "neutral",
+      "comet": "neutral",
+      "dream": "blue",
+      "festival": "red",
+      "fox": "neutral",
+      "highway": "red",
+      "kernel": "red",
+      "library": "neutral",
+      "memory": "blue",
+      "paper": "red",
+      "poet": "blue",
+      "pyramid": "neutral",
+      "robot": "neutral",
+      "sailor": "blue",
+      "secret": "assassin",
+      "sugar": "red",
+      "summer": "red",
+      "telescope": "red",
+      "temple": "red",
+      "village": "blue",
+      "violin": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "travel",
+        "count": 2,
+        "rationale": "summer and highway"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8,
+          "sailor": 0.6
+        },
+        "ranked_guesses": [
+          "highway",
+          "sailor"
+        ],
+        "rationale": "Both words are related to travel, as highway is a mode of travel and sailor is a person who travels by sea.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8,
+          "sailor": 0.6
+        },
+        "ranked_guesses": [
+          "highway",
+          "sailor"
+        ],
+        "rationale": "Both words are related to travel, matching the active clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8,
+          "sailor": 0.6
+        },
+        "ranked_guesses": [
+          "highway",
+          "sailor"
+        ],
+        "rationale": "Both words are related to travel",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "port",
+        "count": 4,
+        "rationale": "Anchor, beacon, sailor, and village all relate to a port or harbor environment, making them a strong set to guess."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "beacon": 0.7,
+          "sailor": 0.9,
+          "telescope": 0.5
+        },
+        "ranked_guesses": [
+          "sailor",
+          "anchor",
+          "beacon",
+          "telescope"
+        ],
+        "rationale": "Port relates to harbor; sailor and anchor are strong, beacon is a navigational aid, telescope is used by sailors.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "beacon": 0.8,
+          "harbor": 0.6,
+          "sailor": 0.85,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "sailor",
+          "beacon",
+          "telescope",
+          "harbor"
+        ],
+        "rationale": "Port relates to ships and navigation. Anchor and sailor are direct nautical terms. Beacon guides ships. Telescope is used for navigation. Harbor is a port but not on board.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "beacon": 0.7,
+          "sailor": 0.85,
+          "telescope": 0.4
+        },
+        "ranked_guesses": [
+          "anchor",
+          "sailor",
+          "beacon",
+          "telescope"
+        ],
+        "rationale": "port relates to ships/sea, so anchor and sailor are strong. beacon and telescope are port-adjacent (harbor signals/views). 4 clues needed.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "structure",
+        "count": 3,
+        "rationale": "multiple words on the board relate to buildings or architecture"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.8
+        },
+        "ranked_guesses": [
+          "pyramid"
+        ],
+        "rationale": "structure is related to pyramid",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "library": 0.6,
+          "pyramid": 0.8,
+          "temple": 0.7
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "temple",
+          "library"
+        ],
+        "rationale": "Words related to structure",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "library": 0.4,
+          "pyramid": 0.8,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "temple",
+          "library"
+        ],
+        "rationale": "Words related to structure",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "recollection",
+        "count": 2,
+        "rationale": "Blue words left: camera, dream, memory, poet, village. 'Memory' is directly related to recollection; 'dream' is also a form of recollection. Avoids assassin 'secret' and other team's words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "memory": 0.9
+        },
+        "ranked_guesses": [
+          "memory",
+          "dream"
+        ],
+        "rationale": "Recollection directly relates to memory and dream as forms of remembering; memory is the most obvious, dream is a common association.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.7,
+          "memory": 0.95
+        },
+        "ranked_guesses": [
+          "memory",
+          "camera"
+        ],
+        "rationale": "Memory is the most direct synonym for recollection, while camera captures memories. Both fit the clue well.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "memory": 0.9
+        },
+        "ranked_guesses": [
+          "memory",
+          "dream"
+        ],
+        "rationale": "Recollection is synonymous with memory, and dream is a common type of recollection.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 2,
+        "rationale": "summer and festival"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "celebration is related to festival",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "celebration is related to festival",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "celebration is related to festival",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "camera",
+        "count": 1,
+        "rationale": "Camera is a blue word that remains unrevealed. It connects to the theme of vision or recording, and no other unrevealed blue words (poet, village) share a strong association with it, so a count of 1 is safe."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "event",
+        "count": 2,
+        "rationale": "Connecting to festival and highway, which are both red and related to events or gatherings."
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.8
+        },
+        "ranked_guesses": [
+          "circle"
+        ],
+        "rationale": "Circle is a word that is related to event, and it's a common theme in celebrations or festivals.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.8
+        },
+        "ranked_guesses": [
+          "circle"
+        ],
+        "rationale": "Circle is a word that is related to the theme of 'event' and is a common shape associated with celebrations, which connects to the previous clue 'celebration'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.8
+        },
+        "ranked_guesses": [
+          "circle"
+        ],
+        "rationale": "Circle is a word that is related to the theme of 'event' and is a common association with festivals, which is a revealed red word.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "scene",
+        "count": 3,
+        "rationale": "Scene connects to camera (photographs scenes), poet (describes scenes), and village (a rural scene). It avoids associations with remaining red or neutral words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "poet": 0.3,
+          "village": 0.4
+        },
+        "ranked_guesses": [
+          "camera",
+          "village",
+          "poet"
+        ],
+        "rationale": "'Scene' strongly suggests camera (filming a scene). Village could be a scene in a play or film. Poet less likely but could be part of a scene (e.g., dramatic scene). No other blue words left that fit well.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "cloud": 0.2,
+          "comet": 0.3,
+          "fox": 0.1,
+          "kernel": 0.1,
+          "library": 0.1,
+          "paper": 0.1,
+          "poet": 0.4,
+          "robot": 0.1,
+          "secret": 0.1,
+          "sugar": 0.1,
+          "summer": 0.1,
+          "telescope": 0.7,
+          "temple": 0.1,
+          "village": 0.5,
+          "violin": 0.1
+        },
+        "ranked_guesses": [
+          "camera",
+          "telescope",
+          "village",
+          "poet",
+          "comet",
+          "cloud",
+          "paper",
+          "secret",
+          "sugar",
+          "summer",
+          "temple",
+          "violin",
+          "robot",
+          "fox",
+          "kernel",
+          "library"
+        ],
+        "rationale": "'Scene' suggests visual or theatrical settings. Camera is the strongest match (photography scene). Telescope also fits (astronomy scene). Village could be a scene in a play or movie. Poet might write about scenes. Other words are weaker.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "cloud": 0.05,
+          "comet": 0.05,
+          "fox": 0.05,
+          "kernel": 0.05,
+          "library": 0.4,
+          "paper": 0.05,
+          "poet": 0.6,
+          "robot": 0.05,
+          "secret": 0.1,
+          "sugar": 0.05,
+          "summer": 0.3,
+          "telescope": 0.7,
+          "temple": 0.2,
+          "village": 0.5,
+          "violin": 0.05
+        },
+        "ranked_guesses": [
+          "camera",
+          "telescope",
+          "poet",
+          "village",
+          "library",
+          "summer",
+          "temple",
+          "secret",
+          "paper",
+          "fox",
+          "sugar",
+          "violin",
+          "comet",
+          "robot",
+          "cloud",
+          "kernel"
+        ],
+        "rationale": "The clue 'scene' with count 3 suggests words related to a setting or view. 'Camera' is a strong fit (captures a scene), 'telescope' (observes scenes like stars), and 'poet' (describes or imagines scenes). 'Village' could be a scene, but less direct. Remaining blues: camera, poet, village. Guesses remaining=4, so we can guess 3 safely.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 2,
+        "rationale": "Connecting to telescope and possibly other words related to illumination"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.8
+        },
+        "ranked_guesses": [
+          "cloud"
+        ],
+        "rationale": "Cloud is a word that is related to light, and it's a common association.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.8
+        },
+        "ranked_guesses": [
+          "cloud"
+        ],
+        "rationale": "Cloud is a word that is related to light, and it's a common association.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.8
+        },
+        "ranked_guesses": [
+          "cloud"
+        ],
+        "rationale": "Cloud is a word that is related to light, and it is a common association.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "rain",
+        "count": 2,
+        "rationale": "Rain connects to 'village' (rural scenes often involve rain) and 'poet' (poems often describe rain), both of which are unrevealed blue words. No other unrevealed blue words (only these two remain) or red words are strongly associated, and the assassin word 'secret' is unrelated, making this a safe clue for 2."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.7,
+          "poet": 0.2,
+          "summer": 0.6
+        },
+        "ranked_guesses": [
+          "comet",
+          "summer",
+          "poet"
+        ],
+        "rationale": "Rain associates with 'comet' (rain of comets/meteors) and 'summer' (summer rain). 'Poet' is weaker but possible (rain in poetry). Avoid already revealed words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "summer": 0.9,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "summer",
+          "village"
+        ],
+        "rationale": "Rain commonly associates with summer (summer rain) and village (rainy village scenes), likely the two unrevealed blue words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "summer": 0.8,
+          "village": 0.7
+        },
+        "ranked_guesses": [
+          "summer",
+          "village"
+        ],
+        "rationale": "Rain is associated with summer showers and village scenes.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "heat",
+        "count": 2,
+        "rationale": "Associates with summer and could connect to other red words"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.8
+        },
+        "ranked_guesses": [
+          "comet"
+        ],
+        "rationale": "Comet is a word that is related to heat, and it's the only unrevealed word that shares a strong association with the clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.8
+        },
+        "ranked_guesses": [
+          "comet"
+        ],
+        "rationale": "comet is a word that is related to heat, and it's the only unrevealed word that shares a strong association with the clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.8
+        },
+        "ranked_guesses": [
+          "comet"
+        ],
+        "rationale": "Heat is related to celestial bodies, and comet is a remaining word that fits this theme.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "country",
+        "count": 2,
+        "rationale": "Poet and village both evoke rural life and countryside, with no strong links to remaining red words or assassin."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.7,
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village",
+          "poet"
+        ],
+        "rationale": "Country suggests rural or national identity. Village is a strong match as a small country settlement. Poet could relate to national poets or pastoral themes, but is weaker. Fox, kernel, library, paper, robot, secret, sugar, temple, violin are unrelated.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.7,
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village",
+          "poet"
+        ],
+        "rationale": "Country suggests rural or national identity. Village is a strong match as a small country settlement. Poet could relate to national poets or pastoral themes, but is weaker. Fox, kernel, library, paper, robot, secret, sugar, temple, violin are less connected.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.7,
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village",
+          "poet"
+        ],
+        "rationale": "Country clue: village is a direct rural area, poet often associated with national identity. Both unrevealed blue words fit.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "image",
+        "count": 2,
+        "rationale": "Associates with camera and telescope, both revealed words."
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.8
+        },
+        "ranked_guesses": [
+          "camera"
+        ],
+        "rationale": "Camera is a blue word that remains unrevealed and connects to the theme of image or recording, and no other unrevealed blue words (poet, village) share a strong association with it, so a count of 1 is safe.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.8
+        },
+        "ranked_guesses": [
+          "camera"
+        ],
+        "rationale": "Camera is a blue word that remains unrevealed and connects to the theme of vision or recording, and no other unrevealed blue words (poet, village) share a strong association with it, so a count of 1 is safe.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.8
+        },
+        "ranked_guesses": [
+          "camera"
+        ],
+        "rationale": "Image is a strong connection to camera, which is still unrevealed and has a clear association with the theme of vision or recording.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "bard",
+        "count": 1,
+        "rationale": "Only one unrevealed blue word: poet. Bard is a synonym for poet."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet"
+        ],
+        "rationale": "Bard is directly associated with poet, the most likely unrevealed blue word.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet"
+        ],
+        "rationale": "Bard is a synonym for poet, making 'poet' the most direct association for the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet"
+        ],
+        "rationale": "Bard is a poet, so 'poet' is the most direct association among unrevealed blue words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "highway"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "port"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "sailor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beacon"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "structure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "recollection"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "memory"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dream"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "festival"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "camera",
+        "count": 1,
+        "rationale": "Camera is a blue word that remains unrevealed. It connects to the theme of vision or recording, and no other unrevealed blue words (poet, village) share a strong association with it, so a count of 1 is safe."
+      },
+      "event": "illegal_clue",
+      "matched_word": "camera",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "event"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "circle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "scene"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "telescope"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rain"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "comet"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "country"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "village"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "image"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bard"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "poet"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 53,
+    "public_event_count": 37,
+    "reason": "all_words_found",
+    "seed": "limited-random-14-models-20260607-214614-m05",
+    "team_blue": "DeepSeek V4 Flash",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.8,
+              "sailor": 0.6
+            },
+            "ranked_guesses": [
+              "highway",
+              "sailor"
+            ],
+            "rationale": "Both words are related to travel, as highway is a mode of travel and sailor is a person who travels by sea.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.8,
+              "sailor": 0.6
+            },
+            "ranked_guesses": [
+              "highway",
+              "sailor"
+            ],
+            "rationale": "Both words are related to travel, matching the active clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.8,
+              "sailor": 0.6
+            },
+            "ranked_guesses": [
+              "highway",
+              "sailor"
+            ],
+            "rationale": "Both words are related to travel",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "highway"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 2,
+          "rationale": "summer and highway"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "port"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "beacon": 0.7,
+              "sailor": 0.9,
+              "telescope": 0.5
+            },
+            "ranked_guesses": [
+              "sailor",
+              "anchor",
+              "beacon",
+              "telescope"
+            ],
+            "rationale": "Port relates to harbor; sailor and anchor are strong, beacon is a navigational aid, telescope is used by sailors.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "beacon": 0.8,
+              "harbor": 0.6,
+              "sailor": 0.85,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "sailor",
+              "beacon",
+              "telescope",
+              "harbor"
+            ],
+            "rationale": "Port relates to ships and navigation. Anchor and sailor are direct nautical terms. Beacon guides ships. Telescope is used for navigation. Harbor is a port but not on board.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "beacon": 0.7,
+              "sailor": 0.85,
+              "telescope": 0.4
+            },
+            "ranked_guesses": [
+              "anchor",
+              "sailor",
+              "beacon",
+              "telescope"
+            ],
+            "rationale": "port relates to ships/sea, so anchor and sailor are strong. beacon and telescope are port-adjacent (harbor signals/views). 4 clues needed.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "sailor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beacon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "port",
+          "count": 4,
+          "rationale": "Anchor, beacon, sailor, and village all relate to a port or harbor environment, making them a strong set to guess."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "structure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.8
+            },
+            "ranked_guesses": [
+              "pyramid"
+            ],
+            "rationale": "structure is related to pyramid",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "library": 0.6,
+              "pyramid": 0.8,
+              "temple": 0.7
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "temple",
+              "library"
+            ],
+            "rationale": "Words related to structure",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "library": 0.4,
+              "pyramid": 0.8,
+              "temple": 0.6
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "temple",
+              "library"
+            ],
+            "rationale": "Words related to structure",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "structure",
+          "count": 3,
+          "rationale": "multiple words on the board relate to buildings or architecture"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "recollection"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.7,
+              "memory": 0.9
+            },
+            "ranked_guesses": [
+              "memory",
+              "dream"
+            ],
+            "rationale": "Recollection directly relates to memory and dream as forms of remembering; memory is the most obvious, dream is a common association.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.7,
+              "memory": 0.95
+            },
+            "ranked_guesses": [
+              "memory",
+              "camera"
+            ],
+            "rationale": "Memory is the most direct synonym for recollection, while camera captures memories. Both fit the clue well.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.7,
+              "memory": 0.9
+            },
+            "ranked_guesses": [
+              "memory",
+              "dream"
+            ],
+            "rationale": "Recollection is synonymous with memory, and dream is a common type of recollection.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "memory"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dream"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "recollection",
+          "count": 2,
+          "rationale": "Blue words left: camera, dream, memory, poet, village. 'Memory' is directly related to recollection; 'dream' is also a form of recollection. Avoids assassin 'secret' and other team's words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "celebration is related to festival",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "celebration is related to festival",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "celebration is related to festival",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "festival"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 2,
+          "rationale": "summer and festival"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "event"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "circle"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "scene"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "telescope"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "camera",
+          "count": 1,
+          "rationale": "Camera is a blue word that remains unrevealed. It connects to the theme of vision or recording, and no other unrevealed blue words (poet, village) share a strong association with it, so a count of 1 is safe."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.8
+            },
+            "ranked_guesses": [
+              "circle"
+            ],
+            "rationale": "Circle is a word that is related to event, and it's a common theme in celebrations or festivals.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.8
+            },
+            "ranked_guesses": [
+              "circle"
+            ],
+            "rationale": "Circle is a word that is related to the theme of 'event' and is a common shape associated with celebrations, which connects to the previous clue 'celebration'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.8
+            },
+            "ranked_guesses": [
+              "circle"
+            ],
+            "rationale": "Circle is a word that is related to the theme of 'event' and is a common association with festivals, which is a revealed red word.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "event",
+          "count": 2,
+          "rationale": "Connecting to festival and highway, which are both red and related to events or gatherings."
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "poet": 0.3,
+              "village": 0.4
+            },
+            "ranked_guesses": [
+              "camera",
+              "village",
+              "poet"
+            ],
+            "rationale": "'Scene' strongly suggests camera (filming a scene). Village could be a scene in a play or film. Poet less likely but could be part of a scene (e.g., dramatic scene). No other blue words left that fit well.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "cloud": 0.2,
+              "comet": 0.3,
+              "fox": 0.1,
+              "kernel": 0.1,
+              "library": 0.1,
+              "paper": 0.1,
+              "poet": 0.4,
+              "robot": 0.1,
+              "secret": 0.1,
+              "sugar": 0.1,
+              "summer": 0.1,
+              "telescope": 0.7,
+              "temple": 0.1,
+              "village": 0.5,
+              "violin": 0.1
+            },
+            "ranked_guesses": [
+              "camera",
+              "telescope",
+              "village",
+              "poet",
+              "comet",
+              "cloud",
+              "paper",
+              "secret",
+              "sugar",
+              "summer",
+              "temple",
+              "violin",
+              "robot",
+              "fox",
+              "kernel",
+              "library"
+            ],
+            "rationale": "'Scene' suggests visual or theatrical settings. Camera is the strongest match (photography scene). Telescope also fits (astronomy scene). Village could be a scene in a play or movie. Poet might write about scenes. Other words are weaker.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "cloud": 0.05,
+              "comet": 0.05,
+              "fox": 0.05,
+              "kernel": 0.05,
+              "library": 0.4,
+              "paper": 0.05,
+              "poet": 0.6,
+              "robot": 0.05,
+              "secret": 0.1,
+              "sugar": 0.05,
+              "summer": 0.3,
+              "telescope": 0.7,
+              "temple": 0.2,
+              "village": 0.5,
+              "violin": 0.05
+            },
+            "ranked_guesses": [
+              "camera",
+              "telescope",
+              "poet",
+              "village",
+              "library",
+              "summer",
+              "temple",
+              "secret",
+              "paper",
+              "fox",
+              "sugar",
+              "violin",
+              "comet",
+              "robot",
+              "cloud",
+              "kernel"
+            ],
+            "rationale": "The clue 'scene' with count 3 suggests words related to a setting or view. 'Camera' is a strong fit (captures a scene), 'telescope' (observes scenes like stars), and 'poet' (describes or imagines scenes). 'Village' could be a scene, but less direct. Remaining blues: camera, poet, village. Guesses remaining=4, so we can guess 3 safely.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "scene",
+          "count": 3,
+          "rationale": "Scene connects to camera (photographs scenes), poet (describes scenes), and village (a rural scene). It avoids associations with remaining red or neutral words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.8
+            },
+            "ranked_guesses": [
+              "cloud"
+            ],
+            "rationale": "Cloud is a word that is related to light, and it's a common association.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.8
+            },
+            "ranked_guesses": [
+              "cloud"
+            ],
+            "rationale": "Cloud is a word that is related to light, and it's a common association.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.8
+            },
+            "ranked_guesses": [
+              "cloud"
+            ],
+            "rationale": "Cloud is a word that is related to light, and it is a common association.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "comet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 2,
+          "rationale": "Connecting to telescope and possibly other words related to illumination"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "country"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.7,
+              "poet": 0.2,
+              "summer": 0.6
+            },
+            "ranked_guesses": [
+              "comet",
+              "summer",
+              "poet"
+            ],
+            "rationale": "Rain associates with 'comet' (rain of comets/meteors) and 'summer' (summer rain). 'Poet' is weaker but possible (rain in poetry). Avoid already revealed words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "summer": 0.9,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "summer",
+              "village"
+            ],
+            "rationale": "Rain commonly associates with summer (summer rain) and village (rainy village scenes), likely the two unrevealed blue words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "summer": 0.8,
+              "village": 0.7
+            },
+            "ranked_guesses": [
+              "summer",
+              "village"
+            ],
+            "rationale": "Rain is associated with summer showers and village scenes.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "village"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "rain",
+          "count": 2,
+          "rationale": "Rain connects to 'village' (rural scenes often involve rain) and 'poet' (poems often describe rain), both of which are unrevealed blue words. No other unrevealed blue words (only these two remain) or red words are strongly associated, and the assassin word 'secret' is unrelated, making this a safe clue for 2."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "image"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.8
+            },
+            "ranked_guesses": [
+              "comet"
+            ],
+            "rationale": "Comet is a word that is related to heat, and it's the only unrevealed word that shares a strong association with the clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.8
+            },
+            "ranked_guesses": [
+              "comet"
+            ],
+            "rationale": "comet is a word that is related to heat, and it's the only unrevealed word that shares a strong association with the clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.8
+            },
+            "ranked_guesses": [
+              "comet"
+            ],
+            "rationale": "Heat is related to celestial bodies, and comet is a remaining word that fits this theme.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 2,
+          "rationale": "Associates with summer and could connect to other red words"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bard"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "poet": 0.7,
+              "village": 0.9
+            },
+            "ranked_guesses": [
+              "village",
+              "poet"
+            ],
+            "rationale": "Country suggests rural or national identity. Village is a strong match as a small country settlement. Poet could relate to national poets or pastoral themes, but is weaker. Fox, kernel, library, paper, robot, secret, sugar, temple, violin are unrelated.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "poet": 0.7,
+              "village": 0.9
+            },
+            "ranked_guesses": [
+              "village",
+              "poet"
+            ],
+            "rationale": "Country suggests rural or national identity. Village is a strong match as a small country settlement. Poet could relate to national poets or pastoral themes, but is weaker. Fox, kernel, library, paper, robot, secret, sugar, temple, violin are less connected.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "poet": 0.7,
+              "village": 0.9
+            },
+            "ranked_guesses": [
+              "village",
+              "poet"
+            ],
+            "rationale": "Country clue: village is a direct rural area, poet often associated with national identity. Both unrevealed blue words fit.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "country",
+          "count": 2,
+          "rationale": "Poet and village both evoke rural life and countryside, with no strong links to remaining red words or assassin."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

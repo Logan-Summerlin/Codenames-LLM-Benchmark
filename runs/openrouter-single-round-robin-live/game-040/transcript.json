@@ -1,0 +1,1783 @@
+{
+  "board": {
+    "identities": {
+      "belt": "blue",
+      "button": "neutral",
+      "change": "red",
+      "club": "blue",
+      "cook": "neutral",
+      "cover": "red",
+      "dinosaur": "blue",
+      "egypt": "red",
+      "fly": "red",
+      "hotel": "blue",
+      "ice": "blue",
+      "iron": "blue",
+      "jet": "red",
+      "king": "blue",
+      "limousine": "neutral",
+      "moon": "assassin",
+      "pit": "neutral",
+      "pumpkin": "red",
+      "pyramid": "red",
+      "space": "blue",
+      "spider": "neutral",
+      "stock": "neutral",
+      "string": "red",
+      "swing": "neutral",
+      "tail": "red"
+    },
+    "revealed": [
+      "belt",
+      "dinosaur",
+      "egypt",
+      "ice",
+      "iron",
+      "king",
+      "moon",
+      "pyramid",
+      "space"
+    ],
+    "words": {
+      "belt": "blue",
+      "button": "neutral",
+      "change": "red",
+      "club": "blue",
+      "cook": "neutral",
+      "cover": "red",
+      "dinosaur": "blue",
+      "egypt": "red",
+      "fly": "red",
+      "hotel": "blue",
+      "ice": "blue",
+      "iron": "blue",
+      "jet": "red",
+      "king": "blue",
+      "limousine": "neutral",
+      "moon": "assassin",
+      "pit": "neutral",
+      "pumpkin": "red",
+      "pyramid": "red",
+      "space": "blue",
+      "spider": "neutral",
+      "stock": "neutral",
+      "string": "red",
+      "swing": "neutral",
+      "tail": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "pharaoh",
+        "count": 3,
+        "rationale": "Targets 'egypt', 'pyramid', and 'tail' (as in the tail of a pharaoh's headdress or the 'Tail of the Pharaoh' idiom). Avoids assassin ('moon') and neutral/blue words. High-efficiency clue for red team."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.1,
+          "dinosaur": 0.15,
+          "egypt": 0.95,
+          "ice": 0.08,
+          "king": 0.88,
+          "moon": 0.07,
+          "pumpkin": 0.05,
+          "pyramid": 0.92,
+          "swing": 0.03,
+          "tail": 0.02
+        },
+        "ranked_guesses": [
+          "egypt",
+          "pyramid",
+          "king",
+          "dinosaur",
+          "belt",
+          "ice",
+          "moon",
+          "pumpkin",
+          "swing",
+          "tail"
+        ],
+        "rationale": "\"Pharaoh\" strongly associates with **Egypt** (ancient civilization ruled by pharaohs) and **pyramid** (monumental tombs of pharaohs). **King** is a secondary but plausible link (pharaohs were kings). Other words have weak/no clear ties to 'pharaoh' or Egypt (e.g., 'dinosaur' via loose ancient/Egyptian fossil context, but low confidence). Prioritizing highest-probability links first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "The words 'iron', 'belt', and 'club' are all associated with metal. 'Iron' is a metal, 'belt' can have metal buckles, and 'club' can refer to a metal golf club."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.7,
+          "iron": 0.9,
+          "king": 0.5
+        },
+        "ranked_guesses": [
+          "iron",
+          "belt",
+          "king"
+        ],
+        "rationale": "The clue 'metal' strongly suggests 'iron' and 'belt' (as in a metal belt). 'King' is less certain but could relate to 'metal' in terms of royalty (e.g., 'heavy metal').",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.7,
+          "iron": 0.9,
+          "king": 0.5
+        },
+        "ranked_guesses": [
+          "iron",
+          "belt",
+          "king"
+        ],
+        "rationale": "'iron' is strongly associated with 'metal'. 'belt' can be made of metal, and 'king' might refer to 'iron king' or similar, though less certain.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.7,
+          "iron": 0.9,
+          "king": 0.5
+        },
+        "ranked_guesses": [
+          "iron",
+          "belt",
+          "king"
+        ],
+        "rationale": "'iron' is a strong metal and fits the clue well. 'belt' can refer to a metal belt, and 'king' might relate to metal crowns or regalia, though less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "voyage",
+        "count": 4,
+        "rationale": "Targets 'egypt' (travel destination), 'jet' (travel by air), 'space' (travel beyond Earth), and 'fly' (travel by air); avoids assassin ('moon') and neutral/opposing words. High intersection with red team's remaining words (4/9)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dinosaur": 0.45,
+          "egypt": 0.75,
+          "fly": 0.72,
+          "hotel": 0.6,
+          "jet": 0.88,
+          "king": 0.55,
+          "limousine": 0.65,
+          "moon": 0.92,
+          "pyramid": 0.4,
+          "space": 0.95
+        },
+        "ranked_guesses": [
+          "space",
+          "moon",
+          "jet",
+          "egypt",
+          "fly",
+          "limousine",
+          "hotel",
+          "king",
+          "dinosaur",
+          "pyramid"
+        ],
+        "rationale": "\"Voyage\" strongly connects to **space** (space voyage), **moon** (lunar voyage), and **jet** (jet travel). **Egypt** and **pyramid** are lower-confidence due to historical 'journeys' (e.g., expeditions), while **fly/limousine/hotel** are tangential (travel-related). Prior clues ('pharaoh', 'metal') suggest avoiding overlaps like 'iron' or 'king' unless high-confidence.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.35,
+          "egypt": 0.75,
+          "fly": 0.7,
+          "hotel": 0.6,
+          "jet": 0.9,
+          "king": 0.5,
+          "limousine": 0.65,
+          "moon": 0.92,
+          "space": 0.95,
+          "swing": 0.4
+        },
+        "ranked_guesses": [
+          "space",
+          "moon",
+          "jet",
+          "egypt",
+          "fly",
+          "limousine",
+          "hotel",
+          "king",
+          "swing",
+          "change"
+        ],
+        "rationale": "'Voyage' strongly suggests space/moon/jet (travel-related). Egypt (historical voyages), fly/limousine (travel modes), and hotel (destination) are secondary. Prior clues ('pharaoh', 'metal') reduce overlap risk for Egypt/iron. High confidence in top 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "royalty",
+        "count": 2,
+        "rationale": "The words 'king' and 'hotel' (as in 'hotel king') are both associated with royalty, and neither word is directly revealed in the clue."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pharaoh": 0.7,
+          "royalty": 0.8
+        },
+        "ranked_guesses": [
+          "royalty",
+          "pharaoh"
+        ],
+        "rationale": "short reason",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pharaoh": 0.8
+        },
+        "ranked_guesses": [
+          "pharaoh",
+          "royalty"
+        ],
+        "rationale": "short reason",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pharaoh": 0.9,
+          "royalty": 0.8
+        },
+        "ranked_guesses": [
+          "pharaoh",
+          "royalty"
+        ],
+        "rationale": "short reason",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ancient",
+        "count": 3,
+        "rationale": "links 'egypt', 'pyramid', and 'dinosaur' (all red/blue targets) while avoiding direct matches or assassin ('moon'). High-efficiency hint for red team's critical words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dinosaur": 0.85,
+          "egypt": 0.95,
+          "king": 0.75,
+          "pyramid": 0.92
+        },
+        "ranked_guesses": [
+          "egypt",
+          "pyramid",
+          "dinosaur",
+          "king"
+        ],
+        "rationale": "\"egypt\" and \"pyramid\" are directly tied to the concept of 'ancient' civilizations/history. \"dinosaur\" is prehistoric/ancient. \"king\" is a weaker link (ancient monarchies) but plausible. Count=3 suggests multiple strong connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.65,
+          "dinosaur": 0.88,
+          "egypt": 0.95,
+          "king": 0.75,
+          "pyramid": 0.92
+        },
+        "ranked_guesses": [
+          "egypt",
+          "pyramid",
+          "dinosaur",
+          "king",
+          "belt"
+        ],
+        "rationale": "\"egypt\" and \"pyramid\" are directly tied to the concept of 'ancient' (high-confidence). \"dinosaur\" is prehistoric/ancient. \"king\" links to ancient monarchies. \"belt\" (e.g., 'asteroid belt' or historical artifacts) is a lower-confidence stretch. Prior clues ('pharaoh', 'royalty') support these associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dinosaur": 0.85,
+          "egypt": 0.92,
+          "king": 0.75,
+          "pyramid": 0.95
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "egypt",
+          "dinosaur",
+          "king"
+        ],
+        "rationale": "\"pyramid\" and \"egypt\" are directly tied to the concept of 'ancient' and are the strongest candidates. \"dinosaur\" is also strongly associated with ancient times. \"king\" is a weaker but plausible link (e.g., ancient kings). Prior clues like 'pharaoh' and 'royalty' suggest overlap with 'egypt'/'king,' but 'pyramid' remains the safest first guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cold",
+        "count": 2,
+        "rationale": "'ice' and 'hotel' are both associated with coldness. 'ice' is directly related to cold, and 'hotel' can be linked to cold through phrases like 'ice hotel' or 'cold hotel rooms'."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.6,
+          "button": 0.5,
+          "ice": 0.9
+        },
+        "ranked_guesses": [
+          "ice",
+          "belt",
+          "button"
+        ],
+        "rationale": "'ice' is strongly associated with 'cold'. 'belt' and 'button' are less obvious but could relate to 'cold' in contexts like 'belt buckle cold' or 'button cold'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.6,
+          "button": 0.5,
+          "ice": 0.9
+        },
+        "ranked_guesses": [
+          "ice",
+          "belt",
+          "button"
+        ],
+        "rationale": "'ice' is strongly associated with 'cold'. 'belt' and 'button' are less obvious but could relate to cold weather clothing.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.6,
+          "ice": 0.9
+        },
+        "ranked_guesses": [
+          "ice",
+          "belt"
+        ],
+        "rationale": "'ice' is strongly associated with 'cold', and 'belt' could refer to a 'cold belt' or 'belt' as in something that holds things together tightly, like cold weather gear.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fashion",
+        "count": 2,
+        "rationale": "links 'change' (as in changing clothes) and 'tail' (as in a suit's tail or a formal dress's train)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 2,
+        "rationale": "'king' and 'club' (as in royal club) are both blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "king": 0.9,
+          "limousine": 0.6
+        },
+        "ranked_guesses": [
+          "king",
+          "limousine"
+        ],
+        "rationale": "'king' is strongly associated with 'royal', and 'limousine' is sometimes associated with royalty or luxury.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "club": 0.5,
+          "king": 0.9,
+          "limousine": 0.6
+        },
+        "ranked_guesses": [
+          "king",
+          "limousine",
+          "club"
+        ],
+        "rationale": "'king' is strongly associated with 'royal'. 'limousine' and 'club' are less obvious but could relate to royalty or exclusivity.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "club": 0.5,
+          "king": 0.9,
+          "limousine": 0.7
+        },
+        "ranked_guesses": [
+          "king",
+          "limousine",
+          "club"
+        ],
+        "rationale": "'king' is strongly associated with 'royal'. 'limousine' and 'club' are less direct but plausible connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fasten",
+        "count": 2,
+        "rationale": "ties to belt (blue) and string (red); avoids direct matches."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.95,
+          "button": 0.92,
+          "string": 0.75,
+          "swing": 0.65,
+          "tail": 0.6
+        },
+        "ranked_guesses": [
+          "belt",
+          "button",
+          "string",
+          "swing",
+          "tail"
+        ],
+        "rationale": "\"fasten\" strongly associates with **belt** (e.g., seatbelt, tightening) and **button** (fastening clothes). **String** (tying) is plausible but weaker. Remaining words are low-confidence stretches. Prioritize top 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.95,
+          "button": 0.92,
+          "string": 0.75,
+          "swing": 0.55,
+          "tail": 0.45
+        },
+        "ranked_guesses": [
+          "belt",
+          "button",
+          "string",
+          "swing",
+          "tail"
+        ],
+        "rationale": "\"fasten\" strongly associates with **belt** (e.g., seatbelt, tightening) and **button** (fastening clothes). **String** (tying) is plausible but weaker. Remaining words are low-confidence stretches. Prioritize top 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "night",
+        "count": 2,
+        "rationale": "The word 'night' connects to 'hotel' (as in 'hotel night') and 'club' (as in 'nightclub'), both of which are blue words remaining on the board. It avoids the assassin word 'moon' and other team's words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 0.7,
+          "moon": 0.9
+        },
+        "ranked_guesses": [
+          "moon",
+          "hotel"
+        ],
+        "rationale": "'moon' is strongly associated with 'night', and 'hotel' relates to 'night' as in 'hotel night'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fly": 0.6,
+          "hotel": 0.7,
+          "moon": 0.9
+        },
+        "ranked_guesses": [
+          "moon",
+          "hotel",
+          "fly"
+        ],
+        "rationale": "'night' suggests 'moon' strongly, 'hotel' (as in 'hotel night'), and 'fly' (as in 'night fly').",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "iron": 0.8,
+          "night": 0.8
+        },
+        "ranked_guesses": [
+          "night",
+          "iron"
+        ],
+        "rationale": "short reason",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "pharaoh"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "iron"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "voyage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "space"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royalty"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ancient"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "egypt"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dinosaur"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cold"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ice"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fashion"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "king"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fasten"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "belt"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "night"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "moon"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 40,
+    "public_event_count": 25,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-single-040-mistralai_mistral_medium_3_1-vs-deepseek_deepseek_chat_v3_0324",
+    "team_blue": "DeepSeek V3 0324",
+    "team_red": "Mistral Medium 3.1",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "pharaoh"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.1,
+              "dinosaur": 0.15,
+              "egypt": 0.95,
+              "ice": 0.08,
+              "king": 0.88,
+              "moon": 0.07,
+              "pumpkin": 0.05,
+              "pyramid": 0.92,
+              "swing": 0.03,
+              "tail": 0.02
+            },
+            "ranked_guesses": [
+              "egypt",
+              "pyramid",
+              "king",
+              "dinosaur",
+              "belt",
+              "ice",
+              "moon",
+              "pumpkin",
+              "swing",
+              "tail"
+            ],
+            "rationale": "\"Pharaoh\" strongly associates with **Egypt** (ancient civilization ruled by pharaohs) and **pyramid** (monumental tombs of pharaohs). **King** is a secondary but plausible link (pharaohs were kings). Other words have weak/no clear ties to 'pharaoh' or Egypt (e.g., 'dinosaur' via loose ancient/Egyptian fossil context, but low confidence). Prioritizing highest-probability links first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "pharaoh",
+          "count": 3,
+          "rationale": "Targets 'egypt', 'pyramid', and 'tail' (as in the tail of a pharaoh's headdress or the 'Tail of the Pharaoh' idiom). Avoids assassin ('moon') and neutral/blue words. High-efficiency clue for red team."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.7,
+              "iron": 0.9,
+              "king": 0.5
+            },
+            "ranked_guesses": [
+              "iron",
+              "belt",
+              "king"
+            ],
+            "rationale": "The clue 'metal' strongly suggests 'iron' and 'belt' (as in a metal belt). 'King' is less certain but could relate to 'metal' in terms of royalty (e.g., 'heavy metal').",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.7,
+              "iron": 0.9,
+              "king": 0.5
+            },
+            "ranked_guesses": [
+              "iron",
+              "belt",
+              "king"
+            ],
+            "rationale": "'iron' is strongly associated with 'metal'. 'belt' can be made of metal, and 'king' might refer to 'iron king' or similar, though less certain.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.7,
+              "iron": 0.9,
+              "king": 0.5
+            },
+            "ranked_guesses": [
+              "iron",
+              "belt",
+              "king"
+            ],
+            "rationale": "'iron' is a strong metal and fits the clue well. 'belt' can refer to a metal belt, and 'king' might relate to metal crowns or regalia, though less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "iron"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "The words 'iron', 'belt', and 'club' are all associated with metal. 'Iron' is a metal, 'belt' can have metal buckles, and 'club' can refer to a metal golf club."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "voyage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dinosaur": 0.45,
+              "egypt": 0.75,
+              "fly": 0.72,
+              "hotel": 0.6,
+              "jet": 0.88,
+              "king": 0.55,
+              "limousine": 0.65,
+              "moon": 0.92,
+              "pyramid": 0.4,
+              "space": 0.95
+            },
+            "ranked_guesses": [
+              "space",
+              "moon",
+              "jet",
+              "egypt",
+              "fly",
+              "limousine",
+              "hotel",
+              "king",
+              "dinosaur",
+              "pyramid"
+            ],
+            "rationale": "\"Voyage\" strongly connects to **space** (space voyage), **moon** (lunar voyage), and **jet** (jet travel). **Egypt** and **pyramid** are lower-confidence due to historical 'journeys' (e.g., expeditions), while **fly/limousine/hotel** are tangential (travel-related). Prior clues ('pharaoh', 'metal') suggest avoiding overlaps like 'iron' or 'king' unless high-confidence.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "change": 0.35,
+              "egypt": 0.75,
+              "fly": 0.7,
+              "hotel": 0.6,
+              "jet": 0.9,
+              "king": 0.5,
+              "limousine": 0.65,
+              "moon": 0.92,
+              "space": 0.95,
+              "swing": 0.4
+            },
+            "ranked_guesses": [
+              "space",
+              "moon",
+              "jet",
+              "egypt",
+              "fly",
+              "limousine",
+              "hotel",
+              "king",
+              "swing",
+              "change"
+            ],
+            "rationale": "'Voyage' strongly suggests space/moon/jet (travel-related). Egypt (historical voyages), fly/limousine (travel modes), and hotel (destination) are secondary. Prior clues ('pharaoh', 'metal') reduce overlap risk for Egypt/iron. High confidence in top 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "space"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "voyage",
+          "count": 4,
+          "rationale": "Targets 'egypt' (travel destination), 'jet' (travel by air), 'space' (travel beyond Earth), and 'fly' (travel by air); avoids assassin ('moon') and neutral/opposing words. High intersection with red team's remaining words (4/9)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royalty"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pharaoh": 0.7,
+              "royalty": 0.8
+            },
+            "ranked_guesses": [
+              "royalty",
+              "pharaoh"
+            ],
+            "rationale": "short reason",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pharaoh": 0.8
+            },
+            "ranked_guesses": [
+              "pharaoh",
+              "royalty"
+            ],
+            "rationale": "short reason",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pharaoh": 0.9,
+              "royalty": 0.8
+            },
+            "ranked_guesses": [
+              "pharaoh",
+              "royalty"
+            ],
+            "rationale": "short reason",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "royalty",
+          "count": 2,
+          "rationale": "The words 'king' and 'hotel' (as in 'hotel king') are both associated with royalty, and neither word is directly revealed in the clue."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ancient"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dinosaur": 0.85,
+              "egypt": 0.95,
+              "king": 0.75,
+              "pyramid": 0.92
+            },
+            "ranked_guesses": [
+              "egypt",
+              "pyramid",
+              "dinosaur",
+              "king"
+            ],
+            "rationale": "\"egypt\" and \"pyramid\" are directly tied to the concept of 'ancient' civilizations/history. \"dinosaur\" is prehistoric/ancient. \"king\" is a weaker link (ancient monarchies) but plausible. Count=3 suggests multiple strong connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.65,
+              "dinosaur": 0.88,
+              "egypt": 0.95,
+              "king": 0.75,
+              "pyramid": 0.92
+            },
+            "ranked_guesses": [
+              "egypt",
+              "pyramid",
+              "dinosaur",
+              "king",
+              "belt"
+            ],
+            "rationale": "\"egypt\" and \"pyramid\" are directly tied to the concept of 'ancient' (high-confidence). \"dinosaur\" is prehistoric/ancient. \"king\" links to ancient monarchies. \"belt\" (e.g., 'asteroid belt' or historical artifacts) is a lower-confidence stretch. Prior clues ('pharaoh', 'royalty') support these associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dinosaur": 0.85,
+              "egypt": 0.92,
+              "king": 0.75,
+              "pyramid": 0.95
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "egypt",
+              "dinosaur",
+              "king"
+            ],
+            "rationale": "\"pyramid\" and \"egypt\" are directly tied to the concept of 'ancient' and are the strongest candidates. \"dinosaur\" is also strongly associated with ancient times. \"king\" is a weaker but plausible link (e.g., ancient kings). Prior clues like 'pharaoh' and 'royalty' suggest overlap with 'egypt'/'king,' but 'pyramid' remains the safest first guess.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "egypt"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dinosaur"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ancient",
+          "count": 3,
+          "rationale": "links 'egypt', 'pyramid', and 'dinosaur' (all red/blue targets) while avoiding direct matches or assassin ('moon'). High-efficiency hint for red team's critical words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cold"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.6,
+              "button": 0.5,
+              "ice": 0.9
+            },
+            "ranked_guesses": [
+              "ice",
+              "belt",
+              "button"
+            ],
+            "rationale": "'ice' is strongly associated with 'cold'. 'belt' and 'button' are less obvious but could relate to 'cold' in contexts like 'belt buckle cold' or 'button cold'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.6,
+              "button": 0.5,
+              "ice": 0.9
+            },
+            "ranked_guesses": [
+              "ice",
+              "belt",
+              "button"
+            ],
+            "rationale": "'ice' is strongly associated with 'cold'. 'belt' and 'button' are less obvious but could relate to cold weather clothing.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.6,
+              "ice": 0.9
+            },
+            "ranked_guesses": [
+              "ice",
+              "belt"
+            ],
+            "rationale": "'ice' is strongly associated with 'cold', and 'belt' could refer to a 'cold belt' or 'belt' as in something that holds things together tightly, like cold weather gear.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ice"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "cold",
+          "count": 2,
+          "rationale": "'ice' and 'hotel' are both associated with coldness. 'ice' is directly related to cold, and 'hotel' can be linked to cold through phrases like 'ice hotel' or 'cold hotel rooms'."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fashion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fashion",
+          "count": 2,
+          "rationale": "links 'change' (as in changing clothes) and 'tail' (as in a suit's tail or a formal dress's train)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "king": 0.9,
+              "limousine": 0.6
+            },
+            "ranked_guesses": [
+              "king",
+              "limousine"
+            ],
+            "rationale": "'king' is strongly associated with 'royal', and 'limousine' is sometimes associated with royalty or luxury.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "club": 0.5,
+              "king": 0.9,
+              "limousine": 0.6
+            },
+            "ranked_guesses": [
+              "king",
+              "limousine",
+              "club"
+            ],
+            "rationale": "'king' is strongly associated with 'royal'. 'limousine' and 'club' are less obvious but could relate to royalty or exclusivity.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "club": 0.5,
+              "king": 0.9,
+              "limousine": 0.7
+            },
+            "ranked_guesses": [
+              "king",
+              "limousine",
+              "club"
+            ],
+            "rationale": "'king' is strongly associated with 'royal'. 'limousine' and 'club' are less direct but plausible connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "king"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "royal",
+          "count": 2,
+          "rationale": "'king' and 'club' (as in royal club) are both blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fasten"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.95,
+              "button": 0.92,
+              "string": 0.75,
+              "swing": 0.65,
+              "tail": 0.6
+            },
+            "ranked_guesses": [
+              "belt",
+              "button",
+              "string",
+              "swing",
+              "tail"
+            ],
+            "rationale": "\"fasten\" strongly associates with **belt** (e.g., seatbelt, tightening) and **button** (fastening clothes). **String** (tying) is plausible but weaker. Remaining words are low-confidence stretches. Prioritize top 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.95,
+              "button": 0.92,
+              "string": 0.75,
+              "swing": 0.55,
+              "tail": 0.45
+            },
+            "ranked_guesses": [
+              "belt",
+              "button",
+              "string",
+              "swing",
+              "tail"
+            ],
+            "rationale": "\"fasten\" strongly associates with **belt** (e.g., seatbelt, tightening) and **button** (fastening clothes). **String** (tying) is plausible but weaker. Remaining words are low-confidence stretches. Prioritize top 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "belt"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fasten",
+          "count": 2,
+          "rationale": "ties to belt (blue) and string (red); avoids direct matches."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "night"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hotel": 0.7,
+              "moon": 0.9
+            },
+            "ranked_guesses": [
+              "moon",
+              "hotel"
+            ],
+            "rationale": "'moon' is strongly associated with 'night', and 'hotel' relates to 'night' as in 'hotel night'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fly": 0.6,
+              "hotel": 0.7,
+              "moon": 0.9
+            },
+            "ranked_guesses": [
+              "moon",
+              "hotel",
+              "fly"
+            ],
+            "rationale": "'night' suggests 'moon' strongly, 'hotel' (as in 'hotel night'), and 'fly' (as in 'night fly').",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "iron": 0.8,
+              "night": 0.8
+            },
+            "ranked_guesses": [
+              "night",
+              "iron"
+            ],
+            "rationale": "short reason",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "moon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "night",
+          "count": 2,
+          "rationale": "The word 'night' connects to 'hotel' (as in 'hotel night') and 'club' (as in 'nightclub'), both of which are blue words remaining on the board. It avoids the assassin word 'moon' and other team's words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,3638 @@
+{
+  "board": {
+    "identities": {
+      "angel": "red",
+      "band": "assassin",
+      "bed": "blue",
+      "bridge": "red",
+      "check": "blue",
+      "circle": "neutral",
+      "compound": "blue",
+      "conductor": "neutral",
+      "cook": "blue",
+      "hand": "blue",
+      "hood": "red",
+      "horse": "neutral",
+      "limousine": "blue",
+      "london": "red",
+      "mercury": "red",
+      "mole": "red",
+      "nail": "blue",
+      "needle": "red",
+      "pants": "neutral",
+      "phoenix": "neutral",
+      "pin": "blue",
+      "root": "red",
+      "spell": "neutral",
+      "spot": "neutral",
+      "string": "red"
+    },
+    "revealed": [
+      "bed",
+      "limousine",
+      "london",
+      "mercury",
+      "pants"
+    ],
+    "words": {
+      "angel": "red",
+      "band": "assassin",
+      "bed": "blue",
+      "bridge": "red",
+      "check": "blue",
+      "circle": "neutral",
+      "compound": "blue",
+      "conductor": "neutral",
+      "cook": "blue",
+      "hand": "blue",
+      "hood": "red",
+      "horse": "neutral",
+      "limousine": "blue",
+      "london": "red",
+      "mercury": "red",
+      "mole": "red",
+      "nail": "blue",
+      "needle": "red",
+      "pants": "neutral",
+      "phoenix": "neutral",
+      "pin": "blue",
+      "root": "red",
+      "spell": "neutral",
+      "spot": "neutral",
+      "string": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "city",
+        "count": 2,
+        "rationale": "associated with london and possibly other words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "london": 0.6,
+          "phoenix": 0.4
+        },
+        "ranked_guesses": [
+          "london",
+          "phoenix"
+        ],
+        "rationale": "both are city names",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "london": 0.8,
+          "phoenix": 0.2
+        },
+        "ranked_guesses": [
+          "london",
+          "phoenix"
+        ],
+        "rationale": "both are city names",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "london": 0.9,
+          "phoenix": 0.8
+        },
+        "ranked_guesses": [
+          "london",
+          "phoenix"
+        ],
+        "rationale": "both words are related to cities",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cooking",
+        "count": 3,
+        "rationale": "Related to food preparation, linking to cook, hand, and pin."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 2,
+        "rationale": "linking to mercury and needle"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "conductor": 0.4,
+          "mercury": 0.6
+        },
+        "ranked_guesses": [
+          "mercury",
+          "conductor"
+        ],
+        "rationale": "Both words are related to metal, with mercury being a metal element and conductor being a term often associated with metal objects that conduct electricity.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "conductor": 0.4,
+          "mercury": 0.6
+        },
+        "ranked_guesses": [
+          "mercury",
+          "conductor"
+        ],
+        "rationale": "Mercury is a metal and conductor is related to metal",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.6,
+          "nail": 0.4
+        },
+        "ranked_guesses": [
+          "mercury",
+          "nail"
+        ],
+        "rationale": "Mercury is a metal and nail is a metal object",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "furniture",
+        "count": 1,
+        "rationale": "Related to a common item found in a bedroom, linking to bed."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9
+        },
+        "ranked_guesses": [
+          "bed"
+        ],
+        "rationale": "Bed is a common piece of furniture.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9
+        },
+        "ranked_guesses": [
+          "bed"
+        ],
+        "rationale": "Bed is a common piece of furniture.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9
+        },
+        "ranked_guesses": [
+          "bed"
+        ],
+        "rationale": "Bed is a type of furniture.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 2,
+        "rationale": "linking to limousine and possibly other transportation-related words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.3,
+          "limousine": 0.7
+        },
+        "ranked_guesses": [
+          "limousine",
+          "horse"
+        ],
+        "rationale": "The clue 'vehicle' is related to both 'limousine' and 'horse', but 'limousine' is a more specific type of vehicle.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.3,
+          "limousine": 0.7
+        },
+        "ranked_guesses": [
+          "limousine",
+          "horse"
+        ],
+        "rationale": "Related to the clue 'vehicle'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.3,
+          "limousine": 0.7
+        },
+        "ranked_guesses": [
+          "limousine",
+          "horse"
+        ],
+        "rationale": "The clue 'vehicle' is related to both 'limousine' and 'horse', but 'limousine' is a more specific type of vehicle.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "root",
+        "count": 1,
+        "rationale": "Related to the concept of growth and connection, linking to the word root."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "travel",
+        "count": 2,
+        "rationale": "Linking to modes of transportation like limousine and possibly other related words."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.4,
+          "limousine": 0.6
+        },
+        "ranked_guesses": [
+          "limousine",
+          "horse"
+        ],
+        "rationale": "The clue 'travel' is related to movement, and 'limousine' and 'horse' are both modes of transportation.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.4,
+          "limousine": 0.6
+        },
+        "ranked_guesses": [
+          "limousine",
+          "horse"
+        ],
+        "rationale": "Related to travel, limousine is a type of vehicle and horse can be used for transportation",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.4,
+          "limousine": 0.6
+        },
+        "ranked_guesses": [
+          "limousine",
+          "horse"
+        ],
+        "rationale": "related to travel",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sleep",
+        "count": 1,
+        "rationale": "Related to rest, linking to bed."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9
+        },
+        "ranked_guesses": [
+          "bed"
+        ],
+        "rationale": "Bed is directly related to sleep.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mole": 0.7
+        },
+        "ranked_guesses": [
+          "mole"
+        ],
+        "rationale": "Moles are often associated with burrowing and can be linked to sleep or rest.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.7
+        },
+        "ranked_guesses": [
+          "horse"
+        ],
+        "rationale": "Horse is often associated with sleep in terms of rest and relaxation.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 2,
+        "rationale": "linking to concepts of building and architecture"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "compound": 0.4
+        },
+        "ranked_guesses": [
+          "bridge",
+          "compound"
+        ],
+        "rationale": "Related to construction",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "compound": 0.4
+        },
+        "ranked_guesses": [
+          "bridge",
+          "compound"
+        ],
+        "rationale": "Related to construction, bridge and compound are possible guesses",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "compound": 0.4
+        },
+        "ranked_guesses": [
+          "bridge",
+          "compound"
+        ],
+        "rationale": "related to construction",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "transport",
+        "count": 2,
+        "rationale": "Related to movement, linking to limousine and check."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "limousine": 0.9
+        },
+        "ranked_guesses": [
+          "limousine",
+          "bridge"
+        ],
+        "rationale": "Both words relate to transport; limousine is a direct vehicle, and bridge is often used in transportation.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "limousine": 0.9
+        },
+        "ranked_guesses": [
+          "limousine",
+          "bridge"
+        ],
+        "rationale": "Both words relate to transport; limousine is a vehicle, and bridge is often associated with transportation routes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "limousine": 0.9
+        },
+        "ranked_guesses": [
+          "limousine",
+          "bridge"
+        ],
+        "rationale": "Both words relate to transport; limousine is a vehicle and bridge can be associated with travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "chemical",
+        "count": 2,
+        "rationale": "related to mercury and compound"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.4,
+          "mercury": 0.6
+        },
+        "ranked_guesses": [
+          "mercury",
+          "compound"
+        ],
+        "rationale": "related to the clue 'chemical'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.4,
+          "mercury": 0.6
+        },
+        "ranked_guesses": [
+          "mercury",
+          "compound"
+        ],
+        "rationale": "Related to the clue 'chemical'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.4,
+          "mercury": 0.6
+        },
+        "ranked_guesses": [
+          "mercury",
+          "compound"
+        ],
+        "rationale": "Related to the clue 'chemical'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shelter",
+        "count": 2,
+        "rationale": "Related to places of rest, linking to bed and hood."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "hood": 0.7
+        },
+        "ranked_guesses": [
+          "hood",
+          "bridge"
+        ],
+        "rationale": "Both words can relate to shelter; 'hood' as in a protective covering and 'bridge' as a structure providing shelter over a passage.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.6,
+          "hood": 0.7
+        },
+        "ranked_guesses": [
+          "hood",
+          "compound"
+        ],
+        "rationale": "Both words can relate to shelter; 'hood' as in a protective covering and 'compound' as in a fenced area.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "hood": 0.7
+        },
+        "ranked_guesses": [
+          "hood",
+          "bridge"
+        ],
+        "rationale": "Both words can relate to shelter; 'hood' suggests a covering, while 'bridge' can provide shelter over water.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "Related to mercury and angel"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "angel": 0.6,
+          "horse": 0.4
+        },
+        "ranked_guesses": [
+          "angel",
+          "horse"
+        ],
+        "rationale": "Both words are related to flight, with angel having wings and horse being related to the mythological winged horse Pegasus.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "angel": 0.4,
+          "phoenix": 0.6
+        },
+        "ranked_guesses": [
+          "angel",
+          "phoenix"
+        ],
+        "rationale": "Both words are related to the concept of flight, with 'phoenix' having mythological connections to flying and 'angel' often depicted with wings.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "angel": 0.4,
+          "horse": 0.6
+        },
+        "ranked_guesses": [
+          "horse",
+          "angel"
+        ],
+        "rationale": "horse and angel are related to flight, with horse possibly referring to a horse riding through the air like Pegasus and angel having wings to fly",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "transportation",
+        "count": 2,
+        "rationale": "Related to movement, linking to limousine and check."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "horse": 0.6
+        },
+        "ranked_guesses": [
+          "bridge",
+          "horse"
+        ],
+        "rationale": "Both words relate to transportation; bridge connects places, and horse can be used for travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "horse": 0.6
+        },
+        "ranked_guesses": [
+          "bridge",
+          "horse"
+        ],
+        "rationale": "Both words relate to transportation; bridge connects places and horse can be used for travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "horse": 0.6
+        },
+        "ranked_guesses": [
+          "bridge",
+          "horse"
+        ],
+        "rationale": "Both words relate to transportation; bridge connects places, and horse is a traditional mode of transport.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "element",
+        "count": 2,
+        "rationale": "Related to chemistry and science, linking to mercury and other concepts"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.4,
+          "mercury": 0.6
+        },
+        "ranked_guesses": [
+          "mercury",
+          "compound"
+        ],
+        "rationale": "Related to the clue 'element', which could be a chemical element like mercury or a compound made of elements.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.8
+        },
+        "ranked_guesses": [
+          "mercury"
+        ],
+        "rationale": "Mercury is a chemical element",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.8
+        },
+        "ranked_guesses": [
+          "mercury"
+        ],
+        "rationale": "Mercury is a chemical element",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "furniture",
+        "count": 2,
+        "rationale": "Related to items found in a home, linking to bed and possibly other household items."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7
+        },
+        "ranked_guesses": [
+          "hand"
+        ],
+        "rationale": "Hand is often associated with furniture in terms of usage and design.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7
+        },
+        "ranked_guesses": [
+          "hand"
+        ],
+        "rationale": "Hand is a common item associated with furniture, as it is often used to interact with furniture.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7
+        },
+        "ranked_guesses": [
+          "hand"
+        ],
+        "rationale": "Hand is often associated with furniture as it relates to using or interacting with it.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mining",
+        "count": 2,
+        "rationale": "Related to extraction of resources"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.6,
+          "mole": 0.4
+        },
+        "ranked_guesses": [
+          "compound",
+          "mole"
+        ],
+        "rationale": "Related to mining, compound and mole are possible guesses",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.4,
+          "mole": 0.6
+        },
+        "ranked_guesses": [
+          "mole",
+          "compound"
+        ],
+        "rationale": "Related to mining, linking to mole and compound.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compound": 0.6,
+          "mole": 0.4
+        },
+        "ranked_guesses": [
+          "compound",
+          "mole"
+        ],
+        "rationale": "related to mining",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 2,
+        "rationale": "Related to items used for tasks, linking to hand and pin."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words are associated with tools; 'hand' refers to hand tools and 'nail' is a tool used in construction.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "pin": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "pin"
+        ],
+        "rationale": "Both words are associated with tools, fitting the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "pin": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "pin"
+        ],
+        "rationale": "Both words are tools and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fabric",
+        "count": 2,
+        "rationale": "Linking to concepts related to textile and clothing."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.4,
+          "pants": 0.6
+        },
+        "ranked_guesses": [
+          "pants",
+          "hood"
+        ],
+        "rationale": "Related to fabric, pants and hood are both types of clothing.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.4,
+          "pants": 0.6
+        },
+        "ranked_guesses": [
+          "pants",
+          "hood"
+        ],
+        "rationale": "Related to fabric, pants and hood are clothing items.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.4,
+          "pants": 0.6
+        },
+        "ranked_guesses": [
+          "pants",
+          "hood"
+        ],
+        "rationale": "Both 'pants' and 'hood' are related to clothing, which is a type of fabric.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sleeping",
+        "count": 2,
+        "rationale": "Related to rest, linking to bed and hand."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "head",
+        "count": 2,
+        "rationale": "Linking to concepts related to upper body and protection."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.4,
+          "hood": 0.6
+        },
+        "ranked_guesses": [
+          "hood",
+          "hand"
+        ],
+        "rationale": "The clue 'head' is related to 'hood' as in 'head' and 'hood' are related to the upper part of the body, and 'hand' can be related to 'head' in the context of 'head' and 'hand' being body parts.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.4,
+          "hood": 0.6
+        },
+        "ranked_guesses": [
+          "hood",
+          "hand"
+        ],
+        "rationale": "The clue 'head' is related to 'hood' as in 'head' and 'hood' are related concepts, and 'hand' is related to 'head' as in 'head' and 'hand' are both body parts.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.6,
+          "hood": 0.4
+        },
+        "ranked_guesses": [
+          "hand",
+          "hood"
+        ],
+        "rationale": "The clue 'head' is related to 'hand' and 'hood' as they are both body parts or related concepts.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "furniture",
+        "count": 2,
+        "rationale": "Related to items found in a home, linking to bed and check."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "pin": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "pin"
+        ],
+        "rationale": "Both words relate to furniture in terms of usage or components.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7
+        },
+        "ranked_guesses": [
+          "hand"
+        ],
+        "rationale": "Hand is associated with furniture as it can refer to hand-crafted items.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "pin": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "pin"
+        ],
+        "rationale": "Both words are related to furniture in terms of functionality or usage.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "garment",
+        "count": 2,
+        "rationale": "Related to clothing, linking to needle and pants."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.6,
+          "pants": 0.7
+        },
+        "ranked_guesses": [
+          "pants",
+          "hood"
+        ],
+        "rationale": "Related to garment",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.3,
+          "pants": 0.7
+        },
+        "ranked_guesses": [
+          "pants",
+          "hood"
+        ],
+        "rationale": "Related to garment",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pants": 0.9
+        },
+        "ranked_guesses": [
+          "pants"
+        ],
+        "rationale": "Related to garment",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "toolbox",
+        "count": 2,
+        "rationale": "Related to items used for work, linking to hand and nail."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words are tools or related to tools, fitting the clue 'toolbox'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words relate to tools and can be found in a toolbox.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words are tools or related to tools, fitting the clue 'toolbox'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "cloth",
+        "count": 2,
+        "rationale": "Related to fabric and garments"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.7,
+          "pin": 0.6
+        },
+        "ranked_guesses": [
+          "needle",
+          "pin"
+        ],
+        "rationale": "Both 'needle' and 'pin' are related to cloth or sewing",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.6,
+          "pin": 0.5,
+          "string": 0.4
+        },
+        "ranked_guesses": [
+          "needle",
+          "pin",
+          "string"
+        ],
+        "rationale": "Related to cloth, linking to needle, pin, and string.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.6,
+          "string": 0.4
+        },
+        "ranked_guesses": [
+          "needle",
+          "string"
+        ],
+        "rationale": "Both 'needle' and 'string' are related to cloth or fabric, with 'needle' being a common tool used in sewing and 'string' being a type of thread or yarn.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 2,
+        "rationale": "Related to items used for work, linking to pin and nail."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both are tools used in various tasks, fitting the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words are tools or related to tools, fitting the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words are commonly associated with tools; hand is often used with tools and nail is a tool in construction.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "building",
+        "count": 2,
+        "rationale": "Related to structures, linking to bridge and hood."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "compound": 0.4
+        },
+        "ranked_guesses": [
+          "bridge",
+          "compound"
+        ],
+        "rationale": "Both bridge and compound are related to the concept of building",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "compound": 0.4
+        },
+        "ranked_guesses": [
+          "bridge",
+          "compound"
+        ],
+        "rationale": "Related to the concept of building, linking to bridge and compound.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "compound": 0.4
+        },
+        "ranked_guesses": [
+          "bridge",
+          "compound"
+        ],
+        "rationale": "Related to the concept of building, linking to bridge and compound.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 2,
+        "rationale": "Related to instruments used for tasks, linking to nail and pin."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both are tools commonly used in various tasks.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both words are tools or related to tools, fitting the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.7,
+          "nail": 0.6
+        },
+        "ranked_guesses": [
+          "hand",
+          "nail"
+        ],
+        "rationale": "Both are tools used for various tasks, fitting the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tailor",
+        "count": 2,
+        "rationale": "Related to making clothes, linking to words like needle and thread, which are associated with sewing and garments."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.7,
+          "pin": 0.6
+        },
+        "ranked_guesses": [
+          "needle",
+          "pin"
+        ],
+        "rationale": "Both 'needle' and 'pin' are related to the concept of sewing, which is closely associated with the word 'tailor'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.6,
+          "pin": 0.4
+        },
+        "ranked_guesses": [
+          "needle",
+          "pin"
+        ],
+        "rationale": "The clue 'tailor' is related to sewing and clothes, so I'm guessing words that are also related to sewing, such as 'needle' and 'pin'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.6,
+          "pin": 0.4
+        },
+        "ranked_guesses": [
+          "needle",
+          "pin"
+        ],
+        "rationale": "The clue 'tailor' is related to sewing and clothes, so I'm guessing words that are also related to sewing, such as 'needle' and 'pin'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "needle",
+        "count": 1,
+        "rationale": "Related to sewing and precision, linking to the word pin."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "city"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "london"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "cooking",
+        "count": 3,
+        "rationale": "Related to food preparation, linking to cook, hand, and pin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cook",
+      "reason": "morphological_variant",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "furniture"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bed"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "root",
+        "count": 1,
+        "rationale": "Related to the concept of growth and connection, linking to the word root."
+      },
+      "event": "illegal_clue",
+      "matched_word": "root",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sleep"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transport"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "limousine"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "chemical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shelter"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transportation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "element"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mercury"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "furniture"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mining"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fabric"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "sleeping",
+        "count": 2,
+        "rationale": "Related to rest, linking to bed and hand."
+      },
+      "event": "illegal_clue",
+      "matched_word": "pin",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "head"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "furniture"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "garment"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pants"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "toolbox"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cloth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "building"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tailor"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "needle",
+        "count": 1,
+        "rationale": "Related to sewing and precision, linking to the word pin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "needle",
+      "reason": "board_word",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 108,
+    "public_event_count": 60,
+    "reason": null,
+    "seed": "openrouter-codenames-001-meta_llama_llama_3_3_70b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Llama 3.3 70B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "city"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "london": 0.6,
+              "phoenix": 0.4
+            },
+            "ranked_guesses": [
+              "london",
+              "phoenix"
+            ],
+            "rationale": "both are city names",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "london": 0.8,
+              "phoenix": 0.2
+            },
+            "ranked_guesses": [
+              "london",
+              "phoenix"
+            ],
+            "rationale": "both are city names",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "london": 0.9,
+              "phoenix": 0.8
+            },
+            "ranked_guesses": [
+              "london",
+              "phoenix"
+            ],
+            "rationale": "both words are related to cities",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "london"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "city",
+          "count": 2,
+          "rationale": "associated with london and possibly other words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "furniture"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bed"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "cooking",
+          "count": 3,
+          "rationale": "Related to food preparation, linking to cook, hand, and pin."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "conductor": 0.4,
+              "mercury": 0.6
+            },
+            "ranked_guesses": [
+              "mercury",
+              "conductor"
+            ],
+            "rationale": "Both words are related to metal, with mercury being a metal element and conductor being a term often associated with metal objects that conduct electricity.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "conductor": 0.4,
+              "mercury": 0.6
+            },
+            "ranked_guesses": [
+              "mercury",
+              "conductor"
+            ],
+            "rationale": "Mercury is a metal and conductor is related to metal",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.6,
+              "nail": 0.4
+            },
+            "ranked_guesses": [
+              "mercury",
+              "nail"
+            ],
+            "rationale": "Mercury is a metal and nail is a metal object",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 2,
+          "rationale": "linking to mercury and needle"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sleep"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9
+            },
+            "ranked_guesses": [
+              "bed"
+            ],
+            "rationale": "Bed is a common piece of furniture.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9
+            },
+            "ranked_guesses": [
+              "bed"
+            ],
+            "rationale": "Bed is a common piece of furniture.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9
+            },
+            "ranked_guesses": [
+              "bed"
+            ],
+            "rationale": "Bed is a type of furniture.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "furniture",
+          "count": 1,
+          "rationale": "Related to a common item found in a bedroom, linking to bed."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.3,
+              "limousine": 0.7
+            },
+            "ranked_guesses": [
+              "limousine",
+              "horse"
+            ],
+            "rationale": "The clue 'vehicle' is related to both 'limousine' and 'horse', but 'limousine' is a more specific type of vehicle.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.3,
+              "limousine": 0.7
+            },
+            "ranked_guesses": [
+              "limousine",
+              "horse"
+            ],
+            "rationale": "Related to the clue 'vehicle'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.3,
+              "limousine": 0.7
+            },
+            "ranked_guesses": [
+              "limousine",
+              "horse"
+            ],
+            "rationale": "The clue 'vehicle' is related to both 'limousine' and 'horse', but 'limousine' is a more specific type of vehicle.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "vehicle",
+          "count": 2,
+          "rationale": "linking to limousine and possibly other transportation-related words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transport"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "limousine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "root",
+          "count": 1,
+          "rationale": "Related to the concept of growth and connection, linking to the word root."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "chemical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.4,
+              "limousine": 0.6
+            },
+            "ranked_guesses": [
+              "limousine",
+              "horse"
+            ],
+            "rationale": "The clue 'travel' is related to movement, and 'limousine' and 'horse' are both modes of transportation.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.4,
+              "limousine": 0.6
+            },
+            "ranked_guesses": [
+              "limousine",
+              "horse"
+            ],
+            "rationale": "Related to travel, limousine is a type of vehicle and horse can be used for transportation",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.4,
+              "limousine": 0.6
+            },
+            "ranked_guesses": [
+              "limousine",
+              "horse"
+            ],
+            "rationale": "related to travel",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 2,
+          "rationale": "Linking to modes of transportation like limousine and possibly other related words."
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shelter"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9
+            },
+            "ranked_guesses": [
+              "bed"
+            ],
+            "rationale": "Bed is directly related to sleep.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mole": 0.7
+            },
+            "ranked_guesses": [
+              "mole"
+            ],
+            "rationale": "Moles are often associated with burrowing and can be linked to sleep or rest.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.7
+            },
+            "ranked_guesses": [
+              "horse"
+            ],
+            "rationale": "Horse is often associated with sleep in terms of rest and relaxation.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sleep",
+          "count": 1,
+          "rationale": "Related to rest, linking to bed."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "compound": 0.4
+            },
+            "ranked_guesses": [
+              "bridge",
+              "compound"
+            ],
+            "rationale": "Related to construction",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "compound": 0.4
+            },
+            "ranked_guesses": [
+              "bridge",
+              "compound"
+            ],
+            "rationale": "Related to construction, bridge and compound are possible guesses",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "compound": 0.4
+            },
+            "ranked_guesses": [
+              "bridge",
+              "compound"
+            ],
+            "rationale": "related to construction",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "construction",
+          "count": 2,
+          "rationale": "linking to concepts of building and architecture"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transportation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "limousine": 0.9
+            },
+            "ranked_guesses": [
+              "limousine",
+              "bridge"
+            ],
+            "rationale": "Both words relate to transport; limousine is a direct vehicle, and bridge is often used in transportation.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "limousine": 0.9
+            },
+            "ranked_guesses": [
+              "limousine",
+              "bridge"
+            ],
+            "rationale": "Both words relate to transport; limousine is a vehicle, and bridge is often associated with transportation routes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "limousine": 0.9
+            },
+            "ranked_guesses": [
+              "limousine",
+              "bridge"
+            ],
+            "rationale": "Both words relate to transport; limousine is a vehicle and bridge can be associated with travel.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "transport",
+          "count": 2,
+          "rationale": "Related to movement, linking to limousine and check."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "element"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.4,
+              "mercury": 0.6
+            },
+            "ranked_guesses": [
+              "mercury",
+              "compound"
+            ],
+            "rationale": "related to the clue 'chemical'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.4,
+              "mercury": 0.6
+            },
+            "ranked_guesses": [
+              "mercury",
+              "compound"
+            ],
+            "rationale": "Related to the clue 'chemical'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.4,
+              "mercury": 0.6
+            },
+            "ranked_guesses": [
+              "mercury",
+              "compound"
+            ],
+            "rationale": "Related to the clue 'chemical'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mercury"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "chemical",
+          "count": 2,
+          "rationale": "related to mercury and compound"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "furniture"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "hood": 0.7
+            },
+            "ranked_guesses": [
+              "hood",
+              "bridge"
+            ],
+            "rationale": "Both words can relate to shelter; 'hood' as in a protective covering and 'bridge' as a structure providing shelter over a passage.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.6,
+              "hood": 0.7
+            },
+            "ranked_guesses": [
+              "hood",
+              "compound"
+            ],
+            "rationale": "Both words can relate to shelter; 'hood' as in a protective covering and 'compound' as in a fenced area.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "hood": 0.7
+            },
+            "ranked_guesses": [
+              "hood",
+              "bridge"
+            ],
+            "rationale": "Both words can relate to shelter; 'hood' suggests a covering, while 'bridge' can provide shelter over water.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "shelter",
+          "count": 2,
+          "rationale": "Related to places of rest, linking to bed and hood."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mining"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "angel": 0.6,
+              "horse": 0.4
+            },
+            "ranked_guesses": [
+              "angel",
+              "horse"
+            ],
+            "rationale": "Both words are related to flight, with angel having wings and horse being related to the mythological winged horse Pegasus.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "angel": 0.4,
+              "phoenix": 0.6
+            },
+            "ranked_guesses": [
+              "angel",
+              "phoenix"
+            ],
+            "rationale": "Both words are related to the concept of flight, with 'phoenix' having mythological connections to flying and 'angel' often depicted with wings.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "angel": 0.4,
+              "horse": 0.6
+            },
+            "ranked_guesses": [
+              "horse",
+              "angel"
+            ],
+            "rationale": "horse and angel are related to flight, with horse possibly referring to a horse riding through the air like Pegasus and angel having wings to fly",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "Related to mercury and angel"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "horse": 0.6
+            },
+            "ranked_guesses": [
+              "bridge",
+              "horse"
+            ],
+            "rationale": "Both words relate to transportation; bridge connects places, and horse can be used for travel.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "horse": 0.6
+            },
+            "ranked_guesses": [
+              "bridge",
+              "horse"
+            ],
+            "rationale": "Both words relate to transportation; bridge connects places and horse can be used for travel.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "horse": 0.6
+            },
+            "ranked_guesses": [
+              "bridge",
+              "horse"
+            ],
+            "rationale": "Both words relate to transportation; bridge connects places, and horse is a traditional mode of transport.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "transportation",
+          "count": 2,
+          "rationale": "Related to movement, linking to limousine and check."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fabric"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.4,
+              "mercury": 0.6
+            },
+            "ranked_guesses": [
+              "mercury",
+              "compound"
+            ],
+            "rationale": "Related to the clue 'element', which could be a chemical element like mercury or a compound made of elements.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.8
+            },
+            "ranked_guesses": [
+              "mercury"
+            ],
+            "rationale": "Mercury is a chemical element",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.8
+            },
+            "ranked_guesses": [
+              "mercury"
+            ],
+            "rationale": "Mercury is a chemical element",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "element",
+          "count": 2,
+          "rationale": "Related to chemistry and science, linking to mercury and other concepts"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "head"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "furniture"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7
+            },
+            "ranked_guesses": [
+              "hand"
+            ],
+            "rationale": "Hand is often associated with furniture in terms of usage and design.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7
+            },
+            "ranked_guesses": [
+              "hand"
+            ],
+            "rationale": "Hand is a common item associated with furniture, as it is often used to interact with furniture.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7
+            },
+            "ranked_guesses": [
+              "hand"
+            ],
+            "rationale": "Hand is often associated with furniture as it relates to using or interacting with it.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "furniture",
+          "count": 2,
+          "rationale": "Related to items found in a home, linking to bed and possibly other household items."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "garment"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.6,
+              "mole": 0.4
+            },
+            "ranked_guesses": [
+              "compound",
+              "mole"
+            ],
+            "rationale": "Related to mining, compound and mole are possible guesses",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.4,
+              "mole": 0.6
+            },
+            "ranked_guesses": [
+              "mole",
+              "compound"
+            ],
+            "rationale": "Related to mining, linking to mole and compound.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compound": 0.6,
+              "mole": 0.4
+            },
+            "ranked_guesses": [
+              "compound",
+              "mole"
+            ],
+            "rationale": "related to mining",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pants"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mining",
+          "count": 2,
+          "rationale": "Related to extraction of resources"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "toolbox"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7,
+              "nail": 0.6
+            },
+            "ranked_guesses": [
+              "hand",
+              "nail"
+            ],
+            "rationale": "Both words are associated with tools; 'hand' refers to hand tools and 'nail' is a tool used in construction.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7,
+              "pin": 0.6
+            },
+            "ranked_guesses": [
+              "hand",
+              "pin"
+            ],
+            "rationale": "Both words are associated with tools, fitting the clue 'tool'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7,
+              "pin": 0.6
+            },
+            "ranked_guesses": [
+              "hand",
+              "pin"
+            ],
+            "rationale": "Both words are tools and fit the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "tool",
+          "count": 2,
+          "rationale": "Related to items used for tasks, linking to hand and pin."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cloth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hood": 0.4,
+              "pants": 0.6
+            },
+            "ranked_guesses": [
+              "pants",
+              "hood"
+            ],
+            "rationale": "Related to fabric, pants and hood are both types of clothing.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hood": 0.4,
+              "pants": 0.6
+            },
+            "ranked_guesses": [
+              "pants",
+              "hood"
+            ],
+            "rationale": "Related to fabric, pants and hood are clothing items.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hood": 0.4,
+              "pants": 0.6
+            },
+            "ranked_guesses": [
+              "pants",
+              "hood"
+            ],
+            "rationale": "Both 'pants' and 'hood' are related to clothing, which is a type of fabric.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fabric",
+          "count": 2,
+          "rationale": "Linking to concepts related to textile and clothing."
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sleeping",
+          "count": 2,
+          "rationale": "Related to rest, linking to bed and hand."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "building"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.4,
+              "hood": 0.6
+            },
+            "ranked_guesses": [
+              "hood",
+              "hand"
+            ],
+            "rationale": "The clue 'head' is related to 'hood' as in 'head' and 'hood' are related to the upper part of the body, and 'hand' can be related to 'head' in the context of 'head' and 'hand' being body parts.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.4,
+              "hood": 0.6
+            },
+            "ranked_guesses": [
+              "hood",
+              "hand"
+            ],
+            "rationale": "The clue 'head' is related to 'hood' as in 'head' and 'hood' are related concepts, and 'hand' is related to 'head' as in 'head' and 'hand' are both body parts.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.6,
+              "hood": 0.4
+            },
+            "ranked_guesses": [
+              "hand",
+              "hood"
+            ],
+            "rationale": "The clue 'head' is related to 'hand' and 'hood' as they are both body parts or related concepts.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "head",
+          "count": 2,
+          "rationale": "Linking to concepts related to upper body and protection."
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7,
+              "pin": 0.6
+            },
+            "ranked_guesses": [
+              "hand",
+              "pin"
+            ],
+            "rationale": "Both words relate to furniture in terms of usage or components.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7
+            },
+            "ranked_guesses": [
+              "hand"
+            ],
+            "rationale": "Hand is associated with furniture as it can refer to hand-crafted items.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.7,
+              "pin": 0.6
+            },
+            "ranked_guesses": [
+              "hand",
+              "pin"
+            ],
+            "rationale": "Both words are related to furniture in terms of functionality or usage.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "furniture",
+          "count": 2,
+          "rationale": "Related to items found in a home, linking to bed and check."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tailor"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hood": 0.6,
+              "pants": 0.7
+            },
+            "ranked_guesses": [
+              "pants",
+              "hood"
+            ],
+            "rationale": "Related to garment",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hood": 0.3,
+              "pants": 0.7
+            },
+            "ranked_guesses": [
+              "pants",
+              "hood"
+            ],
+            "rationale": "Related to garment",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pants": 0.9
+            },
+            "ranked_guesses": [
+              "pants"
+            ],
+            "rationale": "Related to garment",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "garment",
+          "count": 2,
+          "rationale": "Related to clothing, linking to needle and pants."
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    }
+  ]
+}

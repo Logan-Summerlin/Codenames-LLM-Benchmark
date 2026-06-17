@@ -1,0 +1,3438 @@
+{
+  "board": {
+    "identities": {
+      "alien": "blue",
+      "animal": "red",
+      "atlas": "red",
+      "battery": "neutral",
+      "butter": "red",
+      "castle": "red",
+      "doctor": "red",
+      "engine": "red",
+      "flower": "neutral",
+      "forest": "blue",
+      "fox": "blue",
+      "machine": "blue",
+      "memory": "neutral",
+      "mirror": "blue",
+      "nurse": "blue",
+      "palace": "neutral",
+      "poet": "neutral",
+      "river": "assassin",
+      "rocket": "blue",
+      "stone": "red",
+      "sugar": "red",
+      "temple": "neutral",
+      "tiger": "neutral",
+      "winter": "red",
+      "wizard": "blue"
+    },
+    "revealed": [
+      "alien",
+      "animal",
+      "atlas",
+      "castle",
+      "doctor",
+      "engine",
+      "forest",
+      "machine",
+      "palace",
+      "rocket",
+      "tiger",
+      "wizard"
+    ],
+    "words": {
+      "alien": "blue",
+      "animal": "red",
+      "atlas": "red",
+      "battery": "neutral",
+      "butter": "red",
+      "castle": "red",
+      "doctor": "red",
+      "engine": "red",
+      "flower": "neutral",
+      "forest": "blue",
+      "fox": "blue",
+      "machine": "blue",
+      "memory": "neutral",
+      "mirror": "blue",
+      "nurse": "blue",
+      "palace": "neutral",
+      "poet": "neutral",
+      "river": "assassin",
+      "rocket": "blue",
+      "stone": "red",
+      "sugar": "red",
+      "temple": "neutral",
+      "tiger": "neutral",
+      "winter": "red",
+      "wizard": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "structure",
+        "count": 3,
+        "rationale": "multiple words related to buildings"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.8,
+          "palace": 0.6,
+          "temple": 0.4
+        },
+        "ranked_guesses": [
+          "castle",
+          "palace",
+          "temple"
+        ],
+        "rationale": "All three words are related to buildings, which fits with the clue 'structure'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.8,
+          "palace": 0.6,
+          "temple": 0.4
+        },
+        "ranked_guesses": [
+          "castle",
+          "palace",
+          "temple"
+        ],
+        "rationale": "Words related to structure",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.8,
+          "palace": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "castle",
+          "palace",
+          "temple"
+        ],
+        "rationale": "All three words are related to structures, and are all nouns.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Refers to both the concept of outer space and the idea of a physical area, linking to 'alien' and 'rocket'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "rocket",
+          "alien"
+        ],
+        "rationale": "Both words relate to space; rocket is a strong association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.6,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "rocket",
+          "alien"
+        ],
+        "rationale": "Both words relate to space; rocket is a direct vehicle for space travel, and alien connects to the idea of extraterrestrial life.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.6,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "rocket",
+          "alien"
+        ],
+        "rationale": "Both words relate to space, with 'rocket' being a direct vehicle for space travel and 'alien' often associated with outer space.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 2,
+        "rationale": "related to doctor"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "nurse": 0.7
+        },
+        "ranked_guesses": [
+          "doctor",
+          "nurse"
+        ],
+        "rationale": "Both words are related to the medical field.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "nurse": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "nurse"
+        ],
+        "rationale": "Both words are related to the medical field.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8,
+          "nurse": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "nurse"
+        ],
+        "rationale": "Both words are related to the medical field, which is the current clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "creature",
+        "count": 1,
+        "rationale": "Refers to an animal, which is a potential blue word."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "animal": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "animal"
+        ],
+        "rationale": "Both words relate to 'creature', but 'alien' is more specific.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "tiger",
+          "animal"
+        ],
+        "rationale": "Both words relate to creatures, but 'tiger' is a specific creature.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "animal": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "animal"
+        ],
+        "rationale": "Both words relate to 'creature', but 'alien' is more specific.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "power",
+        "count": 2,
+        "rationale": "related to machines"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both words are related to 'power' and are on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "machine": 0.7
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both words are related to 'power' and are on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "machine": 0.5
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both words are related to 'power' and are not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It relates to nature and is associated with the blue team."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 2,
+        "rationale": "related to transportation"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8
+        },
+        "ranked_guesses": [
+          "engine"
+        ],
+        "rationale": "already revealed as red and matches the vehicle clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8
+        },
+        "ranked_guesses": [
+          "engine"
+        ],
+        "rationale": "already revealed and related to vehicle",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8
+        },
+        "ranked_guesses": [
+          "engine"
+        ],
+        "rationale": "already revealed as red and relates to vehicle",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "myth",
+        "count": 1,
+        "rationale": "It relates to a magical figure associated with fantasy."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.8
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is a mythical creature, fitting the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.8
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is often associated with myths and magical stories.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.8
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is often associated with myths and legends.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "meat",
+        "count": 2,
+        "rationale": "related to food"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8
+        },
+        "ranked_guesses": [
+          "animal"
+        ],
+        "rationale": "related to meat",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8,
+          "butter": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "butter"
+        ],
+        "rationale": "Both words are related to 'meat'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8
+        },
+        "ranked_guesses": [
+          "animal"
+        ],
+        "rationale": "related to meat",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It connects to nature and is associated with the blue team."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "strong",
+        "count": 2,
+        "rationale": "associated with power"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "Strong animals like tiger",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.4,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "machine"
+        ],
+        "rationale": "strong animals and machines are often strong",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "strong animal",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 2,
+        "rationale": "Both words relate to fantasy and lore, fitting the blue team's theme."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.6,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "'Wizard' is directly related to 'mythical', while 'tiger' is a creature but less connected.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.6,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "'Wizard' is a strong mythical figure, while 'tiger' is a creature but less directly related to mythology.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.6,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "'Wizard' is a strong mythical figure, while 'tiger' is a creature but less directly related to myth.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fight",
+        "count": 2,
+        "rationale": "associated with strength and conflict"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8
+        },
+        "ranked_guesses": [
+          "atlas"
+        ],
+        "rationale": "Atlas is a word related to fight, as it is a name associated with a mythological figure known for his strength and fighting abilities.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "Tiger is already revealed as neutral, and the clue 'fight' is likely related to it.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "The clue 'fight' is related to the word 'tiger', which is already revealed as neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It relates to nature and is associated with the blue team."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "stronghold",
+        "count": 2,
+        "rationale": "Relates to a fortified structure"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Stronghold is related to castle, and palace is a similar structure.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Stronghold clue relates to a type of structure, and palace is a type of stronghold.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Stronghold clue relates to castle, and palace is a similar structure.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "myth",
+        "count": 1,
+        "rationale": "It relates to a legendary figure and is associated with the blue team."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is a mythical creature, directly related to the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is a mythical creature, aligning with the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is a mythical creature, directly related to the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "military",
+        "count": 2,
+        "rationale": "related to the red team's theme"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "machine"
+        ],
+        "rationale": "Both words are related to military and are not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "battery": 0.6,
+          "machine": 0.5
+        },
+        "ranked_guesses": [
+          "atlas",
+          "battery",
+          "machine"
+        ],
+        "rationale": "military clue relates to words with a strong or powerful connotation",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "machine": 0.4
+        },
+        "ranked_guesses": [
+          "atlas",
+          "machine"
+        ],
+        "rationale": "Both words are related to military, atlas is a military term and machine can be a military vehicle",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It connects to nature and is associated with the blue team."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "building",
+        "count": 2,
+        "rationale": "structures associated with the red team"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Building is a strong association with palace, which is already revealed as neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Building is a strong association with palace, which is already revealed as neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Building is a strong association with palace",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 1,
+        "rationale": "It relates to the environment and is connected to a blue word."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.7,
+          "forest": 0.6
+        },
+        "ranked_guesses": [
+          "flower",
+          "forest"
+        ],
+        "rationale": "Both words relate to nature, but flower is more specific.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.7,
+          "forest": 0.9,
+          "river": 0.6
+        },
+        "ranked_guesses": [
+          "flower",
+          "forest",
+          "river"
+        ],
+        "rationale": "These words are related to nature, with 'forest' being the strongest connection.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.7,
+          "forest": 0.6
+        },
+        "ranked_guesses": [
+          "flower",
+          "forest"
+        ],
+        "rationale": "Both words relate to nature, but flower is more specific.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "animalistic",
+        "count": 2,
+        "rationale": "relates to beasts"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fantasy",
+        "count": 2,
+        "rationale": "It relates to mythical beings and stories, connecting to wizard and fox."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "rocket": 0.6,
+          "wizard": 0.7
+        },
+        "ranked_guesses": [
+          "wizard",
+          "rocket"
+        ],
+        "rationale": "Both words relate to fantasy themes, with 'wizard' being a classic fantasy character and 'rocket' often associated with space fantasy.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "rocket": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "rocket"
+        ],
+        "rationale": "Both words relate to fantasy themes, with 'wizard' being a direct representation and 'rocket' fitting into the broader imaginative context.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "rocket": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "rocket"
+        ],
+        "rationale": "Both words relate to fantasy themes, with 'wizard' being a direct representation and 'rocket' fitting into a sci-fi fantasy context.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "beast",
+        "count": 2,
+        "rationale": "relates to animals"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "animal"
+        ],
+        "rationale": "Both words are related to beasts and have been previously guessed as red or neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "animal"
+        ],
+        "rationale": "Both words are related to beasts and have been previously guessed as red or neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "animal"
+        ],
+        "rationale": "Both words are related to beasts and have been previously guessed as red or neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 1,
+        "rationale": "It relates to fantasy and connects to the blue team's words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.6,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "'Wizard' is a strong mythical figure, while 'tiger' is a creature but less directly related.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.6,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "'Wizard' is a mythical creature, while 'tiger' is a creature but less directly related to the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.6,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "'Wizard' is a strong mythical figure, while 'tiger' is a creature but less directly related to myth.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fierce",
+        "count": 2,
+        "rationale": "relates to strong animals"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "already revealed as neutral, fits fierce clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "tiger is already revealed as neutral, and fierce is a common adjective to describe it",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "animal"
+        ],
+        "rationale": "Both words are fierce and have been previously guessed as red or neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "myth",
+        "count": 1,
+        "rationale": "It connects to a magical theme and relates to a character."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard"
+        ],
+        "rationale": "Wizard is a mythical creature, fitting the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to mythology; 'wizard' is a common mythical figure, while 'forest' connects to nature often found in myths.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "Tigers are often featured in myths and legends, connecting to the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "feline",
+        "count": 1,
+        "rationale": "relates to a type of animal"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "The clue 'feline' is closely related to tiger, which is already revealed as neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "The clue 'feline' is closely related to tiger, which is already revealed as neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "The clue 'feline' is a strong indicator of the word 'tiger', which is already revealed as neutral.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythos",
+        "count": 2,
+        "rationale": "It relates to legendary stories and characters, connecting to both wizard and tiger."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to myth and fantasy, fitting the clue 'mythos'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to mythological themes, with 'wizard' being a direct representation of mythos.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to mythos; wizard is directly mythical, while forest connects to nature often found in myths.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sharp",
+        "count": 2,
+        "rationale": "relates to objects that can be sharp"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.8
+        },
+        "ranked_guesses": [
+          "machine"
+        ],
+        "rationale": "sharp relates to machine",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.8
+        },
+        "ranked_guesses": [
+          "machine"
+        ],
+        "rationale": "sharp could relate to machine",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.6,
+          "fox": 0.7,
+          "machine": 0.8
+        },
+        "ranked_guesses": [
+          "machine",
+          "fox",
+          "battery"
+        ],
+        "rationale": "Words related to 'sharp' could be other objects or tools that are sharp, like a machine or a fox's teeth, or something that provides power like a battery.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythology",
+        "count": 2,
+        "rationale": "It connects to the themes of fantasy and legendary creatures."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to mythology; 'wizard' is a common mythical figure, while 'forest' is often a setting in mythological stories.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to mythology; 'wizard' is a common mythical figure, while 'forest' is often a setting for mythological stories.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.7,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "forest"
+        ],
+        "rationale": "Both words relate to mythology; 'wizard' is a common mythical figure, while 'forest' is often a setting in mythological stories.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "structure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "castle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "creature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "power"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "engine"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It relates to nature and is associated with the blue team."
+      },
+      "event": "illegal_clue",
+      "matched_word": "forest",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wizard"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "meat"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "animal"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It connects to nature and is associated with the blue team."
+      },
+      "event": "illegal_clue",
+      "matched_word": "forest",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "strong"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tiger"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It relates to nature and is associated with the blue team."
+      },
+      "event": "illegal_clue",
+      "matched_word": "forest",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "stronghold"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "palace"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "military"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "forest",
+        "count": 1,
+        "rationale": "It connects to nature and is associated with the blue team."
+      },
+      "event": "illegal_clue",
+      "matched_word": "forest",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "building"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "animalistic",
+        "count": 2,
+        "rationale": "relates to beasts"
+      },
+      "event": "illegal_clue",
+      "matched_word": "animal",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fantasy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "beast"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fierce"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "feline"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythos"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sharp"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythology"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 105,
+    "public_event_count": 64,
+    "reason": null,
+    "seed": "one-pass-001-meta_llama_llama_3_70b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "structure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.8,
+              "palace": 0.6,
+              "temple": 0.4
+            },
+            "ranked_guesses": [
+              "castle",
+              "palace",
+              "temple"
+            ],
+            "rationale": "All three words are related to buildings, which fits with the clue 'structure'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.8,
+              "palace": 0.6,
+              "temple": 0.4
+            },
+            "ranked_guesses": [
+              "castle",
+              "palace",
+              "temple"
+            ],
+            "rationale": "Words related to structure",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.8,
+              "palace": 0.7,
+              "temple": 0.6
+            },
+            "ranked_guesses": [
+              "castle",
+              "palace",
+              "temple"
+            ],
+            "rationale": "All three words are related to structures, and are all nouns.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "castle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "structure",
+          "count": 3,
+          "rationale": "multiple words related to buildings"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "rocket",
+              "alien"
+            ],
+            "rationale": "Both words relate to space; rocket is a strong association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.6,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "rocket",
+              "alien"
+            ],
+            "rationale": "Both words relate to space; rocket is a direct vehicle for space travel, and alien connects to the idea of extraterrestrial life.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.6,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "rocket",
+              "alien"
+            ],
+            "rationale": "Both words relate to space, with 'rocket' being a direct vehicle for space travel and 'alien' often associated with outer space.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "Refers to both the concept of outer space and the idea of a physical area, linking to 'alien' and 'rocket'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "nurse": 0.7
+            },
+            "ranked_guesses": [
+              "doctor",
+              "nurse"
+            ],
+            "rationale": "Both words are related to the medical field.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "nurse": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "nurse"
+            ],
+            "rationale": "Both words are related to the medical field.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8,
+              "nurse": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "nurse"
+            ],
+            "rationale": "Both words are related to the medical field, which is the current clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 2,
+          "rationale": "related to doctor"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "creature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "animal": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "animal"
+            ],
+            "rationale": "Both words relate to 'creature', but 'alien' is more specific.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "tiger",
+              "animal"
+            ],
+            "rationale": "Both words relate to creatures, but 'tiger' is a specific creature.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "animal": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "animal"
+            ],
+            "rationale": "Both words relate to 'creature', but 'alien' is more specific.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "creature",
+          "count": 1,
+          "rationale": "Refers to an animal, which is a potential blue word."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "power"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "machine": 0.6
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both words are related to 'power' and are on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "machine": 0.7
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both words are related to 'power' and are on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "machine": 0.5
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both words are related to 'power' and are not yet revealed.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "engine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "power",
+          "count": 2,
+          "rationale": "related to machines"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "forest",
+          "count": 1,
+          "rationale": "It relates to nature and is associated with the blue team."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "meat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8
+            },
+            "ranked_guesses": [
+              "engine"
+            ],
+            "rationale": "already revealed as red and matches the vehicle clue",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8
+            },
+            "ranked_guesses": [
+              "engine"
+            ],
+            "rationale": "already revealed and related to vehicle",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8
+            },
+            "ranked_guesses": [
+              "engine"
+            ],
+            "rationale": "already revealed as red and relates to vehicle",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "animal"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vehicle",
+          "count": 2,
+          "rationale": "related to transportation"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "strong"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tiger"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "wizard": 0.8
+            },
+            "ranked_guesses": [
+              "wizard"
+            ],
+            "rationale": "Wizard is a mythical creature, fitting the clue 'myth'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "wizard": 0.8
+            },
+            "ranked_guesses": [
+              "wizard"
+            ],
+            "rationale": "Wizard is often associated with myths and magical stories.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "wizard": 0.8
+            },
+            "ranked_guesses": [
+              "wizard"
+            ],
+            "rationale": "Wizard is often associated with myths and legends.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "myth",
+          "count": 1,
+          "rationale": "It relates to a magical figure associated with fantasy."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8
+            },
+            "ranked_guesses": [
+              "animal"
+            ],
+            "rationale": "related to meat",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8,
+              "butter": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "butter"
+            ],
+            "rationale": "Both words are related to 'meat'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8
+            },
+            "ranked_guesses": [
+              "animal"
+            ],
+            "rationale": "related to meat",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "meat",
+          "count": 2,
+          "rationale": "related to food"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "stronghold"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "palace"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "forest",
+          "count": 1,
+          "rationale": "It connects to nature and is associated with the blue team."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "military"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger"
+            ],
+            "rationale": "Strong animals like tiger",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "machine": 0.4,
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger",
+              "machine"
+            ],
+            "rationale": "strong animals and machines are often strong",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger"
+            ],
+            "rationale": "strong animal",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "strong",
+          "count": 2,
+          "rationale": "associated with power"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "building"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.6,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "tiger"
+            ],
+            "rationale": "'Wizard' is directly related to 'mythical', while 'tiger' is a creature but less connected.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.6,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "tiger"
+            ],
+            "rationale": "'Wizard' is a strong mythical figure, while 'tiger' is a creature but less directly related to mythology.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.6,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "tiger"
+            ],
+            "rationale": "'Wizard' is a strong mythical figure, while 'tiger' is a creature but less directly related to myth.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythical",
+          "count": 2,
+          "rationale": "Both words relate to fantasy and lore, fitting the blue team's theme."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fantasy"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "beast"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8
+            },
+            "ranked_guesses": [
+              "atlas"
+            ],
+            "rationale": "Atlas is a word related to fight, as it is a name associated with a mythological figure known for his strength and fighting abilities.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger"
+            ],
+            "rationale": "Tiger is already revealed as neutral, and the clue 'fight' is likely related to it.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger"
+            ],
+            "rationale": "The clue 'fight' is related to the word 'tiger', which is already revealed as neutral.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fight",
+          "count": 2,
+          "rationale": "associated with strength and conflict"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "mythical"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "forest",
+          "count": 1,
+          "rationale": "It relates to nature and is associated with the blue team."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fierce"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "Stronghold is related to castle, and palace is a similar structure.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "Stronghold clue relates to a type of structure, and palace is a type of stronghold.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "Stronghold clue relates to castle, and palace is a similar structure.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "stronghold",
+          "count": 2,
+          "rationale": "Relates to a fortified structure"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard"
+            ],
+            "rationale": "Wizard is a mythical creature, directly related to the clue 'myth'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard"
+            ],
+            "rationale": "Wizard is a mythical creature, aligning with the clue 'myth'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard"
+            ],
+            "rationale": "Wizard is a mythical creature, directly related to the clue 'myth'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "myth",
+          "count": 1,
+          "rationale": "It relates to a legendary figure and is associated with the blue team."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "feline"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "machine": 0.6
+            },
+            "ranked_guesses": [
+              "atlas",
+              "machine"
+            ],
+            "rationale": "Both words are related to military and are not yet revealed.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.7,
+              "battery": 0.6,
+              "machine": 0.5
+            },
+            "ranked_guesses": [
+              "atlas",
+              "battery",
+              "machine"
+            ],
+            "rationale": "military clue relates to words with a strong or powerful connotation",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "machine": 0.4
+            },
+            "ranked_guesses": [
+              "atlas",
+              "machine"
+            ],
+            "rationale": "Both words are related to military, atlas is a military term and machine can be a military vehicle",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "military",
+          "count": 2,
+          "rationale": "related to the red team's theme"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythos"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "forest",
+          "count": 1,
+          "rationale": "It connects to nature and is associated with the blue team."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sharp"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "Building is a strong association with palace, which is already revealed as neutral.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "Building is a strong association with palace, which is already revealed as neutral.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "Building is a strong association with palace",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "building",
+          "count": 2,
+          "rationale": "structures associated with the red team"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.7,
+              "forest": 0.6
+            },
+            "ranked_guesses": [
+              "flower",
+              "forest"
+            ],
+            "rationale": "Both words relate to nature, but flower is more specific.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.7,
+              "forest": 0.9,
+              "river": 0.6
+            },
+            "ranked_guesses": [
+              "flower",
+              "forest",
+              "river"
+            ],
+            "rationale": "These words are related to nature, with 'forest' being the strongest connection.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.7,
+              "forest": 0.6
+            },
+            "ranked_guesses": [
+              "flower",
+              "forest"
+            ],
+            "rationale": "Both words relate to nature, but flower is more specific.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 1,
+          "rationale": "It relates to the environment and is connected to a blue word."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

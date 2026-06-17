@@ -1,0 +1,2997 @@
+{
+  "board": {
+    "identities": {
+      "alien": "blue",
+      "anchor": "neutral",
+      "baker": "red",
+      "beacon": "blue",
+      "bread": "red",
+      "compass": "neutral",
+      "copper": "neutral",
+      "dancer": "blue",
+      "doctor": "red",
+      "ghost": "neutral",
+      "guitar": "red",
+      "hammer": "neutral",
+      "helmet": "blue",
+      "highway": "red",
+      "leather": "blue",
+      "mystery": "red",
+      "pyramid": "blue",
+      "salt": "red",
+      "silence": "red",
+      "spider": "red",
+      "travel": "neutral",
+      "tunnel": "blue",
+      "village": "assassin",
+      "water": "blue",
+      "wood": "neutral"
+    },
+    "revealed": [
+      "alien",
+      "anchor",
+      "beacon",
+      "bread",
+      "compass",
+      "copper",
+      "dancer",
+      "doctor",
+      "guitar",
+      "hammer",
+      "helmet",
+      "highway",
+      "leather",
+      "pyramid",
+      "tunnel",
+      "water",
+      "wood"
+    ],
+    "words": {
+      "alien": "blue",
+      "anchor": "neutral",
+      "baker": "red",
+      "beacon": "blue",
+      "bread": "red",
+      "compass": "neutral",
+      "copper": "neutral",
+      "dancer": "blue",
+      "doctor": "red",
+      "ghost": "neutral",
+      "guitar": "red",
+      "hammer": "neutral",
+      "helmet": "blue",
+      "highway": "red",
+      "leather": "blue",
+      "mystery": "red",
+      "pyramid": "blue",
+      "salt": "red",
+      "silence": "red",
+      "spider": "red",
+      "travel": "neutral",
+      "tunnel": "blue",
+      "village": "assassin",
+      "water": "blue",
+      "wood": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "bake",
+        "count": 1,
+        "rationale": "Avoids direct match with 'baker' and hints at the red word 'bread'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 2,
+        "rationale": "Connects to 'beacon' and 'pyramid' (often associated with light or illumination) without directly matching any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.9,
+          "ghost": 0.6
+        },
+        "ranked_guesses": [
+          "beacon",
+          "ghost"
+        ],
+        "rationale": "'beacon' is strongly associated with 'light' as a source of illumination or signal. 'ghost' is a secondary guess due to the ethereal or 'light' nature often associated with ghosts.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.9,
+          "compass": 0.7
+        },
+        "ranked_guesses": [
+          "beacon",
+          "compass"
+        ],
+        "rationale": "'beacon' is strongly associated with 'light' as it emits light to guide. 'compass' is less directly related but can be associated with navigation aids like light beacons.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.9,
+          "ghost": 0.7
+        },
+        "ranked_guesses": [
+          "beacon",
+          "ghost"
+        ],
+        "rationale": "'beacon' is strongly associated with 'light' as a guiding light. 'ghost' is a secondary guess due to the concept of 'ghost light' in theaters, but less directly connected.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "grain",
+        "count": 1,
+        "rationale": "Avoids direct matches and hints at the red word 'bread'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.8
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "'Grain' is closely related to 'bread', a common food made from grain.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.8
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "'Grain' is closely related to 'bread', a common food made from grains.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.8
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "'Grain' is closely related to 'bread', a common food made from grain.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "marine",
+        "count": 3,
+        "rationale": "Connects to 'water', 'anchor', and 'alien' which are all blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "compass": 0.6,
+          "water": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "water",
+          "compass"
+        ],
+        "rationale": "The clue 'marine' strongly suggests nautical terms. 'Anchor' is the most directly related, followed by 'water' and 'compass'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "compass": 0.5,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "anchor",
+          "water",
+          "compass"
+        ],
+        "rationale": "'anchor' and 'water' are strongly associated with 'marine'. 'compass' is also related but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "compass": 0.6,
+          "water": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "water",
+          "compass"
+        ],
+        "rationale": "'anchor' is strongly associated with 'marine' and is likely the primary target. 'Water' and 'compass' are secondary marine-related words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "string",
+        "count": 1,
+        "rationale": "Avoids direct matches and hints at 'guitar' or 'doctor'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "The clue 'string' is likely hinting at 'guitar', as guitars have strings.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.8
+        },
+        "ranked_guesses": [
+          "compass"
+        ],
+        "rationale": "The clue 'string' can be associated with 'compass' as a string is used in a compass for navigation or as a tool in drawing circles.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.8
+        },
+        "ranked_guesses": [
+          "compass"
+        ],
+        "rationale": "The clue 'string' can be associated with 'compass' as a string is used in a compass for navigation or as a drawing tool.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Connects to 'alien' and 'pyramid' (often associated with extraterrestrial theories), avoiding other words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "ghost": 0.6,
+          "pyramid": 0.5
+        },
+        "ranked_guesses": [
+          "alien",
+          "ghost",
+          "pyramid"
+        ],
+        "rationale": "'space' suggests extraterrestrial or celestial themes. 'alien' and 'ghost' fit well, 'pyramid' is a stretch but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "ghost": 0.6,
+          "pyramid": 0.5
+        },
+        "ranked_guesses": [
+          "alien",
+          "ghost",
+          "pyramid"
+        ],
+        "rationale": "'alien' and 'ghost' are strongly associated with 'space', and 'pyramid' could relate to ancient mysteries or extraterrestrial theories.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "ghost": 0.5,
+          "pyramid": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "pyramid",
+          "ghost"
+        ],
+        "rationale": "'space' suggests extraterrestrial or cosmic themes. 'alien' is the strongest match, followed by 'pyramid' (often associated with ancient aliens) and 'ghost' (as in space ghost).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "guitar",
+        "count": 1,
+        "rationale": "Directly hints at the red word 'guitar' without matching any other word on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "Connects to 'guitar' and 'dancer' without directly matching any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.7,
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar",
+          "dancer"
+        ],
+        "rationale": "'music' strongly relates to 'guitar' and also connects to 'dancer' as dancing often involves music. Both words fit the clue count of 2.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.7,
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar",
+          "dancer"
+        ],
+        "rationale": "'music' strongly relates to 'guitar' and 'dancer', both fitting the clue well.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.7,
+          "guitar": 0.9,
+          "silence": 0.6
+        },
+        "ranked_guesses": [
+          "guitar",
+          "dancer",
+          "silence"
+        ],
+        "rationale": "'guitar' is strongly associated with 'music'. 'dancer' and 'silence' are also related to music, but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "doctor",
+        "count": 1,
+        "rationale": "Directly hints at the red word 'doctor' without matching any other word on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 3,
+        "rationale": "Connects to 'pyramid', 'tunnel', and 'hammer' (neutral) without directly matching any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.7,
+          "pyramid": 0.6,
+          "tunnel": 0.5
+        },
+        "ranked_guesses": [
+          "hammer",
+          "pyramid",
+          "tunnel"
+        ],
+        "rationale": "'hammer' is strongly associated with construction. 'pyramid' and 'tunnel' are also related to construction but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.7,
+          "pyramid": 0.6,
+          "tunnel": 0.5
+        },
+        "ranked_guesses": [
+          "hammer",
+          "pyramid",
+          "tunnel"
+        ],
+        "rationale": "'hammer' is strongly associated with construction, 'pyramid' and 'tunnel' are related but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.7,
+          "pyramid": 0.6,
+          "tunnel": 0.5
+        },
+        "ranked_guesses": [
+          "hammer",
+          "pyramid",
+          "tunnel"
+        ],
+        "rationale": "'construction' suggests tools and structures. 'hammer' is a tool, 'pyramid' and 'tunnel' are structures.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medic",
+        "count": 1,
+        "rationale": "Avoids direct match with 'doctor' and hints at the red word 'doctor'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'medic' strongly suggests the word 'doctor'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'medic' is strongly associated with 'doctor', which is a red word on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'medic' strongly suggests the word 'doctor'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "dance",
+        "count": 2,
+        "rationale": "Connects to 'dancer' and 'alien' (as aliens might dance), avoiding direct matches with other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "road",
+        "count": 1,
+        "rationale": "Avoids direct matches and hints at the red word 'highway'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8
+        },
+        "ranked_guesses": [
+          "highway"
+        ],
+        "rationale": "Highway is the most relevant word to the clue 'road'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8
+        },
+        "ranked_guesses": [
+          "highway"
+        ],
+        "rationale": "'Highway' is a strong match for the clue 'road' and has not been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8
+        },
+        "ranked_guesses": [
+          "highway"
+        ],
+        "rationale": "Highway is a strong match for the clue 'road' and has not been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "underground",
+        "count": 2,
+        "rationale": "Connects to 'tunnel' and 'alien' (as aliens might live underground), avoiding direct matches with other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.5,
+          "ghost": 0.7,
+          "tunnel": 0.9
+        },
+        "ranked_guesses": [
+          "tunnel",
+          "ghost",
+          "alien"
+        ],
+        "rationale": "'tunnel' is strongly associated with 'underground'. 'ghost' could be underground in folklore. 'alien' is a weaker connection, possibly underground in sci-fi.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.4,
+          "pyramid": 0.6,
+          "tunnel": 0.9
+        },
+        "ranked_guesses": [
+          "tunnel",
+          "pyramid",
+          "ghost"
+        ],
+        "rationale": "'underground' strongly suggests 'tunnel' as it is directly related to being underground. 'pyramid' could be associated with underground chambers, and 'ghost' might relate to underground burial sites, but these are weaker connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.5,
+          "ghost": 0.6,
+          "tunnel": 0.9
+        },
+        "ranked_guesses": [
+          "tunnel",
+          "ghost",
+          "alien"
+        ],
+        "rationale": "'tunnel' strongly relates to 'underground'. 'ghost' and 'alien' are less obvious but could fit the theme.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 1,
+        "rationale": "Avoids direct matches and hints at 'hammer', a red word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8
+        },
+        "ranked_guesses": [
+          "copper"
+        ],
+        "rationale": "Copper is a metal, directly matching the clue 'metal'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8
+        },
+        "ranked_guesses": [
+          "copper"
+        ],
+        "rationale": "Copper is a metal, matching the clue 'metal'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8
+        },
+        "ranked_guesses": [
+          "copper"
+        ],
+        "rationale": "Copper is a metal and matches the clue 'metal'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cosmic",
+        "count": 2,
+        "rationale": "Connects to 'alien' and 'pyramid' (often associated with extraterrestrial theories), avoiding direct matches with other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "ghost": 0.7,
+          "mystery": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "ghost",
+          "mystery"
+        ],
+        "rationale": "The clue 'cosmic' suggests words related to space or the unknown. 'Alien' is strongly associated with space, 'ghost' with the unknown, and 'mystery' fits the theme of cosmic mysteries.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "ghost": 0.7,
+          "pyramid": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "ghost",
+          "pyramid"
+        ],
+        "rationale": "'cosmic' relates to space and the unknown. 'alien' is strongly associated with cosmic themes. 'ghost' and 'pyramid' also have mysterious or otherworldly connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "ghost": 0.7
+        },
+        "ranked_guesses": [
+          "alien",
+          "ghost"
+        ],
+        "rationale": "The clue 'cosmic' strongly suggests words related to space or the supernatural. 'Alien' is a high-confidence match as it directly relates to space. 'Ghost' is a secondary option as it can be associated with the supernatural or unexplained phenomena.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "instrument",
+        "count": 1,
+        "rationale": "Hints at 'guitar' without directly using the word, and avoids other board words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Guitar is a musical instrument and matches the clue 'instrument'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Guitar is a musical instrument and matches the clue 'instrument'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Guitar is a musical instrument, matching the clue 'instrument'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "egypt",
+        "count": 1,
+        "rationale": "Connects to 'pyramid' (Egyptian pyramids) without matching any other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.9
+        },
+        "ranked_guesses": [
+          "pyramid"
+        ],
+        "rationale": "The clue 'egypt' strongly suggests 'pyramid' due to its historical and cultural association with Egypt.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.9
+        },
+        "ranked_guesses": [
+          "pyramid"
+        ],
+        "rationale": "The clue 'egypt' strongly suggests 'pyramid', as pyramids are iconic symbols of Egypt.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.9
+        },
+        "ranked_guesses": [
+          "pyramid"
+        ],
+        "rationale": "The clue 'egypt' strongly suggests 'pyramid' as it is a well-known Egyptian landmark.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "string",
+        "count": 1,
+        "rationale": "Avoids direct match and hints at 'guitar'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "The clue 'string' is strongly associated with 'guitar', which is a musical instrument with strings.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "The clue 'string' is strongly associated with 'guitar', which is a musical instrument with strings.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "The clue 'string' is strongly associated with 'guitar', which is a musical instrument with strings.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "headwear",
+        "count": 2,
+        "rationale": "Connects to 'helmet' and 'leather' (as leather can be used in headwear), avoiding direct matches with other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cap": 0.6,
+          "hat": 0.7,
+          "helmet": 0.9
+        },
+        "ranked_guesses": [
+          "helmet",
+          "hat",
+          "cap"
+        ],
+        "rationale": "'helmet' is the most direct match for 'headwear' on the board, with 'hat' and 'cap' as secondary options.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.6,
+          "helmet": 0.9,
+          "leather": 0.4
+        },
+        "ranked_guesses": [
+          "helmet",
+          "hammer",
+          "leather"
+        ],
+        "rationale": "'helmet' is the strongest match for 'headwear', followed by 'hammer' (could be a tool for shaping hats) and 'leather' (material used in some headwear).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.9,
+          "leather": 0.6
+        },
+        "ranked_guesses": [
+          "helmet",
+          "leather"
+        ],
+        "rationale": "'helmet' is strongly associated with 'headwear'. 'leather' is a weaker connection, possibly used in some headwear.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "road",
+        "count": 1,
+        "rationale": "Connects to 'highway' and avoids direct matches with other board words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8
+        },
+        "ranked_guesses": [
+          "highway"
+        ],
+        "rationale": "Highway is a road and matches the clue 'road'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8
+        },
+        "ranked_guesses": [
+          "highway"
+        ],
+        "rationale": "Highway is a road and matches the clue 'road'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.8
+        },
+        "ranked_guesses": [
+          "highway"
+        ],
+        "rationale": "Highway is a direct match for the clue 'road' and is a red word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "material",
+        "count": 2,
+        "rationale": "Connects to 'leather' and 'water' (as materials), avoiding direct matches with other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.5,
+          "leather": 0.9,
+          "wood": 0.7
+        },
+        "ranked_guesses": [
+          "leather",
+          "wood",
+          "hammer"
+        ],
+        "rationale": "'leather' and 'wood' are materials, fitting the clue 'material'. 'hammer' is less directly related but could be considered a tool made of material.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leather": 0.9,
+          "wood": 0.8
+        },
+        "ranked_guesses": [
+          "leather",
+          "wood"
+        ],
+        "rationale": "Both 'leather' and 'wood' are materials fitting the clue 'material'. 'Leather' is more strongly associated with material, hence higher confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.5,
+          "leather": 0.9,
+          "wood": 0.7
+        },
+        "ranked_guesses": [
+          "leather",
+          "wood",
+          "hammer"
+        ],
+        "rationale": "'material' likely refers to 'leather' and 'wood', both common materials. 'hammer' is less certain but could relate to material usage.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 1,
+        "rationale": "Avoids direct matches and hints at 'hammer', a red word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.8
+        },
+        "ranked_guesses": [
+          "hammer"
+        ],
+        "rationale": "The clue 'tool' directly points to 'hammer' as it is a common tool.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.8
+        },
+        "ranked_guesses": [
+          "hammer"
+        ],
+        "rationale": "The clue 'tool' directly points to 'hammer' as it is a common tool.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.8
+        },
+        "ranked_guesses": [
+          "hammer"
+        ],
+        "rationale": "The clue 'tool' directly points to 'hammer' as it is a common tool.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "liquid",
+        "count": 2,
+        "rationale": "Connects to 'water' and 'dancer' (as dancers may move fluidly), avoiding direct matches with other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "salt": 0.7,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water",
+          "salt"
+        ],
+        "rationale": "The clue 'liquid' strongly suggests 'water' as it is a common liquid. 'Salt' can also be associated with liquids when dissolved, though less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "salt": 0.7,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water",
+          "salt"
+        ],
+        "rationale": "'water' is a clear match for 'liquid' with high confidence. 'salt' can dissolve in water, making it a secondary guess.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "salt": 0.7,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water",
+          "salt"
+        ],
+        "rationale": "The clue 'liquid' strongly suggests 'water' as it is a common liquid. 'Salt' is also a reasonable guess as it can dissolve in water, but less directly related to the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mystery",
+        "count": 1,
+        "rationale": "The word 'mystery' is a strong hint for the red word 'mystery' and does not match any other word on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "performance",
+        "count": 1,
+        "rationale": "Connects to 'dancer' without directly matching any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "'performance' strongly relates to 'dancer' as dancing is a form of performance.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "'performance' strongly relates to 'dancer' as dancers perform.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "'performance' strongly relates to 'dancer' as dancing is a form of performance.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "bake",
+        "count": 1,
+        "rationale": "Avoids direct match with 'baker' and hints at the red word 'bread'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "baker",
+      "reason": "morphological_variant",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beacon"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "grain"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bread"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "marine"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "string"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "compass"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "guitar",
+        "count": 1,
+        "rationale": "Directly hints at the red word 'guitar' without matching any other word on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "guitar",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "clue": {
+        "clue": "doctor",
+        "count": 1,
+        "rationale": "Directly hints at the red word 'doctor' without matching any other word on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "doctor",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "medic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "dance",
+        "count": 2,
+        "rationale": "Connects to 'dancer' and 'alien' (as aliens might dance), avoiding direct matches with other board words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "dancer",
+      "reason": "morphological_variant",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "road"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "highway"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "underground"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "tunnel"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cosmic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "instrument"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "egypt"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "string"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "headwear"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "helmet"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "road"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "material"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "leather"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wood"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hammer"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "liquid"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "water"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "mystery",
+        "count": 1,
+        "rationale": "The word 'mystery' is a strong hint for the red word 'mystery' and does not match any other word on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "mystery",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "performance"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "dancer"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 89,
+    "public_event_count": 57,
+    "reason": "all_words_found",
+    "seed": "one-pass-002-qwen_qwen_2_5_72b_instruct-vs-deepseek_deepseek_chat_v3_0324",
+    "team_blue": "DeepSeek V3 0324",
+    "team_red": "Qwen2.5 72B Instruct",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beacon"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "grain"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bread"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "bake",
+          "count": 1,
+          "rationale": "Avoids direct match with 'baker' and hints at the red word 'bread'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "marine"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.9,
+              "ghost": 0.6
+            },
+            "ranked_guesses": [
+              "beacon",
+              "ghost"
+            ],
+            "rationale": "'beacon' is strongly associated with 'light' as a source of illumination or signal. 'ghost' is a secondary guess due to the ethereal or 'light' nature often associated with ghosts.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.9,
+              "compass": 0.7
+            },
+            "ranked_guesses": [
+              "beacon",
+              "compass"
+            ],
+            "rationale": "'beacon' is strongly associated with 'light' as it emits light to guide. 'compass' is less directly related but can be associated with navigation aids like light beacons.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.9,
+              "ghost": 0.7
+            },
+            "ranked_guesses": [
+              "beacon",
+              "ghost"
+            ],
+            "rationale": "'beacon' is strongly associated with 'light' as a guiding light. 'ghost' is a secondary guess due to the concept of 'ghost light' in theaters, but less directly connected.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 2,
+          "rationale": "Connects to 'beacon' and 'pyramid' (often associated with light or illumination) without directly matching any board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "string"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.8
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "'Grain' is closely related to 'bread', a common food made from grain.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.8
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "'Grain' is closely related to 'bread', a common food made from grains.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.8
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "'Grain' is closely related to 'bread', a common food made from grain.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "compass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "grain",
+          "count": 1,
+          "rationale": "Avoids direct matches and hints at the red word 'bread'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "compass": 0.6,
+              "water": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "water",
+              "compass"
+            ],
+            "rationale": "The clue 'marine' strongly suggests nautical terms. 'Anchor' is the most directly related, followed by 'water' and 'compass'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "compass": 0.5,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "anchor",
+              "water",
+              "compass"
+            ],
+            "rationale": "'anchor' and 'water' are strongly associated with 'marine'. 'compass' is also related but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "compass": 0.6,
+              "water": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "water",
+              "compass"
+            ],
+            "rationale": "'anchor' is strongly associated with 'marine' and is likely the primary target. 'Water' and 'compass' are secondary marine-related words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "marine",
+          "count": 3,
+          "rationale": "Connects to 'water', 'anchor', and 'alien' which are all blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "construction"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "medic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.8
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "The clue 'string' is likely hinting at 'guitar', as guitars have strings.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.8
+            },
+            "ranked_guesses": [
+              "compass"
+            ],
+            "rationale": "The clue 'string' can be associated with 'compass' as a string is used in a compass for navigation or as a tool in drawing circles.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.8
+            },
+            "ranked_guesses": [
+              "compass"
+            ],
+            "rationale": "The clue 'string' can be associated with 'compass' as a string is used in a compass for navigation or as a drawing tool.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "string",
+          "count": 1,
+          "rationale": "Avoids direct matches and hints at 'guitar' or 'doctor'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "road"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "highway"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "underground"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "ghost": 0.6,
+              "pyramid": 0.5
+            },
+            "ranked_guesses": [
+              "alien",
+              "ghost",
+              "pyramid"
+            ],
+            "rationale": "'space' suggests extraterrestrial or celestial themes. 'alien' and 'ghost' fit well, 'pyramid' is a stretch but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "ghost": 0.6,
+              "pyramid": 0.5
+            },
+            "ranked_guesses": [
+              "alien",
+              "ghost",
+              "pyramid"
+            ],
+            "rationale": "'alien' and 'ghost' are strongly associated with 'space', and 'pyramid' could relate to ancient mysteries or extraterrestrial theories.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "ghost": 0.5,
+              "pyramid": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "pyramid",
+              "ghost"
+            ],
+            "rationale": "'space' suggests extraterrestrial or cosmic themes. 'alien' is the strongest match, followed by 'pyramid' (often associated with ancient aliens) and 'ghost' (as in space ghost).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "tunnel"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "Connects to 'alien' and 'pyramid' (often associated with extraterrestrial theories), avoiding other words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "metal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "guitar",
+          "count": 1,
+          "rationale": "Directly hints at the red word 'guitar' without matching any other word on the board."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cosmic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.7,
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar",
+              "dancer"
+            ],
+            "rationale": "'music' strongly relates to 'guitar' and also connects to 'dancer' as dancing often involves music. Both words fit the clue count of 2.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.7,
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar",
+              "dancer"
+            ],
+            "rationale": "'music' strongly relates to 'guitar' and 'dancer', both fitting the clue well.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.7,
+              "guitar": 0.9,
+              "silence": 0.6
+            },
+            "ranked_guesses": [
+              "guitar",
+              "dancer",
+              "silence"
+            ],
+            "rationale": "'guitar' is strongly associated with 'music'. 'dancer' and 'silence' are also related to music, but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "Connects to 'guitar' and 'dancer' without directly matching any board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "instrument"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "doctor",
+          "count": 1,
+          "rationale": "Directly hints at the red word 'doctor' without matching any other word on the board."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "egypt"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.7,
+              "pyramid": 0.6,
+              "tunnel": 0.5
+            },
+            "ranked_guesses": [
+              "hammer",
+              "pyramid",
+              "tunnel"
+            ],
+            "rationale": "'hammer' is strongly associated with construction. 'pyramid' and 'tunnel' are also related to construction but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.7,
+              "pyramid": 0.6,
+              "tunnel": 0.5
+            },
+            "ranked_guesses": [
+              "hammer",
+              "pyramid",
+              "tunnel"
+            ],
+            "rationale": "'hammer' is strongly associated with construction, 'pyramid' and 'tunnel' are related but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.7,
+              "pyramid": 0.6,
+              "tunnel": 0.5
+            },
+            "ranked_guesses": [
+              "hammer",
+              "pyramid",
+              "tunnel"
+            ],
+            "rationale": "'construction' suggests tools and structures. 'hammer' is a tool, 'pyramid' and 'tunnel' are structures.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "construction",
+          "count": 3,
+          "rationale": "Connects to 'pyramid', 'tunnel', and 'hammer' (neutral) without directly matching any board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "string"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'medic' strongly suggests the word 'doctor'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'medic' is strongly associated with 'doctor', which is a red word on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'medic' strongly suggests the word 'doctor'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "medic",
+          "count": 1,
+          "rationale": "Avoids direct match with 'doctor' and hints at the red word 'doctor'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "headwear"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "helmet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dance",
+          "count": 2,
+          "rationale": "Connects to 'dancer' and 'alien' (as aliens might dance), avoiding direct matches with other board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "road"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.8
+            },
+            "ranked_guesses": [
+              "highway"
+            ],
+            "rationale": "Highway is the most relevant word to the clue 'road'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.8
+            },
+            "ranked_guesses": [
+              "highway"
+            ],
+            "rationale": "'Highway' is a strong match for the clue 'road' and has not been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.8
+            },
+            "ranked_guesses": [
+              "highway"
+            ],
+            "rationale": "Highway is a strong match for the clue 'road' and has not been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "road",
+          "count": 1,
+          "rationale": "Avoids direct matches and hints at the red word 'highway'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "material"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.5,
+              "ghost": 0.7,
+              "tunnel": 0.9
+            },
+            "ranked_guesses": [
+              "tunnel",
+              "ghost",
+              "alien"
+            ],
+            "rationale": "'tunnel' is strongly associated with 'underground'. 'ghost' could be underground in folklore. 'alien' is a weaker connection, possibly underground in sci-fi.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.4,
+              "pyramid": 0.6,
+              "tunnel": 0.9
+            },
+            "ranked_guesses": [
+              "tunnel",
+              "pyramid",
+              "ghost"
+            ],
+            "rationale": "'underground' strongly suggests 'tunnel' as it is directly related to being underground. 'pyramid' could be associated with underground chambers, and 'ghost' might relate to underground burial sites, but these are weaker connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.5,
+              "ghost": 0.6,
+              "tunnel": 0.9
+            },
+            "ranked_guesses": [
+              "tunnel",
+              "ghost",
+              "alien"
+            ],
+            "rationale": "'tunnel' strongly relates to 'underground'. 'ghost' and 'alien' are less obvious but could fit the theme.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "leather"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wood"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "underground",
+          "count": 2,
+          "rationale": "Connects to 'tunnel' and 'alien' (as aliens might live underground), avoiding direct matches with other board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tool"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.8
+            },
+            "ranked_guesses": [
+              "copper"
+            ],
+            "rationale": "Copper is a metal, directly matching the clue 'metal'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.8
+            },
+            "ranked_guesses": [
+              "copper"
+            ],
+            "rationale": "Copper is a metal, matching the clue 'metal'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.8
+            },
+            "ranked_guesses": [
+              "copper"
+            ],
+            "rationale": "Copper is a metal and matches the clue 'metal'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hammer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 1,
+          "rationale": "Avoids direct matches and hints at 'hammer', a red word."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "liquid"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "ghost": 0.7,
+              "mystery": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "ghost",
+              "mystery"
+            ],
+            "rationale": "The clue 'cosmic' suggests words related to space or the unknown. 'Alien' is strongly associated with space, 'ghost' with the unknown, and 'mystery' fits the theme of cosmic mysteries.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "ghost": 0.7,
+              "pyramid": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "ghost",
+              "pyramid"
+            ],
+            "rationale": "'cosmic' relates to space and the unknown. 'alien' is strongly associated with cosmic themes. 'ghost' and 'pyramid' also have mysterious or otherworldly connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "ghost": 0.7
+            },
+            "ranked_guesses": [
+              "alien",
+              "ghost"
+            ],
+            "rationale": "The clue 'cosmic' strongly suggests words related to space or the supernatural. 'Alien' is a high-confidence match as it directly relates to space. 'Ghost' is a secondary option as it can be associated with the supernatural or unexplained phenomena.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "water"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "cosmic",
+          "count": 2,
+          "rationale": "Connects to 'alien' and 'pyramid' (often associated with extraterrestrial theories), avoiding direct matches with other board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "performance"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "dancer"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

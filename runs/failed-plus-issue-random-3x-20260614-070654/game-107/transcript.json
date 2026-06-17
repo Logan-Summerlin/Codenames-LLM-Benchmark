@@ -1,0 +1,1961 @@
+{
+  "board": {
+    "identities": {
+      "bell": "blue",
+      "boot": "red",
+      "buffalo": "red",
+      "chair": "assassin",
+      "change": "red",
+      "comic": "blue",
+      "face": "neutral",
+      "france": "red",
+      "head": "blue",
+      "hospital": "neutral",
+      "lead": "red",
+      "mine": "red",
+      "plate": "blue",
+      "pool": "red",
+      "ring": "blue",
+      "server": "neutral",
+      "ship": "neutral",
+      "soldier": "neutral",
+      "soul": "neutral",
+      "spell": "red",
+      "staff": "neutral",
+      "switch": "blue",
+      "tap": "red",
+      "turkey": "blue",
+      "whale": "blue"
+    },
+    "revealed": [
+      "bell",
+      "buffalo",
+      "change",
+      "comic",
+      "head",
+      "lead",
+      "mine",
+      "plate",
+      "pool",
+      "ring",
+      "server",
+      "ship",
+      "soldier",
+      "spell",
+      "switch",
+      "tap",
+      "turkey",
+      "whale"
+    ],
+    "words": {
+      "bell": "blue",
+      "boot": "red",
+      "buffalo": "red",
+      "chair": "assassin",
+      "change": "red",
+      "comic": "blue",
+      "face": "neutral",
+      "france": "red",
+      "head": "blue",
+      "hospital": "neutral",
+      "lead": "red",
+      "mine": "red",
+      "plate": "blue",
+      "pool": "red",
+      "ring": "blue",
+      "server": "neutral",
+      "ship": "neutral",
+      "soldier": "neutral",
+      "soul": "neutral",
+      "spell": "red",
+      "staff": "neutral",
+      "switch": "blue",
+      "tap": "red",
+      "turkey": "blue",
+      "whale": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "mining",
+        "count": 2,
+        "rationale": "mine and lead are related to mining"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Connects turkey and whale, both blue team words related to animals"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.95,
+          "turkey": 0.95
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "turkey"
+        ],
+        "rationale": "Both are unambiguous animals matching the 'animal' clue with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.95,
+          "turkey": 0.95,
+          "whale": 0.8
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "turkey",
+          "whale"
+        ],
+        "rationale": "'animal' clue matches buffalo, turkey, and whale; top two most obvious choices selected",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.95,
+          "turkey": 0.95
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "turkey"
+        ],
+        "rationale": "buffalo and turkey are clear animals matching the clue 'animal' with count 2",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ore",
+        "count": 2,
+        "rationale": "mine and lead are related to ore"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lead": 0.85,
+          "mine": 0.9
+        },
+        "ranked_guesses": [
+          "mine",
+          "lead"
+        ],
+        "rationale": "Ore is directly related to mining (mine) and metals like lead",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lead": 0.9,
+          "mine": 0.85
+        },
+        "ranked_guesses": [
+          "lead",
+          "mine"
+        ],
+        "rationale": "Ore relates to mining and metals; 'lead' is a metal ore, and 'mine' is where ore is extracted.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bell": 0.65,
+          "lead": 0.75
+        },
+        "ranked_guesses": [
+          "lead",
+          "bell"
+        ],
+        "rationale": "Ore relates to minerals like lead. Bell could be made from metal ore.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sound",
+        "count": 2,
+        "rationale": "bell and ring are both associated with sound"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bell": 0.95,
+          "ring": 0.9
+        },
+        "ranked_guesses": [
+          "bell",
+          "ring"
+        ],
+        "rationale": "Both 'bell' and 'ring' are direct sound-producing objects, matching the clue 'sound' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bell": 0.9,
+          "ring": 0.85,
+          "soul": 0.5,
+          "spell": 0.55,
+          "tap": 0.6
+        },
+        "ranked_guesses": [
+          "bell",
+          "ring",
+          "tap",
+          "spell",
+          "soul"
+        ],
+        "rationale": "'bell' and 'ring' are the strongest direct connections to 'sound'. 'tap' is a weaker but plausible sound-related word. 'spell' and 'soul' have more tenuous connections but are possible given the clue count of 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bell": 0.9,
+          "ring": 0.85,
+          "tap": 0.7
+        },
+        "ranked_guesses": [
+          "bell",
+          "ring",
+          "tap"
+        ],
+        "rationale": "'bell' and 'ring' are the strongest direct connections to 'sound'. 'tap' is a weaker but plausible connection.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "transform",
+        "count": 2,
+        "rationale": "change and spell are related to transformation"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.9,
+          "switch": 0.75
+        },
+        "ranked_guesses": [
+          "change",
+          "switch"
+        ],
+        "rationale": "'Transform' directly relates to 'change' as a synonym, and 'switch' implies a transformation between states/objects.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.9,
+          "switch": 0.85
+        },
+        "ranked_guesses": [
+          "change",
+          "switch"
+        ],
+        "rationale": "'Transform' directly relates to 'change' and 'switch', both unrevealed and on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.9,
+          "switch": 0.85
+        },
+        "ranked_guesses": [
+          "change",
+          "switch"
+        ],
+        "rationale": "\"Transform\" directly relates to synonyms like change and switch, which are strong candidates for the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "connects turkey and whale as both are animals"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "turkey": 0.95,
+          "whale": 0.9
+        },
+        "ranked_guesses": [
+          "turkey",
+          "whale"
+        ],
+        "rationale": "'turkey' and 'whale' are the most direct animal matches remaining on the board for the clue 'animal' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "turkey": 0.95,
+          "whale": 0.9
+        },
+        "ranked_guesses": [
+          "turkey",
+          "whale"
+        ],
+        "rationale": "'animal' clue with count 2 strongly suggests turkey and whale as the remaining animal words on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "turkey": 0.95,
+          "whale": 0.9
+        },
+        "ranked_guesses": [
+          "turkey",
+          "whale"
+        ],
+        "rationale": "The clue 'animal' with count 2 strongly suggests 'turkey' and 'whale' as the only clear animal words remaining on the board. 'buffalo' was already revealed as red, so it's not available.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "water",
+        "count": 2,
+        "rationale": "pool and tap are related to water"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pool": 0.9,
+          "tap": 0.85
+        },
+        "ranked_guesses": [
+          "pool",
+          "tap"
+        ],
+        "rationale": "Pool and tap are directly related to water, with pool being a body of water and tap a source of water.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pool": 0.85,
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "pool",
+          "ship"
+        ],
+        "rationale": "Pool and ship are directly related to water, fitting the clue with two remaining guesses.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pool": 0.85,
+          "tap": 0.9
+        },
+        "ranked_guesses": [
+          "tap",
+          "pool"
+        ],
+        "rationale": "Tap and pool are directly related to water; tap is a strong connection as in 'tap water', and pool refers to a body of water.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "character",
+        "count": 3,
+        "rationale": "connects comic, head, and plate as character-related terms"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comic": 0.95,
+          "face": 0.85,
+          "soldier": 0.95
+        },
+        "ranked_guesses": [
+          "soldier",
+          "comic",
+          "face"
+        ],
+        "rationale": "The clue 'character' with count 3 strongly suggests words representing people or fictional entities. 'soldier' and 'comic' are clear character types, while 'face' can represent a character's facial features.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comic": 0.85,
+          "face": 0.75,
+          "soldier": 0.8
+        },
+        "ranked_guesses": [
+          "comic",
+          "soldier",
+          "face"
+        ],
+        "rationale": "The clue 'character' with count 3 suggests three hidden words relate to characters. 'comic' likely refers to comic book characters, 'soldier' is a clear character type, and 'face' could relate to character faces or facial expressions. These are the most probable matches among remaining hidden words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comic": 0.9,
+          "face": 0.7,
+          "soldier": 0.85
+        },
+        "ranked_guesses": [
+          "comic",
+          "soldier",
+          "face"
+        ],
+        "rationale": "'comic' and 'soldier' are strong direct matches for 'character'. 'face' is a plausible match as a character's face or a character in a play/movie.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "action",
+        "count": 3,
+        "rationale": "boot (boot up), spell (to spell), and france (as in actions related to the country)"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boot": 0.8,
+          "ship": 0.75,
+          "staff": 0.7
+        },
+        "ranked_guesses": [
+          "boot",
+          "ship",
+          "staff"
+        ],
+        "rationale": "These words are action-related verbs (to kick, to send, to provide staff) matching the clue 'action' with count 3.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boot": 0.8,
+          "ship": 0.85,
+          "spell": 0.9
+        },
+        "ranked_guesses": [
+          "spell",
+          "ship",
+          "boot"
+        ],
+        "rationale": "spell, ship, and boot are all verbs directly related to action",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "head": 0.7,
+          "ship": 0.7,
+          "spell": 0.7
+        },
+        "ranked_guesses": [
+          "head",
+          "ship",
+          "spell"
+        ],
+        "rationale": "head (head off), ship (ship out), and spell (spell out) are action verbs matching the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "food",
+        "count": 2,
+        "rationale": "connects 'head' (as in head of lettuce) and 'plate' (as in dinner plate)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plate": 0.9,
+          "server": 0.85
+        },
+        "ranked_guesses": [
+          "plate",
+          "server"
+        ],
+        "rationale": "The clue 'food' with count 2 suggests two unrevealed words related to food. 'plate' directly relates to serving food, and 'server' refers to someone who serves food. Other words have weaker or no connections to food.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plate": 0.95
+        },
+        "ranked_guesses": [
+          "plate"
+        ],
+        "rationale": "Plate is the most direct food-related word still unrevealed that fits the clue 'food' with count 2. Turkey is already secured by the team.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.4,
+          "plate": 0.95,
+          "server": 0.7
+        },
+        "ranked_guesses": [
+          "plate",
+          "server",
+          "france"
+        ],
+        "rationale": "The clue 'food' with count 2 indicates two food-related words. 'plate' is the strongest direct match. 'server' could relate to food service. 'france' is a weaker association to French cuisine.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "word",
+        "count": 3,
+        "rationale": "spell relates to words, and france connects to language/words"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "soul": 0.6,
+          "spell": 0.9,
+          "staff": 0.75
+        },
+        "ranked_guesses": [
+          "spell",
+          "staff",
+          "soul"
+        ],
+        "rationale": "'Spell' directly relates to words, 'staff' can be part of wordplay, and 'soul' is a conceptual word.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "face": 0.6,
+          "spell": 0.8,
+          "staff": 0.5
+        },
+        "ranked_guesses": [
+          "spell",
+          "face",
+          "staff"
+        ],
+        "rationale": "'Spell' is a direct synonym for 'word', while 'face' and 'staff' have weaker but plausible associations.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "face": 0.7,
+          "spell": 0.9,
+          "staff": 0.6
+        },
+        "ranked_guesses": [
+          "spell",
+          "face",
+          "staff"
+        ],
+        "rationale": "'spell' is directly related to 'word', while 'face' and 'staff' are weaker but plausible associations.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "body",
+        "count": 2,
+        "rationale": "Both remaining blue words ('face' and 'head') are parts of the body"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "face": 0.9,
+          "head": 0.95
+        },
+        "ranked_guesses": [
+          "head",
+          "face"
+        ],
+        "rationale": "'body' directly clues head and face as body parts still unrevealed",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "face": 0.95,
+          "head": 0.9,
+          "hospital": 0.6
+        },
+        "ranked_guesses": [
+          "face",
+          "head",
+          "hospital"
+        ],
+        "rationale": "Active clue is 'body' with count 2. 'face' and 'head' are direct body parts. 'hospital' is a place associated with bodies.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "face": 0.9,
+          "head": 0.95
+        },
+        "ranked_guesses": [
+          "head",
+          "face"
+        ],
+        "rationale": "'body' clue strongly suggests 'head' and 'face' as direct body parts still unrevealed",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "mining",
+        "count": 2,
+        "rationale": "mine and lead are related to mining"
+      },
+      "event": "illegal_clue",
+      "matched_word": "mine",
+      "reason": "morphological_variant",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "buffalo"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ore"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lead"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mine"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sound"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bell"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ring"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transform"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "change"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "switch"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "turkey"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "whale"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pool"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tap"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "character"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "comic"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "soldier"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "action"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ship"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "food"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "plate"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "server"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "word"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spell"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "body"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "head"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 45,
+    "public_event_count": 35,
+    "reason": "all_words_found",
+    "seed": "issue-random-107-qwen_qwen3_32b-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "Qwen 3 32B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "buffalo"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ore"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lead"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mining",
+          "count": 2,
+          "rationale": "mine and lead are related to mining"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sound"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.95,
+              "turkey": 0.95
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "turkey"
+            ],
+            "rationale": "Both are unambiguous animals matching the 'animal' clue with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.95,
+              "turkey": 0.95,
+              "whale": 0.8
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "turkey",
+              "whale"
+            ],
+            "rationale": "'animal' clue matches buffalo, turkey, and whale; top two most obvious choices selected",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.95,
+              "turkey": 0.95
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "turkey"
+            ],
+            "rationale": "buffalo and turkey are clear animals matching the clue 'animal' with count 2",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bell"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ring"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Connects turkey and whale, both blue team words related to animals"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transform"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lead": 0.85,
+              "mine": 0.9
+            },
+            "ranked_guesses": [
+              "mine",
+              "lead"
+            ],
+            "rationale": "Ore is directly related to mining (mine) and metals like lead",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lead": 0.9,
+              "mine": 0.85
+            },
+            "ranked_guesses": [
+              "lead",
+              "mine"
+            ],
+            "rationale": "Ore relates to mining and metals; 'lead' is a metal ore, and 'mine' is where ore is extracted.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bell": 0.65,
+              "lead": 0.75
+            },
+            "ranked_guesses": [
+              "lead",
+              "bell"
+            ],
+            "rationale": "Ore relates to minerals like lead. Bell could be made from metal ore.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "change"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "switch"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ore",
+          "count": 2,
+          "rationale": "mine and lead are related to ore"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bell": 0.95,
+              "ring": 0.9
+            },
+            "ranked_guesses": [
+              "bell",
+              "ring"
+            ],
+            "rationale": "Both 'bell' and 'ring' are direct sound-producing objects, matching the clue 'sound' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bell": 0.9,
+              "ring": 0.85,
+              "soul": 0.5,
+              "spell": 0.55,
+              "tap": 0.6
+            },
+            "ranked_guesses": [
+              "bell",
+              "ring",
+              "tap",
+              "spell",
+              "soul"
+            ],
+            "rationale": "'bell' and 'ring' are the strongest direct connections to 'sound'. 'tap' is a weaker but plausible sound-related word. 'spell' and 'soul' have more tenuous connections but are possible given the clue count of 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bell": 0.9,
+              "ring": 0.85,
+              "tap": 0.7
+            },
+            "ranked_guesses": [
+              "bell",
+              "ring",
+              "tap"
+            ],
+            "rationale": "'bell' and 'ring' are the strongest direct connections to 'sound'. 'tap' is a weaker but plausible connection.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "turkey"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "whale"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sound",
+          "count": 2,
+          "rationale": "bell and ring are both associated with sound"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "change": 0.9,
+              "switch": 0.75
+            },
+            "ranked_guesses": [
+              "change",
+              "switch"
+            ],
+            "rationale": "'Transform' directly relates to 'change' as a synonym, and 'switch' implies a transformation between states/objects.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "change": 0.9,
+              "switch": 0.85
+            },
+            "ranked_guesses": [
+              "change",
+              "switch"
+            ],
+            "rationale": "'Transform' directly relates to 'change' and 'switch', both unrevealed and on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "change": 0.9,
+              "switch": 0.85
+            },
+            "ranked_guesses": [
+              "change",
+              "switch"
+            ],
+            "rationale": "\"Transform\" directly relates to synonyms like change and switch, which are strong candidates for the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pool"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tap"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "transform",
+          "count": 2,
+          "rationale": "change and spell are related to transformation"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "character"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "turkey": 0.95,
+              "whale": 0.9
+            },
+            "ranked_guesses": [
+              "turkey",
+              "whale"
+            ],
+            "rationale": "'turkey' and 'whale' are the most direct animal matches remaining on the board for the clue 'animal' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "turkey": 0.95,
+              "whale": 0.9
+            },
+            "ranked_guesses": [
+              "turkey",
+              "whale"
+            ],
+            "rationale": "'animal' clue with count 2 strongly suggests turkey and whale as the remaining animal words on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "turkey": 0.95,
+              "whale": 0.9
+            },
+            "ranked_guesses": [
+              "turkey",
+              "whale"
+            ],
+            "rationale": "The clue 'animal' with count 2 strongly suggests 'turkey' and 'whale' as the only clear animal words remaining on the board. 'buffalo' was already revealed as red, so it's not available.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "comic"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "soldier"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "connects turkey and whale as both are animals"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "action"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pool": 0.9,
+              "tap": 0.85
+            },
+            "ranked_guesses": [
+              "pool",
+              "tap"
+            ],
+            "rationale": "Pool and tap are directly related to water, with pool being a body of water and tap a source of water.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pool": 0.85,
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "pool",
+              "ship"
+            ],
+            "rationale": "Pool and ship are directly related to water, fitting the clue with two remaining guesses.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pool": 0.85,
+              "tap": 0.9
+            },
+            "ranked_guesses": [
+              "tap",
+              "pool"
+            ],
+            "rationale": "Tap and pool are directly related to water; tap is a strong connection as in 'tap water', and pool refers to a body of water.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ship"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "water",
+          "count": 2,
+          "rationale": "pool and tap are related to water"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "food"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "comic": 0.95,
+              "face": 0.85,
+              "soldier": 0.95
+            },
+            "ranked_guesses": [
+              "soldier",
+              "comic",
+              "face"
+            ],
+            "rationale": "The clue 'character' with count 3 strongly suggests words representing people or fictional entities. 'soldier' and 'comic' are clear character types, while 'face' can represent a character's facial features.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "comic": 0.85,
+              "face": 0.75,
+              "soldier": 0.8
+            },
+            "ranked_guesses": [
+              "comic",
+              "soldier",
+              "face"
+            ],
+            "rationale": "The clue 'character' with count 3 suggests three hidden words relate to characters. 'comic' likely refers to comic book characters, 'soldier' is a clear character type, and 'face' could relate to character faces or facial expressions. These are the most probable matches among remaining hidden words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "comic": 0.9,
+              "face": 0.7,
+              "soldier": 0.85
+            },
+            "ranked_guesses": [
+              "comic",
+              "soldier",
+              "face"
+            ],
+            "rationale": "'comic' and 'soldier' are strong direct matches for 'character'. 'face' is a plausible match as a character's face or a character in a play/movie.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "plate"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "server"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "character",
+          "count": 3,
+          "rationale": "connects comic, head, and plate as character-related terms"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "word"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "boot": 0.8,
+              "ship": 0.75,
+              "staff": 0.7
+            },
+            "ranked_guesses": [
+              "boot",
+              "ship",
+              "staff"
+            ],
+            "rationale": "These words are action-related verbs (to kick, to send, to provide staff) matching the clue 'action' with count 3.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "boot": 0.8,
+              "ship": 0.85,
+              "spell": 0.9
+            },
+            "ranked_guesses": [
+              "spell",
+              "ship",
+              "boot"
+            ],
+            "rationale": "spell, ship, and boot are all verbs directly related to action",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "head": 0.7,
+              "ship": 0.7,
+              "spell": 0.7
+            },
+            "ranked_guesses": [
+              "head",
+              "ship",
+              "spell"
+            ],
+            "rationale": "head (head off), ship (ship out), and spell (spell out) are action verbs matching the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spell"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "action",
+          "count": 3,
+          "rationale": "boot (boot up), spell (to spell), and france (as in actions related to the country)"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "body"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "plate": 0.9,
+              "server": 0.85
+            },
+            "ranked_guesses": [
+              "plate",
+              "server"
+            ],
+            "rationale": "The clue 'food' with count 2 suggests two unrevealed words related to food. 'plate' directly relates to serving food, and 'server' refers to someone who serves food. Other words have weaker or no connections to food.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "plate": 0.95
+            },
+            "ranked_guesses": [
+              "plate"
+            ],
+            "rationale": "Plate is the most direct food-related word still unrevealed that fits the clue 'food' with count 2. Turkey is already secured by the team.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "france": 0.4,
+              "plate": 0.95,
+              "server": 0.7
+            },
+            "ranked_guesses": [
+              "plate",
+              "server",
+              "france"
+            ],
+            "rationale": "The clue 'food' with count 2 indicates two food-related words. 'plate' is the strongest direct match. 'server' could relate to food service. 'france' is a weaker association to French cuisine.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "head"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "food",
+          "count": 2,
+          "rationale": "connects 'head' (as in head of lettuce) and 'plate' (as in dinner plate)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

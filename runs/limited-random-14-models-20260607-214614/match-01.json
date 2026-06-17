@@ -1,0 +1,2825 @@
+{
+  "board": {
+    "identities": {
+      "airport": "neutral",
+      "bread": "blue",
+      "bridge": "red",
+      "canyon": "red",
+      "cloud": "red",
+      "compass": "neutral",
+      "family": "neutral",
+      "festival": "red",
+      "fox": "red",
+      "ghost": "assassin",
+      "guitar": "blue",
+      "honey": "neutral",
+      "ladder": "neutral",
+      "leather": "blue",
+      "machine": "blue",
+      "metal": "blue",
+      "pilot": "red",
+      "planet": "neutral",
+      "river": "red",
+      "sailor": "blue",
+      "sugar": "blue",
+      "temple": "red",
+      "travel": "red",
+      "village": "blue",
+      "writer": "neutral"
+    },
+    "revealed": [
+      "airport",
+      "bridge",
+      "canyon",
+      "cloud",
+      "compass",
+      "family",
+      "festival",
+      "fox",
+      "guitar",
+      "ladder",
+      "pilot",
+      "planet",
+      "river",
+      "temple",
+      "travel"
+    ],
+    "words": {
+      "airport": "neutral",
+      "bread": "blue",
+      "bridge": "red",
+      "canyon": "red",
+      "cloud": "red",
+      "compass": "neutral",
+      "family": "neutral",
+      "festival": "red",
+      "fox": "red",
+      "ghost": "assassin",
+      "guitar": "blue",
+      "honey": "neutral",
+      "ladder": "neutral",
+      "leather": "blue",
+      "machine": "blue",
+      "metal": "blue",
+      "pilot": "red",
+      "planet": "neutral",
+      "river": "red",
+      "sailor": "blue",
+      "sugar": "blue",
+      "temple": "red",
+      "travel": "red",
+      "village": "blue",
+      "writer": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "journey",
+        "count": 4,
+        "rationale": "Connects to travel, pilot, bridge, and river as red team words related to movement or paths."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.5,
+          "compass": 0.7,
+          "pilot": 0.6,
+          "travel": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "compass",
+          "pilot",
+          "airport"
+        ],
+        "rationale": "'journey' strongly relates to travel, compass aids navigation, pilot guides journeys, and airport is a journey starting point.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "compass": 0.65,
+          "pilot": 0.85,
+          "travel": 0.95
+        },
+        "ranked_guesses": [
+          "travel",
+          "pilot",
+          "airport",
+          "compass"
+        ],
+        "rationale": "The clue 'journey' strongly suggests 'travel' as the primary association. 'pilot', 'airport', and 'compass' are secondary travel-related words that fit the count of 4. Other words like 'bridge', 'river', or 'canyon' are less directly connected to journey.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "compass": 0.65,
+          "pilot": 0.85,
+          "travel": 0.95
+        },
+        "ranked_guesses": [
+          "travel",
+          "pilot",
+          "airport",
+          "compass"
+        ],
+        "rationale": "The clue 'journey' (count 4) strongly suggests travel-related words. 'Travel' is the most direct match. 'Pilot' and 'airport' are associated with journeys, and 'compass' aids navigation. Other words like 'bridge', 'river', or 'canyon' are less directly connected to journey.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "journey",
+        "count": 3,
+        "rationale": "Connects to 'pilot', 'travel', 'sailor', and 'village' as travel-related terms while avoiding direct matches or substrings of board words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.9,
+          "family": 0.7,
+          "planet": 0.8,
+          "river": 0.75,
+          "sailor": 0.85
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor",
+          "planet",
+          "river",
+          "family"
+        ],
+        "rationale": "'journey' strongly suggests navigation or travel-related words. 'compass' and 'sailor' are top matches as they directly relate to navigation and travel. 'planet' and 'river' are plausible but less directly connected. 'family' is a weaker fit but could relate to a journey theme.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.9,
+          "family": 0.7,
+          "planet": 0.8,
+          "river": 0.75,
+          "sailor": 0.85
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor",
+          "planet",
+          "river",
+          "family"
+        ],
+        "rationale": "'journey' strongly suggests travel-related words. 'compass' and 'sailor' are direct travel tools/roles. 'planet' and 'river' fit thematic travel (space/water journeys). 'family' is a stretch but could relate to family trips.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.7,
+          "compass": 0.9,
+          "planet": 0.85,
+          "river": 0.75,
+          "sailor": 0.8
+        },
+        "ranked_guesses": [
+          "compass",
+          "planet",
+          "sailor",
+          "river",
+          "canyon"
+        ],
+        "rationale": "'journey' likely connects to travel-related words; 'compass' and 'planet' are strong fits for exploration/journey themes.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 3,
+        "rationale": "Connects to 'canyon', 'river', and 'bridge' as natural or man-made features often explored, avoiding assassin 'ghost' and other team's words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.7,
+          "planet": 0.9,
+          "river": 0.6
+        },
+        "ranked_guesses": [
+          "planet",
+          "canyon",
+          "river"
+        ],
+        "rationale": "Exploration relates to discovering planets, canyons, and rivers; all fit the clue count of 3.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.7,
+          "river": 0.6,
+          "sailor": 0.8
+        },
+        "ranked_guesses": [
+          "sailor",
+          "planet",
+          "river"
+        ],
+        "rationale": "Clue 'exploration' with count 3 suggests words related to discovery, adventure, or uncharted areas. 'sailor' fits historical exploration, 'planet' relates to space exploration, and 'river' connects to geographical exploration. Avoid 'airport' (too modern/travel) and 'canyon' (more natural feature than exploration).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.7,
+          "river": 0.6,
+          "sailor": 0.8
+        },
+        "ranked_guesses": [
+          "sailor",
+          "planet",
+          "river"
+        ],
+        "rationale": "The clue 'exploration' with count 3 strongly relates to 'sailor' (historical explorers), 'planet' (space exploration), and 'river' (geographical exploration). 'Airport' is less directly tied to exploration compared to these, and other words like 'bridge' or 'canyon' are weaker matches. Given 4 guesses remaining, aiming for the top three exploration-related terms is reasonable.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "melody",
+        "count": 3,
+        "rationale": "Connects to 'guitar', 'sailor', and 'sugar' as sweet or musical themes."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8,
+          "guitar": 0.9,
+          "honey": 0.7,
+          "river": 0.6,
+          "sugar": 0.65
+        },
+        "ranked_guesses": [
+          "guitar",
+          "festival",
+          "honey",
+          "sugar",
+          "river"
+        ],
+        "rationale": "'melody' strongly suggests 'guitar' (musical instrument) as the most likely target. 'festival' and 'honey' are plausible secondary associations. 'sugar' and 'river' are weaker but included for breadth.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.85,
+          "guitar": 0.9,
+          "honey": 0.7,
+          "writer": 0.75
+        },
+        "ranked_guesses": [
+          "guitar",
+          "festival",
+          "writer",
+          "honey"
+        ],
+        "rationale": "melody strongly suggests music-related words; 'guitar' is the most direct fit, followed by 'festival' (music events). 'writer' and 'honey' are weaker but plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.75,
+          "guitar": 0.85,
+          "honey": 0.55,
+          "writer": 0.65
+        },
+        "ranked_guesses": [
+          "guitar",
+          "festival",
+          "writer",
+          "honey"
+        ],
+        "rationale": "melody strongly suggests music-related words like 'guitar' or 'festival'. 'writer' and 'honey' are weaker but possible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 2,
+        "rationale": "Connects to 'bridge' and 'canyon' as both involve structures or natural formations, avoiding 'ghost' and other team's words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "bridge": 0.85,
+          "ladder": 0.6,
+          "machine": 0.65,
+          "temple": 0.55
+        },
+        "ranked_guesses": [
+          "bridge",
+          "airport",
+          "machine",
+          "ladder",
+          "temple"
+        ],
+        "rationale": "Clue 'construction' (count 2) strongly suggests 'bridge' and 'airport' as primary targets, with 'machine', 'ladder', and 'temple' as plausible secondary connections. Avoid 'metal' and 'leather' as they are materials, not constructions.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.7,
+          "bridge": 0.9,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "bridge",
+          "airport",
+          "machine"
+        ],
+        "rationale": "Clue 'construction' suggests words like bridge (built structure), airport (construction project), and machine (constructed device). Bridge is strongest due to direct association.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.6,
+          "bridge": 0.8,
+          "machine": 0.5
+        },
+        "ranked_guesses": [
+          "bridge",
+          "airport",
+          "machine"
+        ],
+        "rationale": "Clue 'construction' suggests words like bridge (structure), airport (built facility), and machine (constructed device); all unrevealed and plausible for red team.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "craft",
+        "count": 3,
+        "rationale": "Connects to 'sailor', 'leather', and 'machine' as items made by craftsmanship, while avoiding direct board word matches."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "ladder": 0.6,
+          "leather": 0.55,
+          "machine": 0.65,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "airport",
+          "sailor",
+          "machine",
+          "ladder",
+          "leather"
+        ],
+        "rationale": "'craft' likely relates to 'airport' (as in aircraft) or 'sailor' (as in seafaring craft). 'machine' and 'ladder' are weaker craft-related associations. 'leather' is a stretch but included for completeness.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.7,
+          "bread": 0.6,
+          "cloud": 0.65,
+          "family": 0.6,
+          "fox": 0.55,
+          "ghost": 0.5,
+          "honey": 0.55,
+          "ladder": 0.5,
+          "leather": 0.5,
+          "machine": 0.5,
+          "metal": 0.5,
+          "river": 0.6,
+          "sailor": 0.65,
+          "sugar": 0.5,
+          "temple": 0.55,
+          "village": 0.55,
+          "writer": 0.5
+        },
+        "ranked_guesses": [
+          "airport",
+          "bread",
+          "cloud",
+          "family",
+          "fox",
+          "ghost",
+          "honey",
+          "ladder",
+          "leather",
+          "machine",
+          "metal",
+          "river",
+          "sailor",
+          "sugar",
+          "temple",
+          "village",
+          "writer"
+        ],
+        "rationale": "The clue 'craft' with count 3 suggests words related to manual work, creation, or transportation. 'airport' fits as a place for craft (aircraft) and aligns with the 'journey'/'exploration' themes from previous clues. Other words like 'bread' (crafted food) or 'cloud' (crafted in weather lore) are less directly connected. 'sailor' and 'river' also fit the craft theme but are less likely given the board's revealed neutral/red words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.85,
+          "bread": 0.65,
+          "family": 0.7,
+          "sailor": 0.8,
+          "village": 0.75
+        },
+        "ranked_guesses": [
+          "airport",
+          "sailor",
+          "village",
+          "family",
+          "bread"
+        ],
+        "rationale": "'craft' suggests handmade or manual work, linking to 'airport' (aviation craft), 'sailor' (nautical craft), and 'village' (traditional craft). 'airport' is the strongest fit due to direct association with aviation craft.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects 'canyon', 'river', and 'cloud' as natural features, while avoiding 'ghost' (assassin) and blue words like 'machine', 'metal', 'leather'."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.7,
+          "cloud": 0.6,
+          "river": 0.9
+        },
+        "ranked_guesses": [
+          "river",
+          "canyon",
+          "cloud"
+        ],
+        "rationale": "River and canyon are natural geographical features, cloud is a natural weather element, all strongly related to 'nature'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.8,
+          "cloud": 0.7,
+          "river": 0.9
+        },
+        "ranked_guesses": [
+          "river",
+          "canyon",
+          "cloud"
+        ],
+        "rationale": "Clue 'nature' with count 3 strongly suggests natural features. River, canyon, and cloud are all clearly nature-related. Fox and honey are also nature-associated but less directly geographical. Prioritizing geographical terms as most obvious.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.75,
+          "cloud": 0.7,
+          "river": 0.85
+        },
+        "ranked_guesses": [
+          "river",
+          "canyon",
+          "cloud"
+        ],
+        "rationale": "Clue 'nature' with count 3 strongly suggests natural features. River and canyon are clear nature-related words; cloud is also natural but slightly less certain. Fox and honey are possible but less directly tied to 'nature' as a concept.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "string",
+        "count": 3,
+        "rationale": "Connects 'string', 'guitar', 'sailor', and 'sugar' as items that can be associated with strings or threads."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.75,
+          "ladder": 0.7,
+          "machine": 0.65,
+          "metal": 0.6
+        },
+        "ranked_guesses": [
+          "cloud",
+          "ladder",
+          "machine",
+          "metal"
+        ],
+        "rationale": "Clue 'string' likely connects to words like 'cloud' (string theory), 'ladder' (extension cord), 'machine' (string of operations), or 'metal' (string instruments). Prioritizing neutral/unrevealed words with plausible connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.85,
+          "canyon": 0.9,
+          "river": 0.9
+        },
+        "ranked_guesses": [
+          "river",
+          "canyon",
+          "bridge"
+        ],
+        "rationale": "All three words are red and likely part of the same clue category (nature/geography), matching the recent clue 'nature'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.6,
+          "bridge": 0.85,
+          "canyon": 0.9,
+          "compass": 0.65,
+          "festival": 0.8,
+          "pilot": 0.75,
+          "planet": 0.7,
+          "river": 0.95
+        },
+        "ranked_guesses": [
+          "river",
+          "canyon",
+          "bridge",
+          "festival",
+          "pilot",
+          "planet",
+          "compass",
+          "airport"
+        ],
+        "rationale": "Clue 'string' likely connects to 'river' (as in river string), 'canyon' (as in canyon string), or 'bridge' (as in suspension bridge). 'river' and 'canyon' are strong fits due to their direct association with 'string' in natural contexts. Others are weaker but plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "wildlife",
+        "count": 2,
+        "rationale": "Connects to 'fox' and 'cloud' as natural or animal-related terms, both red and unrevealed."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.3,
+          "cloud": 0.1,
+          "family": 0.4,
+          "fox": 0.9,
+          "ghost": 0.4,
+          "honey": 0.7,
+          "ladder": 0.1,
+          "leather": 0.2,
+          "machine": 0.2,
+          "metal": 0.2,
+          "sailor": 0.6,
+          "sugar": 0.3,
+          "temple": 0.2,
+          "village": 0.5,
+          "writer": 0.2
+        },
+        "ranked_guesses": [
+          "fox",
+          "honey",
+          "sailor",
+          "village",
+          "family",
+          "ghost",
+          "bread",
+          "sugar",
+          "leather",
+          "machine",
+          "metal",
+          "temple",
+          "writer",
+          "ladder",
+          "cloud"
+        ],
+        "rationale": "Clue 'wildlife' (count 2) strongly suggests 'fox' as a wild animal, and 'honey' could relate to bees/wildlife. Other words like 'sailor' or 'village' are less directly connected but possible. Avoid revealed/neutral words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fox": 0.9,
+          "honey": 0.6
+        },
+        "ranked_guesses": [
+          "fox",
+          "honey"
+        ],
+        "rationale": "The clue 'wildlife' with count 2 strongly suggests animals or natural creatures. 'Fox' is a direct wildlife animal. 'Honey' is less direct but associated with bees, which are wildlife. Other unrevealed words like 'cloud', 'family', 'ghost', 'ladder', 'leather', 'machine', 'metal', 'sailor', 'sugar', 'temple', 'village', 'writer' don't strongly relate to wildlife. 'Bread' is not wildlife. So fox is top, honey is secondary.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fox": 0.9,
+          "honey": 0.7
+        },
+        "ranked_guesses": [
+          "fox",
+          "honey"
+        ],
+        "rationale": "Wildlife strongly suggests fox as an animal; honey relates to bees/wildlife. Other words less directly connected.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "craft",
+        "count": 3,
+        "rationale": "Connects 'craft' to 'leather', 'machine', and 'metal' while avoiding substrings of revealed words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.9,
+          "fox": 0.85,
+          "river": 0.9
+        },
+        "ranked_guesses": [
+          "river",
+          "canyon",
+          "fox"
+        ],
+        "rationale": "craft likely relates to manual skills; river, canyon, and fox are nature-related but may not fit. river and canyon are strong nature associations, fox is wildlife.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ladder": 0.7,
+          "leather": 0.65,
+          "machine": 0.75
+        },
+        "ranked_guesses": [
+          "machine",
+          "ladder",
+          "leather"
+        ],
+        "rationale": "'craft' likely relates to manual creation or tools. 'machine', 'ladder', and 'leather' are tangible items associated with crafting. 'machine' has the highest confidence as it directly implies industrial crafting.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fox": 0.9,
+          "ladder": 0.85,
+          "leather": 0.8,
+          "machine": 0.75
+        },
+        "ranked_guesses": [
+          "fox",
+          "ladder",
+          "leather",
+          "machine"
+        ],
+        "rationale": "craft likely relates to handmade items or tools; fox is a wildlife term but also a craft (e.g., fox hunting or fox as a symbol in crafts), ladder/leather/machine are tools/materials used in crafting.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 2,
+        "rationale": "Connects to 'festival' (already revealed) and 'temple' (unrevealed red), both can be associated with celebrations or ceremonies."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.7,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "family",
+          "village"
+        ],
+        "rationale": "Clue 'celebration' strongly relates to 'family' (family gatherings) and 'village' (community celebrations). Both are unrevealed and likely red.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.7,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "family",
+          "village"
+        ],
+        "rationale": "Clue 'celebration' suggests words like family (gatherings) and village (festive communities), both unrevealed and likely red based on context.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "temple": 0.6,
+          "village": 0.7
+        },
+        "ranked_guesses": [
+          "family",
+          "village",
+          "temple"
+        ],
+        "rationale": "'celebration' strongly relates to 'family' (family gatherings), 'village' (community celebrations), and 'temple' (religious festivals). These are the most celebration-associated words remaining.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sound",
+        "count": 3,
+        "rationale": "Connects to 'guitar', 'sailor', and 'machine' as sound-producing or related items, while avoiding direct matches or substrings of board words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Clue 'sound' directly relates to 'guitar' as a string instrument producing sound.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Sound directly relates to guitar (musical instrument). Other words like 'river' or 'canyon' are less directly connected to sound.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Clue 'sound' strongly suggests 'guitar' as a direct association. Other words like 'river' or 'bridge' are less directly related to sound.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "religion",
+        "count": 1,
+        "rationale": "Temple is the only remaining red word, and it is strongly associated with religion without matching any board words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "temple": 0.95
+        },
+        "ranked_guesses": [
+          "temple"
+        ],
+        "rationale": "Clue 'religion' with count 1 strongly points to 'temple' as the only obvious religious word on the board.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "temple": 0.95
+        },
+        "ranked_guesses": [
+          "temple"
+        ],
+        "rationale": "The clue 'religion' with count 1 strongly points to 'temple' as the only remaining word clearly associated with religion. Other words like 'ghost' or 'village' have weaker or no direct religious connotations. Given the high confidence and only one guess intended, it's best to guess 'temple' and stop.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "temple": 0.95
+        },
+        "ranked_guesses": [
+          "temple"
+        ],
+        "rationale": "Only 'temple' strongly relates to 'religion' among remaining words.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "vocal",
+        "count": 3,
+        "rationale": "Connects to 'guitar', 'sailor', and 'writer' as creative or sound-related terms, while avoiding direct overlaps with revealed words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Clue 'vocal' (3) strongly suggests 'guitar' as a direct association. Other words like 'family' or 'festival' are less directly linked to vocal.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "song": 0.85
+        },
+        "ranked_guesses": [
+          "song"
+        ],
+        "rationale": "'vocal' strongly suggests words related to singing or music, and 'song' is the most direct association with only 3 remaining guesses.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "compass": 0.65,
+          "family": 0.85,
+          "guitar": 0.95,
+          "ladder": 0.7
+        },
+        "ranked_guesses": [
+          "guitar",
+          "family",
+          "airport",
+          "ladder",
+          "compass"
+        ],
+        "rationale": "vocal strongly relates to guitar (musical instrument) and family (vocal family). Other words like airport, ladder, and compass have weaker but plausible connections to vocal (e.g., airport announcements, ladder climbing sounds, compass directions).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "weather",
+        "count": 2,
+        "rationale": "Cloud is an obvious weather-related word. Festival can be associated with weather (e.g., outdoor festivals depend on weather). Avoids assassin 'ghost' and blue words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "sailor"
+        ],
+        "rationale": "Weather strongly connects to 'cloud' as atmospheric phenomenon. 'Sailor' is secondary due to weather's impact on maritime activities. Two targets indicated.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "sailor"
+        ],
+        "rationale": "Cloud directly relates to weather. Sailor could be associated with weather conditions at sea. Count is 2, so guessing both.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "cloud",
+          "machine"
+        ],
+        "rationale": "Weather clue suggests 'cloud' strongly; 'machine' is less certain but plausible for weather-related tech.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pilot"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "compass"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "melody"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "festival"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "craft"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "airport"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "river"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "canyon"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "string"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wildlife"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "fox"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "craft"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ladder"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "family"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sound"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "religion"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vocal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "weather"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "cloud"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 60,
+    "public_event_count": 38,
+    "reason": "all_words_found",
+    "seed": "limited-random-14-models-20260607-214614-m01",
+    "team_blue": "Mistral Small 4",
+    "team_red": "DeepSeek V3.1",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.5,
+              "compass": 0.7,
+              "pilot": 0.6,
+              "travel": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "compass",
+              "pilot",
+              "airport"
+            ],
+            "rationale": "'journey' strongly relates to travel, compass aids navigation, pilot guides journeys, and airport is a journey starting point.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "compass": 0.65,
+              "pilot": 0.85,
+              "travel": 0.95
+            },
+            "ranked_guesses": [
+              "travel",
+              "pilot",
+              "airport",
+              "compass"
+            ],
+            "rationale": "The clue 'journey' strongly suggests 'travel' as the primary association. 'pilot', 'airport', and 'compass' are secondary travel-related words that fit the count of 4. Other words like 'bridge', 'river', or 'canyon' are less directly connected to journey.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "compass": 0.65,
+              "pilot": 0.85,
+              "travel": 0.95
+            },
+            "ranked_guesses": [
+              "travel",
+              "pilot",
+              "airport",
+              "compass"
+            ],
+            "rationale": "The clue 'journey' (count 4) strongly suggests travel-related words. 'Travel' is the most direct match. 'Pilot' and 'airport' are associated with journeys, and 'compass' aids navigation. Other words like 'bridge', 'river', or 'canyon' are less directly connected to journey.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pilot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 4,
+          "rationale": "Connects to travel, pilot, bridge, and river as red team words related to movement or paths."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.9,
+              "family": 0.7,
+              "planet": 0.8,
+              "river": 0.75,
+              "sailor": 0.85
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor",
+              "planet",
+              "river",
+              "family"
+            ],
+            "rationale": "'journey' strongly suggests navigation or travel-related words. 'compass' and 'sailor' are top matches as they directly relate to navigation and travel. 'planet' and 'river' are plausible but less directly connected. 'family' is a weaker fit but could relate to a journey theme.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.9,
+              "family": 0.7,
+              "planet": 0.8,
+              "river": 0.75,
+              "sailor": 0.85
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor",
+              "planet",
+              "river",
+              "family"
+            ],
+            "rationale": "'journey' strongly suggests travel-related words. 'compass' and 'sailor' are direct travel tools/roles. 'planet' and 'river' fit thematic travel (space/water journeys). 'family' is a stretch but could relate to family trips.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.7,
+              "compass": 0.9,
+              "planet": 0.85,
+              "river": 0.75,
+              "sailor": 0.8
+            },
+            "ranked_guesses": [
+              "compass",
+              "planet",
+              "sailor",
+              "river",
+              "canyon"
+            ],
+            "rationale": "'journey' likely connects to travel-related words; 'compass' and 'planet' are strong fits for exploration/journey themes.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "compass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 3,
+          "rationale": "Connects to 'pilot', 'travel', 'sailor', and 'village' as travel-related terms while avoiding direct matches or substrings of board words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.7,
+              "planet": 0.9,
+              "river": 0.6
+            },
+            "ranked_guesses": [
+              "planet",
+              "canyon",
+              "river"
+            ],
+            "rationale": "Exploration relates to discovering planets, canyons, and rivers; all fit the clue count of 3.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.7,
+              "river": 0.6,
+              "sailor": 0.8
+            },
+            "ranked_guesses": [
+              "sailor",
+              "planet",
+              "river"
+            ],
+            "rationale": "Clue 'exploration' with count 3 suggests words related to discovery, adventure, or uncharted areas. 'sailor' fits historical exploration, 'planet' relates to space exploration, and 'river' connects to geographical exploration. Avoid 'airport' (too modern/travel) and 'canyon' (more natural feature than exploration).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.7,
+              "river": 0.6,
+              "sailor": 0.8
+            },
+            "ranked_guesses": [
+              "sailor",
+              "planet",
+              "river"
+            ],
+            "rationale": "The clue 'exploration' with count 3 strongly relates to 'sailor' (historical explorers), 'planet' (space exploration), and 'river' (geographical exploration). 'Airport' is less directly tied to exploration compared to these, and other words like 'bridge' or 'canyon' are weaker matches. Given 4 guesses remaining, aiming for the top three exploration-related terms is reasonable.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 3,
+          "rationale": "Connects to 'canyon', 'river', and 'bridge' as natural or man-made features often explored, avoiding assassin 'ghost' and other team's words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "melody"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8,
+              "guitar": 0.9,
+              "honey": 0.7,
+              "river": 0.6,
+              "sugar": 0.65
+            },
+            "ranked_guesses": [
+              "guitar",
+              "festival",
+              "honey",
+              "sugar",
+              "river"
+            ],
+            "rationale": "'melody' strongly suggests 'guitar' (musical instrument) as the most likely target. 'festival' and 'honey' are plausible secondary associations. 'sugar' and 'river' are weaker but included for breadth.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.85,
+              "guitar": 0.9,
+              "honey": 0.7,
+              "writer": 0.75
+            },
+            "ranked_guesses": [
+              "guitar",
+              "festival",
+              "writer",
+              "honey"
+            ],
+            "rationale": "melody strongly suggests music-related words; 'guitar' is the most direct fit, followed by 'festival' (music events). 'writer' and 'honey' are weaker but plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.75,
+              "guitar": 0.85,
+              "honey": 0.55,
+              "writer": 0.65
+            },
+            "ranked_guesses": [
+              "guitar",
+              "festival",
+              "writer",
+              "honey"
+            ],
+            "rationale": "melody strongly suggests music-related words like 'guitar' or 'festival'. 'writer' and 'honey' are weaker but possible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "festival"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "melody",
+          "count": 3,
+          "rationale": "Connects to 'guitar', 'sailor', and 'sugar' as sweet or musical themes."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "bridge": 0.85,
+              "ladder": 0.6,
+              "machine": 0.65,
+              "temple": 0.55
+            },
+            "ranked_guesses": [
+              "bridge",
+              "airport",
+              "machine",
+              "ladder",
+              "temple"
+            ],
+            "rationale": "Clue 'construction' (count 2) strongly suggests 'bridge' and 'airport' as primary targets, with 'machine', 'ladder', and 'temple' as plausible secondary connections. Avoid 'metal' and 'leather' as they are materials, not constructions.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.7,
+              "bridge": 0.9,
+              "machine": 0.6
+            },
+            "ranked_guesses": [
+              "bridge",
+              "airport",
+              "machine"
+            ],
+            "rationale": "Clue 'construction' suggests words like bridge (built structure), airport (construction project), and machine (constructed device). Bridge is strongest due to direct association.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.6,
+              "bridge": 0.8,
+              "machine": 0.5
+            },
+            "ranked_guesses": [
+              "bridge",
+              "airport",
+              "machine"
+            ],
+            "rationale": "Clue 'construction' suggests words like bridge (structure), airport (built facility), and machine (constructed device); all unrevealed and plausible for red team.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "construction",
+          "count": 2,
+          "rationale": "Connects to 'bridge' and 'canyon' as both involve structures or natural formations, avoiding 'ghost' and other team's words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "craft"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "ladder": 0.6,
+              "leather": 0.55,
+              "machine": 0.65,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "airport",
+              "sailor",
+              "machine",
+              "ladder",
+              "leather"
+            ],
+            "rationale": "'craft' likely relates to 'airport' (as in aircraft) or 'sailor' (as in seafaring craft). 'machine' and 'ladder' are weaker craft-related associations. 'leather' is a stretch but included for completeness.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.7,
+              "bread": 0.6,
+              "cloud": 0.65,
+              "family": 0.6,
+              "fox": 0.55,
+              "ghost": 0.5,
+              "honey": 0.55,
+              "ladder": 0.5,
+              "leather": 0.5,
+              "machine": 0.5,
+              "metal": 0.5,
+              "river": 0.6,
+              "sailor": 0.65,
+              "sugar": 0.5,
+              "temple": 0.55,
+              "village": 0.55,
+              "writer": 0.5
+            },
+            "ranked_guesses": [
+              "airport",
+              "bread",
+              "cloud",
+              "family",
+              "fox",
+              "ghost",
+              "honey",
+              "ladder",
+              "leather",
+              "machine",
+              "metal",
+              "river",
+              "sailor",
+              "sugar",
+              "temple",
+              "village",
+              "writer"
+            ],
+            "rationale": "The clue 'craft' with count 3 suggests words related to manual work, creation, or transportation. 'airport' fits as a place for craft (aircraft) and aligns with the 'journey'/'exploration' themes from previous clues. Other words like 'bread' (crafted food) or 'cloud' (crafted in weather lore) are less directly connected. 'sailor' and 'river' also fit the craft theme but are less likely given the board's revealed neutral/red words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.85,
+              "bread": 0.65,
+              "family": 0.7,
+              "sailor": 0.8,
+              "village": 0.75
+            },
+            "ranked_guesses": [
+              "airport",
+              "sailor",
+              "village",
+              "family",
+              "bread"
+            ],
+            "rationale": "'craft' suggests handmade or manual work, linking to 'airport' (aviation craft), 'sailor' (nautical craft), and 'village' (traditional craft). 'airport' is the strongest fit due to direct association with aviation craft.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "airport"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "craft",
+          "count": 3,
+          "rationale": "Connects to 'sailor', 'leather', and 'machine' as items made by craftsmanship, while avoiding direct board word matches."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.7,
+              "cloud": 0.6,
+              "river": 0.9
+            },
+            "ranked_guesses": [
+              "river",
+              "canyon",
+              "cloud"
+            ],
+            "rationale": "River and canyon are natural geographical features, cloud is a natural weather element, all strongly related to 'nature'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.8,
+              "cloud": 0.7,
+              "river": 0.9
+            },
+            "ranked_guesses": [
+              "river",
+              "canyon",
+              "cloud"
+            ],
+            "rationale": "Clue 'nature' with count 3 strongly suggests natural features. River, canyon, and cloud are all clearly nature-related. Fox and honey are also nature-associated but less directly geographical. Prioritizing geographical terms as most obvious.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.75,
+              "cloud": 0.7,
+              "river": 0.85
+            },
+            "ranked_guesses": [
+              "river",
+              "canyon",
+              "cloud"
+            ],
+            "rationale": "Clue 'nature' with count 3 strongly suggests natural features. River and canyon are clear nature-related words; cloud is also natural but slightly less certain. Fox and honey are possible but less directly tied to 'nature' as a concept.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "river"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "canyon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects 'canyon', 'river', and 'cloud' as natural features, while avoiding 'ghost' (assassin) and blue words like 'machine', 'metal', 'leather'."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "string"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.75,
+              "ladder": 0.7,
+              "machine": 0.65,
+              "metal": 0.6
+            },
+            "ranked_guesses": [
+              "cloud",
+              "ladder",
+              "machine",
+              "metal"
+            ],
+            "rationale": "Clue 'string' likely connects to words like 'cloud' (string theory), 'ladder' (extension cord), 'machine' (string of operations), or 'metal' (string instruments). Prioritizing neutral/unrevealed words with plausible connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.85,
+              "canyon": 0.9,
+              "river": 0.9
+            },
+            "ranked_guesses": [
+              "river",
+              "canyon",
+              "bridge"
+            ],
+            "rationale": "All three words are red and likely part of the same clue category (nature/geography), matching the recent clue 'nature'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.6,
+              "bridge": 0.85,
+              "canyon": 0.9,
+              "compass": 0.65,
+              "festival": 0.8,
+              "pilot": 0.75,
+              "planet": 0.7,
+              "river": 0.95
+            },
+            "ranked_guesses": [
+              "river",
+              "canyon",
+              "bridge",
+              "festival",
+              "pilot",
+              "planet",
+              "compass",
+              "airport"
+            ],
+            "rationale": "Clue 'string' likely connects to 'river' (as in river string), 'canyon' (as in canyon string), or 'bridge' (as in suspension bridge). 'river' and 'canyon' are strong fits due to their direct association with 'string' in natural contexts. Others are weaker but plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "string",
+          "count": 3,
+          "rationale": "Connects 'string', 'guitar', 'sailor', and 'sugar' as items that can be associated with strings or threads."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wildlife"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.3,
+              "cloud": 0.1,
+              "family": 0.4,
+              "fox": 0.9,
+              "ghost": 0.4,
+              "honey": 0.7,
+              "ladder": 0.1,
+              "leather": 0.2,
+              "machine": 0.2,
+              "metal": 0.2,
+              "sailor": 0.6,
+              "sugar": 0.3,
+              "temple": 0.2,
+              "village": 0.5,
+              "writer": 0.2
+            },
+            "ranked_guesses": [
+              "fox",
+              "honey",
+              "sailor",
+              "village",
+              "family",
+              "ghost",
+              "bread",
+              "sugar",
+              "leather",
+              "machine",
+              "metal",
+              "temple",
+              "writer",
+              "ladder",
+              "cloud"
+            ],
+            "rationale": "Clue 'wildlife' (count 2) strongly suggests 'fox' as a wild animal, and 'honey' could relate to bees/wildlife. Other words like 'sailor' or 'village' are less directly connected but possible. Avoid revealed/neutral words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fox": 0.9,
+              "honey": 0.6
+            },
+            "ranked_guesses": [
+              "fox",
+              "honey"
+            ],
+            "rationale": "The clue 'wildlife' with count 2 strongly suggests animals or natural creatures. 'Fox' is a direct wildlife animal. 'Honey' is less direct but associated with bees, which are wildlife. Other unrevealed words like 'cloud', 'family', 'ghost', 'ladder', 'leather', 'machine', 'metal', 'sailor', 'sugar', 'temple', 'village', 'writer' don't strongly relate to wildlife. 'Bread' is not wildlife. So fox is top, honey is secondary.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fox": 0.9,
+              "honey": 0.7
+            },
+            "ranked_guesses": [
+              "fox",
+              "honey"
+            ],
+            "rationale": "Wildlife strongly suggests fox as an animal; honey relates to bees/wildlife. Other words less directly connected.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "fox"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "wildlife",
+          "count": 2,
+          "rationale": "Connects to 'fox' and 'cloud' as natural or animal-related terms, both red and unrevealed."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "craft"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.9,
+              "fox": 0.85,
+              "river": 0.9
+            },
+            "ranked_guesses": [
+              "river",
+              "canyon",
+              "fox"
+            ],
+            "rationale": "craft likely relates to manual skills; river, canyon, and fox are nature-related but may not fit. river and canyon are strong nature associations, fox is wildlife.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ladder": 0.7,
+              "leather": 0.65,
+              "machine": 0.75
+            },
+            "ranked_guesses": [
+              "machine",
+              "ladder",
+              "leather"
+            ],
+            "rationale": "'craft' likely relates to manual creation or tools. 'machine', 'ladder', and 'leather' are tangible items associated with crafting. 'machine' has the highest confidence as it directly implies industrial crafting.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fox": 0.9,
+              "ladder": 0.85,
+              "leather": 0.8,
+              "machine": 0.75
+            },
+            "ranked_guesses": [
+              "fox",
+              "ladder",
+              "leather",
+              "machine"
+            ],
+            "rationale": "craft likely relates to handmade items or tools; fox is a wildlife term but also a craft (e.g., fox hunting or fox as a symbol in crafts), ladder/leather/machine are tools/materials used in crafting.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ladder"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "craft",
+          "count": 3,
+          "rationale": "Connects 'craft' to 'leather', 'machine', and 'metal' while avoiding substrings of revealed words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.7,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "family",
+              "village"
+            ],
+            "rationale": "Clue 'celebration' strongly relates to 'family' (family gatherings) and 'village' (community celebrations). Both are unrevealed and likely red.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.7,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "family",
+              "village"
+            ],
+            "rationale": "Clue 'celebration' suggests words like family (gatherings) and village (festive communities), both unrevealed and likely red based on context.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "temple": 0.6,
+              "village": 0.7
+            },
+            "ranked_guesses": [
+              "family",
+              "village",
+              "temple"
+            ],
+            "rationale": "'celebration' strongly relates to 'family' (family gatherings), 'village' (community celebrations), and 'temple' (religious festivals). These are the most celebration-associated words remaining.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "family"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 2,
+          "rationale": "Connects to 'festival' (already revealed) and 'temple' (unrevealed red), both can be associated with celebrations or ceremonies."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sound"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Clue 'sound' directly relates to 'guitar' as a string instrument producing sound.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Sound directly relates to guitar (musical instrument). Other words like 'river' or 'canyon' are less directly connected to sound.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Clue 'sound' strongly suggests 'guitar' as a direct association. Other words like 'river' or 'bridge' are less directly related to sound.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sound",
+          "count": 3,
+          "rationale": "Connects to 'guitar', 'sailor', and 'machine' as sound-producing or related items, while avoiding direct matches or substrings of board words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "religion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "temple": 0.95
+            },
+            "ranked_guesses": [
+              "temple"
+            ],
+            "rationale": "Clue 'religion' with count 1 strongly points to 'temple' as the only obvious religious word on the board.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "temple": 0.95
+            },
+            "ranked_guesses": [
+              "temple"
+            ],
+            "rationale": "The clue 'religion' with count 1 strongly points to 'temple' as the only remaining word clearly associated with religion. Other words like 'ghost' or 'village' have weaker or no direct religious connotations. Given the high confidence and only one guess intended, it's best to guess 'temple' and stop.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "temple": 0.95
+            },
+            "ranked_guesses": [
+              "temple"
+            ],
+            "rationale": "Only 'temple' strongly relates to 'religion' among remaining words.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "religion",
+          "count": 1,
+          "rationale": "Temple is the only remaining red word, and it is strongly associated with religion without matching any board words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vocal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Clue 'vocal' (3) strongly suggests 'guitar' as a direct association. Other words like 'family' or 'festival' are less directly linked to vocal.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "song": 0.85
+            },
+            "ranked_guesses": [
+              "song"
+            ],
+            "rationale": "'vocal' strongly suggests words related to singing or music, and 'song' is the most direct association with only 3 remaining guesses.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "compass": 0.65,
+              "family": 0.85,
+              "guitar": 0.95,
+              "ladder": 0.7
+            },
+            "ranked_guesses": [
+              "guitar",
+              "family",
+              "airport",
+              "ladder",
+              "compass"
+            ],
+            "rationale": "vocal strongly relates to guitar (musical instrument) and family (vocal family). Other words like airport, ladder, and compass have weaker but plausible connections to vocal (e.g., airport announcements, ladder climbing sounds, compass directions).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "vocal",
+          "count": 3,
+          "rationale": "Connects to 'guitar', 'sailor', and 'writer' as creative or sound-related terms, while avoiding direct overlaps with revealed words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "weather"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "sailor"
+            ],
+            "rationale": "Weather strongly connects to 'cloud' as atmospheric phenomenon. 'Sailor' is secondary due to weather's impact on maritime activities. Two targets indicated.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "sailor"
+            ],
+            "rationale": "Cloud directly relates to weather. Sailor could be associated with weather conditions at sea. Count is 2, so guessing both.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "machine": 0.6
+            },
+            "ranked_guesses": [
+              "cloud",
+              "machine"
+            ],
+            "rationale": "Weather clue suggests 'cloud' strongly; 'machine' is less certain but plausible for weather-related tech.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "weather",
+          "count": 2,
+          "rationale": "Cloud is an obvious weather-related word. Festival can be associated with weather (e.g., outdoor festivals depend on weather). Avoids assassin 'ghost' and blue words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

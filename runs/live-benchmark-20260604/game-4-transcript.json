@@ -1,0 +1,1139 @@
+{
+  "board": {
+    "identities": {
+      "airport": "blue",
+      "alien": "blue",
+      "anchor": "neutral",
+      "animal": "red",
+      "bridge": "assassin",
+      "butter": "blue",
+      "camera": "red",
+      "castle": "neutral",
+      "copper": "red",
+      "desert": "red",
+      "doctor": "neutral",
+      "ember": "blue",
+      "family": "neutral",
+      "guitar": "neutral",
+      "lantern": "blue",
+      "library": "red",
+      "mirror": "blue",
+      "palace": "blue",
+      "pyramid": "blue",
+      "robot": "red",
+      "rocket": "neutral",
+      "spider": "neutral",
+      "spirit": "red",
+      "violin": "red",
+      "writer": "red"
+    },
+    "revealed": [
+      "anchor",
+      "camera",
+      "ember",
+      "lantern",
+      "mirror",
+      "writer"
+    ],
+    "words": {
+      "airport": "blue",
+      "alien": "blue",
+      "anchor": "neutral",
+      "animal": "red",
+      "bridge": "assassin",
+      "butter": "blue",
+      "camera": "red",
+      "castle": "neutral",
+      "copper": "red",
+      "desert": "red",
+      "doctor": "neutral",
+      "ember": "blue",
+      "family": "neutral",
+      "guitar": "neutral",
+      "lantern": "blue",
+      "library": "red",
+      "mirror": "blue",
+      "palace": "blue",
+      "pyramid": "blue",
+      "robot": "red",
+      "rocket": "neutral",
+      "spider": "neutral",
+      "spirit": "red",
+      "violin": "red",
+      "writer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "art",
+        "count": 4,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "guitar": 0.8,
+          "violin": 0.8,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "camera",
+          "guitar",
+          "violin",
+          "writer"
+        ],
+        "rationale": "The clue 'art' with count 4 suggests words directly related to artistic mediums: camera (photography), guitar and violin (music), writer (literature).",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "guitar": 0.7,
+          "violin": 0.7,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "camera",
+          "writer",
+          "guitar",
+          "violin"
+        ],
+        "rationale": "Camera relates to photography, writer to literature, guitar and violin to music, all forms of art.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "guitar": 0.85,
+          "violin": 0.8,
+          "writer": 0.75
+        },
+        "ranked_guesses": [
+          "camera",
+          "guitar",
+          "violin",
+          "writer"
+        ],
+        "rationale": "Camera (photography), guitar (music), violin (music), and writer (literature) are directly associated with art forms, matching the clue 'art' with count 4.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.8,
+          "alien": 0.7,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "rocket",
+          "airport",
+          "alien"
+        ],
+        "rationale": "rocket, airport, and alien are strongly associated with sky; lantern is possible but less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.8,
+          "alien": 0.7,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "rocket",
+          "airport",
+          "alien"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "alien": 0.8,
+          "rocket": 0.85
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket",
+          "alien"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "safari",
+        "count": 3,
+        "rationale": "Animal, desert, and camera are all associated with safari (wildlife, desert landscape, photography). No strong associations with other words on the board."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.9,
+          "camera": 0.6,
+          "desert": 0.7
+        },
+        "ranked_guesses": [
+          "animal",
+          "desert",
+          "camera"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.95,
+          "camera": 0.85,
+          "desert": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "camera",
+          "desert"
+        ],
+        "rationale": "Safari relates to wildlife and photography; animal is direct, camera is common, desert is a possible safari location but less certain.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.9,
+          "camera": 0.8,
+          "desert": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "camera",
+          "desert"
+        ],
+        "rationale": "Safari commonly involves animals, cameras for photography, and deserts as typical landscapes.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 3,
+        "rationale": "Connects ember, lantern, mirror as sources or reflectors of light."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.7,
+          "lantern": 0.9,
+          "mirror": 0.8
+        },
+        "ranked_guesses": [
+          "lantern",
+          "mirror",
+          "camera"
+        ],
+        "rationale": "Lantern emits light, mirror reflects light, camera captures light.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.7,
+          "lantern": 0.9,
+          "mirror": 0.8
+        },
+        "ranked_guesses": [
+          "lantern",
+          "mirror",
+          "camera"
+        ],
+        "rationale": "Direct associations with light: lantern emits light, mirror reflects light, camera captures light.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.7,
+          "lantern": 0.9,
+          "mirror": 0.5
+        },
+        "ranked_guesses": [
+          "lantern",
+          "ember",
+          "mirror"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "press",
+        "count": 3,
+        "rationale": "Writer, camera, and library are all associated with press (journalism, photography, reference)."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8,
+          "camera": 0.85,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "writer",
+          "camera",
+          "anchor"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.8,
+          "mirror": 0.7,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "writer",
+          "camera",
+          "mirror"
+        ],
+        "rationale": "Press relates to media, so writer, camera, and mirror are strong associations.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "camera": 0.85,
+          "writer": 0.8
+        },
+        "ranked_guesses": [
+          "anchor",
+          "camera",
+          "writer"
+        ],
+        "rationale": "Press relates to news media: anchor (news anchor), camera (press camera), writer (journalist).",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 3,
+        "rationale": "Connects ember, lantern, and mirror through light emission or reflection."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.8,
+          "lantern": 0.95,
+          "mirror": 0.75
+        },
+        "ranked_guesses": [
+          "lantern",
+          "ember",
+          "mirror"
+        ],
+        "rationale": "Light suggests illumination sources; lantern directly emits light, ember glows, mirror reflects light. Other possibilities like airport or castle are less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.8,
+          "lantern": 0.9,
+          "mirror": 0.7
+        },
+        "ranked_guesses": [
+          "lantern",
+          "ember",
+          "mirror"
+        ],
+        "rationale": "Lantern is directly a source of light. Ember glows and emits light. Mirror reflects light, strongly associated.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.6,
+          "lantern": 0.9,
+          "mirror": 0.7
+        },
+        "ranked_guesses": [
+          "lantern",
+          "mirror",
+          "ember"
+        ],
+        "rationale": "Lantern is a direct source of light. Mirror reflects light. Ember emits a glow, associated with light.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "art"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "safari"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "press"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "lantern"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ember"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 24,
+    "public_event_count": 16,
+    "reason": null,
+    "seed": "4",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "art"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "guitar": 0.8,
+              "violin": 0.8,
+              "writer": 0.7
+            },
+            "ranked_guesses": [
+              "camera",
+              "guitar",
+              "violin",
+              "writer"
+            ],
+            "rationale": "The clue 'art' with count 4 suggests words directly related to artistic mediums: camera (photography), guitar and violin (music), writer (literature).",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "guitar": 0.7,
+              "violin": 0.7,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "camera",
+              "writer",
+              "guitar",
+              "violin"
+            ],
+            "rationale": "Camera relates to photography, writer to literature, guitar and violin to music, all forms of art.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "guitar": 0.85,
+              "violin": 0.8,
+              "writer": 0.75
+            },
+            "ranked_guesses": [
+              "camera",
+              "guitar",
+              "violin",
+              "writer"
+            ],
+            "rationale": "Camera (photography), guitar (music), violin (music), and writer (literature) are directly associated with art forms, matching the clue 'art' with count 4.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "art",
+          "count": 4,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.8,
+              "alien": 0.7,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "rocket",
+              "airport",
+              "alien"
+            ],
+            "rationale": "rocket, airport, and alien are strongly associated with sky; lantern is possible but less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.8,
+              "alien": 0.7,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "rocket",
+              "airport",
+              "alien"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "alien": 0.8,
+              "rocket": 0.85
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket",
+              "alien"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "safari"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.9,
+              "camera": 0.6,
+              "desert": 0.7
+            },
+            "ranked_guesses": [
+              "animal",
+              "desert",
+              "camera"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.95,
+              "camera": 0.85,
+              "desert": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "camera",
+              "desert"
+            ],
+            "rationale": "Safari relates to wildlife and photography; animal is direct, camera is common, desert is a possible safari location but less certain.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.9,
+              "camera": 0.8,
+              "desert": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "camera",
+              "desert"
+            ],
+            "rationale": "Safari commonly involves animals, cameras for photography, and deserts as typical landscapes.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "safari",
+          "count": 3,
+          "rationale": "Animal, desert, and camera are all associated with safari (wildlife, desert landscape, photography). No strong associations with other words on the board."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.7,
+              "lantern": 0.9,
+              "mirror": 0.8
+            },
+            "ranked_guesses": [
+              "lantern",
+              "mirror",
+              "camera"
+            ],
+            "rationale": "Lantern emits light, mirror reflects light, camera captures light.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.7,
+              "lantern": 0.9,
+              "mirror": 0.8
+            },
+            "ranked_guesses": [
+              "lantern",
+              "mirror",
+              "camera"
+            ],
+            "rationale": "Direct associations with light: lantern emits light, mirror reflects light, camera captures light.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.7,
+              "lantern": 0.9,
+              "mirror": 0.5
+            },
+            "ranked_guesses": [
+              "lantern",
+              "ember",
+              "mirror"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 3,
+          "rationale": "Connects ember, lantern, mirror as sources or reflectors of light."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "press"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8,
+              "camera": 0.85,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "writer",
+              "camera",
+              "anchor"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.8,
+              "mirror": 0.7,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "writer",
+              "camera",
+              "mirror"
+            ],
+            "rationale": "Press relates to media, so writer, camera, and mirror are strong associations.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "camera": 0.85,
+              "writer": 0.8
+            },
+            "ranked_guesses": [
+              "anchor",
+              "camera",
+              "writer"
+            ],
+            "rationale": "Press relates to news media: anchor (news anchor), camera (press camera), writer (journalist).",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "press",
+          "count": 3,
+          "rationale": "Writer, camera, and library are all associated with press (journalism, photography, reference)."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.8,
+              "lantern": 0.95,
+              "mirror": 0.75
+            },
+            "ranked_guesses": [
+              "lantern",
+              "ember",
+              "mirror"
+            ],
+            "rationale": "Light suggests illumination sources; lantern directly emits light, ember glows, mirror reflects light. Other possibilities like airport or castle are less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.8,
+              "lantern": 0.9,
+              "mirror": 0.7
+            },
+            "ranked_guesses": [
+              "lantern",
+              "ember",
+              "mirror"
+            ],
+            "rationale": "Lantern is directly a source of light. Ember glows and emits light. Mirror reflects light, strongly associated.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.6,
+              "lantern": 0.9,
+              "mirror": 0.7
+            },
+            "ranked_guesses": [
+              "lantern",
+              "mirror",
+              "ember"
+            ],
+            "rationale": "Lantern is a direct source of light. Mirror reflects light. Ember emits a glow, associated with light.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "lantern"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ember"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 3,
+          "rationale": "Connects ember, lantern, and mirror through light emission or reflection."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

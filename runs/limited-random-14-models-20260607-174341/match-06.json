@@ -1,0 +1,508 @@
+{
+  "board": {
+    "identities": {
+      "airport": "red",
+      "battery": "red",
+      "bridge": "neutral",
+      "circle": "neutral",
+      "compass": "red",
+      "dancer": "red",
+      "flame": "red",
+      "helmet": "neutral",
+      "library": "neutral",
+      "mountain": "neutral",
+      "museum": "red",
+      "mystery": "blue",
+      "novel": "blue",
+      "planet": "blue",
+      "river": "neutral",
+      "sailor": "blue",
+      "silver": "assassin",
+      "spirit": "red",
+      "spring": "blue",
+      "station": "red",
+      "stone": "blue",
+      "violin": "blue",
+      "water": "neutral",
+      "winter": "blue",
+      "wizard": "red"
+    },
+    "revealed": [
+      "airport",
+      "dancer",
+      "museum",
+      "station",
+      "violin"
+    ],
+    "words": {
+      "airport": "red",
+      "battery": "red",
+      "bridge": "neutral",
+      "circle": "neutral",
+      "compass": "red",
+      "dancer": "red",
+      "flame": "red",
+      "helmet": "neutral",
+      "library": "neutral",
+      "mountain": "neutral",
+      "museum": "red",
+      "mystery": "blue",
+      "novel": "blue",
+      "planet": "blue",
+      "river": "neutral",
+      "sailor": "blue",
+      "silver": "assassin",
+      "spirit": "red",
+      "spring": "blue",
+      "station": "red",
+      "stone": "blue",
+      "violin": "blue",
+      "water": "neutral",
+      "winter": "blue",
+      "wizard": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "travel",
+        "count": 3,
+        "rationale": "airport, station, compass are related to travel"
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "museum": 0.75,
+          "station": 0.85
+        },
+        "ranked_guesses": [
+          "airport",
+          "station",
+          "museum"
+        ],
+        "rationale": "Words related to travel and places people visit or move through.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "museum": 0.75,
+          "station": 0.85
+        },
+        "ranked_guesses": [
+          "airport",
+          "station",
+          "museum"
+        ],
+        "rationale": "Words related to travel and places people visit or pass through.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "museum": 0.75,
+          "station": 0.85
+        },
+        "ranked_guesses": [
+          "airport",
+          "station",
+          "museum"
+        ],
+        "rationale": "airport, station, and museum are all related to travel or destinations people might visit or pass through",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 3,
+        "rationale": "Connects to 'violin', 'sailor' (sailor's hornpipe), and 'spring' (spring song), while avoiding direct matches or substrings of board words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.6,
+          "flame": 0.7,
+          "silver": 0.5,
+          "spirit": 0.5,
+          "violin": 0.9
+        },
+        "ranked_guesses": [
+          "violin",
+          "flame",
+          "dancer",
+          "silver",
+          "spirit"
+        ],
+        "rationale": "'music' strongly suggests 'violin' as a direct instrument. 'flame' could relate to music (e.g., 'play with fire'), but less directly. Other words like 'dancer' or 'spirit' are loosely connected but less likely given the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.85,
+          "flame": 0.75,
+          "silver": 0.7,
+          "spirit": 0.65,
+          "violin": 0.9
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer",
+          "flame",
+          "silver",
+          "spirit"
+        ],
+        "rationale": "'music' strongly suggests 'violin' as a direct instrument. 'dancer' fits as music often accompanies dance. 'flame' could relate to 'fire music' or metaphorical uses. 'silver' and 'spirit' are weaker but possible (e.g., 'silver screen' for music in films, 'spirit' as in 'soul music').",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.85,
+          "flame": 0.75,
+          "silver": 0.7,
+          "spirit": 0.65,
+          "violin": 0.9
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer",
+          "flame",
+          "silver",
+          "spirit"
+        ],
+        "rationale": "'music' strongly suggests 'violin' as a direct instrument association. 'dancer' fits as music often accompanies dance. 'flame' could relate to musical passion or 'playing with fire'. 'silver' may link to music awards or silver strings. 'spirit' could imply musical spirit or genre.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "airport"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "museum"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "violin"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dancer"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 8,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-174341-m06",
+    "team_blue": "Mistral Small 4",
+    "team_red": "Qwen2.5 72B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "travel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "museum": 0.75,
+              "station": 0.85
+            },
+            "ranked_guesses": [
+              "airport",
+              "station",
+              "museum"
+            ],
+            "rationale": "Words related to travel and places people visit or move through.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "museum": 0.75,
+              "station": 0.85
+            },
+            "ranked_guesses": [
+              "airport",
+              "station",
+              "museum"
+            ],
+            "rationale": "Words related to travel and places people visit or pass through.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "museum": 0.75,
+              "station": 0.85
+            },
+            "ranked_guesses": [
+              "airport",
+              "station",
+              "museum"
+            ],
+            "rationale": "airport, station, and museum are all related to travel or destinations people might visit or pass through",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "airport"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "museum"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 3,
+          "rationale": "airport, station, compass are related to travel"
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.6,
+              "flame": 0.7,
+              "silver": 0.5,
+              "spirit": 0.5,
+              "violin": 0.9
+            },
+            "ranked_guesses": [
+              "violin",
+              "flame",
+              "dancer",
+              "silver",
+              "spirit"
+            ],
+            "rationale": "'music' strongly suggests 'violin' as a direct instrument. 'flame' could relate to music (e.g., 'play with fire'), but less directly. Other words like 'dancer' or 'spirit' are loosely connected but less likely given the clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.85,
+              "flame": 0.75,
+              "silver": 0.7,
+              "spirit": 0.65,
+              "violin": 0.9
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer",
+              "flame",
+              "silver",
+              "spirit"
+            ],
+            "rationale": "'music' strongly suggests 'violin' as a direct instrument. 'dancer' fits as music often accompanies dance. 'flame' could relate to 'fire music' or metaphorical uses. 'silver' and 'spirit' are weaker but possible (e.g., 'silver screen' for music in films, 'spirit' as in 'soul music').",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.85,
+              "flame": 0.75,
+              "silver": 0.7,
+              "spirit": 0.65,
+              "violin": 0.9
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer",
+              "flame",
+              "silver",
+              "spirit"
+            ],
+            "rationale": "'music' strongly suggests 'violin' as a direct instrument association. 'dancer' fits as music often accompanies dance. 'flame' could relate to musical passion or 'playing with fire'. 'silver' may link to music awards or silver strings. 'spirit' could imply musical spirit or genre.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "violin"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dancer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 3,
+          "rationale": "Connects to 'violin', 'sailor' (sailor's hornpipe), and 'spring' (spring song), while avoiding direct matches or substrings of board words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

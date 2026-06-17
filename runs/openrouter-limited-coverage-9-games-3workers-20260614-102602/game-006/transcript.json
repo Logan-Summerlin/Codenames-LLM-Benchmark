@@ -1,0 +1,1218 @@
+{
+  "board": {
+    "identities": {
+      "air": "neutral",
+      "alien": "blue",
+      "bermuda": "assassin",
+      "car": "red",
+      "cloak": "blue",
+      "cover": "blue",
+      "date": "blue",
+      "drop": "blue",
+      "eagle": "red",
+      "force": "blue",
+      "giant": "red",
+      "horse": "red",
+      "iron": "neutral",
+      "knight": "neutral",
+      "london": "neutral",
+      "microscope": "red",
+      "mole": "red",
+      "pool": "blue",
+      "ship": "blue",
+      "sink": "neutral",
+      "spell": "red",
+      "telescope": "red",
+      "tokyo": "neutral",
+      "undertaker": "neutral",
+      "war": "red"
+    },
+    "revealed": [
+      "alien",
+      "car",
+      "cloak",
+      "eagle",
+      "force",
+      "giant",
+      "horse",
+      "microscope",
+      "mole",
+      "ship",
+      "spell",
+      "telescope",
+      "war"
+    ],
+    "words": {
+      "air": "neutral",
+      "alien": "blue",
+      "bermuda": "assassin",
+      "car": "red",
+      "cloak": "blue",
+      "cover": "blue",
+      "date": "blue",
+      "drop": "blue",
+      "eagle": "red",
+      "force": "blue",
+      "giant": "red",
+      "horse": "red",
+      "iron": "neutral",
+      "knight": "neutral",
+      "london": "neutral",
+      "microscope": "red",
+      "mole": "red",
+      "pool": "blue",
+      "ship": "blue",
+      "sink": "neutral",
+      "spell": "red",
+      "telescope": "red",
+      "tokyo": "neutral",
+      "undertaker": "neutral",
+      "war": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "lens",
+        "count": 2,
+        "rationale": "Connects microscope and telescope, both of which are red words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "microscope": 0.95,
+          "telescope": 0.95
+        },
+        "ranked_guesses": [
+          "microscope",
+          "telescope"
+        ],
+        "rationale": "Both microscope and telescope are optical instruments that rely on lenses.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "microscope": 0.95,
+          "telescope": 0.95
+        },
+        "ranked_guesses": [
+          "microscope",
+          "telescope"
+        ],
+        "rationale": "Both microscope and telescope are optical instruments that rely on lenses.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "microscope": 0.95,
+          "telescope": 0.95
+        },
+        "ranked_guesses": [
+          "microscope",
+          "telescope"
+        ],
+        "rationale": "Both microscope and telescope are optical instruments that rely on lenses.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cloak",
+        "count": 1,
+        "rationale": "Points to a way to hide and match the blue theme (cloak/cover/drop)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mammal",
+        "count": 2,
+        "rationale": "Connects horse and mole, both of which are red words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.9,
+          "mole": 0.8
+        },
+        "ranked_guesses": [
+          "horse",
+          "mole"
+        ],
+        "rationale": "Both horse and mole are mammals.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.9,
+          "mole": 0.8
+        },
+        "ranked_guesses": [
+          "horse",
+          "mole"
+        ],
+        "rationale": "Horse and mole are both mammals present on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.9,
+          "mole": 0.8
+        },
+        "ranked_guesses": [
+          "horse",
+          "mole"
+        ],
+        "rationale": "Both horse and mole are mammals.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cover",
+        "count": 1,
+        "rationale": "Points to the remaining blue concept of hiding/covering (cover)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "conflict",
+        "count": 2,
+        "rationale": "Points to 'war' and 'force' (though force is blue, 'war' and 'eagle' or 'giant' might be associated, but 'war' and 'force' are strong. Wait, 'force' is blue. I need red words: 'war', 'eagle', 'giant', 'car', 'spell'. 'Conflict' strongly targets 'war' and potentially 'force' (blue) or 'eagle' (military). Let's try 'battle' for 'war' and 'eagle' (military symbol). Actually, 'war' and 'spell' don't fit. Let's use 'combat' for 'war' and 'eagle' (military). No, let's go with 'magic' for 'spell' and 'giant'."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.75,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "force"
+        ],
+        "rationale": "War is a direct synonym for conflict. Force is often associated with conflict and military action.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.75,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "force"
+        ],
+        "rationale": "War is a direct synonym for conflict. Force is often associated with conflict and military action.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.75,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "force"
+        ],
+        "rationale": "War is a direct synonym for conflict. Force is often associated with military conflict or physical struggle.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cover",
+        "count": 2,
+        "rationale": "Points to blue words related to hiding/protection (cloak, cover, drop)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "magic",
+        "count": 2,
+        "rationale": "Points to 'spell' and 'giant' (common in fantasy/fairy tales)."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.75,
+          "spell": 0.9
+        },
+        "ranked_guesses": [
+          "spell",
+          "cloak"
+        ],
+        "rationale": "Spell is a direct synonym for magic; cloak refers to invisibility cloaks common in magic/fantasy.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.75,
+          "spell": 0.9
+        },
+        "ranked_guesses": [
+          "spell",
+          "cloak"
+        ],
+        "rationale": "Spell is a direct synonym for magic; cloak refers to invisibility cloaks common in magic/fantasy.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.75,
+          "spell": 0.9
+        },
+        "ranked_guesses": [
+          "spell",
+          "cloak"
+        ],
+        "rationale": "Spell is a direct synonym for magic; cloak refers to invisibility cloaks common in magic/fantasy.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "invasion",
+        "count": 2,
+        "rationale": "Leads to offensive actions like ship/air attacks and potential alien-related imagery, targeting remaining blue words while avoiding the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.78,
+          "drop": 0.25,
+          "ship": 0.21
+        },
+        "ranked_guesses": [
+          "alien",
+          "drop",
+          "ship"
+        ],
+        "rationale": "Current clue 'invasion 2' most directly matches 'alien' (invasion by aliens). Other options like 'ship'/'drop' are weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.78,
+          "drop": 0.7,
+          "ship": 0.71
+        },
+        "ranked_guesses": [
+          "alien",
+          "ship",
+          "drop"
+        ],
+        "rationale": "Invasion strongly suggests alien invasion and possibly a ship-based invasion; 'drop' fits paratrooper-style invasion.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.72,
+          "drop": 0.18,
+          "ship": 0.12
+        },
+        "ranked_guesses": [
+          "alien",
+          "drop",
+          "ship"
+        ],
+        "rationale": "Invasion most directly links to an invading alien; other candidates like ship/drop are weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "colossal",
+        "count": 2,
+        "rationale": "Points to 'giant' and 'eagle' (as a large bird), though 'giant' is the primary target. 'Eagle' is a stretch but fits the size theme better than other remaining red words like 'car'."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "giant": 0.9
+        },
+        "ranked_guesses": [
+          "giant"
+        ],
+        "rationale": "'Giant' is a direct synonym for 'colossal'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "giant": 0.9
+        },
+        "ranked_guesses": [
+          "giant"
+        ],
+        "rationale": "'Giant' is a direct synonym for 'colossal'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "giant": 0.9
+        },
+        "ranked_guesses": [
+          "giant"
+        ],
+        "rationale": "'Giant' is a direct synonym for 'colossal'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "undercover",
+        "count": 2,
+        "rationale": "Points to blue words about hiding/covering such as cover and drop."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 2,
+        "rationale": "Points to 'car' and 'eagle' (though eagle is a bird, it is often associated with air travel/transport, but 'car' is definitely red. Wait, eagle is red, car is red. Let's use 'transport' or 'vehicle' to link car and eagle as a stretch, or better, 'avian' for eagle and 'engine' for car? No, 'vehicle' covers car and potentially eagle if thought of as a transport, but 'bird' only covers eagle. Let's try 'transport' for car and eagle (air transport). Actually, 'car' and 'eagle' are the only reds left. 'Eagle' is a bird, 'car' is a vehicle. 'Flight' could work for eagle, but not car. 'Drive' works for car. Let's use 'transport' for car and eagle (as in air transport)."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.9,
+          "ship": 0.9
+        },
+        "ranked_guesses": [
+          "car",
+          "ship"
+        ],
+        "rationale": "Both 'car' and 'ship' are primary examples of vehicles.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.9,
+          "ship": 0.9
+        },
+        "ranked_guesses": [
+          "car",
+          "ship"
+        ],
+        "rationale": "Both 'car' and 'ship' are primary examples of vehicles.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.9,
+          "ship": 0.9
+        },
+        "ranked_guesses": [
+          "car",
+          "ship"
+        ],
+        "rationale": "Both 'car' and 'ship' are primary examples of vehicles.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "poolside",
+        "count": 2,
+        "rationale": "Suggests remaining blue words tied to water/covering/hidden spaces."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "raptor",
+        "count": 1,
+        "rationale": "The only remaining red word is eagle."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.8
+        },
+        "ranked_guesses": [
+          "eagle"
+        ],
+        "rationale": "A raptor is a bird of prey, and 'eagle' is the only bird of prey on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.8
+        },
+        "ranked_guesses": [
+          "eagle"
+        ],
+        "rationale": "A raptor is a bird of prey, and 'eagle' is the only bird of prey on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.8
+        },
+        "ranked_guesses": [
+          "eagle"
+        ],
+        "rationale": "A raptor is a bird of prey, and eagle is the only bird of prey on the unrevealed board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "lens"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "microscope"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "telescope"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "cloak",
+        "count": 1,
+        "rationale": "Points to a way to hide and match the blue theme (cloak/cover/drop)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cloak",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mammal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "horse"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mole"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "cover",
+        "count": 1,
+        "rationale": "Points to the remaining blue concept of hiding/covering (cover)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cover",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "conflict"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "war"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "force"
+    },
+    {
+      "clue": {
+        "clue": "cover",
+        "count": 2,
+        "rationale": "Points to blue words related to hiding/protection (cloak, cover, drop)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cover",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spell"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloak"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "invasion"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "colossal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "giant"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "undercover",
+        "count": 2,
+        "rationale": "Points to blue words about hiding/covering such as cover and drop."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cover",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "car"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ship"
+    },
+    {
+      "clue": {
+        "clue": "poolside",
+        "count": 2,
+        "rationale": "Suggests remaining blue words tied to water/covering/hidden spaces."
+      },
+      "event": "illegal_clue",
+      "matched_word": "pool",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "raptor"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "eagle"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 37,
+    "public_event_count": 30,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-006-google_gemma_4_31b_it-vs-openai_gpt_5_4_nano",
+    "team_blue": "GPT-5.4-nano",
+    "team_red": "Gemma 4 31B",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "lens"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "microscope": 0.95,
+              "telescope": 0.95
+            },
+            "ranked_guesses": [
+              "microscope",
+              "telescope"
+            ],
+            "rationale": "Both microscope and telescope are optical instruments that rely on lenses.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "microscope": 0.95,
+              "telescope": 0.95
+            },
+            "ranked_guesses": [
+              "microscope",
+              "telescope"
+            ],
+            "rationale": "Both microscope and telescope are optical instruments that rely on lenses.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "microscope": 0.95,
+              "telescope": 0.95
+            },
+            "ranked_guesses": [
+              "microscope",
+              "telescope"
+            ],
+            "rationale": "Both microscope and telescope are optical instruments that rely on lenses.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "microscope"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "telescope"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "lens",
+          "count": 2,
+          "rationale": "Connects microscope and telescope, both of which are red words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mammal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "horse"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mole"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "conflict"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "war"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "force"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spell"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloak"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "invasion"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "cloak",
+          "count": 1,
+          "rationale": "Points to a way to hide and match the blue theme (cloak/cover/drop)."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "colossal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.9,
+              "mole": 0.8
+            },
+            "ranked_guesses": [
+              "horse",
+              "mole"
+            ],
+            "rationale": "Both horse and mole are mammals.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.9,
+              "mole": 0.8
+            },
+            "ranked_guesses": [
+              "horse",
+              "mole"
+            ],
+            "rationale": "Horse and mole are both mammals present on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.9,
+              "mole": 0.8
+            },
+            "ranked_guesses": [
+              "horse",
+              "mole"
+            ],
+            "rationale": "Both horse and mole are mammals.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "giant"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mammal",
+          "count": 2,
+          "rationale": "Connects horse and mole, both of which are red words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "car"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ship"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "raptor"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

@@ -1,0 +1,2016 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    },
+    "revealed": [
+      "agent",
+      "artist",
+      "camera",
+      "cloud",
+      "helmet",
+      "jungle",
+      "museum",
+      "novel",
+      "planet",
+      "poet",
+      "rocket",
+      "singer",
+      "spider",
+      "spirit",
+      "temple",
+      "voyage",
+      "writer"
+    ],
+    "words": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 4,
+        "rationale": "Jungle, planet, novel, and balloon are all associated with exploration."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "planet": 0.9,
+          "rocket": 0.8,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "alien",
+          "planet",
+          "rocket",
+          "voyage"
+        ],
+        "rationale": "Alien and planet relate to space exploration, rocket to spacecraft, voyage to exploration journey.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.8,
+          "planet": 0.9,
+          "rocket": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "planet",
+          "rocket",
+          "voyage",
+          "alien"
+        ],
+        "rationale": "Common exploration-related words: planet, rocket, voyage, alien.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.75,
+          "jungle": 0.5,
+          "planet": 0.9,
+          "rocket": 0.85,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "planet",
+          "rocket",
+          "voyage",
+          "alien",
+          "jungle"
+        ],
+        "rationale": "Exploration commonly involves space (planet, rocket, alien) and journeys (voyage), with jungle also being a typical exploration setting.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "stage",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.1,
+          "alien": 0.1,
+          "artist": 0.9,
+          "balloon": 0.2,
+          "beacon": 0.2,
+          "camera": 0.6,
+          "cloud": 0.2,
+          "guitar": 0.3,
+          "helmet": 0.1,
+          "jungle": 0.1,
+          "museum": 0.1,
+          "novel": 0.1,
+          "poet": 0.5,
+          "silver": 0.1,
+          "singer": 0.8,
+          "spider": 0.1,
+          "spirit": 0.1,
+          "summer": 0.1,
+          "temple": 0.1,
+          "voyage": 0.1,
+          "winter": 0.1,
+          "wizard": 0.1,
+          "writer": 0.4
+        },
+        "ranked_guesses": [
+          "artist",
+          "singer",
+          "camera",
+          "poet",
+          "writer",
+          "guitar",
+          "balloon",
+          "beacon",
+          "cloud",
+          "helmet",
+          "jungle",
+          "museum",
+          "novel",
+          "silver",
+          "spider",
+          "spirit",
+          "summer",
+          "temple",
+          "voyage",
+          "winter",
+          "wizard",
+          "agent",
+          "alien"
+        ],
+        "rationale": "Stage relates to performance: artist, singer, camera (stage photography). Other possibilities: poet, writer, but lower confidence.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.7,
+          "poet": 0.6,
+          "singer": 0.9
+        },
+        "ranked_guesses": [
+          "singer",
+          "artist",
+          "poet"
+        ],
+        "rationale": "Stage is associated with performances; singer, artist, poet are performers.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.9,
+          "guitar": 0.8,
+          "singer": 0.85
+        },
+        "ranked_guesses": [
+          "artist",
+          "singer",
+          "guitar"
+        ],
+        "rationale": "Artist and singer are performers on stage; guitar is a common stage instrument.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "literary",
+        "count": 3,
+        "rationale": "Connects red words agent, novel, poet, which are all related to literature."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.8,
+          "poet": 0.9,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "writer",
+          "novel"
+        ],
+        "rationale": "The clue 'literary' strongly suggests words related to literature. Poet, writer, and novel are direct associations. Other words like museum or alien are less fitting.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.95,
+          "poet": 0.9,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "novel",
+          "poet",
+          "writer"
+        ],
+        "rationale": "Novel, poet, and writer are all directly related to literature.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.9,
+          "poet": 0.85,
+          "writer": 0.95
+        },
+        "ranked_guesses": [
+          "writer",
+          "novel",
+          "poet"
+        ],
+        "rationale": "Literary directly relates to writing, books, and poetry. Writer, novel, and poet are the most straightforward connections.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ruins",
+        "count": 5,
+        "rationale": "Connects helmet (ancient artifact), museum (displays ruins), spider (lives in ruins), spirit (haunts ruins), temple (often in ruins). Avoids red words and assassin."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.4,
+          "jungle": 0.7,
+          "museum": 0.8,
+          "spirit": 0.5,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "museum",
+          "jungle",
+          "spirit",
+          "alien"
+        ],
+        "rationale": "Ruins often refer to ancient structures like temples, displayed in museums, found in jungles, associated with spirits of the past, and occasionally alien ruins in fiction.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.8,
+          "museum": 0.85,
+          "poet": 0.7,
+          "spirit": 0.65,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "museum",
+          "jungle",
+          "poet",
+          "spirit"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.4,
+          "jungle": 0.7,
+          "museum": 0.8,
+          "spirit": 0.5,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "museum",
+          "jungle",
+          "spirit",
+          "alien"
+        ],
+        "rationale": "The clue 'ruins' suggests ancient structures; temple, museum, and jungle are most directly related, while spirit and alien are plausible but weaker.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "writing",
+        "count": 2,
+        "rationale": "Connects to novel and poet, both red words related to writing."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.9,
+          "poet": 0.8
+        },
+        "ranked_guesses": [
+          "novel",
+          "poet"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.9,
+          "poet": 0.8
+        },
+        "ranked_guesses": [
+          "novel",
+          "poet"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.9,
+          "poet": 0.8
+        },
+        "ranked_guesses": [
+          "novel",
+          "poet"
+        ],
+        "rationale": "Novel and poet are both strongly associated with 'writing'. Other words like agent or camera are less direct. With count 2, these are the safest bets.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "greek",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.7,
+          "spider": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "spider",
+          "voyage",
+          "helmet"
+        ],
+        "rationale": "Spider (Arachne myth), voyage (Odyssey), helmet (Greek armor) are strong Greek associations.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.8,
+          "spirit": 0.9,
+          "voyage": 0.7
+        },
+        "ranked_guesses": [
+          "spirit",
+          "helmet",
+          "voyage"
+        ],
+        "rationale": "The clue 'greek' likely refers to Greek mythology or culture. 'Spirit' relates to Greek spirits like nymphs, 'helmet' to Greek armor, and 'voyage' to the Odyssey. Other possibilities like 'spider' (Arachne) or 'beacon' are less strong.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.7,
+          "spider": 0.9,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "spider",
+          "helmet",
+          "voyage"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 2,
+        "rationale": "Balloon and cloud are both associated with the sky."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.3,
+          "balloon": 0.6,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "alien"
+        ],
+        "rationale": "Sky clue strongly suggests cloud; balloon also floats in sky. Alien is less direct but space-related.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.5,
+          "balloon": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "alien"
+        ],
+        "rationale": "Cloud and balloon are directly sky-related. Alien is also space/sky but less likely. Guessing these two then stopping as per clue count.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.4,
+          "balloon": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "alien"
+        ],
+        "rationale": "Cloud is directly in the sky; balloon floats in the sky; alien could be from space/sky.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "haunted",
+        "count": 2,
+        "rationale": "Spider and spirit are both associated with haunted places."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.6,
+          "spirit": 0.9
+        },
+        "ranked_guesses": [
+          "spirit",
+          "spider"
+        ],
+        "rationale": "Spirit is directly associated with haunted (ghosts). Spider is commonly found in haunted houses, and no other word fits as well. The clue count is 2, so we should stop after these two guesses.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.95,
+          "wizard": 0.6
+        },
+        "ranked_guesses": [
+          "spirit",
+          "wizard"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.7,
+          "spirit": 0.9
+        },
+        "ranked_guesses": [
+          "spirit",
+          "spider"
+        ],
+        "rationale": "Haunted directly relates to spirits and ghosts. Spider is commonly associated with haunted houses. Other possibilities like camera or wizard are less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "spy",
+        "count": 2,
+        "rationale": "Agent is a spy, and balloon can be a spy balloon. This covers two of our red words."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "camera": 0.8
+        },
+        "ranked_guesses": [
+          "agent",
+          "camera"
+        ],
+        "rationale": "Agent is a direct synonym for spy. Camera is a classic spy tool. Both are common associations.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.95,
+          "camera": 0.85
+        },
+        "ranked_guesses": [
+          "agent",
+          "camera"
+        ],
+        "rationale": "Agent is a direct synonym for spy, camera is commonly used in espionage. Both are strong matches for the clue.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.95,
+          "camera": 0.85
+        },
+        "ranked_guesses": [
+          "agent",
+          "camera"
+        ],
+        "rationale": "Spy strongly suggests 'agent' and 'camera' as common espionage tools.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "web",
+        "count": 1,
+        "rationale": "Only unrevealed blue word is spider, which is closely associated with web."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.95
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.9
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "Spider is strongly associated with web (spider web). No other unrevealed word closely relates to web.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.95
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "The clue 'web' strongly suggests 'spider' due to spider webs. Other words have no clear connection.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "stage"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "singer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "artist"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "literary"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "ruins"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "museum"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "jungle"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "writing"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "novel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "poet"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "greek"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "helmet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "haunted"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spirit"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "web"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "spider"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 40,
+    "public_event_count": 31,
+    "reason": "all_words_found",
+    "seed": "1",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "planet": 0.9,
+              "rocket": 0.8,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "alien",
+              "planet",
+              "rocket",
+              "voyage"
+            ],
+            "rationale": "Alien and planet relate to space exploration, rocket to spacecraft, voyage to exploration journey.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.8,
+              "planet": 0.9,
+              "rocket": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "planet",
+              "rocket",
+              "voyage",
+              "alien"
+            ],
+            "rationale": "Common exploration-related words: planet, rocket, voyage, alien.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.75,
+              "jungle": 0.5,
+              "planet": 0.9,
+              "rocket": 0.85,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "planet",
+              "rocket",
+              "voyage",
+              "alien",
+              "jungle"
+            ],
+            "rationale": "Exploration commonly involves space (planet, rocket, alien) and journeys (voyage), with jungle also being a typical exploration setting.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 4,
+          "rationale": "Jungle, planet, novel, and balloon are all associated with exploration."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "stage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.1,
+              "alien": 0.1,
+              "artist": 0.9,
+              "balloon": 0.2,
+              "beacon": 0.2,
+              "camera": 0.6,
+              "cloud": 0.2,
+              "guitar": 0.3,
+              "helmet": 0.1,
+              "jungle": 0.1,
+              "museum": 0.1,
+              "novel": 0.1,
+              "poet": 0.5,
+              "silver": 0.1,
+              "singer": 0.8,
+              "spider": 0.1,
+              "spirit": 0.1,
+              "summer": 0.1,
+              "temple": 0.1,
+              "voyage": 0.1,
+              "winter": 0.1,
+              "wizard": 0.1,
+              "writer": 0.4
+            },
+            "ranked_guesses": [
+              "artist",
+              "singer",
+              "camera",
+              "poet",
+              "writer",
+              "guitar",
+              "balloon",
+              "beacon",
+              "cloud",
+              "helmet",
+              "jungle",
+              "museum",
+              "novel",
+              "silver",
+              "spider",
+              "spirit",
+              "summer",
+              "temple",
+              "voyage",
+              "winter",
+              "wizard",
+              "agent",
+              "alien"
+            ],
+            "rationale": "Stage relates to performance: artist, singer, camera (stage photography). Other possibilities: poet, writer, but lower confidence.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.7,
+              "poet": 0.6,
+              "singer": 0.9
+            },
+            "ranked_guesses": [
+              "singer",
+              "artist",
+              "poet"
+            ],
+            "rationale": "Stage is associated with performances; singer, artist, poet are performers.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.9,
+              "guitar": 0.8,
+              "singer": 0.85
+            },
+            "ranked_guesses": [
+              "artist",
+              "singer",
+              "guitar"
+            ],
+            "rationale": "Artist and singer are performers on stage; guitar is a common stage instrument.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "singer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "artist"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "stage",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "literary"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.8,
+              "poet": 0.9,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "poet",
+              "writer",
+              "novel"
+            ],
+            "rationale": "The clue 'literary' strongly suggests words related to literature. Poet, writer, and novel are direct associations. Other words like museum or alien are less fitting.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.95,
+              "poet": 0.9,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "novel",
+              "poet",
+              "writer"
+            ],
+            "rationale": "Novel, poet, and writer are all directly related to literature.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.9,
+              "poet": 0.85,
+              "writer": 0.95
+            },
+            "ranked_guesses": [
+              "writer",
+              "novel",
+              "poet"
+            ],
+            "rationale": "Literary directly relates to writing, books, and poetry. Writer, novel, and poet are the most straightforward connections.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "literary",
+          "count": 3,
+          "rationale": "Connects red words agent, novel, poet, which are all related to literature."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "ruins"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.4,
+              "jungle": 0.7,
+              "museum": 0.8,
+              "spirit": 0.5,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "museum",
+              "jungle",
+              "spirit",
+              "alien"
+            ],
+            "rationale": "Ruins often refer to ancient structures like temples, displayed in museums, found in jungles, associated with spirits of the past, and occasionally alien ruins in fiction.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.8,
+              "museum": 0.85,
+              "poet": 0.7,
+              "spirit": 0.65,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "museum",
+              "jungle",
+              "poet",
+              "spirit"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.4,
+              "jungle": 0.7,
+              "museum": 0.8,
+              "spirit": 0.5,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "museum",
+              "jungle",
+              "spirit",
+              "alien"
+            ],
+            "rationale": "The clue 'ruins' suggests ancient structures; temple, museum, and jungle are most directly related, while spirit and alien are plausible but weaker.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "museum"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "jungle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ruins",
+          "count": 5,
+          "rationale": "Connects helmet (ancient artifact), museum (displays ruins), spider (lives in ruins), spirit (haunts ruins), temple (often in ruins). Avoids red words and assassin."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "writing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.9,
+              "poet": 0.8
+            },
+            "ranked_guesses": [
+              "novel",
+              "poet"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.9,
+              "poet": 0.8
+            },
+            "ranked_guesses": [
+              "novel",
+              "poet"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.9,
+              "poet": 0.8
+            },
+            "ranked_guesses": [
+              "novel",
+              "poet"
+            ],
+            "rationale": "Novel and poet are both strongly associated with 'writing'. Other words like agent or camera are less direct. With count 2, these are the safest bets.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "novel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "writing",
+          "count": 2,
+          "rationale": "Connects to novel and poet, both red words related to writing."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "greek"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.7,
+              "spider": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "spider",
+              "voyage",
+              "helmet"
+            ],
+            "rationale": "Spider (Arachne myth), voyage (Odyssey), helmet (Greek armor) are strong Greek associations.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.8,
+              "spirit": 0.9,
+              "voyage": 0.7
+            },
+            "ranked_guesses": [
+              "spirit",
+              "helmet",
+              "voyage"
+            ],
+            "rationale": "The clue 'greek' likely refers to Greek mythology or culture. 'Spirit' relates to Greek spirits like nymphs, 'helmet' to Greek armor, and 'voyage' to the Odyssey. Other possibilities like 'spider' (Arachne) or 'beacon' are less strong.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.7,
+              "spider": 0.9,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "spider",
+              "helmet",
+              "voyage"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "helmet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "greek",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.3,
+              "balloon": 0.6,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "alien"
+            ],
+            "rationale": "Sky clue strongly suggests cloud; balloon also floats in sky. Alien is less direct but space-related.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.5,
+              "balloon": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "alien"
+            ],
+            "rationale": "Cloud and balloon are directly sky-related. Alien is also space/sky but less likely. Guessing these two then stopping as per clue count.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.4,
+              "balloon": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "alien"
+            ],
+            "rationale": "Cloud is directly in the sky; balloon floats in the sky; alien could be from space/sky.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 2,
+          "rationale": "Balloon and cloud are both associated with the sky."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "haunted"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.6,
+              "spirit": 0.9
+            },
+            "ranked_guesses": [
+              "spirit",
+              "spider"
+            ],
+            "rationale": "Spirit is directly associated with haunted (ghosts). Spider is commonly found in haunted houses, and no other word fits as well. The clue count is 2, so we should stop after these two guesses.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spirit": 0.95,
+              "wizard": 0.6
+            },
+            "ranked_guesses": [
+              "spirit",
+              "wizard"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.7,
+              "spirit": 0.9
+            },
+            "ranked_guesses": [
+              "spirit",
+              "spider"
+            ],
+            "rationale": "Haunted directly relates to spirits and ghosts. Spider is commonly associated with haunted houses. Other possibilities like camera or wizard are less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spirit"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "haunted",
+          "count": 2,
+          "rationale": "Spider and spirit are both associated with haunted places."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9,
+              "camera": 0.8
+            },
+            "ranked_guesses": [
+              "agent",
+              "camera"
+            ],
+            "rationale": "Agent is a direct synonym for spy. Camera is a classic spy tool. Both are common associations.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.95,
+              "camera": 0.85
+            },
+            "ranked_guesses": [
+              "agent",
+              "camera"
+            ],
+            "rationale": "Agent is a direct synonym for spy, camera is commonly used in espionage. Both are strong matches for the clue.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.95,
+              "camera": 0.85
+            },
+            "ranked_guesses": [
+              "agent",
+              "camera"
+            ],
+            "rationale": "Spy strongly suggests 'agent' and 'camera' as common espionage tools.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spy",
+          "count": 2,
+          "rationale": "Agent is a spy, and balloon can be a spy balloon. This covers two of our red words."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "web"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.95
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.9
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "Spider is strongly associated with web (spider web). No other unrevealed word closely relates to web.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.95
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "The clue 'web' strongly suggests 'spider' due to spider webs. Other words have no clear connection.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "spider"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "web",
+          "count": 1,
+          "rationale": "Only unrevealed blue word is spider, which is closely associated with web."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,1662 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    },
+    "revealed": [
+      "agent",
+      "anchor",
+      "cloud",
+      "copper",
+      "desert",
+      "ember",
+      "flower",
+      "honey",
+      "machine",
+      "magnet",
+      "mirror",
+      "station",
+      "travel",
+      "voyage",
+      "writer"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "metal",
+        "count": 4,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "machine": 0.7,
+          "magnet": 0.8,
+          "robot": 0.6
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "machine",
+          "robot"
+        ],
+        "rationale": "Copper is a metal. Magnet often made of metal. Machines typically contain metal parts. Robots are commonly constructed from metal.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.95,
+          "machine": 0.7,
+          "magnet": 0.9,
+          "robot": 0.65
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "machine",
+          "robot"
+        ],
+        "rationale": "Copper and magnet are directly metal; machine and robot are commonly made of metal.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8,
+          "copper": 0.95,
+          "magnet": 0.9,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "anchor",
+          "robot"
+        ],
+        "rationale": "Copper is a direct metal; magnet is strongly associated with metal; anchor is typically made of metal; robot is often metallic. These four are the most likely based on the clue 'metal' with count 4.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "news",
+        "count": 4,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.4,
+          "anchor": 0.9,
+          "atlas": 0.0,
+          "autumn": 0.0,
+          "baker": 0.0,
+          "beacon": 0.6,
+          "cloud": 0.1,
+          "desert": 0.0,
+          "ember": 0.0,
+          "flower": 0.05,
+          "galaxy": 0.1,
+          "honey": 0.05,
+          "jungle": 0.05,
+          "mirror": 0.8,
+          "palace": 0.05,
+          "robot": 0.05,
+          "station": 0.85,
+          "travel": 0.1,
+          "violin": 0.05,
+          "voyage": 0.1,
+          "wizard": 0.05,
+          "writer": 0.95
+        },
+        "ranked_guesses": [
+          "writer",
+          "anchor",
+          "station",
+          "mirror",
+          "beacon",
+          "agent",
+          "cloud",
+          "galaxy",
+          "travel",
+          "voyage",
+          "flower",
+          "honey",
+          "jungle",
+          "palace",
+          "robot",
+          "violin",
+          "wizard",
+          "atlas",
+          "autumn",
+          "baker",
+          "desert",
+          "ember"
+        ],
+        "rationale": "News-related words: writer (journalist), anchor (news anchor), station (TV station), mirror (Daily Mirror newspaper). Beacon (news beacon) and agent (news agency) are less likely. Others unrelated.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "station": 0.85,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "station",
+          "writer"
+        ],
+        "rationale": "Anchor and station are directly associated with news broadcasting; writer relates to news journalism. Agent and beacon are less likely, so I stop after these three confident guesses.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.95,
+          "beacon": 0.7,
+          "mirror": 0.8,
+          "station": 0.9,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "anchor",
+          "station",
+          "writer",
+          "mirror",
+          "beacon"
+        ],
+        "rationale": "Anchor, station, writer, mirror are strong news associations; beacon also plausible. Will guess these 5.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "journey",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.6,
+          "travel": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage",
+          "atlas"
+        ],
+        "rationale": "Travel and voyage are direct synonyms of journey. Atlas is a map book used for journeys.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.9,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Travel and voyage are direct synonyms of journey.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.5,
+          "desert": 0.3,
+          "galaxy": 0.2,
+          "travel": 0.9,
+          "voyage": 0.85
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage",
+          "atlas",
+          "desert",
+          "galaxy"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "heat",
+        "count": 2,
+        "rationale": "Desert and ember are both associated with heat."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.7,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember is directly related to heat, desert is known for high temperatures.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "rain",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.5,
+          "cloud": 0.9,
+          "jungle": 0.3
+        },
+        "ranked_guesses": [
+          "cloud",
+          "autumn",
+          "jungle"
+        ],
+        "rationale": "Cloud is directly associated with rain. Autumn is a rainy season. Jungle implies rainforest.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "autumn"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "jungle": 0.8
+        },
+        "ranked_guesses": [
+          "cloud",
+          "jungle"
+        ],
+        "rationale": "Rain is directly associated with clouds and jungles (rainforest). Autumn also has rain but less direct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sting",
+        "count": 2,
+        "rationale": "Agent relates to a sting operation, honey relates to bee sting."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.4,
+          "flower": 0.6,
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey",
+          "flower",
+          "agent"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.5,
+          "flower": 0.8,
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey",
+          "flower",
+          "agent"
+        ],
+        "rationale": "Sting primarily refers to a bee sting, making honey (bee product) and flower (bee habitat) strong associations. Agent is a secondary sense from sting operation, but less likely.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.7,
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey",
+          "flower"
+        ],
+        "rationale": "Sting is associated with bees, so honey and flower are strong candidates. Agent could also relate to a sting operation, but less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 2,
+        "rationale": "Connects autumn (season) and jungle (biome) as natural concepts, avoids blue's hidden agent and assassin beacon, and neutrals like flower are acceptable risks."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.9,
+          "jungle": 0.8
+        },
+        "ranked_guesses": [
+          "flower",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8,
+          "flower": 0.9
+        },
+        "ranked_guesses": [
+          "flower",
+          "autumn"
+        ],
+        "rationale": "Both flower and autumn are directly related to nature, with flower being a quintessential natural element and autumn a natural season. Jungle is also plausible but slightly less common in such clues.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.5,
+          "flower": 0.9,
+          "jungle": 0.9
+        },
+        "ranked_guesses": [
+          "flower",
+          "jungle",
+          "autumn"
+        ],
+        "rationale": "Nature clue strongly suggests flower and jungle; autumn is seasonal but less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "spy",
+        "count": 1,
+        "rationale": "The only remaining blue word is 'agent', which is strongly associated with a spy."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "Agent is directly related to spy, as in secret agent.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "atlas": 0.3,
+          "beacon": 0.4
+        },
+        "ranked_guesses": [
+          "agent",
+          "beacon",
+          "atlas"
+        ],
+        "rationale": "The clue 'spy' strongly suggests 'agent' as it is a direct synonym. Other words like 'beacon' (spy beacon) or 'atlas' (spy atlas) are less likely. Since clue count is 1, stopping after one guess is appropriate.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.95
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "The clue 'spy' strongly suggests 'agent', which is a direct synonym and the most likely remaining blue word.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "news"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ember"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "desert"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rain"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sting"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "honey"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "spy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "agent"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 32,
+    "public_event_count": 27,
+    "reason": "all_words_found",
+    "seed": "2",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "machine": 0.7,
+              "magnet": 0.8,
+              "robot": 0.6
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "machine",
+              "robot"
+            ],
+            "rationale": "Copper is a metal. Magnet often made of metal. Machines typically contain metal parts. Robots are commonly constructed from metal.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.95,
+              "machine": 0.7,
+              "magnet": 0.9,
+              "robot": 0.65
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "machine",
+              "robot"
+            ],
+            "rationale": "Copper and magnet are directly metal; machine and robot are commonly made of metal.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8,
+              "copper": 0.95,
+              "magnet": 0.9,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "anchor",
+              "robot"
+            ],
+            "rationale": "Copper is a direct metal; magnet is strongly associated with metal; anchor is typically made of metal; robot is often metallic. These four are the most likely based on the clue 'metal' with count 4.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 4,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "news"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.4,
+              "anchor": 0.9,
+              "atlas": 0.0,
+              "autumn": 0.0,
+              "baker": 0.0,
+              "beacon": 0.6,
+              "cloud": 0.1,
+              "desert": 0.0,
+              "ember": 0.0,
+              "flower": 0.05,
+              "galaxy": 0.1,
+              "honey": 0.05,
+              "jungle": 0.05,
+              "mirror": 0.8,
+              "palace": 0.05,
+              "robot": 0.05,
+              "station": 0.85,
+              "travel": 0.1,
+              "violin": 0.05,
+              "voyage": 0.1,
+              "wizard": 0.05,
+              "writer": 0.95
+            },
+            "ranked_guesses": [
+              "writer",
+              "anchor",
+              "station",
+              "mirror",
+              "beacon",
+              "agent",
+              "cloud",
+              "galaxy",
+              "travel",
+              "voyage",
+              "flower",
+              "honey",
+              "jungle",
+              "palace",
+              "robot",
+              "violin",
+              "wizard",
+              "atlas",
+              "autumn",
+              "baker",
+              "desert",
+              "ember"
+            ],
+            "rationale": "News-related words: writer (journalist), anchor (news anchor), station (TV station), mirror (Daily Mirror newspaper). Beacon (news beacon) and agent (news agency) are less likely. Others unrelated.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "station": 0.85,
+              "writer": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "station",
+              "writer"
+            ],
+            "rationale": "Anchor and station are directly associated with news broadcasting; writer relates to news journalism. Agent and beacon are less likely, so I stop after these three confident guesses.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.95,
+              "beacon": 0.7,
+              "mirror": 0.8,
+              "station": 0.9,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "anchor",
+              "station",
+              "writer",
+              "mirror",
+              "beacon"
+            ],
+            "rationale": "Anchor, station, writer, mirror are strong news associations; beacon also plausible. Will guess these 5.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "news",
+          "count": 4,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.6,
+              "travel": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage",
+              "atlas"
+            ],
+            "rationale": "Travel and voyage are direct synonyms of journey. Atlas is a map book used for journeys.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.9,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Travel and voyage are direct synonyms of journey.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.5,
+              "desert": 0.3,
+              "galaxy": 0.2,
+              "travel": 0.9,
+              "voyage": 0.85
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage",
+              "atlas",
+              "desert",
+              "galaxy"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.7,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember is directly related to heat, desert is known for high temperatures.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ember"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "desert"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 2,
+          "rationale": "Desert and ember are both associated with heat."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.5,
+              "cloud": 0.9,
+              "jungle": 0.3
+            },
+            "ranked_guesses": [
+              "cloud",
+              "autumn",
+              "jungle"
+            ],
+            "rationale": "Cloud is directly associated with rain. Autumn is a rainy season. Jungle implies rainforest.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "autumn"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "jungle": 0.8
+            },
+            "ranked_guesses": [
+              "cloud",
+              "jungle"
+            ],
+            "rationale": "Rain is directly associated with clouds and jungles (rainforest). Autumn also has rain but less direct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "rain",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sting"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.4,
+              "flower": 0.6,
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey",
+              "flower",
+              "agent"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.5,
+              "flower": 0.8,
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey",
+              "flower",
+              "agent"
+            ],
+            "rationale": "Sting primarily refers to a bee sting, making honey (bee product) and flower (bee habitat) strong associations. Agent is a secondary sense from sting operation, but less likely.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.7,
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey",
+              "flower"
+            ],
+            "rationale": "Sting is associated with bees, so honey and flower are strong candidates. Agent could also relate to a sting operation, but less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "honey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sting",
+          "count": 2,
+          "rationale": "Agent relates to a sting operation, honey relates to bee sting."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.9,
+              "jungle": 0.8
+            },
+            "ranked_guesses": [
+              "flower",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8,
+              "flower": 0.9
+            },
+            "ranked_guesses": [
+              "flower",
+              "autumn"
+            ],
+            "rationale": "Both flower and autumn are directly related to nature, with flower being a quintessential natural element and autumn a natural season. Jungle is also plausible but slightly less common in such clues.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.5,
+              "flower": 0.9,
+              "jungle": 0.9
+            },
+            "ranked_guesses": [
+              "flower",
+              "jungle",
+              "autumn"
+            ],
+            "rationale": "Nature clue strongly suggests flower and jungle; autumn is seasonal but less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 2,
+          "rationale": "Connects autumn (season) and jungle (biome) as natural concepts, avoids blue's hidden agent and assassin beacon, and neutrals like flower are acceptable risks."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "spy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "Agent is directly related to spy, as in secret agent.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9,
+              "atlas": 0.3,
+              "beacon": 0.4
+            },
+            "ranked_guesses": [
+              "agent",
+              "beacon",
+              "atlas"
+            ],
+            "rationale": "The clue 'spy' strongly suggests 'agent' as it is a direct synonym. Other words like 'beacon' (spy beacon) or 'atlas' (spy atlas) are less likely. Since clue count is 1, stopping after one guess is appropriate.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.95
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "The clue 'spy' strongly suggests 'agent', which is a direct synonym and the most likely remaining blue word.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "agent"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spy",
+          "count": 1,
+          "rationale": "The only remaining blue word is 'agent', which is strongly associated with a spy."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,1867 @@
+{
+  "board": {
+    "identities": {
+      "airport": "red",
+      "anchor": "blue",
+      "battery": "red",
+      "butter": "blue",
+      "captain": "blue",
+      "dancer": "neutral",
+      "eagle": "blue",
+      "farmer": "blue",
+      "forest": "blue",
+      "highway": "blue",
+      "ladder": "neutral",
+      "leather": "red",
+      "magnet": "red",
+      "nurse": "red",
+      "orange": "neutral",
+      "palace": "neutral",
+      "silver": "neutral",
+      "singer": "neutral",
+      "spider": "neutral",
+      "spirit": "red",
+      "station": "assassin",
+      "storm": "blue",
+      "telescope": "red",
+      "travel": "red",
+      "writer": "red"
+    },
+    "revealed": [
+      "butter",
+      "captain",
+      "eagle",
+      "farmer",
+      "forest",
+      "highway",
+      "nurse",
+      "station",
+      "storm",
+      "travel"
+    ],
+    "words": {
+      "airport": "red",
+      "anchor": "blue",
+      "battery": "red",
+      "butter": "blue",
+      "captain": "blue",
+      "dancer": "neutral",
+      "eagle": "blue",
+      "farmer": "blue",
+      "forest": "blue",
+      "highway": "blue",
+      "ladder": "neutral",
+      "leather": "red",
+      "magnet": "red",
+      "nurse": "red",
+      "orange": "neutral",
+      "palace": "neutral",
+      "silver": "neutral",
+      "singer": "neutral",
+      "spider": "neutral",
+      "spirit": "red",
+      "station": "assassin",
+      "storm": "blue",
+      "telescope": "red",
+      "travel": "red",
+      "writer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "voyage",
+        "count": 4,
+        "rationale": "Covers 'travel', 'airport', 'highway' (opponent's word but low risk due to stronger associations), and 'telescope' (stretching to 'space voyage'). Avoids assassin ('station') and neutral traps. High reward for red team with 4 guesses."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.8,
+          "anchor": 0.75,
+          "captain": 0.85,
+          "highway": 0.6,
+          "spirit": 0.65,
+          "storm": 0.55,
+          "telescope": 0.5,
+          "travel": 0.95
+        },
+        "ranked_guesses": [
+          "travel",
+          "captain",
+          "airport",
+          "anchor",
+          "spirit",
+          "highway",
+          "storm",
+          "telescope"
+        ],
+        "rationale": "'travel' is a near-synonym of 'voyage' and the highest-confidence guess. 'captain', 'airport', and 'anchor' strongly associate with journeys (especially by sea/air). Secondary terms like 'spirit' (e.g., 'spirit of adventure') and 'highway' (road travel) are plausible but lower confidence. Clue count (4) suggests multiple related words remain.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.88,
+          "anchor": 0.85,
+          "captain": 0.95,
+          "highway": 0.7,
+          "spirit": 0.6,
+          "station": 0.75,
+          "storm": 0.55,
+          "telescope": 0.5,
+          "travel": 0.92
+        },
+        "ranked_guesses": [
+          "captain",
+          "travel",
+          "airport",
+          "anchor",
+          "station",
+          "highway",
+          "spirit",
+          "storm",
+          "telescope"
+        ],
+        "rationale": "'captain' is most directly tied to a voyage (ship captain), followed by 'travel' (synonymous), 'airport' (starting point for air voyages), and 'anchor' (nautical). Others like 'station' or 'highway' are weaker but still plausible. Prioritizing high-confidence nautical/transportation links first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects forest, eagle, and storm."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.6,
+          "forest": 0.9,
+          "storm": 0.4
+        },
+        "ranked_guesses": [
+          "forest",
+          "eagle",
+          "storm"
+        ],
+        "rationale": "Forest is the most direct synonym for nature. Eagle and storm are natural elements.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.6,
+          "forest": 0.9,
+          "storm": 0.4
+        },
+        "ranked_guesses": [
+          "forest",
+          "eagle",
+          "storm"
+        ],
+        "rationale": "Forest is the most direct synonym for nature. Eagle and storm are also natural elements.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.6,
+          "forest": 0.9,
+          "storm": 0.4
+        },
+        "ranked_guesses": [
+          "forest",
+          "eagle",
+          "storm"
+        ],
+        "rationale": "Forest is the most direct synonym for nature; eagle and storm are natural elements.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "charge",
+        "count": 3,
+        "rationale": "links to 'battery', 'magnet', and 'nurse' (as in 'charge nurse' or 'in charge of care'). Avoids assassin ('station') and neutral words while targeting three red words efficiently."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "road",
+        "count": 2,
+        "rationale": "Connects highway and storm (as in storming down a road), but primarily targets highway and potentially anchor/eagle/farmer if they think of rural roads. Actually, highway is the strongest link. Let's try 'transport' but that's too close to travel. Let's use 'asphalt' for highway and maybe storm? No. Let's go with 'way' for highway and storm (stormy way). Wait, 'highway' and 'storm' are blue. Let's try 'weather' for storm and 'eagle' for sky. No. Let's use 'road' for highway and 'farmer' for country roads."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.9,
+          "station": 0.4
+        },
+        "ranked_guesses": [
+          "highway",
+          "station"
+        ],
+        "rationale": "Highway is a direct synonym for road. Station (like a bus or train station) is also related to roads and travel.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.9,
+          "station": 0.4
+        },
+        "ranked_guesses": [
+          "highway",
+          "station"
+        ],
+        "rationale": "Highway is a direct synonym for road. Station (like a bus or train station) is a common location associated with roads.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "highway": 0.9,
+          "station": 0.4
+        },
+        "ranked_guesses": [
+          "highway",
+          "station"
+        ],
+        "rationale": "Highway is a direct synonym for road. Station (like a bus or train station) is a common location associated with roads.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "wildlife",
+        "count": 2,
+        "rationale": "links eagle + storm (e.g., eagle as a bird of prey, storm as a natural phenomenon; both are elements of nature/wildlife). Avoids direct overlap with board words while targeting two critical blue words for opponent misdirection."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.78,
+          "eagle": 0.92,
+          "farmer": 0.72,
+          "spider": 0.85,
+          "storm": 0.65
+        },
+        "ranked_guesses": [
+          "eagle",
+          "spider",
+          "butter",
+          "farmer",
+          "storm"
+        ],
+        "rationale": "\"eagle\" is the strongest direct association with *wildlife* (count=2). \"Spider\" and \"butter[fly]\" are also clear wildlife links. \"Farmer\" is tangential (human-wildlife interaction) but plausible. \"Storm\" is weaker but could relate to *wildlife* behavior (e.g., animals reacting to storms). Prioritized by directness of association.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.78,
+          "eagle": 0.92,
+          "farmer": 0.65,
+          "spider": 0.85,
+          "storm": 0.55
+        },
+        "ranked_guesses": [
+          "eagle",
+          "spider",
+          "butter",
+          "farmer",
+          "storm"
+        ],
+        "rationale": "\"eagle\" is a direct wildlife association (bird/raptor). \"spider\" is a wild animal (insect/arachnid). \"butter\" hints at *butterfly* (common wildlife omission). \"farmer\" ties to rural wildlife habitats. \"storm\" is weaker but could relate to *wild* weather or animal migration. Prioritized by directness of wildlife link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "weather",
+        "count": 1,
+        "rationale": "Storm is a blue word and fits the clue weather."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 1.0
+        },
+        "ranked_guesses": [
+          "storm"
+        ],
+        "rationale": "Storm is the only word on the board directly related to weather.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 0.9
+        },
+        "ranked_guesses": [
+          "storm"
+        ],
+        "rationale": "Storm is the only word on the board directly related to weather.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 0.9
+        },
+        "ranked_guesses": [
+          "storm"
+        ],
+        "rationale": "Storm is the only word on the board directly related to weather.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 2,
+        "rationale": "covers 'nurse' and 'spirit' (as in 'team spirit' or 'school spirit' often associated with medical/nursing schools)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.65,
+          "ladder": 0.4,
+          "nurse": 0.95,
+          "station": 0.55
+        },
+        "ranked_guesses": [
+          "nurse",
+          "battery",
+          "station",
+          "ladder"
+        ],
+        "rationale": "Direct association of 'nurse' with 'medical'; 'battery' (e.g., heart), 'station' (e.g., aid), and 'ladder' (e.g., stretcher) are weaker but plausible secondary guesses.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.65,
+          "nurse": 0.95,
+          "spirit": 0.45
+        },
+        "ranked_guesses": [
+          "nurse",
+          "battery",
+          "spirit"
+        ],
+        "rationale": "Direct medical association with 'nurse'; 'battery' (e.g., heart defibrillator) is a secondary stretch; 'spirit' (e.g., 'team spirit' in medical teams) is weaker. Avoiding revealed words and prioritizing clarity.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.65,
+          "ladder": 0.45,
+          "nurse": 0.95,
+          "station": 0.55
+        },
+        "ranked_guesses": [
+          "nurse",
+          "battery",
+          "station",
+          "ladder"
+        ],
+        "rationale": "\"nurse\" is the most direct medical association. \"battery\" (e.g., heart defibrillator) and \"station\" (e.g., medical station) are secondary. \"ladder\" is a stretch (e.g., medical ladder protocols) but included for completeness.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "agriculture",
+        "count": 1,
+        "rationale": "Farmer is the only remaining blue word related to agriculture."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 1.0
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "Farmer is the most direct association with agriculture.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 1.0
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "The clue 'agriculture' directly relates to the word 'farmer'.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 1.0
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "The clue 'agriculture' directly relates to the word 'farmer'.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "power",
+        "count": 3,
+        "rationale": "links magnet, battery, telescope (all sources/related to power or energy)"
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.95,
+          "magnet": 0.85,
+          "spirit": 0.65,
+          "station": 0.75
+        },
+        "ranked_guesses": [
+          "battery",
+          "magnet",
+          "station",
+          "spirit"
+        ],
+        "rationale": "'battery' is the most direct association with 'power' (electricity). 'Magnet' and 'station' (e.g., power station) are strong secondary associations. 'Spirit' is a weaker but plausible link (e.g., spiritual power).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "dairy",
+        "count": 1,
+        "rationale": "Butter is a common dairy product and is one of the remaining blue words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 1.0
+        },
+        "ranked_guesses": [
+          "butter"
+        ],
+        "rationale": "Butter is a primary dairy product and the only word on the board that fits the clue.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 1.0
+        },
+        "ranked_guesses": [
+          "butter"
+        ],
+        "rationale": "Butter is a direct product of dairy.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.95
+        },
+        "ranked_guesses": [
+          "butter"
+        ],
+        "rationale": "Butter is a primary dairy product.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "terminal",
+        "count": 3,
+        "rationale": "directs toward airport (terminal), telescope (observatory terminal), and writer (terminal punctuation) while avoiding assassin/neutral overlaps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "anchor": 0.55,
+          "station": 0.95
+        },
+        "ranked_guesses": [
+          "station",
+          "airport",
+          "anchor"
+        ],
+        "rationale": "'terminal' strongly associates with 'station' (e.g., bus/terminal station). 'Airport' has terminals too, but less direct. 'Anchor' is a stretch (terminal as endpoint), but plausible if others fail.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.85,
+          "battery": 0.75,
+          "station": 0.95
+        },
+        "ranked_guesses": [
+          "station",
+          "airport",
+          "battery"
+        ],
+        "rationale": "'terminal' strongly associates with 'station' (e.g., bus/train terminal), followed by 'airport' (airport terminals), and less directly 'battery' (battery terminals).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.85,
+          "battery": 0.75,
+          "station": 0.95
+        },
+        "ranked_guesses": [
+          "station",
+          "airport",
+          "battery"
+        ],
+        "rationale": "Highest confidence in 'station' due to direct association with 'terminal' (e.g., bus/train station). 'Airport' also has terminals, and 'battery' has terminal connections, but less direct.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "voyage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "captain"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "charge"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "road"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "highway"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wildlife"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "weather"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "storm"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "nurse"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "agriculture"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "farmer"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "power"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "dairy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "butter"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "terminal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "station"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 44,
+    "public_event_count": 29,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-7way-20260608-021458-m02",
+    "team_blue": "Gemma 4 31B",
+    "team_red": "Mistral Medium 3.1",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "voyage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.8,
+              "anchor": 0.75,
+              "captain": 0.85,
+              "highway": 0.6,
+              "spirit": 0.65,
+              "storm": 0.55,
+              "telescope": 0.5,
+              "travel": 0.95
+            },
+            "ranked_guesses": [
+              "travel",
+              "captain",
+              "airport",
+              "anchor",
+              "spirit",
+              "highway",
+              "storm",
+              "telescope"
+            ],
+            "rationale": "'travel' is a near-synonym of 'voyage' and the highest-confidence guess. 'captain', 'airport', and 'anchor' strongly associate with journeys (especially by sea/air). Secondary terms like 'spirit' (e.g., 'spirit of adventure') and 'highway' (road travel) are plausible but lower confidence. Clue count (4) suggests multiple related words remain.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.88,
+              "anchor": 0.85,
+              "captain": 0.95,
+              "highway": 0.7,
+              "spirit": 0.6,
+              "station": 0.75,
+              "storm": 0.55,
+              "telescope": 0.5,
+              "travel": 0.92
+            },
+            "ranked_guesses": [
+              "captain",
+              "travel",
+              "airport",
+              "anchor",
+              "station",
+              "highway",
+              "spirit",
+              "storm",
+              "telescope"
+            ],
+            "rationale": "'captain' is most directly tied to a voyage (ship captain), followed by 'travel' (synonymous), 'airport' (starting point for air voyages), and 'anchor' (nautical). Others like 'station' or 'highway' are weaker but still plausible. Prioritizing high-confidence nautical/transportation links first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "captain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "voyage",
+          "count": 4,
+          "rationale": "Covers 'travel', 'airport', 'highway' (opponent's word but low risk due to stronger associations), and 'telescope' (stretching to 'space voyage'). Avoids assassin ('station') and neutral traps. High reward for red team with 4 guesses."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.6,
+              "forest": 0.9,
+              "storm": 0.4
+            },
+            "ranked_guesses": [
+              "forest",
+              "eagle",
+              "storm"
+            ],
+            "rationale": "Forest is the most direct synonym for nature. Eagle and storm are natural elements.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.6,
+              "forest": 0.9,
+              "storm": 0.4
+            },
+            "ranked_guesses": [
+              "forest",
+              "eagle",
+              "storm"
+            ],
+            "rationale": "Forest is the most direct synonym for nature. Eagle and storm are also natural elements.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.6,
+              "forest": 0.9,
+              "storm": 0.4
+            },
+            "ranked_guesses": [
+              "forest",
+              "eagle",
+              "storm"
+            ],
+            "rationale": "Forest is the most direct synonym for nature; eagle and storm are natural elements.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects forest, eagle, and storm."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "charge"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "charge",
+          "count": 3,
+          "rationale": "links to 'battery', 'magnet', and 'nurse' (as in 'charge nurse' or 'in charge of care'). Avoids assassin ('station') and neutral words while targeting three red words efficiently."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "road"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.9,
+              "station": 0.4
+            },
+            "ranked_guesses": [
+              "highway",
+              "station"
+            ],
+            "rationale": "Highway is a direct synonym for road. Station (like a bus or train station) is also related to roads and travel.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.9,
+              "station": 0.4
+            },
+            "ranked_guesses": [
+              "highway",
+              "station"
+            ],
+            "rationale": "Highway is a direct synonym for road. Station (like a bus or train station) is a common location associated with roads.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "highway": 0.9,
+              "station": 0.4
+            },
+            "ranked_guesses": [
+              "highway",
+              "station"
+            ],
+            "rationale": "Highway is a direct synonym for road. Station (like a bus or train station) is a common location associated with roads.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "highway"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "road",
+          "count": 2,
+          "rationale": "Connects highway and storm (as in storming down a road), but primarily targets highway and potentially anchor/eagle/farmer if they think of rural roads. Actually, highway is the strongest link. Let's try 'transport' but that's too close to travel. Let's use 'asphalt' for highway and maybe storm? No. Let's go with 'way' for highway and storm (stormy way). Wait, 'highway' and 'storm' are blue. Let's try 'weather' for storm and 'eagle' for sky. No. Let's use 'road' for highway and 'farmer' for country roads."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wildlife"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.78,
+              "eagle": 0.92,
+              "farmer": 0.72,
+              "spider": 0.85,
+              "storm": 0.65
+            },
+            "ranked_guesses": [
+              "eagle",
+              "spider",
+              "butter",
+              "farmer",
+              "storm"
+            ],
+            "rationale": "\"eagle\" is the strongest direct association with *wildlife* (count=2). \"Spider\" and \"butter[fly]\" are also clear wildlife links. \"Farmer\" is tangential (human-wildlife interaction) but plausible. \"Storm\" is weaker but could relate to *wildlife* behavior (e.g., animals reacting to storms). Prioritized by directness of association.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.78,
+              "eagle": 0.92,
+              "farmer": 0.65,
+              "spider": 0.85,
+              "storm": 0.55
+            },
+            "ranked_guesses": [
+              "eagle",
+              "spider",
+              "butter",
+              "farmer",
+              "storm"
+            ],
+            "rationale": "\"eagle\" is a direct wildlife association (bird/raptor). \"spider\" is a wild animal (insect/arachnid). \"butter\" hints at *butterfly* (common wildlife omission). \"farmer\" ties to rural wildlife habitats. \"storm\" is weaker but could relate to *wild* weather or animal migration. Prioritized by directness of wildlife link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "wildlife",
+          "count": 2,
+          "rationale": "links eagle + storm (e.g., eagle as a bird of prey, storm as a natural phenomenon; both are elements of nature/wildlife). Avoids direct overlap with board words while targeting two critical blue words for opponent misdirection."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "weather"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "storm": 1.0
+            },
+            "ranked_guesses": [
+              "storm"
+            ],
+            "rationale": "Storm is the only word on the board directly related to weather.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "storm": 0.9
+            },
+            "ranked_guesses": [
+              "storm"
+            ],
+            "rationale": "Storm is the only word on the board directly related to weather.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "storm": 0.9
+            },
+            "ranked_guesses": [
+              "storm"
+            ],
+            "rationale": "Storm is the only word on the board directly related to weather.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "storm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "weather",
+          "count": 1,
+          "rationale": "Storm is a blue word and fits the clue weather."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.65,
+              "ladder": 0.4,
+              "nurse": 0.95,
+              "station": 0.55
+            },
+            "ranked_guesses": [
+              "nurse",
+              "battery",
+              "station",
+              "ladder"
+            ],
+            "rationale": "Direct association of 'nurse' with 'medical'; 'battery' (e.g., heart), 'station' (e.g., aid), and 'ladder' (e.g., stretcher) are weaker but plausible secondary guesses.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.65,
+              "nurse": 0.95,
+              "spirit": 0.45
+            },
+            "ranked_guesses": [
+              "nurse",
+              "battery",
+              "spirit"
+            ],
+            "rationale": "Direct medical association with 'nurse'; 'battery' (e.g., heart defibrillator) is a secondary stretch; 'spirit' (e.g., 'team spirit' in medical teams) is weaker. Avoiding revealed words and prioritizing clarity.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.65,
+              "ladder": 0.45,
+              "nurse": 0.95,
+              "station": 0.55
+            },
+            "ranked_guesses": [
+              "nurse",
+              "battery",
+              "station",
+              "ladder"
+            ],
+            "rationale": "\"nurse\" is the most direct medical association. \"battery\" (e.g., heart defibrillator) and \"station\" (e.g., medical station) are secondary. \"ladder\" is a stretch (e.g., medical ladder protocols) but included for completeness.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "nurse"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 2,
+          "rationale": "covers 'nurse' and 'spirit' (as in 'team spirit' or 'school spirit' often associated with medical/nursing schools)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "agriculture"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "farmer": 1.0
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "Farmer is the most direct association with agriculture.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 1.0
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "The clue 'agriculture' directly relates to the word 'farmer'.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 1.0
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "The clue 'agriculture' directly relates to the word 'farmer'.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "farmer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "agriculture",
+          "count": 1,
+          "rationale": "Farmer is the only remaining blue word related to agriculture."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "power"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.95,
+              "magnet": 0.85,
+              "spirit": 0.65,
+              "station": 0.75
+            },
+            "ranked_guesses": [
+              "battery",
+              "magnet",
+              "station",
+              "spirit"
+            ],
+            "rationale": "'battery' is the most direct association with 'power' (electricity). 'Magnet' and 'station' (e.g., power station) are strong secondary associations. 'Spirit' is a weaker but plausible link (e.g., spiritual power).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "power",
+          "count": 3,
+          "rationale": "links magnet, battery, telescope (all sources/related to power or energy)"
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "dairy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "butter": 1.0
+            },
+            "ranked_guesses": [
+              "butter"
+            ],
+            "rationale": "Butter is a primary dairy product and the only word on the board that fits the clue.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "butter": 1.0
+            },
+            "ranked_guesses": [
+              "butter"
+            ],
+            "rationale": "Butter is a direct product of dairy.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.95
+            },
+            "ranked_guesses": [
+              "butter"
+            ],
+            "rationale": "Butter is a primary dairy product.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "butter"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dairy",
+          "count": 1,
+          "rationale": "Butter is a common dairy product and is one of the remaining blue words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "terminal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "anchor": 0.55,
+              "station": 0.95
+            },
+            "ranked_guesses": [
+              "station",
+              "airport",
+              "anchor"
+            ],
+            "rationale": "'terminal' strongly associates with 'station' (e.g., bus/terminal station). 'Airport' has terminals too, but less direct. 'Anchor' is a stretch (terminal as endpoint), but plausible if others fail.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.85,
+              "battery": 0.75,
+              "station": 0.95
+            },
+            "ranked_guesses": [
+              "station",
+              "airport",
+              "battery"
+            ],
+            "rationale": "'terminal' strongly associates with 'station' (e.g., bus/train terminal), followed by 'airport' (airport terminals), and less directly 'battery' (battery terminals).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.85,
+              "battery": 0.75,
+              "station": 0.95
+            },
+            "ranked_guesses": [
+              "station",
+              "airport",
+              "battery"
+            ],
+            "rationale": "Highest confidence in 'station' due to direct association with 'terminal' (e.g., bus/train station). 'Airport' also has terminals, and 'battery' has terminal connections, but less direct.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "station"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "terminal",
+          "count": 3,
+          "rationale": "directs toward airport (terminal), telescope (observatory terminal), and writer (terminal punctuation) while avoiding assassin/neutral overlaps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

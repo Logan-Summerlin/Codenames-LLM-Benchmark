@@ -1,0 +1,261 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "airport": "red",
+      "alien": "assassin",
+      "anchor": "blue",
+      "animal": "neutral",
+      "baker": "red",
+      "battery": "neutral",
+      "camera": "red",
+      "captain": "neutral",
+      "compass": "neutral",
+      "dancer": "blue",
+      "desert": "red",
+      "galaxy": "blue",
+      "hammer": "blue",
+      "highway": "neutral",
+      "kernel": "red",
+      "museum": "blue",
+      "poet": "red",
+      "salt": "blue",
+      "spider": "blue",
+      "summer": "neutral",
+      "telescope": "blue",
+      "water": "red",
+      "wood": "red",
+      "writer": "neutral"
+    },
+    "revealed": [
+      "agent",
+      "alien"
+    ],
+    "words": {
+      "agent": "red",
+      "airport": "red",
+      "alien": "assassin",
+      "anchor": "blue",
+      "animal": "neutral",
+      "baker": "red",
+      "battery": "neutral",
+      "camera": "red",
+      "captain": "neutral",
+      "compass": "neutral",
+      "dancer": "blue",
+      "desert": "red",
+      "galaxy": "blue",
+      "hammer": "blue",
+      "highway": "neutral",
+      "kernel": "red",
+      "museum": "blue",
+      "poet": "red",
+      "salt": "blue",
+      "spider": "blue",
+      "summer": "neutral",
+      "telescope": "blue",
+      "water": "red",
+      "wood": "red",
+      "writer": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "spy",
+        "count": 2,
+        "rationale": "'agent' and 'camera' are both related to espionage and surveillance, fitting the clue 'spy'."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "alien": 0.7
+        },
+        "ranked_guesses": [
+          "agent",
+          "alien"
+        ],
+        "rationale": "'agent' is strongly associated with 'spy', and 'alien' could also fit as spies might be seen as outsiders or undercover.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "alien": 0.7,
+          "captain": 0.6
+        },
+        "ranked_guesses": [
+          "agent",
+          "alien",
+          "captain"
+        ],
+        "rationale": "'agent' is strongly associated with 'spy', 'alien' could imply covert or otherworldly spies, and 'captain' might hint at a leader in espionage.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "spy": 0.7
+        },
+        "ranked_guesses": [
+          "agent",
+          "spy"
+        ],
+        "rationale": "The clue 'spy' strongly suggests 'agent' as the primary guess, with 'spy' itself being a plausible secondary guess given the theme.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "spy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "alien"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 3,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-20260607-214614-m06",
+    "team_blue": "Kimi K2 Thinking",
+    "team_red": "DeepSeek V3 0324",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "spy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9,
+              "alien": 0.7
+            },
+            "ranked_guesses": [
+              "agent",
+              "alien"
+            ],
+            "rationale": "'agent' is strongly associated with 'spy', and 'alien' could also fit as spies might be seen as outsiders or undercover.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9,
+              "alien": 0.7,
+              "captain": 0.6
+            },
+            "ranked_guesses": [
+              "agent",
+              "alien",
+              "captain"
+            ],
+            "rationale": "'agent' is strongly associated with 'spy', 'alien' could imply covert or otherworldly spies, and 'captain' might hint at a leader in espionage.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9,
+              "spy": 0.7
+            },
+            "ranked_guesses": [
+              "agent",
+              "spy"
+            ],
+            "rationale": "The clue 'spy' strongly suggests 'agent' as the primary guess, with 'spy' itself being a plausible secondary guess given the theme.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spy",
+          "count": 2,
+          "rationale": "'agent' and 'camera' are both related to espionage and surveillance, fitting the clue 'spy'."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

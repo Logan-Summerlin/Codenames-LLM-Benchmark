@@ -1,0 +1,1082 @@
+{
+  "board": {
+    "identities": {
+      "airport": "neutral",
+      "atlas": "blue",
+      "autumn": "blue",
+      "balloon": "assassin",
+      "butter": "neutral",
+      "camera": "blue",
+      "flame": "neutral",
+      "ghost": "neutral",
+      "honey": "red",
+      "hunter": "blue",
+      "jungle": "red",
+      "kernel": "neutral",
+      "library": "red",
+      "machine": "blue",
+      "orange": "red",
+      "poet": "red",
+      "robot": "red",
+      "shadow": "blue",
+      "singer": "neutral",
+      "spirit": "red",
+      "station": "blue",
+      "summer": "red",
+      "tiger": "neutral",
+      "voyage": "red",
+      "winter": "blue"
+    },
+    "revealed": [],
+    "words": {
+      "airport": "neutral",
+      "atlas": "blue",
+      "autumn": "blue",
+      "balloon": "assassin",
+      "butter": "neutral",
+      "camera": "blue",
+      "flame": "neutral",
+      "ghost": "neutral",
+      "honey": "red",
+      "hunter": "blue",
+      "jungle": "red",
+      "kernel": "neutral",
+      "library": "red",
+      "machine": "blue",
+      "orange": "red",
+      "poet": "red",
+      "robot": "red",
+      "shadow": "blue",
+      "singer": "neutral",
+      "spirit": "red",
+      "station": "blue",
+      "summer": "red",
+      "tiger": "neutral",
+      "voyage": "red",
+      "winter": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "story",
+        "count": 4,
+        "rationale": "Covers poet (storyteller), library (stories), voyage (adventure story), and spirit (ghost story). Avoids blue words and assassin."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.75,
+          "library": 0.8,
+          "poet": 0.9,
+          "singer": 0.85
+        },
+        "ranked_guesses": [
+          "poet",
+          "singer",
+          "library",
+          "ghost"
+        ],
+        "rationale": "These words are strongly associated with 'story': poet and singer are storytellers, library holds stories, ghost is a common story theme.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.8,
+          "library": 0.7,
+          "poet": 0.9,
+          "singer": 0.6
+        },
+        "ranked_guesses": [
+          "poet",
+          "ghost",
+          "library",
+          "singer"
+        ],
+        "rationale": "Story suggests poet (teller of stories), ghost (ghost stories), library (where stories are stored), and singer (sings stories).",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.7,
+          "library": 0.8,
+          "poet": 0.9,
+          "singer": 0.6
+        },
+        "ranked_guesses": [
+          "poet",
+          "library",
+          "camera",
+          "singer"
+        ],
+        "rationale": "Poet and library are directly related to stories; camera captures stories; singer tells stories through song.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cool",
+        "count": 2,
+        "rationale": "Autumn and winter are both cool seasons."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8,
+          "winter": 0.9
+        },
+        "ranked_guesses": [
+          "winter",
+          "autumn"
+        ],
+        "rationale": "Clue 'cool' likely refers to temperature. Winter is cold, autumn is cool, making them strong candidates. Other words like shadow or ghost are less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.6,
+          "winter": 0.8
+        },
+        "ranked_guesses": [
+          "winter",
+          "autumn"
+        ],
+        "rationale": "Winter and autumn are associated with cool temperatures.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.6,
+          "ghost": 0.4,
+          "shadow": 0.3,
+          "spirit": 0.2,
+          "winter": 0.8
+        },
+        "ranked_guesses": [
+          "winter",
+          "autumn",
+          "ghost",
+          "shadow",
+          "spirit"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sweet",
+        "count": 2,
+        "rationale": "Honey and orange are both sweet. Avoiding other board words."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.9,
+          "orange": 0.8
+        },
+        "ranked_guesses": [
+          "honey",
+          "orange"
+        ],
+        "rationale": "Honey is directly associated with sweetness, and orange is a sweet fruit. Other words like butter or summer are less likely.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.9,
+          "orange": 0.8
+        },
+        "ranked_guesses": [
+          "honey",
+          "orange"
+        ],
+        "rationale": "Honey is directly sweet, orange is a sweet fruit. These are the most likely red words for the clue 'sweet'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.95,
+          "orange": 0.85
+        },
+        "ranked_guesses": [
+          "honey",
+          "orange"
+        ],
+        "rationale": "Sweet is associated with honey and orange, both of which are sweet foods.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "seasons",
+        "count": 2,
+        "rationale": "Autumn and winter are both seasons."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "summer": 0.85,
+          "winter": 0.7
+        },
+        "ranked_guesses": [
+          "autumn",
+          "summer",
+          "winter"
+        ],
+        "rationale": "The clue 'seasons' directly points to autumn, summer, and winter as they are seasons. With count 2, likely two of the three are blue. I rank autumn highest as it is a clear season, then summer, then winter. I set stop false because we may want to guess a third if the first two are correct, but with caution.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "winter": 0.9
+        },
+        "ranked_guesses": [
+          "autumn",
+          "winter"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "summer": 0.8
+        },
+        "ranked_guesses": [
+          "autumn",
+          "summer"
+        ],
+        "rationale": "The clue 'seasons' suggests words representing seasons. Among the board, 'autumn', 'summer', and 'winter' are season names. Since the clue count is 2, the most likely blue words are autumn and summer.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tropical",
+        "count": 4,
+        "rationale": "Connects jungle, summer, orange, and honey - all associated with tropical environments or produce."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.9,
+          "orange": 0.7,
+          "summer": 0.8,
+          "tiger": 0.6
+        },
+        "ranked_guesses": [
+          "jungle",
+          "summer",
+          "orange",
+          "tiger"
+        ],
+        "rationale": "Tropical suggests jungle, summer, orange (fruit), and tiger (animal). These are the strongest associations.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.95,
+          "orange": 0.8,
+          "summer": 0.85,
+          "tiger": 0.9
+        },
+        "ranked_guesses": [
+          "jungle",
+          "tiger",
+          "summer",
+          "orange"
+        ],
+        "rationale": "The clue 'tropical' strongly suggests words related to hot, exotic environments. Jungle, tiger, summer, and orange are all directly associated with tropical themes.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.9,
+          "orange": 0.7,
+          "summer": 0.6,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "jungle",
+          "tiger",
+          "orange",
+          "summer"
+        ],
+        "rationale": "Jungle, tiger, orange, and summer are all strongly associated with tropical environments.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "hunt",
+        "count": 8,
+        "rationale": "Connects hunter, seasons (autumn, winter), camera (trail cams), machine (equipment), shadow (stalking), atlas (maps), station (hunting stands) as related to hunting."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8,
+          "ghost": 0.65,
+          "hunter": 1.0,
+          "jungle": 0.9,
+          "spirit": 0.6,
+          "summer": 0.75,
+          "tiger": 0.95,
+          "winter": 0.7
+        },
+        "ranked_guesses": [
+          "hunter",
+          "tiger",
+          "jungle",
+          "autumn",
+          "summer",
+          "winter",
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "The clue 'hunt' strongly suggests words like 'hunter', 'tiger' (prey), 'jungle' (habitat), and seasons 'autumn', 'summer', 'winter' (hunting seasons). 'Ghost' and 'spirit' are also plausible due to ghost hunting.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "flame": 0.7,
+          "ghost": 0.8,
+          "hunter": 0.95,
+          "jungle": 0.85,
+          "shadow": 0.8,
+          "spirit": 0.75,
+          "tiger": 0.9
+        },
+        "ranked_guesses": [
+          "hunter",
+          "tiger",
+          "jungle",
+          "ghost",
+          "shadow",
+          "spirit",
+          "flame",
+          "autumn"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.5,
+          "ghost": 0.7,
+          "honey": 0.55,
+          "hunter": 0.99,
+          "jungle": 0.85,
+          "shadow": 0.6,
+          "spirit": 0.65,
+          "tiger": 0.9
+        },
+        "ranked_guesses": [
+          "hunter",
+          "tiger",
+          "jungle",
+          "ghost",
+          "spirit",
+          "shadow",
+          "honey",
+          "autumn"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "story"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cool"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sweet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "seasons"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "tropical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 8,
+        "word": "hunt"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 24,
+    "public_event_count": 12,
+    "reason": null,
+    "seed": "5",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "story"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.75,
+              "library": 0.8,
+              "poet": 0.9,
+              "singer": 0.85
+            },
+            "ranked_guesses": [
+              "poet",
+              "singer",
+              "library",
+              "ghost"
+            ],
+            "rationale": "These words are strongly associated with 'story': poet and singer are storytellers, library holds stories, ghost is a common story theme.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.8,
+              "library": 0.7,
+              "poet": 0.9,
+              "singer": 0.6
+            },
+            "ranked_guesses": [
+              "poet",
+              "ghost",
+              "library",
+              "singer"
+            ],
+            "rationale": "Story suggests poet (teller of stories), ghost (ghost stories), library (where stories are stored), and singer (sings stories).",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.7,
+              "library": 0.8,
+              "poet": 0.9,
+              "singer": 0.6
+            },
+            "ranked_guesses": [
+              "poet",
+              "library",
+              "camera",
+              "singer"
+            ],
+            "rationale": "Poet and library are directly related to stories; camera captures stories; singer tells stories through song.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "story",
+          "count": 4,
+          "rationale": "Covers poet (storyteller), library (stories), voyage (adventure story), and spirit (ghost story). Avoids blue words and assassin."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cool"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8,
+              "winter": 0.9
+            },
+            "ranked_guesses": [
+              "winter",
+              "autumn"
+            ],
+            "rationale": "Clue 'cool' likely refers to temperature. Winter is cold, autumn is cool, making them strong candidates. Other words like shadow or ghost are less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.6,
+              "winter": 0.8
+            },
+            "ranked_guesses": [
+              "winter",
+              "autumn"
+            ],
+            "rationale": "Winter and autumn are associated with cool temperatures.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.6,
+              "ghost": 0.4,
+              "shadow": 0.3,
+              "spirit": 0.2,
+              "winter": 0.8
+            },
+            "ranked_guesses": [
+              "winter",
+              "autumn",
+              "ghost",
+              "shadow",
+              "spirit"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "cool",
+          "count": 2,
+          "rationale": "Autumn and winter are both cool seasons."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sweet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.9,
+              "orange": 0.8
+            },
+            "ranked_guesses": [
+              "honey",
+              "orange"
+            ],
+            "rationale": "Honey is directly associated with sweetness, and orange is a sweet fruit. Other words like butter or summer are less likely.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.9,
+              "orange": 0.8
+            },
+            "ranked_guesses": [
+              "honey",
+              "orange"
+            ],
+            "rationale": "Honey is directly sweet, orange is a sweet fruit. These are the most likely red words for the clue 'sweet'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.95,
+              "orange": 0.85
+            },
+            "ranked_guesses": [
+              "honey",
+              "orange"
+            ],
+            "rationale": "Sweet is associated with honey and orange, both of which are sweet foods.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sweet",
+          "count": 2,
+          "rationale": "Honey and orange are both sweet. Avoiding other board words."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "seasons"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "summer": 0.85,
+              "winter": 0.7
+            },
+            "ranked_guesses": [
+              "autumn",
+              "summer",
+              "winter"
+            ],
+            "rationale": "The clue 'seasons' directly points to autumn, summer, and winter as they are seasons. With count 2, likely two of the three are blue. I rank autumn highest as it is a clear season, then summer, then winter. I set stop false because we may want to guess a third if the first two are correct, but with caution.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "winter": 0.9
+            },
+            "ranked_guesses": [
+              "autumn",
+              "winter"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "summer": 0.8
+            },
+            "ranked_guesses": [
+              "autumn",
+              "summer"
+            ],
+            "rationale": "The clue 'seasons' suggests words representing seasons. Among the board, 'autumn', 'summer', and 'winter' are season names. Since the clue count is 2, the most likely blue words are autumn and summer.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "seasons",
+          "count": 2,
+          "rationale": "Autumn and winter are both seasons."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "tropical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.9,
+              "orange": 0.7,
+              "summer": 0.8,
+              "tiger": 0.6
+            },
+            "ranked_guesses": [
+              "jungle",
+              "summer",
+              "orange",
+              "tiger"
+            ],
+            "rationale": "Tropical suggests jungle, summer, orange (fruit), and tiger (animal). These are the strongest associations.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.95,
+              "orange": 0.8,
+              "summer": 0.85,
+              "tiger": 0.9
+            },
+            "ranked_guesses": [
+              "jungle",
+              "tiger",
+              "summer",
+              "orange"
+            ],
+            "rationale": "The clue 'tropical' strongly suggests words related to hot, exotic environments. Jungle, tiger, summer, and orange are all directly associated with tropical themes.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.9,
+              "orange": 0.7,
+              "summer": 0.6,
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "jungle",
+              "tiger",
+              "orange",
+              "summer"
+            ],
+            "rationale": "Jungle, tiger, orange, and summer are all strongly associated with tropical environments.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "tropical",
+          "count": 4,
+          "rationale": "Connects jungle, summer, orange, and honey - all associated with tropical environments or produce."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 8,
+        "word": "hunt"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8,
+              "ghost": 0.65,
+              "hunter": 1.0,
+              "jungle": 0.9,
+              "spirit": 0.6,
+              "summer": 0.75,
+              "tiger": 0.95,
+              "winter": 0.7
+            },
+            "ranked_guesses": [
+              "hunter",
+              "tiger",
+              "jungle",
+              "autumn",
+              "summer",
+              "winter",
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "The clue 'hunt' strongly suggests words like 'hunter', 'tiger' (prey), 'jungle' (habitat), and seasons 'autumn', 'summer', 'winter' (hunting seasons). 'Ghost' and 'spirit' are also plausible due to ghost hunting.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "flame": 0.7,
+              "ghost": 0.8,
+              "hunter": 0.95,
+              "jungle": 0.85,
+              "shadow": 0.8,
+              "spirit": 0.75,
+              "tiger": 0.9
+            },
+            "ranked_guesses": [
+              "hunter",
+              "tiger",
+              "jungle",
+              "ghost",
+              "shadow",
+              "spirit",
+              "flame",
+              "autumn"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.5,
+              "ghost": 0.7,
+              "honey": 0.55,
+              "hunter": 0.99,
+              "jungle": 0.85,
+              "shadow": 0.6,
+              "spirit": 0.65,
+              "tiger": 0.9
+            },
+            "ranked_guesses": [
+              "hunter",
+              "tiger",
+              "jungle",
+              "ghost",
+              "spirit",
+              "shadow",
+              "honey",
+              "autumn"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "hunt",
+          "count": 8,
+          "rationale": "Connects hunter, seasons (autumn, winter), camera (trail cams), machine (equipment), shadow (stalking), atlas (maps), station (hunting stands) as related to hunting."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

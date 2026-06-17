@@ -1,0 +1,1835 @@
+{
+  "board": {
+    "identities": {
+      "aztec": "blue",
+      "bond": "neutral",
+      "cricket": "red",
+      "day": "blue",
+      "dinosaur": "neutral",
+      "file": "red",
+      "force": "blue",
+      "head": "neutral",
+      "hole": "blue",
+      "key": "neutral",
+      "line": "neutral",
+      "model": "neutral",
+      "moscow": "blue",
+      "palm": "assassin",
+      "part": "red",
+      "police": "red",
+      "press": "blue",
+      "ship": "red",
+      "shot": "red",
+      "smuggler": "red",
+      "stick": "blue",
+      "tube": "neutral",
+      "undertaker": "red",
+      "washington": "blue",
+      "watch": "red"
+    },
+    "revealed": [
+      "bond",
+      "cricket",
+      "day",
+      "file",
+      "moscow",
+      "palm",
+      "police",
+      "press",
+      "ship",
+      "smuggler",
+      "washington"
+    ],
+    "words": {
+      "aztec": "blue",
+      "bond": "neutral",
+      "cricket": "red",
+      "day": "blue",
+      "dinosaur": "neutral",
+      "file": "red",
+      "force": "blue",
+      "head": "neutral",
+      "hole": "blue",
+      "key": "neutral",
+      "line": "neutral",
+      "model": "neutral",
+      "moscow": "blue",
+      "palm": "assassin",
+      "part": "red",
+      "police": "red",
+      "press": "blue",
+      "ship": "red",
+      "shot": "red",
+      "smuggler": "red",
+      "stick": "blue",
+      "tube": "neutral",
+      "undertaker": "red",
+      "washington": "blue",
+      "watch": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "law",
+        "count": 2,
+        "rationale": "related to police and smuggler"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "law": 0.8,
+          "police": 0.8
+        },
+        "ranked_guesses": [
+          "police",
+          "law"
+        ],
+        "rationale": "Both words are related to law enforcement.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "law": 0.8,
+          "police": 0.8
+        },
+        "ranked_guesses": [
+          "police",
+          "law"
+        ],
+        "rationale": "Both words are related to law enforcement.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "law": 0.8,
+          "police": 0.8
+        },
+        "ranked_guesses": [
+          "police",
+          "law"
+        ],
+        "rationale": "Both words are related to law enforcement",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "capital",
+        "count": 3,
+        "rationale": "Targets 'moscow', 'washington', and 'aztec' (ancient capital) while avoiding direct matches or substrings of board words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.55,
+          "head": 0.65,
+          "key": 0.6,
+          "line": 0.45,
+          "moscow": 0.92,
+          "part": 0.4,
+          "press": 0.5,
+          "ship": 0.35,
+          "stick": 0.3,
+          "washington": 0.95
+        },
+        "ranked_guesses": [
+          "washington",
+          "moscow",
+          "head",
+          "key",
+          "bond",
+          "press",
+          "line",
+          "part",
+          "ship",
+          "stick"
+        ],
+        "rationale": "\"capital\" strongly hints at **washington** (U.S. capital) and **moscow** (Russian capital). Other words like *head* (e.g., 'capital of a column') or *key* (e.g., 'capital letter') are weaker but plausible. Prioritizing the two most obvious geographic capitals first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "head": 0.65,
+          "key": 0.4,
+          "line": 0.45,
+          "moscow": 0.92,
+          "part": 0.55,
+          "washington": 0.95
+        },
+        "ranked_guesses": [
+          "washington",
+          "moscow",
+          "head",
+          "part",
+          "line",
+          "key"
+        ],
+        "rationale": "\"Washington\" and \"Moscow\" are direct capital city associations. \"Head\" (e.g., capital letter) and \"part\" (e.g., capital *part* of a column) are weaker thematic links. Prioritizing highest-confidence geographic capitals first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "crime",
+        "count": 3,
+        "rationale": "related to police and smuggler"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.6,
+          "force": 0.4,
+          "smuggler": 0.8
+        },
+        "ranked_guesses": [
+          "smuggler",
+          "bond",
+          "force"
+        ],
+        "rationale": "crime is related to law enforcement, and these words are also related to law enforcement",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.6,
+          "force": 0.4,
+          "smuggler": 0.8
+        },
+        "ranked_guesses": [
+          "smuggler",
+          "bond",
+          "force"
+        ],
+        "rationale": "crime is related to law enforcement, and these words are also related to law enforcement or have similar connotations",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.6,
+          "force": 0.4,
+          "smuggler": 0.8
+        },
+        "ranked_guesses": [
+          "smuggler",
+          "bond",
+          "force"
+        ],
+        "rationale": "crime is related to law enforcement, and these words are also related to law enforcement",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ancient",
+        "count": 2,
+        "rationale": "links 'aztec' and 'dinosaur' (avoiding direct blue hints to preserve future flexibility)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "aztec": 0.95,
+          "bond": 0.65,
+          "cricket": 0.3,
+          "dinosaur": 0.92,
+          "force": 0.35,
+          "head": 0.55,
+          "palm": 0.5,
+          "ship": 0.45,
+          "watch": 0.4
+        },
+        "ranked_guesses": [
+          "aztec",
+          "dinosaur",
+          "bond",
+          "head",
+          "palm",
+          "ship",
+          "watch",
+          "force",
+          "cricket"
+        ],
+        "rationale": "\"aztec\" and \"dinosaur\" are most directly associated with 'ancient'. 'Bond' could imply ancient bonds (e.g., historical alliances), but is lower confidence. Others are tangential (e.g., 'palm' for ancient fossils, 'ship' for ancient vessels). Prioritizing highest-confidence first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "force",
+        "count": 2,
+        "rationale": "related to power"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "print",
+        "count": 2,
+        "rationale": "media and newspaper"
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "file": 0.75,
+          "head": 0.45,
+          "line": 0.65,
+          "press": 0.95,
+          "stick": 0.35,
+          "watch": 0.25
+        },
+        "ranked_guesses": [
+          "press",
+          "file",
+          "line",
+          "head",
+          "stick",
+          "watch"
+        ],
+        "rationale": "\"press\" is the most direct synonym for \"print\"; \"file\" and \"line\" are tangentially related (printing files/lines of text). Lower-confidence words are loosely associated (e.g., \"head\" as in printhead, \"watch\" as in time/print deadlines).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "file": 0.75,
+          "head": 0.35,
+          "line": 0.65,
+          "press": 0.95,
+          "watch": 0.45
+        },
+        "ranked_guesses": [
+          "press",
+          "file",
+          "line",
+          "watch",
+          "head"
+        ],
+        "rationale": "\"press\" is the most direct synonym for \"print\"; \"file\" and \"line\" are tangentially related (printing files/lines of text). Lower-confidence words like \"watch\" (e.g., print *watch* face) and \"head\" (print *head* of a document) are stretch associations. No obvious 2-word connections to other board words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "file": 0.85,
+          "head": 0.65,
+          "key": 0.3,
+          "line": 0.75,
+          "part": 0.35,
+          "press": 0.95,
+          "shot": 0.45,
+          "stick": 0.55
+        },
+        "ranked_guesses": [
+          "press",
+          "file",
+          "line",
+          "head",
+          "stick",
+          "shot",
+          "part",
+          "key"
+        ],
+        "rationale": "\"press\" is most directly associated with \"print\" (e.g., printing press). \"file\" and \"line\" are secondary associations (printing files, line printing). Lower-confidence words are tangential (e.g., \"head\" as in headline, \"stick\" as in print stickers).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "action",
+        "count": 2,
+        "rationale": "related to law enforcement"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.8,
+          "force": 0.7
+        },
+        "ranked_guesses": [
+          "bond",
+          "force"
+        ],
+        "rationale": "related to action",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.8
+        },
+        "ranked_guesses": [
+          "bond"
+        ],
+        "rationale": "related to action",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.7,
+          "force": 0.6
+        },
+        "ranked_guesses": [
+          "bond",
+          "force"
+        ],
+        "rationale": "related to action",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "breakthrough",
+        "count": 3,
+        "rationale": "'hole' (as in a gap), 'force' (as in a military breakthrough), and 'aztec' (historical breakthroughs in civilization) \u2013 all connect to the idea of advancing past barriers."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 2,
+        "rationale": "mode of transportation"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "related to vehicle",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "related to vehicle",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "related to vehicle",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "dig",
+        "count": 2,
+        "rationale": "refers to 'hole' and 'aztec' (archaeological dig)"
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "aztec": 0.65,
+          "dinosaur": 0.75,
+          "head": 0.45,
+          "hole": 0.95,
+          "stick": 0.35,
+          "tube": 0.55
+        },
+        "ranked_guesses": [
+          "hole",
+          "dinosaur",
+          "aztec",
+          "tube",
+          "head",
+          "stick"
+        ],
+        "rationale": "\"hole\" is the most direct association with \"dig\"; \"dinosaur\" and \"aztec\" relate to archaeological digging; others are weaker but tangential (e.g., \"tube\" as tunneling, \"stick\" as a digging tool). High confidence in \"hole\" due to direct semantic link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "port",
+        "count": 2,
+        "rationale": "related to transportation"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cricket": 0.8,
+          "part": 0.6
+        },
+        "ranked_guesses": [
+          "cricket",
+          "part"
+        ],
+        "rationale": "related to port",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cricket": 0.8,
+          "part": 0.7
+        },
+        "ranked_guesses": [
+          "cricket",
+          "part"
+        ],
+        "rationale": "port is related to cricket and part",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cricket": 0.7,
+          "part": 0.6
+        },
+        "ranked_guesses": [
+          "cricket",
+          "part"
+        ],
+        "rationale": "port is a word related to transportation, cricket and part are words that are somewhat related to it",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sunlight",
+        "count": 2,
+        "rationale": "'day' and 'hole' (as in sunlight through a hole)"
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "day": 0.95,
+          "hole": 0.55,
+          "palm": 0.85,
+          "stick": 0.65,
+          "watch": 0.75
+        },
+        "ranked_guesses": [
+          "day",
+          "palm",
+          "watch",
+          "stick",
+          "hole"
+        ],
+        "rationale": "\"day\" is directly associated with sunlight; \"palm\" (e.g., palm trees) and \"watch\" (sunlight on a watch face) are secondary associations; lower-confidence words like \"stick\" (shadow stick) and \"hole\" (sunlight through a hole) are more tangential.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "day": 0.95,
+          "hole": 0.55,
+          "palm": 0.85,
+          "stick": 0.65,
+          "watch": 0.75
+        },
+        "ranked_guesses": [
+          "day",
+          "palm",
+          "watch",
+          "stick",
+          "hole"
+        ],
+        "rationale": "\"day\" is most directly associated with sunlight; \"palm\" (e.g., palm trees) and \"watch\" (sunlight on a watch face) are secondary. Lower-confidence guesses like \"stick\" (shadow stick) and \"hole\" (sunlight through a hole) are less direct.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "law"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "police"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "capital"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "washington"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "moscow"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "crime"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "smuggler"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ancient"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "force",
+        "count": 2,
+        "rationale": "related to power"
+      },
+      "event": "illegal_clue",
+      "matched_word": "force",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "print"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "press"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "file"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "action"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bond"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "breakthrough"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ship"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "dig"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "port"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cricket"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sunlight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "day"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "palm"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 45,
+    "public_event_count": 31,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-single-007-meta_llama_llama_3_70b_instruct-vs-mistralai_mistral_medium_3_1",
+    "team_blue": "Mistral Medium 3.1",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "law"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "law": 0.8,
+              "police": 0.8
+            },
+            "ranked_guesses": [
+              "police",
+              "law"
+            ],
+            "rationale": "Both words are related to law enforcement.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "law": 0.8,
+              "police": 0.8
+            },
+            "ranked_guesses": [
+              "police",
+              "law"
+            ],
+            "rationale": "Both words are related to law enforcement.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "law": 0.8,
+              "police": 0.8
+            },
+            "ranked_guesses": [
+              "police",
+              "law"
+            ],
+            "rationale": "Both words are related to law enforcement",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "police"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "law",
+          "count": 2,
+          "rationale": "related to police and smuggler"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "capital"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.55,
+              "head": 0.65,
+              "key": 0.6,
+              "line": 0.45,
+              "moscow": 0.92,
+              "part": 0.4,
+              "press": 0.5,
+              "ship": 0.35,
+              "stick": 0.3,
+              "washington": 0.95
+            },
+            "ranked_guesses": [
+              "washington",
+              "moscow",
+              "head",
+              "key",
+              "bond",
+              "press",
+              "line",
+              "part",
+              "ship",
+              "stick"
+            ],
+            "rationale": "\"capital\" strongly hints at **washington** (U.S. capital) and **moscow** (Russian capital). Other words like *head* (e.g., 'capital of a column') or *key* (e.g., 'capital letter') are weaker but plausible. Prioritizing the two most obvious geographic capitals first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "head": 0.65,
+              "key": 0.4,
+              "line": 0.45,
+              "moscow": 0.92,
+              "part": 0.55,
+              "washington": 0.95
+            },
+            "ranked_guesses": [
+              "washington",
+              "moscow",
+              "head",
+              "part",
+              "line",
+              "key"
+            ],
+            "rationale": "\"Washington\" and \"Moscow\" are direct capital city associations. \"Head\" (e.g., capital letter) and \"part\" (e.g., capital *part* of a column) are weaker thematic links. Prioritizing highest-confidence geographic capitals first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "washington"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "moscow"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "capital",
+          "count": 3,
+          "rationale": "Targets 'moscow', 'washington', and 'aztec' (ancient capital) while avoiding direct matches or substrings of board words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "crime"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.6,
+              "force": 0.4,
+              "smuggler": 0.8
+            },
+            "ranked_guesses": [
+              "smuggler",
+              "bond",
+              "force"
+            ],
+            "rationale": "crime is related to law enforcement, and these words are also related to law enforcement",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.6,
+              "force": 0.4,
+              "smuggler": 0.8
+            },
+            "ranked_guesses": [
+              "smuggler",
+              "bond",
+              "force"
+            ],
+            "rationale": "crime is related to law enforcement, and these words are also related to law enforcement or have similar connotations",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.6,
+              "force": 0.4,
+              "smuggler": 0.8
+            },
+            "ranked_guesses": [
+              "smuggler",
+              "bond",
+              "force"
+            ],
+            "rationale": "crime is related to law enforcement, and these words are also related to law enforcement",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "smuggler"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "crime",
+          "count": 3,
+          "rationale": "related to police and smuggler"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ancient"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "aztec": 0.95,
+              "bond": 0.65,
+              "cricket": 0.3,
+              "dinosaur": 0.92,
+              "force": 0.35,
+              "head": 0.55,
+              "palm": 0.5,
+              "ship": 0.45,
+              "watch": 0.4
+            },
+            "ranked_guesses": [
+              "aztec",
+              "dinosaur",
+              "bond",
+              "head",
+              "palm",
+              "ship",
+              "watch",
+              "force",
+              "cricket"
+            ],
+            "rationale": "\"aztec\" and \"dinosaur\" are most directly associated with 'ancient'. 'Bond' could imply ancient bonds (e.g., historical alliances), but is lower confidence. Others are tangential (e.g., 'palm' for ancient fossils, 'ship' for ancient vessels). Prioritizing highest-confidence first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "ancient",
+          "count": 2,
+          "rationale": "links 'aztec' and 'dinosaur' (avoiding direct blue hints to preserve future flexibility)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "print"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "press"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "file"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "action"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bond"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "force",
+          "count": 2,
+          "rationale": "related to power"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "breakthrough"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "file": 0.75,
+              "head": 0.45,
+              "line": 0.65,
+              "press": 0.95,
+              "stick": 0.35,
+              "watch": 0.25
+            },
+            "ranked_guesses": [
+              "press",
+              "file",
+              "line",
+              "head",
+              "stick",
+              "watch"
+            ],
+            "rationale": "\"press\" is the most direct synonym for \"print\"; \"file\" and \"line\" are tangentially related (printing files/lines of text). Lower-confidence words are loosely associated (e.g., \"head\" as in printhead, \"watch\" as in time/print deadlines).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "file": 0.75,
+              "head": 0.35,
+              "line": 0.65,
+              "press": 0.95,
+              "watch": 0.45
+            },
+            "ranked_guesses": [
+              "press",
+              "file",
+              "line",
+              "watch",
+              "head"
+            ],
+            "rationale": "\"press\" is the most direct synonym for \"print\"; \"file\" and \"line\" are tangentially related (printing files/lines of text). Lower-confidence words like \"watch\" (e.g., print *watch* face) and \"head\" (print *head* of a document) are stretch associations. No obvious 2-word connections to other board words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "file": 0.85,
+              "head": 0.65,
+              "key": 0.3,
+              "line": 0.75,
+              "part": 0.35,
+              "press": 0.95,
+              "shot": 0.45,
+              "stick": 0.55
+            },
+            "ranked_guesses": [
+              "press",
+              "file",
+              "line",
+              "head",
+              "stick",
+              "shot",
+              "part",
+              "key"
+            ],
+            "rationale": "\"press\" is most directly associated with \"print\" (e.g., printing press). \"file\" and \"line\" are secondary associations (printing files, line printing). Lower-confidence words are tangential (e.g., \"head\" as in headline, \"stick\" as in print stickers).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "print",
+          "count": 2,
+          "rationale": "media and newspaper"
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.8,
+              "force": 0.7
+            },
+            "ranked_guesses": [
+              "bond",
+              "force"
+            ],
+            "rationale": "related to action",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.8
+            },
+            "ranked_guesses": [
+              "bond"
+            ],
+            "rationale": "related to action",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.7,
+              "force": 0.6
+            },
+            "ranked_guesses": [
+              "bond",
+              "force"
+            ],
+            "rationale": "related to action",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ship"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "action",
+          "count": 2,
+          "rationale": "related to law enforcement"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "dig"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "breakthrough",
+          "count": 3,
+          "rationale": "'hole' (as in a gap), 'force' (as in a military breakthrough), and 'aztec' (historical breakthroughs in civilization) \u2013 all connect to the idea of advancing past barriers."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "port"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "related to vehicle",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "related to vehicle",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "related to vehicle",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cricket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vehicle",
+          "count": 2,
+          "rationale": "mode of transportation"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sunlight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "aztec": 0.65,
+              "dinosaur": 0.75,
+              "head": 0.45,
+              "hole": 0.95,
+              "stick": 0.35,
+              "tube": 0.55
+            },
+            "ranked_guesses": [
+              "hole",
+              "dinosaur",
+              "aztec",
+              "tube",
+              "head",
+              "stick"
+            ],
+            "rationale": "\"hole\" is the most direct association with \"dig\"; \"dinosaur\" and \"aztec\" relate to archaeological digging; others are weaker but tangential (e.g., \"tube\" as tunneling, \"stick\" as a digging tool). High confidence in \"hole\" due to direct semantic link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "day"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "palm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dig",
+          "count": 2,
+          "rationale": "refers to 'hole' and 'aztec' (archaeological dig)"
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,2265 @@
+{
+  "board": {
+    "identities": {
+      "air": "blue",
+      "ambulance": "blue",
+      "back": "blue",
+      "carrot": "blue",
+      "diamond": "assassin",
+      "disease": "red",
+      "dragon": "blue",
+      "eagle": "blue",
+      "greece": "blue",
+      "helicopter": "red",
+      "hook": "neutral",
+      "hotel": "neutral",
+      "key": "blue",
+      "lemon": "neutral",
+      "luck": "neutral",
+      "note": "red",
+      "plastic": "red",
+      "round": "red",
+      "row": "red",
+      "stock": "red",
+      "suit": "neutral",
+      "tap": "neutral",
+      "triangle": "neutral",
+      "vacuum": "red",
+      "web": "red"
+    },
+    "revealed": [
+      "air",
+      "ambulance",
+      "diamond",
+      "disease",
+      "dragon",
+      "eagle",
+      "greece",
+      "helicopter",
+      "key",
+      "note",
+      "plastic",
+      "vacuum"
+    ],
+    "words": {
+      "air": "blue",
+      "ambulance": "blue",
+      "back": "blue",
+      "carrot": "blue",
+      "diamond": "assassin",
+      "disease": "red",
+      "dragon": "blue",
+      "eagle": "blue",
+      "greece": "blue",
+      "helicopter": "red",
+      "hook": "neutral",
+      "hotel": "neutral",
+      "key": "blue",
+      "lemon": "neutral",
+      "luck": "neutral",
+      "note": "red",
+      "plastic": "red",
+      "round": "red",
+      "row": "red",
+      "stock": "red",
+      "suit": "neutral",
+      "tap": "neutral",
+      "triangle": "neutral",
+      "vacuum": "red",
+      "web": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "medical",
+        "count": 2,
+        "rationale": "Ambulance and disease are both related to medical themes."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ambulance": 0.9,
+          "disease": 0.85
+        },
+        "ranked_guesses": [
+          "ambulance",
+          "disease"
+        ],
+        "rationale": "Both 'ambulance' and 'disease' are strongly related to the medical field.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ambulance": 0.9,
+          "disease": 0.8
+        },
+        "ranked_guesses": [
+          "ambulance",
+          "disease"
+        ],
+        "rationale": "Ambulance and disease are both strongly related to the medical field.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ambulance": 0.9,
+          "disease": 0.85
+        },
+        "ranked_guesses": [
+          "ambulance",
+          "disease"
+        ],
+        "rationale": "Ambulance and disease are both strongly related to the medical field.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 3,
+        "rationale": "Related to air travel and vehicles like helicopters and dragons."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.8,
+          "eagle": 0.7,
+          "helicopter": 0.9
+        },
+        "ranked_guesses": [
+          "helicopter",
+          "air",
+          "eagle"
+        ],
+        "rationale": "All guesses relate to flight; helicopter is the strongest connection.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.6,
+          "eagle": 0.7,
+          "helicopter": 0.9
+        },
+        "ranked_guesses": [
+          "helicopter",
+          "eagle",
+          "air"
+        ],
+        "rationale": "All guesses relate to flight; helicopter is the strongest association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.8,
+          "eagle": 0.7,
+          "helicopter": 0.9
+        },
+        "ranked_guesses": [
+          "helicopter",
+          "air",
+          "eagle"
+        ],
+        "rationale": "All guesses relate to flight; helicopter is the strongest association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "danger",
+        "count": 1,
+        "rationale": "Avoiding direct references to board words, 'danger' can hint towards 'disease' without being too specific."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.8
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "Hook is often associated with danger, as it can be a sharp and potentially harmful object.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.8
+        },
+        "ranked_guesses": [
+          "dragon"
+        ],
+        "rationale": "dragon can be associated with danger, being a mythical creature often depicted as a threat",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.8
+        },
+        "ranked_guesses": [
+          "dragon"
+        ],
+        "rationale": "dragon is associated with danger, being a powerful and potentially threatening creature.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 3,
+        "rationale": "Related to air travel and vehicles."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.7,
+          "eagle": 0.9,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "eagle",
+          "air",
+          "vacuum"
+        ],
+        "rationale": "Eagle is a bird associated with flight, air relates to flying, and vacuum is less relevant but could connect to air.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.7,
+          "eagle": 0.9,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "eagle",
+          "air",
+          "vacuum"
+        ],
+        "rationale": "Eagle is a bird associated with flight, air relates directly to flying, and vacuum is less related but can imply air movement.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.7,
+          "eagle": 0.9,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "eagle",
+          "air",
+          "vacuum"
+        ],
+        "rationale": "Eagle is a bird associated with flight, air relates to flying, and vacuum is less relevant but could connect to air.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "illness",
+        "count": 1,
+        "rationale": "Disease is the only red word left that fits this clue."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "disease": 0.8
+        },
+        "ranked_guesses": [
+          "disease"
+        ],
+        "rationale": "The clue 'illness' strongly suggests 'disease' as a related word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "disease": 0.8
+        },
+        "ranked_guesses": [
+          "disease"
+        ],
+        "rationale": "'Disease' is strongly associated with 'illness'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "disease": 0.9
+        },
+        "ranked_guesses": [
+          "disease"
+        ],
+        "rationale": "'Disease' is directly related to the clue 'illness'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "color",
+        "count": 2,
+        "rationale": "Refers to the color of a fruit and a common item associated with the team."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "carrot": 0.7,
+          "lemon": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "lemon"
+        ],
+        "rationale": "Both words are colors; carrot is orange and lemon is yellow.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "carrot": 0.7,
+          "lemon": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "lemon"
+        ],
+        "rationale": "Both words are colors, fitting the clue 'color'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "carrot": 0.7,
+          "lemon": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "lemon"
+        ],
+        "rationale": "Both words are colors; carrot is orange and lemon is yellow.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 1,
+        "rationale": "Helicopter is already revealed as red, and 'vehicle' can hint towards other red words like 'carrot' or 'vacuum'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helicopter": 0.8
+        },
+        "ranked_guesses": [
+          "helicopter"
+        ],
+        "rationale": "Helicopter is a vehicle and matches the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helicopter": 0.8
+        },
+        "ranked_guesses": [
+          "helicopter"
+        ],
+        "rationale": "Helicopter is a vehicle and matches the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helicopter": 0.8
+        },
+        "ranked_guesses": [
+          "helicopter"
+        ],
+        "rationale": "Helicopter is a vehicle and matches the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "transport",
+        "count": 2,
+        "rationale": "Both words are modes of transportation."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.7,
+          "carrot": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "air"
+        ],
+        "rationale": "Both words relate to transport; 'carrot' is less likely but still a guess.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.5,
+          "carrot": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "air"
+        ],
+        "rationale": "Both words relate to transport; 'carrot' is less likely but still a guess.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.7,
+          "carrot": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "air"
+        ],
+        "rationale": "Both words relate to transport; 'air' is directly linked to flying vehicles, while 'carrot' might be a stretch but could relate to transport of goods.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "notebook",
+        "count": 1,
+        "rationale": "Avoiding direct matches and aiming for a word that could link to 'note' without being too obvious or risky."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "transportation",
+        "count": 2,
+        "rationale": "Links to 'ambulance' and 'helicopter' while avoiding direct matches."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "back": 0.4,
+          "carrot": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "back"
+        ],
+        "rationale": "Both words relate to transportation; 'carrot' could imply a vehicle (like a carrot truck), while 'back' could refer to the back of a vehicle.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.4,
+          "carrot": 0.6
+        },
+        "ranked_guesses": [
+          "carrot",
+          "air"
+        ],
+        "rationale": "Both words relate to transportation; 'carrot' is less likely but could be a playful reference, while 'air' connects to air transportation.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.6,
+          "carrot": 0.7
+        },
+        "ranked_guesses": [
+          "carrot",
+          "air"
+        ],
+        "rationale": "Both words relate to transportation; 'carrot' is less direct but could imply a vehicle (car), while 'air' connects to air transport.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "paper",
+        "count": 1,
+        "rationale": "Avoiding direct matches, 'paper' can link to 'note' without being too obvious or risky."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "note": 0.8
+        },
+        "ranked_guesses": [
+          "note"
+        ],
+        "rationale": "The clue 'paper' is strongly associated with 'note' as notes are often written on paper.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "note": 0.8
+        },
+        "ranked_guesses": [
+          "note"
+        ],
+        "rationale": "The clue 'paper' is most likely pointing to 'note' as it is a form of paper.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "note": 0.8
+        },
+        "ranked_guesses": [
+          "note"
+        ],
+        "rationale": "The clue 'paper' is likely pointing to 'note' as it is a form of paper.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 2,
+        "rationale": "Links to 'air' and 'greece' as both can relate to the sky or open space."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "greece": 0.6
+        },
+        "ranked_guesses": [
+          "air",
+          "greece"
+        ],
+        "rationale": "Both words relate to the sky; 'air' is directly linked, while 'greece' could refer to its clear skies.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "vacuum": 0.7
+        },
+        "ranked_guesses": [
+          "air",
+          "vacuum"
+        ],
+        "rationale": "Both words relate to the sky; 'air' is directly associated, while 'vacuum' can refer to the space above.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "vacuum": 0.7
+        },
+        "ranked_guesses": [
+          "air",
+          "vacuum"
+        ],
+        "rationale": "Both words relate to the sky; 'air' is directly connected, while 'vacuum' can imply the emptiness of space.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "plastic",
+        "count": 1,
+        "rationale": "Aim for 'plastic' as it's a red word and not directly linked to any other words on the board, reducing the risk of revealing a blue or neutral word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "key",
+        "count": 1,
+        "rationale": "Links to 'key' as a form of transport or access, avoiding direct matches."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "accessory",
+        "count": 1,
+        "rationale": "Avoids direct matches and links to 'key' as an accessory or item used for access."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "key": 0.8
+        },
+        "ranked_guesses": [
+          "key"
+        ],
+        "rationale": "'Key' is a plausible accessory and is not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "key": 0.8
+        },
+        "ranked_guesses": [
+          "key"
+        ],
+        "rationale": "Key can be an accessory, fitting the clue given.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "key": 0.8
+        },
+        "ranked_guesses": [
+          "key"
+        ],
+        "rationale": "Key can be an accessory, fitting the clue given.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "myth",
+        "count": 1,
+        "rationale": "Refers to a legendary creature often associated with stories, linking to 'dragon'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "greece": 0.7
+        },
+        "ranked_guesses": [
+          "greece"
+        ],
+        "rationale": "Greece has mythological connections, fitting the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "greece": 0.7
+        },
+        "ranked_guesses": [
+          "greece"
+        ],
+        "rationale": "Greece has mythological connections, fitting the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "greece": 0.8
+        },
+        "ranked_guesses": [
+          "greece"
+        ],
+        "rationale": "Greece has mythological connections, aligning with the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "material",
+        "count": 1,
+        "rationale": "Aims to link to 'plastic' without directly revealing it, and avoids other board words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plastic": 0.8
+        },
+        "ranked_guesses": [
+          "plastic"
+        ],
+        "rationale": "The clue 'material' suggests a physical substance, and 'plastic' is a common material that fits this description.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plastic": 0.8
+        },
+        "ranked_guesses": [
+          "plastic"
+        ],
+        "rationale": "Plastic is a material and fits the clue well.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plastic": 0.8
+        },
+        "ranked_guesses": [
+          "plastic"
+        ],
+        "rationale": "Plastic is a material and fits the clue given.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "gem",
+        "count": 1,
+        "rationale": "Links to 'diamond' as a precious stone, while avoiding direct mention."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.9
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Diamond is a type of gem, directly related to the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.9
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Diamond is a type of gem, directly linking to the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.9
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Diamond is a type of gem, directly linking to the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ambulance"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "helicopter"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "danger"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "illness"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "disease"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "color"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transport"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "notebook",
+        "count": 1,
+        "rationale": "Avoiding direct matches and aiming for a word that could link to 'note' without being too obvious or risky."
+      },
+      "event": "illegal_clue",
+      "matched_word": "note",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transportation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "paper"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "note"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "air"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "vacuum"
+    },
+    {
+      "clue": {
+        "clue": "plastic",
+        "count": 1,
+        "rationale": "Aim for 'plastic' as it's a red word and not directly linked to any other words on the board, reducing the risk of revealing a blue or neutral word."
+      },
+      "event": "illegal_clue",
+      "matched_word": "plastic",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "key",
+        "count": 1,
+        "rationale": "Links to 'key' as a form of transport or access, avoiding direct matches."
+      },
+      "event": "illegal_clue",
+      "matched_word": "key",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "accessory"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "key"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "greece"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "material"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "plastic"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "gem"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "diamond"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 63,
+    "public_event_count": 39,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-single-014-qwen_qwen_2_5_72b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Qwen2.5 72B Instruct",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ambulance": 0.9,
+              "disease": 0.85
+            },
+            "ranked_guesses": [
+              "ambulance",
+              "disease"
+            ],
+            "rationale": "Both 'ambulance' and 'disease' are strongly related to the medical field.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ambulance": 0.9,
+              "disease": 0.8
+            },
+            "ranked_guesses": [
+              "ambulance",
+              "disease"
+            ],
+            "rationale": "Ambulance and disease are both strongly related to the medical field.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ambulance": 0.9,
+              "disease": 0.85
+            },
+            "ranked_guesses": [
+              "ambulance",
+              "disease"
+            ],
+            "rationale": "Ambulance and disease are both strongly related to the medical field.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ambulance"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 2,
+          "rationale": "Ambulance and disease are both related to medical themes."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.8,
+              "eagle": 0.7,
+              "helicopter": 0.9
+            },
+            "ranked_guesses": [
+              "helicopter",
+              "air",
+              "eagle"
+            ],
+            "rationale": "All guesses relate to flight; helicopter is the strongest connection.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.6,
+              "eagle": 0.7,
+              "helicopter": 0.9
+            },
+            "ranked_guesses": [
+              "helicopter",
+              "eagle",
+              "air"
+            ],
+            "rationale": "All guesses relate to flight; helicopter is the strongest association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.8,
+              "eagle": 0.7,
+              "helicopter": 0.9
+            },
+            "ranked_guesses": [
+              "helicopter",
+              "air",
+              "eagle"
+            ],
+            "rationale": "All guesses relate to flight; helicopter is the strongest association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "helicopter"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 3,
+          "rationale": "Related to air travel and vehicles like helicopters and dragons."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "danger"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hook": 0.8
+            },
+            "ranked_guesses": [
+              "hook"
+            ],
+            "rationale": "Hook is often associated with danger, as it can be a sharp and potentially harmful object.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.8
+            },
+            "ranked_guesses": [
+              "dragon"
+            ],
+            "rationale": "dragon can be associated with danger, being a mythical creature often depicted as a threat",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.8
+            },
+            "ranked_guesses": [
+              "dragon"
+            ],
+            "rationale": "dragon is associated with danger, being a powerful and potentially threatening creature.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "danger",
+          "count": 1,
+          "rationale": "Avoiding direct references to board words, 'danger' can hint towards 'disease' without being too specific."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.7,
+              "eagle": 0.9,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "eagle",
+              "air",
+              "vacuum"
+            ],
+            "rationale": "Eagle is a bird associated with flight, air relates to flying, and vacuum is less relevant but could connect to air.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.7,
+              "eagle": 0.9,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "eagle",
+              "air",
+              "vacuum"
+            ],
+            "rationale": "Eagle is a bird associated with flight, air relates directly to flying, and vacuum is less related but can imply air movement.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.7,
+              "eagle": 0.9,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "eagle",
+              "air",
+              "vacuum"
+            ],
+            "rationale": "Eagle is a bird associated with flight, air relates to flying, and vacuum is less relevant but could connect to air.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 3,
+          "rationale": "Related to air travel and vehicles."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "illness"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "disease": 0.8
+            },
+            "ranked_guesses": [
+              "disease"
+            ],
+            "rationale": "The clue 'illness' strongly suggests 'disease' as a related word.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "disease": 0.8
+            },
+            "ranked_guesses": [
+              "disease"
+            ],
+            "rationale": "'Disease' is strongly associated with 'illness'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "disease": 0.9
+            },
+            "ranked_guesses": [
+              "disease"
+            ],
+            "rationale": "'Disease' is directly related to the clue 'illness'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "disease"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "illness",
+          "count": 1,
+          "rationale": "Disease is the only red word left that fits this clue."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "color"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "carrot": 0.7,
+              "lemon": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "lemon"
+            ],
+            "rationale": "Both words are colors; carrot is orange and lemon is yellow.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "carrot": 0.7,
+              "lemon": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "lemon"
+            ],
+            "rationale": "Both words are colors, fitting the clue 'color'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "carrot": 0.7,
+              "lemon": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "lemon"
+            ],
+            "rationale": "Both words are colors; carrot is orange and lemon is yellow.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "color",
+          "count": 2,
+          "rationale": "Refers to the color of a fruit and a common item associated with the team."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "vehicle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "helicopter": 0.8
+            },
+            "ranked_guesses": [
+              "helicopter"
+            ],
+            "rationale": "Helicopter is a vehicle and matches the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helicopter": 0.8
+            },
+            "ranked_guesses": [
+              "helicopter"
+            ],
+            "rationale": "Helicopter is a vehicle and matches the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helicopter": 0.8
+            },
+            "ranked_guesses": [
+              "helicopter"
+            ],
+            "rationale": "Helicopter is a vehicle and matches the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "vehicle",
+          "count": 1,
+          "rationale": "Helicopter is already revealed as red, and 'vehicle' can hint towards other red words like 'carrot' or 'vacuum'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transport"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.7,
+              "carrot": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "air"
+            ],
+            "rationale": "Both words relate to transport; 'carrot' is less likely but still a guess.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.5,
+              "carrot": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "air"
+            ],
+            "rationale": "Both words relate to transport; 'carrot' is less likely but still a guess.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.7,
+              "carrot": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "air"
+            ],
+            "rationale": "Both words relate to transport; 'air' is directly linked to flying vehicles, while 'carrot' might be a stretch but could relate to transport of goods.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "transport",
+          "count": 2,
+          "rationale": "Both words are modes of transportation."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transportation"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "paper"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "note"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "notebook",
+          "count": 1,
+          "rationale": "Avoiding direct matches and aiming for a word that could link to 'note' without being too obvious or risky."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "back": 0.4,
+              "carrot": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "back"
+            ],
+            "rationale": "Both words relate to transportation; 'carrot' could imply a vehicle (like a carrot truck), while 'back' could refer to the back of a vehicle.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.4,
+              "carrot": 0.6
+            },
+            "ranked_guesses": [
+              "carrot",
+              "air"
+            ],
+            "rationale": "Both words relate to transportation; 'carrot' is less likely but could be a playful reference, while 'air' connects to air transportation.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.6,
+              "carrot": 0.7
+            },
+            "ranked_guesses": [
+              "carrot",
+              "air"
+            ],
+            "rationale": "Both words relate to transportation; 'carrot' is less direct but could imply a vehicle (car), while 'air' connects to air transport.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "air"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "vacuum"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "transportation",
+          "count": 2,
+          "rationale": "Links to 'ambulance' and 'helicopter' while avoiding direct matches."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "accessory"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "note": 0.8
+            },
+            "ranked_guesses": [
+              "note"
+            ],
+            "rationale": "The clue 'paper' is strongly associated with 'note' as notes are often written on paper.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "note": 0.8
+            },
+            "ranked_guesses": [
+              "note"
+            ],
+            "rationale": "The clue 'paper' is most likely pointing to 'note' as it is a form of paper.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "note": 0.8
+            },
+            "ranked_guesses": [
+              "note"
+            ],
+            "rationale": "The clue 'paper' is likely pointing to 'note' as it is a form of paper.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "key"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "paper",
+          "count": 1,
+          "rationale": "Avoiding direct matches, 'paper' can link to 'note' without being too obvious or risky."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "myth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "greece": 0.6
+            },
+            "ranked_guesses": [
+              "air",
+              "greece"
+            ],
+            "rationale": "Both words relate to the sky; 'air' is directly linked, while 'greece' could refer to its clear skies.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "vacuum": 0.7
+            },
+            "ranked_guesses": [
+              "air",
+              "vacuum"
+            ],
+            "rationale": "Both words relate to the sky; 'air' is directly associated, while 'vacuum' can refer to the space above.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "vacuum": 0.7
+            },
+            "ranked_guesses": [
+              "air",
+              "vacuum"
+            ],
+            "rationale": "Both words relate to the sky; 'air' is directly connected, while 'vacuum' can imply the emptiness of space.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "greece"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 2,
+          "rationale": "Links to 'air' and 'greece' as both can relate to the sky or open space."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "material"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "plastic"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "plastic",
+          "count": 1,
+          "rationale": "Aim for 'plastic' as it's a red word and not directly linked to any other words on the board, reducing the risk of revealing a blue or neutral word."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "gem"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "diamond"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "key",
+          "count": 1,
+          "rationale": "Links to 'key' as a form of transport or access, avoiding direct matches."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

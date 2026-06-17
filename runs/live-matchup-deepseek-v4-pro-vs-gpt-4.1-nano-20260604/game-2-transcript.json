@@ -1,0 +1,2784 @@
+{
+  "board": {
+    "identities": {
+      "animal": "neutral",
+      "autumn": "neutral",
+      "battery": "blue",
+      "beacon": "assassin",
+      "copper": "blue",
+      "dancer": "red",
+      "engine": "neutral",
+      "festival": "neutral",
+      "guitar": "red",
+      "hammer": "red",
+      "harbor": "neutral",
+      "highway": "red",
+      "honey": "red",
+      "leather": "neutral",
+      "library": "red",
+      "mountain": "blue",
+      "palace": "blue",
+      "planet": "red",
+      "robot": "red",
+      "singer": "neutral",
+      "spider": "blue",
+      "stone": "blue",
+      "teacher": "blue",
+      "violin": "blue",
+      "voyage": "red"
+    },
+    "revealed": [
+      "animal",
+      "battery",
+      "dancer",
+      "engine",
+      "guitar",
+      "hammer",
+      "harbor",
+      "highway",
+      "honey",
+      "library",
+      "planet",
+      "robot",
+      "singer",
+      "teacher",
+      "violin",
+      "voyage"
+    ],
+    "words": {
+      "animal": "neutral",
+      "autumn": "neutral",
+      "battery": "blue",
+      "beacon": "assassin",
+      "copper": "blue",
+      "dancer": "red",
+      "engine": "neutral",
+      "festival": "neutral",
+      "guitar": "red",
+      "hammer": "red",
+      "harbor": "neutral",
+      "highway": "red",
+      "honey": "red",
+      "leather": "neutral",
+      "library": "red",
+      "mountain": "blue",
+      "palace": "blue",
+      "planet": "red",
+      "robot": "red",
+      "singer": "neutral",
+      "spider": "blue",
+      "stone": "blue",
+      "teacher": "blue",
+      "violin": "blue",
+      "voyage": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "music",
+        "count": 3,
+        "rationale": "Connects guitar, violin, and singer without overlapping with other words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.7,
+          "festival": 0.6,
+          "guitar": 0.95,
+          "singer": 0.9,
+          "violin": 0.95
+        },
+        "ranked_guesses": [
+          "guitar",
+          "violin",
+          "singer",
+          "dancer",
+          "festival"
+        ],
+        "rationale": "Clue 'music' strongly suggests musical instruments and performers. Guitar and violin are direct instruments. Singer is a music performer. Dancer and festival are related but less direct. We have 3 guesses to make, so we'll start with the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.6,
+          "festival": 0.5,
+          "guitar": 0.95,
+          "singer": 0.85,
+          "violin": 0.9
+        },
+        "ranked_guesses": [
+          "guitar",
+          "violin",
+          "singer",
+          "dancer",
+          "festival"
+        ],
+        "rationale": "The clue 'music' strongly suggests musical instruments and performers. 'Guitar' and 'violin' are direct instruments, 'singer' is a music performer. 'Dancer' and 'festival' are related but less direct. We have 3 guesses to make, so we'll start with the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.7,
+          "festival": 0.6,
+          "guitar": 0.95,
+          "singer": 0.85,
+          "violin": 0.95
+        },
+        "ranked_guesses": [
+          "guitar",
+          "violin",
+          "singer",
+          "dancer",
+          "festival"
+        ],
+        "rationale": "The clue 'music' strongly suggests instruments like guitar and violin, and performers like singer. Dancer and festival are related but less direct. With count 3, we should guess the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "Related to harbor and highway, both associated with movement and travel."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.6,
+          "harbor": 0.8,
+          "voyage": 0.75
+        },
+        "ranked_guesses": [
+          "harbor",
+          "voyage",
+          "engine"
+        ],
+        "rationale": "The clue 'navigation' strongly suggests words related to travel or movement. 'Harbor' and 'voyage' are directly associated with navigation and travel. 'Engine' is also related as it powers vehicles used in navigation. 'Harbor' and 'voyage' are the most directly connected, hence higher confidence. 'Engine' is a bit more general but still relevant.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "harbor": 0.7,
+          "mountain": 0.5,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "harbor",
+          "voyage",
+          "mountain"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel or places associated with movement. 'Harbor' and 'voyage' are strongly connected to navigation and travel, making them prime guesses. 'Mountain' is somewhat related as a geographical feature often navigated or explored, but less directly. Other words like 'engine' or 'beacon' could be relevant but are less directly tied to navigation in this context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "harbor": 0.75,
+          "mountain": 0.5,
+          "voyage": 0.65
+        },
+        "ranked_guesses": [
+          "harbor",
+          "voyage",
+          "mountain"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or places associated with movement. 'Harbor' and 'voyage' are strongly connected to navigation and travel. 'Mountain' is somewhat related as a geographical feature often navigated or explored. The other words are less directly connected to the concept of navigation.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "performance",
+        "count": 3,
+        "rationale": "Links dancer, singer, and festival without overlapping board words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9,
+          "festival": 0.7,
+          "robot": 0.5,
+          "singer": 0.85
+        },
+        "ranked_guesses": [
+          "dancer",
+          "singer",
+          "festival",
+          "robot"
+        ],
+        "rationale": "The clue 'performance' (count 3) likely relates to performing arts. 'Dancer' and 'singer' are strong candidates as performers. 'Festival' could be a performance event. 'Robot' might perform tasks but is less directly related. We have 4 guesses remaining, but only 3 words to find. The top 3 are strong, so we should guess them. 'Robot' is a weaker fourth option if needed.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9,
+          "engine": 0.3,
+          "festival": 0.7,
+          "singer": 0.85,
+          "teacher": 0.4
+        },
+        "ranked_guesses": [
+          "dancer",
+          "singer",
+          "festival",
+          "teacher",
+          "engine"
+        ],
+        "rationale": "Clue 'performance' with count 3 suggests words related to performing arts. 'dancer' and 'singer' are strong fits. 'festival' is a possible performance venue. 'teacher' and 'engine' are weaker connections. We have 4 guesses remaining, so we can guess the top 3 confidently.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9,
+          "engine": 0.4,
+          "festival": 0.7,
+          "robot": 0.5,
+          "singer": 0.85
+        },
+        "ranked_guesses": [
+          "dancer",
+          "singer",
+          "festival",
+          "robot",
+          "engine"
+        ],
+        "rationale": "The clue 'performance' (count 3) strongly suggests words related to performing arts. 'Dancer' and 'singer' are direct performers. 'Festival' is a performance event. 'Robot' could perform tasks, and 'engine' performs work, but they are less directly related to the arts context implied by the previous 'music' clue and the revealed red 'guitar'. We have 4 guesses remaining, so we should guess the top 3 confidently.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tools",
+        "count": 3,
+        "rationale": "Several words related to tools or items used in construction or repair are present, such as 'hammer', 'engine', and 'battery'. This can help identify blue words associated with tools or mechanical items."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.6,
+          "copper": 0.55,
+          "engine": 0.75,
+          "hammer": 0.8
+        },
+        "ranked_guesses": [
+          "hammer",
+          "engine",
+          "battery",
+          "copper"
+        ],
+        "rationale": "The clue 'tools' suggests items associated with tools or equipment. 'Hammer' and 'engine' are strongly related to tools or mechanical devices. 'Battery' and 'copper' are also associated with tools or materials used in tools. 'Hammer' and 'engine' are the top guesses due to their direct connection to tools, while 'battery' and 'copper' are plausible but slightly less direct.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.6,
+          "copper": 0.5,
+          "engine": 0.7,
+          "hammer": 0.8
+        },
+        "ranked_guesses": [
+          "hammer",
+          "engine",
+          "battery",
+          "copper"
+        ],
+        "rationale": "The clue 'tools' suggests items associated with tools or equipment. 'Hammer' and 'engine' are strongly linked to tools or mechanical devices. 'Battery' and 'copper' are related to materials or components often used in tools or machinery. 'Hammer' has the highest confidence due to its direct association with tools, followed by 'engine' as a device requiring tools for maintenance or assembly. 'Battery' and 'copper' are more peripheral but still relevant to the theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.5,
+          "engine": 0.6,
+          "hammer": 0.8
+        },
+        "ranked_guesses": [
+          "hammer",
+          "engine",
+          "battery"
+        ],
+        "rationale": "The clue 'tools' suggests items associated with tools or equipment. 'Hammer' is a direct tool, making it the top guess. 'Engine' and 'battery' are related to machinery and power sources, which can also be considered tools or components used in tools. 'Animal', 'mountain', and 'library' are less related to tools, so they are lower priority.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "road",
+        "count": 2,
+        "rationale": "Connects to highway and voyage, both red words. Avoids beacon (assassin) and other unrelated words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "highway": 0.95,
+          "voyage": 0.5
+        },
+        "ranked_guesses": [
+          "highway",
+          "engine",
+          "voyage"
+        ],
+        "rationale": "Clue 'road' with count 2 strongly suggests 'highway' as a direct synonym. For the second word, 'engine' relates to road vehicles, and 'voyage' is a stretch but could be a journey on a road. We have 3 guesses remaining, so we can guess both 'highway' and 'engine' safely.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "highway": 0.95
+        },
+        "ranked_guesses": [
+          "highway",
+          "engine"
+        ],
+        "rationale": "Clue 'road' (count 2) strongly suggests 'highway' as a direct synonym. 'Engine' is a common road vehicle component, fitting the second guess. Other words like 'voyage' or 'mountain' are less directly related.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "highway": 0.95,
+          "voyage": 0.5
+        },
+        "ranked_guesses": [
+          "highway",
+          "engine",
+          "voyage"
+        ],
+        "rationale": "Clue 'road' strongly suggests 'highway' as a direct synonym. 'Engine' relates to vehicles on roads. 'Voyage' is a weaker connection via travel. We have 3 guesses remaining, so we can guess at least 2.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "The words 'mountain' and 'planet' are associated with navigation and exploration, fitting the clue."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "mountain": 0.5,
+          "robot": 0.6
+        },
+        "ranked_guesses": [
+          "engine",
+          "robot",
+          "mountain"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to movement or guiding. 'Engine' and 'robot' are strongly associated with mechanisms that navigate or move. 'Mountain' can be linked to navigation in terms of terrain or mapping. 'Voyage' was guessed previously and is also relevant, but to avoid risk, the top guesses focus on mechanical and natural navigation themes.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.75,
+          "mountain": 0.65,
+          "robot": 0.55
+        },
+        "ranked_guesses": [
+          "engine",
+          "mountain",
+          "robot"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, movement, or guiding. 'Engine' and 'mountain' are strongly associated with navigation and travel, while 'robot' can be linked to technology and navigation systems. 'Animal', 'autumn', 'battery', 'beacon', 'copper', 'festival', 'honey', 'leather', 'library', 'planet', 'spider', 'stone', 'teacher', and 'voyage' are less directly connected to the theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "mountain": 0.5,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "voyage",
+          "mountain"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Voyage' directly relates to travel, and 'mountain' can be associated with exploration or navigation in rugged terrains. 'Animal' is a less direct connection but can relate to navigation in the context of animal migration or navigation skills of animals. Other words like 'library' or 'planet' are less directly connected to navigation.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Connects planet and robot, both red words remaining."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.9,
+          "robot": 0.3,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "planet",
+          "voyage",
+          "robot"
+        ],
+        "rationale": "Clue 'space' with count 2. 'planet' is strongly space-related. 'voyage' could relate to space travel. 'robot' is often associated with space exploration. Considering previous clues: 'music' (guitar, violin), 'performance' (dancer, singer), 'road' (highway). Remaining red words likely include 'planet' and possibly 'voyage' or 'robot'. 'planet' is the most confident guess.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "library": 0.3,
+          "planet": 0.9,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "planet",
+          "voyage",
+          "library"
+        ],
+        "rationale": "Clue 'space' (2) strongly suggests 'planet' (celestial body in space). 'Voyage' could relate to space travel, but less direct. 'Library' is a stretch (study space). Considering revealed red words: dancer, guitar, highway, hammer. No other obvious space-related words. Guessing 'planet' first.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.9,
+          "robot": 0.5,
+          "voyage": 0.7
+        },
+        "ranked_guesses": [
+          "planet",
+          "voyage",
+          "robot"
+        ],
+        "rationale": "Clue 'space' with count 2. Top guess 'planet' strongly relates to space. Second guess 'voyage' could relate to space travel. 'robot' is a weaker connection. We have 3 guesses remaining, so we can guess both 'planet' and 'voyage'.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "technology",
+        "count": 2,
+        "rationale": "The words 'battery' and 'copper' are associated with technology and materials, fitting the clue. Both are linked to the blue team and haven't been revealed yet."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.4,
+          "library": 0.3,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "robot",
+          "copper",
+          "library"
+        ],
+        "rationale": "The clue 'technology' strongly suggests words related to tech or machinery. 'Robot' is highly relevant, with a high confidence. 'Copper' can relate to electrical wiring or electronics, making it a plausible guess. 'Library' is less directly connected but could be associated with information technology or digital libraries, thus included as a secondary option. Other words like 'animal', 'mountain', or 'voyage' are less relevant to 'technology'.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.4,
+          "library": 0.3,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "robot",
+          "copper",
+          "library"
+        ],
+        "rationale": "The clue 'technology' strongly suggests 'robot' as it directly relates to technological advancements. 'Copper' is a material used in electronic components, making it a plausible guess. 'Library' is less directly related but can be associated with information technology and digital libraries, thus considered as a secondary option.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.3,
+          "copper": 0.4,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "robot",
+          "copper",
+          "battery"
+        ],
+        "rationale": "Given the clue 'technology', 'robot' is the most directly related and has a high confidence. 'Copper' and 'battery' are also associated with technology and electronics, but less directly. Other words like 'animal' or 'mountain' are less relevant to the clue.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sweet",
+        "count": 2,
+        "rationale": "HONEY and LIBRARY (as in a sweet spot or collection of sweet things) are red words. Avoids BEACON, COPPER, etc."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.4,
+          "festival": 0.6,
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey",
+          "festival",
+          "autumn"
+        ],
+        "rationale": "The clue 'sweet' with count 2 suggests words associated with sweetness. 'Honey' is a direct sweet substance. 'Festival' might relate to sweet treats or celebrations, but it's weaker. 'Autumn' could connect to sweet harvests like apples, but it's less direct. We have 3 guesses remaining, so we should guess at least 2. I'll guess 'honey' first, then 'festival' if 'honey' is correct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.2,
+          "festival": 0.3,
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey",
+          "festival",
+          "autumn"
+        ],
+        "rationale": "The clue 'sweet' with count 2 suggests two words related to sweetness. 'Honey' is directly sweet. Other possibilities like 'festival' (sweet treats?) or 'autumn' (sweet harvest?) are weaker. We have 3 guesses remaining, but only 2 red words left to find. I'll guess 'honey' first.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.3,
+          "festival": 0.2,
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey",
+          "autumn",
+          "festival"
+        ],
+        "rationale": "The clue 'sweet' with count 2 suggests two words related to sweetness. 'Honey' is a direct match. Other possibilities like 'autumn' (sweet harvest) or 'festival' (sweet treats) are weaker. We have 3 guesses remaining, so we can guess 'honey' and then reassess.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "The words 'mountain' and 'library' are associated with navigation and knowledge, respectively, and are still unrevealed. This helps target remaining blue words while avoiding red or neutral words."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "harbor": 0.6,
+          "singer": 0.5
+        },
+        "ranked_guesses": [
+          "engine",
+          "harbor",
+          "singer"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding or traveling. 'Engine' and 'harbor' are strongly associated with navigation and travel, with 'engine' being a core component of vehicles and ships, and 'harbor' being a port for ships. 'Singer' is less directly related but could be linked through the idea of 'performance' or 'music' as a form of navigation through sound or cultural journey, but it's less certain. Prior guesses have already revealed some words, so focusing on the most relevant and unguessed options is prudent.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "harbor": 0.6,
+          "singer": 0.5
+        },
+        "ranked_guesses": [
+          "engine",
+          "harbor",
+          "singer"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding or traveling. 'Engine' and 'harbor' are strongly associated with navigation and travel. 'Singer' is less directly related but could be linked through the idea of performance or communication, which can be tangentially connected to navigation in a broad sense. Given the remaining guesses and the context, these seem the most promising options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.6,
+          "harbor": 0.55,
+          "singer": 0.4
+        },
+        "ranked_guesses": [
+          "engine",
+          "harbor",
+          "singer"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or tools used in navigation. 'Engine' and 'harbor' are strongly associated with transportation and navigation. 'Singer' is less directly related but could be linked via the broader theme of performance or travel. 'Engine' and 'harbor' are prioritized due to their strong connection to navigation and travel, fitting the clue well.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "book",
+        "count": 2,
+        "rationale": "Connects to LIBRARY and TEACHER (both red), avoids BEACON (assassin) and other words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leather": 0.3,
+          "library": 0.9,
+          "teacher": 0.7
+        },
+        "ranked_guesses": [
+          "library",
+          "teacher",
+          "leather"
+        ],
+        "rationale": "The clue 'book' strongly suggests 'library' as a place where books are found. 'Teacher' is also related to books through education. 'Leather' could be a material for book covers, but it's a weaker connection. We have 3 guesses remaining and the clue count is 2, so we should guess at least 2 words. 'Library' is very likely red, and 'teacher' is a reasonable second guess. We should avoid guessing 'leather' unless necessary.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leather": 0.3,
+          "library": 0.95,
+          "teacher": 0.85
+        },
+        "ranked_guesses": [
+          "library",
+          "teacher",
+          "leather"
+        ],
+        "rationale": "The clue 'book' strongly suggests 'library' as a place with many books. 'Teacher' is also related to books in an educational context. 'Leather' could be a book binding material but is less direct. We have 3 guesses remaining and the clue count is 2, so we should guess the top 2 and then stop.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.3,
+          "library": 0.9,
+          "teacher": 0.6
+        },
+        "ranked_guesses": [
+          "library",
+          "teacher",
+          "autumn"
+        ],
+        "rationale": "The clue 'book' with count 2 suggests two remaining red words related to books. 'Library' is a strong association with books. 'Teacher' could be related to books in an educational context. 'Autumn' might be associated with back-to-school and books, but it's weaker. We have 3 guesses remaining, so we can guess up to 2 words for this clue.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "The blue team has already identified 'harbor' and 'engine' related to navigation, and there are two remaining blue words associated with navigation: 'mountain' and 'planet'. This clue aims to connect these remaining words."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "harbor": 0.6,
+          "library": 0.5
+        },
+        "ranked_guesses": [
+          "engine",
+          "harbor",
+          "library"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding or exploring. 'Engine' and 'harbor' are strongly associated with navigation and travel. 'Library' is a more indirect connection, possibly relating to navigation through knowledge or maps. Given the remaining guesses, these seem the most promising options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "library": 0.6,
+          "teacher": 0.5
+        },
+        "ranked_guesses": [
+          "engine",
+          "library",
+          "teacher"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding or directing. 'Engine' and 'library' are associated with navigation through vehicles and books/maps, respectively. 'Teacher' can be linked to guiding or instructing, fitting the navigation theme. 'Engine' is the most directly related, followed by 'library' and 'teacher'.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "harbor": 0.6,
+          "library": 0.5
+        },
+        "ranked_guesses": [
+          "engine",
+          "harbor",
+          "library"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Engine' and 'harbor' are strongly associated with navigation and travel. 'Library' is a bit less direct but can relate to navigation through books or information. Given the current guesses and remaining guesses, these are the most promising options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "robot",
+        "count": 2,
+        "rationale": "Connects to 'robot' (red) and 'voyage' (red) via sci-fi/space travel themes, avoiding 'beacon' (assassin) and other words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.95
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "The clue 'robot' with count 2 suggests two words related to robots. 'robot' itself is on the board and is a direct match. The second word is likely 'battery' as robots often need batteries. Other possibilities like 'engine' or 'copper' are less direct. Since we have guesses remaining, we should guess 'robot' first.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.1,
+          "autumn": 0.1,
+          "battery": 0.7,
+          "beacon": 0.2,
+          "copper": 0.3,
+          "festival": 0.1,
+          "leather": 0.1,
+          "mountain": 0.1,
+          "palace": 0.1,
+          "robot": 0.95,
+          "spider": 0.1,
+          "stone": 0.1,
+          "voyage": 0.1
+        },
+        "ranked_guesses": [
+          "robot",
+          "battery",
+          "copper",
+          "beacon",
+          "autumn",
+          "animal",
+          "festival",
+          "leather",
+          "mountain",
+          "palace",
+          "spider",
+          "stone",
+          "voyage"
+        ],
+        "rationale": "The clue 'robot' strongly suggests the word 'robot' itself. 'Battery' is a common component of robots, making it a likely second guess. Other words have weaker connections.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.7,
+          "copper": 0.5,
+          "robot": 0.95
+        },
+        "ranked_guesses": [
+          "robot",
+          "battery",
+          "copper"
+        ],
+        "rationale": "The clue 'robot' with count 2 suggests two words related to robots. 'robot' itself is the most direct and is still unrevealed. 'battery' is a common component of robots, making it a strong second guess. 'copper' is used in electronics and wiring, which could be associated with robots, but less directly. Other words like 'spider' (robot spider?) or 'beacon' (robot beacon?) are weaker. We have 3 guesses remaining, so we can guess 'robot' and 'battery' confidently, and consider 'copper' if needed.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "The words 'mountain' and 'harbor' are associated with navigation and are still unrevealed for the blue team."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "mountain": 0.5,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "voyage",
+          "mountain"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'animal' and 'voyage' are somewhat related to exploration and travel, fitting the navigation theme. 'mountain' is also associated with terrain that might require navigation. 'animal' is less directly related but could be linked to navigation in natural environments. The other words like 'library', 'teacher', or 'robot' are less connected to the navigation theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8,
+          "mountain": 0.4,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "voyage",
+          "mountain"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Animal' can be associated with navigation in the context of animal migration or tracking. 'Voyage' directly relates to travel and navigation. 'Mountain' can be linked to navigation in terms of terrain and mapping. Other words like 'library' or 'planet' are less directly connected to navigation, and some are already revealed or neutral.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.7,
+          "library": 0.6,
+          "teacher": 0.55
+        },
+        "ranked_guesses": [
+          "engine",
+          "library",
+          "teacher"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding or directing. 'Engine' and 'library' are associated with systems and information, respectively, which can be linked to navigation. 'Teacher' is slightly less direct but can relate to guiding or instructing, fitting the navigation theme. Prior guesses have already revealed 'battery', 'harbor', 'highway', 'honey', 'planet', and 'robot', so these options are plausible next guesses.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "voyage",
+        "count": 1,
+        "rationale": "Only one red word remains: 'voyage'. The clue directly matches the word, ensuring a safe guess without risking the assassin 'beacon' or other blue words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.3,
+          "beacon": 0.7,
+          "mountain": 0.5,
+          "palace": 0.4,
+          "voyage": 0.95
+        },
+        "ranked_guesses": [
+          "voyage",
+          "beacon",
+          "mountain",
+          "palace",
+          "autumn"
+        ],
+        "rationale": "The clue 'voyage' with count 1 strongly suggests the word 'voyage' itself, which is still unrevealed. Other words like 'beacon' (navigation aid), 'mountain' (destination), 'palace' (exotic destination), and 'autumn' (travel season) are less direct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "voyage": 1.0
+        },
+        "ranked_guesses": [
+          "voyage"
+        ],
+        "rationale": "The clue is 'voyage' with count 1, and 'voyage' is on the board and unrevealed. It's a direct match, so we guess it.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "voyage": 1.0
+        },
+        "ranked_guesses": [
+          "voyage"
+        ],
+        "rationale": "The clue 'voyage' with count 1 strongly points to the word 'voyage' itself, which is still unrevealed. Since the count is 1, we should guess 'voyage' and then stop.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "violin"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "harbor"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "performance"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dancer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "singer"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "tools"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "hammer"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "road"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "highway"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "engine"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "technology"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sweet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "honey"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "book"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "library"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "robot"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "battery"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "animal"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "voyage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "voyage"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 60,
+    "public_event_count": 37,
+    "reason": "all_words_found",
+    "seed": 2,
+    "team_blue": "gpt-4.1-nano",
+    "team_red": "deepseek-v4-pro",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.7,
+              "festival": 0.6,
+              "guitar": 0.95,
+              "singer": 0.9,
+              "violin": 0.95
+            },
+            "ranked_guesses": [
+              "guitar",
+              "violin",
+              "singer",
+              "dancer",
+              "festival"
+            ],
+            "rationale": "Clue 'music' strongly suggests musical instruments and performers. Guitar and violin are direct instruments. Singer is a music performer. Dancer and festival are related but less direct. We have 3 guesses to make, so we'll start with the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.6,
+              "festival": 0.5,
+              "guitar": 0.95,
+              "singer": 0.85,
+              "violin": 0.9
+            },
+            "ranked_guesses": [
+              "guitar",
+              "violin",
+              "singer",
+              "dancer",
+              "festival"
+            ],
+            "rationale": "The clue 'music' strongly suggests musical instruments and performers. 'Guitar' and 'violin' are direct instruments, 'singer' is a music performer. 'Dancer' and 'festival' are related but less direct. We have 3 guesses to make, so we'll start with the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.7,
+              "festival": 0.6,
+              "guitar": 0.95,
+              "singer": 0.85,
+              "violin": 0.95
+            },
+            "ranked_guesses": [
+              "guitar",
+              "violin",
+              "singer",
+              "dancer",
+              "festival"
+            ],
+            "rationale": "The clue 'music' strongly suggests instruments like guitar and violin, and performers like singer. Dancer and festival are related but less direct. With count 3, we should guess the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "violin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 3,
+          "rationale": "Connects guitar, violin, and singer without overlapping with other words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.6,
+              "harbor": 0.8,
+              "voyage": 0.75
+            },
+            "ranked_guesses": [
+              "harbor",
+              "voyage",
+              "engine"
+            ],
+            "rationale": "The clue 'navigation' strongly suggests words related to travel or movement. 'Harbor' and 'voyage' are directly associated with navigation and travel. 'Engine' is also related as it powers vehicles used in navigation. 'Harbor' and 'voyage' are the most directly connected, hence higher confidence. 'Engine' is a bit more general but still relevant.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "harbor": 0.7,
+              "mountain": 0.5,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "harbor",
+              "voyage",
+              "mountain"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel or places associated with movement. 'Harbor' and 'voyage' are strongly connected to navigation and travel, making them prime guesses. 'Mountain' is somewhat related as a geographical feature often navigated or explored, but less directly. Other words like 'engine' or 'beacon' could be relevant but are less directly tied to navigation in this context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "harbor": 0.75,
+              "mountain": 0.5,
+              "voyage": 0.65
+            },
+            "ranked_guesses": [
+              "harbor",
+              "voyage",
+              "mountain"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or places associated with movement. 'Harbor' and 'voyage' are strongly connected to navigation and travel. 'Mountain' is somewhat related as a geographical feature often navigated or explored. The other words are less directly connected to the concept of navigation.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "harbor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "Related to harbor and highway, both associated with movement and travel."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "performance"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.9,
+              "festival": 0.7,
+              "robot": 0.5,
+              "singer": 0.85
+            },
+            "ranked_guesses": [
+              "dancer",
+              "singer",
+              "festival",
+              "robot"
+            ],
+            "rationale": "The clue 'performance' (count 3) likely relates to performing arts. 'Dancer' and 'singer' are strong candidates as performers. 'Festival' could be a performance event. 'Robot' might perform tasks but is less directly related. We have 4 guesses remaining, but only 3 words to find. The top 3 are strong, so we should guess them. 'Robot' is a weaker fourth option if needed.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.9,
+              "engine": 0.3,
+              "festival": 0.7,
+              "singer": 0.85,
+              "teacher": 0.4
+            },
+            "ranked_guesses": [
+              "dancer",
+              "singer",
+              "festival",
+              "teacher",
+              "engine"
+            ],
+            "rationale": "Clue 'performance' with count 3 suggests words related to performing arts. 'dancer' and 'singer' are strong fits. 'festival' is a possible performance venue. 'teacher' and 'engine' are weaker connections. We have 4 guesses remaining, so we can guess the top 3 confidently.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.9,
+              "engine": 0.4,
+              "festival": 0.7,
+              "robot": 0.5,
+              "singer": 0.85
+            },
+            "ranked_guesses": [
+              "dancer",
+              "singer",
+              "festival",
+              "robot",
+              "engine"
+            ],
+            "rationale": "The clue 'performance' (count 3) strongly suggests words related to performing arts. 'Dancer' and 'singer' are direct performers. 'Festival' is a performance event. 'Robot' could perform tasks, and 'engine' performs work, but they are less directly related to the arts context implied by the previous 'music' clue and the revealed red 'guitar'. We have 4 guesses remaining, so we should guess the top 3 confidently.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dancer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "singer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "performance",
+          "count": 3,
+          "rationale": "Links dancer, singer, and festival without overlapping board words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "tools"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.6,
+              "copper": 0.55,
+              "engine": 0.75,
+              "hammer": 0.8
+            },
+            "ranked_guesses": [
+              "hammer",
+              "engine",
+              "battery",
+              "copper"
+            ],
+            "rationale": "The clue 'tools' suggests items associated with tools or equipment. 'Hammer' and 'engine' are strongly related to tools or mechanical devices. 'Battery' and 'copper' are also associated with tools or materials used in tools. 'Hammer' and 'engine' are the top guesses due to their direct connection to tools, while 'battery' and 'copper' are plausible but slightly less direct.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.6,
+              "copper": 0.5,
+              "engine": 0.7,
+              "hammer": 0.8
+            },
+            "ranked_guesses": [
+              "hammer",
+              "engine",
+              "battery",
+              "copper"
+            ],
+            "rationale": "The clue 'tools' suggests items associated with tools or equipment. 'Hammer' and 'engine' are strongly linked to tools or mechanical devices. 'Battery' and 'copper' are related to materials or components often used in tools or machinery. 'Hammer' has the highest confidence due to its direct association with tools, followed by 'engine' as a device requiring tools for maintenance or assembly. 'Battery' and 'copper' are more peripheral but still relevant to the theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.5,
+              "engine": 0.6,
+              "hammer": 0.8
+            },
+            "ranked_guesses": [
+              "hammer",
+              "engine",
+              "battery"
+            ],
+            "rationale": "The clue 'tools' suggests items associated with tools or equipment. 'Hammer' is a direct tool, making it the top guess. 'Engine' and 'battery' are related to machinery and power sources, which can also be considered tools or components used in tools. 'Animal', 'mountain', and 'library' are less related to tools, so they are lower priority.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "hammer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "tools",
+          "count": 3,
+          "rationale": "Several words related to tools or items used in construction or repair are present, such as 'hammer', 'engine', and 'battery'. This can help identify blue words associated with tools or mechanical items."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "road"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "highway": 0.95,
+              "voyage": 0.5
+            },
+            "ranked_guesses": [
+              "highway",
+              "engine",
+              "voyage"
+            ],
+            "rationale": "Clue 'road' with count 2 strongly suggests 'highway' as a direct synonym. For the second word, 'engine' relates to road vehicles, and 'voyage' is a stretch but could be a journey on a road. We have 3 guesses remaining, so we can guess both 'highway' and 'engine' safely.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "highway": 0.95
+            },
+            "ranked_guesses": [
+              "highway",
+              "engine"
+            ],
+            "rationale": "Clue 'road' (count 2) strongly suggests 'highway' as a direct synonym. 'Engine' is a common road vehicle component, fitting the second guess. Other words like 'voyage' or 'mountain' are less directly related.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "highway": 0.95,
+              "voyage": 0.5
+            },
+            "ranked_guesses": [
+              "highway",
+              "engine",
+              "voyage"
+            ],
+            "rationale": "Clue 'road' strongly suggests 'highway' as a direct synonym. 'Engine' relates to vehicles on roads. 'Voyage' is a weaker connection via travel. We have 3 guesses remaining, so we can guess at least 2.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "highway"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "road",
+          "count": 2,
+          "rationale": "Connects to highway and voyage, both red words. Avoids beacon (assassin) and other unrelated words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "mountain": 0.5,
+              "robot": 0.6
+            },
+            "ranked_guesses": [
+              "engine",
+              "robot",
+              "mountain"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to movement or guiding. 'Engine' and 'robot' are strongly associated with mechanisms that navigate or move. 'Mountain' can be linked to navigation in terms of terrain or mapping. 'Voyage' was guessed previously and is also relevant, but to avoid risk, the top guesses focus on mechanical and natural navigation themes.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.75,
+              "mountain": 0.65,
+              "robot": 0.55
+            },
+            "ranked_guesses": [
+              "engine",
+              "mountain",
+              "robot"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, movement, or guiding. 'Engine' and 'mountain' are strongly associated with navigation and travel, while 'robot' can be linked to technology and navigation systems. 'Animal', 'autumn', 'battery', 'beacon', 'copper', 'festival', 'honey', 'leather', 'library', 'planet', 'spider', 'stone', 'teacher', and 'voyage' are less directly connected to the theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.7,
+              "mountain": 0.5,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "voyage",
+              "mountain"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Voyage' directly relates to travel, and 'mountain' can be associated with exploration or navigation in rugged terrains. 'Animal' is a less direct connection but can relate to navigation in the context of animal migration or navigation skills of animals. Other words like 'library' or 'planet' are less directly connected to navigation.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "engine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "The words 'mountain' and 'planet' are associated with navigation and exploration, fitting the clue."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.9,
+              "robot": 0.3,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "planet",
+              "voyage",
+              "robot"
+            ],
+            "rationale": "Clue 'space' with count 2. 'planet' is strongly space-related. 'voyage' could relate to space travel. 'robot' is often associated with space exploration. Considering previous clues: 'music' (guitar, violin), 'performance' (dancer, singer), 'road' (highway). Remaining red words likely include 'planet' and possibly 'voyage' or 'robot'. 'planet' is the most confident guess.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "library": 0.3,
+              "planet": 0.9,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "planet",
+              "voyage",
+              "library"
+            ],
+            "rationale": "Clue 'space' (2) strongly suggests 'planet' (celestial body in space). 'Voyage' could relate to space travel, but less direct. 'Library' is a stretch (study space). Considering revealed red words: dancer, guitar, highway, hammer. No other obvious space-related words. Guessing 'planet' first.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.9,
+              "robot": 0.5,
+              "voyage": 0.7
+            },
+            "ranked_guesses": [
+              "planet",
+              "voyage",
+              "robot"
+            ],
+            "rationale": "Clue 'space' with count 2. Top guess 'planet' strongly relates to space. Second guess 'voyage' could relate to space travel. 'robot' is a weaker connection. We have 3 guesses remaining, so we can guess both 'planet' and 'voyage'.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "Connects planet and robot, both red words remaining."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "technology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.4,
+              "library": 0.3,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "robot",
+              "copper",
+              "library"
+            ],
+            "rationale": "The clue 'technology' strongly suggests words related to tech or machinery. 'Robot' is highly relevant, with a high confidence. 'Copper' can relate to electrical wiring or electronics, making it a plausible guess. 'Library' is less directly connected but could be associated with information technology or digital libraries, thus included as a secondary option. Other words like 'animal', 'mountain', or 'voyage' are less relevant to 'technology'.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.4,
+              "library": 0.3,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "robot",
+              "copper",
+              "library"
+            ],
+            "rationale": "The clue 'technology' strongly suggests 'robot' as it directly relates to technological advancements. 'Copper' is a material used in electronic components, making it a plausible guess. 'Library' is less directly related but can be associated with information technology and digital libraries, thus considered as a secondary option.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.3,
+              "copper": 0.4,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "robot",
+              "copper",
+              "battery"
+            ],
+            "rationale": "Given the clue 'technology', 'robot' is the most directly related and has a high confidence. 'Copper' and 'battery' are also associated with technology and electronics, but less directly. Other words like 'animal' or 'mountain' are less relevant to the clue.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "technology",
+          "count": 2,
+          "rationale": "The words 'battery' and 'copper' are associated with technology and materials, fitting the clue. Both are linked to the blue team and haven't been revealed yet."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sweet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.4,
+              "festival": 0.6,
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey",
+              "festival",
+              "autumn"
+            ],
+            "rationale": "The clue 'sweet' with count 2 suggests words associated with sweetness. 'Honey' is a direct sweet substance. 'Festival' might relate to sweet treats or celebrations, but it's weaker. 'Autumn' could connect to sweet harvests like apples, but it's less direct. We have 3 guesses remaining, so we should guess at least 2. I'll guess 'honey' first, then 'festival' if 'honey' is correct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.2,
+              "festival": 0.3,
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey",
+              "festival",
+              "autumn"
+            ],
+            "rationale": "The clue 'sweet' with count 2 suggests two words related to sweetness. 'Honey' is directly sweet. Other possibilities like 'festival' (sweet treats?) or 'autumn' (sweet harvest?) are weaker. We have 3 guesses remaining, but only 2 red words left to find. I'll guess 'honey' first.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.3,
+              "festival": 0.2,
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey",
+              "autumn",
+              "festival"
+            ],
+            "rationale": "The clue 'sweet' with count 2 suggests two words related to sweetness. 'Honey' is a direct match. Other possibilities like 'autumn' (sweet harvest) or 'festival' (sweet treats) are weaker. We have 3 guesses remaining, so we can guess 'honey' and then reassess.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "honey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sweet",
+          "count": 2,
+          "rationale": "HONEY and LIBRARY (as in a sweet spot or collection of sweet things) are red words. Avoids BEACON, COPPER, etc."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "harbor": 0.6,
+              "singer": 0.5
+            },
+            "ranked_guesses": [
+              "engine",
+              "harbor",
+              "singer"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding or traveling. 'Engine' and 'harbor' are strongly associated with navigation and travel, with 'engine' being a core component of vehicles and ships, and 'harbor' being a port for ships. 'Singer' is less directly related but could be linked through the idea of 'performance' or 'music' as a form of navigation through sound or cultural journey, but it's less certain. Prior guesses have already revealed some words, so focusing on the most relevant and unguessed options is prudent.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "harbor": 0.6,
+              "singer": 0.5
+            },
+            "ranked_guesses": [
+              "engine",
+              "harbor",
+              "singer"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding or traveling. 'Engine' and 'harbor' are strongly associated with navigation and travel. 'Singer' is less directly related but could be linked through the idea of performance or communication, which can be tangentially connected to navigation in a broad sense. Given the remaining guesses and the context, these seem the most promising options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.6,
+              "harbor": 0.55,
+              "singer": 0.4
+            },
+            "ranked_guesses": [
+              "engine",
+              "harbor",
+              "singer"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or tools used in navigation. 'Engine' and 'harbor' are strongly associated with transportation and navigation. 'Singer' is less directly related but could be linked via the broader theme of performance or travel. 'Engine' and 'harbor' are prioritized due to their strong connection to navigation and travel, fitting the clue well.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "The words 'mountain' and 'library' are associated with navigation and knowledge, respectively, and are still unrevealed. This helps target remaining blue words while avoiding red or neutral words."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "book"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "leather": 0.3,
+              "library": 0.9,
+              "teacher": 0.7
+            },
+            "ranked_guesses": [
+              "library",
+              "teacher",
+              "leather"
+            ],
+            "rationale": "The clue 'book' strongly suggests 'library' as a place where books are found. 'Teacher' is also related to books through education. 'Leather' could be a material for book covers, but it's a weaker connection. We have 3 guesses remaining and the clue count is 2, so we should guess at least 2 words. 'Library' is very likely red, and 'teacher' is a reasonable second guess. We should avoid guessing 'leather' unless necessary.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "leather": 0.3,
+              "library": 0.95,
+              "teacher": 0.85
+            },
+            "ranked_guesses": [
+              "library",
+              "teacher",
+              "leather"
+            ],
+            "rationale": "The clue 'book' strongly suggests 'library' as a place with many books. 'Teacher' is also related to books in an educational context. 'Leather' could be a book binding material but is less direct. We have 3 guesses remaining and the clue count is 2, so we should guess the top 2 and then stop.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.3,
+              "library": 0.9,
+              "teacher": 0.6
+            },
+            "ranked_guesses": [
+              "library",
+              "teacher",
+              "autumn"
+            ],
+            "rationale": "The clue 'book' with count 2 suggests two remaining red words related to books. 'Library' is a strong association with books. 'Teacher' could be related to books in an educational context. 'Autumn' might be associated with back-to-school and books, but it's weaker. We have 3 guesses remaining, so we can guess up to 2 words for this clue.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "library"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "book",
+          "count": 2,
+          "rationale": "Connects to LIBRARY and TEACHER (both red), avoids BEACON (assassin) and other words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "harbor": 0.6,
+              "library": 0.5
+            },
+            "ranked_guesses": [
+              "engine",
+              "harbor",
+              "library"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding or exploring. 'Engine' and 'harbor' are strongly associated with navigation and travel. 'Library' is a more indirect connection, possibly relating to navigation through knowledge or maps. Given the remaining guesses, these seem the most promising options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "library": 0.6,
+              "teacher": 0.5
+            },
+            "ranked_guesses": [
+              "engine",
+              "library",
+              "teacher"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding or directing. 'Engine' and 'library' are associated with navigation through vehicles and books/maps, respectively. 'Teacher' can be linked to guiding or instructing, fitting the navigation theme. 'Engine' is the most directly related, followed by 'library' and 'teacher'.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "harbor": 0.6,
+              "library": 0.5
+            },
+            "ranked_guesses": [
+              "engine",
+              "harbor",
+              "library"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Engine' and 'harbor' are strongly associated with navigation and travel. 'Library' is a bit less direct but can relate to navigation through books or information. Given the current guesses and remaining guesses, these are the most promising options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "The blue team has already identified 'harbor' and 'engine' related to navigation, and there are two remaining blue words associated with navigation: 'mountain' and 'planet'. This clue aims to connect these remaining words."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "robot"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.95
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "The clue 'robot' with count 2 suggests two words related to robots. 'robot' itself is on the board and is a direct match. The second word is likely 'battery' as robots often need batteries. Other possibilities like 'engine' or 'copper' are less direct. Since we have guesses remaining, we should guess 'robot' first.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.1,
+              "autumn": 0.1,
+              "battery": 0.7,
+              "beacon": 0.2,
+              "copper": 0.3,
+              "festival": 0.1,
+              "leather": 0.1,
+              "mountain": 0.1,
+              "palace": 0.1,
+              "robot": 0.95,
+              "spider": 0.1,
+              "stone": 0.1,
+              "voyage": 0.1
+            },
+            "ranked_guesses": [
+              "robot",
+              "battery",
+              "copper",
+              "beacon",
+              "autumn",
+              "animal",
+              "festival",
+              "leather",
+              "mountain",
+              "palace",
+              "spider",
+              "stone",
+              "voyage"
+            ],
+            "rationale": "The clue 'robot' strongly suggests the word 'robot' itself. 'Battery' is a common component of robots, making it a likely second guess. Other words have weaker connections.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.7,
+              "copper": 0.5,
+              "robot": 0.95
+            },
+            "ranked_guesses": [
+              "robot",
+              "battery",
+              "copper"
+            ],
+            "rationale": "The clue 'robot' with count 2 suggests two words related to robots. 'robot' itself is the most direct and is still unrevealed. 'battery' is a common component of robots, making it a strong second guess. 'copper' is used in electronics and wiring, which could be associated with robots, but less directly. Other words like 'spider' (robot spider?) or 'beacon' (robot beacon?) are weaker. We have 3 guesses remaining, so we can guess 'robot' and 'battery' confidently, and consider 'copper' if needed.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "battery"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "robot",
+          "count": 2,
+          "rationale": "Connects to 'robot' (red) and 'voyage' (red) via sci-fi/space travel themes, avoiding 'beacon' (assassin) and other words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.7,
+              "mountain": 0.5,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "voyage",
+              "mountain"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'animal' and 'voyage' are somewhat related to exploration and travel, fitting the navigation theme. 'mountain' is also associated with terrain that might require navigation. 'animal' is less directly related but could be linked to navigation in natural environments. The other words like 'library', 'teacher', or 'robot' are less connected to the navigation theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8,
+              "mountain": 0.4,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "voyage",
+              "mountain"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Animal' can be associated with navigation in the context of animal migration or tracking. 'Voyage' directly relates to travel and navigation. 'Mountain' can be linked to navigation in terms of terrain and mapping. Other words like 'library' or 'planet' are less directly connected to navigation, and some are already revealed or neutral.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.7,
+              "library": 0.6,
+              "teacher": 0.55
+            },
+            "ranked_guesses": [
+              "engine",
+              "library",
+              "teacher"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding or directing. 'Engine' and 'library' are associated with systems and information, respectively, which can be linked to navigation. 'Teacher' is slightly less direct but can relate to guiding or instructing, fitting the navigation theme. Prior guesses have already revealed 'battery', 'harbor', 'highway', 'honey', 'planet', and 'robot', so these options are plausible next guesses.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "animal"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "The words 'mountain' and 'harbor' are associated with navigation and are still unrevealed for the blue team."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "voyage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.3,
+              "beacon": 0.7,
+              "mountain": 0.5,
+              "palace": 0.4,
+              "voyage": 0.95
+            },
+            "ranked_guesses": [
+              "voyage",
+              "beacon",
+              "mountain",
+              "palace",
+              "autumn"
+            ],
+            "rationale": "The clue 'voyage' with count 1 strongly suggests the word 'voyage' itself, which is still unrevealed. Other words like 'beacon' (navigation aid), 'mountain' (destination), 'palace' (exotic destination), and 'autumn' (travel season) are less direct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "voyage": 1.0
+            },
+            "ranked_guesses": [
+              "voyage"
+            ],
+            "rationale": "The clue is 'voyage' with count 1, and 'voyage' is on the board and unrevealed. It's a direct match, so we guess it.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "voyage": 1.0
+            },
+            "ranked_guesses": [
+              "voyage"
+            ],
+            "rationale": "The clue 'voyage' with count 1 strongly points to the word 'voyage' itself, which is still unrevealed. Since the count is 1, we should guess 'voyage' and then stop.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "voyage",
+          "count": 1,
+          "rationale": "Only one red word remains: 'voyage'. The clue directly matches the word, ensuring a safe guess without risking the assassin 'beacon' or other blue words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

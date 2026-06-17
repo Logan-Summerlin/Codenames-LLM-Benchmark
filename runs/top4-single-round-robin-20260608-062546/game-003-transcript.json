@@ -1,0 +1,2409 @@
+{
+  "board": {
+    "identities": {
+      "beijing": "neutral",
+      "cliff": "blue",
+      "cook": "blue",
+      "crash": "red",
+      "doctor": "red",
+      "ground": "blue",
+      "hawk": "blue",
+      "knife": "red",
+      "lion": "red",
+      "log": "neutral",
+      "needle": "neutral",
+      "night": "blue",
+      "nut": "red",
+      "octopus": "neutral",
+      "phoenix": "neutral",
+      "pumpkin": "neutral",
+      "satellite": "red",
+      "sink": "blue",
+      "staff": "assassin",
+      "stock": "red",
+      "stream": "red",
+      "teacher": "neutral",
+      "war": "blue",
+      "washer": "blue",
+      "witch": "red"
+    },
+    "revealed": [
+      "cliff",
+      "cook",
+      "doctor",
+      "ground",
+      "hawk",
+      "knife",
+      "night",
+      "satellite",
+      "sink",
+      "stock",
+      "stream",
+      "war",
+      "washer",
+      "witch"
+    ],
+    "words": {
+      "beijing": "neutral",
+      "cliff": "blue",
+      "cook": "blue",
+      "crash": "red",
+      "doctor": "red",
+      "ground": "blue",
+      "hawk": "blue",
+      "knife": "red",
+      "lion": "red",
+      "log": "neutral",
+      "needle": "neutral",
+      "night": "blue",
+      "nut": "red",
+      "octopus": "neutral",
+      "phoenix": "neutral",
+      "pumpkin": "neutral",
+      "satellite": "red",
+      "sink": "blue",
+      "staff": "assassin",
+      "stock": "red",
+      "stream": "red",
+      "teacher": "neutral",
+      "war": "blue",
+      "washer": "blue",
+      "witch": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "kitchen",
+        "count": 3,
+        "rationale": "Knife, nut, and sink are all commonly associated with a kitchen environment."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cook": 0.95,
+          "knife": 0.95,
+          "sink": 0.95
+        },
+        "ranked_guesses": [
+          "cook",
+          "knife",
+          "sink"
+        ],
+        "rationale": "Cook, knife, and sink are all directly associated with a kitchen.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cook": 0.95,
+          "knife": 0.95,
+          "sink": 0.95,
+          "washer": 0.9
+        },
+        "ranked_guesses": [
+          "cook",
+          "knife",
+          "sink",
+          "washer"
+        ],
+        "rationale": "These four words are directly associated with a kitchen environment.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cook": 0.95,
+          "knife": 0.95,
+          "sink": 0.95,
+          "washer": 0.9
+        },
+        "ranked_guesses": [
+          "cook",
+          "knife",
+          "sink",
+          "washer"
+        ],
+        "rationale": "These four words are directly associated with a kitchen environment.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "plummet",
+        "count": 2,
+        "rationale": "Connects cliff and sink (both can involve falling or going down)."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9,
+          "sink": 0.6
+        },
+        "ranked_guesses": [
+          "cliff",
+          "sink"
+        ],
+        "rationale": "Plummet means to fall straight down. A cliff is where things plummet from, and sink describes a downward movement or falling in water.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.4,
+          "crash": 0.6
+        },
+        "ranked_guesses": [
+          "crash",
+          "cliff"
+        ],
+        "rationale": "Plummet means to fall straight down at high speed; 'crash' and 'cliff' are the most relevant words on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.6,
+          "crash": 0.2,
+          "sink": 0.3
+        },
+        "ranked_guesses": [
+          "cliff",
+          "sink",
+          "crash"
+        ],
+        "rationale": "Plummet strongly associates with falling off a cliff or a sinking object.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "surgery",
+        "count": 2,
+        "rationale": "Doctor and knife are both associated with surgery."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "knife": 0.9
+        },
+        "ranked_guesses": [
+          "doctor",
+          "knife"
+        ],
+        "rationale": "Doctor and knife are both directly associated with surgery.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "knife": 0.9
+        },
+        "ranked_guesses": [
+          "doctor",
+          "knife"
+        ],
+        "rationale": "Doctor and knife are strongly associated with surgery.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "knife": 0.9
+        },
+        "ranked_guesses": [
+          "doctor",
+          "knife"
+        ],
+        "rationale": "Doctor and knife are both directly associated with surgery.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "plumbing",
+        "count": 2,
+        "rationale": "Connects sink and washer, both of which are blue words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "sink": 0.9,
+          "washer": 0.7
+        },
+        "ranked_guesses": [
+          "sink",
+          "washer"
+        ],
+        "rationale": "Both sink and washer are common plumbing fixtures.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "sink": 0.9,
+          "washer": 0.7
+        },
+        "ranked_guesses": [
+          "sink",
+          "washer"
+        ],
+        "rationale": "Both sink and washer are common plumbing fixtures.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "sink": 0.9,
+          "washer": 0.7
+        },
+        "ranked_guesses": [
+          "sink",
+          "washer"
+        ],
+        "rationale": "Both sink and washer are common plumbing fixtures.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "market",
+        "count": 3,
+        "rationale": "Stock, nut, and crash are all terms frequently associated with financial markets."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nut": 0.6,
+          "pumpkin": 0.5,
+          "stock": 0.9
+        },
+        "ranked_guesses": [
+          "stock",
+          "nut",
+          "pumpkin"
+        ],
+        "rationale": "Stock is a direct financial market term. Nut and pumpkin are common items found in a market.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nut": 0.5,
+          "pumpkin": 0.6,
+          "stock": 0.95
+        },
+        "ranked_guesses": [
+          "stock",
+          "pumpkin",
+          "nut"
+        ],
+        "rationale": "Stock is directly related to market. Pumpkin and nut are common items sold in markets.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nut": 0.6,
+          "pumpkin": 0.7,
+          "stock": 0.95
+        },
+        "ranked_guesses": [
+          "stock",
+          "pumpkin",
+          "nut"
+        ],
+        "rationale": "Stock is directly related to market. Pumpkin and nut are common items found in a market.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aerial",
+        "count": 2,
+        "rationale": "Connects hawk and satellite, but satellite is red. Wait, hawk is blue. Let's try hawk and cliff? No. Hawk and night? No. Let's use 'predator' for hawk and lion, but lion is red. Let's use 'altitude' for hawk and cliff."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.4,
+          "satellite": 0.6
+        },
+        "ranked_guesses": [
+          "satellite",
+          "hawk"
+        ],
+        "rationale": "Both satellite and hawk are associated with being aerial.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.6,
+          "phoenix": 0.1,
+          "satellite": 0.3
+        },
+        "ranked_guesses": [
+          "hawk",
+          "satellite",
+          "phoenix"
+        ],
+        "rationale": "Aerial refers to things in the air. Hawk is a bird, satellite is in orbit, and phoenix is a mythical flying bird.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.3,
+          "satellite": 0.6
+        },
+        "ranked_guesses": [
+          "satellite",
+          "hawk"
+        ],
+        "rationale": "Aerial refers to things in the air. Satellite and hawk are the strongest candidates on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Lion, witch, and stream are all associated with nature or natural settings."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.8,
+          "hawk": 0.9,
+          "lion": 0.85
+        },
+        "ranked_guesses": [
+          "hawk",
+          "lion",
+          "cliff"
+        ],
+        "rationale": "Hawk, lion, and cliff are all strongly associated with nature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.9,
+          "lion": 0.85,
+          "stream": 0.8
+        },
+        "ranked_guesses": [
+          "hawk",
+          "lion",
+          "stream"
+        ],
+        "rationale": "Hawk, lion, and stream are all strongly associated with nature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.85,
+          "hawk": 0.8,
+          "lion": 0.75
+        },
+        "ranked_guesses": [
+          "cliff",
+          "hawk",
+          "lion"
+        ],
+        "rationale": "Cliff, hawk, and lion are all strongly associated with nature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "darkness",
+        "count": 2,
+        "rationale": "Connects 'night' and 'ground' (as in buried/dark) or 'cliff' (shadows), but primarily targets 'night' and 'ground' or 'cliff'. Actually, 'night' and 'war' (dark times) or 'night' and 'cliff' (nightfall). Let's go with 'night' and 'cliff' as they are often associated with darkness/shadows."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "night": 0.9,
+          "witch": 0.3
+        },
+        "ranked_guesses": [
+          "night",
+          "witch"
+        ],
+        "rationale": "Night is a direct synonym for darkness. Witch is associated with darkness/night.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "night": 0.9,
+          "witch": 0.4
+        },
+        "ranked_guesses": [
+          "night",
+          "witch"
+        ],
+        "rationale": "Night is a direct synonym for darkness. Witch is often associated with darkness/dark magic.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "night": 0.9,
+          "witch": 0.4
+        },
+        "ranked_guesses": [
+          "night",
+          "witch"
+        ],
+        "rationale": "'Night' is a direct synonym for darkness. 'Witch' is often associated with darkness/night.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "water",
+        "count": 2,
+        "rationale": "The words stream and washer are both associated with water."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "stream": 0.9,
+          "washer": 0.85
+        },
+        "ranked_guesses": [
+          "stream",
+          "washer"
+        ],
+        "rationale": "Stream is a body of water and washer is a common household appliance that uses water.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "stream": 0.9,
+          "washer": 0.85
+        },
+        "ranked_guesses": [
+          "stream",
+          "washer"
+        ],
+        "rationale": "Stream and washer are both strongly associated with water.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "stream": 0.9,
+          "washer": 0.8
+        },
+        "ranked_guesses": [
+          "stream",
+          "washer"
+        ],
+        "rationale": "Stream is a body of water and washer uses water.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "earth",
+        "count": 2,
+        "rationale": "Connects 'ground' and 'cliff', both of which are blue words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.4,
+          "ground": 0.9
+        },
+        "ranked_guesses": [
+          "ground",
+          "cliff"
+        ],
+        "rationale": "'Ground' is a direct synonym for earth. 'Cliff' is a geological feature of the earth.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.4,
+          "ground": 0.9
+        },
+        "ranked_guesses": [
+          "ground",
+          "cliff"
+        ],
+        "rationale": "'Ground' is a direct synonym for earth. 'Cliff' is a geological feature of the earth.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ground": 0.9,
+          "pumpkin": 0.1
+        },
+        "ranked_guesses": [
+          "ground",
+          "pumpkin"
+        ],
+        "rationale": "'Ground' is a direct synonym for earth. 'Pumpkin' grows in the earth, making it a secondary possibility.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Satellite and crash are both related to space or things falling from space."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.6,
+          "satellite": 0.9
+        },
+        "ranked_guesses": [
+          "satellite",
+          "phoenix"
+        ],
+        "rationale": "Satellite is directly related to space. Phoenix is a constellation.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.6,
+          "satellite": 0.9
+        },
+        "ranked_guesses": [
+          "satellite",
+          "phoenix"
+        ],
+        "rationale": "Satellite is directly related to space. Phoenix is a constellation.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.6,
+          "satellite": 0.9
+        },
+        "ranked_guesses": [
+          "satellite",
+          "phoenix"
+        ],
+        "rationale": "Satellite is directly related to space. Phoenix is a constellation, which is a common association with space.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "conflict",
+        "count": 2,
+        "rationale": "The remaining blue words are 'cliff' and 'war'. 'War' is directly related to conflict, and 'cliff' can be associated with a 'cliffhanger' or a precipice of conflict, though 'war' is the primary target. I am attempting to link the two remaining blue words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crash": 0.3,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "crash"
+        ],
+        "rationale": "'War' is a direct synonym for conflict. 'Crash' could refer to a conflict in the sense of a collision.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crash": 0.3,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "crash"
+        ],
+        "rationale": "'War' is a direct synonym for conflict. 'Crash' could refer to a conflict in a physical or financial sense, but 'war' is the strongest match.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crash": 0.3,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "crash"
+        ],
+        "rationale": "'War' is a direct synonym for conflict. 'Crash' can refer to a conflict in the sense of a collision.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fable",
+        "count": 2,
+        "rationale": "Lion and witch are classic subjects of fables and stories."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.7,
+          "witch": 0.9
+        },
+        "ranked_guesses": [
+          "witch",
+          "phoenix"
+        ],
+        "rationale": "Witch and phoenix are classic elements of fables and folklore.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.7,
+          "witch": 0.9
+        },
+        "ranked_guesses": [
+          "witch",
+          "phoenix"
+        ],
+        "rationale": "Witch and phoenix are classic elements of fables and folklore.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.7,
+          "witch": 0.9
+        },
+        "ranked_guesses": [
+          "witch",
+          "phoenix"
+        ],
+        "rationale": "Witch and phoenix are classic characters found in fables.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "edge",
+        "count": 1,
+        "rationale": "The only remaining blue word is 'cliff', which is the edge of a landmass."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9
+        },
+        "ranked_guesses": [
+          "cliff"
+        ],
+        "rationale": "The clue 'edge' strongly relates to a 'cliff', which is one of the remaining words on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9
+        },
+        "ranked_guesses": [
+          "cliff"
+        ],
+        "rationale": "The clue 'edge' strongly relates to the word 'cliff'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9
+        },
+        "ranked_guesses": [
+          "cliff"
+        ],
+        "rationale": "The clue 'edge' strongly relates to 'cliff'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "kitchen"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cook"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "plummet"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "surgery"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "knife"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "plumbing"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "sink"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "market"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "stock"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "aerial"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hawk"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "darkness"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "night"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "stream"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "washer"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "earth"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ground"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "satellite"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "conflict"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "war"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fable"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "witch"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "edge"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "cliff"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 56,
+    "public_event_count": 38,
+    "reason": "all_words_found",
+    "seed": "top4-single-round-robin-003-google_gemini_3.1_flash_lite-vs-google_gemma_4_31b_it",
+    "team_blue": "Gemma 4 31B",
+    "team_red": "Gemini 3.1 Flash Lite",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "kitchen"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cook": 0.95,
+              "knife": 0.95,
+              "sink": 0.95
+            },
+            "ranked_guesses": [
+              "cook",
+              "knife",
+              "sink"
+            ],
+            "rationale": "Cook, knife, and sink are all directly associated with a kitchen.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cook": 0.95,
+              "knife": 0.95,
+              "sink": 0.95,
+              "washer": 0.9
+            },
+            "ranked_guesses": [
+              "cook",
+              "knife",
+              "sink",
+              "washer"
+            ],
+            "rationale": "These four words are directly associated with a kitchen environment.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cook": 0.95,
+              "knife": 0.95,
+              "sink": 0.95,
+              "washer": 0.9
+            },
+            "ranked_guesses": [
+              "cook",
+              "knife",
+              "sink",
+              "washer"
+            ],
+            "rationale": "These four words are directly associated with a kitchen environment.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cook"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "kitchen",
+          "count": 3,
+          "rationale": "Knife, nut, and sink are all commonly associated with a kitchen environment."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "plummet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.9,
+              "sink": 0.6
+            },
+            "ranked_guesses": [
+              "cliff",
+              "sink"
+            ],
+            "rationale": "Plummet means to fall straight down. A cliff is where things plummet from, and sink describes a downward movement or falling in water.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.4,
+              "crash": 0.6
+            },
+            "ranked_guesses": [
+              "crash",
+              "cliff"
+            ],
+            "rationale": "Plummet means to fall straight down at high speed; 'crash' and 'cliff' are the most relevant words on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.6,
+              "crash": 0.2,
+              "sink": 0.3
+            },
+            "ranked_guesses": [
+              "cliff",
+              "sink",
+              "crash"
+            ],
+            "rationale": "Plummet strongly associates with falling off a cliff or a sinking object.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "plummet",
+          "count": 2,
+          "rationale": "Connects cliff and sink (both can involve falling or going down)."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "surgery"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "knife": 0.9
+            },
+            "ranked_guesses": [
+              "doctor",
+              "knife"
+            ],
+            "rationale": "Doctor and knife are both directly associated with surgery.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "knife": 0.9
+            },
+            "ranked_guesses": [
+              "doctor",
+              "knife"
+            ],
+            "rationale": "Doctor and knife are strongly associated with surgery.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "knife": 0.9
+            },
+            "ranked_guesses": [
+              "doctor",
+              "knife"
+            ],
+            "rationale": "Doctor and knife are both directly associated with surgery.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "knife"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "surgery",
+          "count": 2,
+          "rationale": "Doctor and knife are both associated with surgery."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "plumbing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "sink": 0.9,
+              "washer": 0.7
+            },
+            "ranked_guesses": [
+              "sink",
+              "washer"
+            ],
+            "rationale": "Both sink and washer are common plumbing fixtures.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "sink": 0.9,
+              "washer": 0.7
+            },
+            "ranked_guesses": [
+              "sink",
+              "washer"
+            ],
+            "rationale": "Both sink and washer are common plumbing fixtures.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "sink": 0.9,
+              "washer": 0.7
+            },
+            "ranked_guesses": [
+              "sink",
+              "washer"
+            ],
+            "rationale": "Both sink and washer are common plumbing fixtures.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "sink"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "plumbing",
+          "count": 2,
+          "rationale": "Connects sink and washer, both of which are blue words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "market"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "nut": 0.6,
+              "pumpkin": 0.5,
+              "stock": 0.9
+            },
+            "ranked_guesses": [
+              "stock",
+              "nut",
+              "pumpkin"
+            ],
+            "rationale": "Stock is a direct financial market term. Nut and pumpkin are common items found in a market.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "nut": 0.5,
+              "pumpkin": 0.6,
+              "stock": 0.95
+            },
+            "ranked_guesses": [
+              "stock",
+              "pumpkin",
+              "nut"
+            ],
+            "rationale": "Stock is directly related to market. Pumpkin and nut are common items sold in markets.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "nut": 0.6,
+              "pumpkin": 0.7,
+              "stock": 0.95
+            },
+            "ranked_guesses": [
+              "stock",
+              "pumpkin",
+              "nut"
+            ],
+            "rationale": "Stock is directly related to market. Pumpkin and nut are common items found in a market.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "stock"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "market",
+          "count": 3,
+          "rationale": "Stock, nut, and crash are all terms frequently associated with financial markets."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "aerial"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.4,
+              "satellite": 0.6
+            },
+            "ranked_guesses": [
+              "satellite",
+              "hawk"
+            ],
+            "rationale": "Both satellite and hawk are associated with being aerial.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.6,
+              "phoenix": 0.1,
+              "satellite": 0.3
+            },
+            "ranked_guesses": [
+              "hawk",
+              "satellite",
+              "phoenix"
+            ],
+            "rationale": "Aerial refers to things in the air. Hawk is a bird, satellite is in orbit, and phoenix is a mythical flying bird.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.3,
+              "satellite": 0.6
+            },
+            "ranked_guesses": [
+              "satellite",
+              "hawk"
+            ],
+            "rationale": "Aerial refers to things in the air. Satellite and hawk are the strongest candidates on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "aerial",
+          "count": 2,
+          "rationale": "Connects hawk and satellite, but satellite is red. Wait, hawk is blue. Let's try hawk and cliff? No. Hawk and night? No. Let's use 'predator' for hawk and lion, but lion is red. Let's use 'altitude' for hawk and cliff."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.8,
+              "hawk": 0.9,
+              "lion": 0.85
+            },
+            "ranked_guesses": [
+              "hawk",
+              "lion",
+              "cliff"
+            ],
+            "rationale": "Hawk, lion, and cliff are all strongly associated with nature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.9,
+              "lion": 0.85,
+              "stream": 0.8
+            },
+            "ranked_guesses": [
+              "hawk",
+              "lion",
+              "stream"
+            ],
+            "rationale": "Hawk, lion, and stream are all strongly associated with nature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.85,
+              "hawk": 0.8,
+              "lion": 0.75
+            },
+            "ranked_guesses": [
+              "cliff",
+              "hawk",
+              "lion"
+            ],
+            "rationale": "Cliff, hawk, and lion are all strongly associated with nature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hawk"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Lion, witch, and stream are all associated with nature or natural settings."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "darkness"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "night": 0.9,
+              "witch": 0.3
+            },
+            "ranked_guesses": [
+              "night",
+              "witch"
+            ],
+            "rationale": "Night is a direct synonym for darkness. Witch is associated with darkness/night.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "night": 0.9,
+              "witch": 0.4
+            },
+            "ranked_guesses": [
+              "night",
+              "witch"
+            ],
+            "rationale": "Night is a direct synonym for darkness. Witch is often associated with darkness/dark magic.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "night": 0.9,
+              "witch": 0.4
+            },
+            "ranked_guesses": [
+              "night",
+              "witch"
+            ],
+            "rationale": "'Night' is a direct synonym for darkness. 'Witch' is often associated with darkness/night.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "night"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "darkness",
+          "count": 2,
+          "rationale": "Connects 'night' and 'ground' (as in buried/dark) or 'cliff' (shadows), but primarily targets 'night' and 'ground' or 'cliff'. Actually, 'night' and 'war' (dark times) or 'night' and 'cliff' (nightfall). Let's go with 'night' and 'cliff' as they are often associated with darkness/shadows."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "stream": 0.9,
+              "washer": 0.85
+            },
+            "ranked_guesses": [
+              "stream",
+              "washer"
+            ],
+            "rationale": "Stream is a body of water and washer is a common household appliance that uses water.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "stream": 0.9,
+              "washer": 0.85
+            },
+            "ranked_guesses": [
+              "stream",
+              "washer"
+            ],
+            "rationale": "Stream and washer are both strongly associated with water.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "stream": 0.9,
+              "washer": 0.8
+            },
+            "ranked_guesses": [
+              "stream",
+              "washer"
+            ],
+            "rationale": "Stream is a body of water and washer uses water.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "stream"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "washer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "water",
+          "count": 2,
+          "rationale": "The words stream and washer are both associated with water."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "earth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.4,
+              "ground": 0.9
+            },
+            "ranked_guesses": [
+              "ground",
+              "cliff"
+            ],
+            "rationale": "'Ground' is a direct synonym for earth. 'Cliff' is a geological feature of the earth.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.4,
+              "ground": 0.9
+            },
+            "ranked_guesses": [
+              "ground",
+              "cliff"
+            ],
+            "rationale": "'Ground' is a direct synonym for earth. 'Cliff' is a geological feature of the earth.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ground": 0.9,
+              "pumpkin": 0.1
+            },
+            "ranked_guesses": [
+              "ground",
+              "pumpkin"
+            ],
+            "rationale": "'Ground' is a direct synonym for earth. 'Pumpkin' grows in the earth, making it a secondary possibility.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ground"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "earth",
+          "count": 2,
+          "rationale": "Connects 'ground' and 'cliff', both of which are blue words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.6,
+              "satellite": 0.9
+            },
+            "ranked_guesses": [
+              "satellite",
+              "phoenix"
+            ],
+            "rationale": "Satellite is directly related to space. Phoenix is a constellation.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.6,
+              "satellite": 0.9
+            },
+            "ranked_guesses": [
+              "satellite",
+              "phoenix"
+            ],
+            "rationale": "Satellite is directly related to space. Phoenix is a constellation.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.6,
+              "satellite": 0.9
+            },
+            "ranked_guesses": [
+              "satellite",
+              "phoenix"
+            ],
+            "rationale": "Satellite is directly related to space. Phoenix is a constellation, which is a common association with space.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "satellite"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "Satellite and crash are both related to space or things falling from space."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "conflict"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "crash": 0.3,
+              "war": 0.9
+            },
+            "ranked_guesses": [
+              "war",
+              "crash"
+            ],
+            "rationale": "'War' is a direct synonym for conflict. 'Crash' could refer to a conflict in the sense of a collision.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crash": 0.3,
+              "war": 0.9
+            },
+            "ranked_guesses": [
+              "war",
+              "crash"
+            ],
+            "rationale": "'War' is a direct synonym for conflict. 'Crash' could refer to a conflict in a physical or financial sense, but 'war' is the strongest match.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crash": 0.3,
+              "war": 0.9
+            },
+            "ranked_guesses": [
+              "war",
+              "crash"
+            ],
+            "rationale": "'War' is a direct synonym for conflict. 'Crash' can refer to a conflict in the sense of a collision.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "war"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "conflict",
+          "count": 2,
+          "rationale": "The remaining blue words are 'cliff' and 'war'. 'War' is directly related to conflict, and 'cliff' can be associated with a 'cliffhanger' or a precipice of conflict, though 'war' is the primary target. I am attempting to link the two remaining blue words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fable"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.7,
+              "witch": 0.9
+            },
+            "ranked_guesses": [
+              "witch",
+              "phoenix"
+            ],
+            "rationale": "Witch and phoenix are classic elements of fables and folklore.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.7,
+              "witch": 0.9
+            },
+            "ranked_guesses": [
+              "witch",
+              "phoenix"
+            ],
+            "rationale": "Witch and phoenix are classic elements of fables and folklore.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.7,
+              "witch": 0.9
+            },
+            "ranked_guesses": [
+              "witch",
+              "phoenix"
+            ],
+            "rationale": "Witch and phoenix are classic characters found in fables.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "witch"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fable",
+          "count": 2,
+          "rationale": "Lion and witch are classic subjects of fables and stories."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "edge"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.9
+            },
+            "ranked_guesses": [
+              "cliff"
+            ],
+            "rationale": "The clue 'edge' strongly relates to a 'cliff', which is one of the remaining words on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.9
+            },
+            "ranked_guesses": [
+              "cliff"
+            ],
+            "rationale": "The clue 'edge' strongly relates to the word 'cliff'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.9
+            },
+            "ranked_guesses": [
+              "cliff"
+            ],
+            "rationale": "The clue 'edge' strongly relates to 'cliff'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "cliff"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "edge",
+          "count": 1,
+          "rationale": "The only remaining blue word is 'cliff', which is the edge of a landmass."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

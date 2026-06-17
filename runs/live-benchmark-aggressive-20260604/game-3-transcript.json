@@ -1,0 +1,1627 @@
+{
+  "board": {
+    "identities": {
+      "airport": "blue",
+      "alien": "red",
+      "anchor": "red",
+      "animal": "red",
+      "artist": "neutral",
+      "castle": "assassin",
+      "circle": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "flower": "red",
+      "ghost": "blue",
+      "guitar": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "jungle": "neutral",
+      "kernel": "red",
+      "mirror": "blue",
+      "robot": "blue",
+      "rocket": "blue",
+      "sailor": "neutral",
+      "shadow": "red",
+      "silver": "blue",
+      "spirit": "blue",
+      "station": "neutral",
+      "summer": "red"
+    },
+    "revealed": [
+      "airport",
+      "alien",
+      "anchor",
+      "flower",
+      "ghost",
+      "guitar",
+      "honey",
+      "kernel",
+      "mirror",
+      "robot",
+      "rocket",
+      "silver",
+      "spirit",
+      "summer"
+    ],
+    "words": {
+      "airport": "blue",
+      "alien": "red",
+      "anchor": "red",
+      "animal": "red",
+      "artist": "neutral",
+      "castle": "assassin",
+      "circle": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "flower": "red",
+      "ghost": "blue",
+      "guitar": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "jungle": "neutral",
+      "kernel": "red",
+      "mirror": "blue",
+      "robot": "blue",
+      "rocket": "blue",
+      "sailor": "neutral",
+      "shadow": "red",
+      "silver": "blue",
+      "spirit": "blue",
+      "station": "neutral",
+      "summer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "seed",
+        "count": 3,
+        "rationale": "Connects kernel, flower, and summer (as a season for growth). Avoids blue words and assassin."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.6,
+          "flower": 0.9,
+          "kernel": 0.9
+        },
+        "ranked_guesses": [
+          "flower",
+          "kernel",
+          "animal"
+        ],
+        "rationale": "Seed directly relates to flower (producer of seeds) and kernel (a seed itself). Animal is plausible as they disperse seeds. Other words have weaker connections.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.9,
+          "honey": 0.4,
+          "jungle": 0.3,
+          "kernel": 0.8,
+          "summer": 0.2
+        },
+        "ranked_guesses": [
+          "flower",
+          "kernel",
+          "honey",
+          "jungle",
+          "summer"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.8,
+          "honey": 0.6,
+          "kernel": 0.9
+        },
+        "ranked_guesses": [
+          "kernel",
+          "flower",
+          "honey"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "soul",
+        "count": 2,
+        "rationale": "Ghost and spirit are both blue."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "spirit": 0.8
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 1.0,
+          "shadow": 1.0,
+          "spirit": 1.0
+        },
+        "ranked_guesses": [
+          "spirit",
+          "ghost",
+          "shadow"
+        ],
+        "rationale": "Soul is synonymous with spirit and often associated with ghost. Shadow is a weaker connection.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "{'word': 'ghost', 'confidence': 0.9}": 0.9,
+          "{'word': 'shadow', 'confidence': 0.3}": 0.3,
+          "{'word': 'spirit', 'confidence': 0.85}": 0.85
+        },
+        "ranked_guesses": [
+          "{'word': 'ghost', 'confidence': 0.9}",
+          "{'word': 'spirit', 'confidence': 0.85}",
+          "{'word': 'shadow', 'confidence': 0.3}"
+        ],
+        "rationale": "Soul is closely related to ghost and spirit, both directly associated with the concept of a soul. Shadow is a weaker connection, possibly as a metaphor for the soul's shadow.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "time",
+        "count": 3,
+        "rationale": "Summer (season), circle (clock face), and shadow (sundial) are all related to time."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.7,
+          "shadow": 0.8,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "shadow",
+          "circle"
+        ],
+        "rationale": "These words are commonly associated with time: summer (season), shadow (sundial), circle (clock face).",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.9,
+          "silver": 0.7,
+          "summer": 0.8
+        },
+        "ranked_guesses": [
+          "doctor",
+          "summer",
+          "silver"
+        ],
+        "rationale": "Doctor is strongly associated with time (Doctor Who). Summer is a season, a unit of time. Silver can refer to a time period (silver age).",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.6,
+          "shadow": 0.5,
+          "summer": 0.8
+        },
+        "ranked_guesses": [
+          "summer",
+          "circle",
+          "shadow"
+        ],
+        "rationale": "Summer is a season, directly a time period. Circle relates to cyclical time (e.g., circle of time). Shadow relates to time of day (sundial). Other words like desert, castle, or rocket are less directly associated with time.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shiny",
+        "count": 4,
+        "rationale": "Covers mirror, silver, robot, and rocket - all are shiny or reflective. Avoids red/assassin words."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.5,
+          "mirror": 0.8,
+          "robot": 0.6,
+          "rocket": 0.4,
+          "silver": 0.9
+        },
+        "ranked_guesses": [
+          "silver",
+          "mirror",
+          "robot",
+          "alien",
+          "rocket"
+        ],
+        "rationale": "Silver and mirror are strongly associated with shiny. Robot and alien are often depicted with shiny metallic surfaces or UFOs. Rocket is also shiny. These are the most plausible among remaining words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.95,
+          "robot": 0.7,
+          "rocket": 0.6,
+          "silver": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "silver",
+          "robot",
+          "rocket"
+        ],
+        "rationale": "Mirror and silver are strongly associated with shiny. Robot and rocket are often depicted as shiny metallic objects. Clue count is 4, so these are likely the intended blue words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.95,
+          "robot": 0.8,
+          "rocket": 0.85,
+          "silver": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "silver",
+          "rocket",
+          "robot"
+        ],
+        "rationale": "The clue 'shiny' strongly suggests reflective or metallic objects. Mirror, silver, rocket, and robot are all commonly associated with shininess. The count of 4 indicates the clue-giver likely targeted these four blue words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "monster",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "robot": 0.7,
+          "shadow": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "robot",
+          "shadow"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "robot": 0.8,
+          "shadow": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "robot",
+          "shadow"
+        ],
+        "rationale": "Monster strongly associates with alien and robot; shadow is a common monster attribute. Guessing these three as the likely red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "robot": 0.8,
+          "shadow": 0.7
+        },
+        "ranked_guesses": [
+          "alien",
+          "robot",
+          "shadow"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "Airport and rocket both relate to flight; honey does not."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket"
+        ],
+        "rationale": "Flight directly relates to airports (place for flights) and rockets (space flight). Other words like station or sailor are less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "rocket": 0.8
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket"
+        ],
+        "rationale": "Airport and rocket are directly related to flight. The clue count is 2, so likely these are the intended blue words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "rocket": 0.85
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket"
+        ],
+        "rationale": "Airport is a place where flights take off and land. Rocket is a vehicle that flies into space or through the air. Both are strongly related to the clue 'flight'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "Anchor, circle, and guitar are all associated with metal (anchor is metal, circle can be a metal ring, guitar has metal strings). Animal and shadow are not strongly metal-related, reducing risk of hitting neutrals or assassin."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "guitar": 0.6,
+          "station": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "station",
+          "guitar"
+        ],
+        "rationale": "The clue 'metal' suggests metallic objects or materials. 'Anchor' is a strong candidate as it is commonly made of metal. 'Station' may refer to a train station with metal tracks. 'Guitar' has metal strings and is associated with heavy metal music. These are the most plausible red words among the unrevealed ones.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "artist": 0.6,
+          "guitar": 0.85
+        },
+        "ranked_guesses": [
+          "anchor",
+          "guitar",
+          "artist"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "castle": 0.5,
+          "guitar": 0.8
+        },
+        "ranked_guesses": [
+          "anchor",
+          "guitar",
+          "castle"
+        ],
+        "rationale": "Anchor is strongly associated with metal. Guitar has metal strings. Castle may have metal elements like gates or armor, making it a plausible third guess.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sweet",
+        "count": 1,
+        "rationale": "Honey is sweet, and this clue uniquely points to our remaining blue word without associating with red words or the assassin."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.95
+        },
+        "ranked_guesses": [
+          "honey"
+        ],
+        "rationale": "Honey is directly associated with 'sweet'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.0,
+          "artist": 0.0,
+          "castle": 0.0,
+          "circle": 0.0,
+          "desert": 0.05,
+          "doctor": 0.0,
+          "honey": 0.95,
+          "hunter": 0.0,
+          "jungle": 0.0,
+          "sailor": 0.0,
+          "shadow": 0.0,
+          "station": 0.0
+        },
+        "ranked_guesses": [
+          "honey",
+          "desert",
+          "artist",
+          "castle",
+          "circle",
+          "doctor",
+          "hunter",
+          "jungle",
+          "sailor",
+          "shadow",
+          "station",
+          "animal"
+        ],
+        "rationale": "The clue 'sweet' most directly suggests 'honey'. Other words like 'desert' might be a stretch. Since the clue count is 1, we should guess only honey and then stop.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.9
+        },
+        "ranked_guesses": [
+          "honey"
+        ],
+        "rationale": "Honey is directly associated with 'sweet', and it is an unrevealed word.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "seed"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "kernel"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "soul"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ghost"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spirit"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "time"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "shiny"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "silver"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "monster"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "airport"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sweet"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "honey"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 32,
+    "public_event_count": 28,
+    "reason": "all_words_found",
+    "seed": "3",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "seed"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.6,
+              "flower": 0.9,
+              "kernel": 0.9
+            },
+            "ranked_guesses": [
+              "flower",
+              "kernel",
+              "animal"
+            ],
+            "rationale": "Seed directly relates to flower (producer of seeds) and kernel (a seed itself). Animal is plausible as they disperse seeds. Other words have weaker connections.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.9,
+              "honey": 0.4,
+              "jungle": 0.3,
+              "kernel": 0.8,
+              "summer": 0.2
+            },
+            "ranked_guesses": [
+              "flower",
+              "kernel",
+              "honey",
+              "jungle",
+              "summer"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.8,
+              "honey": 0.6,
+              "kernel": 0.9
+            },
+            "ranked_guesses": [
+              "kernel",
+              "flower",
+              "honey"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "kernel"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "seed",
+          "count": 3,
+          "rationale": "Connects kernel, flower, and summer (as a season for growth). Avoids blue words and assassin."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "soul"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "spirit": 0.8
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 1.0,
+              "shadow": 1.0,
+              "spirit": 1.0
+            },
+            "ranked_guesses": [
+              "spirit",
+              "ghost",
+              "shadow"
+            ],
+            "rationale": "Soul is synonymous with spirit and often associated with ghost. Shadow is a weaker connection.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "{'word': 'ghost', 'confidence': 0.9}": 0.9,
+              "{'word': 'shadow', 'confidence': 0.3}": 0.3,
+              "{'word': 'spirit', 'confidence': 0.85}": 0.85
+            },
+            "ranked_guesses": [
+              "{'word': 'ghost', 'confidence': 0.9}",
+              "{'word': 'spirit', 'confidence': 0.85}",
+              "{'word': 'shadow', 'confidence': 0.3}"
+            ],
+            "rationale": "Soul is closely related to ghost and spirit, both directly associated with the concept of a soul. Shadow is a weaker connection, possibly as a metaphor for the soul's shadow.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ghost"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spirit"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "soul",
+          "count": 2,
+          "rationale": "Ghost and spirit are both blue."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "time"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.7,
+              "shadow": 0.8,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "shadow",
+              "circle"
+            ],
+            "rationale": "These words are commonly associated with time: summer (season), shadow (sundial), circle (clock face).",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.9,
+              "silver": 0.7,
+              "summer": 0.8
+            },
+            "ranked_guesses": [
+              "doctor",
+              "summer",
+              "silver"
+            ],
+            "rationale": "Doctor is strongly associated with time (Doctor Who). Summer is a season, a unit of time. Silver can refer to a time period (silver age).",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.6,
+              "shadow": 0.5,
+              "summer": 0.8
+            },
+            "ranked_guesses": [
+              "summer",
+              "circle",
+              "shadow"
+            ],
+            "rationale": "Summer is a season, directly a time period. Circle relates to cyclical time (e.g., circle of time). Shadow relates to time of day (sundial). Other words like desert, castle, or rocket are less directly associated with time.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "time",
+          "count": 3,
+          "rationale": "Summer (season), circle (clock face), and shadow (sundial) are all related to time."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "shiny"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.5,
+              "mirror": 0.8,
+              "robot": 0.6,
+              "rocket": 0.4,
+              "silver": 0.9
+            },
+            "ranked_guesses": [
+              "silver",
+              "mirror",
+              "robot",
+              "alien",
+              "rocket"
+            ],
+            "rationale": "Silver and mirror are strongly associated with shiny. Robot and alien are often depicted with shiny metallic surfaces or UFOs. Rocket is also shiny. These are the most plausible among remaining words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.95,
+              "robot": 0.7,
+              "rocket": 0.6,
+              "silver": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "silver",
+              "robot",
+              "rocket"
+            ],
+            "rationale": "Mirror and silver are strongly associated with shiny. Robot and rocket are often depicted as shiny metallic objects. Clue count is 4, so these are likely the intended blue words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.95,
+              "robot": 0.8,
+              "rocket": 0.85,
+              "silver": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "silver",
+              "rocket",
+              "robot"
+            ],
+            "rationale": "The clue 'shiny' strongly suggests reflective or metallic objects. Mirror, silver, rocket, and robot are all commonly associated with shininess. The count of 4 indicates the clue-giver likely targeted these four blue words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "silver"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "shiny",
+          "count": 4,
+          "rationale": "Covers mirror, silver, robot, and rocket - all are shiny or reflective. Avoids red/assassin words."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "monster"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "robot": 0.7,
+              "shadow": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "robot",
+              "shadow"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "robot": 0.8,
+              "shadow": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "robot",
+              "shadow"
+            ],
+            "rationale": "Monster strongly associates with alien and robot; shadow is a common monster attribute. Guessing these three as the likely red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "robot": 0.8,
+              "shadow": 0.7
+            },
+            "ranked_guesses": [
+              "alien",
+              "robot",
+              "shadow"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "monster",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket"
+            ],
+            "rationale": "Flight directly relates to airports (place for flights) and rockets (space flight). Other words like station or sailor are less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "rocket": 0.8
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket"
+            ],
+            "rationale": "Airport and rocket are directly related to flight. The clue count is 2, so likely these are the intended blue words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "rocket": 0.85
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket"
+            ],
+            "rationale": "Airport is a place where flights take off and land. Rocket is a vehicle that flies into space or through the air. Both are strongly related to the clue 'flight'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "airport"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "Airport and rocket both relate to flight; honey does not."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "guitar": 0.6,
+              "station": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "station",
+              "guitar"
+            ],
+            "rationale": "The clue 'metal' suggests metallic objects or materials. 'Anchor' is a strong candidate as it is commonly made of metal. 'Station' may refer to a train station with metal tracks. 'Guitar' has metal strings and is associated with heavy metal music. These are the most plausible red words among the unrevealed ones.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "artist": 0.6,
+              "guitar": 0.85
+            },
+            "ranked_guesses": [
+              "anchor",
+              "guitar",
+              "artist"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "castle": 0.5,
+              "guitar": 0.8
+            },
+            "ranked_guesses": [
+              "anchor",
+              "guitar",
+              "castle"
+            ],
+            "rationale": "Anchor is strongly associated with metal. Guitar has metal strings. Castle may have metal elements like gates or armor, making it a plausible third guess.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "Anchor, circle, and guitar are all associated with metal (anchor is metal, circle can be a metal ring, guitar has metal strings). Animal and shadow are not strongly metal-related, reducing risk of hitting neutrals or assassin."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sweet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.95
+            },
+            "ranked_guesses": [
+              "honey"
+            ],
+            "rationale": "Honey is directly associated with 'sweet'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.0,
+              "artist": 0.0,
+              "castle": 0.0,
+              "circle": 0.0,
+              "desert": 0.05,
+              "doctor": 0.0,
+              "honey": 0.95,
+              "hunter": 0.0,
+              "jungle": 0.0,
+              "sailor": 0.0,
+              "shadow": 0.0,
+              "station": 0.0
+            },
+            "ranked_guesses": [
+              "honey",
+              "desert",
+              "artist",
+              "castle",
+              "circle",
+              "doctor",
+              "hunter",
+              "jungle",
+              "sailor",
+              "shadow",
+              "station",
+              "animal"
+            ],
+            "rationale": "The clue 'sweet' most directly suggests 'honey'. Other words like 'desert' might be a stretch. Since the clue count is 1, we should guess only honey and then stop.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.9
+            },
+            "ranked_guesses": [
+              "honey"
+            ],
+            "rationale": "Honey is directly associated with 'sweet', and it is an unrevealed word.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "honey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sweet",
+          "count": 1,
+          "rationale": "Honey is sweet, and this clue uniquely points to our remaining blue word without associating with red words or the assassin."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,2355 @@
+{
+  "board": {
+    "identities": {
+      "bat": "neutral",
+      "charge": "red",
+      "code": "red",
+      "diamond": "red",
+      "germany": "red",
+      "hand": "assassin",
+      "himalayas": "neutral",
+      "hook": "blue",
+      "laser": "blue",
+      "london": "blue",
+      "mail": "neutral",
+      "march": "neutral",
+      "nail": "blue",
+      "novel": "red",
+      "play": "red",
+      "point": "blue",
+      "pole": "neutral",
+      "port": "blue",
+      "press": "blue",
+      "pumpkin": "red",
+      "scale": "blue",
+      "spy": "red",
+      "time": "neutral",
+      "tube": "red",
+      "wall": "neutral"
+    },
+    "revealed": [
+      "charge",
+      "code",
+      "diamond",
+      "germany",
+      "hook",
+      "laser",
+      "london",
+      "mail",
+      "nail",
+      "novel",
+      "play",
+      "point",
+      "pole",
+      "pumpkin",
+      "spy",
+      "tube"
+    ],
+    "words": {
+      "bat": "neutral",
+      "charge": "red",
+      "code": "red",
+      "diamond": "red",
+      "germany": "red",
+      "hand": "assassin",
+      "himalayas": "neutral",
+      "hook": "blue",
+      "laser": "blue",
+      "london": "blue",
+      "mail": "neutral",
+      "march": "neutral",
+      "nail": "blue",
+      "novel": "red",
+      "play": "red",
+      "point": "blue",
+      "pole": "neutral",
+      "port": "blue",
+      "press": "blue",
+      "pumpkin": "red",
+      "scale": "blue",
+      "spy": "red",
+      "time": "neutral",
+      "tube": "red",
+      "wall": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "write",
+        "count": 3,
+        "rationale": "associated with novel, code, and press"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "code": 0.9,
+          "mail": 0.8,
+          "novel": 0.7
+        },
+        "ranked_guesses": [
+          "code",
+          "mail",
+          "novel"
+        ],
+        "rationale": "Words related to writing",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "code": 0.8,
+          "mail": 0.7,
+          "write": 0.9
+        },
+        "ranked_guesses": [
+          "write",
+          "code",
+          "mail"
+        ],
+        "rationale": "Direct clue matches for 'write'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "code": 0.9,
+          "mail": 0.8,
+          "novel": 0.7
+        },
+        "ranked_guesses": [
+          "code",
+          "mail",
+          "novel"
+        ],
+        "rationale": "Words related to writing",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "detective",
+        "count": 2,
+        "rationale": "Related to investigation and uncovering secrets, which connects to 'spy' and 'code'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detective": 0.8,
+          "spy": 0.75
+        },
+        "ranked_guesses": [
+          "detective",
+          "spy"
+        ],
+        "rationale": "Both words relate directly to the clue 'detective' and are safe choices.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detective": 0.8,
+          "spy": 0.75
+        },
+        "ranked_guesses": [
+          "detective",
+          "spy"
+        ],
+        "rationale": "Both words relate directly to the clue 'detective' and have high confidence.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detective": 0.8,
+          "spy": 0.75
+        },
+        "ranked_guesses": [
+          "detective",
+          "spy"
+        ],
+        "rationale": "Both words relate directly to the clue 'detective'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 2,
+        "rationale": "related to pumpkin"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pumpkin": 0.9
+        },
+        "ranked_guesses": [
+          "pumpkin"
+        ],
+        "rationale": "pumpkin is a type of fruit",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pumpkin": 0.85
+        },
+        "ranked_guesses": [
+          "pumpkin"
+        ],
+        "rationale": "pumpkin is a type of fruit",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pumpkin": 0.85
+        },
+        "ranked_guesses": [
+          "pumpkin"
+        ],
+        "rationale": "pumpkin is a type of fruit",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "detect",
+        "count": 2,
+        "rationale": "Related to uncovering or finding, connects to 'spy' and 'code'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detective": 0.8,
+          "point": 0.75
+        },
+        "ranked_guesses": [
+          "detective",
+          "point"
+        ],
+        "rationale": "Both words relate to the clue 'detect' and have high confidence.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detective": 0.8,
+          "point": 0.75
+        },
+        "ranked_guesses": [
+          "detective",
+          "point"
+        ],
+        "rationale": "Both words relate to the clue 'detect' and have high confidence.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detective": 0.75,
+          "point": 0.7
+        },
+        "ranked_guesses": [
+          "detective",
+          "point"
+        ],
+        "rationale": "Both words relate to the clue 'detect' and have high confidence.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "book",
+        "count": 2,
+        "rationale": "relating to novel and possibly other words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.85
+        },
+        "ranked_guesses": [
+          "novel"
+        ],
+        "rationale": "Direct match with 'book' clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.85
+        },
+        "ranked_guesses": [
+          "novel"
+        ],
+        "rationale": "Direct match with 'book' clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.85
+        },
+        "ranked_guesses": [
+          "novel"
+        ],
+        "rationale": "Direct match with the clue 'book'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "detect",
+        "count": 2,
+        "rationale": "Related to investigation and finding clues, which connects to 'laser' and 'hook'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detect": 0.75,
+          "detective": 0.8
+        },
+        "ranked_guesses": [
+          "detective",
+          "detect"
+        ],
+        "rationale": "Both words directly relate to the clue 'detect' and have high confidence.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detect": 0.75,
+          "detective": 0.8
+        },
+        "ranked_guesses": [
+          "detective",
+          "detect"
+        ],
+        "rationale": "Both words are directly related to the clue 'detect'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "detect": 0.75,
+          "detective": 0.8
+        },
+        "ranked_guesses": [
+          "detective",
+          "detect"
+        ],
+        "rationale": "Both words directly relate to the clue 'detect' and have high confidence.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "energy",
+        "count": 2,
+        "rationale": "relates to charge and possibly other red words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "laser": 0.85
+        },
+        "ranked_guesses": [
+          "laser",
+          "charge"
+        ],
+        "rationale": "Both 'laser' and 'charge' are related to energy",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "laser": 0.85
+        },
+        "ranked_guesses": [
+          "laser",
+          "charge"
+        ],
+        "rationale": "Both 'laser' and 'charge' are strongly related to 'energy'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "laser": 0.85
+        },
+        "ranked_guesses": [
+          "laser",
+          "charge"
+        ],
+        "rationale": "Both 'laser' and 'charge' are directly related to 'energy'",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 2,
+        "rationale": "Both words relate to items used for work or construction."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.8,
+          "tool": 0.75
+        },
+        "ranked_guesses": [
+          "nail",
+          "tool"
+        ],
+        "rationale": "Both 'nail' and 'tool' are directly related to the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hand": 0.75,
+          "nail": 0.8
+        },
+        "ranked_guesses": [
+          "nail",
+          "hand"
+        ],
+        "rationale": "Both 'nail' and 'hand' are tools that fit the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.8,
+          "tool": 0.75
+        },
+        "ranked_guesses": [
+          "nail",
+          "tool"
+        ],
+        "rationale": "Both 'nail' and 'tool' are directly related to the clue 'tool'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "electric",
+        "count": 2,
+        "rationale": "relates to charge and possibly other red words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.8,
+          "pole": 0.71
+        },
+        "ranked_guesses": [
+          "charge",
+          "pole"
+        ],
+        "rationale": "electric matches charge and pole",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.85,
+          "pole": 0.8
+        },
+        "ranked_guesses": [
+          "charge",
+          "pole"
+        ],
+        "rationale": "electric matches charge and pole",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.85,
+          "pole": 0.8
+        },
+        "ranked_guesses": [
+          "charge",
+          "pole"
+        ],
+        "rationale": "electric matches charge and pole",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "hook",
+        "count": 1,
+        "rationale": "It relates to a tool or device, which connects to the word 'nail' already revealed."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "country",
+        "count": 1,
+        "rationale": "relates to a geographical location"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "germany": 0.85,
+          "london": 0.8
+        },
+        "ranked_guesses": [
+          "germany",
+          "london"
+        ],
+        "rationale": "Direct country matches",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "germany": 0.85,
+          "london": 0.8
+        },
+        "ranked_guesses": [
+          "germany",
+          "london"
+        ],
+        "rationale": "Direct country matches",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "germany": 0.85,
+          "london": 0.8
+        },
+        "ranked_guesses": [
+          "germany",
+          "london"
+        ],
+        "rationale": "Direct country matches",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "scale",
+        "count": 1,
+        "rationale": "It relates to measurement, which connects to the word 'point' already revealed."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "game",
+        "count": 1,
+        "rationale": "It relates to the concept of play, which is a word on the board."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.85
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The current clue is 'game' and 'play' is a direct match, implying a strong connection to the clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.85
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The current clue is 'game' and 'play' is a direct match, as it is related to games.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.85
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The current clue is 'game' and 'play' is a direct match, as it is a common word associated with games.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fishing",
+        "count": 1,
+        "rationale": "It relates to a tool used for catching fish, which connects to the word 'hook'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.8
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "Hook is a common fishing tool.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.8
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "Hook is a common tool used in fishing.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.8
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "Hook is commonly associated with fishing.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "jewel",
+        "count": 1,
+        "rationale": "relates to a valuable object, which could connect to the word 'diamond'"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.85
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "direct match to jewel clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.85
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "The current clue is 'jewel' which directly matches with 'diamond'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.85
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "direct match to jewel clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 1,
+        "rationale": "It relates to a device used for work, connecting to the word 'nail' already revealed."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tool": 0.8
+        },
+        "ranked_guesses": [
+          "tool"
+        ],
+        "rationale": "'Tool' directly relates to 'nail' as a tool used in construction.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tool": 0.8
+        },
+        "ranked_guesses": [
+          "tool"
+        ],
+        "rationale": "'Tool' directly relates to 'nail' as a tool used in construction.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tool": 0.8
+        },
+        "ranked_guesses": [
+          "tool"
+        ],
+        "rationale": "'Tool' directly relates to 'nail', which is a tool.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tube",
+        "count": 1,
+        "rationale": "It relates to a container or a transportation method."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "transport",
+        "count": 1,
+        "rationale": "It relates to a method of moving, which connects to the word 'tube' already revealed."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "pipe",
+        "count": 1,
+        "rationale": "It relates to a cylindrical object, which could be connected to the word 'tube'."
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tube": 0.85
+        },
+        "ranked_guesses": [
+          "tube"
+        ],
+        "rationale": "tube is a type of pipe",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tube": 0.85
+        },
+        "ranked_guesses": [
+          "tube"
+        ],
+        "rationale": "tube is a type of pipe",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tube": 0.85
+        },
+        "ranked_guesses": [
+          "tube"
+        ],
+        "rationale": "tube is a type of pipe",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "write"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "code"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mail"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "detective"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spy"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pumpkin"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "detect"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "point"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "book"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "novel"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "detect"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "energy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "laser"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "electric"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "charge"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pole"
+    },
+    {
+      "clue": {
+        "clue": "hook",
+        "count": 1,
+        "rationale": "It relates to a tool or device, which connects to the word 'nail' already revealed."
+      },
+      "event": "illegal_clue",
+      "matched_word": "hook",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "country"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "germany"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "london"
+    },
+    {
+      "clue": {
+        "clue": "scale",
+        "count": 1,
+        "rationale": "It relates to measurement, which connects to the word 'point' already revealed."
+      },
+      "event": "illegal_clue",
+      "matched_word": "scale",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "game"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "play"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fishing"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "hook"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "jewel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "diamond"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "tube",
+        "count": 1,
+        "rationale": "It relates to a container or a transportation method."
+      },
+      "event": "illegal_clue",
+      "matched_word": "tube",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "transport",
+        "count": 1,
+        "rationale": "It relates to a method of moving, which connects to the word 'tube' already revealed."
+      },
+      "event": "illegal_clue",
+      "matched_word": "port",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "pipe"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "tube"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 64,
+    "public_event_count": 44,
+    "reason": "all_words_found",
+    "seed": "codenames-live-9-001-meta_llama_llama_3_3_70b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Llama 3.3 70B Instruct",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "write"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "code": 0.9,
+              "mail": 0.8,
+              "novel": 0.7
+            },
+            "ranked_guesses": [
+              "code",
+              "mail",
+              "novel"
+            ],
+            "rationale": "Words related to writing",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "code": 0.8,
+              "mail": 0.7,
+              "write": 0.9
+            },
+            "ranked_guesses": [
+              "write",
+              "code",
+              "mail"
+            ],
+            "rationale": "Direct clue matches for 'write'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "code": 0.9,
+              "mail": 0.8,
+              "novel": 0.7
+            },
+            "ranked_guesses": [
+              "code",
+              "mail",
+              "novel"
+            ],
+            "rationale": "Words related to writing",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "code"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mail"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "write",
+          "count": 3,
+          "rationale": "associated with novel, code, and press"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "detective"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "detective": 0.8,
+              "spy": 0.75
+            },
+            "ranked_guesses": [
+              "detective",
+              "spy"
+            ],
+            "rationale": "Both words relate directly to the clue 'detective' and are safe choices.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "detective": 0.8,
+              "spy": 0.75
+            },
+            "ranked_guesses": [
+              "detective",
+              "spy"
+            ],
+            "rationale": "Both words relate directly to the clue 'detective' and have high confidence.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "detective": 0.8,
+              "spy": 0.75
+            },
+            "ranked_guesses": [
+              "detective",
+              "spy"
+            ],
+            "rationale": "Both words relate directly to the clue 'detective'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spy"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "detective",
+          "count": 2,
+          "rationale": "Related to investigation and uncovering secrets, which connects to 'spy' and 'code'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pumpkin": 0.9
+            },
+            "ranked_guesses": [
+              "pumpkin"
+            ],
+            "rationale": "pumpkin is a type of fruit",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pumpkin": 0.85
+            },
+            "ranked_guesses": [
+              "pumpkin"
+            ],
+            "rationale": "pumpkin is a type of fruit",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pumpkin": 0.85
+            },
+            "ranked_guesses": [
+              "pumpkin"
+            ],
+            "rationale": "pumpkin is a type of fruit",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pumpkin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fruit",
+          "count": 2,
+          "rationale": "related to pumpkin"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "detect"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "detective": 0.8,
+              "point": 0.75
+            },
+            "ranked_guesses": [
+              "detective",
+              "point"
+            ],
+            "rationale": "Both words relate to the clue 'detect' and have high confidence.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "detective": 0.8,
+              "point": 0.75
+            },
+            "ranked_guesses": [
+              "detective",
+              "point"
+            ],
+            "rationale": "Both words relate to the clue 'detect' and have high confidence.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "detective": 0.75,
+              "point": 0.7
+            },
+            "ranked_guesses": [
+              "detective",
+              "point"
+            ],
+            "rationale": "Both words relate to the clue 'detect' and have high confidence.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "point"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "detect",
+          "count": 2,
+          "rationale": "Related to uncovering or finding, connects to 'spy' and 'code'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "book"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.85
+            },
+            "ranked_guesses": [
+              "novel"
+            ],
+            "rationale": "Direct match with 'book' clue",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.85
+            },
+            "ranked_guesses": [
+              "novel"
+            ],
+            "rationale": "Direct match with 'book' clue",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.85
+            },
+            "ranked_guesses": [
+              "novel"
+            ],
+            "rationale": "Direct match with the clue 'book'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "novel"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "book",
+          "count": 2,
+          "rationale": "relating to novel and possibly other words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "detect"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "detect": 0.75,
+              "detective": 0.8
+            },
+            "ranked_guesses": [
+              "detective",
+              "detect"
+            ],
+            "rationale": "Both words directly relate to the clue 'detect' and have high confidence.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "detect": 0.75,
+              "detective": 0.8
+            },
+            "ranked_guesses": [
+              "detective",
+              "detect"
+            ],
+            "rationale": "Both words are directly related to the clue 'detect'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "detect": 0.75,
+              "detective": 0.8
+            },
+            "ranked_guesses": [
+              "detective",
+              "detect"
+            ],
+            "rationale": "Both words directly relate to the clue 'detect' and have high confidence.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "detect",
+          "count": 2,
+          "rationale": "Related to investigation and finding clues, which connects to 'laser' and 'hook'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "energy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "laser": 0.85
+            },
+            "ranked_guesses": [
+              "laser",
+              "charge"
+            ],
+            "rationale": "Both 'laser' and 'charge' are related to energy",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "laser": 0.85
+            },
+            "ranked_guesses": [
+              "laser",
+              "charge"
+            ],
+            "rationale": "Both 'laser' and 'charge' are strongly related to 'energy'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "laser": 0.85
+            },
+            "ranked_guesses": [
+              "laser",
+              "charge"
+            ],
+            "rationale": "Both 'laser' and 'charge' are directly related to 'energy'",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "laser"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "energy",
+          "count": 2,
+          "rationale": "relates to charge and possibly other red words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "nail": 0.8,
+              "tool": 0.75
+            },
+            "ranked_guesses": [
+              "nail",
+              "tool"
+            ],
+            "rationale": "Both 'nail' and 'tool' are directly related to the clue 'tool'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hand": 0.75,
+              "nail": 0.8
+            },
+            "ranked_guesses": [
+              "nail",
+              "hand"
+            ],
+            "rationale": "Both 'nail' and 'hand' are tools that fit the clue 'tool'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "nail": 0.8,
+              "tool": 0.75
+            },
+            "ranked_guesses": [
+              "nail",
+              "tool"
+            ],
+            "rationale": "Both 'nail' and 'tool' are directly related to the clue 'tool'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "tool",
+          "count": 2,
+          "rationale": "Both words relate to items used for work or construction."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "electric"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.8,
+              "pole": 0.71
+            },
+            "ranked_guesses": [
+              "charge",
+              "pole"
+            ],
+            "rationale": "electric matches charge and pole",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.85,
+              "pole": 0.8
+            },
+            "ranked_guesses": [
+              "charge",
+              "pole"
+            ],
+            "rationale": "electric matches charge and pole",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.85,
+              "pole": 0.8
+            },
+            "ranked_guesses": [
+              "charge",
+              "pole"
+            ],
+            "rationale": "electric matches charge and pole",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "charge"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pole"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "electric",
+          "count": 2,
+          "rationale": "relates to charge and possibly other red words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "country"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "germany"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "london"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "game"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "play"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fishing"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "hook"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "hook",
+          "count": 1,
+          "rationale": "It relates to a tool or device, which connects to the word 'nail' already revealed."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "jewel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "germany": 0.85,
+              "london": 0.8
+            },
+            "ranked_guesses": [
+              "germany",
+              "london"
+            ],
+            "rationale": "Direct country matches",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "germany": 0.85,
+              "london": 0.8
+            },
+            "ranked_guesses": [
+              "germany",
+              "london"
+            ],
+            "rationale": "Direct country matches",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "germany": 0.85,
+              "london": 0.8
+            },
+            "ranked_guesses": [
+              "germany",
+              "london"
+            ],
+            "rationale": "Direct country matches",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "diamond"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "country",
+          "count": 1,
+          "rationale": "relates to a geographical location"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tool"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "scale",
+          "count": 1,
+          "rationale": "It relates to measurement, which connects to the word 'point' already revealed."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "pipe"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "play": 0.85
+            },
+            "ranked_guesses": [
+              "play"
+            ],
+            "rationale": "The current clue is 'game' and 'play' is a direct match, implying a strong connection to the clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "play": 0.85
+            },
+            "ranked_guesses": [
+              "play"
+            ],
+            "rationale": "The current clue is 'game' and 'play' is a direct match, as it is related to games.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "play": 0.85
+            },
+            "ranked_guesses": [
+              "play"
+            ],
+            "rationale": "The current clue is 'game' and 'play' is a direct match, as it is a common word associated with games.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "tube"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "game",
+          "count": 1,
+          "rationale": "It relates to the concept of play, which is a word on the board."
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

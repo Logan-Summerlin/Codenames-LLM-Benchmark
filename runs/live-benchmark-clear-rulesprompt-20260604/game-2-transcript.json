@@ -1,0 +1,1602 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    },
+    "revealed": [
+      "agent",
+      "anchor",
+      "atlas",
+      "copper",
+      "desert",
+      "ember",
+      "flower",
+      "honey",
+      "machine",
+      "magnet",
+      "mirror",
+      "station",
+      "travel",
+      "voyage",
+      "writer"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "compass",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.9,
+          "beacon": 0.7,
+          "magnet": 0.8
+        },
+        "ranked_guesses": [
+          "atlas",
+          "magnet",
+          "beacon"
+        ],
+        "rationale": "Compass relates to navigation and direction. Atlas is a map book, magnet is a key component of a magnetic compass, and beacon is a guiding signal.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "atlas": 0.8,
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "magnet",
+          "atlas",
+          "anchor"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.95,
+          "atlas": 0.85,
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "anchor",
+          "magnet",
+          "atlas"
+        ],
+        "rationale": "Compass is a navigation tool; anchor (nautical), magnet (compass mechanism), atlas (maps) are strongly related.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "news",
+        "count": 3,
+        "rationale": "Anchor (news anchor), writer (news writer), and station (news station) are all strongly associated with 'news'. Agent (news agent) is also plausible but less direct, so count 3 is safe."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "station": 0.8,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "station",
+          "writer"
+        ],
+        "rationale": "Anchor and station are directly related to news media. Writer is also a strong association. Avoided 'agent' and 'beacon' as they are weaker and might be red.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "station": 0.75,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "anchor",
+          "writer",
+          "station"
+        ],
+        "rationale": "Anchor, writer, and station are strongly associated with news (e.g., news anchor, news writer, news station). Beacon is weaker; agent and mirror are possible but less direct. Given clue count 3, these three are the safest blue guesses.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "station": 0.9,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "anchor",
+          "station",
+          "writer"
+        ],
+        "rationale": "Strong associations with 'news': anchor (news anchor), station (news station), writer (news writer).",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "expedition",
+        "count": 3,
+        "rationale": "Connects the red words 'jungle', 'travel', and 'voyage' as they all relate to exploration or journeys. Avoids blue words and assassin."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.6,
+          "travel": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage",
+          "jungle"
+        ],
+        "rationale": "Expedition relates to travel and voyage directly; jungle is a common expedition destination.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.7,
+          "travel": 0.85,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "travel",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.7,
+          "travel": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage",
+          "jungle"
+        ],
+        "rationale": "Expedition relates to journeys and exploration. Travel and voyage are direct synonyms. Jungle is a common expedition destination.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "busy",
+        "count": 3,
+        "rationale": "Busy connects agent (busy agent), machine (busy machine), and honey (busy bees). It avoids red words and the assassin."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "machine": 0.9,
+          "robot": 0.85
+        },
+        "ranked_guesses": [
+          "machine",
+          "robot",
+          "agent"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "baker": 0.7,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "agent",
+          "baker",
+          "machine"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6,
+          "honey": 0.9,
+          "machine": 0.7
+        },
+        "ranked_guesses": [
+          "honey",
+          "machine",
+          "agent"
+        ],
+        "rationale": "Honey is strongly associated with 'busy as a bee'. Machine suggests busy activity. Agent can be a busybody or busy working. These three are the most plausible connections to 'busy' among the remaining words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "shiny",
+        "count": 3,
+        "rationale": "Copper, mirror, and robot are all shiny."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.6,
+          "copper": 0.7,
+          "mirror": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "copper",
+          "beacon"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.7,
+          "copper": 0.8,
+          "mirror": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "copper",
+          "beacon"
+        ],
+        "rationale": "Mirror is the most obvious shiny object. Copper is a shiny metal. Beacon emits a shiny light. These three are the most plausible red words related to 'shiny'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.65,
+          "copper": 0.75,
+          "mirror": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "copper",
+          "beacon"
+        ],
+        "rationale": "Mirror is the most direct association with shiny. Copper is a shiny metal. Beacon emits a shiny light. Galaxy is also possible but less direct. These three are the strongest candidates.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "amber",
+        "count": 3,
+        "rationale": "Desert sand often has an amber hue, honey is amber-colored, and ember glows with amber light."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.5,
+          "ember": 0.9,
+          "honey": 0.7
+        },
+        "ranked_guesses": [
+          "ember",
+          "honey",
+          "autumn"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "beacon": 0.6,
+          "ember": 0.9,
+          "honey": 0.8
+        },
+        "ranked_guesses": [
+          "ember",
+          "honey",
+          "autumn",
+          "beacon"
+        ],
+        "rationale": "Amber associates with ember (similar word), honey (color), autumn (seasonal colors), and beacon (light). These are likely blue words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.6,
+          "ember": 0.9,
+          "honey": 0.7
+        },
+        "ranked_guesses": [
+          "ember",
+          "honey",
+          "autumn"
+        ],
+        "rationale": "Ember is phonetically similar to amber and is a common association. Honey is amber-colored. Autumn leaves are amber. These three are the most likely blue words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "connects autumn, cloud, jungle"
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "flower": 0.9,
+          "jungle": 0.8
+        },
+        "ranked_guesses": [
+          "flower",
+          "jungle",
+          "autumn"
+        ],
+        "rationale": "Nature clue points to natural elements: flower, jungle, and autumn are strongly associated with nature. Cloud and desert are also possible but less unambiguous. Guessing three and stopping per clue count.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.7,
+          "flower": 0.9,
+          "jungle": 0.85
+        },
+        "ranked_guesses": [
+          "flower",
+          "jungle",
+          "cloud"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "flower": 0.9,
+          "jungle": 0.85
+        },
+        "ranked_guesses": [
+          "flower",
+          "jungle",
+          "desert"
+        ],
+        "rationale": "All three are strong nature-related words, matching the clue 'nature' with count 3.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sand",
+        "count": 1,
+        "rationale": "Only blue word left is desert, which is strongly associated with sand."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.95
+        },
+        "ranked_guesses": [
+          "desert"
+        ],
+        "rationale": "Desert is strongly associated with sand. Other words have weaker connections.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.05,
+          "desert": 0.95,
+          "palace": 0.02
+        },
+        "ranked_guesses": [
+          "desert",
+          "beacon",
+          "palace"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.9
+        },
+        "ranked_guesses": [
+          "desert"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "compass"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "news"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "expedition"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "busy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "shiny"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "amber"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ember"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "honey"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sand"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "desert"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 32,
+    "public_event_count": 28,
+    "reason": "all_words_found",
+    "seed": "2",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "compass"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.9,
+              "beacon": 0.7,
+              "magnet": 0.8
+            },
+            "ranked_guesses": [
+              "atlas",
+              "magnet",
+              "beacon"
+            ],
+            "rationale": "Compass relates to navigation and direction. Atlas is a map book, magnet is a key component of a magnetic compass, and beacon is a guiding signal.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "atlas": 0.8,
+              "magnet": 0.9
+            },
+            "ranked_guesses": [
+              "magnet",
+              "atlas",
+              "anchor"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.95,
+              "atlas": 0.85,
+              "magnet": 0.9
+            },
+            "ranked_guesses": [
+              "anchor",
+              "magnet",
+              "atlas"
+            ],
+            "rationale": "Compass is a navigation tool; anchor (nautical), magnet (compass mechanism), atlas (maps) are strongly related.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "compass",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "news"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "station": 0.8,
+              "writer": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "station",
+              "writer"
+            ],
+            "rationale": "Anchor and station are directly related to news media. Writer is also a strong association. Avoided 'agent' and 'beacon' as they are weaker and might be red.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "station": 0.75,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "anchor",
+              "writer",
+              "station"
+            ],
+            "rationale": "Anchor, writer, and station are strongly associated with news (e.g., news anchor, news writer, news station). Beacon is weaker; agent and mirror are possible but less direct. Given clue count 3, these three are the safest blue guesses.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "station": 0.9,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "anchor",
+              "station",
+              "writer"
+            ],
+            "rationale": "Strong associations with 'news': anchor (news anchor), station (news station), writer (news writer).",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "news",
+          "count": 3,
+          "rationale": "Anchor (news anchor), writer (news writer), and station (news station) are all strongly associated with 'news'. Agent (news agent) is also plausible but less direct, so count 3 is safe."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "expedition"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.6,
+              "travel": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage",
+              "jungle"
+            ],
+            "rationale": "Expedition relates to travel and voyage directly; jungle is a common expedition destination.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.7,
+              "travel": 0.85,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "travel",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.7,
+              "travel": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage",
+              "jungle"
+            ],
+            "rationale": "Expedition relates to journeys and exploration. Travel and voyage are direct synonyms. Jungle is a common expedition destination.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "expedition",
+          "count": 3,
+          "rationale": "Connects the red words 'jungle', 'travel', and 'voyage' as they all relate to exploration or journeys. Avoids blue words and assassin."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "busy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "machine": 0.9,
+              "robot": 0.85
+            },
+            "ranked_guesses": [
+              "machine",
+              "robot",
+              "agent"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "baker": 0.7,
+              "machine": 0.6
+            },
+            "ranked_guesses": [
+              "agent",
+              "baker",
+              "machine"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6,
+              "honey": 0.9,
+              "machine": 0.7
+            },
+            "ranked_guesses": [
+              "honey",
+              "machine",
+              "agent"
+            ],
+            "rationale": "Honey is strongly associated with 'busy as a bee'. Machine suggests busy activity. Agent can be a busybody or busy working. These three are the most plausible connections to 'busy' among the remaining words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "busy",
+          "count": 3,
+          "rationale": "Busy connects agent (busy agent), machine (busy machine), and honey (busy bees). It avoids red words and the assassin."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "shiny"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.6,
+              "copper": 0.7,
+              "mirror": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "copper",
+              "beacon"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.7,
+              "copper": 0.8,
+              "mirror": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "copper",
+              "beacon"
+            ],
+            "rationale": "Mirror is the most obvious shiny object. Copper is a shiny metal. Beacon emits a shiny light. These three are the most plausible red words related to 'shiny'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.65,
+              "copper": 0.75,
+              "mirror": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "copper",
+              "beacon"
+            ],
+            "rationale": "Mirror is the most direct association with shiny. Copper is a shiny metal. Beacon emits a shiny light. Galaxy is also possible but less direct. These three are the strongest candidates.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "shiny",
+          "count": 3,
+          "rationale": "Copper, mirror, and robot are all shiny."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "amber"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.5,
+              "ember": 0.9,
+              "honey": 0.7
+            },
+            "ranked_guesses": [
+              "ember",
+              "honey",
+              "autumn"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "beacon": 0.6,
+              "ember": 0.9,
+              "honey": 0.8
+            },
+            "ranked_guesses": [
+              "ember",
+              "honey",
+              "autumn",
+              "beacon"
+            ],
+            "rationale": "Amber associates with ember (similar word), honey (color), autumn (seasonal colors), and beacon (light). These are likely blue words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.6,
+              "ember": 0.9,
+              "honey": 0.7
+            },
+            "ranked_guesses": [
+              "ember",
+              "honey",
+              "autumn"
+            ],
+            "rationale": "Ember is phonetically similar to amber and is a common association. Honey is amber-colored. Autumn leaves are amber. These three are the most likely blue words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ember"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "honey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "amber",
+          "count": 3,
+          "rationale": "Desert sand often has an amber hue, honey is amber-colored, and ember glows with amber light."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "flower": 0.9,
+              "jungle": 0.8
+            },
+            "ranked_guesses": [
+              "flower",
+              "jungle",
+              "autumn"
+            ],
+            "rationale": "Nature clue points to natural elements: flower, jungle, and autumn are strongly associated with nature. Cloud and desert are also possible but less unambiguous. Guessing three and stopping per clue count.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.7,
+              "flower": 0.9,
+              "jungle": 0.85
+            },
+            "ranked_guesses": [
+              "flower",
+              "jungle",
+              "cloud"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "flower": 0.9,
+              "jungle": 0.85
+            },
+            "ranked_guesses": [
+              "flower",
+              "jungle",
+              "desert"
+            ],
+            "rationale": "All three are strong nature-related words, matching the clue 'nature' with count 3.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "connects autumn, cloud, jungle"
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sand"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.95
+            },
+            "ranked_guesses": [
+              "desert"
+            ],
+            "rationale": "Desert is strongly associated with sand. Other words have weaker connections.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.05,
+              "desert": 0.95,
+              "palace": 0.02
+            },
+            "ranked_guesses": [
+              "desert",
+              "beacon",
+              "palace"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.9
+            },
+            "ranked_guesses": [
+              "desert"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "desert"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sand",
+          "count": 1,
+          "rationale": "Only blue word left is desert, which is strongly associated with sand."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

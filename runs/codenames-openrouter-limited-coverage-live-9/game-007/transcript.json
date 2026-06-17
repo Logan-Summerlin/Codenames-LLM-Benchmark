@@ -1,0 +1,2075 @@
+{
+  "board": {
+    "identities": {
+      "ball": "blue",
+      "battery": "neutral",
+      "centaur": "red",
+      "charge": "neutral",
+      "deck": "neutral",
+      "dress": "red",
+      "figure": "blue",
+      "foot": "red",
+      "force": "blue",
+      "hawk": "blue",
+      "lab": "neutral",
+      "life": "red",
+      "moon": "blue",
+      "needle": "blue",
+      "saturn": "red",
+      "scale": "neutral",
+      "scientist": "blue",
+      "shadow": "assassin",
+      "shop": "red",
+      "smuggler": "red",
+      "spike": "red",
+      "string": "blue",
+      "temple": "neutral",
+      "tokyo": "neutral",
+      "tower": "red"
+    },
+    "revealed": [
+      "ball",
+      "charge",
+      "figure",
+      "foot",
+      "force",
+      "hawk",
+      "lab",
+      "moon",
+      "needle",
+      "saturn",
+      "scale",
+      "scientist",
+      "smuggler",
+      "spike",
+      "string",
+      "tower"
+    ],
+    "words": {
+      "ball": "blue",
+      "battery": "neutral",
+      "centaur": "red",
+      "charge": "neutral",
+      "deck": "neutral",
+      "dress": "red",
+      "figure": "blue",
+      "foot": "red",
+      "force": "blue",
+      "hawk": "blue",
+      "lab": "neutral",
+      "life": "red",
+      "moon": "blue",
+      "needle": "blue",
+      "saturn": "red",
+      "scale": "neutral",
+      "scientist": "blue",
+      "shadow": "assassin",
+      "shop": "red",
+      "smuggler": "red",
+      "spike": "red",
+      "string": "blue",
+      "temple": "neutral",
+      "tokyo": "neutral",
+      "tower": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "velocity",
+        "count": 3,
+        "rationale": "relates to speed and movement, connecting to foot, spike, and smuggler"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.9,
+          "velocity": 0.85
+        },
+        "ranked_guesses": [
+          "charge",
+          "velocity"
+        ],
+        "rationale": "Direct matches for velocity",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.9,
+          "scale": 0.8
+        },
+        "ranked_guesses": [
+          "charge",
+          "scale",
+          "velocity is not a word on the board but 'force' and 'figure' could relate to velocity"
+        ],
+        "rationale": "direct clue matches and related physics terms",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "charge": 0.9,
+          "force": 0.85,
+          "velocity": 0.8
+        },
+        "ranked_guesses": [
+          "charge",
+          "velocity",
+          "force"
+        ],
+        "rationale": "Direct matches to the clue 'velocity'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celestial",
+        "count": 3,
+        "rationale": "moon, hawk, and potentially figure (as in a constellation)"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "moon": 0.85,
+          "saturn": 0.8,
+          "tower": 0.75
+        },
+        "ranked_guesses": [
+          "moon",
+          "saturn",
+          "tower"
+        ],
+        "rationale": "Celestial strongly suggests words related to space and the sky. Moon and Saturn are direct connections. Tower can represent a high place, relating to the heavens.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "moon": 0.85,
+          "saturn": 0.8,
+          "tower": 0.75
+        },
+        "ranked_guesses": [
+          "moon",
+          "saturn",
+          "tower"
+        ],
+        "rationale": "Celestial strongly suggests words related to space and the sky. Moon and Saturn are direct celestial bodies. Tower can represent a high structure reaching towards the sky.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "moon": 0.85,
+          "saturn": 0.8,
+          "tower": 0.75
+        },
+        "ranked_guesses": [
+          "moon",
+          "saturn",
+          "tower"
+        ],
+        "rationale": "Celestial strongly relates to moon and saturn. Tower can also be associated with height and reaching for the sky, linking to the celestial theme.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flame",
+        "count": 3,
+        "rationale": "connects to life, foot, spike"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.85,
+          "spike": 0.9
+        },
+        "ranked_guesses": [
+          "spike",
+          "force"
+        ],
+        "rationale": "flame relates to heat/energy, spike and force match",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.85,
+          "spike": 0.9
+        },
+        "ranked_guesses": [
+          "spike",
+          "force"
+        ],
+        "rationale": "Direct matches for 'flame'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.75,
+          "spike": 0.8
+        },
+        "ranked_guesses": [
+          "spike",
+          "force"
+        ],
+        "rationale": "spike and force are direct matches for 'flame'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "point",
+        "count": 3,
+        "rationale": "Connects to needle, figure, and hawk."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.85
+        },
+        "ranked_guesses": [
+          "needle"
+        ],
+        "rationale": "'Needle' relates to a point, and has high confidence.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.8
+        },
+        "ranked_guesses": [
+          "needle"
+        ],
+        "rationale": "'Needle' relates to a point, and has high confidence.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "needle": 0.85
+        },
+        "ranked_guesses": [
+          "needle"
+        ],
+        "rationale": "'Needle' relates to a point, and has high confidence.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "blaze",
+        "count": 3,
+        "rationale": "connects to fire-related or high-energy words"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "scientist": 0.85,
+          "smuggler": 0.9,
+          "string": 0.8
+        },
+        "ranked_guesses": [
+          "smuggler",
+          "scientist",
+          "string"
+        ],
+        "rationale": "The clue 'blaze' suggests fire or intense heat. 'Smuggler' could relate to a fiery or hot commodity. 'Scientist' might study fire or heat. 'String' could relate to a fuse.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "scientist": 0.8,
+          "smuggler": 0.85,
+          "string": 0.75
+        },
+        "ranked_guesses": [
+          "smuggler",
+          "scientist",
+          "string"
+        ],
+        "rationale": "The current clue 'blaze' suggests words related to fire or intense heat. 'Smuggler' and 'string' could relate to fire or heat in a more abstract or indirect way, while 'scientist' seems less directly related but still a possible guess given the context of the game and the words already revealed. However, upon closer inspection, 'smuggler' relates to 'blaze' through the idea of intense or dangerous activities, 'string' could relate through the concept of something that can burn or be on fire, and no other words have high enough confidence.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "scientist": 0.75,
+          "smuggler": 0.8,
+          "string": 0.7
+        },
+        "ranked_guesses": [
+          "smuggler",
+          "scientist",
+          "string"
+        ],
+        "rationale": "The current clue 'blaze' suggests fire or intense heat. 'Smuggler' relates to illegal goods, but could imply hidden or intense activity. 'Scientist' could relate to lab or life. 'String' could imply a burning string.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "thread",
+        "count": 2,
+        "rationale": "Connects string and needle."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "string": 0.85,
+          "thread": 0.75
+        },
+        "ranked_guesses": [
+          "string",
+          "thread"
+        ],
+        "rationale": "'Thread' is the clue, and 'string' is directly related. 'Thread' can also relate to 'string'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "string": 0.85,
+          "thread": 0.75
+        },
+        "ranked_guesses": [
+          "string",
+          "thread"
+        ],
+        "rationale": "'Thread' is the clue, and 'string' is directly related. 'Thread' can also be related to 'string'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "string": 0.85,
+          "thread": 0.75
+        },
+        "ranked_guesses": [
+          "string",
+          "thread"
+        ],
+        "rationale": "'Thread' is the clue, and 'string' is directly related. 'Thread' can also relate to 'string'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "glow",
+        "count": 3,
+        "rationale": "associate with red"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.9,
+          "temple": 0.8,
+          "tokyo": 0.85
+        },
+        "ranked_guesses": [
+          "lab",
+          "tokyo",
+          "temple"
+        ],
+        "rationale": "The current clue is 'glow 3'. The words 'lab', 'tokyo', and 'temple' have a strong connection to 'glow' and are likely to be related to the red team. 'Lab' could be related to glowing experiments, 'tokyo' could be related to glowing city lights, and 'temple' could be related to glowing candles or lanterns. All of these words have a high confidence level (>= 0.70) and are not related to the opponent's clues.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.9,
+          "scale": 0.85,
+          "tower": 0.8
+        },
+        "ranked_guesses": [
+          "lab",
+          "scale",
+          "tower"
+        ],
+        "rationale": "The current clue is 'glow 3'. The words 'lab', 'scale', and 'tower' seem to have a connection to the concept of glow, as in glowing substances or glowing environments, and have high confidence levels based on the team's previous clues.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.8,
+          "scale": 0.75,
+          "tower": 0.7
+        },
+        "ranked_guesses": [
+          "lab",
+          "scale",
+          "tower"
+        ],
+        "rationale": "The current clue is 'glow 3'. The words 'lab', 'scale', and 'tower' could be related to 'glow' through various scientific or metaphorical connections, and have a high enough confidence level to be considered safe guesses for the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "avian",
+        "count": 2,
+        "rationale": "Connects to hawk and potentially figure (bird-like)"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.75,
+          "hawk": 0.85
+        },
+        "ranked_guesses": [
+          "hawk",
+          "foot"
+        ],
+        "rationale": "'Avian' relates to birds (hawk) and feet are part of birds.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.75,
+          "hawk": 0.85
+        },
+        "ranked_guesses": [
+          "hawk",
+          "foot"
+        ],
+        "rationale": "'Avian' relates to birds (hawk) and feet are part of birds.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.85
+        },
+        "ranked_guesses": [
+          "hawk"
+        ],
+        "rationale": "'Avian' refers to birds, and 'hawk' is a bird.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "velocity",
+        "count": 2,
+        "rationale": "relate to red words"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tower": 0.8
+        },
+        "ranked_guesses": [
+          "tower"
+        ],
+        "rationale": "velocity relates to speed or movement, and 'tower' could be related to a structure that involves velocity in a broader sense, such as wind velocity affecting it, or simply a strong match based on the team's context.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tower": 0.8
+        },
+        "ranked_guesses": [
+          "tower"
+        ],
+        "rationale": "The clue 'velocity' suggests speed or motion, and 'tower' could be related to a structure that implies movement or action, such as a control tower.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tower": 0.8
+        },
+        "ranked_guesses": [
+          "tower"
+        ],
+        "rationale": "The word 'tower' seems to match with 'velocity' as it can relate to speed or motion, and it has a high confidence level.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shape",
+        "count": 2,
+        "rationale": "Connects to figure and ball."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.75
+        },
+        "ranked_guesses": [
+          "ball"
+        ],
+        "rationale": "'Shape' directly relates to 'ball'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.75
+        },
+        "ranked_guesses": [
+          "ball"
+        ],
+        "rationale": "'Shape' directly relates to 'ball'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.75
+        },
+        "ranked_guesses": [
+          "ball"
+        ],
+        "rationale": "'Shape' directly relates to 'ball'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "spark",
+        "count": 2,
+        "rationale": "trying to get life and dress"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "figure": 0.8,
+          "life": 0.75,
+          "scale": 0.85
+        },
+        "ranked_guesses": [
+          "scale",
+          "figure",
+          "life"
+        ],
+        "rationale": "The current clue is 'spark 2'. Based on the given team clues, 'spark' could relate to energy or fire, which might connect to words like 'scale' (as in, the scales of heat), 'figure' (as in, a figure of energy), or 'life' (as in, the spark of life). These words have a strong connection to the clue and are not related to opponent clues.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "figure": 0.8,
+          "scale": 0.85
+        },
+        "ranked_guesses": [
+          "scale",
+          "figure"
+        ],
+        "rationale": "The current clue 'spark' suggests energy or electricity, which seems to match with 'scale' and 'figure' as they can relate to measurement or representation of energy or power, aligning with the red team's theme.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "figure": 0.8,
+          "life": 0.75,
+          "scale": 0.85
+        },
+        "ranked_guesses": [
+          "scale",
+          "figure",
+          "life"
+        ],
+        "rationale": "The current clue 'spark' relates to energy or fire, which seems to match with 'scale' (as in, a scale of heat), 'figure' (as in, a figure related to energy or spark), and 'life' (as in, the spark of life). These words have high confidence based on the clue and team's previous words.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "figure",
+        "count": 1,
+        "rationale": "Only one blue word remaining."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flash",
+        "count": 2,
+        "rationale": "Two red words left, 'life' and 'shop'."
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "life": 0.7,
+          "spark": 0.9,
+          "velocity": 0.85
+        },
+        "ranked_guesses": [
+          "spark",
+          "velocity",
+          "life"
+        ],
+        "rationale": "flash relates to speed and velocity, spark is related to flash, and life could relate to energy or flash",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dress": 0.8,
+          "figure": 0.85,
+          "life": 0.75
+        },
+        "ranked_guesses": [
+          "figure",
+          "dress",
+          "life"
+        ],
+        "rationale": "flash implies speed or suddenness, matching velocity and blaze clues; figure, dress, and life relate to speed or change",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dress": 0.8,
+          "figure": 0.85
+        },
+        "ranked_guesses": [
+          "figure",
+          "dress"
+        ],
+        "rationale": "flash implies speed or sudden movement, which could relate to 'figure' as in a figure or shape moving quickly, or 'dress' as in getting dressed quickly.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "velocity"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "charge"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "celestial"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "moon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "saturn"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flame"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spike"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "force"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "point"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "needle"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "blaze"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "smuggler"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "scientist"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "thread"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "string"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "glow"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lab"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "avian"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "hawk"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "foot"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "velocity"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tower"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shape"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ball"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spark"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "scale"
+    },
+    {
+      "clue": {
+        "clue": "figure",
+        "count": 1,
+        "rationale": "Only one blue word remaining."
+      },
+      "event": "illegal_clue",
+      "matched_word": "figure",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flash"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "opponent_completed",
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "figure"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 49,
+    "public_event_count": 33,
+    "reason": "opponent_completed",
+    "seed": "codenames-live-9-007-meta_llama_llama_4_scout-vs-google_gemma_3_27b_it",
+    "team_blue": "Gemma 3 27B",
+    "team_red": "Llama 4 Scout",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "velocity"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.9,
+              "velocity": 0.85
+            },
+            "ranked_guesses": [
+              "charge",
+              "velocity"
+            ],
+            "rationale": "Direct matches for velocity",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.9,
+              "scale": 0.8
+            },
+            "ranked_guesses": [
+              "charge",
+              "scale",
+              "velocity is not a word on the board but 'force' and 'figure' could relate to velocity"
+            ],
+            "rationale": "direct clue matches and related physics terms",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "charge": 0.9,
+              "force": 0.85,
+              "velocity": 0.8
+            },
+            "ranked_guesses": [
+              "charge",
+              "velocity",
+              "force"
+            ],
+            "rationale": "Direct matches to the clue 'velocity'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "charge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "velocity",
+          "count": 3,
+          "rationale": "relates to speed and movement, connecting to foot, spike, and smuggler"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "celestial"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "moon": 0.85,
+              "saturn": 0.8,
+              "tower": 0.75
+            },
+            "ranked_guesses": [
+              "moon",
+              "saturn",
+              "tower"
+            ],
+            "rationale": "Celestial strongly suggests words related to space and the sky. Moon and Saturn are direct connections. Tower can represent a high place, relating to the heavens.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "moon": 0.85,
+              "saturn": 0.8,
+              "tower": 0.75
+            },
+            "ranked_guesses": [
+              "moon",
+              "saturn",
+              "tower"
+            ],
+            "rationale": "Celestial strongly suggests words related to space and the sky. Moon and Saturn are direct celestial bodies. Tower can represent a high structure reaching towards the sky.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "moon": 0.85,
+              "saturn": 0.8,
+              "tower": 0.75
+            },
+            "ranked_guesses": [
+              "moon",
+              "saturn",
+              "tower"
+            ],
+            "rationale": "Celestial strongly relates to moon and saturn. Tower can also be associated with height and reaching for the sky, linking to the celestial theme.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "moon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "saturn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celestial",
+          "count": 3,
+          "rationale": "moon, hawk, and potentially figure (as in a constellation)"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flame"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "force": 0.85,
+              "spike": 0.9
+            },
+            "ranked_guesses": [
+              "spike",
+              "force"
+            ],
+            "rationale": "flame relates to heat/energy, spike and force match",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "force": 0.85,
+              "spike": 0.9
+            },
+            "ranked_guesses": [
+              "spike",
+              "force"
+            ],
+            "rationale": "Direct matches for 'flame'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "force": 0.75,
+              "spike": 0.8
+            },
+            "ranked_guesses": [
+              "spike",
+              "force"
+            ],
+            "rationale": "spike and force are direct matches for 'flame'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spike"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "force"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flame",
+          "count": 3,
+          "rationale": "connects to life, foot, spike"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "point"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "needle": 0.85
+            },
+            "ranked_guesses": [
+              "needle"
+            ],
+            "rationale": "'Needle' relates to a point, and has high confidence.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "needle": 0.8
+            },
+            "ranked_guesses": [
+              "needle"
+            ],
+            "rationale": "'Needle' relates to a point, and has high confidence.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "needle": 0.85
+            },
+            "ranked_guesses": [
+              "needle"
+            ],
+            "rationale": "'Needle' relates to a point, and has high confidence.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "needle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "point",
+          "count": 3,
+          "rationale": "Connects to needle, figure, and hawk."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "blaze"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "scientist": 0.85,
+              "smuggler": 0.9,
+              "string": 0.8
+            },
+            "ranked_guesses": [
+              "smuggler",
+              "scientist",
+              "string"
+            ],
+            "rationale": "The clue 'blaze' suggests fire or intense heat. 'Smuggler' could relate to a fiery or hot commodity. 'Scientist' might study fire or heat. 'String' could relate to a fuse.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "scientist": 0.8,
+              "smuggler": 0.85,
+              "string": 0.75
+            },
+            "ranked_guesses": [
+              "smuggler",
+              "scientist",
+              "string"
+            ],
+            "rationale": "The current clue 'blaze' suggests words related to fire or intense heat. 'Smuggler' and 'string' could relate to fire or heat in a more abstract or indirect way, while 'scientist' seems less directly related but still a possible guess given the context of the game and the words already revealed. However, upon closer inspection, 'smuggler' relates to 'blaze' through the idea of intense or dangerous activities, 'string' could relate through the concept of something that can burn or be on fire, and no other words have high enough confidence.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "scientist": 0.75,
+              "smuggler": 0.8,
+              "string": 0.7
+            },
+            "ranked_guesses": [
+              "smuggler",
+              "scientist",
+              "string"
+            ],
+            "rationale": "The current clue 'blaze' suggests fire or intense heat. 'Smuggler' relates to illegal goods, but could imply hidden or intense activity. 'Scientist' could relate to lab or life. 'String' could imply a burning string.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "smuggler"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "scientist"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "blaze",
+          "count": 3,
+          "rationale": "connects to fire-related or high-energy words"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "thread"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "string": 0.85,
+              "thread": 0.75
+            },
+            "ranked_guesses": [
+              "string",
+              "thread"
+            ],
+            "rationale": "'Thread' is the clue, and 'string' is directly related. 'Thread' can also relate to 'string'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "string": 0.85,
+              "thread": 0.75
+            },
+            "ranked_guesses": [
+              "string",
+              "thread"
+            ],
+            "rationale": "'Thread' is the clue, and 'string' is directly related. 'Thread' can also be related to 'string'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "string": 0.85,
+              "thread": 0.75
+            },
+            "ranked_guesses": [
+              "string",
+              "thread"
+            ],
+            "rationale": "'Thread' is the clue, and 'string' is directly related. 'Thread' can also relate to 'string'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "string"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "thread",
+          "count": 2,
+          "rationale": "Connects string and needle."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "glow"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.9,
+              "temple": 0.8,
+              "tokyo": 0.85
+            },
+            "ranked_guesses": [
+              "lab",
+              "tokyo",
+              "temple"
+            ],
+            "rationale": "The current clue is 'glow 3'. The words 'lab', 'tokyo', and 'temple' have a strong connection to 'glow' and are likely to be related to the red team. 'Lab' could be related to glowing experiments, 'tokyo' could be related to glowing city lights, and 'temple' could be related to glowing candles or lanterns. All of these words have a high confidence level (>= 0.70) and are not related to the opponent's clues.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.9,
+              "scale": 0.85,
+              "tower": 0.8
+            },
+            "ranked_guesses": [
+              "lab",
+              "scale",
+              "tower"
+            ],
+            "rationale": "The current clue is 'glow 3'. The words 'lab', 'scale', and 'tower' seem to have a connection to the concept of glow, as in glowing substances or glowing environments, and have high confidence levels based on the team's previous clues.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.8,
+              "scale": 0.75,
+              "tower": 0.7
+            },
+            "ranked_guesses": [
+              "lab",
+              "scale",
+              "tower"
+            ],
+            "rationale": "The current clue is 'glow 3'. The words 'lab', 'scale', and 'tower' could be related to 'glow' through various scientific or metaphorical connections, and have a high enough confidence level to be considered safe guesses for the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lab"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "glow",
+          "count": 3,
+          "rationale": "associate with red"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "avian"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.75,
+              "hawk": 0.85
+            },
+            "ranked_guesses": [
+              "hawk",
+              "foot"
+            ],
+            "rationale": "'Avian' relates to birds (hawk) and feet are part of birds.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.75,
+              "hawk": 0.85
+            },
+            "ranked_guesses": [
+              "hawk",
+              "foot"
+            ],
+            "rationale": "'Avian' relates to birds (hawk) and feet are part of birds.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.85
+            },
+            "ranked_guesses": [
+              "hawk"
+            ],
+            "rationale": "'Avian' refers to birds, and 'hawk' is a bird.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "hawk"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "foot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "avian",
+          "count": 2,
+          "rationale": "Connects to hawk and potentially figure (bird-like)"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "velocity"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "tower": 0.8
+            },
+            "ranked_guesses": [
+              "tower"
+            ],
+            "rationale": "velocity relates to speed or movement, and 'tower' could be related to a structure that involves velocity in a broader sense, such as wind velocity affecting it, or simply a strong match based on the team's context.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tower": 0.8
+            },
+            "ranked_guesses": [
+              "tower"
+            ],
+            "rationale": "The clue 'velocity' suggests speed or motion, and 'tower' could be related to a structure that implies movement or action, such as a control tower.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tower": 0.8
+            },
+            "ranked_guesses": [
+              "tower"
+            ],
+            "rationale": "The word 'tower' seems to match with 'velocity' as it can relate to speed or motion, and it has a high confidence level.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "velocity",
+          "count": 2,
+          "rationale": "relate to red words"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shape"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.75
+            },
+            "ranked_guesses": [
+              "ball"
+            ],
+            "rationale": "'Shape' directly relates to 'ball'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.75
+            },
+            "ranked_guesses": [
+              "ball"
+            ],
+            "rationale": "'Shape' directly relates to 'ball'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.75
+            },
+            "ranked_guesses": [
+              "ball"
+            ],
+            "rationale": "'Shape' directly relates to 'ball'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ball"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "shape",
+          "count": 2,
+          "rationale": "Connects to figure and ball."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spark"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "figure": 0.8,
+              "life": 0.75,
+              "scale": 0.85
+            },
+            "ranked_guesses": [
+              "scale",
+              "figure",
+              "life"
+            ],
+            "rationale": "The current clue is 'spark 2'. Based on the given team clues, 'spark' could relate to energy or fire, which might connect to words like 'scale' (as in, the scales of heat), 'figure' (as in, a figure of energy), or 'life' (as in, the spark of life). These words have a strong connection to the clue and are not related to opponent clues.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "figure": 0.8,
+              "scale": 0.85
+            },
+            "ranked_guesses": [
+              "scale",
+              "figure"
+            ],
+            "rationale": "The current clue 'spark' suggests energy or electricity, which seems to match with 'scale' and 'figure' as they can relate to measurement or representation of energy or power, aligning with the red team's theme.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "figure": 0.8,
+              "life": 0.75,
+              "scale": 0.85
+            },
+            "ranked_guesses": [
+              "scale",
+              "figure",
+              "life"
+            ],
+            "rationale": "The current clue 'spark' relates to energy or fire, which seems to match with 'scale' (as in, a scale of heat), 'figure' (as in, a figure related to energy or spark), and 'life' (as in, the spark of life). These words have high confidence based on the clue and team's previous words.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "scale"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spark",
+          "count": 2,
+          "rationale": "trying to get life and dress"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flash"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "opponent_completed",
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "figure"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+{
+  "board": {
+    "identities": {
+      "baker": "red",
+      "balloon": "blue",
+      "beacon": "blue",
+      "captain": "neutral",
+      "castle": "neutral",
+      "compass": "neutral",
+      "eagle": "blue",
+      "galaxy": "blue",
+      "harbor": "red",
+      "highway": "red",
+      "island": "neutral",
+      "lantern": "neutral",
+      "leather": "red",
+      "machine": "blue",
+      "mirror": "neutral",
+      "mountain": "assassin",
+      "palace": "red",
+      "planet": "red",
+      "pyramid": "blue",
+      "river": "neutral",
+      "robot": "blue",
+      "spring": "red",
+      "teacher": "red",
+      "tiger": "red",
+      "water": "blue"
+    },
+    "revealed": [
+      "baker",
+      "machine",
+      "mountain",
+      "robot",
+      "teacher"
+    ],
+    "words": {
+      "baker": "red",
+      "balloon": "blue",
+      "beacon": "blue",
+      "captain": "neutral",
+      "castle": "neutral",
+      "compass": "neutral",
+      "eagle": "blue",
+      "galaxy": "blue",
+      "harbor": "red",
+      "highway": "red",
+      "island": "neutral",
+      "lantern": "neutral",
+      "leather": "red",
+      "machine": "blue",
+      "mirror": "neutral",
+      "mountain": "assassin",
+      "palace": "red",
+      "planet": "red",
+      "pyramid": "blue",
+      "river": "neutral",
+      "robot": "blue",
+      "spring": "red",
+      "teacher": "red",
+      "tiger": "red",
+      "water": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "job",
+        "count": 2,
+        "rationale": "Connects the red words 'baker' and 'teacher', both professions."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.9,
+          "teacher": 0.95
+        },
+        "ranked_guesses": [
+          "teacher",
+          "baker"
+        ],
+        "rationale": "The clue 'job' with count 2 strongly suggests two profession-related words. 'teacher' and 'baker' are unambiguous job titles on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.85,
+          "captain": 0.9,
+          "machine": 0.5,
+          "robot": 0.6,
+          "teacher": 0.95
+        },
+        "ranked_guesses": [
+          "teacher",
+          "captain",
+          "baker",
+          "robot",
+          "machine"
+        ],
+        "rationale": "'job' strongly associates with professions like 'teacher', 'captain', and 'baker'. 'teacher' is the most direct match, followed by 'captain' and 'baker'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.95,
+          "teacher": 0.95
+        },
+        "ranked_guesses": [
+          "baker",
+          "teacher"
+        ],
+        "rationale": "The clue 'job' with count 2 strongly suggests two profession-related words. 'baker' and 'teacher' are unambiguous jobs, while 'captain' is less directly a job. Other words on the board do not relate to 'job'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "technology",
+        "count": 3,
+        "rationale": "Machine, robot, and beacon are all associated with technology, forming a clear cluster of blue words without strongly pointing to red or assassin words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.6,
+          "machine": 0.9,
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "machine",
+          "robot",
+          "galaxy"
+        ],
+        "rationale": "Technology clue points strongly to machine and robot; galaxy is a tech brand (Samsung) and fits space/communication tech.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.7,
+          "machine": 0.95,
+          "robot": 0.95
+        },
+        "ranked_guesses": [
+          "machine",
+          "robot",
+          "compass"
+        ],
+        "rationale": "Machine and robot are direct technology terms. Compass is a navigational technology, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.7,
+          "machine": 0.9,
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "machine",
+          "robot",
+          "beacon"
+        ],
+        "rationale": "The clue 'technology' strongly relates to 'machine' and 'robot'. 'Beacon' is a technological device for signaling. These three are the most plausible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects tiger (wild animal), planet (natural celestial body), and spring (season/nature) while avoiding all board words and their substrings"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.65,
+          "island": 0.85,
+          "mountain": 0.95,
+          "river": 0.9,
+          "spring": 0.7,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "mountain",
+          "river",
+          "island",
+          "spring",
+          "tiger",
+          "eagle"
+        ],
+        "rationale": "The active clue 'nature' with count 3 suggests 3 nature-related words remain. 'mountain', 'river', and 'island' are the strongest direct associations with nature on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "mountain": 0.85,
+          "river": 0.8
+        },
+        "ranked_guesses": [
+          "eagle",
+          "mountain",
+          "river"
+        ],
+        "rationale": "The clue 'nature' with count 3 suggests three words related to natural elements. 'eagle' (wild animal), 'mountain' (natural landform), and 'river' (natural waterway) are the strongest matches from remaining words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "island": 0.85,
+          "mountain": 0.9,
+          "river": 0.85,
+          "tiger": 0.7,
+          "water": 0.65
+        },
+        "ranked_guesses": [
+          "mountain",
+          "river",
+          "island",
+          "tiger",
+          "eagle",
+          "water"
+        ],
+        "rationale": "Clue 'nature' with count 3 suggests 3 nature-related words. Mountain, river, and island are the most prototypical nature words remaining. Tiger and eagle are wildlife (nature), while water is a broad nature element.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "job"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "baker"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "technology"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "mountain"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 12,
+    "public_event_count": 10,
+    "reason": "assassin",
+    "seed": "mistral-small-4-vs-deepseek-v4-flash-20260607",
+    "team_blue": "DeepSeek V4 Flash",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "job"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.9,
+              "teacher": 0.95
+            },
+            "ranked_guesses": [
+              "teacher",
+              "baker"
+            ],
+            "rationale": "The clue 'job' with count 2 strongly suggests two profession-related words. 'teacher' and 'baker' are unambiguous job titles on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.85,
+              "captain": 0.9,
+              "machine": 0.5,
+              "robot": 0.6,
+              "teacher": 0.95
+            },
+            "ranked_guesses": [
+              "teacher",
+              "captain",
+              "baker",
+              "robot",
+              "machine"
+            ],
+            "rationale": "'job' strongly associates with professions like 'teacher', 'captain', and 'baker'. 'teacher' is the most direct match, followed by 'captain' and 'baker'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.95,
+              "teacher": 0.95
+            },
+            "ranked_guesses": [
+              "baker",
+              "teacher"
+            ],
+            "rationale": "The clue 'job' with count 2 strongly suggests two profession-related words. 'baker' and 'teacher' are unambiguous jobs, while 'captain' is less directly a job. Other words on the board do not relate to 'job'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "baker"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "job",
+          "count": 2,
+          "rationale": "Connects the red words 'baker' and 'teacher', both professions."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "technology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.6,
+              "machine": 0.9,
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "machine",
+              "robot",
+              "galaxy"
+            ],
+            "rationale": "Technology clue points strongly to machine and robot; galaxy is a tech brand (Samsung) and fits space/communication tech.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.7,
+              "machine": 0.95,
+              "robot": 0.95
+            },
+            "ranked_guesses": [
+              "machine",
+              "robot",
+              "compass"
+            ],
+            "rationale": "Machine and robot are direct technology terms. Compass is a navigational technology, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.7,
+              "machine": 0.9,
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "machine",
+              "robot",
+              "beacon"
+            ],
+            "rationale": "The clue 'technology' strongly relates to 'machine' and 'robot'. 'Beacon' is a technological device for signaling. These three are the most plausible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "technology",
+          "count": 3,
+          "rationale": "Machine, robot, and beacon are all associated with technology, forming a clear cluster of blue words without strongly pointing to red or assassin words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.65,
+              "island": 0.85,
+              "mountain": 0.95,
+              "river": 0.9,
+              "spring": 0.7,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "mountain",
+              "river",
+              "island",
+              "spring",
+              "tiger",
+              "eagle"
+            ],
+            "rationale": "The active clue 'nature' with count 3 suggests 3 nature-related words remain. 'mountain', 'river', and 'island' are the strongest direct associations with nature on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "mountain": 0.85,
+              "river": 0.8
+            },
+            "ranked_guesses": [
+              "eagle",
+              "mountain",
+              "river"
+            ],
+            "rationale": "The clue 'nature' with count 3 suggests three words related to natural elements. 'eagle' (wild animal), 'mountain' (natural landform), and 'river' (natural waterway) are the strongest matches from remaining words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "island": 0.85,
+              "mountain": 0.9,
+              "river": 0.85,
+              "tiger": 0.7,
+              "water": 0.65
+            },
+            "ranked_guesses": [
+              "mountain",
+              "river",
+              "island",
+              "tiger",
+              "eagle",
+              "water"
+            ],
+            "rationale": "Clue 'nature' with count 3 suggests 3 nature-related words. Mountain, river, and island are the most prototypical nature words remaining. Tiger and eagle are wildlife (nature), while water is a broad nature element.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "mountain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects tiger (wild animal), planet (natural celestial body), and spring (season/nature) while avoiding all board words and their substrings"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

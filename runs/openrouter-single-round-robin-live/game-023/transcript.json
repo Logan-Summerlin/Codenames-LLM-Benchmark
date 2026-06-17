@@ -1,0 +1,2091 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "air": "blue",
+      "atlantis": "blue",
+      "ball": "blue",
+      "bill": "neutral",
+      "bolt": "neutral",
+      "bridge": "red",
+      "buffalo": "red",
+      "cliff": "blue",
+      "england": "red",
+      "jack": "red",
+      "jam": "red",
+      "kangaroo": "blue",
+      "knife": "neutral",
+      "mint": "blue",
+      "model": "neutral",
+      "plastic": "assassin",
+      "plot": "neutral",
+      "poison": "red",
+      "post": "red",
+      "pupil": "blue",
+      "soldier": "red",
+      "time": "red",
+      "torch": "neutral",
+      "wall": "neutral"
+    },
+    "revealed": [
+      "agent",
+      "air",
+      "atlantis",
+      "ball",
+      "bill",
+      "cliff",
+      "kangaroo",
+      "mint",
+      "plot",
+      "poison",
+      "pupil",
+      "soldier",
+      "wall"
+    ],
+    "words": {
+      "agent": "blue",
+      "air": "blue",
+      "atlantis": "blue",
+      "ball": "blue",
+      "bill": "neutral",
+      "bolt": "neutral",
+      "bridge": "red",
+      "buffalo": "red",
+      "cliff": "blue",
+      "england": "red",
+      "jack": "red",
+      "jam": "red",
+      "kangaroo": "blue",
+      "knife": "neutral",
+      "mint": "blue",
+      "model": "neutral",
+      "plastic": "assassin",
+      "plot": "neutral",
+      "poison": "red",
+      "post": "red",
+      "pupil": "blue",
+      "soldier": "red",
+      "time": "red",
+      "torch": "neutral",
+      "wall": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "danger",
+        "count": 3,
+        "rationale": "Refers to the risk associated with poison, soldier, and time."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.6,
+          "knife": 0.7,
+          "poison": 0.9
+        },
+        "ranked_guesses": [
+          "poison",
+          "knife",
+          "cliff"
+        ],
+        "rationale": "These words are associated with danger.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.7,
+          "knife": 0.6,
+          "poison": 0.9
+        },
+        "ranked_guesses": [
+          "poison",
+          "cliff",
+          "knife"
+        ],
+        "rationale": "Poison is directly associated with danger, while cliff and knife can also represent danger in different contexts.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.7,
+          "knife": 0.6,
+          "poison": 0.9
+        },
+        "ranked_guesses": [
+          "poison",
+          "cliff",
+          "knife"
+        ],
+        "rationale": "These words relate to danger; poison is directly dangerous, while a cliff and a knife can also pose risks.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "eye",
+        "count": 2,
+        "rationale": "A pupil is part of the eye, and an agent is often associated with surveillance or an 'eye' in the sky."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.6,
+          "pupil": 0.95
+        },
+        "ranked_guesses": [
+          "pupil",
+          "ball"
+        ],
+        "rationale": "Pupil is a direct part of the eye, and ball relates to eyeball.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.6,
+          "pupil": 0.95
+        },
+        "ranked_guesses": [
+          "pupil",
+          "ball"
+        ],
+        "rationale": "Pupil is a direct part of the eye, and ball refers to an eyeball.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.6,
+          "pupil": 0.95
+        },
+        "ranked_guesses": [
+          "pupil",
+          "ball"
+        ],
+        "rationale": "Pupil is a direct part of the eye, and ball refers to eyeball.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Two of the remaining words are related to animals."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.7,
+          "kangaroo": 0.7
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "kangaroo"
+        ],
+        "rationale": "Both words are animals, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.7,
+          "kangaroo": 0.6
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "kangaroo"
+        ],
+        "rationale": "Both buffalo and kangaroo are animals, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.7,
+          "kangaroo": 0.6
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "kangaroo"
+        ],
+        "rationale": "Both words are animals, fitting the clue 'animal'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 2,
+        "rationale": "Air and cliff are both associated with the sky or high places."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "bolt": 0.7
+        },
+        "ranked_guesses": [
+          "air",
+          "bolt"
+        ],
+        "rationale": "Air is directly associated with the sky, and bolt refers to a lightning bolt.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "bolt": 0.7
+        },
+        "ranked_guesses": [
+          "air",
+          "bolt"
+        ],
+        "rationale": "Air is directly associated with the sky, and bolt refers to a lightning bolt.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "bolt": 0.6
+        },
+        "ranked_guesses": [
+          "air",
+          "bolt"
+        ],
+        "rationale": "Air is directly associated with the sky, and bolt (lightning) is a common sky-related phenomenon.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "soldier",
+        "count": 2,
+        "rationale": "Both words relate to military or combat themes."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "jump",
+        "count": 2,
+        "rationale": "Kangaroo jumps and a ball bounces/jumps."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.7,
+          "kangaroo": 0.9
+        },
+        "ranked_guesses": [
+          "kangaroo",
+          "cliff"
+        ],
+        "rationale": "Kangaroo is a classic jumping animal, and cliff is a common location to jump from.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.7,
+          "kangaroo": 0.9
+        },
+        "ranked_guesses": [
+          "kangaroo",
+          "cliff"
+        ],
+        "rationale": "Kangaroo is a jumping animal, and cliff is a place one might jump from.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.7,
+          "kangaroo": 0.9
+        },
+        "ranked_guesses": [
+          "kangaroo",
+          "cliff"
+        ],
+        "rationale": "Kangaroo is a classic animal that jumps, and cliff is a common location to jump from.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "bridge",
+        "count": 1,
+        "rationale": "Both words relate to structures or connections."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ocean",
+        "count": 2,
+        "rationale": "Atlantis is a mythical underwater city and a ball can be associated with water sports or beach settings."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.9,
+          "cliff": 0.6
+        },
+        "ranked_guesses": [
+          "atlantis",
+          "cliff"
+        ],
+        "rationale": "Atlantis is a mythical city associated with the ocean, and cliffs are common coastal features.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.9,
+          "cliff": 0.7
+        },
+        "ranked_guesses": [
+          "atlantis",
+          "cliff"
+        ],
+        "rationale": "Atlantis is a mythical city under the ocean, and cliffs are common coastal features.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.9,
+          "cliff": 0.7
+        },
+        "ranked_guesses": [
+          "atlantis",
+          "cliff"
+        ],
+        "rationale": "Atlantis is a mythical city under the ocean, and cliffs are common coastal features.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "dangerous",
+        "count": 2,
+        "rationale": "Both words relate to threats or risks."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.6,
+          "knife": 0.7
+        },
+        "ranked_guesses": [
+          "knife",
+          "cliff"
+        ],
+        "rationale": "Both words can be considered dangerous.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.6,
+          "knife": 0.7
+        },
+        "ranked_guesses": [
+          "knife",
+          "cliff"
+        ],
+        "rationale": "Both words can be associated with danger.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.6,
+          "knife": 0.7
+        },
+        "ranked_guesses": [
+          "knife",
+          "cliff"
+        ],
+        "rationale": "Both words can be associated with danger.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "round",
+        "count": 2,
+        "rationale": "Both ball and mint are typically round objects."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "bolt": 0.6
+        },
+        "ranked_guesses": [
+          "ball",
+          "bolt"
+        ],
+        "rationale": "Ball is inherently round, and bolt can be round or associated with round objects.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "mint": 0.6
+        },
+        "ranked_guesses": [
+          "ball",
+          "mint"
+        ],
+        "rationale": "Ball is a classic round object, and mints are often round.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "mint": 0.7
+        },
+        "ranked_guesses": [
+          "ball",
+          "mint"
+        ],
+        "rationale": "Ball is inherently round, and mints are often round shaped.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "time",
+        "count": 2,
+        "rationale": "Both words relate to concepts of history or events."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "height",
+        "count": 2,
+        "rationale": "Both cliff and agent (as in a secret agent or high-ranking official) can be associated with height or elevated positions."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9,
+          "wall": 0.7
+        },
+        "ranked_guesses": [
+          "cliff",
+          "wall"
+        ],
+        "rationale": "Cliff and wall are both strongly associated with height.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9,
+          "wall": 0.8
+        },
+        "ranked_guesses": [
+          "cliff",
+          "wall"
+        ],
+        "rationale": "Cliff and wall are both physical structures associated with significant height.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cliff": 0.9,
+          "wall": 0.8
+        },
+        "ranked_guesses": [
+          "cliff",
+          "wall"
+        ],
+        "rationale": "Cliff and wall are both associated with height.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "military",
+        "count": 2,
+        "rationale": "Both words relate to combat or armed forces."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.5,
+          "soldier": 0.9
+        },
+        "ranked_guesses": [
+          "soldier",
+          "bill"
+        ],
+        "rationale": "Soldier is directly related to military; bill is a less direct connection but could relate to military funding.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7,
+          "soldier": 0.9
+        },
+        "ranked_guesses": [
+          "soldier",
+          "agent"
+        ],
+        "rationale": "Both words are strongly associated with military themes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.5,
+          "soldier": 0.9
+        },
+        "ranked_guesses": [
+          "soldier",
+          "bill"
+        ],
+        "rationale": "'Soldier' is directly related to 'military', while 'bill' could relate to military funding.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "spy",
+        "count": 2,
+        "rationale": "The remaining blue words are agent and mint. An agent is a spy, and mints are often associated with secret operations or currency."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.95,
+          "plot": 0.85
+        },
+        "ranked_guesses": [
+          "agent",
+          "plot"
+        ],
+        "rationale": "Agent is a direct synonym for spy, and plot is a common activity associated with spies.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.95,
+          "plot": 0.85
+        },
+        "ranked_guesses": [
+          "agent",
+          "plot"
+        ],
+        "rationale": "Agent is a direct synonym for spy, and plot is a common activity associated with spies.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "plot": 0.7
+        },
+        "ranked_guesses": [
+          "agent",
+          "plot"
+        ],
+        "rationale": "Agent is a direct synonym for spy, and plot is a common activity associated with spies.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "history",
+        "count": 2,
+        "rationale": "Both words relate to past events or significant occurrences."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.5,
+          "time": 0.7
+        },
+        "ranked_guesses": [
+          "time",
+          "bill"
+        ],
+        "rationale": "Both words relate to historical concepts or events.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.5,
+          "time": 0.7
+        },
+        "ranked_guesses": [
+          "time",
+          "bill"
+        ],
+        "rationale": "Both words relate to historical concepts or figures.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.5,
+          "time": 0.7
+        },
+        "ranked_guesses": [
+          "time",
+          "bill"
+        ],
+        "rationale": "Both words relate to historical concepts or figures.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "currency",
+        "count": 1,
+        "rationale": "The remaining blue word is mint, which is where currency is produced."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.9,
+          "mint": 0.8
+        },
+        "ranked_guesses": [
+          "bill",
+          "mint"
+        ],
+        "rationale": "Bill and mint are both directly associated with currency.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.8,
+          "mint": 0.9
+        },
+        "ranked_guesses": [
+          "mint",
+          "bill"
+        ],
+        "rationale": "Mint and bill are both directly related to currency.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.9,
+          "mint": 0.8
+        },
+        "ranked_guesses": [
+          "bill",
+          "mint"
+        ],
+        "rationale": "Bill and mint are both directly associated with currency.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "time",
+        "count": 2,
+        "rationale": "Both words relate to events or historical contexts."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fresh",
+        "count": 1,
+        "rationale": "Mint is a flavor often described as fresh."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mint": 0.9
+        },
+        "ranked_guesses": [
+          "mint"
+        ],
+        "rationale": "Mint is commonly associated with the word fresh.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mint": 0.9
+        },
+        "ranked_guesses": [
+          "mint"
+        ],
+        "rationale": "Mint is commonly associated with the word fresh.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mint": 0.9
+        },
+        "ranked_guesses": [
+          "mint"
+        ],
+        "rationale": "Mint is commonly associated with the word fresh.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "danger"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "poison"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "eye"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pupil"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "air"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "soldier",
+        "count": 2,
+        "rationale": "Both words relate to military or combat themes."
+      },
+      "event": "illegal_clue",
+      "matched_word": "soldier",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "jump"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "kangaroo"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "bridge",
+        "count": 1,
+        "rationale": "Both words relate to structures or connections."
+      },
+      "event": "illegal_clue",
+      "matched_word": "bridge",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ocean"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "atlantis"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "dangerous"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "round"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ball"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "time",
+        "count": 2,
+        "rationale": "Both words relate to concepts of history or events."
+      },
+      "event": "illegal_clue",
+      "matched_word": "time",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "height"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "cliff"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wall"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "military"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "soldier"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "plot"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "history"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "currency"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bill"
+    },
+    {
+      "clue": {
+        "clue": "time",
+        "count": 2,
+        "rationale": "Both words relate to events or historical contexts."
+      },
+      "event": "illegal_clue",
+      "matched_word": "time",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fresh"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "mint"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 60,
+    "public_event_count": 41,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-023-openai_gpt_4o_mini-vs-google_gemini_3_1_flash_lite",
+    "team_blue": "Gemini 3.1 Flash Lite",
+    "team_red": "GPT-4o mini",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "danger"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.6,
+              "knife": 0.7,
+              "poison": 0.9
+            },
+            "ranked_guesses": [
+              "poison",
+              "knife",
+              "cliff"
+            ],
+            "rationale": "These words are associated with danger.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.7,
+              "knife": 0.6,
+              "poison": 0.9
+            },
+            "ranked_guesses": [
+              "poison",
+              "cliff",
+              "knife"
+            ],
+            "rationale": "Poison is directly associated with danger, while cliff and knife can also represent danger in different contexts.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.7,
+              "knife": 0.6,
+              "poison": 0.9
+            },
+            "ranked_guesses": [
+              "poison",
+              "cliff",
+              "knife"
+            ],
+            "rationale": "These words relate to danger; poison is directly dangerous, while a cliff and a knife can also pose risks.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "poison"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "danger",
+          "count": 3,
+          "rationale": "Refers to the risk associated with poison, soldier, and time."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "eye"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.6,
+              "pupil": 0.95
+            },
+            "ranked_guesses": [
+              "pupil",
+              "ball"
+            ],
+            "rationale": "Pupil is a direct part of the eye, and ball relates to eyeball.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.6,
+              "pupil": 0.95
+            },
+            "ranked_guesses": [
+              "pupil",
+              "ball"
+            ],
+            "rationale": "Pupil is a direct part of the eye, and ball refers to an eyeball.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.6,
+              "pupil": 0.95
+            },
+            "ranked_guesses": [
+              "pupil",
+              "ball"
+            ],
+            "rationale": "Pupil is a direct part of the eye, and ball refers to eyeball.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pupil"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "eye",
+          "count": 2,
+          "rationale": "A pupil is part of the eye, and an agent is often associated with surveillance or an 'eye' in the sky."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.7,
+              "kangaroo": 0.7
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "kangaroo"
+            ],
+            "rationale": "Both words are animals, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.7,
+              "kangaroo": 0.6
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "kangaroo"
+            ],
+            "rationale": "Both buffalo and kangaroo are animals, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.7,
+              "kangaroo": 0.6
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "kangaroo"
+            ],
+            "rationale": "Both words are animals, fitting the clue 'animal'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Two of the remaining words are related to animals."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "bolt": 0.7
+            },
+            "ranked_guesses": [
+              "air",
+              "bolt"
+            ],
+            "rationale": "Air is directly associated with the sky, and bolt refers to a lightning bolt.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "bolt": 0.7
+            },
+            "ranked_guesses": [
+              "air",
+              "bolt"
+            ],
+            "rationale": "Air is directly associated with the sky, and bolt refers to a lightning bolt.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "bolt": 0.6
+            },
+            "ranked_guesses": [
+              "air",
+              "bolt"
+            ],
+            "rationale": "Air is directly associated with the sky, and bolt (lightning) is a common sky-related phenomenon.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "air"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 2,
+          "rationale": "Air and cliff are both associated with the sky or high places."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "jump"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "kangaroo"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ocean"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "atlantis"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "dangerous"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "soldier",
+          "count": 2,
+          "rationale": "Both words relate to military or combat themes."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "round"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.7,
+              "kangaroo": 0.9
+            },
+            "ranked_guesses": [
+              "kangaroo",
+              "cliff"
+            ],
+            "rationale": "Kangaroo is a classic jumping animal, and cliff is a common location to jump from.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.7,
+              "kangaroo": 0.9
+            },
+            "ranked_guesses": [
+              "kangaroo",
+              "cliff"
+            ],
+            "rationale": "Kangaroo is a jumping animal, and cliff is a place one might jump from.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.7,
+              "kangaroo": 0.9
+            },
+            "ranked_guesses": [
+              "kangaroo",
+              "cliff"
+            ],
+            "rationale": "Kangaroo is a classic animal that jumps, and cliff is a common location to jump from.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ball"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "jump",
+          "count": 2,
+          "rationale": "Kangaroo jumps and a ball bounces/jumps."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "height"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "cliff"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wall"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "military"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "soldier"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "bridge",
+          "count": 1,
+          "rationale": "Both words relate to structures or connections."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.9,
+              "cliff": 0.6
+            },
+            "ranked_guesses": [
+              "atlantis",
+              "cliff"
+            ],
+            "rationale": "Atlantis is a mythical city associated with the ocean, and cliffs are common coastal features.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.9,
+              "cliff": 0.7
+            },
+            "ranked_guesses": [
+              "atlantis",
+              "cliff"
+            ],
+            "rationale": "Atlantis is a mythical city under the ocean, and cliffs are common coastal features.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.9,
+              "cliff": 0.7
+            },
+            "ranked_guesses": [
+              "atlantis",
+              "cliff"
+            ],
+            "rationale": "Atlantis is a mythical city under the ocean, and cliffs are common coastal features.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "plot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ocean",
+          "count": 2,
+          "rationale": "Atlantis is a mythical underwater city and a ball can be associated with water sports or beach settings."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "history"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.6,
+              "knife": 0.7
+            },
+            "ranked_guesses": [
+              "knife",
+              "cliff"
+            ],
+            "rationale": "Both words can be considered dangerous.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.6,
+              "knife": 0.7
+            },
+            "ranked_guesses": [
+              "knife",
+              "cliff"
+            ],
+            "rationale": "Both words can be associated with danger.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cliff": 0.6,
+              "knife": 0.7
+            },
+            "ranked_guesses": [
+              "knife",
+              "cliff"
+            ],
+            "rationale": "Both words can be associated with danger.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "dangerous",
+          "count": 2,
+          "rationale": "Both words relate to threats or risks."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "currency"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.9,
+              "bolt": 0.6
+            },
+            "ranked_guesses": [
+              "ball",
+              "bolt"
+            ],
+            "rationale": "Ball is inherently round, and bolt can be round or associated with round objects.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.9,
+              "mint": 0.6
+            },
+            "ranked_guesses": [
+              "ball",
+              "mint"
+            ],
+            "rationale": "Ball is a classic round object, and mints are often round.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.9,
+              "mint": 0.7
+            },
+            "ranked_guesses": [
+              "ball",
+              "mint"
+            ],
+            "rationale": "Ball is inherently round, and mints are often round shaped.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bill"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "round",
+          "count": 2,
+          "rationale": "Both ball and mint are typically round objects."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fresh"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "mint"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

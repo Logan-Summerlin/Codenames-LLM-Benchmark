@@ -1,0 +1,2281 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "neutral",
+      "atlas": "blue",
+      "cheese": "blue",
+      "circle": "blue",
+      "copper": "blue",
+      "dancer": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "family": "red",
+      "farmer": "red",
+      "flame": "blue",
+      "fox": "neutral",
+      "ghost": "neutral",
+      "kernel": "neutral",
+      "leather": "blue",
+      "metal": "neutral",
+      "robot": "blue",
+      "silence": "red",
+      "silver": "blue",
+      "station": "red",
+      "telescope": "red",
+      "temple": "red",
+      "tiger": "red",
+      "violin": "red",
+      "water": "assassin"
+    },
+    "revealed": [
+      "anchor",
+      "atlas",
+      "cheese",
+      "circle",
+      "copper",
+      "flame",
+      "violin"
+    ],
+    "words": {
+      "anchor": "neutral",
+      "atlas": "blue",
+      "cheese": "blue",
+      "circle": "blue",
+      "copper": "blue",
+      "dancer": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "family": "red",
+      "farmer": "red",
+      "flame": "blue",
+      "fox": "neutral",
+      "ghost": "neutral",
+      "kernel": "neutral",
+      "leather": "blue",
+      "metal": "neutral",
+      "robot": "blue",
+      "silence": "red",
+      "silver": "blue",
+      "station": "red",
+      "telescope": "red",
+      "temple": "red",
+      "tiger": "red",
+      "violin": "red",
+      "water": "assassin"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "two red words related to music"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.2,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer"
+        ],
+        "rationale": "Both words are related to music",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.4,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer"
+        ],
+        "rationale": "Both words are related to music.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.2,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer"
+        ],
+        "rationale": "Both words are related to music, but violin is a more direct connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 2,
+        "rationale": "Related to the material used in various objects and tools."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "dance",
+        "count": 2,
+        "rationale": "related to movement"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "robotics",
+        "count": 2,
+        "rationale": "Related to technology and machines, which connects to the words on the board."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "family",
+        "count": 3,
+        "rationale": "related to people"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to the properties of certain objects and tools."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fire",
+        "count": 2,
+        "rationale": "hot and intense"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.6,
+          "flame": 0.8,
+          "silver": 0.4
+        },
+        "ranked_guesses": [
+          "flame",
+          "copper",
+          "silver"
+        ],
+        "rationale": "Words related to fire or heat, or materials that can withstand high temperatures.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.6,
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame",
+          "copper"
+        ],
+        "rationale": "Both words are related to fire, with flame being a direct connection and copper being a metal that can be associated with fire or heat.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.6,
+          "flame": 0.8,
+          "silver": 0.4
+        },
+        "ranked_guesses": [
+          "flame",
+          "copper",
+          "silver"
+        ],
+        "rationale": "fire is related to flame, and also to metals like copper and silver",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to the properties of certain objects and tools."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "heat",
+        "count": 2,
+        "rationale": "related to high temperatures"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.4,
+          "copper": 0.4,
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame",
+          "cheese",
+          "copper"
+        ],
+        "rationale": "Heat is related to flame, and copper is a metal that can conduct heat, while cheese is a stretch but has a warm color.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.4,
+          "copper": 0.4,
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame",
+          "cheese",
+          "copper"
+        ],
+        "rationale": "Heat is related to flame, and also to copper as a conductor of heat, and cheese can be melted by heat.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.4,
+          "desert": 0.4,
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame",
+          "cheese",
+          "desert"
+        ],
+        "rationale": "Heat is related to flame, and also to desert and cheese in a more abstract sense.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metalwork",
+        "count": 2,
+        "rationale": "Related to crafting and tools, connecting to the blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "craft",
+        "count": 2,
+        "rationale": "related to making things"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8,
+          "copper": 0.7,
+          "leather": 0.6
+        },
+        "ranked_guesses": [
+          "anchor",
+          "copper",
+          "leather"
+        ],
+        "rationale": "craft is related to materials and tools, which are also related to anchor, copper, and leather",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8,
+          "copper": 0.7,
+          "leather": 0.6
+        },
+        "ranked_guesses": [
+          "anchor",
+          "copper",
+          "leather"
+        ],
+        "rationale": "related to craft and materials",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8,
+          "atlas": 0.7,
+          "circle": 0.6
+        },
+        "ranked_guesses": [
+          "anchor",
+          "atlas",
+          "circle"
+        ],
+        "rationale": "craft is related to making things, so I'm guessing words that are man-made objects",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to properties of certain objects and tools."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farm",
+        "count": 2,
+        "rationale": "related to occupation"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to properties of certain objects and tools."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tool",
+        "count": 2,
+        "rationale": "used for various tasks"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8,
+          "metal": 0.6,
+          "silver": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "silver",
+          "metal"
+        ],
+        "rationale": "Tool is related to metal objects, and copper and silver are metals.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8,
+          "metal": 0.6,
+          "silver": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "silver",
+          "metal"
+        ],
+        "rationale": "Tool is related to metal and other materials.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8
+        },
+        "ranked_guesses": [
+          "copper"
+        ],
+        "rationale": "related to tool and metal",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Related to discovering new places or things, connecting to the blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "atlas"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and atlas for maps.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "structure",
+        "count": 2,
+        "rationale": "related to buildings and architecture"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "station": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "station",
+          "temple"
+        ],
+        "rationale": "Words related to structure, such as buildings or frameworks.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "station": 0.6,
+          "temple": 0.5
+        },
+        "ranked_guesses": [
+          "atlas",
+          "station",
+          "temple"
+        ],
+        "rationale": "Words related to structure, such as buildings or frameworks.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "station": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "station",
+          "temple"
+        ],
+        "rationale": "Words related to structure, such as buildings or frameworks.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovery and navigation, linking to the blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "telescope": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "telescope",
+          "temple"
+        ],
+        "rationale": "Both words relate to exploration and discovery, fitting the clue 'explore'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "telescope": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "telescope",
+          "temple"
+        ],
+        "rationale": "Both words relate to exploration and discovery, fitting the clue 'explore'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "travel",
+        "count": 2,
+        "rationale": "related to exploration and movement"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'travel' is likely related to 'atlas'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.8
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper"
+        ],
+        "rationale": "Both words are already revealed as blue and are related to the clue 'travel'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.8
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper"
+        ],
+        "rationale": "Both words are already revealed as blue and fit the travel theme.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovering new places or things, connecting to the blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration and travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.5,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "traveler",
+        "count": 2,
+        "rationale": "related to movement and exploration"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'traveler' is related to exploration and movement, which connects to atlas and copper.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'traveler' is related to exploration, which connects to atlas.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'traveler' is related to exploration and movement, which connects to atlas and copper.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Related to discovering new places, which connects to the themes of travel and maps."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a geographical feature to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "traveling",
+        "count": 3,
+        "rationale": "related to movement and places"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'traveling' is related to exploration, which connects to atlas.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'traveling' is likely related to 'atlas'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6,
+          "atlas": 0.8,
+          "copper": 0.7
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "anchor"
+        ],
+        "rationale": "Words related to the clue 'traveling' and previously revealed words.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovering new places or things, connecting to the theme of travel and adventure."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both relate to exploration; telescope for observing and desert as a travel destination.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "trip",
+        "count": 2,
+        "rationale": "related to movement and travel"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.8,
+          "desert": 0.7,
+          "telescope": 0.6
+        },
+        "ranked_guesses": [
+          "circle",
+          "desert",
+          "telescope"
+        ],
+        "rationale": "Words related to travel and exploration, matching the clue 'trip'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "copper": 0.7,
+          "flame": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "copper",
+          "flame"
+        ],
+        "rationale": "All three words are already revealed as blue, and the clue 'trip' is related to travel and exploration, which connects to atlas.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.6,
+          "circle": 0.8,
+          "desert": 0.5
+        },
+        "ranked_guesses": [
+          "circle",
+          "cheese",
+          "desert"
+        ],
+        "rationale": "Words related to travel and exploration, and also considering the clue 'trip'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovering new places or things, connecting to the remaining blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.5,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "telescope": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "telescope",
+          "temple"
+        ],
+        "rationale": "Both words relate to exploration and discovery, fitting the clue 'explore'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a travel destination.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "family",
+        "count": 3,
+        "rationale": "related to people and relationships"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to properties of certain objects and tools."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "trip",
+        "count": 2,
+        "rationale": "related to travel and movement"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.8
+        },
+        "ranked_guesses": [
+          "cheese"
+        ],
+        "rationale": "related to travel and trip",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.8,
+          "desert": 0.6,
+          "temple": 0.4
+        },
+        "ranked_guesses": [
+          "cheese",
+          "desert",
+          "temple"
+        ],
+        "rationale": "The clue 'trip' is related to travel and exploration, and these words seem to fit the theme.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.8,
+          "desert": 0.6,
+          "temple": 0.4
+        },
+        "ranked_guesses": [
+          "cheese",
+          "desert",
+          "temple"
+        ],
+        "rationale": "Words that are related to travel or exploration, but not directly to the clue 'trip'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metalwork",
+        "count": 2,
+        "rationale": "Related to crafting and tools, connecting to the blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "violin"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "metal",
+        "count": 2,
+        "rationale": "Related to the material used in various objects and tools."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "dance",
+        "count": 2,
+        "rationale": "related to movement"
+      },
+      "event": "illegal_clue",
+      "matched_word": "dancer",
+      "reason": "morphological_variant",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "robotics",
+        "count": 2,
+        "rationale": "Related to technology and machines, which connects to the words on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "robot",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "family",
+        "count": 3,
+        "rationale": "related to people"
+      },
+      "event": "illegal_clue",
+      "matched_word": "family",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to the properties of certain objects and tools."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fire"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "clue": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to the properties of certain objects and tools."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "metalwork",
+        "count": 2,
+        "rationale": "Related to crafting and tools, connecting to the blue words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "craft"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "clue": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to properties of certain objects and tools."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "farm",
+        "count": 2,
+        "rationale": "related to occupation"
+      },
+      "event": "illegal_clue",
+      "matched_word": "farmer",
+      "reason": "morphological_variant",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to properties of certain objects and tools."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "structure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "traveler"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "traveling"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "trip"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "circle"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "family",
+        "count": 3,
+        "rationale": "related to people and relationships"
+      },
+      "event": "illegal_clue",
+      "matched_word": "family",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to properties of certain objects and tools."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "trip"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cheese"
+    },
+    {
+      "clue": {
+        "clue": "metalwork",
+        "count": 2,
+        "rationale": "Related to crafting and tools, connecting to the blue words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "metal",
+      "reason": "substring",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 81,
+    "public_event_count": 48,
+    "reason": null,
+    "seed": "openrouter-codenames-001-meta_llama_llama_3_70b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.2,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer"
+            ],
+            "rationale": "Both words are related to music",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.4,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer"
+            ],
+            "rationale": "Both words are related to music.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.2,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer"
+            ],
+            "rationale": "Both words are related to music, but violin is a more direct connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "violin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "two red words related to music"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fire"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "craft"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tool"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 2,
+          "rationale": "Related to the material used in various objects and tools."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "structure"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dance",
+          "count": 2,
+          "rationale": "related to movement"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "robotics",
+          "count": 2,
+          "rationale": "Related to technology and machines, which connects to the words on the board."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "family",
+          "count": 3,
+          "rationale": "related to people"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metallic",
+          "count": 2,
+          "rationale": "Related to the properties of certain objects and tools."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "traveler"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.6,
+              "flame": 0.8,
+              "silver": 0.4
+            },
+            "ranked_guesses": [
+              "flame",
+              "copper",
+              "silver"
+            ],
+            "rationale": "Words related to fire or heat, or materials that can withstand high temperatures.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.6,
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame",
+              "copper"
+            ],
+            "rationale": "Both words are related to fire, with flame being a direct connection and copper being a metal that can be associated with fire or heat.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.6,
+              "flame": 0.8,
+              "silver": 0.4
+            },
+            "ranked_guesses": [
+              "flame",
+              "copper",
+              "silver"
+            ],
+            "rationale": "fire is related to flame, and also to metals like copper and silver",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fire",
+          "count": 2,
+          "rationale": "hot and intense"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metallic",
+          "count": 2,
+          "rationale": "Related to the properties of certain objects and tools."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "traveling"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.4,
+              "copper": 0.4,
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame",
+              "cheese",
+              "copper"
+            ],
+            "rationale": "Heat is related to flame, and copper is a metal that can conduct heat, while cheese is a stretch but has a warm color.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.4,
+              "copper": 0.4,
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame",
+              "cheese",
+              "copper"
+            ],
+            "rationale": "Heat is related to flame, and also to copper as a conductor of heat, and cheese can be melted by heat.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.4,
+              "desert": 0.4,
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame",
+              "cheese",
+              "desert"
+            ],
+            "rationale": "Heat is related to flame, and also to desert and cheese in a more abstract sense.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 2,
+          "rationale": "related to high temperatures"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metalwork",
+          "count": 2,
+          "rationale": "Related to crafting and tools, connecting to the blue words."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "trip"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8,
+              "copper": 0.7,
+              "leather": 0.6
+            },
+            "ranked_guesses": [
+              "anchor",
+              "copper",
+              "leather"
+            ],
+            "rationale": "craft is related to materials and tools, which are also related to anchor, copper, and leather",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8,
+              "copper": 0.7,
+              "leather": 0.6
+            },
+            "ranked_guesses": [
+              "anchor",
+              "copper",
+              "leather"
+            ],
+            "rationale": "related to craft and materials",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8,
+              "atlas": 0.7,
+              "circle": 0.6
+            },
+            "ranked_guesses": [
+              "anchor",
+              "atlas",
+              "circle"
+            ],
+            "rationale": "craft is related to making things, so I'm guessing words that are man-made objects",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "circle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "craft",
+          "count": 2,
+          "rationale": "related to making things"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metallic",
+          "count": 2,
+          "rationale": "Related to properties of certain objects and tools."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "trip"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cheese"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "farm",
+          "count": 2,
+          "rationale": "related to occupation"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

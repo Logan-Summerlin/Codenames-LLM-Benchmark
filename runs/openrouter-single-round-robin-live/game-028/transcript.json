@@ -1,0 +1,1553 @@
+{
+  "board": {
+    "identities": {
+      "air": "blue",
+      "canada": "neutral",
+      "cast": "blue",
+      "chick": "red",
+      "doctor": "blue",
+      "dragon": "neutral",
+      "fence": "red",
+      "ham": "neutral",
+      "hawk": "blue",
+      "hollywood": "blue",
+      "jam": "neutral",
+      "jet": "red",
+      "lap": "red",
+      "march": "assassin",
+      "millionaire": "neutral",
+      "net": "red",
+      "park": "red",
+      "penguin": "red",
+      "pie": "red",
+      "pirate": "blue",
+      "robin": "blue",
+      "scorpion": "neutral",
+      "thumb": "red",
+      "tie": "blue",
+      "whip": "neutral"
+    },
+    "revealed": [
+      "air",
+      "cast",
+      "doctor",
+      "dragon",
+      "hawk",
+      "hollywood",
+      "jet",
+      "net",
+      "penguin",
+      "pirate",
+      "robin",
+      "tie"
+    ],
+    "words": {
+      "air": "blue",
+      "canada": "neutral",
+      "cast": "blue",
+      "chick": "red",
+      "doctor": "blue",
+      "dragon": "neutral",
+      "fence": "red",
+      "ham": "neutral",
+      "hawk": "blue",
+      "hollywood": "blue",
+      "jam": "neutral",
+      "jet": "red",
+      "lap": "red",
+      "march": "assassin",
+      "millionaire": "neutral",
+      "net": "red",
+      "park": "red",
+      "penguin": "red",
+      "pie": "red",
+      "pirate": "blue",
+      "robin": "blue",
+      "scorpion": "neutral",
+      "thumb": "red",
+      "tie": "blue",
+      "whip": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Connects to chick and penguin, both animals."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.95,
+          "penguin": 0.98
+        },
+        "ranked_guesses": [
+          "penguin",
+          "hawk"
+        ],
+        "rationale": "Both words are unambiguous animals matching the 'animal' clue with count 2. Penguin and hawk are common, distinct animals.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.95,
+          "penguin": 0.95
+        },
+        "ranked_guesses": [
+          "hawk",
+          "penguin"
+        ],
+        "rationale": "The clue 'animal' with count 2 points to two animal words. 'hawk' and 'penguin' are unambiguous animals on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.8,
+          "hawk": 0.9,
+          "penguin": 0.95,
+          "robin": 0.85,
+          "scorpion": 0.7
+        },
+        "ranked_guesses": [
+          "penguin",
+          "hawk",
+          "robin",
+          "chick",
+          "scorpion"
+        ],
+        "rationale": "Clue 'animal' with count 2 suggests two clear animal words. 'penguin' and 'hawk' are the most obvious choices, followed by other common animals.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "doctor",
+        "count": 1,
+        "rationale": "Directly pointing to the 'doctor' word, which is blue, without revealing it in the clue."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "water",
+        "count": 3,
+        "rationale": "Connects to 'jet' (watercraft), 'net' (fishing net), and 'lap' (swimming lap), all red words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lap": 0.7,
+          "net": 0.9,
+          "pirate": 0.9
+        },
+        "ranked_guesses": [
+          "net",
+          "pirate",
+          "lap"
+        ],
+        "rationale": "Clue 'water' with count 3 suggests 3 water-related words. 'net' (fishing) and 'pirate' (ships) are strong matches. 'lap' relates to swimming laps in water as a weaker third option.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.75,
+          "net": 0.95,
+          "pirate": 0.7
+        },
+        "ranked_guesses": [
+          "net",
+          "jet",
+          "pirate"
+        ],
+        "rationale": "The clue 'water' with count 3 suggests three water-related words. 'net' is a strong candidate (fishing net), 'jet' could relate to water jets, and 'pirate' involves ships sailing on water. These are the most plausible connections from the remaining board words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.9,
+          "lap": 0.75,
+          "net": 0.85
+        },
+        "ranked_guesses": [
+          "jet",
+          "net",
+          "lap"
+        ],
+        "rationale": "Clue 'water' with count 3 suggests 3 water-related words. 'jet' (water jet/jet ski), 'net' (fishing net), and 'lap' (pool lap) are the strongest candidates.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "Relates to 'air' and 'robin', both blue words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "robin": 0.7
+        },
+        "ranked_guesses": [
+          "air",
+          "robin"
+        ],
+        "rationale": "'Air' and 'robin' are strongly associated with the concept of 'flight'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.8
+        },
+        "ranked_guesses": [
+          "air"
+        ],
+        "rationale": "'Air' is strongly associated with 'flight' and hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hawk": 0.8,
+          "jet": 0.7
+        },
+        "ranked_guesses": [
+          "hawk",
+          "jet"
+        ],
+        "rationale": "Both 'hawk' and 'jet' are related to 'flight'. 'Hawk' is a bird that flies and 'jet' is a type of aircraft.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "red",
+        "count": 3,
+        "rationale": "Connects chick (red bird), fence (red fence), and pie (red pie) without matching any board word substring."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jam": 0.75,
+          "pie": 0.7,
+          "robin": 0.85,
+          "scorpion": 0.9
+        },
+        "ranked_guesses": [
+          "scorpion",
+          "robin",
+          "jam",
+          "pie"
+        ],
+        "rationale": "Clue 'red' with count 3 suggests looking for words directly associated with red. 'scorpion' (red scorpion) is strongest, followed by 'robin' (robin redbreast), then 'jam' (red jam) and 'pie' (red pie).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "hollywood": 0.85,
+          "pie": 0.65,
+          "robin": 0.7,
+          "tie": 0.5
+        },
+        "ranked_guesses": [
+          "dragon",
+          "hollywood",
+          "robin",
+          "pie",
+          "tie"
+        ],
+        "rationale": "Clue 'red' with count 3 suggests strong associations. 'dragon' (red dragon) is the strongest match, followed by 'hollywood' (red carpet). 'robin' (red bird) and 'pie' (red pie) are moderate fits. 'tie' (red tie) is a weaker but possible connection.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jam": 0.9,
+          "pie": 0.85,
+          "robin": 0.8
+        },
+        "ranked_guesses": [
+          "jam",
+          "pie",
+          "robin"
+        ],
+        "rationale": "The active clue 'red' with count 3 strongly suggests words directly associated with the color red. 'jam' (strawberry), 'pie' (cherry), and 'robin' (red-breasted bird) are the most obvious matches fitting the clue count.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 1,
+        "rationale": "Doctor is a medical professional, and it's a blue card."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'medical' strongly points to 'doctor' as the most relevant and direct match.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'medical' strongly points to 'doctor' as it is the most relevant word on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'medical' strongly points to 'doctor' as it is the most relevant word to the clue on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "wild",
+        "count": 3,
+        "rationale": "Connects to wild chicken (chick), wild fence (fence), and wild pie (pie)."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.75,
+          "dragon": 0.85,
+          "scorpion": 0.8
+        },
+        "ranked_guesses": [
+          "dragon",
+          "scorpion",
+          "chick"
+        ],
+        "rationale": "'Wild' likely refers to animals; dragon and scorpion are strong wild animal associations, chick is a young animal that could fit. Count of 3 matches these three targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.7,
+          "dragon": 0.7,
+          "scorpion": 0.8
+        },
+        "ranked_guesses": [
+          "scorpion",
+          "chick",
+          "dragon"
+        ],
+        "rationale": "Wild strongly suggests animals or untamed things; scorpion is a clear wild animal, chick can imply wild birds, and dragon fits mythical wild creatures.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.7,
+          "ham": 0.3,
+          "scorpion": 0.6
+        },
+        "ranked_guesses": [
+          "dragon",
+          "scorpion",
+          "ham"
+        ],
+        "rationale": "'wild' strongly suggests wild animals like 'dragon' and 'scorpion'. 'ham' is a stretch (wild boar) but included due to count=3. 'dragon' is the most direct match.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "theater",
+        "count": 1,
+        "rationale": "Hinting towards 'hollywood', which is a blue word and related to the film industry."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hollywood": 0.8
+        },
+        "ranked_guesses": [
+          "hollywood"
+        ],
+        "rationale": "Theater is often associated with Hollywood, which is a key location for film and theater productions.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hollywood": 0.8
+        },
+        "ranked_guesses": [
+          "hollywood"
+        ],
+        "rationale": "Theater is often associated with Hollywood, which is a key location for film and entertainment.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hollywood": 0.8
+        },
+        "ranked_guesses": [
+          "hollywood"
+        ],
+        "rationale": "Theater is often associated with Hollywood, which is a key location for film and entertainment industries, closely linked to theatrical performances.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "break",
+        "count": 6,
+        "rationale": "Connects to fence, lap, pie, chick, park, and thumb through common 'break' associations."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cast": 0.9,
+          "chick": 0.65,
+          "jam": 0.85,
+          "thumb": 0.7,
+          "tie": 0.8,
+          "whip": 0.75
+        },
+        "ranked_guesses": [
+          "cast",
+          "jam",
+          "tie",
+          "whip",
+          "thumb",
+          "chick"
+        ],
+        "rationale": "Active clue 'break' (count=6) suggests words related to breaking. 'cast' (broken bone), 'jam' (broken jam), 'tie' (broken tie), 'whip' (breaking with a whip), 'thumb' (broken thumb), and 'chick' (hatching/breaking egg) are strong candidates likely red based on board context.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cast": 0.75,
+          "chick": 0.5,
+          "ham": 0.7,
+          "lap": 0.6,
+          "park": 0.55,
+          "tie": 0.65
+        },
+        "ranked_guesses": [
+          "cast",
+          "ham",
+          "tie",
+          "lap",
+          "park",
+          "chick"
+        ],
+        "rationale": "Strongest associations to 'break' are 'cast' (break a leg/cast) and 'ham' (break a leg in theater). 'tie' (break a tie) and 'lap' (break a record) are moderate fits. 'park' and 'chick' are weaker but possible. All are unrevealed and could be red based on team history.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cast": 0.5,
+          "fence": 0.7,
+          "jam": 0.9,
+          "march": 0.6,
+          "tie": 0.9,
+          "whip": 0.7
+        },
+        "ranked_guesses": [
+          "jam",
+          "tie",
+          "whip",
+          "fence",
+          "march",
+          "cast"
+        ],
+        "rationale": "Clue 'break' with count 6 suggests words related to breaking. 'jam', 'tie', and 'whip' have strong direct connections to 'break'. 'fence' and 'march' have moderate connections. 'cast' has a weaker connection but fits the count.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "stage",
+        "count": 1,
+        "rationale": "Refers to 'hollywood' which is a blue word, without revealing it directly."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cast": 0.8
+        },
+        "ranked_guesses": [
+          "cast"
+        ],
+        "rationale": "'Stage' can be associated with 'cast' as both are related to theater or performances.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cast": 0.8
+        },
+        "ranked_guesses": [
+          "cast"
+        ],
+        "rationale": "'Stage' can be associated with 'cast' as both are related to theater or performances.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cast": 0.8
+        },
+        "ranked_guesses": [
+          "cast"
+        ],
+        "rationale": "'Stage' can be associated with 'cast' as both are related to theater performances.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "penguin"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hawk"
+    },
+    {
+      "clue": {
+        "clue": "doctor",
+        "count": 1,
+        "rationale": "Directly pointing to the 'doctor' word, which is blue, without revealing it in the clue."
+      },
+      "event": "illegal_clue",
+      "matched_word": "doctor",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "water"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "net"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pirate"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "air"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "red"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "robin"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "wild"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "theater"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "hollywood"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 6,
+        "word": "break"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tie"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "stage"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "cast"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 37,
+    "public_event_count": 25,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-028-mistralai_mistral_small_2603-vs-qwen_qwen_2_5_72b_instruct",
+    "team_blue": "Qwen2.5 72B Instruct",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.95,
+              "penguin": 0.98
+            },
+            "ranked_guesses": [
+              "penguin",
+              "hawk"
+            ],
+            "rationale": "Both words are unambiguous animals matching the 'animal' clue with count 2. Penguin and hawk are common, distinct animals.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.95,
+              "penguin": 0.95
+            },
+            "ranked_guesses": [
+              "hawk",
+              "penguin"
+            ],
+            "rationale": "The clue 'animal' with count 2 points to two animal words. 'hawk' and 'penguin' are unambiguous animals on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "chick": 0.8,
+              "hawk": 0.9,
+              "penguin": 0.95,
+              "robin": 0.85,
+              "scorpion": 0.7
+            },
+            "ranked_guesses": [
+              "penguin",
+              "hawk",
+              "robin",
+              "chick",
+              "scorpion"
+            ],
+            "rationale": "Clue 'animal' with count 2 suggests two clear animal words. 'penguin' and 'hawk' are the most obvious choices, followed by other common animals.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "penguin"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hawk"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Connects to chick and penguin, both animals."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "water"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "net"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pirate"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "air"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "doctor",
+          "count": 1,
+          "rationale": "Directly pointing to the 'doctor' word, which is blue, without revealing it in the clue."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "red"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lap": 0.7,
+              "net": 0.9,
+              "pirate": 0.9
+            },
+            "ranked_guesses": [
+              "net",
+              "pirate",
+              "lap"
+            ],
+            "rationale": "Clue 'water' with count 3 suggests 3 water-related words. 'net' (fishing) and 'pirate' (ships) are strong matches. 'lap' relates to swimming laps in water as a weaker third option.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.75,
+              "net": 0.95,
+              "pirate": 0.7
+            },
+            "ranked_guesses": [
+              "net",
+              "jet",
+              "pirate"
+            ],
+            "rationale": "The clue 'water' with count 3 suggests three water-related words. 'net' is a strong candidate (fishing net), 'jet' could relate to water jets, and 'pirate' involves ships sailing on water. These are the most plausible connections from the remaining board words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.9,
+              "lap": 0.75,
+              "net": 0.85
+            },
+            "ranked_guesses": [
+              "jet",
+              "net",
+              "lap"
+            ],
+            "rationale": "Clue 'water' with count 3 suggests 3 water-related words. 'jet' (water jet/jet ski), 'net' (fishing net), and 'lap' (pool lap) are the strongest candidates.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "robin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "water",
+          "count": 3,
+          "rationale": "Connects to 'jet' (watercraft), 'net' (fishing net), and 'lap' (swimming lap), all red words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "robin": 0.7
+            },
+            "ranked_guesses": [
+              "air",
+              "robin"
+            ],
+            "rationale": "'Air' and 'robin' are strongly associated with the concept of 'flight'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.8
+            },
+            "ranked_guesses": [
+              "air"
+            ],
+            "rationale": "'Air' is strongly associated with 'flight' and hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hawk": 0.8,
+              "jet": 0.7
+            },
+            "ranked_guesses": [
+              "hawk",
+              "jet"
+            ],
+            "rationale": "Both 'hawk' and 'jet' are related to 'flight'. 'Hawk' is a bird that flies and 'jet' is a type of aircraft.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "Relates to 'air' and 'robin', both blue words."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "wild"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jam": 0.75,
+              "pie": 0.7,
+              "robin": 0.85,
+              "scorpion": 0.9
+            },
+            "ranked_guesses": [
+              "scorpion",
+              "robin",
+              "jam",
+              "pie"
+            ],
+            "rationale": "Clue 'red' with count 3 suggests looking for words directly associated with red. 'scorpion' (red scorpion) is strongest, followed by 'robin' (robin redbreast), then 'jam' (red jam) and 'pie' (red pie).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "hollywood": 0.85,
+              "pie": 0.65,
+              "robin": 0.7,
+              "tie": 0.5
+            },
+            "ranked_guesses": [
+              "dragon",
+              "hollywood",
+              "robin",
+              "pie",
+              "tie"
+            ],
+            "rationale": "Clue 'red' with count 3 suggests strong associations. 'dragon' (red dragon) is the strongest match, followed by 'hollywood' (red carpet). 'robin' (red bird) and 'pie' (red pie) are moderate fits. 'tie' (red tie) is a weaker but possible connection.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jam": 0.9,
+              "pie": 0.85,
+              "robin": 0.8
+            },
+            "ranked_guesses": [
+              "jam",
+              "pie",
+              "robin"
+            ],
+            "rationale": "The active clue 'red' with count 3 strongly suggests words directly associated with the color red. 'jam' (strawberry), 'pie' (cherry), and 'robin' (red-breasted bird) are the most obvious matches fitting the clue count.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "red",
+          "count": 3,
+          "rationale": "Connects chick (red bird), fence (red fence), and pie (red pie) without matching any board word substring."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "theater"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'medical' strongly points to 'doctor' as the most relevant and direct match.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'medical' strongly points to 'doctor' as it is the most relevant word on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'medical' strongly points to 'doctor' as it is the most relevant word to the clue on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "hollywood"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 1,
+          "rationale": "Doctor is a medical professional, and it's a blue card."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 6,
+        "word": "break"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "chick": 0.75,
+              "dragon": 0.85,
+              "scorpion": 0.8
+            },
+            "ranked_guesses": [
+              "dragon",
+              "scorpion",
+              "chick"
+            ],
+            "rationale": "'Wild' likely refers to animals; dragon and scorpion are strong wild animal associations, chick is a young animal that could fit. Count of 3 matches these three targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "chick": 0.7,
+              "dragon": 0.7,
+              "scorpion": 0.8
+            },
+            "ranked_guesses": [
+              "scorpion",
+              "chick",
+              "dragon"
+            ],
+            "rationale": "Wild strongly suggests animals or untamed things; scorpion is a clear wild animal, chick can imply wild birds, and dragon fits mythical wild creatures.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.7,
+              "ham": 0.3,
+              "scorpion": 0.6
+            },
+            "ranked_guesses": [
+              "dragon",
+              "scorpion",
+              "ham"
+            ],
+            "rationale": "'wild' strongly suggests wild animals like 'dragon' and 'scorpion'. 'ham' is a stretch (wild boar) but included due to count=3. 'dragon' is the most direct match.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tie"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "wild",
+          "count": 3,
+          "rationale": "Connects to wild chicken (chick), wild fence (fence), and wild pie (pie)."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "stage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hollywood": 0.8
+            },
+            "ranked_guesses": [
+              "hollywood"
+            ],
+            "rationale": "Theater is often associated with Hollywood, which is a key location for film and theater productions.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hollywood": 0.8
+            },
+            "ranked_guesses": [
+              "hollywood"
+            ],
+            "rationale": "Theater is often associated with Hollywood, which is a key location for film and entertainment.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hollywood": 0.8
+            },
+            "ranked_guesses": [
+              "hollywood"
+            ],
+            "rationale": "Theater is often associated with Hollywood, which is a key location for film and entertainment industries, closely linked to theatrical performances.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "cast"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "theater",
+          "count": 1,
+          "rationale": "Hinting towards 'hollywood', which is a blue word and related to the film industry."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

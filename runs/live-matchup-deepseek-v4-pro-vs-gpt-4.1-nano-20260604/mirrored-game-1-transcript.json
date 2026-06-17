@@ -1,0 +1,453 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "baker": "blue",
+      "bridge": "neutral",
+      "butter": "neutral",
+      "canyon": "red",
+      "circle": "assassin",
+      "family": "blue",
+      "farmer": "red",
+      "flower": "red",
+      "guitar": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "machine": "neutral",
+      "metal": "blue",
+      "paper": "red",
+      "poet": "red",
+      "pyramid": "red",
+      "singer": "red",
+      "spirit": "blue",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "blue",
+      "travel": "neutral",
+      "village": "neutral"
+    },
+    "revealed": [
+      "butter",
+      "farmer"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "baker": "blue",
+      "bridge": "neutral",
+      "butter": "neutral",
+      "canyon": "red",
+      "circle": "assassin",
+      "family": "blue",
+      "farmer": "red",
+      "flower": "red",
+      "guitar": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "machine": "neutral",
+      "metal": "blue",
+      "paper": "red",
+      "poet": "red",
+      "pyramid": "red",
+      "singer": "red",
+      "spirit": "blue",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "blue",
+      "travel": "neutral",
+      "village": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "agriculture",
+        "count": 3,
+        "rationale": "Connects farmer, flower, and honey (all related to farming/growing). Avoids canyon, guitar, etc."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.05,
+          "anchor": 0.15,
+          "baker": 0.05,
+          "bridge": 0.1,
+          "butter": 0.85,
+          "canyon": 0.35,
+          "circle": 0.05,
+          "family": 0.25,
+          "farmer": 0.95,
+          "flower": 0.75,
+          "guitar": 0.05,
+          "highway": 0.05,
+          "honey": 0.65,
+          "machine": 0.05,
+          "metal": 0.05,
+          "paper": 0.05,
+          "poet": 0.05,
+          "pyramid": 0.05,
+          "singer": 0.05,
+          "spirit": 0.05,
+          "storm": 0.05,
+          "summer": 0.45,
+          "tiger": 0.05,
+          "travel": 0.05,
+          "village": 0.55
+        },
+        "ranked_guesses": [
+          "farmer",
+          "butter",
+          "flower",
+          "honey",
+          "village",
+          "summer",
+          "canyon",
+          "family",
+          "anchor",
+          "bridge",
+          "circle",
+          "metal",
+          "paper",
+          "pyramid",
+          "spirit",
+          "storm",
+          "tiger",
+          "travel",
+          "agent",
+          "baker",
+          "guitar",
+          "highway",
+          "machine",
+          "poet",
+          "singer"
+        ],
+        "rationale": "Agriculture strongly relates to farmer, butter (dairy), flower (crops), honey (beekeeping), and village (rural). We have 3 guesses to make, so we'll start with the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.1,
+          "anchor": 0.1,
+          "baker": 0.3,
+          "bridge": 0.1,
+          "butter": 0.6,
+          "canyon": 0.1,
+          "circle": 0.1,
+          "family": 0.2,
+          "farmer": 0.95,
+          "flower": 0.7,
+          "guitar": 0.1,
+          "highway": 0.1,
+          "honey": 0.5,
+          "machine": 0.1,
+          "metal": 0.1,
+          "paper": 0.1,
+          "poet": 0.1,
+          "pyramid": 0.1,
+          "singer": 0.1,
+          "spirit": 0.1,
+          "storm": 0.1,
+          "summer": 0.4,
+          "tiger": 0.1,
+          "travel": 0.1,
+          "village": 0.85
+        },
+        "ranked_guesses": [
+          "farmer",
+          "village",
+          "flower",
+          "butter",
+          "honey",
+          "summer",
+          "baker",
+          "family",
+          "canyon",
+          "circle",
+          "machine",
+          "metal",
+          "paper",
+          "bridge",
+          "highway",
+          "travel",
+          "agent",
+          "anchor",
+          "guitar",
+          "poet",
+          "singer",
+          "spirit",
+          "storm",
+          "tiger",
+          "pyramid"
+        ],
+        "rationale": "Agriculture strongly suggests farmer, village (rural community), and flower (crop). Butter and honey are agricultural products, but less direct. We have 3 guesses to make, so we'll start with the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.85,
+          "farmer": 0.95,
+          "flower": 0.7,
+          "honey": 0.8,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "farmer",
+          "butter",
+          "honey",
+          "flower",
+          "village"
+        ],
+        "rationale": "Agriculture strongly suggests farmer. Butter and honey are agricultural products. Flower and village are also related but less directly.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "agriculture"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "farmer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "butter"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 3,
+    "reason": null,
+    "seed": "1:0",
+    "team_blue": "gpt-4.1-nano",
+    "team_red": "deepseek-v4-pro",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "agriculture"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.05,
+              "anchor": 0.15,
+              "baker": 0.05,
+              "bridge": 0.1,
+              "butter": 0.85,
+              "canyon": 0.35,
+              "circle": 0.05,
+              "family": 0.25,
+              "farmer": 0.95,
+              "flower": 0.75,
+              "guitar": 0.05,
+              "highway": 0.05,
+              "honey": 0.65,
+              "machine": 0.05,
+              "metal": 0.05,
+              "paper": 0.05,
+              "poet": 0.05,
+              "pyramid": 0.05,
+              "singer": 0.05,
+              "spirit": 0.05,
+              "storm": 0.05,
+              "summer": 0.45,
+              "tiger": 0.05,
+              "travel": 0.05,
+              "village": 0.55
+            },
+            "ranked_guesses": [
+              "farmer",
+              "butter",
+              "flower",
+              "honey",
+              "village",
+              "summer",
+              "canyon",
+              "family",
+              "anchor",
+              "bridge",
+              "circle",
+              "metal",
+              "paper",
+              "pyramid",
+              "spirit",
+              "storm",
+              "tiger",
+              "travel",
+              "agent",
+              "baker",
+              "guitar",
+              "highway",
+              "machine",
+              "poet",
+              "singer"
+            ],
+            "rationale": "Agriculture strongly relates to farmer, butter (dairy), flower (crops), honey (beekeeping), and village (rural). We have 3 guesses to make, so we'll start with the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.1,
+              "anchor": 0.1,
+              "baker": 0.3,
+              "bridge": 0.1,
+              "butter": 0.6,
+              "canyon": 0.1,
+              "circle": 0.1,
+              "family": 0.2,
+              "farmer": 0.95,
+              "flower": 0.7,
+              "guitar": 0.1,
+              "highway": 0.1,
+              "honey": 0.5,
+              "machine": 0.1,
+              "metal": 0.1,
+              "paper": 0.1,
+              "poet": 0.1,
+              "pyramid": 0.1,
+              "singer": 0.1,
+              "spirit": 0.1,
+              "storm": 0.1,
+              "summer": 0.4,
+              "tiger": 0.1,
+              "travel": 0.1,
+              "village": 0.85
+            },
+            "ranked_guesses": [
+              "farmer",
+              "village",
+              "flower",
+              "butter",
+              "honey",
+              "summer",
+              "baker",
+              "family",
+              "canyon",
+              "circle",
+              "machine",
+              "metal",
+              "paper",
+              "bridge",
+              "highway",
+              "travel",
+              "agent",
+              "anchor",
+              "guitar",
+              "poet",
+              "singer",
+              "spirit",
+              "storm",
+              "tiger",
+              "pyramid"
+            ],
+            "rationale": "Agriculture strongly suggests farmer, village (rural community), and flower (crop). Butter and honey are agricultural products, but less direct. We have 3 guesses to make, so we'll start with the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.85,
+              "farmer": 0.95,
+              "flower": 0.7,
+              "honey": 0.8,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "farmer",
+              "butter",
+              "honey",
+              "flower",
+              "village"
+            ],
+            "rationale": "Agriculture strongly suggests farmer. Butter and honey are agricultural products. Flower and village are also related but less directly.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "farmer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "butter"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "agriculture",
+          "count": 3,
+          "rationale": "Connects farmer, flower, and honey (all related to farming/growing). Avoids canyon, guitar, etc."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

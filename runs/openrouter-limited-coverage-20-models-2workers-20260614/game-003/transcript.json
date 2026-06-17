@@ -1,0 +1,1382 @@
+{
+  "board": {
+    "identities": {
+      "alps": "neutral",
+      "antarctica": "blue",
+      "australia": "neutral",
+      "beijing": "blue",
+      "berlin": "red",
+      "bridge": "red",
+      "button": "blue",
+      "calf": "neutral",
+      "cat": "assassin",
+      "church": "neutral",
+      "cloak": "red",
+      "cycle": "blue",
+      "draft": "neutral",
+      "dragon": "red",
+      "eagle": "blue",
+      "ground": "neutral",
+      "hook": "red",
+      "jet": "blue",
+      "lawyer": "red",
+      "nail": "blue",
+      "octopus": "red",
+      "rock": "neutral",
+      "round": "red",
+      "tower": "blue",
+      "yard": "red"
+    },
+    "revealed": [
+      "antarctica",
+      "australia",
+      "beijing",
+      "berlin",
+      "bridge",
+      "button",
+      "cat",
+      "cloak",
+      "dragon",
+      "eagle",
+      "hook",
+      "jet",
+      "nail"
+    ],
+    "words": {
+      "alps": "neutral",
+      "antarctica": "blue",
+      "australia": "neutral",
+      "beijing": "blue",
+      "berlin": "red",
+      "bridge": "red",
+      "button": "blue",
+      "calf": "neutral",
+      "cat": "assassin",
+      "church": "neutral",
+      "cloak": "red",
+      "cycle": "blue",
+      "draft": "neutral",
+      "dragon": "red",
+      "eagle": "blue",
+      "ground": "neutral",
+      "hook": "red",
+      "jet": "blue",
+      "lawyer": "red",
+      "nail": "blue",
+      "octopus": "red",
+      "rock": "neutral",
+      "round": "red",
+      "tower": "blue",
+      "yard": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "mythic",
+        "count": 2,
+        "rationale": "Many red words are related to legendary or magical themes"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.85,
+          "eagle": 0.78
+        },
+        "ranked_guesses": [
+          "dragon",
+          "eagle"
+        ],
+        "rationale": "Dragon is a classic mythic creature; eagle also appears in many myths and legends.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.85,
+          "eagle": 0.75
+        },
+        "ranked_guesses": [
+          "dragon",
+          "eagle"
+        ],
+        "rationale": "Both are legendary creatures often described in myths",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.85,
+          "eagle": 0.78
+        },
+        "ranked_guesses": [
+          "dragon",
+          "eagle"
+        ],
+        "rationale": "mythic clue points to legendary creatures; dragon is a classic mythic beast and eagle appears in many myths",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "travel",
+        "count": 4,
+        "rationale": "Connects to antarctica (destination), beijing (destination), jet (transport), and cycle (transport)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.8,
+          "antarctica": 0.85,
+          "australia": 0.85,
+          "jet": 0.9
+        },
+        "ranked_guesses": [
+          "jet",
+          "antarctica",
+          "australia",
+          "alps"
+        ],
+        "rationale": "Clue 'travel' with count 4 strongly suggests these 4 words are blue team targets. 'jet' is most directly related to travel (air travel), followed by travel destinations 'antarctica' and 'australia', then 'alps' as a travel destination.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "antarctica": 0.95,
+          "australia": 0.95,
+          "beijing": 0.95,
+          "berlin": 0.95
+        },
+        "ranked_guesses": [
+          "antarctica",
+          "australia",
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "These are all clear travel destinations matching the 'travel' clue with count 4.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.9,
+          "antarctica": 0.9,
+          "australia": 0.9,
+          "beijing": 0.85
+        },
+        "ranked_guesses": [
+          "alps",
+          "antarctica",
+          "australia",
+          "beijing"
+        ],
+        "rationale": "'travel' strongly suggests destinations; alps, antarctica, australia, and beijing are clear travel-related words with high relevance.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "pirate",
+        "count": 3,
+        "rationale": "hook, octopus, and yard all fit a pirate theme"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.85
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "Pirates are famously associated with a hook (as a prosthetic hand) and the clue expects three related words; hook is the strongest link.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.85
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "pirate clue suggests a hook, a classic pirate symbol",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "button": 0.55,
+          "cloak": 0.6,
+          "hook": 0.85
+        },
+        "ranked_guesses": [
+          "hook",
+          "cloak",
+          "button"
+        ],
+        "rationale": "Hook is a classic pirate symbol; cloak fits the pirate\u2019s attire; button could hint at a pirate\u2019s coat.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "journey",
+        "count": 3,
+        "rationale": "Connects 'cycle' (bicycle journey), 'jet' (jet journey), and 'beijing' (trip to Beijing) as travel-related terms."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.9,
+          "berlin": 0.9,
+          "bridge": 0.8,
+          "cycle": 0.7,
+          "jet": 0.7
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin",
+          "bridge",
+          "cycle",
+          "jet"
+        ],
+        "rationale": "'journey' strongly suggests travel destinations and paths; beijing and berlin are clear travel targets, bridge fits as a travel path, cycle and jet are plausible travel modes",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.9,
+          "beijing": 0.95,
+          "berlin": 0.95
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin",
+          "alps"
+        ],
+        "rationale": "'journey' strongly suggests travel destinations. Beijing, Berlin, and Alps are all major travel destinations that fit the clue perfectly. High confidence these are the intended targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.9,
+          "beijing": 0.7,
+          "berlin": 0.7
+        },
+        "ranked_guesses": [
+          "alps",
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "'journey' strongly connects to 'alps' (mountain travel). 'beijing' and 'berlin' are plausible destinations fitting the journey theme.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 2,
+        "rationale": "bridge and yard are both places associated with building and construction"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.78
+        },
+        "ranked_guesses": [
+          "bridge"
+        ],
+        "rationale": "bridge is a common construction project and fits the clue count 2",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.78
+        },
+        "ranked_guesses": [
+          "bridge"
+        ],
+        "rationale": "bridge and tower are both built structures; bridge is a strong candidate for construction",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.78,
+          "tower": 0.73
+        },
+        "ranked_guesses": [
+          "bridge",
+          "tower"
+        ],
+        "rationale": "construction often involves bridge and tower",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 4,
+        "rationale": "Connects four blue words: button, nail, jet, and tower, all commonly associated with metal objects or structures."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "button": 0.75,
+          "jet": 0.9,
+          "nail": 0.95,
+          "tower": 0.7
+        },
+        "ranked_guesses": [
+          "nail",
+          "jet",
+          "button",
+          "tower"
+        ],
+        "rationale": "The clue 'metal' with count 4 indicates four metal-related words remain. 'nail' and 'jet' are most directly associated with metal objects, while 'button' and 'tower' are plausible metal items fitting the count.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "button": 0.9,
+          "cycle": 0.85,
+          "jet": 0.95,
+          "nail": 0.95
+        },
+        "ranked_guesses": [
+          "nail",
+          "jet",
+          "button",
+          "cycle"
+        ],
+        "rationale": "The clue 'metal' with count 4 strongly suggests these four words which directly relate to metal objects. All remain unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.9,
+          "nail": 0.85,
+          "rock": 0.6,
+          "round": 0.5
+        },
+        "ranked_guesses": [
+          "jet",
+          "nail",
+          "rock",
+          "round"
+        ],
+        "rationale": "Clue 'metal' with count 4 strongly suggests words directly related to metal. 'jet' and 'nail' are the most direct matches. 'rock' and 'round' are weaker associations but still plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "stealth",
+        "count": 2,
+        "rationale": "Both a cloak and an octopus are associated with hiding or moving unseen."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cat": 0.75,
+          "cloak": 0.75
+        },
+        "ranked_guesses": [
+          "cloak",
+          "cat"
+        ],
+        "rationale": "stealth suggests hidden items like a cloak and a silent cat",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cat": 0.65,
+          "cloak": 0.78
+        },
+        "ranked_guesses": [
+          "cloak",
+          "cat"
+        ],
+        "rationale": "Cloak is directly associated with stealth; cats are known for moving stealthily.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.78
+        },
+        "ranked_guesses": [
+          "cloak"
+        ],
+        "rationale": "stealth suggests hidden/covered like a cloak",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "antarctica"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "australia"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "pirate"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hook"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beijing"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "berlin"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "jet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "button"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "stealth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloak"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "cat"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 28,
+    "public_event_count": 23,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-003-openai_gpt_oss_120b-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.85,
+              "eagle": 0.78
+            },
+            "ranked_guesses": [
+              "dragon",
+              "eagle"
+            ],
+            "rationale": "Dragon is a classic mythic creature; eagle also appears in many myths and legends.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.85,
+              "eagle": 0.75
+            },
+            "ranked_guesses": [
+              "dragon",
+              "eagle"
+            ],
+            "rationale": "Both are legendary creatures often described in myths",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.85,
+              "eagle": 0.78
+            },
+            "ranked_guesses": [
+              "dragon",
+              "eagle"
+            ],
+            "rationale": "mythic clue points to legendary creatures; dragon is a classic mythic beast and eagle appears in many myths",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythic",
+          "count": 2,
+          "rationale": "Many red words are related to legendary or magical themes"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "travel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.8,
+              "antarctica": 0.85,
+              "australia": 0.85,
+              "jet": 0.9
+            },
+            "ranked_guesses": [
+              "jet",
+              "antarctica",
+              "australia",
+              "alps"
+            ],
+            "rationale": "Clue 'travel' with count 4 strongly suggests these 4 words are blue team targets. 'jet' is most directly related to travel (air travel), followed by travel destinations 'antarctica' and 'australia', then 'alps' as a travel destination.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "antarctica": 0.95,
+              "australia": 0.95,
+              "beijing": 0.95,
+              "berlin": 0.95
+            },
+            "ranked_guesses": [
+              "antarctica",
+              "australia",
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "These are all clear travel destinations matching the 'travel' clue with count 4.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.9,
+              "antarctica": 0.9,
+              "australia": 0.9,
+              "beijing": 0.85
+            },
+            "ranked_guesses": [
+              "alps",
+              "antarctica",
+              "australia",
+              "beijing"
+            ],
+            "rationale": "'travel' strongly suggests destinations; alps, antarctica, australia, and beijing are clear travel-related words with high relevance.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "antarctica"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "australia"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 4,
+          "rationale": "Connects to antarctica (destination), beijing (destination), jet (transport), and cycle (transport)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "pirate"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hook": 0.85
+            },
+            "ranked_guesses": [
+              "hook"
+            ],
+            "rationale": "Pirates are famously associated with a hook (as a prosthetic hand) and the clue expects three related words; hook is the strongest link.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hook": 0.85
+            },
+            "ranked_guesses": [
+              "hook"
+            ],
+            "rationale": "pirate clue suggests a hook, a classic pirate symbol",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "button": 0.55,
+              "cloak": 0.6,
+              "hook": 0.85
+            },
+            "ranked_guesses": [
+              "hook",
+              "cloak",
+              "button"
+            ],
+            "rationale": "Hook is a classic pirate symbol; cloak fits the pirate\u2019s attire; button could hint at a pirate\u2019s coat.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hook"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "pirate",
+          "count": 3,
+          "rationale": "hook, octopus, and yard all fit a pirate theme"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.9,
+              "berlin": 0.9,
+              "bridge": 0.8,
+              "cycle": 0.7,
+              "jet": 0.7
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin",
+              "bridge",
+              "cycle",
+              "jet"
+            ],
+            "rationale": "'journey' strongly suggests travel destinations and paths; beijing and berlin are clear travel targets, bridge fits as a travel path, cycle and jet are plausible travel modes",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.9,
+              "beijing": 0.95,
+              "berlin": 0.95
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin",
+              "alps"
+            ],
+            "rationale": "'journey' strongly suggests travel destinations. Beijing, Berlin, and Alps are all major travel destinations that fit the clue perfectly. High confidence these are the intended targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.9,
+              "beijing": 0.7,
+              "berlin": 0.7
+            },
+            "ranked_guesses": [
+              "alps",
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "'journey' strongly connects to 'alps' (mountain travel). 'beijing' and 'berlin' are plausible destinations fitting the journey theme.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beijing"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "berlin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 3,
+          "rationale": "Connects 'cycle' (bicycle journey), 'jet' (jet journey), and 'beijing' (trip to Beijing) as travel-related terms."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.78
+            },
+            "ranked_guesses": [
+              "bridge"
+            ],
+            "rationale": "bridge is a common construction project and fits the clue count 2",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.78
+            },
+            "ranked_guesses": [
+              "bridge"
+            ],
+            "rationale": "bridge and tower are both built structures; bridge is a strong candidate for construction",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.78,
+              "tower": 0.73
+            },
+            "ranked_guesses": [
+              "bridge",
+              "tower"
+            ],
+            "rationale": "construction often involves bridge and tower",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "construction",
+          "count": 2,
+          "rationale": "bridge and yard are both places associated with building and construction"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "button": 0.75,
+              "jet": 0.9,
+              "nail": 0.95,
+              "tower": 0.7
+            },
+            "ranked_guesses": [
+              "nail",
+              "jet",
+              "button",
+              "tower"
+            ],
+            "rationale": "The clue 'metal' with count 4 indicates four metal-related words remain. 'nail' and 'jet' are most directly associated with metal objects, while 'button' and 'tower' are plausible metal items fitting the count.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "button": 0.9,
+              "cycle": 0.85,
+              "jet": 0.95,
+              "nail": 0.95
+            },
+            "ranked_guesses": [
+              "nail",
+              "jet",
+              "button",
+              "cycle"
+            ],
+            "rationale": "The clue 'metal' with count 4 strongly suggests these four words which directly relate to metal objects. All remain unrevealed on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.9,
+              "nail": 0.85,
+              "rock": 0.6,
+              "round": 0.5
+            },
+            "ranked_guesses": [
+              "jet",
+              "nail",
+              "rock",
+              "round"
+            ],
+            "rationale": "Clue 'metal' with count 4 strongly suggests words directly related to metal. 'jet' and 'nail' are the most direct matches. 'rock' and 'round' are weaker associations but still plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "jet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "button"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 4,
+          "rationale": "Connects four blue words: button, nail, jet, and tower, all commonly associated with metal objects or structures."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "stealth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cat": 0.75,
+              "cloak": 0.75
+            },
+            "ranked_guesses": [
+              "cloak",
+              "cat"
+            ],
+            "rationale": "stealth suggests hidden items like a cloak and a silent cat",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cat": 0.65,
+              "cloak": 0.78
+            },
+            "ranked_guesses": [
+              "cloak",
+              "cat"
+            ],
+            "rationale": "Cloak is directly associated with stealth; cats are known for moving stealthily.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloak": 0.78
+            },
+            "ranked_guesses": [
+              "cloak"
+            ],
+            "rationale": "stealth suggests hidden/covered like a cloak",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloak"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "cat"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "stealth",
+          "count": 2,
+          "rationale": "Both a cloak and an octopus are associated with hiding or moving unseen."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

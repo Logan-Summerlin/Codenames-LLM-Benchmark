@@ -1,0 +1,2103 @@
+{
+  "board": {
+    "identities": {
+      "animal": "red",
+      "autumn": "red",
+      "beacon": "blue",
+      "bread": "blue",
+      "camera": "red",
+      "captain": "neutral",
+      "castle": "neutral",
+      "circle": "red",
+      "copper": "red",
+      "dream": "red",
+      "engine": "blue",
+      "family": "neutral",
+      "forest": "red",
+      "ghost": "assassin",
+      "harbor": "neutral",
+      "highway": "blue",
+      "magnet": "blue",
+      "memory": "neutral",
+      "mountain": "blue",
+      "paper": "neutral",
+      "planet": "red",
+      "robot": "red",
+      "teacher": "blue",
+      "telescope": "neutral",
+      "tiger": "blue"
+    },
+    "revealed": [
+      "animal",
+      "autumn",
+      "beacon",
+      "camera",
+      "circle",
+      "copper",
+      "dream",
+      "engine",
+      "forest",
+      "magnet",
+      "mountain",
+      "planet",
+      "robot",
+      "telescope",
+      "tiger"
+    ],
+    "words": {
+      "animal": "red",
+      "autumn": "red",
+      "beacon": "blue",
+      "bread": "blue",
+      "camera": "red",
+      "captain": "neutral",
+      "castle": "neutral",
+      "circle": "red",
+      "copper": "red",
+      "dream": "red",
+      "engine": "blue",
+      "family": "neutral",
+      "forest": "red",
+      "ghost": "assassin",
+      "harbor": "neutral",
+      "highway": "blue",
+      "magnet": "blue",
+      "memory": "neutral",
+      "mountain": "blue",
+      "paper": "neutral",
+      "planet": "red",
+      "robot": "red",
+      "teacher": "blue",
+      "telescope": "neutral",
+      "tiger": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "wildlife",
+        "count": 3,
+        "rationale": "Connects to animal, tiger, and forest as natural/animal-themed words for red team."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.95,
+          "forest": 0.85,
+          "tiger": 0.75
+        },
+        "ranked_guesses": [
+          "animal",
+          "forest",
+          "tiger"
+        ],
+        "rationale": "Wildlife strongly relates to animal (direct), forest (habitat), and tiger (specific wildlife example).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.95,
+          "forest": 0.85,
+          "tiger": 0.75
+        },
+        "ranked_guesses": [
+          "animal",
+          "forest",
+          "tiger"
+        ],
+        "rationale": "The clue 'wildlife' strongly suggests animal-related words. 'Animal' is the most direct match. 'Forest' is a natural habitat for wildlife, and 'tiger' is a specific wildlife animal. These three align well with the count of 3.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.9,
+          "forest": 0.7,
+          "tiger": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "forest",
+          "tiger"
+        ],
+        "rationale": "Clue 'wildlife' strongly suggests animal-related words; 'animal' is direct, 'forest' and 'tiger' are plausible associations.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "Connects to 'copper' (red) and 'magnet' (blue) as a common theme, covering 3 likely targets."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.65,
+          "castle": 0.6,
+          "copper": 0.9,
+          "engine": 0.75,
+          "magnet": 0.85,
+          "paper": 0.55,
+          "planet": 0.5,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "engine",
+          "robot",
+          "beacon",
+          "castle",
+          "paper",
+          "planet"
+        ],
+        "rationale": "'metal' strongly suggests 'copper' and 'magnet' as direct associations. 'engine' and 'robot' are plausible due to metal components, while others like 'beacon' or 'castle' are weaker but possible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "engine": 0.7,
+          "magnet": 0.85
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "engine"
+        ],
+        "rationale": "'metal' strongly suggests 'copper' (direct metal) and 'magnet' (metallic property). 'engine' is loosely related but less direct. 'tiger' is already revealed as blue, so avoid.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "magnet": 0.85
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet"
+        ],
+        "rationale": "'metal' likely refers to a metal-related word on the board. 'copper' and 'magnet' are both metals and present on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects to 'autumn' (seasonal), 'planet' (natural world), and 'dream' (can be associated with natural imagery), all red words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "mountain": 0.9,
+          "planet": 0.6
+        },
+        "ranked_guesses": [
+          "mountain",
+          "autumn",
+          "planet"
+        ],
+        "rationale": "Clue 'nature' with count 3 strongly suggests mountain (natural landform), autumn (season of nature), and planet (celestial body). Other nature-related words like forest and animal are already revealed. Mountain is highest confidence, autumn and planet are plausible but less direct.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.75,
+          "mountain": 0.85,
+          "planet": 0.7
+        },
+        "ranked_guesses": [
+          "mountain",
+          "autumn",
+          "planet"
+        ],
+        "rationale": "Clue 'nature' with count 3 strongly suggests mountain (natural feature), autumn (season), and planet (celestial body). Other nature-related words like forest and animal are already revealed. Mountain is highest confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "mountain": 0.9,
+          "planet": 0.6
+        },
+        "ranked_guesses": [
+          "mountain",
+          "autumn",
+          "planet"
+        ],
+        "rationale": "Clue 'nature' with count 3 strongly suggests mountain (natural feature), autumn (season), and planet (celestial body). Other nature-related words like forest and animal are already revealed. Mountain is highest confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "magnet",
+        "count": 2,
+        "rationale": "Connects to 'metal' (previous clue) and links 'magnet' and 'engine' as blue team words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "season",
+        "count": 1,
+        "rationale": "Connects to 'autumn' as a red word, avoiding overlap with revealed or assassin words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.95
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "The clue 'season' with count 1 strongly points to 'autumn' as the only season-related word on the board. Other words like 'spring' or 'winter' aren't present, making 'autumn' the clear and safe single guess.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "Clue 'season' with count 1 directly points to 'autumn', a season, and no other words are season-related.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "Clue 'season' with count 1 strongly points to 'autumn' as the only season-related word on the board.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "power",
+        "count": 2,
+        "rationale": "Connects to 'engine' and 'magnet' as blue team words, while avoiding direct matches to revealed red words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.9,
+          "memory": 0.7,
+          "planet": 0.75,
+          "robot": 0.85,
+          "teacher": 0.65
+        },
+        "ranked_guesses": [
+          "engine",
+          "robot",
+          "planet",
+          "memory",
+          "teacher"
+        ],
+        "rationale": "Active clue 'power' likely connects to 'engine' (mechanical power) and 'robot' (artificial power). 'planet' (celestial power), 'memory' (computing power), and 'teacher' (teaching power) are secondary guesses.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.9,
+          "memory": 0.75,
+          "planet": 0.8,
+          "robot": 0.85,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "engine",
+          "robot",
+          "planet",
+          "memory",
+          "telescope"
+        ],
+        "rationale": "'power' likely connects to 'engine' (power source) and 'robot' (power-driven). 'planet' (powerful celestial body) and 'memory' (power in computing) are secondary. 'telescope' is weaker but possible for power of observation.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.65,
+          "engine": 0.9,
+          "memory": 0.7,
+          "planet": 0.75,
+          "robot": 0.85
+        },
+        "ranked_guesses": [
+          "engine",
+          "robot",
+          "planet",
+          "memory",
+          "captain"
+        ],
+        "rationale": "Power likely connects to 'engine' (mechanical power) and 'robot' (artificial power). 'Planet' and 'memory' are weaker but possible. 'Captain' is a stretch.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "astronomy",
+        "count": 2,
+        "rationale": "Connects 'planet' and 'telescope', both unrevealed neutral words, avoiding assassin 'ghost' and blue words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.8,
+          "telescope": 0.9
+        },
+        "ranked_guesses": [
+          "telescope",
+          "planet"
+        ],
+        "rationale": "Astronomy strongly connects to telescope and planet. Telescope is most direct astronomical tool, planet is celestial body. Both unrevealed and likely red team words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.85,
+          "telescope": 0.9
+        },
+        "ranked_guesses": [
+          "telescope",
+          "planet"
+        ],
+        "rationale": "The clue 'astronomy' with count 2 strongly suggests 'telescope' (direct astronomy tool) and 'planet' (astronomy subject). Both are unrevealed and likely red team words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.8,
+          "telescope": 0.9
+        },
+        "ranked_guesses": [
+          "telescope",
+          "planet"
+        ],
+        "rationale": "Astronomy clue strongly relates to telescope and planet; both unrevealed and likely red.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 2,
+        "rationale": "Connects to 'beacon' (blue) and 'camera' (red) while avoiding substrings of revealed words like 'robot' or 'engine'."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.9,
+          "bread": 0.75,
+          "camera": 0.85,
+          "captain": 0.7,
+          "paper": 0.8
+        },
+        "ranked_guesses": [
+          "beacon",
+          "camera",
+          "paper",
+          "bread",
+          "captain"
+        ],
+        "rationale": "'light' strongly connects to 'beacon' (lighthouse) and 'camera' (flash/light). 'paper' (lightweight) and 'bread' (light meal) are weaker but plausible. 'captain' (lightship) is a stretch but possible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.75,
+          "bread": 0.55,
+          "camera": 0.7,
+          "circle": 0.6,
+          "paper": 0.65
+        },
+        "ranked_guesses": [
+          "beacon",
+          "camera",
+          "paper",
+          "circle",
+          "bread"
+        ],
+        "rationale": "Clue 'light' likely connects to words like 'beacon' (source of light) or 'camera' (captures light). 'paper' and 'circle' are weaker but possible. 'bread' is a stretch.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.85,
+          "camera": 0.8,
+          "captain": 0.75,
+          "circle": 0.7,
+          "paper": 0.7,
+          "planet": 0.65,
+          "teacher": 0.6
+        },
+        "ranked_guesses": [
+          "beacon",
+          "camera",
+          "captain",
+          "circle",
+          "paper",
+          "planet",
+          "teacher"
+        ],
+        "rationale": "Clue 'light' likely connects to 'beacon' (source of light) or 'camera' (captures light). Other plausible words like 'captain' (captain of a ship's light) or 'circle' (halo of light) are less direct but possible. 'Paper' and 'planet' are weaker fits.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "story",
+        "count": 2,
+        "rationale": "Connects 'dream' and 'memory' as red words, avoiding blue words and assassin."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "memory": 0.6
+        },
+        "ranked_guesses": [
+          "dream",
+          "memory"
+        ],
+        "rationale": "Clue 'story' with count 2 likely connects to narrative or recollection. 'Dream' and 'memory' are strong candidates as they relate to personal stories or experiences. Other words like 'captain', 'ghost', or 'family' could also fit but seem less directly tied to 'story' than dream/memory.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.75,
+          "memory": 0.7
+        },
+        "ranked_guesses": [
+          "dream",
+          "memory"
+        ],
+        "rationale": "Clue 'story' with count 2 likely connects to narrative or tale-related words. 'Dream' and 'memory' both fit as elements of a story. 'Dream' is slightly stronger due to common story themes. Other story-related words like 'captain' or 'ghost' are less directly linked.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.75,
+          "memory": 0.65
+        },
+        "ranked_guesses": [
+          "dream",
+          "memory"
+        ],
+        "rationale": "Clue 'story' with count 2 suggests narrative-related words. 'Dream' and 'memory' both fit as they can be part of a story. 'Dream' is stronger due to common story themes. Other words like 'captain', 'ghost', or 'family' could also relate but are less directly tied to 'story' as a concept.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "force",
+        "count": 2,
+        "rationale": "Connects to 'power' (previous clue) and links 'magnet' and 'highway' as blue team words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "magnet"
+        ],
+        "rationale": "'force' connects to 'magnet' (magnetic force) and 'magnet' is a blue team word not yet guessed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "magnet"
+        ],
+        "rationale": "'magnet' is strongly connected to 'force' (magnetic force) and is a blue team word not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.85
+        },
+        "ranked_guesses": [
+          "magnet"
+        ],
+        "rationale": "Connects to 'force' (current clue) and links 'magnet' and 'engine' as blue team words, while avoiding red/neutral words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "round",
+        "count": 2,
+        "rationale": "Connects to 'circle' (shape) and 'planet' (celestial body), both red words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.6,
+          "circle": 0.9,
+          "planet": 0.7
+        },
+        "ranked_guesses": [
+          "circle",
+          "planet",
+          "bread"
+        ],
+        "rationale": "'round' strongly relates to 'circle' (shape), 'planet' (celestial body), and 'bread' (loaf shape). These are unrevealed red words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.9,
+          "planet": 0.7
+        },
+        "ranked_guesses": [
+          "circle",
+          "planet"
+        ],
+        "rationale": "Round suggests circular shapes (circle) and celestial bodies (planet), both unrevealed and likely red.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.8,
+          "planet": 0.6
+        },
+        "ranked_guesses": [
+          "circle",
+          "planet"
+        ],
+        "rationale": "'round' suggests circular or spherical shapes; 'circle' is direct, 'planet' is round celestial body.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "charge",
+        "count": 2,
+        "rationale": "Connects to 'power' (previous clue) and links 'magnet' and 'engine' as blue team words, while avoiding direct matches with board words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "magnet"
+        ],
+        "rationale": "'charge' strongly connects to 'magnet' (electromagnetic charge) and 'engine' (electric charge). 'magnet' is already confirmed blue, making it a safe guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.85,
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "magnet",
+          "engine"
+        ],
+        "rationale": "Clue 'charge' likely connects to 'magnet' (magnetic charge) and 'engine' (electric charge). Both are blue team words and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.95
+        },
+        "ranked_guesses": [
+          "magnet"
+        ],
+        "rationale": "'charge' connects to 'magnet' (electromagnetic charge) and 'magnet' is a blue team word not yet guessed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Connects to 'planet' (celestial body) and 'robot' (often associated with space exploration), both red words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.6,
+          "planet": 0.9
+        },
+        "ranked_guesses": [
+          "planet",
+          "captain"
+        ],
+        "rationale": "'space' strongly relates to 'planet' (astronomical body) and 'captain' (as in spaceship captain); both unrevealed and likely red based on context.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.7,
+          "memory": 0.5,
+          "planet": 0.9
+        },
+        "ranked_guesses": [
+          "planet",
+          "captain",
+          "memory"
+        ],
+        "rationale": "'space' strongly relates to 'planet' (astronomical body), 'captain' (as in spaceship captain), and 'memory' (as in computer memory/space). Other words less connected.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.7,
+          "planet": 0.9
+        },
+        "ranked_guesses": [
+          "planet",
+          "captain"
+        ],
+        "rationale": "'space' strongly relates to 'planet' (astronomy context) and 'captain' (as in spaceship captain); both unrevealed and likely red based on clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "wildlife"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "animal"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tiger"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mountain"
+    },
+    {
+      "clue": {
+        "clue": "magnet",
+        "count": 2,
+        "rationale": "Connects to 'metal' (previous clue) and links 'magnet' and 'engine' as blue team words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "magnet",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "season"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "power"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "engine"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "astronomy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "telescope"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beacon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "story"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dream"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "force"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "round"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "circle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "charge"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "planet"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 49,
+    "public_event_count": 33,
+    "reason": "all_words_found",
+    "seed": "20260607-173354-m01",
+    "team_blue": "Mistral Small 4",
+    "team_red": "DeepSeek V3.1",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "wildlife"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.95,
+              "forest": 0.85,
+              "tiger": 0.75
+            },
+            "ranked_guesses": [
+              "animal",
+              "forest",
+              "tiger"
+            ],
+            "rationale": "Wildlife strongly relates to animal (direct), forest (habitat), and tiger (specific wildlife example).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.95,
+              "forest": 0.85,
+              "tiger": 0.75
+            },
+            "ranked_guesses": [
+              "animal",
+              "forest",
+              "tiger"
+            ],
+            "rationale": "The clue 'wildlife' strongly suggests animal-related words. 'Animal' is the most direct match. 'Forest' is a natural habitat for wildlife, and 'tiger' is a specific wildlife animal. These three align well with the count of 3.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.9,
+              "forest": 0.7,
+              "tiger": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "forest",
+              "tiger"
+            ],
+            "rationale": "Clue 'wildlife' strongly suggests animal-related words; 'animal' is direct, 'forest' and 'tiger' are plausible associations.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "animal"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tiger"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "wildlife",
+          "count": 3,
+          "rationale": "Connects to animal, tiger, and forest as natural/animal-themed words for red team."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.65,
+              "castle": 0.6,
+              "copper": 0.9,
+              "engine": 0.75,
+              "magnet": 0.85,
+              "paper": 0.55,
+              "planet": 0.5,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "engine",
+              "robot",
+              "beacon",
+              "castle",
+              "paper",
+              "planet"
+            ],
+            "rationale": "'metal' strongly suggests 'copper' and 'magnet' as direct associations. 'engine' and 'robot' are plausible due to metal components, while others like 'beacon' or 'castle' are weaker but possible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "engine": 0.7,
+              "magnet": 0.85
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "engine"
+            ],
+            "rationale": "'metal' strongly suggests 'copper' (direct metal) and 'magnet' (metallic property). 'engine' is loosely related but less direct. 'tiger' is already revealed as blue, so avoid.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "magnet": 0.85
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet"
+            ],
+            "rationale": "'metal' likely refers to a metal-related word on the board. 'copper' and 'magnet' are both metals and present on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "Connects to 'copper' (red) and 'magnet' (blue) as a common theme, covering 3 likely targets."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "mountain": 0.9,
+              "planet": 0.6
+            },
+            "ranked_guesses": [
+              "mountain",
+              "autumn",
+              "planet"
+            ],
+            "rationale": "Clue 'nature' with count 3 strongly suggests mountain (natural landform), autumn (season of nature), and planet (celestial body). Other nature-related words like forest and animal are already revealed. Mountain is highest confidence, autumn and planet are plausible but less direct.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.75,
+              "mountain": 0.85,
+              "planet": 0.7
+            },
+            "ranked_guesses": [
+              "mountain",
+              "autumn",
+              "planet"
+            ],
+            "rationale": "Clue 'nature' with count 3 strongly suggests mountain (natural feature), autumn (season), and planet (celestial body). Other nature-related words like forest and animal are already revealed. Mountain is highest confidence.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "mountain": 0.9,
+              "planet": 0.6
+            },
+            "ranked_guesses": [
+              "mountain",
+              "autumn",
+              "planet"
+            ],
+            "rationale": "Clue 'nature' with count 3 strongly suggests mountain (natural feature), autumn (season), and planet (celestial body). Other nature-related words like forest and animal are already revealed. Mountain is highest confidence.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mountain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects to 'autumn' (seasonal), 'planet' (natural world), and 'dream' (can be associated with natural imagery), all red words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "season"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "power"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "engine"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "magnet",
+          "count": 2,
+          "rationale": "Connects to 'metal' (previous clue) and links 'magnet' and 'engine' as blue team words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "astronomy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.95
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "The clue 'season' with count 1 strongly points to 'autumn' as the only season-related word on the board. Other words like 'spring' or 'winter' aren't present, making 'autumn' the clear and safe single guess.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "Clue 'season' with count 1 directly points to 'autumn', a season, and no other words are season-related.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "Clue 'season' with count 1 strongly points to 'autumn' as the only season-related word on the board.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "telescope"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "season",
+          "count": 1,
+          "rationale": "Connects to 'autumn' as a red word, avoiding overlap with revealed or assassin words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.9,
+              "memory": 0.7,
+              "planet": 0.75,
+              "robot": 0.85,
+              "teacher": 0.65
+            },
+            "ranked_guesses": [
+              "engine",
+              "robot",
+              "planet",
+              "memory",
+              "teacher"
+            ],
+            "rationale": "Active clue 'power' likely connects to 'engine' (mechanical power) and 'robot' (artificial power). 'planet' (celestial power), 'memory' (computing power), and 'teacher' (teaching power) are secondary guesses.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.9,
+              "memory": 0.75,
+              "planet": 0.8,
+              "robot": 0.85,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "engine",
+              "robot",
+              "planet",
+              "memory",
+              "telescope"
+            ],
+            "rationale": "'power' likely connects to 'engine' (power source) and 'robot' (power-driven). 'planet' (powerful celestial body) and 'memory' (power in computing) are secondary. 'telescope' is weaker but possible for power of observation.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.65,
+              "engine": 0.9,
+              "memory": 0.7,
+              "planet": 0.75,
+              "robot": 0.85
+            },
+            "ranked_guesses": [
+              "engine",
+              "robot",
+              "planet",
+              "memory",
+              "captain"
+            ],
+            "rationale": "Power likely connects to 'engine' (mechanical power) and 'robot' (artificial power). 'Planet' and 'memory' are weaker but possible. 'Captain' is a stretch.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beacon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "power",
+          "count": 2,
+          "rationale": "Connects to 'engine' and 'magnet' as blue team words, while avoiding direct matches to revealed red words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "story"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.8,
+              "telescope": 0.9
+            },
+            "ranked_guesses": [
+              "telescope",
+              "planet"
+            ],
+            "rationale": "Astronomy strongly connects to telescope and planet. Telescope is most direct astronomical tool, planet is celestial body. Both unrevealed and likely red team words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.85,
+              "telescope": 0.9
+            },
+            "ranked_guesses": [
+              "telescope",
+              "planet"
+            ],
+            "rationale": "The clue 'astronomy' with count 2 strongly suggests 'telescope' (direct astronomy tool) and 'planet' (astronomy subject). Both are unrevealed and likely red team words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.8,
+              "telescope": 0.9
+            },
+            "ranked_guesses": [
+              "telescope",
+              "planet"
+            ],
+            "rationale": "Astronomy clue strongly relates to telescope and planet; both unrevealed and likely red.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dream"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "astronomy",
+          "count": 2,
+          "rationale": "Connects 'planet' and 'telescope', both unrevealed neutral words, avoiding assassin 'ghost' and blue words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "force"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.9,
+              "bread": 0.75,
+              "camera": 0.85,
+              "captain": 0.7,
+              "paper": 0.8
+            },
+            "ranked_guesses": [
+              "beacon",
+              "camera",
+              "paper",
+              "bread",
+              "captain"
+            ],
+            "rationale": "'light' strongly connects to 'beacon' (lighthouse) and 'camera' (flash/light). 'paper' (lightweight) and 'bread' (light meal) are weaker but plausible. 'captain' (lightship) is a stretch but possible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.75,
+              "bread": 0.55,
+              "camera": 0.7,
+              "circle": 0.6,
+              "paper": 0.65
+            },
+            "ranked_guesses": [
+              "beacon",
+              "camera",
+              "paper",
+              "circle",
+              "bread"
+            ],
+            "rationale": "Clue 'light' likely connects to words like 'beacon' (source of light) or 'camera' (captures light). 'paper' and 'circle' are weaker but possible. 'bread' is a stretch.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.85,
+              "camera": 0.8,
+              "captain": 0.75,
+              "circle": 0.7,
+              "paper": 0.7,
+              "planet": 0.65,
+              "teacher": 0.6
+            },
+            "ranked_guesses": [
+              "beacon",
+              "camera",
+              "captain",
+              "circle",
+              "paper",
+              "planet",
+              "teacher"
+            ],
+            "rationale": "Clue 'light' likely connects to 'beacon' (source of light) or 'camera' (captures light). Other plausible words like 'captain' (captain of a ship's light) or 'circle' (halo of light) are less direct but possible. 'Paper' and 'planet' are weaker fits.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 2,
+          "rationale": "Connects to 'beacon' (blue) and 'camera' (red) while avoiding substrings of revealed words like 'robot' or 'engine'."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "round"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.7,
+              "memory": 0.6
+            },
+            "ranked_guesses": [
+              "dream",
+              "memory"
+            ],
+            "rationale": "Clue 'story' with count 2 likely connects to narrative or recollection. 'Dream' and 'memory' are strong candidates as they relate to personal stories or experiences. Other words like 'captain', 'ghost', or 'family' could also fit but seem less directly tied to 'story' than dream/memory.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.75,
+              "memory": 0.7
+            },
+            "ranked_guesses": [
+              "dream",
+              "memory"
+            ],
+            "rationale": "Clue 'story' with count 2 likely connects to narrative or tale-related words. 'Dream' and 'memory' both fit as elements of a story. 'Dream' is slightly stronger due to common story themes. Other story-related words like 'captain' or 'ghost' are less directly linked.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.75,
+              "memory": 0.65
+            },
+            "ranked_guesses": [
+              "dream",
+              "memory"
+            ],
+            "rationale": "Clue 'story' with count 2 suggests narrative-related words. 'Dream' and 'memory' both fit as they can be part of a story. 'Dream' is stronger due to common story themes. Other words like 'captain', 'ghost', or 'family' could also relate but are less directly tied to 'story' as a concept.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "circle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "story",
+          "count": 2,
+          "rationale": "Connects 'dream' and 'memory' as red words, avoiding blue words and assassin."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "charge"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "magnet": 0.9
+            },
+            "ranked_guesses": [
+              "magnet"
+            ],
+            "rationale": "'force' connects to 'magnet' (magnetic force) and 'magnet' is a blue team word not yet guessed.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "magnet": 0.9
+            },
+            "ranked_guesses": [
+              "magnet"
+            ],
+            "rationale": "'magnet' is strongly connected to 'force' (magnetic force) and is a blue team word not yet revealed.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "magnet": 0.85
+            },
+            "ranked_guesses": [
+              "magnet"
+            ],
+            "rationale": "Connects to 'force' (current clue) and links 'magnet' and 'engine' as blue team words, while avoiding red/neutral words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "force",
+          "count": 2,
+          "rationale": "Connects to 'power' (previous clue) and links 'magnet' and 'highway' as blue team words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.6,
+              "circle": 0.9,
+              "planet": 0.7
+            },
+            "ranked_guesses": [
+              "circle",
+              "planet",
+              "bread"
+            ],
+            "rationale": "'round' strongly relates to 'circle' (shape), 'planet' (celestial body), and 'bread' (loaf shape). These are unrevealed red words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.9,
+              "planet": 0.7
+            },
+            "ranked_guesses": [
+              "circle",
+              "planet"
+            ],
+            "rationale": "Round suggests circular shapes (circle) and celestial bodies (planet), both unrevealed and likely red.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.8,
+              "planet": 0.6
+            },
+            "ranked_guesses": [
+              "circle",
+              "planet"
+            ],
+            "rationale": "'round' suggests circular or spherical shapes; 'circle' is direct, 'planet' is round celestial body.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "planet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "round",
+          "count": 2,
+          "rationale": "Connects to 'circle' (shape) and 'planet' (celestial body), both red words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

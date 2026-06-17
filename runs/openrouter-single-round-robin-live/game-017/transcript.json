@@ -1,0 +1,1615 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "america": "red",
+      "bear": "blue",
+      "boom": "blue",
+      "canada": "red",
+      "centaur": "blue",
+      "copper": "blue",
+      "dragon": "red",
+      "face": "red",
+      "file": "red",
+      "hood": "red",
+      "india": "blue",
+      "leprechaun": "neutral",
+      "link": "blue",
+      "lion": "blue",
+      "mass": "neutral",
+      "mine": "red",
+      "plate": "neutral",
+      "pool": "neutral",
+      "scientist": "red",
+      "snow": "blue",
+      "sound": "neutral",
+      "temple": "neutral",
+      "trunk": "neutral",
+      "vet": "assassin"
+    },
+    "revealed": [
+      "america",
+      "bear",
+      "boom",
+      "canada",
+      "centaur",
+      "copper",
+      "dragon",
+      "india",
+      "link",
+      "lion",
+      "mine",
+      "snow",
+      "trunk"
+    ],
+    "words": {
+      "agent": "red",
+      "america": "red",
+      "bear": "blue",
+      "boom": "blue",
+      "canada": "red",
+      "centaur": "blue",
+      "copper": "blue",
+      "dragon": "red",
+      "face": "red",
+      "file": "red",
+      "hood": "red",
+      "india": "blue",
+      "leprechaun": "neutral",
+      "link": "blue",
+      "lion": "blue",
+      "mass": "neutral",
+      "mine": "red",
+      "plate": "neutral",
+      "pool": "neutral",
+      "scientist": "red",
+      "snow": "blue",
+      "sound": "neutral",
+      "temple": "neutral",
+      "trunk": "neutral",
+      "vet": "assassin"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "country",
+        "count": 3,
+        "rationale": "Three of our words are associated with countries."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "canada": 0.85,
+          "india": 0.75
+        },
+        "ranked_guesses": [
+          "america",
+          "canada",
+          "india"
+        ],
+        "rationale": "These words are all countries, fitting the clue 'country'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "canada": 0.85,
+          "india": 0.8
+        },
+        "ranked_guesses": [
+          "america",
+          "canada",
+          "india"
+        ],
+        "rationale": "These words are all countries, fitting the clue 'country'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "canada": 0.85,
+          "india": 0.8
+        },
+        "ranked_guesses": [
+          "america",
+          "canada",
+          "india"
+        ],
+        "rationale": "These words are all countries, fitting the clue 'country'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Connects to bear and lion which are both animals, giving two safe blue words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.9,
+          "centaur": 0.5,
+          "dragon": 0.6,
+          "lion": 0.9,
+          "vet": 0.3
+        },
+        "ranked_guesses": [
+          "bear",
+          "lion",
+          "dragon",
+          "centaur",
+          "vet"
+        ],
+        "rationale": "'bear' and 'lion' are clear animals matching the 'animal' clue. 'dragon' and 'centaur' are mythical creatures loosely tied to animals. 'vet' is a stretch but related to animal care.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.95,
+          "lion": 0.95
+        },
+        "ranked_guesses": [
+          "bear",
+          "lion"
+        ],
+        "rationale": "The clue 'animal' with count 2 strongly suggests picking two unambiguous animals. 'bear' and 'lion' are clear animal choices on the board, while other options like 'centaur' or 'dragon' are mythical and less certain.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.95
+        },
+        "ranked_guesses": [
+          "bear"
+        ],
+        "rationale": "'bear' is a clear animal and fits the clue 'animal' with count 2. It is the most obvious choice on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 2,
+        "rationale": "Both dragon and centaur are mythical creatures."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7,
+          "dragon": 0.6
+        },
+        "ranked_guesses": [
+          "centaur",
+          "dragon"
+        ],
+        "rationale": "Both words are mythical creatures, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7,
+          "dragon": 0.6
+        },
+        "ranked_guesses": [
+          "centaur",
+          "dragon"
+        ],
+        "rationale": "Both centaur and dragon are mythical creatures, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7,
+          "dragon": 0.6
+        },
+        "ranked_guesses": [
+          "centaur",
+          "dragon"
+        ],
+        "rationale": "Both centaur and dragon are mythical creatures, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "chain",
+        "count": 1,
+        "rationale": "'chain' directly relates to 'link' which is a blue word, and doesn't match any other words on the board."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.95
+        },
+        "ranked_guesses": [
+          "link"
+        ],
+        "rationale": "'link' is directly related to 'chain' as a chain is composed of links. This is the strongest possible connection given the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.95
+        },
+        "ranked_guesses": [
+          "link"
+        ],
+        "rationale": "'link' is the only word directly related to 'chain' on the board, making it the most logical guess for the count of 1.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.95
+        },
+        "ranked_guesses": [
+          "link"
+        ],
+        "rationale": "'link' is the most direct association with 'chain' (a link is part of a chain), and the count of 1 suggests a single-word target.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "myth",
+        "count": 3,
+        "rationale": "Focus on mythical creatures and concepts related to the remaining red words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7,
+          "dragon": 0.6,
+          "leprechaun": 0.5
+        },
+        "ranked_guesses": [
+          "centaur",
+          "dragon",
+          "leprechaun"
+        ],
+        "rationale": "These words relate to myths and mythical creatures.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7,
+          "dragon": 0.6,
+          "leprechaun": 0.5
+        },
+        "ranked_guesses": [
+          "centaur",
+          "dragon",
+          "leprechaun"
+        ],
+        "rationale": "These words relate to mythical creatures, aligning with the clue 'myth'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.9,
+          "dragon": 0.7,
+          "temple": 0.6
+        },
+        "ranked_guesses": [
+          "centaur",
+          "dragon",
+          "temple"
+        ],
+        "rationale": "Centaur and dragon are mythical creatures, fitting the clue 'myth'. Temple could relate to mythological stories.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects to the three remaining blue words: boom (nature sounds/explosions), copper (natural element), and snow (natural phenomenon)."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "snow": 0.95,
+          "trunk": 0.75,
+          "vet": 0.9
+        },
+        "ranked_guesses": [
+          "snow",
+          "vet",
+          "trunk"
+        ],
+        "rationale": "'snow' and 'vet' are strongly tied to nature (weather and animals). 'trunk' can refer to a tree trunk, a natural element. Other options like 'copper' or 'pool' are weaker fits.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mine": 0.75,
+          "snow": 0.75,
+          "trunk": 0.65
+        },
+        "ranked_guesses": [
+          "mine",
+          "snow",
+          "trunk"
+        ],
+        "rationale": "'nature' clue with count 3 suggests natural elements. 'mine' (natural resources), 'snow' (natural phenomenon), and 'trunk' (tree trunk) are strong fits among remaining words. All are unrevealed and plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pool": 0.6,
+          "snow": 0.9,
+          "sound": 0.7
+        },
+        "ranked_guesses": [
+          "snow",
+          "sound",
+          "pool"
+        ],
+        "rationale": "Clue 'nature' with count 3 suggests three nature-related words. 'snow' is a clear natural phenomenon, 'sound' could refer to nature sounds, and 'pool' could refer to a natural body of water.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "creature",
+        "count": 3,
+        "rationale": "Refers to mythical beings and animals, connecting to dragon, hood, and agent."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.5,
+          "dragon": 0.7,
+          "vet": 0.6
+        },
+        "ranked_guesses": [
+          "dragon",
+          "vet",
+          "centaur"
+        ],
+        "rationale": "Dragon and vet are both creatures, while centaur is already revealed as blue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.7,
+          "leprechaun": 0.5,
+          "vet": 0.6
+        },
+        "ranked_guesses": [
+          "dragon",
+          "vet",
+          "leprechaun"
+        ],
+        "rationale": "These words relate to creatures; dragon and leprechaun are mythical creatures, while vet relates to animals.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "leprechaun": 0.6,
+          "vet": 0.7
+        },
+        "ranked_guesses": [
+          "dragon",
+          "vet",
+          "leprechaun"
+        ],
+        "rationale": "Dragon is a well-known creature, while vet relates to animals, and leprechaun is a mythical creature.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 2,
+        "rationale": "metal directly relates to 'copper' and can loosely associate with 'boom' in contexts like mining explosions or industrial blasts."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "mine": 0.85
+        },
+        "ranked_guesses": [
+          "copper",
+          "mine"
+        ],
+        "rationale": "Clue 'metal' with count 2 most directly matches 'copper' and 'mine' on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "mine": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "mine"
+        ],
+        "rationale": "Clue 'metal' with count 2 strongly suggests 'copper' (direct metal) and 'mine' (metal mining).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "mine": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "mine"
+        ],
+        "rationale": "Active clue is 'metal' with count 2. 'copper' is a direct metal, and 'mine' is strongly associated with metal extraction. Other words have weaker or no direct connection to metals.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "agent",
+        "count": 2,
+        "rationale": "Refers to roles or professions, linking to 'agent' and 'scientist'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explosion",
+        "count": 1,
+        "rationale": "Directly connects to the remaining blue word 'boom' while avoiding matches to other board words, red team words, or the assassin."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boom": 0.95
+        },
+        "ranked_guesses": [
+          "boom"
+        ],
+        "rationale": "Direct synonym for 'explosion'",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boom": 0.95
+        },
+        "ranked_guesses": [
+          "boom"
+        ],
+        "rationale": "'Explosion' directly relates to 'boom' as a synonym, making it the strongest single-word connection for the given clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boom": 0.95
+        },
+        "ranked_guesses": [
+          "boom"
+        ],
+        "rationale": "'Boom' is a direct synonym for 'explosion' and the most obvious connection given the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "country"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "america"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "canada"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "india"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bear"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "lion"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "chain"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "link"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "centaur"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "snow"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "trunk"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "creature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mine"
+    },
+    {
+      "clue": {
+        "clue": "agent",
+        "count": 2,
+        "rationale": "Refers to roles or professions, linking to 'agent' and 'scientist'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "agent",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "explosion"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "boom"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 37,
+    "public_event_count": 27,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-017-openai_gpt_4o_mini-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "GPT-4o mini",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "country"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "canada": 0.85,
+              "india": 0.75
+            },
+            "ranked_guesses": [
+              "america",
+              "canada",
+              "india"
+            ],
+            "rationale": "These words are all countries, fitting the clue 'country'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "canada": 0.85,
+              "india": 0.8
+            },
+            "ranked_guesses": [
+              "america",
+              "canada",
+              "india"
+            ],
+            "rationale": "These words are all countries, fitting the clue 'country'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "canada": 0.85,
+              "india": 0.8
+            },
+            "ranked_guesses": [
+              "america",
+              "canada",
+              "india"
+            ],
+            "rationale": "These words are all countries, fitting the clue 'country'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "america"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "canada"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "india"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "country",
+          "count": 3,
+          "rationale": "Three of our words are associated with countries."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bear": 0.9,
+              "centaur": 0.5,
+              "dragon": 0.6,
+              "lion": 0.9,
+              "vet": 0.3
+            },
+            "ranked_guesses": [
+              "bear",
+              "lion",
+              "dragon",
+              "centaur",
+              "vet"
+            ],
+            "rationale": "'bear' and 'lion' are clear animals matching the 'animal' clue. 'dragon' and 'centaur' are mythical creatures loosely tied to animals. 'vet' is a stretch but related to animal care.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bear": 0.95,
+              "lion": 0.95
+            },
+            "ranked_guesses": [
+              "bear",
+              "lion"
+            ],
+            "rationale": "The clue 'animal' with count 2 strongly suggests picking two unambiguous animals. 'bear' and 'lion' are clear animal choices on the board, while other options like 'centaur' or 'dragon' are mythical and less certain.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bear": 0.95
+            },
+            "ranked_guesses": [
+              "bear"
+            ],
+            "rationale": "'bear' is a clear animal and fits the clue 'animal' with count 2. It is the most obvious choice on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bear"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "lion"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Connects to bear and lion which are both animals, giving two safe blue words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.7,
+              "dragon": 0.6
+            },
+            "ranked_guesses": [
+              "centaur",
+              "dragon"
+            ],
+            "rationale": "Both words are mythical creatures, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.7,
+              "dragon": 0.6
+            },
+            "ranked_guesses": [
+              "centaur",
+              "dragon"
+            ],
+            "rationale": "Both centaur and dragon are mythical creatures, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.7,
+              "dragon": 0.6
+            },
+            "ranked_guesses": [
+              "centaur",
+              "dragon"
+            ],
+            "rationale": "Both centaur and dragon are mythical creatures, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythical",
+          "count": 2,
+          "rationale": "Both dragon and centaur are mythical creatures."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "chain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "link": 0.95
+            },
+            "ranked_guesses": [
+              "link"
+            ],
+            "rationale": "'link' is directly related to 'chain' as a chain is composed of links. This is the strongest possible connection given the clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "link": 0.95
+            },
+            "ranked_guesses": [
+              "link"
+            ],
+            "rationale": "'link' is the only word directly related to 'chain' on the board, making it the most logical guess for the count of 1.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "link": 0.95
+            },
+            "ranked_guesses": [
+              "link"
+            ],
+            "rationale": "'link' is the most direct association with 'chain' (a link is part of a chain), and the count of 1 suggests a single-word target.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "link"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "chain",
+          "count": 1,
+          "rationale": "'chain' directly relates to 'link' which is a blue word, and doesn't match any other words on the board."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "myth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.7,
+              "dragon": 0.6,
+              "leprechaun": 0.5
+            },
+            "ranked_guesses": [
+              "centaur",
+              "dragon",
+              "leprechaun"
+            ],
+            "rationale": "These words relate to myths and mythical creatures.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.7,
+              "dragon": 0.6,
+              "leprechaun": 0.5
+            },
+            "ranked_guesses": [
+              "centaur",
+              "dragon",
+              "leprechaun"
+            ],
+            "rationale": "These words relate to mythical creatures, aligning with the clue 'myth'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.9,
+              "dragon": 0.7,
+              "temple": 0.6
+            },
+            "ranked_guesses": [
+              "centaur",
+              "dragon",
+              "temple"
+            ],
+            "rationale": "Centaur and dragon are mythical creatures, fitting the clue 'myth'. Temple could relate to mythological stories.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "centaur"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "myth",
+          "count": 3,
+          "rationale": "Focus on mythical creatures and concepts related to the remaining red words."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "snow": 0.95,
+              "trunk": 0.75,
+              "vet": 0.9
+            },
+            "ranked_guesses": [
+              "snow",
+              "vet",
+              "trunk"
+            ],
+            "rationale": "'snow' and 'vet' are strongly tied to nature (weather and animals). 'trunk' can refer to a tree trunk, a natural element. Other options like 'copper' or 'pool' are weaker fits.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mine": 0.75,
+              "snow": 0.75,
+              "trunk": 0.65
+            },
+            "ranked_guesses": [
+              "mine",
+              "snow",
+              "trunk"
+            ],
+            "rationale": "'nature' clue with count 3 suggests natural elements. 'mine' (natural resources), 'snow' (natural phenomenon), and 'trunk' (tree trunk) are strong fits among remaining words. All are unrevealed and plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pool": 0.6,
+              "snow": 0.9,
+              "sound": 0.7
+            },
+            "ranked_guesses": [
+              "snow",
+              "sound",
+              "pool"
+            ],
+            "rationale": "Clue 'nature' with count 3 suggests three nature-related words. 'snow' is a clear natural phenomenon, 'sound' could refer to nature sounds, and 'pool' could refer to a natural body of water.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "snow"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "trunk"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects to the three remaining blue words: boom (nature sounds/explosions), copper (natural element), and snow (natural phenomenon)."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "creature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.5,
+              "dragon": 0.7,
+              "vet": 0.6
+            },
+            "ranked_guesses": [
+              "dragon",
+              "vet",
+              "centaur"
+            ],
+            "rationale": "Dragon and vet are both creatures, while centaur is already revealed as blue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.7,
+              "leprechaun": 0.5,
+              "vet": 0.6
+            },
+            "ranked_guesses": [
+              "dragon",
+              "vet",
+              "leprechaun"
+            ],
+            "rationale": "These words relate to creatures; dragon and leprechaun are mythical creatures, while vet relates to animals.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "leprechaun": 0.6,
+              "vet": 0.7
+            },
+            "ranked_guesses": [
+              "dragon",
+              "vet",
+              "leprechaun"
+            ],
+            "rationale": "Dragon is a well-known creature, while vet relates to animals, and leprechaun is a mythical creature.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "creature",
+          "count": 3,
+          "rationale": "Refers to mythical beings and animals, connecting to dragon, hood, and agent."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "mine": 0.85
+            },
+            "ranked_guesses": [
+              "copper",
+              "mine"
+            ],
+            "rationale": "Clue 'metal' with count 2 most directly matches 'copper' and 'mine' on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "mine": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "mine"
+            ],
+            "rationale": "Clue 'metal' with count 2 strongly suggests 'copper' (direct metal) and 'mine' (metal mining).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "mine": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "mine"
+            ],
+            "rationale": "Active clue is 'metal' with count 2. 'copper' is a direct metal, and 'mine' is strongly associated with metal extraction. Other words have weaker or no direct connection to metals.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 2,
+          "rationale": "metal directly relates to 'copper' and can loosely associate with 'boom' in contexts like mining explosions or industrial blasts."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "explosion"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "boom"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

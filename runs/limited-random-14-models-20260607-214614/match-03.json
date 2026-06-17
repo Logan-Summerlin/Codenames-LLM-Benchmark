@@ -1,0 +1,2761 @@
+{
+  "board": {
+    "identities": {
+      "beacon": "neutral",
+      "bread": "blue",
+      "bridge": "blue",
+      "compass": "red",
+      "dream": "red",
+      "festival": "neutral",
+      "flame": "neutral",
+      "forest": "red",
+      "island": "blue",
+      "ladder": "blue",
+      "mountain": "neutral",
+      "mystery": "neutral",
+      "poet": "red",
+      "rocket": "red",
+      "sailor": "assassin",
+      "singer": "neutral",
+      "spider": "red",
+      "spirit": "red",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "neutral",
+      "village": "blue",
+      "water": "blue",
+      "wizard": "blue",
+      "writer": "red"
+    },
+    "revealed": [
+      "bread",
+      "bridge",
+      "dream",
+      "forest",
+      "island",
+      "ladder",
+      "mountain",
+      "poet",
+      "summer",
+      "village",
+      "water",
+      "wizard"
+    ],
+    "words": {
+      "beacon": "neutral",
+      "bread": "blue",
+      "bridge": "blue",
+      "compass": "red",
+      "dream": "red",
+      "festival": "neutral",
+      "flame": "neutral",
+      "forest": "red",
+      "island": "blue",
+      "ladder": "blue",
+      "mountain": "neutral",
+      "mystery": "neutral",
+      "poet": "red",
+      "rocket": "red",
+      "sailor": "assassin",
+      "singer": "neutral",
+      "spider": "red",
+      "spirit": "red",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "neutral",
+      "village": "blue",
+      "water": "blue",
+      "wizard": "blue",
+      "writer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "nature",
+        "count": 4,
+        "rationale": "Several of the red words are related to natural elements or settings."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.9,
+          "island": 0.6,
+          "mountain": 0.7,
+          "water": 0.8
+        },
+        "ranked_guesses": [
+          "forest",
+          "water",
+          "mountain",
+          "island"
+        ],
+        "rationale": "These words are closely associated with nature.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.9,
+          "island": 0.6,
+          "mountain": 0.8,
+          "water": 0.7
+        },
+        "ranked_guesses": [
+          "forest",
+          "mountain",
+          "water",
+          "island"
+        ],
+        "rationale": "These words are closely associated with nature.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.9,
+          "island": 0.7,
+          "mountain": 0.8,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "forest",
+          "mountain",
+          "island",
+          "water"
+        ],
+        "rationale": "All guesses relate to nature, with 'forest' being the strongest association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aquatic",
+        "count": 3,
+        "rationale": "Connects island, water, and bridge (or village/wizard, but island and water are strongest)."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.7,
+          "sailor": 0.6,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water",
+          "island",
+          "sailor"
+        ],
+        "rationale": "'Water' is the most direct synonym for aquatic. 'Island' and 'sailor' are strongly associated with aquatic environments.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.6,
+          "sailor": 0.4,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water",
+          "island",
+          "sailor"
+        ],
+        "rationale": "'Water' is the most direct synonym for aquatic. 'Island' and 'sailor' are strongly associated with aquatic environments.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.7,
+          "sailor": 0.6,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water",
+          "island",
+          "sailor"
+        ],
+        "rationale": "The clue 'aquatic' strongly relates to water, islands, and sailors.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "writer",
+        "count": 2,
+        "rationale": "Writer relates to poet and dream, both of which are associated with creativity and storytelling."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "architecture",
+        "count": 2,
+        "rationale": "Bridge and village are both man-made structures."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "village": 0.3
+        },
+        "ranked_guesses": [
+          "bridge",
+          "village"
+        ],
+        "rationale": "Bridge is a primary structural element of architecture. Village refers to a collection of architectural structures.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "village": 0.3
+        },
+        "ranked_guesses": [
+          "bridge",
+          "village"
+        ],
+        "rationale": "Bridge is a primary architectural structure. Village consists of architectural planning and buildings.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "village": 0.3
+        },
+        "ranked_guesses": [
+          "bridge",
+          "village"
+        ],
+        "rationale": "Bridge is a primary architectural structure. Village is a collection of architecture.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "creativity",
+        "count": 2,
+        "rationale": "Creativity relates to both poet and dream, which are associated with artistic expression."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "poet": 0.7
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream"
+        ],
+        "rationale": "Both words relate to creativity and storytelling.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "poet": 0.7
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream"
+        ],
+        "rationale": "Both words relate to creativity and storytelling.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "poet": 0.7
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream"
+        ],
+        "rationale": "Both words relate to creativity and storytelling.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "magic",
+        "count": 2,
+        "rationale": "Wizard is directly related to magic, and a bridge can be metaphorical or magical in fantasy settings, though wizard is the primary target."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.4,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "spirit"
+        ],
+        "rationale": "Wizard is the most direct association with magic. Spirit is a secondary possibility related to the supernatural.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.4,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "spirit"
+        ],
+        "rationale": "Wizard is directly synonymous with magic; spirit is a common magical theme.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.4,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "spirit"
+        ],
+        "rationale": "Wizard is the most direct association with magic. Spirit is a secondary possibility related to the supernatural.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "spirit",
+        "count": 2,
+        "rationale": "Spirit relates to the essence of creativity and emotion, connecting to poet and dream."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "crossing",
+        "count": 2,
+        "rationale": "Bridge and island are both associated with crossing water or being reached by crossing."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.9,
+          "island": 0.3
+        },
+        "ranked_guesses": [
+          "bridge",
+          "island"
+        ],
+        "rationale": "A bridge is the most direct object used for crossing. Island is a secondary possibility as one must cross water to reach it.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.9,
+          "island": 0.3
+        },
+        "ranked_guesses": [
+          "bridge",
+          "island"
+        ],
+        "rationale": "A bridge is the most direct object used for crossing. An island is something one must cross water to reach.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.9,
+          "island": 0.3
+        },
+        "ranked_guesses": [
+          "bridge",
+          "island"
+        ],
+        "rationale": "A bridge is the most direct object used for crossing. An island is something one must cross water to reach.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "imagination",
+        "count": 3,
+        "rationale": "Imagination connects to creativity, which relates to poet, dream, and spirit."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.8
+        },
+        "ranked_guesses": [
+          "dream"
+        ],
+        "rationale": "Dream relates to imagination and creativity, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.8,
+          "poet": 0.7,
+          "writer": 0.6
+        },
+        "ranked_guesses": [
+          "dream",
+          "poet",
+          "writer"
+        ],
+        "rationale": "These words relate to creativity and imagination.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.9,
+          "poet": 0.8,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "dream",
+          "poet",
+          "writer"
+        ],
+        "rationale": "These words relate to imagination and creativity, aligning with the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "vacation",
+        "count": 3,
+        "rationale": "Island, summer, and village are all common destinations or themes associated with vacations."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.6,
+          "sailor": 0.3,
+          "summer": 0.5
+        },
+        "ranked_guesses": [
+          "island",
+          "summer",
+          "sailor"
+        ],
+        "rationale": "Island and summer are strongly associated with vacations; sailor is a secondary possibility.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.6,
+          "sailor": 0.3,
+          "summer": 0.5
+        },
+        "ranked_guesses": [
+          "island",
+          "summer",
+          "sailor"
+        ],
+        "rationale": "Island and summer are strongly associated with vacations; sailor is a secondary possibility.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.6,
+          "sailor": 0.3,
+          "summer": 0.5
+        },
+        "ranked_guesses": [
+          "island",
+          "summer",
+          "sailor"
+        ],
+        "rationale": "Island and summer are strongly associated with vacations; sailor is a secondary possibility related to travel.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "journey",
+        "count": 2,
+        "rationale": "Journey relates to exploration and adventure, connecting to compass and island."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.7,
+          "sailor": 0.6
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor"
+        ],
+        "rationale": "Both words relate to navigation and journeys.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.7,
+          "sailor": 0.6
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor"
+        ],
+        "rationale": "Compass relates to navigation on a journey, and sailor is associated with travel.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.7,
+          "island": 0.6
+        },
+        "ranked_guesses": [
+          "compass",
+          "island"
+        ],
+        "rationale": "Compass relates to journey navigation, while island can represent a destination.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "coastline",
+        "count": 2,
+        "rationale": "Island and village are often located along a coastline."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.8,
+          "sailor": 0.4
+        },
+        "ranked_guesses": [
+          "island",
+          "sailor"
+        ],
+        "rationale": "Coastline strongly relates to an island (land surrounded by water) and a sailor (someone who navigates coastlines).",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.9,
+          "sailor": 0.6
+        },
+        "ranked_guesses": [
+          "island",
+          "sailor"
+        ],
+        "rationale": "Coastline refers to the edge of land meeting the sea. 'Island' is a landmass surrounded by coastline, and 'sailor' is a profession closely associated with navigating coastlines.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.9,
+          "sailor": 0.4
+        },
+        "ranked_guesses": [
+          "island",
+          "sailor"
+        ],
+        "rationale": "Coastline directly relates to an island (land surrounded by water) and a sailor (who navigates along coastlines).",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "adventure",
+        "count": 2,
+        "rationale": "Adventure relates to exploration and creativity, connecting to the concepts of journey and spirit."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.7,
+          "mountain": 0.5
+        },
+        "ranked_guesses": [
+          "island",
+          "mountain"
+        ],
+        "rationale": "Island relates to adventure as a destination, while mountain is more neutral.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.7,
+          "mountain": 0.5
+        },
+        "ranked_guesses": [
+          "island",
+          "mountain"
+        ],
+        "rationale": "Island relates to adventure as a destination, while mountain is neutral but still fits the theme.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "island": 0.7,
+          "mountain": 0.5
+        },
+        "ranked_guesses": [
+          "island",
+          "mountain"
+        ],
+        "rationale": "Island relates to adventure and exploration, while mountain is a neutral guess.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "bakery",
+        "count": 1,
+        "rationale": "Bread is the only blue word remaining that fits this clue."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 1.0
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "The clue 'bakery' is a direct association with 'bread'.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 1.0
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "Bread is the primary product made in a bakery.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 1.0
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "Bread is the primary product made in a bakery.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "creature",
+        "count": 2,
+        "rationale": "Creature relates to spider and spirit, both of which can evoke imagery of beings or entities."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "tiger",
+          "spider"
+        ],
+        "rationale": "Both tiger and spider are creatures, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "tiger",
+          "spider"
+        ],
+        "rationale": "Both words are creatures, fitting the clue 'creature'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "tiger",
+          "spider"
+        ],
+        "rationale": "Both tiger and spider are creatures, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "season",
+        "count": 1,
+        "rationale": "Summer is a season and is one of the remaining blue words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer"
+        ],
+        "rationale": "The clue 'season' directly maps to the word 'summer' on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer"
+        ],
+        "rationale": "Summer is a season.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer"
+        ],
+        "rationale": "The clue 'season' directly relates to 'summer', which is one of the four seasons and is present on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "creativity",
+        "count": 2,
+        "rationale": "Creativity connects to the concepts of imagination and expression, which relate to both 'spider' and 'rocket'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.9,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream"
+        ],
+        "rationale": "Both words are strongly associated with creativity and storytelling.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.8,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream"
+        ],
+        "rationale": "Both words are strongly associated with creativity and storytelling.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.8,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream"
+        ],
+        "rationale": "Both words are closely associated with creativity and storytelling.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "climb",
+        "count": 2,
+        "rationale": "Ladder and village (as in a hillside village) are the remaining blue words, but ladder is a direct fit for climb. Village is a stretch, but ladder is the primary target."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ladder": 0.9,
+          "rocket": 0.4
+        },
+        "ranked_guesses": [
+          "ladder",
+          "rocket"
+        ],
+        "rationale": "Ladder is the most direct association with climbing. Rocket is a secondary possibility as it climbs into space.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ladder": 0.9,
+          "rocket": 0.4
+        },
+        "ranked_guesses": [
+          "ladder",
+          "rocket"
+        ],
+        "rationale": "Ladder is the most direct object used for climbing. Rocket is a secondary possibility as it 'climbs' into space.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ladder": 0.9,
+          "rocket": 0.3
+        },
+        "ranked_guesses": [
+          "ladder",
+          "rocket"
+        ],
+        "rationale": "Ladder is the most direct object used to climb. Rocket involves climbing into space/altitude.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "story",
+        "count": 3,
+        "rationale": "Story connects to poet, dream, and spirit, all of which involve narrative and creativity."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.8,
+          "poet": 0.9,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream",
+          "writer"
+        ],
+        "rationale": "All guesses relate to storytelling and creativity, aligning with the clue 'story'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.8,
+          "poet": 0.9,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream",
+          "writer"
+        ],
+        "rationale": "All words relate to storytelling and creativity, aligning with the clue 'story'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.85,
+          "poet": 0.9,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "poet",
+          "dream",
+          "writer"
+        ],
+        "rationale": "All guesses relate to storytelling and creativity, aligning with the clue 'story'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "community",
+        "count": 1,
+        "rationale": "The only remaining blue word is 'village', which is a small community."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village"
+        ],
+        "rationale": "Village is a direct synonym for a small community.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village"
+        ],
+        "rationale": "Village is a direct synonym for a small community.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village"
+        ],
+        "rationale": "Village is a direct synonym for a small community.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mountain"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "aquatic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "water"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "writer",
+        "count": 2,
+        "rationale": "Writer relates to poet and dream, both of which are associated with creativity and storytelling."
+      },
+      "event": "illegal_clue",
+      "matched_word": "writer",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "architecture"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creativity"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wizard"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "spirit",
+        "count": 2,
+        "rationale": "Spirit relates to the essence of creativity and emotion, connecting to poet and dream."
+      },
+      "event": "illegal_clue",
+      "matched_word": "spirit",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "crossing"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "imagination"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dream"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "poet"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vacation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "coastline"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "island"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "adventure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bakery"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bread"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "season"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creativity"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "climb"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ladder"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "story"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "community"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "village"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 74,
+    "public_event_count": 48,
+    "reason": "all_words_found",
+    "seed": "limited-random-14-models-20260607-214614-m03",
+    "team_blue": "Gemma 4 31B",
+    "team_red": "GPT-4o mini",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "forest": 0.9,
+              "island": 0.6,
+              "mountain": 0.7,
+              "water": 0.8
+            },
+            "ranked_guesses": [
+              "forest",
+              "water",
+              "mountain",
+              "island"
+            ],
+            "rationale": "These words are closely associated with nature.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "forest": 0.9,
+              "island": 0.6,
+              "mountain": 0.8,
+              "water": 0.7
+            },
+            "ranked_guesses": [
+              "forest",
+              "mountain",
+              "water",
+              "island"
+            ],
+            "rationale": "These words are closely associated with nature.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "forest": 0.9,
+              "island": 0.7,
+              "mountain": 0.8,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "forest",
+              "mountain",
+              "island",
+              "water"
+            ],
+            "rationale": "All guesses relate to nature, with 'forest' being the strongest association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mountain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 4,
+          "rationale": "Several of the red words are related to natural elements or settings."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "aquatic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "island": 0.7,
+              "sailor": 0.6,
+              "water": 0.9
+            },
+            "ranked_guesses": [
+              "water",
+              "island",
+              "sailor"
+            ],
+            "rationale": "'Water' is the most direct synonym for aquatic. 'Island' and 'sailor' are strongly associated with aquatic environments.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.6,
+              "sailor": 0.4,
+              "water": 0.9
+            },
+            "ranked_guesses": [
+              "water",
+              "island",
+              "sailor"
+            ],
+            "rationale": "'Water' is the most direct synonym for aquatic. 'Island' and 'sailor' are strongly associated with aquatic environments.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.7,
+              "sailor": 0.6,
+              "water": 0.9
+            },
+            "ranked_guesses": [
+              "water",
+              "island",
+              "sailor"
+            ],
+            "rationale": "The clue 'aquatic' strongly relates to water, islands, and sailors.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "water"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "aquatic",
+          "count": 3,
+          "rationale": "Connects island, water, and bridge (or village/wizard, but island and water are strongest)."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "architecture"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creativity"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "writer",
+          "count": 2,
+          "rationale": "Writer relates to poet and dream, both of which are associated with creativity and storytelling."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "village": 0.3
+            },
+            "ranked_guesses": [
+              "bridge",
+              "village"
+            ],
+            "rationale": "Bridge is a primary structural element of architecture. Village refers to a collection of architectural structures.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "village": 0.3
+            },
+            "ranked_guesses": [
+              "bridge",
+              "village"
+            ],
+            "rationale": "Bridge is a primary architectural structure. Village consists of architectural planning and buildings.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "village": 0.3
+            },
+            "ranked_guesses": [
+              "bridge",
+              "village"
+            ],
+            "rationale": "Bridge is a primary architectural structure. Village is a collection of architecture.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "architecture",
+          "count": 2,
+          "rationale": "Bridge and village are both man-made structures."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "crossing"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "imagination"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.7,
+              "poet": 0.7
+            },
+            "ranked_guesses": [
+              "poet",
+              "dream"
+            ],
+            "rationale": "Both words relate to creativity and storytelling.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.7,
+              "poet": 0.7
+            },
+            "ranked_guesses": [
+              "poet",
+              "dream"
+            ],
+            "rationale": "Both words relate to creativity and storytelling.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.7,
+              "poet": 0.7
+            },
+            "ranked_guesses": [
+              "poet",
+              "dream"
+            ],
+            "rationale": "Both words relate to creativity and storytelling.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dream"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "creativity",
+          "count": 2,
+          "rationale": "Creativity relates to both poet and dream, which are associated with artistic expression."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vacation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spirit": 0.4,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "spirit"
+            ],
+            "rationale": "Wizard is the most direct association with magic. Spirit is a secondary possibility related to the supernatural.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spirit": 0.4,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "spirit"
+            ],
+            "rationale": "Wizard is directly synonymous with magic; spirit is a common magical theme.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spirit": 0.4,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "spirit"
+            ],
+            "rationale": "Wizard is the most direct association with magic. Spirit is a secondary possibility related to the supernatural.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "magic",
+          "count": 2,
+          "rationale": "Wizard is directly related to magic, and a bridge can be metaphorical or magical in fantasy settings, though wizard is the primary target."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "spirit",
+          "count": 2,
+          "rationale": "Spirit relates to the essence of creativity and emotion, connecting to poet and dream."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "coastline"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.9,
+              "island": 0.3
+            },
+            "ranked_guesses": [
+              "bridge",
+              "island"
+            ],
+            "rationale": "A bridge is the most direct object used for crossing. Island is a secondary possibility as one must cross water to reach it.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.9,
+              "island": 0.3
+            },
+            "ranked_guesses": [
+              "bridge",
+              "island"
+            ],
+            "rationale": "A bridge is the most direct object used for crossing. An island is something one must cross water to reach.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.9,
+              "island": 0.3
+            },
+            "ranked_guesses": [
+              "bridge",
+              "island"
+            ],
+            "rationale": "A bridge is the most direct object used for crossing. An island is something one must cross water to reach.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "island"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "crossing",
+          "count": 2,
+          "rationale": "Bridge and island are both associated with crossing water or being reached by crossing."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "adventure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.8
+            },
+            "ranked_guesses": [
+              "dream"
+            ],
+            "rationale": "Dream relates to imagination and creativity, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.8,
+              "poet": 0.7,
+              "writer": 0.6
+            },
+            "ranked_guesses": [
+              "dream",
+              "poet",
+              "writer"
+            ],
+            "rationale": "These words relate to creativity and imagination.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.9,
+              "poet": 0.8,
+              "writer": 0.7
+            },
+            "ranked_guesses": [
+              "dream",
+              "poet",
+              "writer"
+            ],
+            "rationale": "These words relate to imagination and creativity, aligning with the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "imagination",
+          "count": 3,
+          "rationale": "Imagination connects to creativity, which relates to poet, dream, and spirit."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bakery"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "island": 0.6,
+              "sailor": 0.3,
+              "summer": 0.5
+            },
+            "ranked_guesses": [
+              "island",
+              "summer",
+              "sailor"
+            ],
+            "rationale": "Island and summer are strongly associated with vacations; sailor is a secondary possibility.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.6,
+              "sailor": 0.3,
+              "summer": 0.5
+            },
+            "ranked_guesses": [
+              "island",
+              "summer",
+              "sailor"
+            ],
+            "rationale": "Island and summer are strongly associated with vacations; sailor is a secondary possibility.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.6,
+              "sailor": 0.3,
+              "summer": 0.5
+            },
+            "ranked_guesses": [
+              "island",
+              "summer",
+              "sailor"
+            ],
+            "rationale": "Island and summer are strongly associated with vacations; sailor is a secondary possibility related to travel.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bread"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vacation",
+          "count": 3,
+          "rationale": "Island, summer, and village are all common destinations or themes associated with vacations."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.7,
+              "sailor": 0.6
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor"
+            ],
+            "rationale": "Both words relate to navigation and journeys.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.7,
+              "sailor": 0.6
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor"
+            ],
+            "rationale": "Compass relates to navigation on a journey, and sailor is associated with travel.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.7,
+              "island": 0.6
+            },
+            "ranked_guesses": [
+              "compass",
+              "island"
+            ],
+            "rationale": "Compass relates to journey navigation, while island can represent a destination.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 2,
+          "rationale": "Journey relates to exploration and adventure, connecting to compass and island."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "season"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "island": 0.8,
+              "sailor": 0.4
+            },
+            "ranked_guesses": [
+              "island",
+              "sailor"
+            ],
+            "rationale": "Coastline strongly relates to an island (land surrounded by water) and a sailor (someone who navigates coastlines).",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.9,
+              "sailor": 0.6
+            },
+            "ranked_guesses": [
+              "island",
+              "sailor"
+            ],
+            "rationale": "Coastline refers to the edge of land meeting the sea. 'Island' is a landmass surrounded by coastline, and 'sailor' is a profession closely associated with navigating coastlines.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.9,
+              "sailor": 0.4
+            },
+            "ranked_guesses": [
+              "island",
+              "sailor"
+            ],
+            "rationale": "Coastline directly relates to an island (land surrounded by water) and a sailor (who navigates along coastlines).",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "coastline",
+          "count": 2,
+          "rationale": "Island and village are often located along a coastline."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creativity"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "island": 0.7,
+              "mountain": 0.5
+            },
+            "ranked_guesses": [
+              "island",
+              "mountain"
+            ],
+            "rationale": "Island relates to adventure as a destination, while mountain is more neutral.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.7,
+              "mountain": 0.5
+            },
+            "ranked_guesses": [
+              "island",
+              "mountain"
+            ],
+            "rationale": "Island relates to adventure as a destination, while mountain is neutral but still fits the theme.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "island": 0.7,
+              "mountain": 0.5
+            },
+            "ranked_guesses": [
+              "island",
+              "mountain"
+            ],
+            "rationale": "Island relates to adventure and exploration, while mountain is a neutral guess.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "adventure",
+          "count": 2,
+          "rationale": "Adventure relates to exploration and creativity, connecting to the concepts of journey and spirit."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "climb"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bread": 1.0
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "The clue 'bakery' is a direct association with 'bread'.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 1.0
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "Bread is the primary product made in a bakery.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 1.0
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "Bread is the primary product made in a bakery.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ladder"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "bakery",
+          "count": 1,
+          "rationale": "Bread is the only blue word remaining that fits this clue."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "story"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "tiger",
+              "spider"
+            ],
+            "rationale": "Both tiger and spider are creatures, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "tiger",
+              "spider"
+            ],
+            "rationale": "Both words are creatures, fitting the clue 'creature'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "tiger",
+              "spider"
+            ],
+            "rationale": "Both tiger and spider are creatures, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "creature",
+          "count": 2,
+          "rationale": "Creature relates to spider and spirit, both of which can evoke imagery of beings or entities."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "community"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer"
+            ],
+            "rationale": "The clue 'season' directly maps to the word 'summer' on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer"
+            ],
+            "rationale": "Summer is a season.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer"
+            ],
+            "rationale": "The clue 'season' directly relates to 'summer', which is one of the four seasons and is present on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "village"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "season",
+          "count": 1,
+          "rationale": "Summer is a season and is one of the remaining blue words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

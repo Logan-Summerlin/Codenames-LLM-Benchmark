@@ -1,0 +1,350 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "balloon": "assassin",
+      "camera": "blue",
+      "canyon": "red",
+      "cheese": "neutral",
+      "compass": "red",
+      "dancer": "blue",
+      "doctor": "neutral",
+      "ember": "blue",
+      "engine": "neutral",
+      "flame": "red",
+      "flower": "neutral",
+      "ghost": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "mirror": "red",
+      "silence": "blue",
+      "station": "blue",
+      "stone": "red",
+      "village": "blue",
+      "violin": "blue",
+      "voyage": "neutral",
+      "water": "blue",
+      "wood": "red",
+      "writer": "red"
+    },
+    "revealed": [
+      "balloon",
+      "camera",
+      "writer"
+    ],
+    "words": {
+      "agent": "red",
+      "balloon": "assassin",
+      "camera": "blue",
+      "canyon": "red",
+      "cheese": "neutral",
+      "compass": "red",
+      "dancer": "blue",
+      "doctor": "neutral",
+      "ember": "blue",
+      "engine": "neutral",
+      "flame": "red",
+      "flower": "neutral",
+      "ghost": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "mirror": "red",
+      "silence": "blue",
+      "station": "blue",
+      "stone": "red",
+      "village": "blue",
+      "violin": "blue",
+      "voyage": "neutral",
+      "water": "blue",
+      "wood": "red",
+      "writer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "compass",
+        "count": 1,
+        "rationale": "Safest direct tie to the red word COMPASS for an immediate first guess."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "record",
+        "count": 3,
+        "rationale": "Camera, dancer and violin are all things that can be recorded, linking three blue words without touching any board word."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.85,
+          "violin": 0.72,
+          "writer": 0.78
+        },
+        "ranked_guesses": [
+          "camera",
+          "writer",
+          "violin"
+        ],
+        "rationale": "record ties to capturing video (camera), documenting events (writer), and producing music recordings (violin)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.85,
+          "violin": 0.78,
+          "writer": 0.75
+        },
+        "ranked_guesses": [
+          "camera",
+          "violin",
+          "writer"
+        ],
+        "rationale": "Record as a verb means to capture video (camera) or audio (violin as instrument) and as a noun can be a written account (writer).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.85,
+          "violin": 0.75,
+          "writer": 0.8
+        },
+        "ranked_guesses": [
+          "camera",
+          "writer",
+          "violin"
+        ],
+        "rationale": "Record as a verb suggests camera (record video), writer (record words), and violin (record music).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ghost",
+        "count": 1,
+        "rationale": "Directly targets the remaining red word GHOST while minimizing risk to blue/assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "festival",
+        "count": 3,
+        "rationale": "A festival often features dancers, live violin music, and takes place in a village, targeting three blue words while avoiding red and neutral terms."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.85,
+          "dancer": 0.8,
+          "violin": 0.75
+        },
+        "ranked_guesses": [
+          "balloon",
+          "dancer",
+          "violin"
+        ],
+        "rationale": "Balloon festivals, dance performances, and music (violin) are classic festival elements, making these three the strongest matches for the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.8,
+          "dancer": 0.75,
+          "flower": 0.7
+        },
+        "ranked_guesses": [
+          "balloon",
+          "dancer",
+          "flower"
+        ],
+        "rationale": "Festivals often feature balloons, dancing, and decorative flowers.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.85,
+          "dancer": 0.82,
+          "flower": 0.8
+        },
+        "ranked_guesses": [
+          "balloon",
+          "dancer",
+          "flower"
+        ],
+        "rationale": "Festivals commonly feature balloons, dancing, and decorative flowers, making these the safest blue guesses while avoiding known red words (compass, ghost, writer).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "compass",
+        "count": 1,
+        "rationale": "Safest direct tie to the red word COMPASS for an immediate first guess."
+      },
+      "event": "illegal_clue",
+      "matched_word": "compass",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "record"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "clue": {
+        "clue": "ghost",
+        "count": 1,
+        "rationale": "Directly targets the remaining red word GHOST while minimizing risk to blue/assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "ghost",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "festival"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "balloon"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 10,
+    "public_event_count": 7,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-20260607-214614-m02",
+    "team_blue": "GPT-OSS 120B",
+    "team_red": "GPT-5.4-nano",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "record"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "festival"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "balloon"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

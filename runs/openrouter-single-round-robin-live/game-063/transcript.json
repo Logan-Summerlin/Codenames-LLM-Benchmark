@@ -1,0 +1,1674 @@
+{
+  "board": {
+    "identities": {
+      "amazon": "neutral",
+      "aztec": "red",
+      "bar": "blue",
+      "boot": "blue",
+      "bugle": "red",
+      "centaur": "blue",
+      "chair": "red",
+      "chick": "blue",
+      "crown": "neutral",
+      "figure": "blue",
+      "ghost": "red",
+      "greece": "neutral",
+      "hook": "red",
+      "ketchup": "red",
+      "litter": "neutral",
+      "pumpkin": "blue",
+      "seal": "red",
+      "strike": "blue",
+      "sub": "red",
+      "table": "red",
+      "tablet": "blue",
+      "tube": "neutral",
+      "turkey": "neutral",
+      "wake": "neutral",
+      "well": "assassin"
+    },
+    "revealed": [
+      "aztec",
+      "bugle",
+      "chair",
+      "ghost",
+      "hook",
+      "ketchup",
+      "seal",
+      "strike",
+      "sub",
+      "table",
+      "tablet"
+    ],
+    "words": {
+      "amazon": "neutral",
+      "aztec": "red",
+      "bar": "blue",
+      "boot": "blue",
+      "bugle": "red",
+      "centaur": "blue",
+      "chair": "red",
+      "chick": "blue",
+      "crown": "neutral",
+      "figure": "blue",
+      "ghost": "red",
+      "greece": "neutral",
+      "hook": "red",
+      "ketchup": "red",
+      "litter": "neutral",
+      "pumpkin": "blue",
+      "seal": "red",
+      "strike": "blue",
+      "sub": "red",
+      "table": "red",
+      "tablet": "blue",
+      "tube": "neutral",
+      "turkey": "neutral",
+      "wake": "neutral",
+      "well": "assassin"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sound",
+        "count": 2,
+        "rationale": "Connects 'bugle' and 'ghost' which are both related to sound."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.9,
+          "ghost": 0.7
+        },
+        "ranked_guesses": [
+          "bugle",
+          "ghost"
+        ],
+        "rationale": "'bugle' is a direct instrument that produces sound. 'ghost' is loosely associated with sound effects like 'boo'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.95,
+          "ghost": 0.9
+        },
+        "ranked_guesses": [
+          "bugle",
+          "ghost"
+        ],
+        "rationale": "'bugle' is a direct instrument producing sound, 'ghost' is strongly associated with sound in popular culture. Both fit the clue 'sound' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.9,
+          "sub": 0.7
+        },
+        "ranked_guesses": [
+          "bugle",
+          "sub"
+        ],
+        "rationale": "Clue 'sound' with count 2 strongly suggests 'bugle' (musical instrument) and 'sub' (likely subwoofer, a sound-related device). Other words have weaker or no direct sound associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "submarine",
+        "count": 1,
+        "rationale": "Points toward the blue word related to underwater travel."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ocean",
+        "count": 2,
+        "rationale": "Connects submarine and seal, both red words associated with the ocean."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "amazon": 0.75,
+          "seal": 0.85
+        },
+        "ranked_guesses": [
+          "seal",
+          "amazon"
+        ],
+        "rationale": "'ocean' strongly suggests 'seal' (sea animal) and 'amazon' (river flowing to ocean). 'sub' is likely blue (blue's illegal clue targeted it), so excluded.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "seal": 0.9,
+          "sub": 0.95
+        },
+        "ranked_guesses": [
+          "sub",
+          "seal"
+        ],
+        "rationale": "'sub' is strongly connected to 'ocean' as a submarine, and 'seal' is an ocean animal. Both fit the clue 'ocean' well.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "seal": 0.85,
+          "sub": 0.9,
+          "wake": 0.6
+        },
+        "ranked_guesses": [
+          "sub",
+          "seal",
+          "wake"
+        ],
+        "rationale": "'sub' and 'seal' are strongly ocean-related (submarine, marine animal). 'wake' fits as ship wake in ocean context.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "attack",
+        "count": 1,
+        "rationale": "Targets the blue word strike."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "attack": 0.22,
+          "strike": 0.78
+        },
+        "ranked_guesses": [
+          "strike",
+          "attack"
+        ],
+        "rationale": "Clue 'attack' most directly maps to 'strike'; 'attack' is a close fallback/near synonym.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "strike": 0.78,
+          "wake": 0.22
+        },
+        "ranked_guesses": [
+          "strike",
+          "wake"
+        ],
+        "rationale": "With clue 'attack', 'strike' directly matches; 'wake' could fit attack/assault via wake of destruction but is less direct.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.22,
+          "strike": 0.62,
+          "tube": 0.16
+        },
+        "ranked_guesses": [
+          "strike",
+          "hook",
+          "tube"
+        ],
+        "rationale": "Clue 'attack' most directly matches STRIKE; HOOK can imply an attack/strike in some contexts, and TUBE is a weaker fit (e.g., weapon/barrel).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "furniture",
+        "count": 2,
+        "rationale": "Points toward the red words 'chair' and 'table', both related to furniture."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chair": 0.95,
+          "table": 0.9
+        },
+        "ranked_guesses": [
+          "chair",
+          "table"
+        ],
+        "rationale": "The clue 'furniture' with count 2 strongly suggests 'chair' and 'table' as the most relevant unrevealed words on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chair": 0.9,
+          "hook": 0.4,
+          "table": 0.95
+        },
+        "ranked_guesses": [
+          "table",
+          "chair",
+          "hook"
+        ],
+        "rationale": "The clue 'furniture' with count 2 strongly suggests 'table' and 'chair' as the most obvious furniture items. 'Hook' is a distant third as it could relate to coat hooks (furniture-related) but is less clear.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chair": 0.95,
+          "table": 0.95
+        },
+        "ranked_guesses": [
+          "chair",
+          "table"
+        ],
+        "rationale": "'furniture' strongly suggests common furniture items; 'chair' and 'table' are the most obvious remaining candidates",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fighting",
+        "count": 1,
+        "rationale": "Targets the remaining blue word related to combat."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "attack": 0.62,
+          "hook": 0.38
+        },
+        "ranked_guesses": [
+          "attack",
+          "hook"
+        ],
+        "rationale": "Clue 'fighting' most directly matches 'attack'; 'hook' can relate to fighting/combat moves.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "attack": 0.78,
+          "litter": 0.22
+        },
+        "ranked_guesses": [
+          "attack",
+          "litter"
+        ],
+        "rationale": "Clue 'fighting' most directly maps to 'attack'. 'Litter' is a weak association via chaotic fighting aftermath.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "attack": 0.62,
+          "centaur": 0.01,
+          "hook": 0.22,
+          "strike": 0.04,
+          "sub": 0.01,
+          "tube": 0.1
+        },
+        "ranked_guesses": [
+          "attack",
+          "hook",
+          "tube",
+          "strike",
+          "sub",
+          "centaur"
+        ],
+        "rationale": "Clue 'fighting' strongly matches 'attack'; 'hook' can imply grappling/combat, while others are weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mexican",
+        "count": 2,
+        "rationale": "Connects to the Aztec civilization and ketchup (common in Mexican cuisine) for the remaining red words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "aztec": 0.9,
+          "boot": 0.2,
+          "ketchup": 0.3
+        },
+        "ranked_guesses": [
+          "aztec",
+          "ketchup",
+          "boot"
+        ],
+        "rationale": "'Aztec' is strongly associated with Mexican culture, making it the most likely target for the 'mexican' clue. 'Ketchup' and 'boot' are weaker associations but included as alternatives if 'aztec' is incorrect.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "aztec": 0.95,
+          "ketchup": 0.6
+        },
+        "ranked_guesses": [
+          "aztec",
+          "ketchup"
+        ],
+        "rationale": "'mexican' strongly suggests 'aztec' (Aztec Empire). 'ketchup' has debated Mexican origin, possibly fitting the count of 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "aztec": 0.9,
+          "ketchup": 0.6
+        },
+        "ranked_guesses": [
+          "aztec",
+          "ketchup"
+        ],
+        "rationale": "'mexican' strongly suggests 'aztec' (direct cultural link). 'ketchup' is a secondary guess as a condiment tied to Mexican cuisine in the US.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "device",
+        "count": 1,
+        "rationale": "Points to the remaining blue word that\u2019s a type of modern electronic screen/device."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boot": 0.06,
+          "hook": 0.06,
+          "pumpkin": 0.08,
+          "tablet": 0.66,
+          "tube": 0.14
+        },
+        "ranked_guesses": [
+          "tablet",
+          "tube",
+          "pumpkin",
+          "hook",
+          "boot"
+        ],
+        "rationale": "\u201cdevice\u201d most strongly suggests a tablet; secondary possibilities are other objects that could be a device or tool.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tablet": 0.7,
+          "tube": 0.3
+        },
+        "ranked_guesses": [
+          "tablet",
+          "tube"
+        ],
+        "rationale": "Device most directly fits tablet; tube is a smaller backup (e.g., device casing/medical tube).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tablet": 0.76,
+          "tube": 0.24
+        },
+        "ranked_guesses": [
+          "tablet",
+          "tube"
+        ],
+        "rationale": "\u201cDevice\u201d most directly fits tablet; \u201ctube\u201d could be a device type (e.g., tube/TV), but less likely.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sauce",
+        "count": 1,
+        "rationale": "Directly points to ketchup, the only remaining red word strongly associated with sauce. The team can deduce 'hook' is the other red word."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ketchup": 0.95
+        },
+        "ranked_guesses": [
+          "ketchup"
+        ],
+        "rationale": "Clue 'sauce' with count 1 strongly suggests 'ketchup' as it's a direct type of sauce and remains unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ketchup": 0.95
+        },
+        "ranked_guesses": [
+          "ketchup"
+        ],
+        "rationale": "'ketchup' is a direct type of sauce and matches the clue 'sauce' with count 1",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ketchup": 0.95
+        },
+        "ranked_guesses": [
+          "ketchup"
+        ],
+        "rationale": "'ketchup' is a direct type of sauce and the only plausible match for the clue 'sauce' with count 1.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tennis",
+        "count": 1,
+        "rationale": "Likely points to the remaining blue word tied to a court sport match."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "boot": 0.24,
+          "tube": 0.56
+        },
+        "ranked_guesses": [
+          "tube",
+          "boot"
+        ],
+        "rationale": "With 'tennis' (left words include tube and boot), 'tube' is a common tennis-related term (tennis ball tube/ball canisters) while 'boot' is a weaker tennis term (booting/racket footwear references).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.62,
+          "tube": 0.33
+        },
+        "ranked_guesses": [
+          "bar",
+          "tube"
+        ],
+        "rationale": "With clue 'tennis', likely hits are 'bar' (tennis-bar? bar/t-bar used for courts/equipment) and 'tube' (ball tube/tennis ball launcher container).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.62,
+          "chick": 0.38
+        },
+        "ranked_guesses": [
+          "bar",
+          "chick"
+        ],
+        "rationale": "Tennis most strongly points to court-related items/terms: a 'bar' can relate to a tennis bar/brand or scoring reference; 'chick' is a weaker but possible tennis-themed term (e.g., nickname/brand).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fishing",
+        "count": 1,
+        "rationale": "Directly associates with 'hook' as a fish hook, avoiding all blue words and the assassin."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.9
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "Direct connection to fishing (fishing hook).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.95
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "'hook' is the most direct association with 'fishing' and remains unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hook": 0.9
+        },
+        "ranked_guesses": [
+          "hook"
+        ],
+        "rationale": "'hook' is directly associated with fishing and is the most likely word given the clue 'fishing' with count 1.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "sound"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bugle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ghost"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "submarine",
+        "count": 1,
+        "rationale": "Points toward the blue word related to underwater travel."
+      },
+      "event": "illegal_clue",
+      "matched_word": "sub",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ocean"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "seal"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "sub"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "attack"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "strike"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "furniture"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "chair"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "table"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fighting"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mexican"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "aztec"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "device"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "tablet"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sauce"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ketchup"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tennis"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fishing"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "hook"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 41,
+    "public_event_count": 31,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-063-mistralai_mistral_small_2603-vs-openai_gpt_5_4_nano",
+    "team_blue": "GPT-5.4-nano",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "sound"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bugle": 0.9,
+              "ghost": 0.7
+            },
+            "ranked_guesses": [
+              "bugle",
+              "ghost"
+            ],
+            "rationale": "'bugle' is a direct instrument that produces sound. 'ghost' is loosely associated with sound effects like 'boo'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bugle": 0.95,
+              "ghost": 0.9
+            },
+            "ranked_guesses": [
+              "bugle",
+              "ghost"
+            ],
+            "rationale": "'bugle' is a direct instrument producing sound, 'ghost' is strongly associated with sound in popular culture. Both fit the clue 'sound' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bugle": 0.9,
+              "sub": 0.7
+            },
+            "ranked_guesses": [
+              "bugle",
+              "sub"
+            ],
+            "rationale": "Clue 'sound' with count 2 strongly suggests 'bugle' (musical instrument) and 'sub' (likely subwoofer, a sound-related device). Other words have weaker or no direct sound associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bugle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ghost"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sound",
+          "count": 2,
+          "rationale": "Connects 'bugle' and 'ghost' which are both related to sound."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ocean"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "seal"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "sub"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "attack"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "strike"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "submarine",
+          "count": 1,
+          "rationale": "Points toward the blue word related to underwater travel."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "furniture"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "amazon": 0.75,
+              "seal": 0.85
+            },
+            "ranked_guesses": [
+              "seal",
+              "amazon"
+            ],
+            "rationale": "'ocean' strongly suggests 'seal' (sea animal) and 'amazon' (river flowing to ocean). 'sub' is likely blue (blue's illegal clue targeted it), so excluded.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "seal": 0.9,
+              "sub": 0.95
+            },
+            "ranked_guesses": [
+              "sub",
+              "seal"
+            ],
+            "rationale": "'sub' is strongly connected to 'ocean' as a submarine, and 'seal' is an ocean animal. Both fit the clue 'ocean' well.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "seal": 0.85,
+              "sub": 0.9,
+              "wake": 0.6
+            },
+            "ranked_guesses": [
+              "sub",
+              "seal",
+              "wake"
+            ],
+            "rationale": "'sub' and 'seal' are strongly ocean-related (submarine, marine animal). 'wake' fits as ship wake in ocean context.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "chair"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "table"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ocean",
+          "count": 2,
+          "rationale": "Connects submarine and seal, both red words associated with the ocean."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fighting"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "attack": 0.22,
+              "strike": 0.78
+            },
+            "ranked_guesses": [
+              "strike",
+              "attack"
+            ],
+            "rationale": "Clue 'attack' most directly maps to 'strike'; 'attack' is a close fallback/near synonym.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "strike": 0.78,
+              "wake": 0.22
+            },
+            "ranked_guesses": [
+              "strike",
+              "wake"
+            ],
+            "rationale": "With clue 'attack', 'strike' directly matches; 'wake' could fit attack/assault via wake of destruction but is less direct.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hook": 0.22,
+              "strike": 0.62,
+              "tube": 0.16
+            },
+            "ranked_guesses": [
+              "strike",
+              "hook",
+              "tube"
+            ],
+            "rationale": "Clue 'attack' most directly matches STRIKE; HOOK can imply an attack/strike in some contexts, and TUBE is a weaker fit (e.g., weapon/barrel).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "attack",
+          "count": 1,
+          "rationale": "Targets the blue word strike."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mexican"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "chair": 0.95,
+              "table": 0.9
+            },
+            "ranked_guesses": [
+              "chair",
+              "table"
+            ],
+            "rationale": "The clue 'furniture' with count 2 strongly suggests 'chair' and 'table' as the most relevant unrevealed words on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "chair": 0.9,
+              "hook": 0.4,
+              "table": 0.95
+            },
+            "ranked_guesses": [
+              "table",
+              "chair",
+              "hook"
+            ],
+            "rationale": "The clue 'furniture' with count 2 strongly suggests 'table' and 'chair' as the most obvious furniture items. 'Hook' is a distant third as it could relate to coat hooks (furniture-related) but is less clear.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "chair": 0.95,
+              "table": 0.95
+            },
+            "ranked_guesses": [
+              "chair",
+              "table"
+            ],
+            "rationale": "'furniture' strongly suggests common furniture items; 'chair' and 'table' are the most obvious remaining candidates",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "aztec"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "furniture",
+          "count": 2,
+          "rationale": "Points toward the red words 'chair' and 'table', both related to furniture."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "device"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "attack": 0.62,
+              "hook": 0.38
+            },
+            "ranked_guesses": [
+              "attack",
+              "hook"
+            ],
+            "rationale": "Clue 'fighting' most directly matches 'attack'; 'hook' can relate to fighting/combat moves.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "attack": 0.78,
+              "litter": 0.22
+            },
+            "ranked_guesses": [
+              "attack",
+              "litter"
+            ],
+            "rationale": "Clue 'fighting' most directly maps to 'attack'. 'Litter' is a weak association via chaotic fighting aftermath.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "attack": 0.62,
+              "centaur": 0.01,
+              "hook": 0.22,
+              "strike": 0.04,
+              "sub": 0.01,
+              "tube": 0.1
+            },
+            "ranked_guesses": [
+              "attack",
+              "hook",
+              "tube",
+              "strike",
+              "sub",
+              "centaur"
+            ],
+            "rationale": "Clue 'fighting' strongly matches 'attack'; 'hook' can imply grappling/combat, while others are weaker.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "tablet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fighting",
+          "count": 1,
+          "rationale": "Targets the remaining blue word related to combat."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sauce"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "aztec": 0.9,
+              "boot": 0.2,
+              "ketchup": 0.3
+            },
+            "ranked_guesses": [
+              "aztec",
+              "ketchup",
+              "boot"
+            ],
+            "rationale": "'Aztec' is strongly associated with Mexican culture, making it the most likely target for the 'mexican' clue. 'Ketchup' and 'boot' are weaker associations but included as alternatives if 'aztec' is incorrect.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "aztec": 0.95,
+              "ketchup": 0.6
+            },
+            "ranked_guesses": [
+              "aztec",
+              "ketchup"
+            ],
+            "rationale": "'mexican' strongly suggests 'aztec' (Aztec Empire). 'ketchup' has debated Mexican origin, possibly fitting the count of 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "aztec": 0.9,
+              "ketchup": 0.6
+            },
+            "ranked_guesses": [
+              "aztec",
+              "ketchup"
+            ],
+            "rationale": "'mexican' strongly suggests 'aztec' (direct cultural link). 'ketchup' is a secondary guess as a condiment tied to Mexican cuisine in the US.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ketchup"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mexican",
+          "count": 2,
+          "rationale": "Connects to the Aztec civilization and ketchup (common in Mexican cuisine) for the remaining red words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tennis"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "boot": 0.06,
+              "hook": 0.06,
+              "pumpkin": 0.08,
+              "tablet": 0.66,
+              "tube": 0.14
+            },
+            "ranked_guesses": [
+              "tablet",
+              "tube",
+              "pumpkin",
+              "hook",
+              "boot"
+            ],
+            "rationale": "\u201cdevice\u201d most strongly suggests a tablet; secondary possibilities are other objects that could be a device or tool.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tablet": 0.7,
+              "tube": 0.3
+            },
+            "ranked_guesses": [
+              "tablet",
+              "tube"
+            ],
+            "rationale": "Device most directly fits tablet; tube is a smaller backup (e.g., device casing/medical tube).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tablet": 0.76,
+              "tube": 0.24
+            },
+            "ranked_guesses": [
+              "tablet",
+              "tube"
+            ],
+            "rationale": "\u201cDevice\u201d most directly fits tablet; \u201ctube\u201d could be a device type (e.g., tube/TV), but less likely.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "device",
+          "count": 1,
+          "rationale": "Points to the remaining blue word that\u2019s a type of modern electronic screen/device."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fishing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ketchup": 0.95
+            },
+            "ranked_guesses": [
+              "ketchup"
+            ],
+            "rationale": "Clue 'sauce' with count 1 strongly suggests 'ketchup' as it's a direct type of sauce and remains unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ketchup": 0.95
+            },
+            "ranked_guesses": [
+              "ketchup"
+            ],
+            "rationale": "'ketchup' is a direct type of sauce and matches the clue 'sauce' with count 1",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ketchup": 0.95
+            },
+            "ranked_guesses": [
+              "ketchup"
+            ],
+            "rationale": "'ketchup' is a direct type of sauce and the only plausible match for the clue 'sauce' with count 1.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "hook"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sauce",
+          "count": 1,
+          "rationale": "Directly points to ketchup, the only remaining red word strongly associated with sauce. The team can deduce 'hook' is the other red word."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

@@ -1,0 +1,1727 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "neutral",
+      "animal": "blue",
+      "artist": "neutral",
+      "autumn": "blue",
+      "baker": "blue",
+      "camera": "blue",
+      "captain": "blue",
+      "circle": "neutral",
+      "cloud": "red",
+      "copper": "red",
+      "family": "blue",
+      "farmer": "red",
+      "festival": "neutral",
+      "forest": "blue",
+      "galaxy": "blue",
+      "guitar": "red",
+      "metal": "assassin",
+      "mirror": "neutral",
+      "palace": "red",
+      "river": "neutral",
+      "secret": "red",
+      "summer": "red",
+      "teacher": "red",
+      "telescope": "neutral",
+      "tunnel": "red"
+    },
+    "revealed": [
+      "anchor",
+      "artist",
+      "autumn",
+      "captain",
+      "cloud",
+      "copper",
+      "family",
+      "farmer",
+      "forest",
+      "galaxy",
+      "guitar",
+      "metal",
+      "palace",
+      "secret",
+      "summer",
+      "tunnel"
+    ],
+    "words": {
+      "anchor": "neutral",
+      "animal": "blue",
+      "artist": "neutral",
+      "autumn": "blue",
+      "baker": "blue",
+      "camera": "blue",
+      "captain": "blue",
+      "circle": "neutral",
+      "cloud": "red",
+      "copper": "red",
+      "family": "blue",
+      "farmer": "red",
+      "festival": "neutral",
+      "forest": "blue",
+      "galaxy": "blue",
+      "guitar": "red",
+      "metal": "assassin",
+      "mirror": "neutral",
+      "palace": "red",
+      "river": "neutral",
+      "secret": "red",
+      "summer": "red",
+      "teacher": "red",
+      "telescope": "neutral",
+      "tunnel": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "orchestra",
+        "count": 3,
+        "rationale": "Orchestra connects to several red words: guitar (instrument), copper (brass instrument material), and cloud (as in 'cloud of sound' or a musical term). This targets three red words while avoiding the assassin 'metal' and blue words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Guitar is a common instrument in orchestras, especially in string sections or as a featured instrument.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.7,
+          "festival": 0.6,
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar",
+          "artist",
+          "festival"
+        ],
+        "rationale": "Orchestra connects to guitar (instrument), artist (musician), and festival (event where orchestras perform).",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.7,
+          "festival": 0.6,
+          "guitar": 0.9
+        },
+        "ranked_guesses": [
+          "guitar",
+          "artist",
+          "festival"
+        ],
+        "rationale": "Orchestra relates to musical instruments (guitar), performers (artist), and events (festival).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "MiMo V2.5-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "Fallback suggests a secure position or backup, aligning with the concept of an anchor as a stable point.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "Anchor symbolizes stability and can serve as a fallback point.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "The clue 'fallback' contains 'fall', which directly associates with the word 'autumn' due to falling leaves and the season.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "passage",
+        "count": 3,
+        "rationale": "passage connects to red words: tunnel (passage), secret (secret passage), palace (palace passage). These three are strong associations and avoid blue words or assassin."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "river": 0.6,
+          "secret": 0.9,
+          "tunnel": 0.8
+        },
+        "ranked_guesses": [
+          "secret",
+          "tunnel",
+          "river"
+        ],
+        "rationale": "Passage suggests a secret passage, a tunnel, and a river passage, all fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "river": 0.7,
+          "secret": 0.6,
+          "tunnel": 0.9
+        },
+        "ranked_guesses": [
+          "tunnel",
+          "river",
+          "secret"
+        ],
+        "rationale": "passage strongly suggests tunnel, river, and secret as common types of passages.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "passage": 0.7,
+          "river": 0.8,
+          "tunnel": 0.9
+        },
+        "ranked_guesses": [
+          "tunnel",
+          "river",
+          "passage"
+        ],
+        "rationale": "Passage suggests a way through, like a tunnel or river. Also 'passage' can mean a section of text, but no book-related words. Tunnel and river are strong. 'Passage' itself is a word on board, could be a safe guess.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "foliage",
+        "count": 2,
+        "rationale": "links autumn and forest through leaves and vegetation"
+      },
+      "agent_id": "MiMo V2.5-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.7,
+          "forest": 0.9
+        },
+        "ranked_guesses": [
+          "forest",
+          "autumn"
+        ],
+        "rationale": "Foliage strongly associates with forest and autumn seasons.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.85,
+          "forest": 0.95
+        },
+        "ranked_guesses": [
+          "forest",
+          "autumn"
+        ],
+        "rationale": "Foliage relates to trees and leaves, making forest and autumn strong matches.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "forest": 0.85
+        },
+        "ranked_guesses": [
+          "autumn",
+          "forest"
+        ],
+        "rationale": "Autumn is directly linked to foliage changes, and forest represents dense plant cover.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "storm",
+        "count": 2,
+        "rationale": "Storm connects to cloud (storm cloud) and summer (summer storms). Other red words are not strongly associated, and the main risk is river (neutral) which is a weaker connection."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "galaxy": 0.6,
+          "summer": 0.5
+        },
+        "ranked_guesses": [
+          "cloud",
+          "galaxy",
+          "summer"
+        ],
+        "rationale": "Storm relates to cloud directly, and also to galaxy (storm galaxy) and summer (summer storms). Avoid already revealed words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "summer": 0.6
+        },
+        "ranked_guesses": [
+          "cloud",
+          "summer"
+        ],
+        "rationale": "storm directly relates to 'cloud' (storm clouds) and 'summer' (common summer storms), both unrevealed.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.85,
+          "river": 0.5,
+          "summer": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "summer",
+          "river"
+        ],
+        "rationale": "Storm relates to weather; cloud is the strongest weather word. Summer can have storms. River might be associated with storm runoff, but less direct.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "adventure",
+        "count": 4,
+        "rationale": "links galaxy, captain, animal, and family as adventurous themes"
+      },
+      "agent_id": "MiMo V2.5-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.9,
+          "galaxy": 0.85,
+          "river": 0.8,
+          "telescope": 0.8
+        },
+        "ranked_guesses": [
+          "captain",
+          "galaxy",
+          "river",
+          "telescope"
+        ],
+        "rationale": "These words have strong associations with adventure: captain for leadership, galaxy for space exploration, river for outdoor activities, and telescope for discovery.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.8
+        },
+        "ranked_guesses": [
+          "captain"
+        ],
+        "rationale": "Captain is strongly associated with adventure as a leader in explorations and journeys.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.8
+        },
+        "ranked_guesses": [
+          "galaxy"
+        ],
+        "rationale": "Galaxy strongly relates to adventure through space exploration and discovery, making it a likely blue word per the clue.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "garden",
+        "count": 3,
+        "rationale": "Links farmer (gardening), summer (gardening season), and palace (palace gardens) as red words, avoiding blue and assassin."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.9,
+          "festival": 0.6,
+          "summer": 0.7
+        },
+        "ranked_guesses": [
+          "farmer",
+          "summer",
+          "festival"
+        ],
+        "rationale": "Garden clue suggests words related to plants, seasons, or outdoor events. Farmer is most direct, summer is a growing season, festival often held in gardens.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.9,
+          "festival": 0.5,
+          "summer": 0.7
+        },
+        "ranked_guesses": [
+          "farmer",
+          "summer",
+          "festival"
+        ],
+        "rationale": "Farmer is directly related to gardening, summer is a prime garden season, and festival could refer to a garden festival.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.7,
+          "farmer": 0.9,
+          "summer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "summer",
+          "animal"
+        ],
+        "rationale": "Direct garden connections: farmer tends gardens, summer is prime season, animal often found in gardens.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "home",
+        "count": 4,
+        "rationale": "Connects blue words: animal (pet), baker (home baking), camera (home use), family (household)."
+      },
+      "agent_id": "MiMo V2.5-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.6,
+          "family": 0.9,
+          "mirror": 0.7,
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "family",
+          "palace",
+          "mirror",
+          "animal"
+        ],
+        "rationale": "Words related to home: family (household), palace (grand dwelling), mirror (common in homes), animal (pets).",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.75,
+          "family": 0.9,
+          "mirror": 0.8,
+          "palace": 0.7
+        },
+        "ranked_guesses": [
+          "family",
+          "mirror",
+          "animal",
+          "palace"
+        ],
+        "rationale": "Words associated with home: family (direct link), mirror (household item), animal (pet), palace (dwelling).",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.6,
+          "baker": 0.7,
+          "family": 0.9,
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "family",
+          "palace",
+          "baker",
+          "animal"
+        ],
+        "rationale": "Words strongly associated with home: family as inhabitants, palace as residence, baker for home baking, animal as pets.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2.5-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "chemistry",
+        "count": 2,
+        "rationale": "Teacher and copper are both associated with chemistry: a teacher may instruct it, and copper is a chemical element."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "metal": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "metal"
+        ],
+        "rationale": "Chemistry clue directly points to copper as an element and metal as a category; both are unrevealed.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "metal": 0.85
+        },
+        "ranked_guesses": [
+          "copper",
+          "metal"
+        ],
+        "rationale": "Chemistry strongly relates to copper (element) and metal (substance), likely the two red words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "metal": 0.85
+        },
+        "ranked_guesses": [
+          "copper",
+          "metal"
+        ],
+        "rationale": "Chemistry strongly points to copper and metal, both unrevealed and likely remaining red words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "orchestra"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "artist"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "passage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tunnel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "secret"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "foliage"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "storm"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "adventure"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "captain"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "galaxy"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "garden"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "farmer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "home"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "family"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "palace"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "chemistry"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "metal"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 36,
+    "public_event_count": 30,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-7way-20260608-021458-m03",
+    "team_blue": "MiMo V2.5",
+    "team_red": "DeepSeek V4 Flash",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "orchestra"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Guitar is a common instrument in orchestras, especially in string sections or as a featured instrument.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.7,
+              "festival": 0.6,
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar",
+              "artist",
+              "festival"
+            ],
+            "rationale": "Orchestra connects to guitar (instrument), artist (musician), and festival (event where orchestras perform).",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.7,
+              "festival": 0.6,
+              "guitar": 0.9
+            },
+            "ranked_guesses": [
+              "guitar",
+              "artist",
+              "festival"
+            ],
+            "rationale": "Orchestra relates to musical instruments (guitar), performers (artist), and events (festival).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "artist"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "orchestra",
+          "count": 3,
+          "rationale": "Orchestra connects to several red words: guitar (instrument), copper (brass instrument material), and cloud (as in 'cloud of sound' or a musical term). This targets three red words while avoiding the assassin 'metal' and blue words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "Fallback suggests a secure position or backup, aligning with the concept of an anchor as a stable point.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "Anchor symbolizes stability and can serve as a fallback point.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "The clue 'fallback' contains 'fall', which directly associates with the word 'autumn' due to falling leaves and the season.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "MiMo V2.5-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "passage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "river": 0.6,
+              "secret": 0.9,
+              "tunnel": 0.8
+            },
+            "ranked_guesses": [
+              "secret",
+              "tunnel",
+              "river"
+            ],
+            "rationale": "Passage suggests a secret passage, a tunnel, and a river passage, all fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "river": 0.7,
+              "secret": 0.6,
+              "tunnel": 0.9
+            },
+            "ranked_guesses": [
+              "tunnel",
+              "river",
+              "secret"
+            ],
+            "rationale": "passage strongly suggests tunnel, river, and secret as common types of passages.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "passage": 0.7,
+              "river": 0.8,
+              "tunnel": 0.9
+            },
+            "ranked_guesses": [
+              "tunnel",
+              "river",
+              "passage"
+            ],
+            "rationale": "Passage suggests a way through, like a tunnel or river. Also 'passage' can mean a section of text, but no book-related words. Tunnel and river are strong. 'Passage' itself is a word on board, could be a safe guess.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tunnel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "secret"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "passage",
+          "count": 3,
+          "rationale": "passage connects to red words: tunnel (passage), secret (secret passage), palace (palace passage). These three are strong associations and avoid blue words or assassin."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "foliage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.7,
+              "forest": 0.9
+            },
+            "ranked_guesses": [
+              "forest",
+              "autumn"
+            ],
+            "rationale": "Foliage strongly associates with forest and autumn seasons.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.85,
+              "forest": 0.95
+            },
+            "ranked_guesses": [
+              "forest",
+              "autumn"
+            ],
+            "rationale": "Foliage relates to trees and leaves, making forest and autumn strong matches.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "forest": 0.85
+            },
+            "ranked_guesses": [
+              "autumn",
+              "forest"
+            ],
+            "rationale": "Autumn is directly linked to foliage changes, and forest represents dense plant cover.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "foliage",
+          "count": 2,
+          "rationale": "links autumn and forest through leaves and vegetation"
+        },
+        "agent_id": "MiMo V2.5-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "storm"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "galaxy": 0.6,
+              "summer": 0.5
+            },
+            "ranked_guesses": [
+              "cloud",
+              "galaxy",
+              "summer"
+            ],
+            "rationale": "Storm relates to cloud directly, and also to galaxy (storm galaxy) and summer (summer storms). Avoid already revealed words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "summer": 0.6
+            },
+            "ranked_guesses": [
+              "cloud",
+              "summer"
+            ],
+            "rationale": "storm directly relates to 'cloud' (storm clouds) and 'summer' (common summer storms), both unrevealed.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.85,
+              "river": 0.5,
+              "summer": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "summer",
+              "river"
+            ],
+            "rationale": "Storm relates to weather; cloud is the strongest weather word. Summer can have storms. River might be associated with storm runoff, but less direct.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "storm",
+          "count": 2,
+          "rationale": "Storm connects to cloud (storm cloud) and summer (summer storms). Other red words are not strongly associated, and the main risk is river (neutral) which is a weaker connection."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "adventure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.9,
+              "galaxy": 0.85,
+              "river": 0.8,
+              "telescope": 0.8
+            },
+            "ranked_guesses": [
+              "captain",
+              "galaxy",
+              "river",
+              "telescope"
+            ],
+            "rationale": "These words have strong associations with adventure: captain for leadership, galaxy for space exploration, river for outdoor activities, and telescope for discovery.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.8
+            },
+            "ranked_guesses": [
+              "captain"
+            ],
+            "rationale": "Captain is strongly associated with adventure as a leader in explorations and journeys.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.8
+            },
+            "ranked_guesses": [
+              "galaxy"
+            ],
+            "rationale": "Galaxy strongly relates to adventure through space exploration and discovery, making it a likely blue word per the clue.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "captain"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "galaxy"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "adventure",
+          "count": 4,
+          "rationale": "links galaxy, captain, animal, and family as adventurous themes"
+        },
+        "agent_id": "MiMo V2.5-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "garden"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.9,
+              "festival": 0.6,
+              "summer": 0.7
+            },
+            "ranked_guesses": [
+              "farmer",
+              "summer",
+              "festival"
+            ],
+            "rationale": "Garden clue suggests words related to plants, seasons, or outdoor events. Farmer is most direct, summer is a growing season, festival often held in gardens.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.9,
+              "festival": 0.5,
+              "summer": 0.7
+            },
+            "ranked_guesses": [
+              "farmer",
+              "summer",
+              "festival"
+            ],
+            "rationale": "Farmer is directly related to gardening, summer is a prime garden season, and festival could refer to a garden festival.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.7,
+              "farmer": 0.9,
+              "summer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "summer",
+              "animal"
+            ],
+            "rationale": "Direct garden connections: farmer tends gardens, summer is prime season, animal often found in gardens.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "farmer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "garden",
+          "count": 3,
+          "rationale": "Links farmer (gardening), summer (gardening season), and palace (palace gardens) as red words, avoiding blue and assassin."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "home"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.6,
+              "family": 0.9,
+              "mirror": 0.7,
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "family",
+              "palace",
+              "mirror",
+              "animal"
+            ],
+            "rationale": "Words related to home: family (household), palace (grand dwelling), mirror (common in homes), animal (pets).",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.75,
+              "family": 0.9,
+              "mirror": 0.8,
+              "palace": 0.7
+            },
+            "ranked_guesses": [
+              "family",
+              "mirror",
+              "animal",
+              "palace"
+            ],
+            "rationale": "Words associated with home: family (direct link), mirror (household item), animal (pet), palace (dwelling).",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.6,
+              "baker": 0.7,
+              "family": 0.9,
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "family",
+              "palace",
+              "baker",
+              "animal"
+            ],
+            "rationale": "Words strongly associated with home: family as inhabitants, palace as residence, baker for home baking, animal as pets.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2.5-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "family"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "palace"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "home",
+          "count": 4,
+          "rationale": "Connects blue words: animal (pet), baker (home baking), camera (home use), family (household)."
+        },
+        "agent_id": "MiMo V2.5-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "chemistry"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "metal": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "metal"
+            ],
+            "rationale": "Chemistry clue directly points to copper as an element and metal as a category; both are unrevealed.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "metal": 0.85
+            },
+            "ranked_guesses": [
+              "copper",
+              "metal"
+            ],
+            "rationale": "Chemistry strongly relates to copper (element) and metal (substance), likely the two red words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "metal": 0.85
+            },
+            "ranked_guesses": [
+              "copper",
+              "metal"
+            ],
+            "rationale": "Chemistry strongly points to copper and metal, both unrevealed and likely remaining red words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "metal"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "chemistry",
+          "count": 2,
+          "rationale": "Teacher and copper are both associated with chemistry: a teacher may instruct it, and copper is a chemical element."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

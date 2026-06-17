@@ -1,0 +1,1165 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    },
+    "revealed": [
+      "alien",
+      "jungle",
+      "museum",
+      "spider",
+      "spirit",
+      "summer",
+      "temple",
+      "voyage"
+    ],
+    "words": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sky",
+        "count": 3,
+        "rationale": "Cloud, balloon, and planet are all associated with the sky."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "planet": 0.7,
+          "rocket": 0.8
+        },
+        "ranked_guesses": [
+          "cloud",
+          "rocket",
+          "planet"
+        ],
+        "rationale": "Cloud is directly in the sky, rocket travels through the sky, planet is visible in the night sky.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "planet": 0.8,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "planet",
+          "rocket"
+        ],
+        "rationale": "Sky-related: cloud, planet, rocket are directly associated with the sky.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "planet": 0.8,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "planet",
+          "rocket"
+        ],
+        "rationale": "Sky related words: cloud, planet, and rocket are directly associated with the sky.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "haunted",
+        "count": 4,
+        "rationale": "Connects to spirit, spider, temple, museum, writer, artist, singer, helmet; top 4 are safe."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.5,
+          "spider": 0.7,
+          "spirit": 0.9,
+          "temple": 0.5
+        },
+        "ranked_guesses": [
+          "spirit",
+          "spider",
+          "temple",
+          "museum"
+        ],
+        "rationale": "These words are strongly associated with haunted places or themes: spirit directly, spider common in haunted houses, temple as in haunted temple, museum as in haunted museum.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.7,
+          "novel": 0.6,
+          "spirit": 0.95,
+          "temple": 0.8
+        },
+        "ranked_guesses": [
+          "spirit",
+          "temple",
+          "museum",
+          "novel"
+        ],
+        "rationale": "Spirit is directly related to haunted. Temple and museum are common settings for haunting. Novel could be a horror story.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.6,
+          "museum": 0.5,
+          "spirit": 0.9,
+          "writer": 0.4
+        },
+        "ranked_guesses": [
+          "spirit",
+          "alien",
+          "museum",
+          "writer"
+        ],
+        "rationale": "spirit is most directly related to haunted; alien can be ghostly; museum often haunted; writer could write ghost stories.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 3,
+        "rationale": "Connects balloon, cloud, planet - all associated with the sky."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.8,
+          "cloud": 0.9,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "rocket"
+        ],
+        "rationale": "Cloud, balloon, and rocket are directly associated with the sky.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "beacon": 0.4,
+          "cloud": 0.9,
+          "planet": 0.7,
+          "rocket": 0.5
+        },
+        "ranked_guesses": [
+          "cloud",
+          "planet",
+          "balloon",
+          "rocket",
+          "beacon"
+        ],
+        "rationale": "Cloud is most directly sky-related. Planet and balloon are also in the sky. Rocket and beacon are plausible but less direct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.8,
+          "cloud": 0.9,
+          "planet": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "planet"
+        ],
+        "rationale": "Cloud, balloon, and planet are all directly related to 'sky'. These are the most likely red words among the remaining.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "craft",
+        "count": 4,
+        "rationale": "Artist, helmet, singer, and writer are all associated with craft: artist crafts art, helmet is a crafted object, singer crafts music, writer crafts stories."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.9,
+          "poet": 0.8,
+          "rocket": 0.6,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "poet",
+          "rocket"
+        ],
+        "rationale": "craft relates to artistic skills (artist, writer, poet) and also vehicles (rocket).",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.9,
+          "poet": 0.8,
+          "rocket": 0.75,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "poet",
+          "rocket"
+        ],
+        "rationale": "Craft relates to artistic skills (artist, writer, poet) and space vehicle (rocket).",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.9,
+          "poet": 0.8,
+          "rocket": 0.6,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "poet",
+          "rocket"
+        ],
+        "rationale": "Craft can mean artistic skill, so artist, writer, and poet are strong. Rocket is a type of spacecraft, another meaning of craft.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tropical",
+        "count": 3,
+        "rationale": "Connects summer, jungle, and planet, which are red. No strong associations with blue, neutral, or assassin."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.9,
+          "summer": 0.7,
+          "voyage": 0.4
+        },
+        "ranked_guesses": [
+          "jungle",
+          "summer",
+          "voyage"
+        ],
+        "rationale": "Jungle is directly tropical; summer is warm; voyage suggests tropical travel.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.9,
+          "planet": 0.5,
+          "summer": 0.6
+        },
+        "ranked_guesses": [
+          "jungle",
+          "summer",
+          "planet"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.9,
+          "summer": 0.7,
+          "voyage": 0.5
+        },
+        "ranked_guesses": [
+          "jungle",
+          "summer",
+          "voyage"
+        ],
+        "rationale": "Jungle is directly tropical, summer is associated with tropical heat, voyage could be a tropical cruise.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.7
+        },
+        "ranked_guesses": [
+          "beacon"
+        ],
+        "rationale": "Fallback suggests a backup or reserve; beacon is a signal that can serve as a fallback guide.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.8
+        },
+        "ranked_guesses": [
+          "cloud"
+        ],
+        "rationale": "Fallback suggests a backup, and cloud is a common term for backup storage.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "haunted"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spirit"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "museum"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spider"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "craft"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "tropical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jungle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 24,
+    "public_event_count": 18,
+    "reason": null,
+    "seed": "1",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "planet": 0.7,
+              "rocket": 0.8
+            },
+            "ranked_guesses": [
+              "cloud",
+              "rocket",
+              "planet"
+            ],
+            "rationale": "Cloud is directly in the sky, rocket travels through the sky, planet is visible in the night sky.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "planet": 0.8,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "planet",
+              "rocket"
+            ],
+            "rationale": "Sky-related: cloud, planet, rocket are directly associated with the sky.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "planet": 0.8,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "planet",
+              "rocket"
+            ],
+            "rationale": "Sky related words: cloud, planet, and rocket are directly associated with the sky.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 3,
+          "rationale": "Cloud, balloon, and planet are all associated with the sky."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "haunted"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.5,
+              "spider": 0.7,
+              "spirit": 0.9,
+              "temple": 0.5
+            },
+            "ranked_guesses": [
+              "spirit",
+              "spider",
+              "temple",
+              "museum"
+            ],
+            "rationale": "These words are strongly associated with haunted places or themes: spirit directly, spider common in haunted houses, temple as in haunted temple, museum as in haunted museum.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.7,
+              "novel": 0.6,
+              "spirit": 0.95,
+              "temple": 0.8
+            },
+            "ranked_guesses": [
+              "spirit",
+              "temple",
+              "museum",
+              "novel"
+            ],
+            "rationale": "Spirit is directly related to haunted. Temple and museum are common settings for haunting. Novel could be a horror story.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.6,
+              "museum": 0.5,
+              "spirit": 0.9,
+              "writer": 0.4
+            },
+            "ranked_guesses": [
+              "spirit",
+              "alien",
+              "museum",
+              "writer"
+            ],
+            "rationale": "spirit is most directly related to haunted; alien can be ghostly; museum often haunted; writer could write ghost stories.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spirit"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "museum"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spider"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "haunted",
+          "count": 4,
+          "rationale": "Connects to spirit, spider, temple, museum, writer, artist, singer, helmet; top 4 are safe."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.8,
+              "cloud": 0.9,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "rocket"
+            ],
+            "rationale": "Cloud, balloon, and rocket are directly associated with the sky.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "beacon": 0.4,
+              "cloud": 0.9,
+              "planet": 0.7,
+              "rocket": 0.5
+            },
+            "ranked_guesses": [
+              "cloud",
+              "planet",
+              "balloon",
+              "rocket",
+              "beacon"
+            ],
+            "rationale": "Cloud is most directly sky-related. Planet and balloon are also in the sky. Rocket and beacon are plausible but less direct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.8,
+              "cloud": 0.9,
+              "planet": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "planet"
+            ],
+            "rationale": "Cloud, balloon, and planet are all directly related to 'sky'. These are the most likely red words among the remaining.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 3,
+          "rationale": "Connects balloon, cloud, planet - all associated with the sky."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "craft"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.9,
+              "poet": 0.8,
+              "rocket": 0.6,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "poet",
+              "rocket"
+            ],
+            "rationale": "craft relates to artistic skills (artist, writer, poet) and also vehicles (rocket).",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.9,
+              "poet": 0.8,
+              "rocket": 0.75,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "poet",
+              "rocket"
+            ],
+            "rationale": "Craft relates to artistic skills (artist, writer, poet) and space vehicle (rocket).",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.9,
+              "poet": 0.8,
+              "rocket": 0.6,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "poet",
+              "rocket"
+            ],
+            "rationale": "Craft can mean artistic skill, so artist, writer, and poet are strong. Rocket is a type of spacecraft, another meaning of craft.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "craft",
+          "count": 4,
+          "rationale": "Artist, helmet, singer, and writer are all associated with craft: artist crafts art, helmet is a crafted object, singer crafts music, writer crafts stories."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "tropical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.9,
+              "summer": 0.7,
+              "voyage": 0.4
+            },
+            "ranked_guesses": [
+              "jungle",
+              "summer",
+              "voyage"
+            ],
+            "rationale": "Jungle is directly tropical; summer is warm; voyage suggests tropical travel.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.9,
+              "planet": 0.5,
+              "summer": 0.6
+            },
+            "ranked_guesses": [
+              "jungle",
+              "summer",
+              "planet"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.9,
+              "summer": 0.7,
+              "voyage": 0.5
+            },
+            "ranked_guesses": [
+              "jungle",
+              "summer",
+              "voyage"
+            ],
+            "rationale": "Jungle is directly tropical, summer is associated with tropical heat, voyage could be a tropical cruise.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jungle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "tropical",
+          "count": 3,
+          "rationale": "Connects summer, jungle, and planet, which are red. No strong associations with blue, neutral, or assassin."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.7
+            },
+            "ranked_guesses": [
+              "beacon"
+            ],
+            "rationale": "Fallback suggests a backup or reserve; beacon is a signal that can serve as a fallback guide.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.8
+            },
+            "ranked_guesses": [
+              "cloud"
+            ],
+            "rationale": "Fallback suggests a backup, and cloud is a common term for backup storage.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,2051 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    },
+    "revealed": [
+      "anchor",
+      "atlas",
+      "autumn",
+      "cloud",
+      "copper",
+      "jungle",
+      "machine",
+      "magnet",
+      "mirror",
+      "robot",
+      "station",
+      "travel",
+      "voyage"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "amazon",
+        "count": 3,
+        "rationale": "Links to cloud (AWS), jungle (rainforest), and robot (warehouse robotics), all red, with low risk of blue or assassin."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "jungle": 0.95,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "jungle",
+          "cloud",
+          "robot"
+        ],
+        "rationale": "jungle relates to Amazon rainforest, cloud relates to Amazon Web Services, robot relates to Amazon's robotics in fulfillment centers.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.95,
+          "jungle": 0.99,
+          "voyage": 0.7
+        },
+        "ranked_guesses": [
+          "jungle",
+          "cloud",
+          "voyage"
+        ],
+        "rationale": "Jungle strongly evokes the Amazon rainforest. Cloud refers to Amazon Web Services. Voyage suggests a journey on the Amazon River.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "cloud": 0.9,
+          "jungle": 0.95
+        },
+        "ranked_guesses": [
+          "jungle",
+          "cloud",
+          "atlas"
+        ],
+        "rationale": "The clue 'amazon' likely refers to the Amazon rainforest (jungle), Amazon Web Services (cloud), and Amazon's origins as a bookstore (atlas).",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "Related to station, voyage, and travel, which are connected to movement or journeys."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "station": 0.6,
+          "travel": 0.55,
+          "voyage": 0.75
+        },
+        "ranked_guesses": [
+          "atlas",
+          "voyage",
+          "station",
+          "travel"
+        ],
+        "rationale": "The clue 'navigation' strongly suggests words related to travel, exploration, or mapping. 'Atlas' and 'voyage' are directly associated with navigation and exploration. 'Station' and 'travel' are also connected to movement and navigation, though slightly less directly. 'Cloud' and 'jungle' are already revealed and belong to the red team, so they are not options. The remaining words are less directly related but still relevant to navigation themes.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "station": 0.6,
+          "travel": 0.55,
+          "voyage": 0.75
+        },
+        "ranked_guesses": [
+          "atlas",
+          "voyage",
+          "station",
+          "travel"
+        ],
+        "rationale": "The clue 'navigation' strongly suggests words related to travel and exploration. 'Atlas' and 'voyage' are directly associated with navigation and travel. 'Station' and 'travel' are also relevant, but slightly less directly. 'Cloud' and 'jungle' are already revealed and belong to the red team, so they are not options. The remaining words are less related to navigation, so guesses are prioritized accordingly.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "station": 0.6,
+          "travel": 0.55,
+          "voyage": 0.75
+        },
+        "ranked_guesses": [
+          "atlas",
+          "voyage",
+          "station",
+          "travel"
+        ],
+        "rationale": "The clue 'navigation' strongly suggests words related to travel, exploration, or mapping. 'Atlas' and 'voyage' are directly associated with navigation and travel. 'Station' and 'travel' are also relevant, but slightly less specific. 'Cloud' and 'jungle' are already revealed and belong to the red team, so they are not options. The remaining words are less directly connected to navigation, so guesses are ordered by relevance and confidence.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "{'word': 'trip', 'count': 2, 'rationale': 'connects to travel and voyage without suggesting other words on the board.'}",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.95,
+          "voyage": 0.95
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "The clue 'trip' directly connects to 'travel' and 'voyage'. No other words on the board are as strongly related.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "{'word': 'travel', 'confidence': 0.95}",
+          "{'word': 'voyage', 'confidence': 0.95}"
+        ],
+        "rationale": "The clue 'trip' with count 2 strongly suggests travel and voyage, which are synonyms for a journey.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.95,
+          "voyage": 0.95
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Clue 'trip' strongly suggests travel and voyage, which are both on the board and match the spymaster's rationale.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "This clue relates to the words 'station', 'machine', and 'desert' which are associated with travel and exploration, fitting the theme of navigation and movement."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.6,
+          "mirror": 0.5,
+          "station": 0.55,
+          "wizard": 0.45
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "station",
+          "mirror",
+          "wizard"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Galaxy' and 'station' relate to navigation in space and transportation, respectively. 'Mirror' could be linked to navigation tools like compasses or navigation aids. 'Wizard' is less directly related but could imply guidance or direction in a metaphorical sense. The other words are less connected to the theme of navigation.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.55,
+          "mirror": 0.6,
+          "station": 0.7,
+          "wizard": 0.5
+        },
+        "ranked_guesses": [
+          "station",
+          "mirror",
+          "galaxy",
+          "wizard"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding, exploring, or traveling. 'Station' relates to transportation hubs, 'mirror' can be associated with reflection and direction, 'galaxy' relates to space navigation, and 'wizard' can imply guidance or mastery. 'Atlas' was already guessed and is neutral, so focus shifts to other navigation-related words.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.7,
+          "station": 0.8,
+          "travel": 0.5,
+          "voyage": 0.6
+        },
+        "ranked_guesses": [
+          "station",
+          "robot",
+          "voyage",
+          "travel"
+        ],
+        "rationale": "The clue 'navigation' strongly suggests words related to travel and movement. 'Station' and 'robot' are plausible due to their association with movement and technology, respectively. 'Voyage' and 'travel' are directly connected to navigation and are already revealed as red, indicating they are less likely to be the blue team's choices. Prioritizing unclaimed words with relevant themes.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.01,
+          "autumn": 0.85,
+          "beacon": 0.07,
+          "desert": 0.02,
+          "station": 0.05
+        },
+        "ranked_guesses": [
+          "autumn",
+          "beacon",
+          "station",
+          "desert",
+          "agent"
+        ],
+        "rationale": "The word 'fallback' could be interpreted as 'fall' (a synonym for autumn) and 'back', but autumn is the strongest association. Other possibilities like beacon or station relate to backup systems, but are less direct. Given count 1, stopping after one guess is safe.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.2,
+          "anchor": 0.03,
+          "autumn": 0.7,
+          "desert": 0.02,
+          "station": 0.05
+        },
+        "ranked_guesses": [
+          "autumn",
+          "agent",
+          "station",
+          "anchor",
+          "desert"
+        ],
+        "rationale": "Fallback contains 'fall', a direct synonym for autumn. Count is 1, indicating a single strong connection. Other words are either more tenuous or likely belong to blue's navigation theme.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.6
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "Clue 'fallback' contains 'fall', a direct synonym for autumn.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "Related to travel, voyage, and the concept of guiding or finding a way."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.8,
+          "mirror": 0.75,
+          "station": 0.7,
+          "wizard": 0.65
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "mirror",
+          "station",
+          "wizard"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to exploration, guidance, or celestial navigation. 'Galaxy' fits as it relates to space and navigation in astronomy. 'Mirror' and 'station' are associated with navigation tools or locations. 'Wizard' is less directly related but can imply guidance or navigation through mystical means. The other words are less relevant to the theme of navigation.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "beacon": 0.3,
+          "galaxy": 0.6,
+          "mirror": 0.5,
+          "station": 0.4
+        },
+        "ranked_guesses": [
+          "atlas",
+          "galaxy",
+          "mirror",
+          "station",
+          "beacon"
+        ],
+        "rationale": "Atlas is a neutral word, likely a safe first guess. Galaxy and mirror relate to navigation and exploration themes. Station and beacon are associated with navigation and travel infrastructure, fitting the clue 'navigation'. Autumn is red, already guessed by red, so less likely. Prior guesses suggest the team is focusing on navigation and travel-related words.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.7,
+          "mirror": 0.6,
+          "station": 0.5,
+          "wizard": 0.4
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "mirror",
+          "station",
+          "wizard"
+        ],
+        "rationale": "The words 'galaxy', 'mirror', and 'station' are associated with navigation and exploration themes, fitting the clue 'navigation'. 'Wizard' is a less direct guess but can be linked to guidance or navigation in a fantasy context. The other words are less relevant to the navigation theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "Fallback suggests a reliable backup or thing to fall back on; anchor fits this metaphor well.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.1,
+          "copper": 0.6,
+          "station": 0.3
+        },
+        "ranked_guesses": [
+          "copper",
+          "station",
+          "agent"
+        ],
+        "rationale": "If fiber fails, fallback to copper. Copper is a safe guess away from blue's navigation words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "fallback suggests a backup or alternative; anchor is a common metaphor for a secure fallback option.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "The words 'desert', 'machine', and 'station' are associated with navigation or movement, and this clue helps connect multiple blue words while avoiding red and neutral words."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.5,
+          "mirror": 0.6,
+          "station": 0.7
+        },
+        "ranked_guesses": [
+          "station",
+          "mirror",
+          "galaxy"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, and tools used for navigation. 'Station' (as in a transportation station), 'mirror' (used for navigation in some contexts), and 'galaxy' (related to space navigation) are plausible guesses. 'Atlas' was previously guessed and revealed as neutral, so it's excluded. 'Travel' and 'voyage' are already revealed as red, so they are not options. The remaining words fit best with the navigation theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.4,
+          "mirror": 0.6,
+          "robot": 0.5,
+          "station": 0.7
+        },
+        "ranked_guesses": [
+          "station",
+          "mirror",
+          "robot",
+          "galaxy"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Station' and 'mirror' are associated with navigation tools or references, while 'robot' and 'galaxy' are more abstract but can relate to navigation in technology or space. 'Anchor' was guessed previously and is less likely now, but still relevant. The remaining guesses are ordered by their thematic connection to navigation and exploration.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.6,
+          "mirror": 0.65,
+          "station": 0.75,
+          "wizard": 0.55
+        },
+        "ranked_guesses": [
+          "station",
+          "mirror",
+          "galaxy",
+          "wizard"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to guiding, exploring, or traveling. 'Station' and 'mirror' are somewhat related to navigation tools or references, while 'galaxy' and 'wizard' are more abstract but can be associated with exploration or guidance in a metaphorical sense. 'Anchor' was already guessed and revealed as blue, so it is excluded from guesses. The other words like 'atlas' and 'voyage' are already revealed or guessed, so they are not considered.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 4,
+        "rationale": "Copper and magnet are metals, robot is typically made of metal, and mirrors have a metal reflective coating. Avoids 'machine' by hoping guessers associate mirror with metal."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.95,
+          "machine": 0.85,
+          "magnet": 0.9,
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "machine",
+          "robot"
+        ],
+        "rationale": "Copper is a metal. Magnet, machine, and robot are objects typically made of or associated with metal. These are the 4 most likely remaining red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "{'word': 'copper', 'confidence': 0.99}",
+          "{'word': 'robot', 'confidence': 0.95}",
+          "{'word': 'magnet', 'confidence': 0.9}",
+          "{'word': 'machine', 'confidence': 0.85}"
+        ],
+        "rationale": "Clue 'metal' strongly suggests copper (a metal), robot (often made of metal), magnet (commonly metal), and machine (typically metal). These are likely the four remaining red words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.99,
+          "machine": 0.9,
+          "magnet": 0.95,
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "robot",
+          "machine"
+        ],
+        "rationale": "The clue 'metal' directly points to copper (a literal metal), magnet (often made of metal), robot (typically metallic), and machine (constructed largely from metal). These four words match the count of 4 and are the most obvious remaining unguessed words, aligning with the need to find the final four red agents.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "This hints at words related to guiding or traveling, which connects to 'station', 'travel', and 'voyage' on the board. It avoids words already revealed and provides a strategic focus for the team."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "station": 0.7,
+          "travel": 0.8,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "travel",
+          "station"
+        ],
+        "rationale": "The clue 'navigation' strongly relates to travel and voyage, which are already guessed and revealed as red. 'Station' is associated with navigation and travel infrastructure, making it a logical next guess for blue. 'Voyage' and 'travel' are directly connected to navigation and have high confidence, but 'station' is slightly more specific to navigation context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "station": 0.7,
+          "travel": 0.8,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "travel",
+          "station"
+        ],
+        "rationale": "The clue 'navigation' strongly relates to travel and voyage, which are already partially guessed but still relevant. 'Station' is associated with navigation as a transit point. 'Voyage' and 'travel' are directly connected to navigation concepts, making them the most probable choices.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "station": 0.8,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "station",
+          "atlas"
+        ],
+        "rationale": "The clue 'navigation' strongly relates to travel and voyage, which are already guessed. 'Station' and 'atlas' are closely associated with navigation and travel, making them high-confidence guesses. 'Voyage' is also directly connected to navigation and travel, reinforcing its priority. Other words like 'anchor' and 'machine' are less directly related to navigation, so they are lower priority.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mimic",
+        "count": 2,
+        "rationale": "Connects to 'mirror' (mimics reflection) and 'robot' (mimics human behavior/appearance) without strongly suggesting any other words, including the assassin."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.95,
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "robot"
+        ],
+        "rationale": "Mimic means to imitate. Mirror reflects and imitates, robot often mimics human actions. These are the most directly related words from the remaining unrevealed words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.95,
+          "robot": 0.85
+        },
+        "ranked_guesses": [
+          "mirror",
+          "robot"
+        ],
+        "rationale": "\"Mimic\" means to imitate or copy. \"Mirror\" reflects images, directly mimicking appearances. \"Robot\" can imitate human actions, making it a strong second choice.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.85,
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "robot",
+          "mirror"
+        ],
+        "rationale": "Both robot and mirror strongly imply mimicry or imitation.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "amazon"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jungle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "{'word': 'trip', 'count': 2, 'rationale': 'connects to travel and voyage without suggesting other words on the board.'}"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mimic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "robot"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 44,
+    "public_event_count": 30,
+    "reason": "all_words_found",
+    "seed": "2",
+    "team_blue": "gpt-4.1-nano",
+    "team_red": "deepseek-v4-pro",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "amazon"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "jungle": 0.95,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "jungle",
+              "cloud",
+              "robot"
+            ],
+            "rationale": "jungle relates to Amazon rainforest, cloud relates to Amazon Web Services, robot relates to Amazon's robotics in fulfillment centers.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.95,
+              "jungle": 0.99,
+              "voyage": 0.7
+            },
+            "ranked_guesses": [
+              "jungle",
+              "cloud",
+              "voyage"
+            ],
+            "rationale": "Jungle strongly evokes the Amazon rainforest. Cloud refers to Amazon Web Services. Voyage suggests a journey on the Amazon River.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.7,
+              "cloud": 0.9,
+              "jungle": 0.95
+            },
+            "ranked_guesses": [
+              "jungle",
+              "cloud",
+              "atlas"
+            ],
+            "rationale": "The clue 'amazon' likely refers to the Amazon rainforest (jungle), Amazon Web Services (cloud), and Amazon's origins as a bookstore (atlas).",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jungle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "amazon",
+          "count": 3,
+          "rationale": "Links to cloud (AWS), jungle (rainforest), and robot (warehouse robotics), all red, with low risk of blue or assassin."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "station": 0.6,
+              "travel": 0.55,
+              "voyage": 0.75
+            },
+            "ranked_guesses": [
+              "atlas",
+              "voyage",
+              "station",
+              "travel"
+            ],
+            "rationale": "The clue 'navigation' strongly suggests words related to travel, exploration, or mapping. 'Atlas' and 'voyage' are directly associated with navigation and exploration. 'Station' and 'travel' are also connected to movement and navigation, though slightly less directly. 'Cloud' and 'jungle' are already revealed and belong to the red team, so they are not options. The remaining words are less directly related but still relevant to navigation themes.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "station": 0.6,
+              "travel": 0.55,
+              "voyage": 0.75
+            },
+            "ranked_guesses": [
+              "atlas",
+              "voyage",
+              "station",
+              "travel"
+            ],
+            "rationale": "The clue 'navigation' strongly suggests words related to travel and exploration. 'Atlas' and 'voyage' are directly associated with navigation and travel. 'Station' and 'travel' are also relevant, but slightly less directly. 'Cloud' and 'jungle' are already revealed and belong to the red team, so they are not options. The remaining words are less related to navigation, so guesses are prioritized accordingly.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "station": 0.6,
+              "travel": 0.55,
+              "voyage": 0.75
+            },
+            "ranked_guesses": [
+              "atlas",
+              "voyage",
+              "station",
+              "travel"
+            ],
+            "rationale": "The clue 'navigation' strongly suggests words related to travel, exploration, or mapping. 'Atlas' and 'voyage' are directly associated with navigation and travel. 'Station' and 'travel' are also relevant, but slightly less specific. 'Cloud' and 'jungle' are already revealed and belong to the red team, so they are not options. The remaining words are less directly connected to navigation, so guesses are ordered by relevance and confidence.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "Related to station, voyage, and travel, which are connected to movement or journeys."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "{'word': 'trip', 'count': 2, 'rationale': 'connects to travel and voyage without suggesting other words on the board.'}"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.95,
+              "voyage": 0.95
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "The clue 'trip' directly connects to 'travel' and 'voyage'. No other words on the board are as strongly related.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "{'word': 'travel', 'confidence': 0.95}",
+              "{'word': 'voyage', 'confidence': 0.95}"
+            ],
+            "rationale": "The clue 'trip' with count 2 strongly suggests travel and voyage, which are synonyms for a journey.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.95,
+              "voyage": 0.95
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Clue 'trip' strongly suggests travel and voyage, which are both on the board and match the spymaster's rationale.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "{'word': 'trip', 'count': 2, 'rationale': 'connects to travel and voyage without suggesting other words on the board.'}",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.6,
+              "mirror": 0.5,
+              "station": 0.55,
+              "wizard": 0.45
+            },
+            "ranked_guesses": [
+              "galaxy",
+              "station",
+              "mirror",
+              "wizard"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Galaxy' and 'station' relate to navigation in space and transportation, respectively. 'Mirror' could be linked to navigation tools like compasses or navigation aids. 'Wizard' is less directly related but could imply guidance or direction in a metaphorical sense. The other words are less connected to the theme of navigation.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.55,
+              "mirror": 0.6,
+              "station": 0.7,
+              "wizard": 0.5
+            },
+            "ranked_guesses": [
+              "station",
+              "mirror",
+              "galaxy",
+              "wizard"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding, exploring, or traveling. 'Station' relates to transportation hubs, 'mirror' can be associated with reflection and direction, 'galaxy' relates to space navigation, and 'wizard' can imply guidance or mastery. 'Atlas' was already guessed and is neutral, so focus shifts to other navigation-related words.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.7,
+              "station": 0.8,
+              "travel": 0.5,
+              "voyage": 0.6
+            },
+            "ranked_guesses": [
+              "station",
+              "robot",
+              "voyage",
+              "travel"
+            ],
+            "rationale": "The clue 'navigation' strongly suggests words related to travel and movement. 'Station' and 'robot' are plausible due to their association with movement and technology, respectively. 'Voyage' and 'travel' are directly connected to navigation and are already revealed as red, indicating they are less likely to be the blue team's choices. Prioritizing unclaimed words with relevant themes.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "This clue relates to the words 'station', 'machine', and 'desert' which are associated with travel and exploration, fitting the theme of navigation and movement."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.01,
+              "autumn": 0.85,
+              "beacon": 0.07,
+              "desert": 0.02,
+              "station": 0.05
+            },
+            "ranked_guesses": [
+              "autumn",
+              "beacon",
+              "station",
+              "desert",
+              "agent"
+            ],
+            "rationale": "The word 'fallback' could be interpreted as 'fall' (a synonym for autumn) and 'back', but autumn is the strongest association. Other possibilities like beacon or station relate to backup systems, but are less direct. Given count 1, stopping after one guess is safe.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.2,
+              "anchor": 0.03,
+              "autumn": 0.7,
+              "desert": 0.02,
+              "station": 0.05
+            },
+            "ranked_guesses": [
+              "autumn",
+              "agent",
+              "station",
+              "anchor",
+              "desert"
+            ],
+            "rationale": "Fallback contains 'fall', a direct synonym for autumn. Count is 1, indicating a single strong connection. Other words are either more tenuous or likely belong to blue's navigation theme.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.6
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "Clue 'fallback' contains 'fall', a direct synonym for autumn.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.8,
+              "mirror": 0.75,
+              "station": 0.7,
+              "wizard": 0.65
+            },
+            "ranked_guesses": [
+              "galaxy",
+              "mirror",
+              "station",
+              "wizard"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to exploration, guidance, or celestial navigation. 'Galaxy' fits as it relates to space and navigation in astronomy. 'Mirror' and 'station' are associated with navigation tools or locations. 'Wizard' is less directly related but can imply guidance or navigation through mystical means. The other words are less relevant to the theme of navigation.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "beacon": 0.3,
+              "galaxy": 0.6,
+              "mirror": 0.5,
+              "station": 0.4
+            },
+            "ranked_guesses": [
+              "atlas",
+              "galaxy",
+              "mirror",
+              "station",
+              "beacon"
+            ],
+            "rationale": "Atlas is a neutral word, likely a safe first guess. Galaxy and mirror relate to navigation and exploration themes. Station and beacon are associated with navigation and travel infrastructure, fitting the clue 'navigation'. Autumn is red, already guessed by red, so less likely. Prior guesses suggest the team is focusing on navigation and travel-related words.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.7,
+              "mirror": 0.6,
+              "station": 0.5,
+              "wizard": 0.4
+            },
+            "ranked_guesses": [
+              "galaxy",
+              "mirror",
+              "station",
+              "wizard"
+            ],
+            "rationale": "The words 'galaxy', 'mirror', and 'station' are associated with navigation and exploration themes, fitting the clue 'navigation'. 'Wizard' is a less direct guess but can be linked to guidance or navigation in a fantasy context. The other words are less relevant to the navigation theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "Related to travel, voyage, and the concept of guiding or finding a way."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.6
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "Fallback suggests a reliable backup or thing to fall back on; anchor fits this metaphor well.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.1,
+              "copper": 0.6,
+              "station": 0.3
+            },
+            "ranked_guesses": [
+              "copper",
+              "station",
+              "agent"
+            ],
+            "rationale": "If fiber fails, fallback to copper. Copper is a safe guess away from blue's navigation words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "fallback suggests a backup or alternative; anchor is a common metaphor for a secure fallback option.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.5,
+              "mirror": 0.6,
+              "station": 0.7
+            },
+            "ranked_guesses": [
+              "station",
+              "mirror",
+              "galaxy"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, and tools used for navigation. 'Station' (as in a transportation station), 'mirror' (used for navigation in some contexts), and 'galaxy' (related to space navigation) are plausible guesses. 'Atlas' was previously guessed and revealed as neutral, so it's excluded. 'Travel' and 'voyage' are already revealed as red, so they are not options. The remaining words fit best with the navigation theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.4,
+              "mirror": 0.6,
+              "robot": 0.5,
+              "station": 0.7
+            },
+            "ranked_guesses": [
+              "station",
+              "mirror",
+              "robot",
+              "galaxy"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or guiding. 'Station' and 'mirror' are associated with navigation tools or references, while 'robot' and 'galaxy' are more abstract but can relate to navigation in technology or space. 'Anchor' was guessed previously and is less likely now, but still relevant. The remaining guesses are ordered by their thematic connection to navigation and exploration.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.6,
+              "mirror": 0.65,
+              "station": 0.75,
+              "wizard": 0.55
+            },
+            "ranked_guesses": [
+              "station",
+              "mirror",
+              "galaxy",
+              "wizard"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to guiding, exploring, or traveling. 'Station' and 'mirror' are somewhat related to navigation tools or references, while 'galaxy' and 'wizard' are more abstract but can be associated with exploration or guidance in a metaphorical sense. 'Anchor' was already guessed and revealed as blue, so it is excluded from guesses. The other words like 'atlas' and 'voyage' are already revealed or guessed, so they are not considered.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "The words 'desert', 'machine', and 'station' are associated with navigation or movement, and this clue helps connect multiple blue words while avoiding red and neutral words."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.95,
+              "machine": 0.85,
+              "magnet": 0.9,
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "machine",
+              "robot"
+            ],
+            "rationale": "Copper is a metal. Magnet, machine, and robot are objects typically made of or associated with metal. These are the 4 most likely remaining red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "{'word': 'copper', 'confidence': 0.99}",
+              "{'word': 'robot', 'confidence': 0.95}",
+              "{'word': 'magnet', 'confidence': 0.9}",
+              "{'word': 'machine', 'confidence': 0.85}"
+            ],
+            "rationale": "Clue 'metal' strongly suggests copper (a metal), robot (often made of metal), magnet (commonly metal), and machine (typically metal). These are likely the four remaining red words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.99,
+              "machine": 0.9,
+              "magnet": 0.95,
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "robot",
+              "machine"
+            ],
+            "rationale": "The clue 'metal' directly points to copper (a literal metal), magnet (often made of metal), robot (typically metallic), and machine (constructed largely from metal). These four words match the count of 4 and are the most obvious remaining unguessed words, aligning with the need to find the final four red agents.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 4,
+          "rationale": "Copper and magnet are metals, robot is typically made of metal, and mirrors have a metal reflective coating. Avoids 'machine' by hoping guessers associate mirror with metal."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "station": 0.7,
+              "travel": 0.8,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "travel",
+              "station"
+            ],
+            "rationale": "The clue 'navigation' strongly relates to travel and voyage, which are already guessed and revealed as red. 'Station' is associated with navigation and travel infrastructure, making it a logical next guess for blue. 'Voyage' and 'travel' are directly connected to navigation and have high confidence, but 'station' is slightly more specific to navigation context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "station": 0.7,
+              "travel": 0.8,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "travel",
+              "station"
+            ],
+            "rationale": "The clue 'navigation' strongly relates to travel and voyage, which are already partially guessed but still relevant. 'Station' is associated with navigation as a transit point. 'Voyage' and 'travel' are directly connected to navigation concepts, making them the most probable choices.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.7,
+              "station": 0.8,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "station",
+              "atlas"
+            ],
+            "rationale": "The clue 'navigation' strongly relates to travel and voyage, which are already guessed. 'Station' and 'atlas' are closely associated with navigation and travel, making them high-confidence guesses. 'Voyage' is also directly connected to navigation and travel, reinforcing its priority. Other words like 'anchor' and 'machine' are less directly related to navigation, so they are lower priority.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "This hints at words related to guiding or traveling, which connects to 'station', 'travel', and 'voyage' on the board. It avoids words already revealed and provides a strategic focus for the team."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mimic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.95,
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "robot"
+            ],
+            "rationale": "Mimic means to imitate. Mirror reflects and imitates, robot often mimics human actions. These are the most directly related words from the remaining unrevealed words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.95,
+              "robot": 0.85
+            },
+            "ranked_guesses": [
+              "mirror",
+              "robot"
+            ],
+            "rationale": "\"Mimic\" means to imitate or copy. \"Mirror\" reflects images, directly mimicking appearances. \"Robot\" can imitate human actions, making it a strong second choice.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.85,
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "robot",
+              "mirror"
+            ],
+            "rationale": "Both robot and mirror strongly imply mimicry or imitation.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        },
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mimic",
+          "count": 2,
+          "rationale": "Connects to 'mirror' (mimics reflection) and 'robot' (mimics human behavior/appearance) without strongly suggesting any other words, including the assassin."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

@@ -1,0 +1,2021 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "atlas": "blue",
+      "autumn": "red",
+      "baker": "red",
+      "balloon": "blue",
+      "battery": "neutral",
+      "castle": "red",
+      "cheese": "blue",
+      "cloud": "red",
+      "doctor": "blue",
+      "family": "neutral",
+      "flower": "neutral",
+      "honey": "red",
+      "hunter": "neutral",
+      "lantern": "red",
+      "memory": "blue",
+      "museum": "neutral",
+      "novel": "neutral",
+      "silver": "blue",
+      "sugar": "red",
+      "teacher": "red",
+      "temple": "blue",
+      "tiger": "neutral",
+      "violin": "assassin",
+      "voyage": "red"
+    },
+    "revealed": [
+      "autumn",
+      "baker",
+      "battery",
+      "castle",
+      "cloud",
+      "doctor",
+      "honey",
+      "lantern",
+      "sugar",
+      "teacher",
+      "violin"
+    ],
+    "words": {
+      "agent": "blue",
+      "atlas": "blue",
+      "autumn": "red",
+      "baker": "red",
+      "balloon": "blue",
+      "battery": "neutral",
+      "castle": "red",
+      "cheese": "blue",
+      "cloud": "red",
+      "doctor": "blue",
+      "family": "neutral",
+      "flower": "neutral",
+      "honey": "red",
+      "hunter": "neutral",
+      "lantern": "red",
+      "memory": "blue",
+      "museum": "neutral",
+      "novel": "neutral",
+      "silver": "blue",
+      "sugar": "red",
+      "teacher": "red",
+      "temple": "blue",
+      "tiger": "neutral",
+      "violin": "assassin",
+      "voyage": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "season",
+        "count": 2,
+        "rationale": "Connects to 'autumn' and 'honey' (often associated with harvest seasons), both red words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "spring": 0.7
+        },
+        "ranked_guesses": [
+          "autumn",
+          "spring"
+        ],
+        "rationale": "Clue 'season' with count 2 suggests words related to seasons. 'Autumn' is a direct season match. 'Spring' is another season, though not on board, so considering similar concepts.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "spring": 0.7,
+          "summer": 0.6
+        },
+        "ranked_guesses": [
+          "autumn",
+          "spring",
+          "summer"
+        ],
+        "rationale": "Clue 'season' with count 2 strongly suggests 'autumn' (on board) as primary match, with potential secondary seasonal words like 'spring' or 'summer' (not on board) as alternatives.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "flower": 0.7,
+          "honey": 0.6,
+          "silver": 0.4,
+          "sugar": 0.5
+        },
+        "ranked_guesses": [
+          "autumn",
+          "flower",
+          "honey",
+          "sugar",
+          "silver"
+        ],
+        "rationale": "Clue 'season' with count 2 strongly suggests 'autumn' as a season. 'flower' could relate to spring/summer seasons. 'honey' and 'sugar' have seasonal harvest connections. 'silver' is a weaker seasonal association (e.g., winter silver frost).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "map",
+        "count": 2,
+        "rationale": "Points to voyage and temple for blue words."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.78,
+          "castle": 0.18,
+          "map": 0.62,
+          "museum": 0.12,
+          "voyage": 0.35
+        },
+        "ranked_guesses": [
+          "atlas",
+          "map",
+          "voyage",
+          "castle",
+          "museum"
+        ],
+        "rationale": "Clue 'map' most directly fits 'atlas' and possibly 'map' itself; related ideas include 'voyage' and places like 'castle'/'museum'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.62,
+          "memory": 0.08,
+          "museum": 0.01,
+          "temple": 0.02,
+          "voyage": 0.27
+        },
+        "ranked_guesses": [
+          "atlas",
+          "voyage",
+          "memory",
+          "temple",
+          "museum"
+        ],
+        "rationale": "\u201cMap\u201d most directly fits atlas; next best is voyage (navigation). Other weaker thematic links: memory, then temple/museum.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "castle": 0.05,
+          "museum": 0.08,
+          "temple": 0.06,
+          "voyage": 0.25
+        },
+        "ranked_guesses": [
+          "atlas",
+          "voyage",
+          "museum",
+          "temple",
+          "castle"
+        ],
+        "rationale": "\u201cMap\u201d most directly points to atlas; next are navigation/travel-themed guesses like voyage.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sweet",
+        "count": 2,
+        "rationale": "Connects to 'honey' and 'sugar', both red words, without directly matching any board words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.7,
+          "honey": 0.9,
+          "sugar": 0.85
+        },
+        "ranked_guesses": [
+          "honey",
+          "sugar",
+          "cheese"
+        ],
+        "rationale": "'sweet' strongly relates to honey (sweet substance), sugar (sweetener), and cheese (can be sweet in context). These are the best matches among unrevealed words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.6,
+          "honey": 0.9,
+          "sugar": 0.8
+        },
+        "ranked_guesses": [
+          "honey",
+          "sugar",
+          "cheese"
+        ],
+        "rationale": "honey and sugar are strongly associated with sweetness; cheese has some sweet varieties but weaker connection",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.7,
+          "sugar": 0.9
+        },
+        "ranked_guesses": [
+          "sugar",
+          "honey"
+        ],
+        "rationale": "Clue 'sweet' strongly suggests sugar and honey as primary targets; both are commonly associated with sweetness and likely red words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "physician",
+        "count": 1,
+        "rationale": "Points to the doctor-related blue word."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.04,
+          "doctor": 0.78,
+          "memory": 0.0,
+          "museum": 0.0,
+          "teacher": 0.18
+        },
+        "ranked_guesses": [
+          "doctor",
+          "teacher",
+          "baker",
+          "museum",
+          "memory"
+        ],
+        "rationale": "Physician most directly matches doctor; secondary overlap with teacher (medical roles/people) but weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.86,
+          "family": 0.03,
+          "memory": 0.01,
+          "museum": 0.02,
+          "teacher": 0.12
+        },
+        "ranked_guesses": [
+          "doctor",
+          "teacher",
+          "family",
+          "museum",
+          "memory"
+        ],
+        "rationale": "\u201cphysician\u201d most directly maps to \u201cdoctor\u201d; next closest are related professions/people like \u201cteacher,\u201d with weaker associations for remaining options.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.78,
+          "family": 0.05,
+          "memory": 0.02,
+          "museum": 0.02,
+          "novel": 0.01,
+          "teacher": 0.12
+        },
+        "ranked_guesses": [
+          "doctor",
+          "teacher",
+          "family",
+          "memory",
+          "museum",
+          "novel"
+        ],
+        "rationale": "Clue 'physician' most directly maps to 'doctor'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "profession",
+        "count": 2,
+        "rationale": "Connects to 'baker' and 'teacher', both red team words, without overlapping with board words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.7,
+          "hunter": 0.6,
+          "teacher": 0.8
+        },
+        "ranked_guesses": [
+          "teacher",
+          "baker",
+          "hunter"
+        ],
+        "rationale": "Teacher and baker are clear professions; hunter is less common but plausible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.7,
+          "hunter": 0.5,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "baker",
+          "hunter"
+        ],
+        "rationale": "The clue 'profession' with count 2 strongly suggests 'teacher' and 'baker' as clear professions. 'Hunter' is a possible third profession, but lower confidence. Other profession-like words (agent, doctor) are already revealed or belong to blue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.75,
+          "hunter": 0.65,
+          "teacher": 0.85
+        },
+        "ranked_guesses": [
+          "teacher",
+          "baker",
+          "hunter"
+        ],
+        "rationale": "Clue 'profession' with count 2 strongly suggests teacher and baker as clear professions; hunter is also a profession but slightly less certain. Other profession-like words (agent, doctor) are already revealed or belong to opponent.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cartoon",
+        "count": 1,
+        "rationale": "A one-word lead that may connect to blue theme items like a character/portrayal; aiming for a safe remaining blue guess."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.42,
+          "cloud": 0.32,
+          "family": 0.22,
+          "lantern": 0.13,
+          "memory": 0.16,
+          "museum": 0.18,
+          "tiger": 0.12
+        },
+        "ranked_guesses": [
+          "balloon",
+          "cloud",
+          "family",
+          "museum",
+          "memory",
+          "lantern",
+          "tiger",
+          "temple",
+          "atlas",
+          "voyage",
+          "castle",
+          "flower",
+          "violin",
+          "hunter",
+          "novel",
+          "silver",
+          "battery",
+          "cheese",
+          "cheer",
+          "agent"
+        ],
+        "rationale": "\u201cCartoon\u201d suggests animation/whimsy: balloon or cloud are most visually cartoon-like; family/museum/memory are secondary related ideas.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.28,
+          "balloon": 0.05,
+          "cloud": 0.1,
+          "family": 0.15,
+          "museum": 0.42
+        },
+        "ranked_guesses": [
+          "museum",
+          "atlas",
+          "family",
+          "cloud",
+          "balloon"
+        ],
+        "rationale": "Cartoon suggests animated characters/locations; museum is commonly used for cartoons/animated settings, with atlas/family/cloud/balloon as secondary imaginative matches.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.05,
+          "cloud": 0.2,
+          "family": 0.46,
+          "memory": 0.15,
+          "museum": 0.12,
+          "novel": 0.07
+        },
+        "ranked_guesses": [
+          "family",
+          "cloud",
+          "memory",
+          "museum",
+          "novel",
+          "balloon"
+        ],
+        "rationale": "Clue 'cartoon' most strongly matches characters/families and related media (family, memory/novel, museum), with softer links to cloud/balloon for cartoon-like imagery.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 2,
+        "rationale": "Connects to 'lantern' (source of light) and 'cloud' (associated with sunlight/light effects). Avoids assassin 'violin' and blue words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.7,
+          "lantern": 0.9,
+          "silver": 0.5
+        },
+        "ranked_guesses": [
+          "lantern",
+          "cloud",
+          "silver"
+        ],
+        "rationale": "Clue 'light' with count 2 strongly suggests 'lantern' (light source) and 'cloud' (light can pass through, associated with light). 'Silver' is a weaker association (shiny/reflective). Other words like 'balloon', 'flower', 'tiger' have minimal connection to light.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.7,
+          "lantern": 0.9
+        },
+        "ranked_guesses": [
+          "lantern",
+          "battery"
+        ],
+        "rationale": "Lantern is strongly associated with light. Battery could power a light source. Two targets for clue 'light'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.7,
+          "cloud": 0.6,
+          "lantern": 0.9
+        },
+        "ranked_guesses": [
+          "lantern",
+          "battery",
+          "cloud"
+        ],
+        "rationale": "lantern emits light, battery powers light sources, cloud reflects light; all unrevealed and plausible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "archive",
+        "count": 1,
+        "rationale": "Points to a blue teammate word related to storing/records (memory)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "memory": 0.78,
+          "museum": 0.62
+        },
+        "ranked_guesses": [
+          "memory",
+          "museum"
+        ],
+        "rationale": "An archive is strongly linked to records/storage like memory; also fits museum as a place for archives.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.03,
+          "castle": 0.01,
+          "memory": 0.62,
+          "museum": 0.24,
+          "novel": 0.1,
+          "temple": 0.01
+        },
+        "ranked_guesses": [
+          "memory",
+          "museum",
+          "novel",
+          "atlas",
+          "temple",
+          "castle"
+        ],
+        "rationale": "\u201cArchive\u201d most strongly matches storing records/old items: MEMORY and MUSEUM fit best among remaining words.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.05,
+          "memory": 0.2,
+          "museum": 0.62,
+          "novel": 0.08,
+          "temple": 0.05
+        },
+        "ranked_guesses": [
+          "museum",
+          "memory",
+          "novel",
+          "atlas",
+          "temple"
+        ],
+        "rationale": "Archive fits best with museum; next closest are memory/records (memory, novel), then atlas/temple as places for collections.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 2,
+        "rationale": "Connects to 'cloud' and 'voyage' (sky voyage/clouds in sky), both red words, avoiding assassin 'violin' and blue words."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon"
+        ],
+        "rationale": "Clue 'sky' with count 2 strongly suggests 'cloud' as primary, and 'balloon' as secondary due to association with flying/sky.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon"
+        ],
+        "rationale": "sky relates strongly to cloud (weather/atmosphere) and balloon (flies in sky), both unrevealed and likely red based on clue count.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon"
+        ],
+        "rationale": "sky strongly relates to cloud; balloon can fly in sky as secondary guess.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "memory",
+        "count": 1,
+        "rationale": "Most directly points to the blue word on the board."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 1,
+        "rationale": "Connects to 'castle' which is a red word, avoiding direct substring matches."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.9
+        },
+        "ranked_guesses": [
+          "castle"
+        ],
+        "rationale": "'royal' strongly relates to 'castle' as royal residences, and it's the only unrevealed word with clear royal association.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.9
+        },
+        "ranked_guesses": [
+          "castle"
+        ],
+        "rationale": "The clue 'royal' with count 1 strongly points to 'castle' as the most direct association. No other unrevealed words have a clear royal connection, and guessing incorrectly risks hitting an opponent or assassin.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.9
+        },
+        "ranked_guesses": [
+          "castle"
+        ],
+        "rationale": "Clue 'royal' with count 1 strongly suggests 'castle' as the most directly associated word (royal castle). No other unrevealed words have a strong royal connection.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 1,
+        "rationale": "Points toward the remaining blue word tied to sound/performance."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.02,
+          "memory": 0.04,
+          "museum": 0.03,
+          "musicology": 0.05,
+          "novel": 0.03,
+          "violin": 0.78
+        },
+        "ranked_guesses": [
+          "violin",
+          "musicology",
+          "memory",
+          "museum",
+          "novel",
+          "atlas"
+        ],
+        "rationale": "Clue \u201cmusic\u201d most directly matches \u201cviolin\u201d on the board; remaining guesses are unrelated lower-confidence options.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.28,
+          "violin": 0.82
+        },
+        "ranked_guesses": [
+          "violin",
+          "museum"
+        ],
+        "rationale": "Clue 'music' most directly fits 'violin'; 'museum' is a weaker association (music archives/exhibits).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.02,
+          "memory": 0.15,
+          "museum": 0.06,
+          "novel": 0.02,
+          "temple": 0.03,
+          "violin": 0.7
+        },
+        "ranked_guesses": [
+          "violin",
+          "memory",
+          "museum",
+          "balloon",
+          "novel",
+          "temple"
+        ],
+        "rationale": "Clue 'music' most strongly matches 'violin' on the board; other weaker associations: memory/museum/novel.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "season"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "map"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sweet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "sugar"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "honey"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "physician"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "profession"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "baker"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "cartoon"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lantern"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "battery"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "archive"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "memory",
+        "count": 1,
+        "rationale": "Most directly points to the blue word on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "memory",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "castle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "violin"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 45,
+    "public_event_count": 32,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-7way-20260608-021458-m05",
+    "team_blue": "GPT-5.4-nano",
+    "team_red": "DeepSeek V3.1",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "season"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "spring": 0.7
+            },
+            "ranked_guesses": [
+              "autumn",
+              "spring"
+            ],
+            "rationale": "Clue 'season' with count 2 suggests words related to seasons. 'Autumn' is a direct season match. 'Spring' is another season, though not on board, so considering similar concepts.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "spring": 0.7,
+              "summer": 0.6
+            },
+            "ranked_guesses": [
+              "autumn",
+              "spring",
+              "summer"
+            ],
+            "rationale": "Clue 'season' with count 2 strongly suggests 'autumn' (on board) as primary match, with potential secondary seasonal words like 'spring' or 'summer' (not on board) as alternatives.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "flower": 0.7,
+              "honey": 0.6,
+              "silver": 0.4,
+              "sugar": 0.5
+            },
+            "ranked_guesses": [
+              "autumn",
+              "flower",
+              "honey",
+              "sugar",
+              "silver"
+            ],
+            "rationale": "Clue 'season' with count 2 strongly suggests 'autumn' as a season. 'flower' could relate to spring/summer seasons. 'honey' and 'sugar' have seasonal harvest connections. 'silver' is a weaker seasonal association (e.g., winter silver frost).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "season",
+          "count": 2,
+          "rationale": "Connects to 'autumn' and 'honey' (often associated with harvest seasons), both red words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "map"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.78,
+              "castle": 0.18,
+              "map": 0.62,
+              "museum": 0.12,
+              "voyage": 0.35
+            },
+            "ranked_guesses": [
+              "atlas",
+              "map",
+              "voyage",
+              "castle",
+              "museum"
+            ],
+            "rationale": "Clue 'map' most directly fits 'atlas' and possibly 'map' itself; related ideas include 'voyage' and places like 'castle'/'museum'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.62,
+              "memory": 0.08,
+              "museum": 0.01,
+              "temple": 0.02,
+              "voyage": 0.27
+            },
+            "ranked_guesses": [
+              "atlas",
+              "voyage",
+              "memory",
+              "temple",
+              "museum"
+            ],
+            "rationale": "\u201cMap\u201d most directly fits atlas; next best is voyage (navigation). Other weaker thematic links: memory, then temple/museum.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.7,
+              "castle": 0.05,
+              "museum": 0.08,
+              "temple": 0.06,
+              "voyage": 0.25
+            },
+            "ranked_guesses": [
+              "atlas",
+              "voyage",
+              "museum",
+              "temple",
+              "castle"
+            ],
+            "rationale": "\u201cMap\u201d most directly points to atlas; next are navigation/travel-themed guesses like voyage.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "map",
+          "count": 2,
+          "rationale": "Points to voyage and temple for blue words."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sweet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.7,
+              "honey": 0.9,
+              "sugar": 0.85
+            },
+            "ranked_guesses": [
+              "honey",
+              "sugar",
+              "cheese"
+            ],
+            "rationale": "'sweet' strongly relates to honey (sweet substance), sugar (sweetener), and cheese (can be sweet in context). These are the best matches among unrevealed words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.6,
+              "honey": 0.9,
+              "sugar": 0.8
+            },
+            "ranked_guesses": [
+              "honey",
+              "sugar",
+              "cheese"
+            ],
+            "rationale": "honey and sugar are strongly associated with sweetness; cheese has some sweet varieties but weaker connection",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.7,
+              "sugar": 0.9
+            },
+            "ranked_guesses": [
+              "sugar",
+              "honey"
+            ],
+            "rationale": "Clue 'sweet' strongly suggests sugar and honey as primary targets; both are commonly associated with sweetness and likely red words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "sugar"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "honey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sweet",
+          "count": 2,
+          "rationale": "Connects to 'honey' and 'sugar', both red words, without directly matching any board words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "physician"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.04,
+              "doctor": 0.78,
+              "memory": 0.0,
+              "museum": 0.0,
+              "teacher": 0.18
+            },
+            "ranked_guesses": [
+              "doctor",
+              "teacher",
+              "baker",
+              "museum",
+              "memory"
+            ],
+            "rationale": "Physician most directly matches doctor; secondary overlap with teacher (medical roles/people) but weaker.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.86,
+              "family": 0.03,
+              "memory": 0.01,
+              "museum": 0.02,
+              "teacher": 0.12
+            },
+            "ranked_guesses": [
+              "doctor",
+              "teacher",
+              "family",
+              "museum",
+              "memory"
+            ],
+            "rationale": "\u201cphysician\u201d most directly maps to \u201cdoctor\u201d; next closest are related professions/people like \u201cteacher,\u201d with weaker associations for remaining options.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.78,
+              "family": 0.05,
+              "memory": 0.02,
+              "museum": 0.02,
+              "novel": 0.01,
+              "teacher": 0.12
+            },
+            "ranked_guesses": [
+              "doctor",
+              "teacher",
+              "family",
+              "memory",
+              "museum",
+              "novel"
+            ],
+            "rationale": "Clue 'physician' most directly maps to 'doctor'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "physician",
+          "count": 1,
+          "rationale": "Points to the doctor-related blue word."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "profession"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.7,
+              "hunter": 0.6,
+              "teacher": 0.8
+            },
+            "ranked_guesses": [
+              "teacher",
+              "baker",
+              "hunter"
+            ],
+            "rationale": "Teacher and baker are clear professions; hunter is less common but plausible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.7,
+              "hunter": 0.5,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "baker",
+              "hunter"
+            ],
+            "rationale": "The clue 'profession' with count 2 strongly suggests 'teacher' and 'baker' as clear professions. 'Hunter' is a possible third profession, but lower confidence. Other profession-like words (agent, doctor) are already revealed or belong to blue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.75,
+              "hunter": 0.65,
+              "teacher": 0.85
+            },
+            "ranked_guesses": [
+              "teacher",
+              "baker",
+              "hunter"
+            ],
+            "rationale": "Clue 'profession' with count 2 strongly suggests teacher and baker as clear professions; hunter is also a profession but slightly less certain. Other profession-like words (agent, doctor) are already revealed or belong to opponent.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "baker"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "profession",
+          "count": 2,
+          "rationale": "Connects to 'baker' and 'teacher', both red team words, without overlapping with board words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "cartoon"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.42,
+              "cloud": 0.32,
+              "family": 0.22,
+              "lantern": 0.13,
+              "memory": 0.16,
+              "museum": 0.18,
+              "tiger": 0.12
+            },
+            "ranked_guesses": [
+              "balloon",
+              "cloud",
+              "family",
+              "museum",
+              "memory",
+              "lantern",
+              "tiger",
+              "temple",
+              "atlas",
+              "voyage",
+              "castle",
+              "flower",
+              "violin",
+              "hunter",
+              "novel",
+              "silver",
+              "battery",
+              "cheese",
+              "cheer",
+              "agent"
+            ],
+            "rationale": "\u201cCartoon\u201d suggests animation/whimsy: balloon or cloud are most visually cartoon-like; family/museum/memory are secondary related ideas.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.28,
+              "balloon": 0.05,
+              "cloud": 0.1,
+              "family": 0.15,
+              "museum": 0.42
+            },
+            "ranked_guesses": [
+              "museum",
+              "atlas",
+              "family",
+              "cloud",
+              "balloon"
+            ],
+            "rationale": "Cartoon suggests animated characters/locations; museum is commonly used for cartoons/animated settings, with atlas/family/cloud/balloon as secondary imaginative matches.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.05,
+              "cloud": 0.2,
+              "family": 0.46,
+              "memory": 0.15,
+              "museum": 0.12,
+              "novel": 0.07
+            },
+            "ranked_guesses": [
+              "family",
+              "cloud",
+              "memory",
+              "museum",
+              "novel",
+              "balloon"
+            ],
+            "rationale": "Clue 'cartoon' most strongly matches characters/families and related media (family, memory/novel, museum), with softer links to cloud/balloon for cartoon-like imagery.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "cartoon",
+          "count": 1,
+          "rationale": "A one-word lead that may connect to blue theme items like a character/portrayal; aiming for a safe remaining blue guess."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.7,
+              "lantern": 0.9,
+              "silver": 0.5
+            },
+            "ranked_guesses": [
+              "lantern",
+              "cloud",
+              "silver"
+            ],
+            "rationale": "Clue 'light' with count 2 strongly suggests 'lantern' (light source) and 'cloud' (light can pass through, associated with light). 'Silver' is a weaker association (shiny/reflective). Other words like 'balloon', 'flower', 'tiger' have minimal connection to light.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.7,
+              "lantern": 0.9
+            },
+            "ranked_guesses": [
+              "lantern",
+              "battery"
+            ],
+            "rationale": "Lantern is strongly associated with light. Battery could power a light source. Two targets for clue 'light'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.7,
+              "cloud": 0.6,
+              "lantern": 0.9
+            },
+            "ranked_guesses": [
+              "lantern",
+              "battery",
+              "cloud"
+            ],
+            "rationale": "lantern emits light, battery powers light sources, cloud reflects light; all unrevealed and plausible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lantern"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "battery"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 2,
+          "rationale": "Connects to 'lantern' (source of light) and 'cloud' (associated with sunlight/light effects). Avoids assassin 'violin' and blue words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "archive"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "memory": 0.78,
+              "museum": 0.62
+            },
+            "ranked_guesses": [
+              "memory",
+              "museum"
+            ],
+            "rationale": "An archive is strongly linked to records/storage like memory; also fits museum as a place for archives.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.03,
+              "castle": 0.01,
+              "memory": 0.62,
+              "museum": 0.24,
+              "novel": 0.1,
+              "temple": 0.01
+            },
+            "ranked_guesses": [
+              "memory",
+              "museum",
+              "novel",
+              "atlas",
+              "temple",
+              "castle"
+            ],
+            "rationale": "\u201cArchive\u201d most strongly matches storing records/old items: MEMORY and MUSEUM fit best among remaining words.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.05,
+              "memory": 0.2,
+              "museum": 0.62,
+              "novel": 0.08,
+              "temple": 0.05
+            },
+            "ranked_guesses": [
+              "museum",
+              "memory",
+              "novel",
+              "atlas",
+              "temple"
+            ],
+            "rationale": "Archive fits best with museum; next closest are memory/records (memory, novel), then atlas/temple as places for collections.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "archive",
+          "count": 1,
+          "rationale": "Points to a blue teammate word related to storing/records (memory)."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon"
+            ],
+            "rationale": "Clue 'sky' with count 2 strongly suggests 'cloud' as primary, and 'balloon' as secondary due to association with flying/sky.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon"
+            ],
+            "rationale": "sky relates strongly to cloud (weather/atmosphere) and balloon (flies in sky), both unrevealed and likely red based on clue count.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon"
+            ],
+            "rationale": "sky strongly relates to cloud; balloon can fly in sky as secondary guess.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 2,
+          "rationale": "Connects to 'cloud' and 'voyage' (sky voyage/clouds in sky), both red words, avoiding assassin 'violin' and blue words."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "royal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "castle"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "music"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "violin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "memory",
+          "count": 1,
+          "rationale": "Most directly points to the blue word on the board."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

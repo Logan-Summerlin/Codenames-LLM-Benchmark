@@ -1,0 +1,2893 @@
+{
+  "board": {
+    "identities": {
+      "bridge": "neutral",
+      "court": "red",
+      "day": "blue",
+      "dragon": "red",
+      "drill": "blue",
+      "france": "red",
+      "glove": "blue",
+      "ground": "neutral",
+      "jam": "neutral",
+      "lap": "neutral",
+      "life": "red",
+      "mammoth": "red",
+      "mass": "blue",
+      "match": "blue",
+      "nail": "neutral",
+      "opera": "red",
+      "paste": "assassin",
+      "pipe": "red",
+      "pumpkin": "red",
+      "root": "neutral",
+      "tap": "red",
+      "teacher": "blue",
+      "telescope": "blue",
+      "tube": "blue",
+      "wall": "neutral"
+    },
+    "revealed": [
+      "court",
+      "day",
+      "dragon",
+      "france",
+      "jam",
+      "life",
+      "mammoth",
+      "mass",
+      "match",
+      "nail",
+      "opera",
+      "pipe",
+      "pumpkin",
+      "root",
+      "tap",
+      "teacher",
+      "telescope",
+      "tube",
+      "wall"
+    ],
+    "words": {
+      "bridge": "neutral",
+      "court": "red",
+      "day": "blue",
+      "dragon": "red",
+      "drill": "blue",
+      "france": "red",
+      "glove": "blue",
+      "ground": "neutral",
+      "jam": "neutral",
+      "lap": "neutral",
+      "life": "red",
+      "mammoth": "red",
+      "mass": "blue",
+      "match": "blue",
+      "nail": "neutral",
+      "opera": "red",
+      "paste": "assassin",
+      "pipe": "red",
+      "pumpkin": "red",
+      "root": "neutral",
+      "tap": "red",
+      "teacher": "blue",
+      "telescope": "blue",
+      "tube": "blue",
+      "wall": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "myth",
+        "count": 2,
+        "rationale": "Connects 'dragon' (mythical creature) and 'opera' (often features mythological themes)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "mammoth": 0.85,
+          "opera": 0.7
+        },
+        "ranked_guesses": [
+          "dragon",
+          "mammoth",
+          "opera"
+        ],
+        "rationale": "'dragon' and 'mammoth' are strongly associated with myths/legends, while 'opera' may reference mythological operas. Other words have weaker or no clear myth connection.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "mammoth": 0.7
+        },
+        "ranked_guesses": [
+          "dragon",
+          "mammoth"
+        ],
+        "rationale": "'myth' strongly suggests mythical creatures; 'dragon' is a classic mythical creature, and 'mammoth' appears in folklore",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "dragon": 0.9,
+          "mammoth": 0.85,
+          "opera": 0.1
+        },
+        "ranked_guesses": [
+          "dragon",
+          "mammoth",
+          "bridge",
+          "opera"
+        ],
+        "rationale": "myth most directly connects to mythical creatures like dragon and mammoth; bridge has weaker mythological ties",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "school",
+        "count": 3,
+        "rationale": "links 'teacher', 'mass' (as in school *mass* gatherings or lectures), and 'drill' (e.g., fire/safety *drills* in schools). Avoids assassin ('paste') and neutrals while targeting 3 blue words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "court": 0.65,
+          "drill": 0.6,
+          "ground": 0.7,
+          "lap": 0.55,
+          "mass": 0.75,
+          "match": 0.5,
+          "root": 0.45,
+          "teacher": 0.95,
+          "tube": 0.4,
+          "wall": 0.35
+        },
+        "ranked_guesses": [
+          "teacher",
+          "mass",
+          "ground",
+          "court",
+          "drill",
+          "lap",
+          "match",
+          "root",
+          "tube",
+          "wall"
+        ],
+        "rationale": "\"teacher\" is the most direct association with \"school\". \"Mass\" (school mass), \"ground\" (school grounds), and \"court\" (schoolyard/basketball) are secondary. Others are weaker but plausible (e.g., \"drill\" for fire drills, \"lap\" for track). Prioritizing high-confidence links first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "court": 0.65,
+          "drill": 0.6,
+          "ground": 0.7,
+          "mass": 0.75,
+          "match": 0.55,
+          "pipe": 0.45,
+          "tap": 0.5,
+          "teacher": 0.95,
+          "tube": 0.4
+        },
+        "ranked_guesses": [
+          "teacher",
+          "mass",
+          "ground",
+          "court",
+          "drill",
+          "match",
+          "tap",
+          "pipe",
+          "tube"
+        ],
+        "rationale": "\"teacher\" is a direct and high-confidence association with \"school\". \"Mass\" (as in school mass), \"ground\" (playground/schoolyard), and \"court\" (basketball/school courts) are plausible secondary guesses. Lower-confidence words like \"drill\" (fire drill) and \"match\" (school match) are included but riskier.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "court": 0.55,
+          "drill": 0.45,
+          "ground": 0.6,
+          "lap": 0.4,
+          "mass": 0.65,
+          "teacher": 0.95
+        },
+        "ranked_guesses": [
+          "teacher",
+          "mass",
+          "ground",
+          "court",
+          "drill",
+          "lap"
+        ],
+        "rationale": "\"teacher\" is a direct and high-confidence association with \"school\". \"mass\" (as in school *mass* events), \"ground\" (play*ground*), and \"court\" (school *court*yard or basketball *court*) are secondary. Avoiding low-relevance words like \"pumpkin\" or \"opera\".",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "plumbing",
+        "count": 2,
+        "rationale": "Connects 'pipe' and 'tap' which are both red team words that remain hidden. The word 'plumbing' is strongly associated with both pipes and taps, making it a clear hint without risking hitting blue, neutral, or assassin words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "drill": 0.6,
+          "glove": 0.4,
+          "pipe": 0.98,
+          "root": 0.5,
+          "tap": 0.95
+        },
+        "ranked_guesses": [
+          "pipe",
+          "tap",
+          "drill",
+          "root",
+          "glove"
+        ],
+        "rationale": "The clue 'plumbing' with count 2 strongly indicates 'pipe' and 'tap' as the most direct matches. These are classic plumbing terms and both remain unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.9,
+          "tap": 0.85,
+          "tube": 0.7
+        },
+        "ranked_guesses": [
+          "pipe",
+          "tap",
+          "tube"
+        ],
+        "rationale": "'pipe', 'tap', and 'tube' are the strongest direct associations to the clue 'plumbing' on the board. 'drill' is a weaker connection.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paste": 0.6,
+          "pipe": 0.95,
+          "root": 0.5,
+          "tap": 0.9,
+          "tube": 0.7
+        },
+        "ranked_guesses": [
+          "pipe",
+          "tap",
+          "tube",
+          "paste",
+          "root"
+        ],
+        "rationale": "'Plumbing' strongly suggests 'pipe' and 'tap' as direct matches. 'Tube' and 'paste' are plausible secondary connections, while 'root' is a weaker stretch.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "science",
+        "count": 2,
+        "rationale": "links to 'drill' (lab equipment) and 'telescope' (astronomy tool) for blue team."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "stage",
+        "count": 4,
+        "rationale": "Connects to opera (opera stage), court (courtroom stage), life (stage of life), and pumpkin (growth stages)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "drill": 0.4,
+          "life": 0.7,
+          "match": 0.5,
+          "opera": 0.85
+        },
+        "ranked_guesses": [
+          "opera",
+          "life",
+          "match",
+          "drill"
+        ],
+        "rationale": "'stage' likely refers to theater stage (opera) and stages of life/match/drill. 'opera' is the strongest fit, followed by 'life' as a stage of life.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "court": 0.5,
+          "life": 0.6,
+          "match": 0.6,
+          "opera": 0.9
+        },
+        "ranked_guesses": [
+          "opera",
+          "life",
+          "match",
+          "court"
+        ],
+        "rationale": "Clue 'stage' strongly connects to 'opera' (opera stage). Other plausible connections include life stages, match stages, and court stages.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "opera": 0.9
+        },
+        "ranked_guesses": [
+          "opera"
+        ],
+        "rationale": "'opera' is strongly associated with a theater stage, which directly relates to the clue 'stage'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fire",
+        "count": 2,
+        "rationale": "connects 'match' (as in matchstick) and 'drill' (fire drill), both blue words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.03,
+          "court": 0.04,
+          "day": 0.02,
+          "drill": 0.3,
+          "france": 0.01,
+          "glove": 0.08,
+          "ground": 0.05,
+          "jam": 0.07,
+          "lap": 0.1,
+          "life": 0.02,
+          "match": 0.95,
+          "nail": 0.25,
+          "paste": 0.06,
+          "pumpkin": 0.6,
+          "root": 0.2,
+          "telescope": 0.01,
+          "wall": 0.15
+        },
+        "ranked_guesses": [
+          "match",
+          "pumpkin",
+          "drill",
+          "nail",
+          "root",
+          "wall",
+          "lap",
+          "glove",
+          "jam",
+          "paste",
+          "ground",
+          "court",
+          "bridge",
+          "day",
+          "life",
+          "france",
+          "telescope"
+        ],
+        "rationale": "\"match\" is the most direct and literal association with \"fire\" (e.g., matchstick). \"Pumpkin\" follows due to cultural links (e.g., jack-o'-lanterns, fire imagery in Halloween). Other words have weaker or tangential connections (e.g., \"drill\" for friction heat, \"nail\" for forging). Low-confidence words are included for completeness but are unlikely.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "drill": 0.75,
+          "match": 0.95,
+          "pumpkin": 0.65,
+          "root": 0.35,
+          "wall": 0.45
+        },
+        "ranked_guesses": [
+          "match",
+          "drill",
+          "pumpkin",
+          "wall",
+          "root"
+        ],
+        "rationale": "\"match\" is the strongest association with \"fire\" (e.g., matchstick, lighting a fire). \"Drill\" could relate to fire drills, though weaker. Remaining words have tangential or thematic links (e.g., \"pumpkin\" for jack-o'-lanterns, \"wall\" for firewalls). Low-confidence words are neutral or unrelated.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "drill": 0.75,
+          "jam": 0.35,
+          "match": 0.95,
+          "nail": 0.45,
+          "pumpkin": 0.65,
+          "root": 0.55
+        },
+        "ranked_guesses": [
+          "match",
+          "drill",
+          "pumpkin",
+          "root",
+          "nail",
+          "jam"
+        ],
+        "rationale": "\"match\" is the most direct and literal association with \"fire\" (e.g., matchstick). \"Drill\" could relate to friction/fire-starting. Other words like \"pumpkin\" (e.g., jack-o'-lantern with candle) or \"root\" (e.g., 'root of fire' metaphorically) are weaker but plausible. Low-confidence words are unlikely or unrelated.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 3,
+        "rationale": "Connects to court (royal court), france (royal family of France), and life (royal life) without risking blue or neutral words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "court": 0.9,
+          "day": 0.25,
+          "france": 0.2
+        },
+        "ranked_guesses": [
+          "court",
+          "day",
+          "france"
+        ],
+        "rationale": "court is the strongest direct connection to 'royal' (royal court). day and france have weaker associative links (coronation day, royal house of France) but are the only plausible remaining options.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "court": 0.95,
+          "france": 0.65
+        },
+        "ranked_guesses": [
+          "court",
+          "bridge",
+          "france"
+        ],
+        "rationale": "'royal' strongly suggests 'royal court' (court). 'royal bridge' (bridge) and 'royal family of France' (france) are plausible secondary connections matching the clue count of 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "court": 0.9,
+          "france": 0.7,
+          "pumpkin": 0.3
+        },
+        "ranked_guesses": [
+          "court",
+          "france",
+          "pumpkin"
+        ],
+        "rationale": "royal clue most strongly fits 'court' (royal court), 'france' (French royalty) has moderate connection, 'pumpkin' weakly ties to royal fairy tales",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "finger",
+        "count": 2,
+        "rationale": "targets 'glove' and 'nail'; avoids assassin ('paste') and neutrals by focusing on hand-related items."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.4,
+          "day": 0.35,
+          "drill": 0.55,
+          "france": 0.3,
+          "glove": 0.92,
+          "ground": 0.25,
+          "jam": 0.2,
+          "lap": 0.5,
+          "life": 0.15,
+          "nail": 0.95,
+          "paste": 0.45,
+          "pumpkin": 0.65,
+          "ring": 0.88,
+          "root": 0.75,
+          "telescope": 0.1,
+          "wall": 0.6
+        },
+        "ranked_guesses": [
+          "nail",
+          "glove",
+          "ring",
+          "root",
+          "pumpkin",
+          "wall",
+          "drill",
+          "lap",
+          "paste",
+          "bridge",
+          "day",
+          "france",
+          "ground",
+          "jam",
+          "life",
+          "telescope"
+        ],
+        "rationale": "\"nail\" is the most direct association with \"finger\" (e.g., fingernail). \"Glove\" fits as it covers fingers. Other words like \"ring\" (worn on fingers) and \"root\" (fingers as roots) are secondary. Lower-ranked words have weaker or tangential connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.35,
+          "day": 0.3,
+          "drill": 0.62,
+          "france": 0.25,
+          "glove": 0.92,
+          "ground": 0.2,
+          "jam": 0.45,
+          "lap": 0.5,
+          "life": 0.15,
+          "nail": 0.95,
+          "paste": 0.4,
+          "pumpkin": 0.65,
+          "ring": 0.88,
+          "root": 0.75,
+          "telescope": 0.1,
+          "wall": 0.55
+        },
+        "ranked_guesses": [
+          "nail",
+          "glove",
+          "ring",
+          "root",
+          "pumpkin",
+          "drill",
+          "wall",
+          "lap",
+          "jam",
+          "paste",
+          "bridge",
+          "day",
+          "france",
+          "ground",
+          "life",
+          "telescope"
+        ],
+        "rationale": "\"nail\" is the most direct association with \"finger\" (e.g., fingernail). \"glove\" fits as it covers fingers. Other words like \"ring\" (worn on fingers) and \"root\" (finger-like roots) are secondary. Lower-ranked words have weaker or tangential connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "autumn",
+        "count": 3,
+        "rationale": "Connects to pumpkin (autumn pumpkin), france (autumn in France), and life (autumn life)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jam": 0.7,
+          "pumpkin": 0.95,
+          "root": 0.75
+        },
+        "ranked_guesses": [
+          "pumpkin",
+          "root",
+          "jam"
+        ],
+        "rationale": "Autumn strongly suggests pumpkin. Root and jam are plausible harvest/seasonal connections. Count of 3 matches these three words remaining on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jam": 0.7,
+          "pumpkin": 0.95,
+          "root": 0.6
+        },
+        "ranked_guesses": [
+          "pumpkin",
+          "jam",
+          "root"
+        ],
+        "rationale": "'pumpkin' is the strongest autumn association. 'jam' relates to autumn harvest preserves. 'root' connects to root vegetables harvested in autumn. All three are still hidden and plausible red team words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jam": 0.8,
+          "pumpkin": 0.95,
+          "root": 0.85
+        },
+        "ranked_guesses": [
+          "pumpkin",
+          "root",
+          "jam"
+        ],
+        "rationale": "Autumn theme strongly suggests pumpkin. Root and jam are common autumn associations (harvest, fruits). Other words like ground or day are weaker fits.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "links to unguessed blue words 'drill' (as in drilling for exploration) and 'telescope' (used to explore space). Avoids assassin 'paste' and neutral/red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "root": 0.75,
+          "space": 0.0,
+          "telescope": 0.92
+        },
+        "ranked_guesses": [
+          "telescope",
+          "root",
+          "space"
+        ],
+        "rationale": "\"explore\" strongly connects to **telescope** (exploring space/sky) and **root** (exploring origins/underground). High confidence in these as the two targets. Avoid neutral/opponent words like \"glove\" or \"wall\".",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 2,
+        "rationale": "Connects to 'life' (light of life) and 'france' (Paris as City of Light)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "day": 0.9,
+          "telescope": 0.8
+        },
+        "ranked_guesses": [
+          "day",
+          "telescope"
+        ],
+        "rationale": "day directly relates to daylight (a form of light) and telescope gathers light, perfectly matching the clue 'light' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "day": 0.9,
+          "wall": 0.8
+        },
+        "ranked_guesses": [
+          "day",
+          "wall"
+        ],
+        "rationale": "Light strongly associates with 'day' (daylight) and 'wall' (wall light). Both are plausible 2-word connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "day": 0.95,
+          "telescope": 0.9
+        },
+        "ranked_guesses": [
+          "day",
+          "telescope"
+        ],
+        "rationale": "Light directly relates to 'day' and 'telescope' (instrument for observing light). Both are strong fits for the clue 'light' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "hand",
+        "count": 2,
+        "rationale": "links to 'glove' and 'drill' (as in hand drill), both remaining blue words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "history",
+        "count": 2,
+        "rationale": "Connects to both remaining Red words: 'life' (history of life) and 'france' (history of France)."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.9,
+          "ground": 0.6
+        },
+        "ranked_guesses": [
+          "france",
+          "ground"
+        ],
+        "rationale": "france is strongly tied to history; ground could relate to historical contexts like battlefields or 'history grounds'",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.9,
+          "wall": 0.9
+        },
+        "ranked_guesses": [
+          "france",
+          "wall"
+        ],
+        "rationale": "'history' clue with count 2 strongly suggests historical terms. 'france' relates to French history and 'wall' relates to historical walls like Berlin Wall/Great Wall of China.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.9,
+          "wall": 0.85
+        },
+        "ranked_guesses": [
+          "france",
+          "wall"
+        ],
+        "rationale": "'history' clue with count 2 strongly matches historical terms, with 'france' (French history) and 'wall' (e.g., Berlin Wall, Great Wall) being the most likely targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "links 'telescope' (observing space) and 'glove' (astronaut glove)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "drill": 0.35,
+          "glove": 0.55,
+          "ground": 0.8,
+          "lap": 0.45,
+          "life": 0.4,
+          "paste": 0.5,
+          "root": 0.85,
+          "telescope": 0.95
+        },
+        "ranked_guesses": [
+          "telescope",
+          "root",
+          "ground",
+          "bridge",
+          "glove",
+          "paste",
+          "lap",
+          "life",
+          "drill"
+        ],
+        "rationale": "\"telescope\" is the strongest guess due to its direct association with outer **space**. \"root\" and \"ground\" relate to **space** as in *ground control* or *root directory* (less likely but plausible). Remaining words are ranked by weaker or tangential connections (e.g., \"bridge\" as in *space bridge*, \"glove\" as in *astronaut glove*).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.65,
+          "drill": 0.55,
+          "glove": 0.3,
+          "ground": 0.85,
+          "lap": 0.2,
+          "life": 0.15,
+          "paste": 0.1,
+          "root": 0.75,
+          "telescope": 0.95
+        },
+        "ranked_guesses": [
+          "telescope",
+          "ground",
+          "root",
+          "bridge",
+          "drill",
+          "glove",
+          "lap",
+          "life",
+          "paste"
+        ],
+        "rationale": "\"telescope\" is the strongest guess due to its direct association with outer space (e.g., Hubble Space Telescope). \"ground\" and \"root\" relate to space as in *ground control* or *taking root in space* (e.g., plants in space stations). Remaining words are progressively weaker ties (e.g., \"bridge\" as in *space bridge* in sci-fi, \"drill\" for space mining). Low-confidence words are included only to fulfill the ranked list requirement.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ground": 0.65,
+          "root": 0.75,
+          "telescope": 0.95
+        },
+        "ranked_guesses": [
+          "telescope",
+          "root",
+          "ground"
+        ],
+        "rationale": "\"telescope\" is the strongest space-related word; \"root\" and \"ground\" are secondary associations (e.g., 'ground control' or 'root in zero-gravity experiments'). Clue count=2 suggests multiple targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "alive",
+        "count": 1,
+        "rationale": "Directly points to the remaining red word 'life' without risking other words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "life": 0.95
+        },
+        "ranked_guesses": [
+          "life"
+        ],
+        "rationale": "Direct synonym for 'alive', highest probability match with count 1",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "life": 0.95
+        },
+        "ranked_guesses": [
+          "life"
+        ],
+        "rationale": "life is a direct synonym of 'alive' and remains unrevealed",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "life": 0.9
+        },
+        "ranked_guesses": [
+          "life"
+        ],
+        "rationale": "'alive' strongly suggests 'life' as the most direct match on the board",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "myth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mammoth"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "school"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mass"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "plumbing"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pipe"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tap"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tube"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "stage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "opera"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fire"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "match"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "court"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "finger"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "autumn"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pumpkin"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jam"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "day"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "hand"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "history"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "france"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "wall"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "telescope"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "root"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "alive"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "life"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 60,
+    "public_event_count": 42,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-057-mistralai_mistral_small_2603-vs-mistralai_mistral_medium_3_1",
+    "team_blue": "Mistral Medium 3.1",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "myth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "mammoth": 0.85,
+              "opera": 0.7
+            },
+            "ranked_guesses": [
+              "dragon",
+              "mammoth",
+              "opera"
+            ],
+            "rationale": "'dragon' and 'mammoth' are strongly associated with myths/legends, while 'opera' may reference mythological operas. Other words have weaker or no clear myth connection.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "mammoth": 0.7
+            },
+            "ranked_guesses": [
+              "dragon",
+              "mammoth"
+            ],
+            "rationale": "'myth' strongly suggests mythical creatures; 'dragon' is a classic mythical creature, and 'mammoth' appears in folklore",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "dragon": 0.9,
+              "mammoth": 0.85,
+              "opera": 0.1
+            },
+            "ranked_guesses": [
+              "dragon",
+              "mammoth",
+              "bridge",
+              "opera"
+            ],
+            "rationale": "myth most directly connects to mythical creatures like dragon and mammoth; bridge has weaker mythological ties",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mammoth"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "myth",
+          "count": 2,
+          "rationale": "Connects 'dragon' (mythical creature) and 'opera' (often features mythological themes)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "school"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "court": 0.65,
+              "drill": 0.6,
+              "ground": 0.7,
+              "lap": 0.55,
+              "mass": 0.75,
+              "match": 0.5,
+              "root": 0.45,
+              "teacher": 0.95,
+              "tube": 0.4,
+              "wall": 0.35
+            },
+            "ranked_guesses": [
+              "teacher",
+              "mass",
+              "ground",
+              "court",
+              "drill",
+              "lap",
+              "match",
+              "root",
+              "tube",
+              "wall"
+            ],
+            "rationale": "\"teacher\" is the most direct association with \"school\". \"Mass\" (school mass), \"ground\" (school grounds), and \"court\" (schoolyard/basketball) are secondary. Others are weaker but plausible (e.g., \"drill\" for fire drills, \"lap\" for track). Prioritizing high-confidence links first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "court": 0.65,
+              "drill": 0.6,
+              "ground": 0.7,
+              "mass": 0.75,
+              "match": 0.55,
+              "pipe": 0.45,
+              "tap": 0.5,
+              "teacher": 0.95,
+              "tube": 0.4
+            },
+            "ranked_guesses": [
+              "teacher",
+              "mass",
+              "ground",
+              "court",
+              "drill",
+              "match",
+              "tap",
+              "pipe",
+              "tube"
+            ],
+            "rationale": "\"teacher\" is a direct and high-confidence association with \"school\". \"Mass\" (as in school mass), \"ground\" (playground/schoolyard), and \"court\" (basketball/school courts) are plausible secondary guesses. Lower-confidence words like \"drill\" (fire drill) and \"match\" (school match) are included but riskier.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "court": 0.55,
+              "drill": 0.45,
+              "ground": 0.6,
+              "lap": 0.4,
+              "mass": 0.65,
+              "teacher": 0.95
+            },
+            "ranked_guesses": [
+              "teacher",
+              "mass",
+              "ground",
+              "court",
+              "drill",
+              "lap"
+            ],
+            "rationale": "\"teacher\" is a direct and high-confidence association with \"school\". \"mass\" (as in school *mass* events), \"ground\" (play*ground*), and \"court\" (school *court*yard or basketball *court*) are secondary. Avoiding low-relevance words like \"pumpkin\" or \"opera\".",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "school",
+          "count": 3,
+          "rationale": "links 'teacher', 'mass' (as in school *mass* gatherings or lectures), and 'drill' (e.g., fire/safety *drills* in schools). Avoids assassin ('paste') and neutrals while targeting 3 blue words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "plumbing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "drill": 0.6,
+              "glove": 0.4,
+              "pipe": 0.98,
+              "root": 0.5,
+              "tap": 0.95
+            },
+            "ranked_guesses": [
+              "pipe",
+              "tap",
+              "drill",
+              "root",
+              "glove"
+            ],
+            "rationale": "The clue 'plumbing' with count 2 strongly indicates 'pipe' and 'tap' as the most direct matches. These are classic plumbing terms and both remain unrevealed on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.9,
+              "tap": 0.85,
+              "tube": 0.7
+            },
+            "ranked_guesses": [
+              "pipe",
+              "tap",
+              "tube"
+            ],
+            "rationale": "'pipe', 'tap', and 'tube' are the strongest direct associations to the clue 'plumbing' on the board. 'drill' is a weaker connection.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "paste": 0.6,
+              "pipe": 0.95,
+              "root": 0.5,
+              "tap": 0.9,
+              "tube": 0.7
+            },
+            "ranked_guesses": [
+              "pipe",
+              "tap",
+              "tube",
+              "paste",
+              "root"
+            ],
+            "rationale": "'Plumbing' strongly suggests 'pipe' and 'tap' as direct matches. 'Tube' and 'paste' are plausible secondary connections, while 'root' is a weaker stretch.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pipe"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tap"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tube"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "plumbing",
+          "count": 2,
+          "rationale": "Connects 'pipe' and 'tap' which are both red team words that remain hidden. The word 'plumbing' is strongly associated with both pipes and taps, making it a clear hint without risking hitting blue, neutral, or assassin words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "science",
+          "count": 2,
+          "rationale": "links to 'drill' (lab equipment) and 'telescope' (astronomy tool) for blue team."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "stage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "drill": 0.4,
+              "life": 0.7,
+              "match": 0.5,
+              "opera": 0.85
+            },
+            "ranked_guesses": [
+              "opera",
+              "life",
+              "match",
+              "drill"
+            ],
+            "rationale": "'stage' likely refers to theater stage (opera) and stages of life/match/drill. 'opera' is the strongest fit, followed by 'life' as a stage of life.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "court": 0.5,
+              "life": 0.6,
+              "match": 0.6,
+              "opera": 0.9
+            },
+            "ranked_guesses": [
+              "opera",
+              "life",
+              "match",
+              "court"
+            ],
+            "rationale": "Clue 'stage' strongly connects to 'opera' (opera stage). Other plausible connections include life stages, match stages, and court stages.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "opera": 0.9
+            },
+            "ranked_guesses": [
+              "opera"
+            ],
+            "rationale": "'opera' is strongly associated with a theater stage, which directly relates to the clue 'stage'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "opera"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "stage",
+          "count": 4,
+          "rationale": "Connects to opera (opera stage), court (courtroom stage), life (stage of life), and pumpkin (growth stages)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fire"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.03,
+              "court": 0.04,
+              "day": 0.02,
+              "drill": 0.3,
+              "france": 0.01,
+              "glove": 0.08,
+              "ground": 0.05,
+              "jam": 0.07,
+              "lap": 0.1,
+              "life": 0.02,
+              "match": 0.95,
+              "nail": 0.25,
+              "paste": 0.06,
+              "pumpkin": 0.6,
+              "root": 0.2,
+              "telescope": 0.01,
+              "wall": 0.15
+            },
+            "ranked_guesses": [
+              "match",
+              "pumpkin",
+              "drill",
+              "nail",
+              "root",
+              "wall",
+              "lap",
+              "glove",
+              "jam",
+              "paste",
+              "ground",
+              "court",
+              "bridge",
+              "day",
+              "life",
+              "france",
+              "telescope"
+            ],
+            "rationale": "\"match\" is the most direct and literal association with \"fire\" (e.g., matchstick). \"Pumpkin\" follows due to cultural links (e.g., jack-o'-lanterns, fire imagery in Halloween). Other words have weaker or tangential connections (e.g., \"drill\" for friction heat, \"nail\" for forging). Low-confidence words are included for completeness but are unlikely.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "drill": 0.75,
+              "match": 0.95,
+              "pumpkin": 0.65,
+              "root": 0.35,
+              "wall": 0.45
+            },
+            "ranked_guesses": [
+              "match",
+              "drill",
+              "pumpkin",
+              "wall",
+              "root"
+            ],
+            "rationale": "\"match\" is the strongest association with \"fire\" (e.g., matchstick, lighting a fire). \"Drill\" could relate to fire drills, though weaker. Remaining words have tangential or thematic links (e.g., \"pumpkin\" for jack-o'-lanterns, \"wall\" for firewalls). Low-confidence words are neutral or unrelated.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "drill": 0.75,
+              "jam": 0.35,
+              "match": 0.95,
+              "nail": 0.45,
+              "pumpkin": 0.65,
+              "root": 0.55
+            },
+            "ranked_guesses": [
+              "match",
+              "drill",
+              "pumpkin",
+              "root",
+              "nail",
+              "jam"
+            ],
+            "rationale": "\"match\" is the most direct and literal association with \"fire\" (e.g., matchstick). \"Drill\" could relate to friction/fire-starting. Other words like \"pumpkin\" (e.g., jack-o'-lantern with candle) or \"root\" (e.g., 'root of fire' metaphorically) are weaker but plausible. Low-confidence words are unlikely or unrelated.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "match"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fire",
+          "count": 2,
+          "rationale": "connects 'match' (as in matchstick) and 'drill' (fire drill), both blue words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "court": 0.9,
+              "day": 0.25,
+              "france": 0.2
+            },
+            "ranked_guesses": [
+              "court",
+              "day",
+              "france"
+            ],
+            "rationale": "court is the strongest direct connection to 'royal' (royal court). day and france have weaker associative links (coronation day, royal house of France) but are the only plausible remaining options.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "court": 0.95,
+              "france": 0.65
+            },
+            "ranked_guesses": [
+              "court",
+              "bridge",
+              "france"
+            ],
+            "rationale": "'royal' strongly suggests 'royal court' (court). 'royal bridge' (bridge) and 'royal family of France' (france) are plausible secondary connections matching the clue count of 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "court": 0.9,
+              "france": 0.7,
+              "pumpkin": 0.3
+            },
+            "ranked_guesses": [
+              "court",
+              "france",
+              "pumpkin"
+            ],
+            "rationale": "royal clue most strongly fits 'court' (royal court), 'france' (French royalty) has moderate connection, 'pumpkin' weakly ties to royal fairy tales",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "court"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "royal",
+          "count": 3,
+          "rationale": "Connects to court (royal court), france (royal family of France), and life (royal life) without risking blue or neutral words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "finger"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.4,
+              "day": 0.35,
+              "drill": 0.55,
+              "france": 0.3,
+              "glove": 0.92,
+              "ground": 0.25,
+              "jam": 0.2,
+              "lap": 0.5,
+              "life": 0.15,
+              "nail": 0.95,
+              "paste": 0.45,
+              "pumpkin": 0.65,
+              "ring": 0.88,
+              "root": 0.75,
+              "telescope": 0.1,
+              "wall": 0.6
+            },
+            "ranked_guesses": [
+              "nail",
+              "glove",
+              "ring",
+              "root",
+              "pumpkin",
+              "wall",
+              "drill",
+              "lap",
+              "paste",
+              "bridge",
+              "day",
+              "france",
+              "ground",
+              "jam",
+              "life",
+              "telescope"
+            ],
+            "rationale": "\"nail\" is the most direct association with \"finger\" (e.g., fingernail). \"Glove\" fits as it covers fingers. Other words like \"ring\" (worn on fingers) and \"root\" (fingers as roots) are secondary. Lower-ranked words have weaker or tangential connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.35,
+              "day": 0.3,
+              "drill": 0.62,
+              "france": 0.25,
+              "glove": 0.92,
+              "ground": 0.2,
+              "jam": 0.45,
+              "lap": 0.5,
+              "life": 0.15,
+              "nail": 0.95,
+              "paste": 0.4,
+              "pumpkin": 0.65,
+              "ring": 0.88,
+              "root": 0.75,
+              "telescope": 0.1,
+              "wall": 0.55
+            },
+            "ranked_guesses": [
+              "nail",
+              "glove",
+              "ring",
+              "root",
+              "pumpkin",
+              "drill",
+              "wall",
+              "lap",
+              "jam",
+              "paste",
+              "bridge",
+              "day",
+              "france",
+              "ground",
+              "life",
+              "telescope"
+            ],
+            "rationale": "\"nail\" is the most direct association with \"finger\" (e.g., fingernail). \"glove\" fits as it covers fingers. Other words like \"ring\" (worn on fingers) and \"root\" (finger-like roots) are secondary. Lower-ranked words have weaker or tangential connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "finger",
+          "count": 2,
+          "rationale": "targets 'glove' and 'nail'; avoids assassin ('paste') and neutrals by focusing on hand-related items."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "autumn"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jam": 0.7,
+              "pumpkin": 0.95,
+              "root": 0.75
+            },
+            "ranked_guesses": [
+              "pumpkin",
+              "root",
+              "jam"
+            ],
+            "rationale": "Autumn strongly suggests pumpkin. Root and jam are plausible harvest/seasonal connections. Count of 3 matches these three words remaining on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jam": 0.7,
+              "pumpkin": 0.95,
+              "root": 0.6
+            },
+            "ranked_guesses": [
+              "pumpkin",
+              "jam",
+              "root"
+            ],
+            "rationale": "'pumpkin' is the strongest autumn association. 'jam' relates to autumn harvest preserves. 'root' connects to root vegetables harvested in autumn. All three are still hidden and plausible red team words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jam": 0.8,
+              "pumpkin": 0.95,
+              "root": 0.85
+            },
+            "ranked_guesses": [
+              "pumpkin",
+              "root",
+              "jam"
+            ],
+            "rationale": "Autumn theme strongly suggests pumpkin. Root and jam are common autumn associations (harvest, fruits). Other words like ground or day are weaker fits.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pumpkin"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jam"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "autumn",
+          "count": 3,
+          "rationale": "Connects to pumpkin (autumn pumpkin), france (autumn in France), and life (autumn life)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "root": 0.75,
+              "space": 0.0,
+              "telescope": 0.92
+            },
+            "ranked_guesses": [
+              "telescope",
+              "root",
+              "space"
+            ],
+            "rationale": "\"explore\" strongly connects to **telescope** (exploring space/sky) and **root** (exploring origins/underground). High confidence in these as the two targets. Avoid neutral/opponent words like \"glove\" or \"wall\".",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "links to unguessed blue words 'drill' (as in drilling for exploration) and 'telescope' (used to explore space). Avoids assassin 'paste' and neutral/red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "day": 0.9,
+              "telescope": 0.8
+            },
+            "ranked_guesses": [
+              "day",
+              "telescope"
+            ],
+            "rationale": "day directly relates to daylight (a form of light) and telescope gathers light, perfectly matching the clue 'light' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "day": 0.9,
+              "wall": 0.8
+            },
+            "ranked_guesses": [
+              "day",
+              "wall"
+            ],
+            "rationale": "Light strongly associates with 'day' (daylight) and 'wall' (wall light). Both are plausible 2-word connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "day": 0.95,
+              "telescope": 0.9
+            },
+            "ranked_guesses": [
+              "day",
+              "telescope"
+            ],
+            "rationale": "Light directly relates to 'day' and 'telescope' (instrument for observing light). Both are strong fits for the clue 'light' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "day"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 2,
+          "rationale": "Connects to 'life' (light of life) and 'france' (Paris as City of Light)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "hand"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "hand",
+          "count": 2,
+          "rationale": "links to 'glove' and 'drill' (as in hand drill), both remaining blue words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "history"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "france": 0.9,
+              "ground": 0.6
+            },
+            "ranked_guesses": [
+              "france",
+              "ground"
+            ],
+            "rationale": "france is strongly tied to history; ground could relate to historical contexts like battlefields or 'history grounds'",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "france": 0.9,
+              "wall": 0.9
+            },
+            "ranked_guesses": [
+              "france",
+              "wall"
+            ],
+            "rationale": "'history' clue with count 2 strongly suggests historical terms. 'france' relates to French history and 'wall' relates to historical walls like Berlin Wall/Great Wall of China.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "france": 0.9,
+              "wall": 0.85
+            },
+            "ranked_guesses": [
+              "france",
+              "wall"
+            ],
+            "rationale": "'history' clue with count 2 strongly matches historical terms, with 'france' (French history) and 'wall' (e.g., Berlin Wall, Great Wall) being the most likely targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "france"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "wall"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "history",
+          "count": 2,
+          "rationale": "Connects to both remaining Red words: 'life' (history of life) and 'france' (history of France)."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "drill": 0.35,
+              "glove": 0.55,
+              "ground": 0.8,
+              "lap": 0.45,
+              "life": 0.4,
+              "paste": 0.5,
+              "root": 0.85,
+              "telescope": 0.95
+            },
+            "ranked_guesses": [
+              "telescope",
+              "root",
+              "ground",
+              "bridge",
+              "glove",
+              "paste",
+              "lap",
+              "life",
+              "drill"
+            ],
+            "rationale": "\"telescope\" is the strongest guess due to its direct association with outer **space**. \"root\" and \"ground\" relate to **space** as in *ground control* or *root directory* (less likely but plausible). Remaining words are ranked by weaker or tangential connections (e.g., \"bridge\" as in *space bridge*, \"glove\" as in *astronaut glove*).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.65,
+              "drill": 0.55,
+              "glove": 0.3,
+              "ground": 0.85,
+              "lap": 0.2,
+              "life": 0.15,
+              "paste": 0.1,
+              "root": 0.75,
+              "telescope": 0.95
+            },
+            "ranked_guesses": [
+              "telescope",
+              "ground",
+              "root",
+              "bridge",
+              "drill",
+              "glove",
+              "lap",
+              "life",
+              "paste"
+            ],
+            "rationale": "\"telescope\" is the strongest guess due to its direct association with outer space (e.g., Hubble Space Telescope). \"ground\" and \"root\" relate to space as in *ground control* or *taking root in space* (e.g., plants in space stations). Remaining words are progressively weaker ties (e.g., \"bridge\" as in *space bridge* in sci-fi, \"drill\" for space mining). Low-confidence words are included only to fulfill the ranked list requirement.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ground": 0.65,
+              "root": 0.75,
+              "telescope": 0.95
+            },
+            "ranked_guesses": [
+              "telescope",
+              "root",
+              "ground"
+            ],
+            "rationale": "\"telescope\" is the strongest space-related word; \"root\" and \"ground\" are secondary associations (e.g., 'ground control' or 'root in zero-gravity experiments'). Clue count=2 suggests multiple targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "telescope"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "root"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "links 'telescope' (observing space) and 'glove' (astronaut glove)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "alive"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "life": 0.95
+            },
+            "ranked_guesses": [
+              "life"
+            ],
+            "rationale": "Direct synonym for 'alive', highest probability match with count 1",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "life": 0.95
+            },
+            "ranked_guesses": [
+              "life"
+            ],
+            "rationale": "life is a direct synonym of 'alive' and remains unrevealed",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "life": 0.9
+            },
+            "ranked_guesses": [
+              "life"
+            ],
+            "rationale": "'alive' strongly suggests 'life' as the most direct match on the board",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "life"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "alive",
+          "count": 1,
+          "rationale": "Directly points to the remaining red word 'life' without risking other words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

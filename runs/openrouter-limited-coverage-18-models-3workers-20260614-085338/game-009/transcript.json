@@ -1,0 +1,1573 @@
+{
+  "board": {
+    "identities": {
+      "angel": "red",
+      "bow": "blue",
+      "bridge": "red",
+      "church": "blue",
+      "cold": "neutral",
+      "fall": "blue",
+      "fighter": "red",
+      "leprechaun": "blue",
+      "marble": "neutral",
+      "microscope": "neutral",
+      "night": "neutral",
+      "oil": "red",
+      "pin": "red",
+      "poison": "red",
+      "police": "blue",
+      "queen": "blue",
+      "root": "assassin",
+      "screen": "neutral",
+      "scuba diver": "neutral",
+      "smuggler": "red",
+      "spider": "blue",
+      "spot": "red",
+      "temple": "blue",
+      "war": "red",
+      "washington": "neutral"
+    },
+    "revealed": [
+      "angel",
+      "bow",
+      "bridge",
+      "church",
+      "fall",
+      "fighter",
+      "leprechaun",
+      "pin",
+      "police",
+      "queen",
+      "spider",
+      "temple"
+    ],
+    "words": {
+      "angel": "red",
+      "bow": "blue",
+      "bridge": "red",
+      "church": "blue",
+      "cold": "neutral",
+      "fall": "blue",
+      "fighter": "red",
+      "leprechaun": "blue",
+      "marble": "neutral",
+      "microscope": "neutral",
+      "night": "neutral",
+      "oil": "red",
+      "pin": "red",
+      "poison": "red",
+      "police": "blue",
+      "queen": "blue",
+      "root": "assassin",
+      "screen": "neutral",
+      "scuba diver": "neutral",
+      "smuggler": "red",
+      "spider": "blue",
+      "spot": "red",
+      "temple": "blue",
+      "war": "red",
+      "washington": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "religion",
+        "count": 2,
+        "rationale": "Connects church and temple, both blue words."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "angel": 0.85,
+          "church": 0.85
+        },
+        "ranked_guesses": [
+          "angel",
+          "church"
+        ],
+        "rationale": "'Angel' and 'church' are directly associated with religion, fitting the clue's count of 2.",
+        "stop": true
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "angel": 0.9,
+          "church": 0.85
+        },
+        "ranked_guesses": [
+          "angel",
+          "church"
+        ],
+        "rationale": "'Angel' and 'church' are directly associated with religious contexts, fitting the 'religion' clue for 2 words.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "angel": 0.95,
+          "church": 0.95
+        },
+        "ranked_guesses": [
+          "angel",
+          "church"
+        ],
+        "rationale": "'Angel' and 'church' are directly associated with religion, matching the clue's context and count requirement.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sacred",
+        "count": 2,
+        "rationale": "Connects church and temple, both blue words representing places of worship."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.9,
+          "temple": 0.85
+        },
+        "ranked_guesses": [
+          "church",
+          "temple"
+        ],
+        "rationale": "Church and temple are directly associated with sacred places, fitting the clue for 2 words.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.8,
+          "temple": 0.7
+        },
+        "ranked_guesses": [
+          "church",
+          "temple"
+        ],
+        "rationale": "Church and temple are both sacred places matching the clue, with church being the most direct association.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.85,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "church"
+        ],
+        "rationale": "'Sacred' directly connects to religious structures like temple and church, which are both on the board and unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 1,
+        "rationale": "leprechaun is a mythical creature"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leprechaun": 0.95
+        },
+        "ranked_guesses": [
+          "leprechaun"
+        ],
+        "rationale": "Leprechaun is a mythical creature directly matching the clue, and it's the only remaining mythical word on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leprechaun": 0.95
+        },
+        "ranked_guesses": [
+          "leprechaun"
+        ],
+        "rationale": "Leprechaun is the only remaining unrevealed mythical entity on the board, directly matching the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leprechaun": 0.95
+        },
+        "ranked_guesses": [
+          "leprechaun"
+        ],
+        "rationale": "Leprechaun is a classic mythical creature directly matching the clue. It's the only strong fit among remaining words.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "action",
+        "count": 2,
+        "rationale": "Points to 'bow' and 'fall' as actions"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.9,
+          "war": 0.85
+        },
+        "ranked_guesses": [
+          "fighter",
+          "war"
+        ],
+        "rationale": "'Action' relates to activities or roles involving physical movement. 'Fighter' and 'war' are direct associations with action, fitting the count of 2.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.9,
+          "war": 0.85
+        },
+        "ranked_guesses": [
+          "fighter",
+          "war"
+        ],
+        "rationale": "'Fighter' and 'war' are directly related to action, aligning with the clue. Both remain unrevealed and are likely blue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.85,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "fighter"
+        ],
+        "rationale": "'Action' likely refers to 'war' and 'fighter' as direct action-related terms, both unrevealed and fitting the count of 2.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "authority",
+        "count": 2,
+        "rationale": "hints at police and queen"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "police": 0.9,
+          "queen": 0.85
+        },
+        "ranked_guesses": [
+          "police",
+          "queen"
+        ],
+        "rationale": "Police represents governmental authority and queen signifies monarchical authority, both directly relating to the clue word 'authority'.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "police": 0.9,
+          "queen": 0.85
+        },
+        "ranked_guesses": [
+          "police",
+          "queen"
+        ],
+        "rationale": "Authority directly connects to police (law enforcement) and queen (monarchical power), both remaining unrevealed and fitting the count of 2.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "police": 0.9,
+          "queen": 0.85
+        },
+        "ranked_guesses": [
+          "police",
+          "queen"
+        ],
+        "rationale": "Authority relates to police (enforcers) and queen (monarch), both plausible blue targets.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "web",
+        "count": 1,
+        "rationale": "spider is associated with a web"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.95
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "The clue 'web' directly relates to 'spider' as in spider web.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.8
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "The clue 'web' directly connects to 'spider' (spider web), which is on the board and unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.95
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "'Web' directly connects to 'spider' (spider web), which is unrevealed and on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "drop",
+        "count": 2,
+        "rationale": "Bow (as in to bow) and fall (to drop down) are both associated with dropping."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fall": 0.9,
+          "pin": 0.7
+        },
+        "ranked_guesses": [
+          "fall",
+          "pin"
+        ],
+        "rationale": "Clue 'drop' directly connects to 'fall' (synonym) and 'pin' (as in 'drop a pin').",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fall": 0.9,
+          "root": 0.7
+        },
+        "ranked_guesses": [
+          "fall",
+          "root"
+        ],
+        "rationale": "Clue 'drop' relates to 'fall' (direct synonym) and 'root' (as in 'drop root').",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fall": 0.9,
+          "pin": 0.8
+        },
+        "ranked_guesses": [
+          "fall",
+          "pin"
+        ],
+        "rationale": "'Drop' directly relates to 'fall' as a synonym. 'Pin' could be something that is dropped, fitting the count of 2.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "arch",
+        "count": 1,
+        "rationale": "Points to 'bow' as a bow shape without revealing other words."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.95
+        },
+        "ranked_guesses": [
+          "bridge"
+        ],
+        "rationale": "Bridge is a structure that often incorporates an arch, fitting the clue 'arch' with count 1.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.85
+        },
+        "ranked_guesses": [
+          "bridge"
+        ],
+        "rationale": "The clue 'arch' could refer to an arch bridge, making 'bridge' a direct association. It's unrevealed and fits the count of 1.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.8
+        },
+        "ranked_guesses": [
+          "bridge"
+        ],
+        "rationale": "The clue 'arch' likely refers to an arch-shaped structure, with 'bridge' being a common example. 'Bow' could also be considered, but 'bridge' is more directly associated with arches in architecture.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "weapon",
+        "count": 1,
+        "rationale": "bow is a type of weapon"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bow": 0.9
+        },
+        "ranked_guesses": [
+          "bow"
+        ],
+        "rationale": "Bow is a direct weapon association and unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bow": 0.7,
+          "poison": 0.6,
+          "war": 0.9
+        },
+        "ranked_guesses": [
+          "war",
+          "bow",
+          "poison"
+        ],
+        "rationale": "War is directly related to weapons and remains unrevealed. Bow and poison are also plausible weapon-related terms.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bow": 0.95
+        },
+        "ranked_guesses": [
+          "bow"
+        ],
+        "rationale": "'bow' is a direct weapon-related word still on the board, with no conflicting clues in history",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "religion"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "angel"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sacred"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "church"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "leprechaun"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "action"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fighter"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "authority"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "police"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "queen"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "web"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spider"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "drop"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fall"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pin"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "arch"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "agent_id": "Qwen3.5 35B A3B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "weapon"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "bow"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 36,
+    "public_event_count": 34,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-009-qwen_qwen3_5_35b_a3b-vs-qwen_qwen3_32b",
+    "team_blue": "Qwen 3 32B",
+    "team_red": "Qwen3.5 35B A3B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "religion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "angel": 0.85,
+              "church": 0.85
+            },
+            "ranked_guesses": [
+              "angel",
+              "church"
+            ],
+            "rationale": "'Angel' and 'church' are directly associated with religion, fitting the clue's count of 2.",
+            "stop": true
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "angel": 0.9,
+              "church": 0.85
+            },
+            "ranked_guesses": [
+              "angel",
+              "church"
+            ],
+            "rationale": "'Angel' and 'church' are directly associated with religious contexts, fitting the 'religion' clue for 2 words.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "angel": 0.95,
+              "church": 0.95
+            },
+            "ranked_guesses": [
+              "angel",
+              "church"
+            ],
+            "rationale": "'Angel' and 'church' are directly associated with religion, matching the clue's context and count requirement.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "angel"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "religion",
+          "count": 2,
+          "rationale": "Connects church and temple, both blue words."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sacred"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "church": 0.9,
+              "temple": 0.85
+            },
+            "ranked_guesses": [
+              "church",
+              "temple"
+            ],
+            "rationale": "Church and temple are directly associated with sacred places, fitting the clue for 2 words.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "church": 0.8,
+              "temple": 0.7
+            },
+            "ranked_guesses": [
+              "church",
+              "temple"
+            ],
+            "rationale": "Church and temple are both sacred places matching the clue, with church being the most direct association.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "church": 0.85,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "church"
+            ],
+            "rationale": "'Sacred' directly connects to religious structures like temple and church, which are both on the board and unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "leprechaun": 0.95
+            },
+            "ranked_guesses": [
+              "leprechaun"
+            ],
+            "rationale": "Leprechaun is a mythical creature directly matching the clue, and it's the only remaining mythical word on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "leprechaun": 0.95
+            },
+            "ranked_guesses": [
+              "leprechaun"
+            ],
+            "rationale": "Leprechaun is the only remaining unrevealed mythical entity on the board, directly matching the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "leprechaun": 0.95
+            },
+            "ranked_guesses": [
+              "leprechaun"
+            ],
+            "rationale": "Leprechaun is a classic mythical creature directly matching the clue. It's the only strong fit among remaining words.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "church"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythical",
+          "count": 1,
+          "rationale": "leprechaun is a mythical creature"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "mythical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.9,
+              "war": 0.85
+            },
+            "ranked_guesses": [
+              "fighter",
+              "war"
+            ],
+            "rationale": "'Action' relates to activities or roles involving physical movement. 'Fighter' and 'war' are direct associations with action, fitting the count of 2.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.9,
+              "war": 0.85
+            },
+            "ranked_guesses": [
+              "fighter",
+              "war"
+            ],
+            "rationale": "'Fighter' and 'war' are directly related to action, aligning with the clue. Both remain unrevealed and are likely blue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.85,
+              "war": 0.9
+            },
+            "ranked_guesses": [
+              "war",
+              "fighter"
+            ],
+            "rationale": "'Action' likely refers to 'war' and 'fighter' as direct action-related terms, both unrevealed and fitting the count of 2.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "police": 0.9,
+              "queen": 0.85
+            },
+            "ranked_guesses": [
+              "police",
+              "queen"
+            ],
+            "rationale": "Police represents governmental authority and queen signifies monarchical authority, both directly relating to the clue word 'authority'.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "police": 0.9,
+              "queen": 0.85
+            },
+            "ranked_guesses": [
+              "police",
+              "queen"
+            ],
+            "rationale": "Authority directly connects to police (law enforcement) and queen (monarchical power), both remaining unrevealed and fitting the count of 2.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "police": 0.9,
+              "queen": 0.85
+            },
+            "ranked_guesses": [
+              "police",
+              "queen"
+            ],
+            "rationale": "Authority relates to police (enforcers) and queen (monarch), both plausible blue targets.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "leprechaun"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "authority",
+          "count": 2,
+          "rationale": "hints at police and queen"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "action"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.95
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "The clue 'web' directly relates to 'spider' as in spider web.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.8
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "The clue 'web' directly connects to 'spider' (spider web), which is on the board and unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.95
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "'Web' directly connects to 'spider' (spider web), which is unrevealed and on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fall": 0.9,
+              "pin": 0.7
+            },
+            "ranked_guesses": [
+              "fall",
+              "pin"
+            ],
+            "rationale": "Clue 'drop' directly connects to 'fall' (synonym) and 'pin' (as in 'drop a pin').",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fall": 0.9,
+              "root": 0.7
+            },
+            "ranked_guesses": [
+              "fall",
+              "root"
+            ],
+            "rationale": "Clue 'drop' relates to 'fall' (direct synonym) and 'root' (as in 'drop root').",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fall": 0.9,
+              "pin": 0.8
+            },
+            "ranked_guesses": [
+              "fall",
+              "pin"
+            ],
+            "rationale": "'Drop' directly relates to 'fall' as a synonym. 'Pin' could be something that is dropped, fitting the count of 2.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fighter"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "drop",
+          "count": 2,
+          "rationale": "Bow (as in to bow) and fall (to drop down) are both associated with dropping."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "authority"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.95
+            },
+            "ranked_guesses": [
+              "bridge"
+            ],
+            "rationale": "Bridge is a structure that often incorporates an arch, fitting the clue 'arch' with count 1.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.85
+            },
+            "ranked_guesses": [
+              "bridge"
+            ],
+            "rationale": "The clue 'arch' could refer to an arch bridge, making 'bridge' a direct association. It's unrevealed and fits the count of 1.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.8
+            },
+            "ranked_guesses": [
+              "bridge"
+            ],
+            "rationale": "The clue 'arch' likely refers to an arch-shaped structure, with 'bridge' being a common example. 'Bow' could also be considered, but 'bridge' is more directly associated with arches in architecture.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bow": 0.9
+            },
+            "ranked_guesses": [
+              "bow"
+            ],
+            "rationale": "Bow is a direct weapon association and unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bow": 0.7,
+              "poison": 0.6,
+              "war": 0.9
+            },
+            "ranked_guesses": [
+              "war",
+              "bow",
+              "poison"
+            ],
+            "rationale": "War is directly related to weapons and remains unrevealed. Bow and poison are also plausible weapon-related terms.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bow": 0.95
+            },
+            "ranked_guesses": [
+              "bow"
+            ],
+            "rationale": "'bow' is a direct weapon-related word still on the board, with no conflicting clues in history",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "police"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "queen"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "weapon",
+          "count": 1,
+          "rationale": "bow is a type of weapon"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "web"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spider"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "drop"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fall"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pin"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "arch"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "weapon"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "bow"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

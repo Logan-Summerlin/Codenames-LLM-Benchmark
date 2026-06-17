@@ -1,0 +1,2136 @@
+{
+  "board": {
+    "identities": {
+      "america": "blue",
+      "atlantis": "red",
+      "battery": "neutral",
+      "car": "red",
+      "eagle": "blue",
+      "europe": "blue",
+      "fair": "neutral",
+      "figure": "neutral",
+      "foot": "neutral",
+      "gold": "neutral",
+      "horse": "neutral",
+      "hospital": "blue",
+      "iron": "red",
+      "paper": "red",
+      "play": "red",
+      "point": "blue",
+      "pole": "red",
+      "root": "assassin",
+      "school": "red",
+      "scuba diver": "red",
+      "shoe": "blue",
+      "soul": "neutral",
+      "spine": "blue",
+      "spot": "blue",
+      "well": "red"
+    },
+    "revealed": [
+      "america",
+      "atlantis",
+      "car",
+      "eagle",
+      "europe",
+      "fair",
+      "foot",
+      "horse",
+      "iron",
+      "paper",
+      "point",
+      "pole",
+      "root",
+      "scuba diver",
+      "spine",
+      "spot",
+      "well"
+    ],
+    "words": {
+      "america": "blue",
+      "atlantis": "red",
+      "battery": "neutral",
+      "car": "red",
+      "eagle": "blue",
+      "europe": "blue",
+      "fair": "neutral",
+      "figure": "neutral",
+      "foot": "neutral",
+      "gold": "neutral",
+      "horse": "neutral",
+      "hospital": "blue",
+      "iron": "red",
+      "paper": "red",
+      "play": "red",
+      "point": "blue",
+      "pole": "red",
+      "root": "assassin",
+      "school": "red",
+      "scuba diver": "red",
+      "shoe": "blue",
+      "soul": "neutral",
+      "spine": "blue",
+      "spot": "blue",
+      "well": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "water",
+        "count": 3,
+        "rationale": "Links scuba diver, well, and the lost city Atlantis"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.75,
+          "scuba diver": 0.9,
+          "well": 0.85
+        },
+        "ranked_guesses": [
+          "scuba diver",
+          "well",
+          "atlantis"
+        ],
+        "rationale": "All three are directly linked to water: scuba diver uses water, a well contains water, Atlantis is a legendary water city.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.6,
+          "scuba diver": 0.9,
+          "well": 0.95
+        },
+        "ranked_guesses": [
+          "well",
+          "scuba diver",
+          "atlantis"
+        ],
+        "rationale": "well and scuba diver are directly linked to water; atlantis is a water\u2011related mythic city",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.6,
+          "scuba diver": 0.85,
+          "well": 0.75
+        },
+        "ranked_guesses": [
+          "scuba diver",
+          "well",
+          "atlantis"
+        ],
+        "rationale": "Water directly links to scuba diver (underwater), well (contains water), and Atlantis (mythical water city)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "bird",
+        "count": 2,
+        "rationale": "Connects 'eagle' and 'america' which are both symbols related to birds and the USA."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "pole": 0.3
+        },
+        "ranked_guesses": [
+          "eagle",
+          "pole"
+        ],
+        "rationale": "'eagle' is a direct bird reference; 'pole' could loosely relate to a bird's perch",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.95,
+          "pole": 0.3,
+          "spot": 0.25
+        },
+        "ranked_guesses": [
+          "eagle",
+          "pole",
+          "spot"
+        ],
+        "rationale": "'eagle' is the most direct match to the clue 'bird' with count 2. 'pole' and 'spot' are weak secondary associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.95,
+          "pole": 0.3
+        },
+        "ranked_guesses": [
+          "eagle",
+          "pole"
+        ],
+        "rationale": "'eagle' is a direct match for the clue 'bird' and is the most obvious word. 'pole' is a stretch as 'pole bird' (penguin) but less likely.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "links to iron, car, pole"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "iron": 0.85
+        },
+        "ranked_guesses": [
+          "iron"
+        ],
+        "rationale": "Iron is a metal and a common Codenames target for the clue metal",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.72,
+          "gold": 0.78,
+          "iron": 0.85
+        },
+        "ranked_guesses": [
+          "iron",
+          "gold",
+          "battery"
+        ],
+        "rationale": "All three are directly metal items; iron and gold are elemental metals, battery contains metal components.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "iron": 0.85
+        },
+        "ranked_guesses": [
+          "iron"
+        ],
+        "rationale": "Iron is a metal and fits the clue count 3",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "continent",
+        "count": 2,
+        "rationale": "Connects 'america' and 'europe' which are both blue team words"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "europe": 0.9
+        },
+        "ranked_guesses": [
+          "america",
+          "europe"
+        ],
+        "rationale": "Clue 'continent' with count 2 strongly matches 'america' and 'europe' as clear continent-related words. 'atlantis' is a possible third but less likely given the count.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "atlantis": 0.5,
+          "europe": 0.9,
+          "pole": 0.3
+        },
+        "ranked_guesses": [
+          "america",
+          "europe",
+          "atlantis",
+          "pole"
+        ],
+        "rationale": "Clue 'continent' with count 2 strongly suggests direct continent references 'america' and 'europe' as top guesses. 'Atlantis' and 'pole' are less likely but possible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.95,
+          "europe": 0.95
+        },
+        "ranked_guesses": [
+          "america",
+          "europe"
+        ],
+        "rationale": "The active clue 'continent' with count 2 directly matches 'america' and 'europe' as they are continents.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "story",
+        "count": 3,
+        "rationale": "Paper, play, and school all involve stories or narratives."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fair": 0.75
+        },
+        "ranked_guesses": [
+          "fair"
+        ],
+        "rationale": "story often linked to fairy tales, i.e., a fair",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fair": 0.78
+        },
+        "ranked_guesses": [
+          "fair"
+        ],
+        "rationale": "story often linked to fair (fairy tale), play, paper; fair is strongest",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mark",
+        "count": 2,
+        "rationale": "Connects 'point' (as in a mark on a page) and 'spot' (as in a mark or stain) without risking neutral, assassin, or opponent words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "point": 0.85,
+          "spot": 0.9
+        },
+        "ranked_guesses": [
+          "spot",
+          "point"
+        ],
+        "rationale": "'mark' strongly associates with 'spot' (as in a mark/spot) and 'point' (as in a point/mark). Both are common associations and fit the clue count of 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "point": 0.85,
+          "spot": 0.75
+        },
+        "ranked_guesses": [
+          "point",
+          "spot"
+        ],
+        "rationale": "Clue 'mark' with count 2 suggests two words directly related to marking. 'point' is the strongest association (as in a score/point), followed by 'spot' (as in a stain/mark). Both remain unrevealed and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.75,
+          "point": 0.7
+        },
+        "ranked_guesses": [
+          "foot",
+          "point"
+        ],
+        "rationale": "'mark' could refer to 'footprint' (foot) and 'point mark' (point), both fitting the count of 2. These are the most plausible unrevealed words that connect to the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "reading",
+        "count": 2,
+        "rationale": "Both 'paper' and 'school' are associated with reading"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 0.75,
+          "school": 0.75
+        },
+        "ranked_guesses": [
+          "paper",
+          "school"
+        ],
+        "rationale": "reading suggests paper to read and school where reading occurs",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 0.75
+        },
+        "ranked_guesses": [
+          "paper"
+        ],
+        "rationale": "Reading suggests something you read; paper is a common reading material and likely a red word.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 0.85
+        },
+        "ranked_guesses": [
+          "paper"
+        ],
+        "rationale": "Reading suggests paper or books; paper is on board and fits the clue best",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "support",
+        "count": 3,
+        "rationale": "All three remaining blue words (hospital, shoe, spine) relate to 'support' - healthcare support, shoe arch support, and spinal support."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.88,
+          "pole": 0.92,
+          "spine": 0.9
+        },
+        "ranked_guesses": [
+          "pole",
+          "spine",
+          "foot"
+        ],
+        "rationale": "'support' likely refers to physical structural support. 'pole', 'spine', and 'foot' all directly relate to support structures in different contexts.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.55,
+          "foot": 0.85,
+          "pole": 0.9,
+          "root": 0.6,
+          "spine": 0.8
+        },
+        "ranked_guesses": [
+          "pole",
+          "foot",
+          "spine",
+          "root",
+          "battery"
+        ],
+        "rationale": "Pole, foot, and spine are direct physical support structures. Root has botanical support meaning, battery provides power support.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.85,
+          "pole": 0.8,
+          "shoe": 0.85
+        },
+        "ranked_guesses": [
+          "foot",
+          "shoe",
+          "pole"
+        ],
+        "rationale": "The clue 'support' with count 3 suggests three blue words related to structural, physical, or functional support. 'foot' and 'shoe' are strongly associated with footwear support (arch support), and 'pole' commonly refers to a support structure. These are the most direct connections to the clue among remaining words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "transport",
+        "count": 2,
+        "rationale": "Both a car and a school involve transport (a vehicle and school transport)."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.78,
+          "horse": 0.65
+        },
+        "ranked_guesses": [
+          "car",
+          "horse"
+        ],
+        "rationale": "Both are common means of transport and fit the clue count of 2.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.85,
+          "horse": 0.75
+        },
+        "ranked_guesses": [
+          "car",
+          "horse"
+        ],
+        "rationale": "Both are classic means of transport; car is obvious, horse is another transport option.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "support",
+        "count": 3,
+        "rationale": "Connects to hospital (medical support), shoe (foot support), and spine (back support) without matching any board words or being a substring of any remaining word."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.75,
+          "root": 0.8,
+          "spine": 0.85
+        },
+        "ranked_guesses": [
+          "spine",
+          "root",
+          "foot"
+        ],
+        "rationale": "'Spine' and 'root' directly relate to physical support (body structure and plant anchoring). 'Foot' supports body weight. All fit the 'support' clue with count 3 and remain unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "foot"
+        ],
+        "rationale": "'foot' directly relates to physical support and is a common association with 'support'. Other remaining words like 'root' or 'spine' are less directly connected.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.8,
+          "root": 0.7,
+          "spine": 0.9
+        },
+        "ranked_guesses": [
+          "spine",
+          "foot",
+          "root"
+        ],
+        "rationale": "'support' most directly relates to structural support items. 'spine' is the strongest literal connection, followed by 'foot' and 'root' as common support structures.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mythology",
+        "count": 3,
+        "rationale": "Atlantis is a myth, school teaches mythology, and many plays are based on myths"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.92,
+          "figure": 0.78,
+          "gold": 0.75
+        },
+        "ranked_guesses": [
+          "atlantis",
+          "figure",
+          "gold"
+        ],
+        "rationale": "Atlantis is a famous mythic place; mythological figures (heroes/gods) fit 'figure'; gold relates to myths like King Midas",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.85
+        },
+        "ranked_guesses": [
+          "atlantis"
+        ],
+        "rationale": "Atlantis is a famous mythological lost city, fitting the clue 'mythology' for a red agent.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.85
+        },
+        "ranked_guesses": [
+          "atlantis"
+        ],
+        "rationale": "Atlantis is a famous mythological lost city, fitting the clue 'mythology'.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "part",
+        "count": 3,
+        "rationale": "Connects to hospital (as a part of medical care), shoe (as a part of footwear), and spine (as a part of the body)."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spine": 0.85
+        },
+        "ranked_guesses": [
+          "spine"
+        ],
+        "rationale": "'part' strongly suggests body parts, and 'spine' is a clear body part that fits the clue and hasn't been revealed yet. Other remaining words like 'root' or 'pole' are less directly associated with 'part'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.75,
+          "root": 0.6,
+          "soul": 0.5
+        },
+        "ranked_guesses": [
+          "battery",
+          "root",
+          "soul"
+        ],
+        "rationale": "'battery' is a clear component/part of a device. 'root' is a part of a plant. 'soul' is a less direct but possible interpretation of 'part'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "root": 0.9,
+          "shoe": 0.8,
+          "spine": 0.8
+        },
+        "ranked_guesses": [
+          "root",
+          "shoe",
+          "spine"
+        ],
+        "rationale": "Clue 'part' strongly matches unrevealed words root (plant part), shoe (object part), and spine (body part)",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "water"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "scuba diver"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "well"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "bird"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "iron"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "continent"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "america"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "europe"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "story"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "fair"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mark"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "point"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spot"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "reading"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "paper"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "support"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pole"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transport"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "car"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "horse"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "support"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "foot"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mythology"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlantis"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "part"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spine"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "root"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 48,
+    "public_event_count": 36,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-single-047-openai_gpt_oss_120b-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "water"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.75,
+              "scuba diver": 0.9,
+              "well": 0.85
+            },
+            "ranked_guesses": [
+              "scuba diver",
+              "well",
+              "atlantis"
+            ],
+            "rationale": "All three are directly linked to water: scuba diver uses water, a well contains water, Atlantis is a legendary water city.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.6,
+              "scuba diver": 0.9,
+              "well": 0.95
+            },
+            "ranked_guesses": [
+              "well",
+              "scuba diver",
+              "atlantis"
+            ],
+            "rationale": "well and scuba diver are directly linked to water; atlantis is a water\u2011related mythic city",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.6,
+              "scuba diver": 0.85,
+              "well": 0.75
+            },
+            "ranked_guesses": [
+              "scuba diver",
+              "well",
+              "atlantis"
+            ],
+            "rationale": "Water directly links to scuba diver (underwater), well (contains water), and Atlantis (mythical water city)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "scuba diver"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "well"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "water",
+          "count": 3,
+          "rationale": "Links scuba diver, well, and the lost city Atlantis"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "bird"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "pole": 0.3
+            },
+            "ranked_guesses": [
+              "eagle",
+              "pole"
+            ],
+            "rationale": "'eagle' is a direct bird reference; 'pole' could loosely relate to a bird's perch",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.95,
+              "pole": 0.3,
+              "spot": 0.25
+            },
+            "ranked_guesses": [
+              "eagle",
+              "pole",
+              "spot"
+            ],
+            "rationale": "'eagle' is the most direct match to the clue 'bird' with count 2. 'pole' and 'spot' are weak secondary associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.95,
+              "pole": 0.3
+            },
+            "ranked_guesses": [
+              "eagle",
+              "pole"
+            ],
+            "rationale": "'eagle' is a direct match for the clue 'bird' and is the most obvious word. 'pole' is a stretch as 'pole bird' (penguin) but less likely.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "bird",
+          "count": 2,
+          "rationale": "Connects 'eagle' and 'america' which are both symbols related to birds and the USA."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "iron": 0.85
+            },
+            "ranked_guesses": [
+              "iron"
+            ],
+            "rationale": "Iron is a metal and a common Codenames target for the clue metal",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.72,
+              "gold": 0.78,
+              "iron": 0.85
+            },
+            "ranked_guesses": [
+              "iron",
+              "gold",
+              "battery"
+            ],
+            "rationale": "All three are directly metal items; iron and gold are elemental metals, battery contains metal components.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "iron": 0.85
+            },
+            "ranked_guesses": [
+              "iron"
+            ],
+            "rationale": "Iron is a metal and fits the clue count 3",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "iron"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "links to iron, car, pole"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "continent"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "europe": 0.9
+            },
+            "ranked_guesses": [
+              "america",
+              "europe"
+            ],
+            "rationale": "Clue 'continent' with count 2 strongly matches 'america' and 'europe' as clear continent-related words. 'atlantis' is a possible third but less likely given the count.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "atlantis": 0.5,
+              "europe": 0.9,
+              "pole": 0.3
+            },
+            "ranked_guesses": [
+              "america",
+              "europe",
+              "atlantis",
+              "pole"
+            ],
+            "rationale": "Clue 'continent' with count 2 strongly suggests direct continent references 'america' and 'europe' as top guesses. 'Atlantis' and 'pole' are less likely but possible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.95,
+              "europe": 0.95
+            },
+            "ranked_guesses": [
+              "america",
+              "europe"
+            ],
+            "rationale": "The active clue 'continent' with count 2 directly matches 'america' and 'europe' as they are continents.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "america"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "europe"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "continent",
+          "count": 2,
+          "rationale": "Connects 'america' and 'europe' which are both blue team words"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "story"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fair": 0.75
+            },
+            "ranked_guesses": [
+              "fair"
+            ],
+            "rationale": "story often linked to fairy tales, i.e., a fair",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fair": 0.78
+            },
+            "ranked_guesses": [
+              "fair"
+            ],
+            "rationale": "story often linked to fair (fairy tale), play, paper; fair is strongest",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "fair"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "story",
+          "count": 3,
+          "rationale": "Paper, play, and school all involve stories or narratives."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mark"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "point": 0.85,
+              "spot": 0.9
+            },
+            "ranked_guesses": [
+              "spot",
+              "point"
+            ],
+            "rationale": "'mark' strongly associates with 'spot' (as in a mark/spot) and 'point' (as in a point/mark). Both are common associations and fit the clue count of 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "point": 0.85,
+              "spot": 0.75
+            },
+            "ranked_guesses": [
+              "point",
+              "spot"
+            ],
+            "rationale": "Clue 'mark' with count 2 suggests two words directly related to marking. 'point' is the strongest association (as in a score/point), followed by 'spot' (as in a stain/mark). Both remain unrevealed and fit the clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.75,
+              "point": 0.7
+            },
+            "ranked_guesses": [
+              "foot",
+              "point"
+            ],
+            "rationale": "'mark' could refer to 'footprint' (foot) and 'point mark' (point), both fitting the count of 2. These are the most plausible unrevealed words that connect to the clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "point"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mark",
+          "count": 2,
+          "rationale": "Connects 'point' (as in a mark on a page) and 'spot' (as in a mark or stain) without risking neutral, assassin, or opponent words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "reading"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "paper": 0.75,
+              "school": 0.75
+            },
+            "ranked_guesses": [
+              "paper",
+              "school"
+            ],
+            "rationale": "reading suggests paper to read and school where reading occurs",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "paper": 0.75
+            },
+            "ranked_guesses": [
+              "paper"
+            ],
+            "rationale": "Reading suggests something you read; paper is a common reading material and likely a red word.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "paper": 0.85
+            },
+            "ranked_guesses": [
+              "paper"
+            ],
+            "rationale": "Reading suggests paper or books; paper is on board and fits the clue best",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "paper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "reading",
+          "count": 2,
+          "rationale": "Both 'paper' and 'school' are associated with reading"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "support"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.88,
+              "pole": 0.92,
+              "spine": 0.9
+            },
+            "ranked_guesses": [
+              "pole",
+              "spine",
+              "foot"
+            ],
+            "rationale": "'support' likely refers to physical structural support. 'pole', 'spine', and 'foot' all directly relate to support structures in different contexts.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.55,
+              "foot": 0.85,
+              "pole": 0.9,
+              "root": 0.6,
+              "spine": 0.8
+            },
+            "ranked_guesses": [
+              "pole",
+              "foot",
+              "spine",
+              "root",
+              "battery"
+            ],
+            "rationale": "Pole, foot, and spine are direct physical support structures. Root has botanical support meaning, battery provides power support.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.85,
+              "pole": 0.8,
+              "shoe": 0.85
+            },
+            "ranked_guesses": [
+              "foot",
+              "shoe",
+              "pole"
+            ],
+            "rationale": "The clue 'support' with count 3 suggests three blue words related to structural, physical, or functional support. 'foot' and 'shoe' are strongly associated with footwear support (arch support), and 'pole' commonly refers to a support structure. These are the most direct connections to the clue among remaining words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pole"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "support",
+          "count": 3,
+          "rationale": "All three remaining blue words (hospital, shoe, spine) relate to 'support' - healthcare support, shoe arch support, and spinal support."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "transport"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "car": 0.78,
+              "horse": 0.65
+            },
+            "ranked_guesses": [
+              "car",
+              "horse"
+            ],
+            "rationale": "Both are common means of transport and fit the clue count of 2.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "car": 0.85,
+              "horse": 0.75
+            },
+            "ranked_guesses": [
+              "car",
+              "horse"
+            ],
+            "rationale": "Both are classic means of transport; car is obvious, horse is another transport option.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "car"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "horse"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "transport",
+          "count": 2,
+          "rationale": "Both a car and a school involve transport (a vehicle and school transport)."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "support"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.75,
+              "root": 0.8,
+              "spine": 0.85
+            },
+            "ranked_guesses": [
+              "spine",
+              "root",
+              "foot"
+            ],
+            "rationale": "'Spine' and 'root' directly relate to physical support (body structure and plant anchoring). 'Foot' supports body weight. All fit the 'support' clue with count 3 and remain unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "foot"
+            ],
+            "rationale": "'foot' directly relates to physical support and is a common association with 'support'. Other remaining words like 'root' or 'spine' are less directly connected.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.8,
+              "root": 0.7,
+              "spine": 0.9
+            },
+            "ranked_guesses": [
+              "spine",
+              "foot",
+              "root"
+            ],
+            "rationale": "'support' most directly relates to structural support items. 'spine' is the strongest literal connection, followed by 'foot' and 'root' as common support structures.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "foot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "support",
+          "count": 3,
+          "rationale": "Connects to hospital (medical support), shoe (foot support), and spine (back support) without matching any board words or being a substring of any remaining word."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mythology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.92,
+              "figure": 0.78,
+              "gold": 0.75
+            },
+            "ranked_guesses": [
+              "atlantis",
+              "figure",
+              "gold"
+            ],
+            "rationale": "Atlantis is a famous mythic place; mythological figures (heroes/gods) fit 'figure'; gold relates to myths like King Midas",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.85
+            },
+            "ranked_guesses": [
+              "atlantis"
+            ],
+            "rationale": "Atlantis is a famous mythological lost city, fitting the clue 'mythology' for a red agent.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.85
+            },
+            "ranked_guesses": [
+              "atlantis"
+            ],
+            "rationale": "Atlantis is a famous mythological lost city, fitting the clue 'mythology'.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlantis"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythology",
+          "count": 3,
+          "rationale": "Atlantis is a myth, school teaches mythology, and many plays are based on myths"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "part"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spine": 0.85
+            },
+            "ranked_guesses": [
+              "spine"
+            ],
+            "rationale": "'part' strongly suggests body parts, and 'spine' is a clear body part that fits the clue and hasn't been revealed yet. Other remaining words like 'root' or 'pole' are less directly associated with 'part'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.75,
+              "root": 0.6,
+              "soul": 0.5
+            },
+            "ranked_guesses": [
+              "battery",
+              "root",
+              "soul"
+            ],
+            "rationale": "'battery' is a clear component/part of a device. 'root' is a part of a plant. 'soul' is a less direct but possible interpretation of 'part'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "root": 0.9,
+              "shoe": 0.8,
+              "spine": 0.8
+            },
+            "ranked_guesses": [
+              "root",
+              "shoe",
+              "spine"
+            ],
+            "rationale": "Clue 'part' strongly matches unrevealed words root (plant part), shoe (object part), and spine (body part)",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spine"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "root"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "part",
+          "count": 3,
+          "rationale": "Connects to hospital (as a part of medical care), shoe (as a part of footwear), and spine (as a part of the body)."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

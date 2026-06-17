@@ -1,0 +1,2212 @@
+{
+  "board": {
+    "identities": {
+      "alien": "blue",
+      "atlantis": "blue",
+      "change": "blue",
+      "church": "blue",
+      "cycle": "neutral",
+      "engine": "red",
+      "fighter": "red",
+      "file": "neutral",
+      "fly": "red",
+      "fork": "blue",
+      "grace": "neutral",
+      "grass": "red",
+      "key": "assassin",
+      "lemon": "blue",
+      "leprechaun": "red",
+      "litter": "neutral",
+      "oil": "neutral",
+      "satellite": "red",
+      "tap": "red",
+      "time": "red",
+      "vacuum": "neutral",
+      "vet": "neutral",
+      "wake": "red",
+      "water": "blue",
+      "whip": "blue"
+    },
+    "revealed": [
+      "atlantis",
+      "change",
+      "church",
+      "cycle",
+      "engine",
+      "fighter",
+      "fly",
+      "fork",
+      "grass",
+      "lemon",
+      "leprechaun",
+      "satellite",
+      "tap",
+      "time",
+      "vacuum",
+      "wake",
+      "water"
+    ],
+    "words": {
+      "alien": "blue",
+      "atlantis": "blue",
+      "change": "blue",
+      "church": "blue",
+      "cycle": "neutral",
+      "engine": "red",
+      "fighter": "red",
+      "file": "neutral",
+      "fly": "red",
+      "fork": "blue",
+      "grace": "neutral",
+      "grass": "red",
+      "key": "assassin",
+      "lemon": "blue",
+      "leprechaun": "red",
+      "litter": "neutral",
+      "oil": "neutral",
+      "satellite": "red",
+      "tap": "red",
+      "time": "red",
+      "vacuum": "neutral",
+      "vet": "neutral",
+      "wake": "red",
+      "water": "blue",
+      "whip": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "jet",
+        "count": 4,
+        "rationale": "Aircraft/flight theme aiming at multiple red concepts."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "fighter": 0.8,
+          "fly": 0.8,
+          "water": 0.8
+        },
+        "ranked_guesses": [
+          "engine",
+          "fighter",
+          "fly",
+          "water"
+        ],
+        "rationale": "Jet strongly links to engine and fighter; 'fly' is inherent to jet travel; 'water' as in water jet.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "fighter": 0.8,
+          "fly": 0.8,
+          "wake": 0.8
+        },
+        "ranked_guesses": [
+          "fighter",
+          "engine",
+          "fly",
+          "wake"
+        ],
+        "rationale": "Jet-related words: fighter jet, jet engine, jets fly, wake turbulence.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.9,
+          "fighter": 0.85,
+          "fly": 0.75,
+          "water": 0.7
+        },
+        "ranked_guesses": [
+          "engine",
+          "fighter",
+          "fly",
+          "water"
+        ],
+        "rationale": "Jet theme: engine, fighter jet, fly, and water jet.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "catholic",
+        "count": 1,
+        "rationale": "Directly points to the blue word 'church' without overlapping any board word substrings."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.85
+        },
+        "ranked_guesses": [
+          "church"
+        ],
+        "rationale": "Catholic directly relates to church",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.92
+        },
+        "ranked_guesses": [
+          "church"
+        ],
+        "rationale": "Catholic directly points to church",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.85
+        },
+        "ranked_guesses": [
+          "church"
+        ],
+        "rationale": "Catholic relates directly to church",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "rocket",
+        "count": 2,
+        "rationale": "Space tech links engine and satellite."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.7,
+          "satellite": 0.85
+        },
+        "ranked_guesses": [
+          "satellite",
+          "atlantis"
+        ],
+        "rationale": "Highly rocket/space-themed words; satellite is a direct match, Atlantis is a space shuttle name.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.72,
+          "satellite": 0.88
+        },
+        "ranked_guesses": [
+          "satellite",
+          "atlantis"
+        ],
+        "rationale": "Both relate to rockets/space exploration: satellites are launched by rockets, Atlantis is a space shuttle name on the board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "satellite": 0.92,
+          "vacuum": 0.7
+        },
+        "ranked_guesses": [
+          "satellite",
+          "vacuum"
+        ],
+        "rationale": "These two unrevealed words strongly relate to rockets/space (satellite, vacuum).",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "key": 0.6
+        },
+        "ranked_guesses": [
+          "key"
+        ],
+        "rationale": "fallback often means a backup or reserve option, like a 'key' that unlocks an alternative route",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "key": 0.6
+        },
+        "ranked_guesses": [
+          "key"
+        ],
+        "rationale": "fallback suggests a backup or alternative, and a 'key' can be a backup key or spare.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "alarm",
+        "count": 2,
+        "rationale": "morning signal linking time and wake"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.65,
+          "wake": 0.92
+        },
+        "ranked_guesses": [
+          "wake",
+          "time"
+        ],
+        "rationale": "alarm commonly leads to waking up; also ties to time.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.75,
+          "wake": 0.8
+        },
+        "ranked_guesses": [
+          "wake",
+          "time"
+        ],
+        "rationale": "alarm directly relates to wake (alarm wakes you) and time (alarms are set for a time).",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.6,
+          "wake": 0.9
+        },
+        "ranked_guesses": [
+          "wake",
+          "time"
+        ],
+        "rationale": "Wake up is the most direct link to alarm; time is a plausible secondary link via clocks/alarms.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "citrus",
+        "count": 1,
+        "rationale": "lemon is a citrus fruit"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lemon": 0.92
+        },
+        "ranked_guesses": [
+          "lemon"
+        ],
+        "rationale": "citrus directly points to lemon, the only citrus word on the board",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lemon": 0.92
+        },
+        "ranked_guesses": [
+          "lemon"
+        ],
+        "rationale": "citrus directly points to lemon, the only citrus word on board",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lemon": 0.92
+        },
+        "ranked_guesses": [
+          "lemon"
+        ],
+        "rationale": "citrus directly points to lemon, the only citrus word on the board",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "green",
+        "count": 4,
+        "rationale": "Links grass and leprechaun (green color); also hints at time via Greenwich Mean Time."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.8
+        },
+        "ranked_guesses": [
+          "alien"
+        ],
+        "rationale": "green -> alien (green aliens)",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.8
+        },
+        "ranked_guesses": [
+          "grass"
+        ],
+        "rationale": "Directly connected to the color green (grass is green).",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "grass"
+        ],
+        "rationale": "Grass is a direct color association with green, making it a strong guess for the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "science",
+        "count": 2,
+        "rationale": "Both 'alien' and 'change' can be linked to scientific concepts"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.74,
+          "vacuum": 0.78
+        },
+        "ranked_guesses": [
+          "vacuum",
+          "time"
+        ],
+        "rationale": "science clue points to concepts studied in physics like vacuum and time",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.75,
+          "vacuum": 0.75
+        },
+        "ranked_guesses": [
+          "vacuum",
+          "time"
+        ],
+        "rationale": "Both are strong science concepts (physics) and likely blue agents.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.74,
+          "vacuum": 0.78
+        },
+        "ranked_guesses": [
+          "vacuum",
+          "alien"
+        ],
+        "rationale": "Science clue points to concepts like physics (vacuum, time) and extraterrestrials (alien); vacuum is a strong science term and likely one of the two targets.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "green",
+        "count": 2,
+        "rationale": "Links two remaining red words via common phrases."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.8,
+          "leprechaun": 0.8
+        },
+        "ranked_guesses": [
+          "grass",
+          "leprechaun"
+        ],
+        "rationale": "Grass is directly green; leprechaun is culturally tied to green.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.8,
+          "leprechaun": 0.8
+        },
+        "ranked_guesses": [
+          "grass",
+          "leprechaun"
+        ],
+        "rationale": "Two strongest green associations among unrevealed words: grass (green) and leprechaun (Irish symbol tied to the color green).",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.8,
+          "leprechaun": 0.8
+        },
+        "ranked_guesses": [
+          "grass",
+          "leprechaun"
+        ],
+        "rationale": "grass is directly green; leprechaun is strongly associated with the color green",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "evolution",
+        "count": 2,
+        "rationale": "Both 'alien' (evolutionary speculation) and 'change' (the act of evolving) fit the hint."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.85,
+          "cycle": 0.82
+        },
+        "ranked_guesses": [
+          "change",
+          "cycle"
+        ],
+        "rationale": "Evolution implies change and cycles of development; both words fit the clue well.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.78,
+          "cycle": 0.74
+        },
+        "ranked_guesses": [
+          "change",
+          "cycle"
+        ],
+        "rationale": "Evolution implies gradual change and biological cycles",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "change": 0.85,
+          "cycle": 0.78
+        },
+        "ranked_guesses": [
+          "change",
+          "cycle"
+        ],
+        "rationale": "Evolution suggests things that develop over time; 'change' and 'cycle' are strongly linked concepts.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "clock",
+        "count": 1,
+        "rationale": "time-related cue"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.8
+        },
+        "ranked_guesses": [
+          "time"
+        ],
+        "rationale": "clock strongly suggests time; time is an unrevealed board word.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.8
+        },
+        "ranked_guesses": [
+          "time"
+        ],
+        "rationale": "clock directly relates to time",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "time": 0.8
+        },
+        "ranked_guesses": [
+          "time"
+        ],
+        "rationale": "clock -> time is the most direct association",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "spaghetti",
+        "count": 3,
+        "rationale": "spaghetti is eaten with a fork, featured in alien movies, and often topped with whipped cream"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.55,
+          "fork": 0.85,
+          "oil": 0.6
+        },
+        "ranked_guesses": [
+          "fork",
+          "oil",
+          "alien"
+        ],
+        "rationale": "fork for eating spaghetti, oil used in cooking, Flying Spaghetti Monster suggests alien-like entity",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.55,
+          "fork": 0.78,
+          "oil": 0.65
+        },
+        "ranked_guesses": [
+          "fork",
+          "oil",
+          "alien"
+        ],
+        "rationale": "Spaghetti is eaten with a fork, cooked with oil, and the Flying Spaghetti Monster hints at alien-like beings.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "faucet",
+        "count": 1,
+        "rationale": "connects to a water tap"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tap": 0.8
+        },
+        "ranked_guesses": [
+          "tap"
+        ],
+        "rationale": "faucet is a synonym of tap; points to the unrevealed tile 'tap'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tap": 0.8
+        },
+        "ranked_guesses": [
+          "tap"
+        ],
+        "rationale": "Direct synonym of faucet; matches the unrevealed 'tap' on the board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tap": 0.85
+        },
+        "ranked_guesses": [
+          "tap"
+        ],
+        "rationale": "Faucet is directly synonymous with tap; the only strong match among unrevealed words.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "jet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "engine"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "fighter"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "fly"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "water"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "catholic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "church"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rocket"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "satellite"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlantis"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "alarm"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "wake"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "citrus"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "lemon"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "green"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "vacuum"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "green"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "grass"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "leprechaun"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "evolution"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "change"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "cycle"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "clock"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "time"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "spaghetti"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fork"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "faucet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "tap"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 52,
+    "public_event_count": 38,
+    "reason": "all_words_found",
+    "seed": "top4-single-round-robin-004-openai_gpt_5_nano-vs-openai_gpt_oss_120b",
+    "team_blue": "GPT-OSS 120B",
+    "team_red": "GPT-5 Nano",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "jet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "fighter": 0.8,
+              "fly": 0.8,
+              "water": 0.8
+            },
+            "ranked_guesses": [
+              "engine",
+              "fighter",
+              "fly",
+              "water"
+            ],
+            "rationale": "Jet strongly links to engine and fighter; 'fly' is inherent to jet travel; 'water' as in water jet.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "fighter": 0.8,
+              "fly": 0.8,
+              "wake": 0.8
+            },
+            "ranked_guesses": [
+              "fighter",
+              "engine",
+              "fly",
+              "wake"
+            ],
+            "rationale": "Jet-related words: fighter jet, jet engine, jets fly, wake turbulence.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.9,
+              "fighter": 0.85,
+              "fly": 0.75,
+              "water": 0.7
+            },
+            "ranked_guesses": [
+              "engine",
+              "fighter",
+              "fly",
+              "water"
+            ],
+            "rationale": "Jet theme: engine, fighter jet, fly, and water jet.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "engine"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "fighter"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "fly"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "water"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "jet",
+          "count": 4,
+          "rationale": "Aircraft/flight theme aiming at multiple red concepts."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "catholic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "church": 0.85
+            },
+            "ranked_guesses": [
+              "church"
+            ],
+            "rationale": "Catholic directly relates to church",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "church": 0.92
+            },
+            "ranked_guesses": [
+              "church"
+            ],
+            "rationale": "Catholic directly points to church",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "church": 0.85
+            },
+            "ranked_guesses": [
+              "church"
+            ],
+            "rationale": "Catholic relates directly to church",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "church"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "catholic",
+          "count": 1,
+          "rationale": "Directly points to the blue word 'church' without overlapping any board word substrings."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rocket"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.7,
+              "satellite": 0.85
+            },
+            "ranked_guesses": [
+              "satellite",
+              "atlantis"
+            ],
+            "rationale": "Highly rocket/space-themed words; satellite is a direct match, Atlantis is a space shuttle name.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.72,
+              "satellite": 0.88
+            },
+            "ranked_guesses": [
+              "satellite",
+              "atlantis"
+            ],
+            "rationale": "Both relate to rockets/space exploration: satellites are launched by rockets, Atlantis is a space shuttle name on the board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "satellite": 0.92,
+              "vacuum": 0.7
+            },
+            "ranked_guesses": [
+              "satellite",
+              "vacuum"
+            ],
+            "rationale": "These two unrevealed words strongly relate to rockets/space (satellite, vacuum).",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "satellite"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlantis"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "rocket",
+          "count": 2,
+          "rationale": "Space tech links engine and satellite."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "key": 0.6
+            },
+            "ranked_guesses": [
+              "key"
+            ],
+            "rationale": "fallback often means a backup or reserve option, like a 'key' that unlocks an alternative route",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "key": 0.6
+            },
+            "ranked_guesses": [
+              "key"
+            ],
+            "rationale": "fallback suggests a backup or alternative, and a 'key' can be a backup key or spare.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "alarm"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "time": 0.65,
+              "wake": 0.92
+            },
+            "ranked_guesses": [
+              "wake",
+              "time"
+            ],
+            "rationale": "alarm commonly leads to waking up; also ties to time.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "time": 0.75,
+              "wake": 0.8
+            },
+            "ranked_guesses": [
+              "wake",
+              "time"
+            ],
+            "rationale": "alarm directly relates to wake (alarm wakes you) and time (alarms are set for a time).",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "time": 0.6,
+              "wake": 0.9
+            },
+            "ranked_guesses": [
+              "wake",
+              "time"
+            ],
+            "rationale": "Wake up is the most direct link to alarm; time is a plausible secondary link via clocks/alarms.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "wake"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "alarm",
+          "count": 2,
+          "rationale": "morning signal linking time and wake"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "citrus"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lemon": 0.92
+            },
+            "ranked_guesses": [
+              "lemon"
+            ],
+            "rationale": "citrus directly points to lemon, the only citrus word on the board",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lemon": 0.92
+            },
+            "ranked_guesses": [
+              "lemon"
+            ],
+            "rationale": "citrus directly points to lemon, the only citrus word on board",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lemon": 0.92
+            },
+            "ranked_guesses": [
+              "lemon"
+            ],
+            "rationale": "citrus directly points to lemon, the only citrus word on the board",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "lemon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "citrus",
+          "count": 1,
+          "rationale": "lemon is a citrus fruit"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "green"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.8
+            },
+            "ranked_guesses": [
+              "alien"
+            ],
+            "rationale": "green -> alien (green aliens)",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.8
+            },
+            "ranked_guesses": [
+              "grass"
+            ],
+            "rationale": "Directly connected to the color green (grass is green).",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "grass"
+            ],
+            "rationale": "Grass is a direct color association with green, making it a strong guess for the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "green",
+          "count": 4,
+          "rationale": "Links grass and leprechaun (green color); also hints at time via Greenwich Mean Time."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "time": 0.74,
+              "vacuum": 0.78
+            },
+            "ranked_guesses": [
+              "vacuum",
+              "time"
+            ],
+            "rationale": "science clue points to concepts studied in physics like vacuum and time",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "time": 0.75,
+              "vacuum": 0.75
+            },
+            "ranked_guesses": [
+              "vacuum",
+              "time"
+            ],
+            "rationale": "Both are strong science concepts (physics) and likely blue agents.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.74,
+              "vacuum": 0.78
+            },
+            "ranked_guesses": [
+              "vacuum",
+              "alien"
+            ],
+            "rationale": "Science clue points to concepts like physics (vacuum, time) and extraterrestrials (alien); vacuum is a strong science term and likely one of the two targets.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "vacuum"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "science",
+          "count": 2,
+          "rationale": "Both 'alien' and 'change' can be linked to scientific concepts"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "green"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.8,
+              "leprechaun": 0.8
+            },
+            "ranked_guesses": [
+              "grass",
+              "leprechaun"
+            ],
+            "rationale": "Grass is directly green; leprechaun is culturally tied to green.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.8,
+              "leprechaun": 0.8
+            },
+            "ranked_guesses": [
+              "grass",
+              "leprechaun"
+            ],
+            "rationale": "Two strongest green associations among unrevealed words: grass (green) and leprechaun (Irish symbol tied to the color green).",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.8,
+              "leprechaun": 0.8
+            },
+            "ranked_guesses": [
+              "grass",
+              "leprechaun"
+            ],
+            "rationale": "grass is directly green; leprechaun is strongly associated with the color green",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "grass"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "leprechaun"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "green",
+          "count": 2,
+          "rationale": "Links two remaining red words via common phrases."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "evolution"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "change": 0.85,
+              "cycle": 0.82
+            },
+            "ranked_guesses": [
+              "change",
+              "cycle"
+            ],
+            "rationale": "Evolution implies change and cycles of development; both words fit the clue well.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "change": 0.78,
+              "cycle": 0.74
+            },
+            "ranked_guesses": [
+              "change",
+              "cycle"
+            ],
+            "rationale": "Evolution implies gradual change and biological cycles",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "change": 0.85,
+              "cycle": 0.78
+            },
+            "ranked_guesses": [
+              "change",
+              "cycle"
+            ],
+            "rationale": "Evolution suggests things that develop over time; 'change' and 'cycle' are strongly linked concepts.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "change"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "cycle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "evolution",
+          "count": 2,
+          "rationale": "Both 'alien' (evolutionary speculation) and 'change' (the act of evolving) fit the hint."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "clock"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "time": 0.8
+            },
+            "ranked_guesses": [
+              "time"
+            ],
+            "rationale": "clock strongly suggests time; time is an unrevealed board word.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "time": 0.8
+            },
+            "ranked_guesses": [
+              "time"
+            ],
+            "rationale": "clock directly relates to time",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "time": 0.8
+            },
+            "ranked_guesses": [
+              "time"
+            ],
+            "rationale": "clock -> time is the most direct association",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "time"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "clock",
+          "count": 1,
+          "rationale": "time-related cue"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "spaghetti"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.55,
+              "fork": 0.85,
+              "oil": 0.6
+            },
+            "ranked_guesses": [
+              "fork",
+              "oil",
+              "alien"
+            ],
+            "rationale": "fork for eating spaghetti, oil used in cooking, Flying Spaghetti Monster suggests alien-like entity",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.55,
+              "fork": 0.78,
+              "oil": 0.65
+            },
+            "ranked_guesses": [
+              "fork",
+              "oil",
+              "alien"
+            ],
+            "rationale": "Spaghetti is eaten with a fork, cooked with oil, and the Flying Spaghetti Monster hints at alien-like beings.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fork"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spaghetti",
+          "count": 3,
+          "rationale": "spaghetti is eaten with a fork, featured in alien movies, and often topped with whipped cream"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "faucet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "tap": 0.8
+            },
+            "ranked_guesses": [
+              "tap"
+            ],
+            "rationale": "faucet is a synonym of tap; points to the unrevealed tile 'tap'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tap": 0.8
+            },
+            "ranked_guesses": [
+              "tap"
+            ],
+            "rationale": "Direct synonym of faucet; matches the unrevealed 'tap' on the board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tap": 0.85
+            },
+            "ranked_guesses": [
+              "tap"
+            ],
+            "rationale": "Faucet is directly synonymous with tap; the only strong match among unrevealed words.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "tap"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "faucet",
+          "count": 1,
+          "rationale": "connects to a water tap"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

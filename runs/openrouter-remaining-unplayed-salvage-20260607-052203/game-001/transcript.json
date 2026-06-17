@@ -1,0 +1,1409 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "red",
+      "animal": "blue",
+      "autumn": "blue",
+      "circle": "neutral",
+      "cloud": "blue",
+      "dancer": "blue",
+      "engine": "red",
+      "fox": "neutral",
+      "galaxy": "assassin",
+      "highway": "blue",
+      "hunter": "red",
+      "leather": "neutral",
+      "machine": "red",
+      "magnet": "blue",
+      "memory": "red",
+      "mystery": "neutral",
+      "nurse": "red",
+      "sailor": "neutral",
+      "spider": "neutral",
+      "spring": "neutral",
+      "storm": "red",
+      "teacher": "blue",
+      "travel": "blue",
+      "village": "red"
+    },
+    "revealed": [
+      "autumn",
+      "engine",
+      "galaxy",
+      "machine",
+      "magnet",
+      "nurse",
+      "teacher"
+    ],
+    "words": {
+      "agent": "red",
+      "alien": "red",
+      "animal": "blue",
+      "autumn": "blue",
+      "circle": "neutral",
+      "cloud": "blue",
+      "dancer": "blue",
+      "engine": "red",
+      "fox": "neutral",
+      "galaxy": "assassin",
+      "highway": "blue",
+      "hunter": "red",
+      "leather": "neutral",
+      "machine": "red",
+      "magnet": "blue",
+      "memory": "red",
+      "mystery": "neutral",
+      "nurse": "red",
+      "sailor": "neutral",
+      "spider": "neutral",
+      "spring": "neutral",
+      "storm": "red",
+      "teacher": "blue",
+      "travel": "blue",
+      "village": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "fallback contains 'fall', which is a synonym for autumn; this is the most direct connection.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "'Fallback' contains 'fall', a synonym for autumn. The count is 1, so likely the clue refers to 'autumn'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "'Fallback' contains 'fall', a direct synonym for autumn, making it the most likely target.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "education",
+        "count": 2,
+        "rationale": "Connects to 'teacher' and 'nurse' (both red) via common associations, while avoiding direct matches or substrings of board words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.4,
+          "machine": 0.5,
+          "memory": 0.6,
+          "nurse": 0.7,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "nurse",
+          "memory",
+          "machine",
+          "engine"
+        ],
+        "rationale": "'education' strongly suggests 'teacher' as the most direct association. 'nurse' is plausible but less directly linked. Other words are weaker fits.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.6,
+          "machine": 0.65,
+          "memory": 0.7,
+          "nurse": 0.75,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "nurse",
+          "memory",
+          "machine",
+          "engine"
+        ],
+        "rationale": "The clue 'education' strongly suggests 'teacher' as the most likely match. Other plausible words like 'nurse' (education in healthcare) or 'memory' (education-related) are less directly connected. 'Machine' and 'engine' are weaker fits but included for completeness.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "memory": 0.6,
+          "nurse": 0.7,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "nurse",
+          "memory"
+        ],
+        "rationale": "'education' strongly suggests 'teacher' as the most direct association. 'nurse' and 'memory' are secondary possibilities due to indirect links (school nurses, memory as learning).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spring": 0.8
+        },
+        "ranked_guesses": [
+          "spring"
+        ],
+        "rationale": "The clue 'fallback' suggests 'spring' due to the phrase 'spring forward, fall back' for daylight saving time. The previous incorrect guess 'autumn' was a season, so 'spring' is the opposite season and likely intended.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "education",
+        "count": 2,
+        "rationale": "Targets remaining blue words like 'teacher' and 'dancer' while avoiding red/assassin words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "book": 0.65,
+          "school": 0.85,
+          "student": 0.75
+        },
+        "ranked_guesses": [
+          "school",
+          "student",
+          "book"
+        ],
+        "rationale": "Clue 'education' strongly suggests words related to learning or institutions. 'school' and 'student' are direct fits, while 'book' is a broader association.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.7,
+          "magnet": 0.75,
+          "memory": 0.65
+        },
+        "ranked_guesses": [
+          "magnet",
+          "machine",
+          "memory"
+        ],
+        "rationale": "Education relates to learning tools or processes. 'Magnet' and 'machine' are strong associations, while 'memory' is a weaker but plausible link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "book": 0.75,
+          "school": 0.9,
+          "student": 0.85
+        },
+        "ranked_guesses": [
+          "school",
+          "student",
+          "book"
+        ],
+        "rationale": "Education strongly relates to school, student, and book. School is the most direct association, followed by student (someone receiving education), and book (a tool for education).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.4,
+          "spring": 0.6
+        },
+        "ranked_guesses": [
+          "spring",
+          "agent"
+        ],
+        "rationale": "Fallback can mean a backup plan or a mechanical spring that returns to position; spring also contrasts with autumn. Agent is a backup operative.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spring": 0.7
+        },
+        "ranked_guesses": [
+          "spring"
+        ],
+        "rationale": "'fallback' may refer to a season that follows fall; autumn was guessed incorrectly, so spring is a plausible red word.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "school",
+        "count": 2,
+        "rationale": "Connects to 'teacher' (already revealed) and 'nurse' (red, but 'school' is a strong hint for 'teacher' and loosely associated with 'nurse' as a profession). Avoids direct matches with board words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.75,
+          "engine": 0.7,
+          "memory": 0.65
+        },
+        "ranked_guesses": [
+          "circle",
+          "engine",
+          "memory"
+        ],
+        "rationale": "Clue 'school' with count 2 suggests two words related to education. 'teacher' and 'autumn' are already revealed as blue, so remaining plausible words are 'circle' (as in school circle), 'engine' (as in school of thought), and 'memory' (as in school of memory).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "class": 0.7,
+          "principal": 0.75,
+          "student": 0.85
+        },
+        "ranked_guesses": [
+          "student",
+          "principal",
+          "class"
+        ],
+        "rationale": "Clue 'school' with count 2 suggests two words strongly related to school. 'student' and 'principal' are direct roles, while 'class' is a broader term.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "principal": 0.7,
+          "pupil": 0.85,
+          "student": 0.9
+        },
+        "ranked_guesses": [
+          "student",
+          "pupil",
+          "principal"
+        ],
+        "rationale": "Clue 'school' with count 2 suggests two words strongly related to school. 'student' and 'pupil' are direct associations, while 'principal' is a less common but still valid link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mechanical",
+        "count": 2,
+        "rationale": "Engine and machine are both mechanical devices, forming a safe pair of red words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.9,
+          "machine": 0.9
+        },
+        "ranked_guesses": [
+          "machine",
+          "engine"
+        ],
+        "rationale": "machine and engine are directly mechanical; other words less likely.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.9,
+          "machine": 0.9
+        },
+        "ranked_guesses": [
+          "engine",
+          "machine"
+        ],
+        "rationale": "Both 'engine' and 'machine' are directly related to 'mechanical'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.8,
+          "machine": 0.9
+        },
+        "ranked_guesses": [
+          "machine",
+          "engine"
+        ],
+        "rationale": "Machine and engine are directly related to 'mechanical' as common mechanical devices or concepts.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "magnet",
+        "count": 2,
+        "rationale": "Connects to 'magnet' (blue) and 'highway' (blue), while avoiding direct overlaps with revealed words like 'teacher' or 'nurse'."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "The clue 'fallback' suggests a backup or secondary option; 'agent' fits this as a common term for a backup agent or operative. Other possibilities like 'spring' or 'memory' are less direct given the context of previous mechanical clues.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.6
+        },
+        "ranked_guesses": [
+          "circle"
+        ],
+        "rationale": "'Fallback' suggests a retreat or backup, and 'circle' connects to 'circle back', a phrase meaning to return or fall back.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "force",
+        "count": 3,
+        "rationale": "Connects to 'magnet' (blue), 'highway' (blue), and 'storm' (red) without overlapping revealed words like 'teacher' or 'nurse'."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.6,
+          "galaxy": 0.7,
+          "magnet": 0.75,
+          "storm": 0.65
+        },
+        "ranked_guesses": [
+          "magnet",
+          "galaxy",
+          "storm",
+          "cloud"
+        ],
+        "rationale": "Clue 'force' likely connects to physics-related words. 'magnet' fits as a strong physics term, while 'galaxy' and 'storm' are loosely related. 'cloud' is a weaker fit but included for variety.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.65,
+          "magnet": 0.75,
+          "storm": 0.6
+        },
+        "ranked_guesses": [
+          "magnet",
+          "galaxy",
+          "storm"
+        ],
+        "rationale": "Clue 'force' likely connects to 'magnet' (magnetic force) and 'galaxy' (gravitational force). 'Storm' is a stretch but possible (force of nature). Avoiding 'highway' (force as in 'highway patrol' is weak) and 'cloud' (force as in 'cloud computing' is unrelated).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.65,
+          "galaxy": 0.75,
+          "magnet": 0.7
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "magnet",
+          "cloud"
+        ],
+        "rationale": "Force likely connects to physics-related words like 'galaxy' (space/force) or 'magnet' (magnetic force). 'Cloud' is a weaker but possible stretch.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nurse"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "school"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mechanical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "engine"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "magnet",
+        "count": 2,
+        "rationale": "Connects to 'magnet' (blue) and 'highway' (blue), while avoiding direct overlaps with revealed words like 'teacher' or 'nurse'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "magnet",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "force"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "galaxy"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 37,
+    "public_event_count": 23,
+    "reason": "assassin",
+    "seed": "salvage-001-deepseek_deepseek_v4_flash-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "DeepSeek V4 Flash",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "fallback contains 'fall', which is a synonym for autumn; this is the most direct connection.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "'Fallback' contains 'fall', a synonym for autumn. The count is 1, so likely the clue refers to 'autumn'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "'Fallback' contains 'fall', a direct synonym for autumn, making it the most likely target.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.4,
+              "machine": 0.5,
+              "memory": 0.6,
+              "nurse": 0.7,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "nurse",
+              "memory",
+              "machine",
+              "engine"
+            ],
+            "rationale": "'education' strongly suggests 'teacher' as the most direct association. 'nurse' is plausible but less directly linked. Other words are weaker fits.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.6,
+              "machine": 0.65,
+              "memory": 0.7,
+              "nurse": 0.75,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "nurse",
+              "memory",
+              "machine",
+              "engine"
+            ],
+            "rationale": "The clue 'education' strongly suggests 'teacher' as the most likely match. Other plausible words like 'nurse' (education in healthcare) or 'memory' (education-related) are less directly connected. 'Machine' and 'engine' are weaker fits but included for completeness.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "memory": 0.6,
+              "nurse": 0.7,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "nurse",
+              "memory"
+            ],
+            "rationale": "'education' strongly suggests 'teacher' as the most direct association. 'nurse' and 'memory' are secondary possibilities due to indirect links (school nurses, memory as learning).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nurse"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "education",
+          "count": 2,
+          "rationale": "Connects to 'teacher' and 'nurse' (both red) via common associations, while avoiding direct matches or substrings of board words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spring": 0.8
+            },
+            "ranked_guesses": [
+              "spring"
+            ],
+            "rationale": "The clue 'fallback' suggests 'spring' due to the phrase 'spring forward, fall back' for daylight saving time. The previous incorrect guess 'autumn' was a season, so 'spring' is the opposite season and likely intended.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "book": 0.65,
+              "school": 0.85,
+              "student": 0.75
+            },
+            "ranked_guesses": [
+              "school",
+              "student",
+              "book"
+            ],
+            "rationale": "Clue 'education' strongly suggests words related to learning or institutions. 'school' and 'student' are direct fits, while 'book' is a broader association.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "machine": 0.7,
+              "magnet": 0.75,
+              "memory": 0.65
+            },
+            "ranked_guesses": [
+              "magnet",
+              "machine",
+              "memory"
+            ],
+            "rationale": "Education relates to learning tools or processes. 'Magnet' and 'machine' are strong associations, while 'memory' is a weaker but plausible link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "book": 0.75,
+              "school": 0.9,
+              "student": 0.85
+            },
+            "ranked_guesses": [
+              "school",
+              "student",
+              "book"
+            ],
+            "rationale": "Education strongly relates to school, student, and book. School is the most direct association, followed by student (someone receiving education), and book (a tool for education).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "education",
+          "count": 2,
+          "rationale": "Targets remaining blue words like 'teacher' and 'dancer' while avoiding red/assassin words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.4,
+              "spring": 0.6
+            },
+            "ranked_guesses": [
+              "spring",
+              "agent"
+            ],
+            "rationale": "Fallback can mean a backup plan or a mechanical spring that returns to position; spring also contrasts with autumn. Agent is a backup operative.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spring": 0.7
+            },
+            "ranked_guesses": [
+              "spring"
+            ],
+            "rationale": "'fallback' may refer to a season that follows fall; autumn was guessed incorrectly, so spring is a plausible red word.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "school"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.75,
+              "engine": 0.7,
+              "memory": 0.65
+            },
+            "ranked_guesses": [
+              "circle",
+              "engine",
+              "memory"
+            ],
+            "rationale": "Clue 'school' with count 2 suggests two words related to education. 'teacher' and 'autumn' are already revealed as blue, so remaining plausible words are 'circle' (as in school circle), 'engine' (as in school of thought), and 'memory' (as in school of memory).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "class": 0.7,
+              "principal": 0.75,
+              "student": 0.85
+            },
+            "ranked_guesses": [
+              "student",
+              "principal",
+              "class"
+            ],
+            "rationale": "Clue 'school' with count 2 suggests two words strongly related to school. 'student' and 'principal' are direct roles, while 'class' is a broader term.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "principal": 0.7,
+              "pupil": 0.85,
+              "student": 0.9
+            },
+            "ranked_guesses": [
+              "student",
+              "pupil",
+              "principal"
+            ],
+            "rationale": "Clue 'school' with count 2 suggests two words strongly related to school. 'student' and 'pupil' are direct associations, while 'principal' is a less common but still valid link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "school",
+          "count": 2,
+          "rationale": "Connects to 'teacher' (already revealed) and 'nurse' (red, but 'school' is a strong hint for 'teacher' and loosely associated with 'nurse' as a profession). Avoids direct matches with board words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mechanical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.9,
+              "machine": 0.9
+            },
+            "ranked_guesses": [
+              "machine",
+              "engine"
+            ],
+            "rationale": "machine and engine are directly mechanical; other words less likely.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.9,
+              "machine": 0.9
+            },
+            "ranked_guesses": [
+              "engine",
+              "machine"
+            ],
+            "rationale": "Both 'engine' and 'machine' are directly related to 'mechanical'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.8,
+              "machine": 0.9
+            },
+            "ranked_guesses": [
+              "machine",
+              "engine"
+            ],
+            "rationale": "Machine and engine are directly related to 'mechanical' as common mechanical devices or concepts.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "engine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mechanical",
+          "count": 2,
+          "rationale": "Engine and machine are both mechanical devices, forming a safe pair of red words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "force"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "galaxy"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "magnet",
+          "count": 2,
+          "rationale": "Connects to 'magnet' (blue) and 'highway' (blue), while avoiding direct overlaps with revealed words like 'teacher' or 'nurse'."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

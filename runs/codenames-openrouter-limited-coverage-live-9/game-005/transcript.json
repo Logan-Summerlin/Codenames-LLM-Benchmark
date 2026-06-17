@@ -1,0 +1,273 @@
+{
+  "board": {
+    "identities": {
+      "antarctica": "red",
+      "bark": "red",
+      "bill": "red",
+      "bond": "blue",
+      "boom": "blue",
+      "bridge": "red",
+      "buffalo": "red",
+      "bug": "assassin",
+      "bugle": "red",
+      "centaur": "blue",
+      "cloak": "neutral",
+      "cross": "blue",
+      "cycle": "red",
+      "eagle": "blue",
+      "face": "blue",
+      "fall": "neutral",
+      "kiwi": "red",
+      "new york": "neutral",
+      "paper": "neutral",
+      "park": "neutral",
+      "roulette": "red",
+      "ruler": "neutral",
+      "shakespeare": "blue",
+      "square": "neutral",
+      "tag": "blue"
+    },
+    "revealed": [
+      "buffalo",
+      "bug"
+    ],
+    "words": {
+      "antarctica": "red",
+      "bark": "red",
+      "bill": "red",
+      "bond": "blue",
+      "boom": "blue",
+      "bridge": "red",
+      "buffalo": "red",
+      "bug": "assassin",
+      "bugle": "red",
+      "centaur": "blue",
+      "cloak": "neutral",
+      "cross": "blue",
+      "cycle": "red",
+      "eagle": "blue",
+      "face": "blue",
+      "fall": "neutral",
+      "kiwi": "red",
+      "new york": "neutral",
+      "paper": "neutral",
+      "park": "neutral",
+      "roulette": "red",
+      "ruler": "neutral",
+      "shakespeare": "blue",
+      "square": "neutral",
+      "tag": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "animal",
+        "count": 3,
+        "rationale": "I am cluing 'bark', 'buffalo', and 'kiwi', which are all associated with animals."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.95,
+          "bug": 0.9,
+          "eagle": 0.9,
+          "kiwi": 0.85
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "bug",
+          "eagle",
+          "kiwi"
+        ],
+        "rationale": "Buffalo, bug, eagle, and kiwi are all animals. I will guess the most obvious ones first.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.95,
+          "bug": 0.9,
+          "eagle": 0.9
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "bug",
+          "eagle"
+        ],
+        "rationale": "Buffalo, bug, and eagle are all clearly animals.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "buffalo": 0.95,
+          "bug": 0.9,
+          "eagle": 0.9
+        },
+        "ranked_guesses": [
+          "buffalo",
+          "bug",
+          "eagle"
+        ],
+        "rationale": "Buffalo, bug, and eagle are all clearly animals, fitting the clue 'animal' perfectly.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "buffalo"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "bug"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 3,
+    "reason": "assassin",
+    "seed": "codenames-live-9-005-google_gemini_3_1_flash_lite-vs-google_gemini_2_5_flash_lite",
+    "team_blue": "Gemini 2.5 Flash Lite",
+    "team_red": "Gemini 3.1 Flash Lite",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.95,
+              "bug": 0.9,
+              "eagle": 0.9,
+              "kiwi": 0.85
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "bug",
+              "eagle",
+              "kiwi"
+            ],
+            "rationale": "Buffalo, bug, eagle, and kiwi are all animals. I will guess the most obvious ones first.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.95,
+              "bug": 0.9,
+              "eagle": 0.9
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "bug",
+              "eagle"
+            ],
+            "rationale": "Buffalo, bug, and eagle are all clearly animals.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "buffalo": 0.95,
+              "bug": 0.9,
+              "eagle": 0.9
+            },
+            "ranked_guesses": [
+              "buffalo",
+              "bug",
+              "eagle"
+            ],
+            "rationale": "Buffalo, bug, and eagle are all clearly animals, fitting the clue 'animal' perfectly.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "buffalo"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "bug"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 3,
+          "rationale": "I am cluing 'bark', 'buffalo', and 'kiwi', which are all associated with animals."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

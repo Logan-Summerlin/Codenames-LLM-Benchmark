@@ -1,0 +1,1753 @@
+{
+  "board": {
+    "identities": {
+      "apple": "red",
+      "ball": "red",
+      "bermuda": "blue",
+      "bottle": "blue",
+      "chair": "neutral",
+      "drop": "red",
+      "fork": "red",
+      "giant": "red",
+      "grace": "blue",
+      "ivory": "neutral",
+      "jupiter": "red",
+      "kiwi": "neutral",
+      "lab": "blue",
+      "lap": "neutral",
+      "nail": "blue",
+      "net": "red",
+      "pass": "blue",
+      "pipe": "blue",
+      "pirate": "neutral",
+      "port": "red",
+      "pumpkin": "neutral",
+      "strike": "assassin",
+      "string": "neutral",
+      "switch": "blue",
+      "wave": "red"
+    },
+    "revealed": [
+      "apple",
+      "bermuda",
+      "bottle",
+      "fork",
+      "grace",
+      "lab",
+      "nail",
+      "net",
+      "pass",
+      "pipe",
+      "pumpkin",
+      "switch",
+      "wave"
+    ],
+    "words": {
+      "apple": "red",
+      "ball": "red",
+      "bermuda": "blue",
+      "bottle": "blue",
+      "chair": "neutral",
+      "drop": "red",
+      "fork": "red",
+      "giant": "red",
+      "grace": "blue",
+      "ivory": "neutral",
+      "jupiter": "red",
+      "kiwi": "neutral",
+      "lab": "blue",
+      "lap": "neutral",
+      "nail": "blue",
+      "net": "red",
+      "pass": "blue",
+      "pipe": "blue",
+      "pirate": "neutral",
+      "port": "red",
+      "pumpkin": "neutral",
+      "strike": "assassin",
+      "string": "neutral",
+      "switch": "blue",
+      "wave": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "pirate",
+        "count": 2,
+        "rationale": "Pirate is associated with 'bermuda' and 'pirate', both blue words. 'Lab' and 'pipe' are also blue words related to 'pirate'."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 3,
+        "rationale": "Construction involves nails, pipes, and switches, all blue words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.85
+        },
+        "ranked_guesses": [
+          "nail"
+        ],
+        "rationale": "Nail is a common construction material, fitting the clue 'construction'.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.85
+        },
+        "ranked_guesses": [
+          "pipe"
+        ],
+        "rationale": "Pipes and nails are common construction materials, making 'pipe' a strong candidate.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.85
+        },
+        "ranked_guesses": [
+          "pipe"
+        ],
+        "rationale": "Pipe, nail, and switch are common construction items; pipe is the most directly associated.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "blue",
+        "count": 2,
+        "rationale": "Blue is associated with 'grace' and 'lab', both blue words. The clue 'blue' is also related to 'bermuda' and 'nail', which are blue words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.9
+        },
+        "ranked_guesses": [
+          "bermuda"
+        ],
+        "rationale": "Bermuda is associated with 'pirate' and is a blue word.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.9
+        },
+        "ranked_guesses": [
+          "pipe"
+        ],
+        "rationale": "The word 'pipe' is associated with the blue team and is revealed on the board. It is also linked to the clue 'pirate' which was previously identified as an illegal clue but associated with blue words 'bermuda' and 'pirate'. The word 'pipe' is a strong candidate for a guess due to its connection to the clue and its revealed status.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.8
+        },
+        "ranked_guesses": [
+          "pipe"
+        ],
+        "rationale": "The clue 'pirate' was associated with 'bermuda', 'pirate', 'lab', and 'pipe'. 'Pipe' is a revealed blue word, making it a confident guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "technology",
+        "count": 3,
+        "rationale": "Technology connects to lab, switch, and bottle, all blue words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.85,
+          "net": 0.72,
+          "switch": 0.78
+        },
+        "ranked_guesses": [
+          "apple",
+          "switch",
+          "net"
+        ],
+        "rationale": "Apple is a major tech brand, Switch is a gaming tech device, Net relates to internet technology.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "switch": 0.78
+        },
+        "ranked_guesses": [
+          "switch"
+        ],
+        "rationale": "Technology often involves switches, networks, and ports; 'switch' is a strong tech term among remaining words.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.85,
+          "net": 0.83,
+          "switch": 0.84
+        },
+        "ranked_guesses": [
+          "lab",
+          "switch",
+          "net"
+        ],
+        "rationale": "Lab, switch, and net are all strongly associated with technology.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 2,
+        "rationale": "Fruit is associated with 'apple' and 'kiwi', both red words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.7,
+          "kiwi": 0.6
+        },
+        "ranked_guesses": [
+          "apple",
+          "kiwi"
+        ],
+        "rationale": "Both 'apple' and 'kiwi' are fruits, fitting the clue 'fruit'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.9,
+          "kiwi": 0.7,
+          "pumpkin": 0.8
+        },
+        "ranked_guesses": [
+          "apple",
+          "pumpkin",
+          "kiwi"
+        ],
+        "rationale": "The clue 'fruit' suggests words related to fruits. 'Apple', 'pumpkin', and 'kiwi' are red words and are related to the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.7,
+          "kiwi": 0.5,
+          "pumpkin": 0.6
+        },
+        "ranked_guesses": [
+          "apple",
+          "pumpkin",
+          "kiwi"
+        ],
+        "rationale": "The clue 'fruit' suggests words related to fruits. 'Apple', 'pumpkin', and 'kiwi' are red words and fit the clue. 'Apple' is the highest confidence due to its direct association with 'fruit'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "laboratory",
+        "count": 3,
+        "rationale": "Lab is directly blue, and related terms like bottle, nail (used in experiments) and pass (as in 'lab pass') fit the theme."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ocean",
+        "count": 3,
+        "rationale": "Ocean is associated with 'wave', 'bermuda', and 'port'."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.9
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme of laboratory.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.9
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme of ocean.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.9
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme of laboratory.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "island",
+        "count": 3,
+        "rationale": "Island evokes Bermuda, a message in a bottle, and an island pass, all blue words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.75,
+          "port": 0.7,
+          "wave": 0.65
+        },
+        "ranked_guesses": [
+          "bermuda",
+          "port",
+          "wave"
+        ],
+        "rationale": "Island clue points to island locations or features: Bermuda (island), port (harbor on an island), wave (sea around islands).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.78
+        },
+        "ranked_guesses": [
+          "bermuda"
+        ],
+        "rationale": "Bermuda is a well\u2011known island; fits the clue island best among remaining words.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.85,
+          "kiwi": 0.65,
+          "wave": 0.6
+        },
+        "ranked_guesses": [
+          "bermuda",
+          "kiwi",
+          "wave"
+        ],
+        "rationale": "Bermuda is a well\u2011known island; kiwi evokes New Zealand, an island nation; wave relates to sea around islands.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "silver",
+        "count": 4,
+        "rationale": "Silver relates to a bottle (often metal), a nail (metal), a pass (silver pass ticket), and the phrase 'silver grace' evokes elegance."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ivory": 0.78
+        },
+        "ranked_guesses": [
+          "ivory"
+        ],
+        "rationale": "Ivory is often described as a silvery-white material, matching the silver clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bottle": 0.75,
+          "fork": 0.78,
+          "nail": 0.73,
+          "wave": 0.7
+        },
+        "ranked_guesses": [
+          "fork",
+          "bottle",
+          "nail",
+          "wave"
+        ],
+        "rationale": "Silver relates to silverware (fork), silver bottles, silver nails (metal), and silver wave (radio/sea imagery).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.6,
+          "bottle": 0.7,
+          "fork": 0.75,
+          "nail": 0.65
+        },
+        "ranked_guesses": [
+          "fork",
+          "bottle",
+          "nail",
+          "ball"
+        ],
+        "rationale": "Silver is often associated with silverware (fork), silver bottles, silver nails, and a silver ball (e.g., a shiny metal ball).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "blue",
+        "count": 2,
+        "rationale": "Blue is associated with 'grace' and 'wave', both red words. The clue 'blue' is also related to 'lab' and 'nail', which are blue words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.8
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.1,
+          "bottle": 0.1,
+          "chair": 0.1,
+          "drop": 0.1,
+          "giant": 0.1,
+          "grace": 0.1,
+          "ivory": 0.1,
+          "jupiter": 0.1,
+          "kiwi": 0.1,
+          "lap": 0.1,
+          "nail": 0.1,
+          "pass": 0.1,
+          "pirate": 0.1,
+          "port": 0.1,
+          "strike": 0.1,
+          "string": 0.1,
+          "wave": 0.1
+        },
+        "ranked_guesses": [
+          "ball",
+          "bottle",
+          "chair",
+          "drop",
+          "giant",
+          "grace",
+          "ivory",
+          "jupiter",
+          "kiwi",
+          "lap",
+          "nail",
+          "pass",
+          "pirate",
+          "port",
+          "strike",
+          "string",
+          "wave"
+        ],
+        "rationale": "The clue 'blue' with a count of 2 suggests two blue words. Known blue words are 'bermuda', 'lab', 'pipe', 'switch'. 'Ball' and 'bottle' are potential blue words due to their color association.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.8
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "container",
+        "count": 1,
+        "rationale": "Bottle is a container and is one of the remaining blue words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bottle": 0.85
+        },
+        "ranked_guesses": [
+          "bottle"
+        ],
+        "rationale": "Container clue points to bottle, a clear container, and bottle is a remaining unrevealed word likely blue.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bottle": 0.85
+        },
+        "ranked_guesses": [
+          "bottle"
+        ],
+        "rationale": "A bottle is a common container, matching the clue directly.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bottle": 0.85
+        },
+        "ranked_guesses": [
+          "bottle"
+        ],
+        "rationale": "A bottle is a common container, matching the clue directly.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "finger",
+        "count": 2,
+        "rationale": "Finger relates to nails and the idea of a 'finger pass' in sports, covering two blue words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.85,
+          "wave": 0.75
+        },
+        "ranked_guesses": [
+          "nail",
+          "wave"
+        ],
+        "rationale": "Finger suggests nail (finger nail) and wave (finger wave gesture).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.78,
+          "string": 0.62
+        },
+        "ranked_guesses": [
+          "nail",
+          "string"
+        ],
+        "rationale": "Finger suggests nail and also actions like plucking strings with fingers",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.78,
+          "wave": 0.65
+        },
+        "ranked_guesses": [
+          "nail",
+          "wave"
+        ],
+        "rationale": "finger nail is obvious; finger wave is a hairstyle term",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 2,
+        "rationale": "Fruit is associated with 'apple' and 'kiwi', both red words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.8
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related to the clue 'laboratory' with words like 'bottle' and 'nail' fitting the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.8
+        },
+        "ranked_guesses": [
+          "lab"
+        ],
+        "rationale": "Lab is directly blue and related to the clue 'laboratory'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.8
+        },
+        "ranked_guesses": [
+          "apple"
+        ],
+        "rationale": "The word 'apple' is a red word and is related to the clue 'fruit'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "forgiveness",
+        "count": 2,
+        "rationale": "Both 'pass' (as in to pass someone) and 'grace' can mean to forgive or show mercy."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grace": 0.85,
+          "pass": 0.75
+        },
+        "ranked_guesses": [
+          "grace",
+          "pass"
+        ],
+        "rationale": "Forgiveness is linked to grace and to giving a pass (letting go). Both are plausible blue words remaining.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grace": 0.85
+        },
+        "ranked_guesses": [
+          "grace"
+        ],
+        "rationale": "Forgiveness is closely linked to grace; other remaining words have weaker connections.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grace": 0.85,
+          "pass": 0.78
+        },
+        "ranked_guesses": [
+          "grace",
+          "pass"
+        ],
+        "rationale": "Forgiveness is closely tied to grace and the idea of passing over a fault.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "pirate",
+        "count": 2,
+        "rationale": "Pirate is associated with 'bermuda' and 'pirate', both blue words. 'Lab' and 'pipe' are also blue words related to 'pirate'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "pirate",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pipe"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "blue"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "technology"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "switch"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "net"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "apple"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pumpkin"
+    },
+    {
+      "clue": {
+        "clue": "laboratory",
+        "count": 3,
+        "rationale": "Lab is directly blue, and related terms like bottle, nail (used in experiments) and pass (as in 'lab pass') fit the theme."
+      },
+      "event": "illegal_clue",
+      "matched_word": "lab",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ocean"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lab"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "island"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bermuda"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "agent_id": "Phi-4-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "silver"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fork"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "blue"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "container"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bottle"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "agent_id": "Phi-4-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "finger"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wave"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "forgiveness"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "grace"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "pass"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 50,
+    "public_event_count": 35,
+    "reason": "all_words_found",
+    "seed": "issue-random-103-microsoft_phi_4-vs-openai_gpt_oss_120b",
+    "team_blue": "GPT-OSS 120B",
+    "team_red": "Phi-4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "construction"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pipe"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "blue"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "pirate",
+          "count": 2,
+          "rationale": "Pirate is associated with 'bermuda' and 'pirate', both blue words. 'Lab' and 'pipe' are also blue words related to 'pirate'."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "technology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "nail": 0.85
+            },
+            "ranked_guesses": [
+              "nail"
+            ],
+            "rationale": "Nail is a common construction material, fitting the clue 'construction'.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.85
+            },
+            "ranked_guesses": [
+              "pipe"
+            ],
+            "rationale": "Pipes and nails are common construction materials, making 'pipe' a strong candidate.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.85
+            },
+            "ranked_guesses": [
+              "pipe"
+            ],
+            "rationale": "Pipe, nail, and switch are common construction items; pipe is the most directly associated.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "switch"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "net"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "construction",
+          "count": 3,
+          "rationale": "Construction involves nails, pipes, and switches, all blue words."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.9
+            },
+            "ranked_guesses": [
+              "bermuda"
+            ],
+            "rationale": "Bermuda is associated with 'pirate' and is a blue word.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.9
+            },
+            "ranked_guesses": [
+              "pipe"
+            ],
+            "rationale": "The word 'pipe' is associated with the blue team and is revealed on the board. It is also linked to the clue 'pirate' which was previously identified as an illegal clue but associated with blue words 'bermuda' and 'pirate'. The word 'pipe' is a strong candidate for a guess due to its connection to the clue and its revealed status.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.8
+            },
+            "ranked_guesses": [
+              "pipe"
+            ],
+            "rationale": "The clue 'pirate' was associated with 'bermuda', 'pirate', 'lab', and 'pipe'. 'Pipe' is a revealed blue word, making it a confident guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "apple"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pumpkin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "blue",
+          "count": 2,
+          "rationale": "Blue is associated with 'grace' and 'lab', both blue words. The clue 'blue' is also related to 'bermuda' and 'nail', which are blue words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ocean"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lab"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "island"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.85,
+              "net": 0.72,
+              "switch": 0.78
+            },
+            "ranked_guesses": [
+              "apple",
+              "switch",
+              "net"
+            ],
+            "rationale": "Apple is a major tech brand, Switch is a gaming tech device, Net relates to internet technology.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "switch": 0.78
+            },
+            "ranked_guesses": [
+              "switch"
+            ],
+            "rationale": "Technology often involves switches, networks, and ports; 'switch' is a strong tech term among remaining words.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.85,
+              "net": 0.83,
+              "switch": 0.84
+            },
+            "ranked_guesses": [
+              "lab",
+              "switch",
+              "net"
+            ],
+            "rationale": "Lab, switch, and net are all strongly associated with technology.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bermuda"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "technology",
+          "count": 3,
+          "rationale": "Technology connects to lab, switch, and bottle, all blue words."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "silver"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fork"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "blue"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.7,
+              "kiwi": 0.6
+            },
+            "ranked_guesses": [
+              "apple",
+              "kiwi"
+            ],
+            "rationale": "Both 'apple' and 'kiwi' are fruits, fitting the clue 'fruit'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.9,
+              "kiwi": 0.7,
+              "pumpkin": 0.8
+            },
+            "ranked_guesses": [
+              "apple",
+              "pumpkin",
+              "kiwi"
+            ],
+            "rationale": "The clue 'fruit' suggests words related to fruits. 'Apple', 'pumpkin', and 'kiwi' are red words and are related to the clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.7,
+              "kiwi": 0.5,
+              "pumpkin": 0.6
+            },
+            "ranked_guesses": [
+              "apple",
+              "pumpkin",
+              "kiwi"
+            ],
+            "rationale": "The clue 'fruit' suggests words related to fruits. 'Apple', 'pumpkin', and 'kiwi' are red words and fit the clue. 'Apple' is the highest confidence due to its direct association with 'fruit'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fruit",
+          "count": 2,
+          "rationale": "Fruit is associated with 'apple' and 'kiwi', both red words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "container"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bottle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "laboratory",
+          "count": 3,
+          "rationale": "Lab is directly blue, and related terms like bottle, nail (used in experiments) and pass (as in 'lab pass') fit the theme."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "finger"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wave"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.9
+            },
+            "ranked_guesses": [
+              "lab"
+            ],
+            "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme of laboratory.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.9
+            },
+            "ranked_guesses": [
+              "lab"
+            ],
+            "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme of ocean.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.9
+            },
+            "ranked_guesses": [
+              "lab"
+            ],
+            "rationale": "Lab is directly blue and related terms like bottle, nail, and pass fit the theme of laboratory.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "ocean",
+          "count": 3,
+          "rationale": "Ocean is associated with 'wave', 'bermuda', and 'port'."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "forgiveness"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.75,
+              "port": 0.7,
+              "wave": 0.65
+            },
+            "ranked_guesses": [
+              "bermuda",
+              "port",
+              "wave"
+            ],
+            "rationale": "Island clue points to island locations or features: Bermuda (island), port (harbor on an island), wave (sea around islands).",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.78
+            },
+            "ranked_guesses": [
+              "bermuda"
+            ],
+            "rationale": "Bermuda is a well\u2011known island; fits the clue island best among remaining words.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.85,
+              "kiwi": 0.65,
+              "wave": 0.6
+            },
+            "ranked_guesses": [
+              "bermuda",
+              "kiwi",
+              "wave"
+            ],
+            "rationale": "Bermuda is a well\u2011known island; kiwi evokes New Zealand, an island nation; wave relates to sea around islands.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "grace"
+        },
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "pass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "island",
+          "count": 3,
+          "rationale": "Island evokes Bermuda, a message in a bottle, and an island pass, all blue words."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

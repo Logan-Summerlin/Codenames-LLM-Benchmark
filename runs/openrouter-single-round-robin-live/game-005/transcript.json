@@ -1,0 +1,426 @@
+{
+  "board": {
+    "identities": {
+      "bell": "blue",
+      "carrot": "red",
+      "cat": "red",
+      "dice": "blue",
+      "drill": "blue",
+      "fair": "blue",
+      "film": "blue",
+      "forest": "neutral",
+      "lap": "red",
+      "london": "red",
+      "mass": "red",
+      "moon": "neutral",
+      "mount": "blue",
+      "mug": "red",
+      "organ": "neutral",
+      "parachute": "red",
+      "roulette": "neutral",
+      "scale": "neutral",
+      "shakespeare": "assassin",
+      "spring": "neutral",
+      "spy": "neutral",
+      "tablet": "blue",
+      "thief": "red",
+      "time": "blue",
+      "track": "red"
+    },
+    "revealed": [
+      "dice",
+      "shakespeare"
+    ],
+    "words": {
+      "bell": "blue",
+      "carrot": "red",
+      "cat": "red",
+      "dice": "blue",
+      "drill": "blue",
+      "fair": "blue",
+      "film": "blue",
+      "forest": "neutral",
+      "lap": "red",
+      "london": "red",
+      "mass": "red",
+      "moon": "neutral",
+      "mount": "blue",
+      "mug": "red",
+      "organ": "neutral",
+      "parachute": "red",
+      "roulette": "neutral",
+      "scale": "neutral",
+      "shakespeare": "assassin",
+      "spring": "neutral",
+      "spy": "neutral",
+      "tablet": "blue",
+      "thief": "red",
+      "time": "blue",
+      "track": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 2,
+        "rationale": "related to transportation"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.8,
+          "parachute": 0.2
+        },
+        "ranked_guesses": [
+          "car",
+          "parachute"
+        ],
+        "rationale": "Both words are related to the clue 'vehicle'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.8,
+          "parachute": 0.2
+        },
+        "ranked_guesses": [
+          "car",
+          "parachute"
+        ],
+        "rationale": "Both words are related to the clue 'vehicle'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "car": 0.8,
+          "parachute": 0.2
+        },
+        "ranked_guesses": [
+          "car",
+          "parachute"
+        ],
+        "rationale": "Both words are related to the clue 'vehicle'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "play",
+        "count": 4,
+        "rationale": "Connects dice (playing games), fair (fairground), film (to play a movie), and tablet (tablet games/apps) - 4 safe blue words"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dice": 0.9,
+          "fair": 0.85,
+          "film": 0.9,
+          "shakespeare": 0.95
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "film",
+          "dice",
+          "fair"
+        ],
+        "rationale": "'shakespeare' and 'film' directly relate to theater/acting (plays), 'dice' to games, and 'fair' to fairgrounds (play activities). These four best fit the 'play' clue with high confidence.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dice": 0.9,
+          "fair": 0.8,
+          "film": 0.85,
+          "shakespeare": 0.75
+        },
+        "ranked_guesses": [
+          "dice",
+          "film",
+          "fair",
+          "shakespeare"
+        ],
+        "rationale": "Strongest associations with 'play' as games, performances, or recreational settings.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dice": 0.85,
+          "fair": 0.8,
+          "film": 0.9,
+          "shakespeare": 0.95
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "film",
+          "dice",
+          "fair"
+        ],
+        "rationale": "'shakespeare' and 'film' are strongly tied to plays/theater and movies. 'dice' relates to games (playing dice). 'fair' connects to fair play. All fit the clue 'play' with high relevance.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "play"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dice"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "shakespeare"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 5,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-single-005-meta_llama_llama_3_70b_instruct-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "vehicle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "car": 0.8,
+              "parachute": 0.2
+            },
+            "ranked_guesses": [
+              "car",
+              "parachute"
+            ],
+            "rationale": "Both words are related to the clue 'vehicle'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "car": 0.8,
+              "parachute": 0.2
+            },
+            "ranked_guesses": [
+              "car",
+              "parachute"
+            ],
+            "rationale": "Both words are related to the clue 'vehicle'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "car": 0.8,
+              "parachute": 0.2
+            },
+            "ranked_guesses": [
+              "car",
+              "parachute"
+            ],
+            "rationale": "Both words are related to the clue 'vehicle'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "vehicle",
+          "count": 2,
+          "rationale": "related to transportation"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "play"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dice": 0.9,
+              "fair": 0.85,
+              "film": 0.9,
+              "shakespeare": 0.95
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "film",
+              "dice",
+              "fair"
+            ],
+            "rationale": "'shakespeare' and 'film' directly relate to theater/acting (plays), 'dice' to games, and 'fair' to fairgrounds (play activities). These four best fit the 'play' clue with high confidence.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dice": 0.9,
+              "fair": 0.8,
+              "film": 0.85,
+              "shakespeare": 0.75
+            },
+            "ranked_guesses": [
+              "dice",
+              "film",
+              "fair",
+              "shakespeare"
+            ],
+            "rationale": "Strongest associations with 'play' as games, performances, or recreational settings.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dice": 0.85,
+              "fair": 0.8,
+              "film": 0.9,
+              "shakespeare": 0.95
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "film",
+              "dice",
+              "fair"
+            ],
+            "rationale": "'shakespeare' and 'film' are strongly tied to plays/theater and movies. 'dice' relates to games (playing dice). 'fair' connects to fair play. All fit the clue 'play' with high relevance.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dice"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "shakespeare"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "play",
+          "count": 4,
+          "rationale": "Connects dice (playing games), fair (fairground), film (to play a movie), and tablet (tablet games/apps) - 4 safe blue words"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

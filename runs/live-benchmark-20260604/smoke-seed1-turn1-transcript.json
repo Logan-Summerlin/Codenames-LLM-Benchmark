@@ -1,0 +1,221 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    },
+    "revealed": [],
+    "words": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "moon",
+        "count": 2,
+        "rationale": "planet and silver are both associated with the moon"
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.9,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "planet",
+          "silver"
+        ],
+        "rationale": "Moon is associated with planets (moons orbit planets) and silver (color of moon).",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.9,
+          "rocket": 0.8
+        },
+        "ranked_guesses": [
+          "planet",
+          "rocket"
+        ],
+        "rationale": "Moon is strongly associated with celestial bodies like planet and with rockets that go to the moon. These are the most likely red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.9,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "planet",
+          "silver"
+        ],
+        "rationale": "Moon is strongly associated with planet (celestial body) and silver (color/appearance). Other options like rocket or alien are possible but less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "moon"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 2,
+    "reason": null,
+    "seed": "1",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "moon"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.9,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "planet",
+              "silver"
+            ],
+            "rationale": "Moon is associated with planets (moons orbit planets) and silver (color of moon).",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.9,
+              "rocket": 0.8
+            },
+            "ranked_guesses": [
+              "planet",
+              "rocket"
+            ],
+            "rationale": "Moon is strongly associated with celestial bodies like planet and with rockets that go to the moon. These are the most likely red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.9,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "planet",
+              "silver"
+            ],
+            "rationale": "Moon is strongly associated with planet (celestial body) and silver (color/appearance). Other options like rocket or alien are possible but less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "moon",
+          "count": 2,
+          "rationale": "planet and silver are both associated with the moon"
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    }
+  ]
+}

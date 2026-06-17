@@ -1,0 +1,1969 @@
+{
+  "board": {
+    "identities": {
+      "airport": "neutral",
+      "alien": "neutral",
+      "anchor": "red",
+      "atlas": "blue",
+      "autumn": "red",
+      "beacon": "red",
+      "bridge": "blue",
+      "canyon": "blue",
+      "captain": "neutral",
+      "cloud": "neutral",
+      "doctor": "blue",
+      "dream": "red",
+      "festival": "assassin",
+      "flame": "red",
+      "harbor": "neutral",
+      "lantern": "neutral",
+      "magnet": "red",
+      "novel": "blue",
+      "paper": "blue",
+      "poet": "red",
+      "secret": "blue",
+      "silence": "red",
+      "spirit": "blue",
+      "summer": "neutral",
+      "water": "red"
+    },
+    "revealed": [
+      "airport",
+      "alien",
+      "anchor",
+      "atlas",
+      "autumn",
+      "beacon",
+      "bridge",
+      "canyon",
+      "doctor",
+      "flame",
+      "harbor",
+      "magnet",
+      "novel",
+      "paper",
+      "poet",
+      "secret",
+      "spirit",
+      "summer"
+    ],
+    "words": {
+      "airport": "neutral",
+      "alien": "neutral",
+      "anchor": "red",
+      "atlas": "blue",
+      "autumn": "red",
+      "beacon": "red",
+      "bridge": "blue",
+      "canyon": "blue",
+      "captain": "neutral",
+      "cloud": "neutral",
+      "doctor": "blue",
+      "dream": "red",
+      "festival": "assassin",
+      "flame": "red",
+      "harbor": "neutral",
+      "lantern": "neutral",
+      "magnet": "red",
+      "novel": "blue",
+      "paper": "blue",
+      "poet": "red",
+      "secret": "blue",
+      "silence": "red",
+      "spirit": "blue",
+      "summer": "neutral",
+      "water": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "heat",
+        "count": 3,
+        "rationale": "Many red words relate to warmth or energy (flame, magnet, water can be hot)"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.65,
+          "flame": 0.85,
+          "summer": 0.78
+        },
+        "ranked_guesses": [
+          "flame",
+          "summer",
+          "canyon"
+        ],
+        "rationale": "Heat evokes fire (flame), warm season (summer), and hot dry places like a canyon.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.85
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "Heat most directly suggests fire, matching 'flame'",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.92,
+          "lantern": 0.78,
+          "summer": 0.85
+        },
+        "ranked_guesses": [
+          "flame",
+          "summer",
+          "lantern"
+        ],
+        "rationale": "Flame is a direct source of heat; summer is the season associated with hot weather; lantern also produces heat while providing light.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "book",
+        "count": 3,
+        "rationale": "Connects to novel, paper, and secret."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "novel": 0.95,
+          "paper": 0.9,
+          "poet": 0.85
+        },
+        "ranked_guesses": [
+          "novel",
+          "paper",
+          "poet",
+          "atlas"
+        ],
+        "rationale": "'book' strongly suggests 'novel' (directly related), 'paper' (component), 'poet' (literary connection), and 'atlas' (type of book). These are the most relevant unrevealed words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.6,
+          "novel": 0.9,
+          "paper": 0.85,
+          "poet": 0.75
+        },
+        "ranked_guesses": [
+          "novel",
+          "paper",
+          "poet",
+          "atlas"
+        ],
+        "rationale": "Clue 'book' with count 3 strongly suggests words directly related to books. 'novel' and 'paper' are top candidates. 'poet' and 'atlas' are secondary connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.85,
+          "novel": 0.95,
+          "paper": 0.8,
+          "poet": 0.75
+        },
+        "ranked_guesses": [
+          "novel",
+          "atlas",
+          "paper",
+          "poet"
+        ],
+        "rationale": "'book' strongly associates with 'novel' (directly), 'atlas' (book of maps), 'paper' (material), and 'poet' (literary context). These are the most relevant words given the clue and remaining board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ship",
+        "count": 3,
+        "rationale": "Anchor, beacon and water are all associated with ships."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.85
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "anchor is directly tied to ships and fits the clue count",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.85,
+          "captain": 0.75,
+          "harbor": 0.8
+        },
+        "ranked_guesses": [
+          "anchor",
+          "harbor",
+          "captain"
+        ],
+        "rationale": "All three are directly linked to ships: anchor, harbor, and captain.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.85,
+          "captain": 0.75,
+          "harbor": 0.8
+        },
+        "ranked_guesses": [
+          "anchor",
+          "harbor",
+          "captain"
+        ],
+        "rationale": "Ship clue likely points to ship-related terms; anchor, harbor and captain are strong associations.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "passage",
+        "count": 3,
+        "rationale": "Connects to bridge (a passage), canyon (a passage through rock), and secret (a secret passage)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.75
+        },
+        "ranked_guesses": [
+          "bridge",
+          "lantern",
+          "beacon"
+        ],
+        "rationale": "Passage most directly relates to bridge as a physical passage/corridor. Lantern and beacon are more metaphorical.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.6,
+          "bridge": 0.9,
+          "canyon": 0.7
+        },
+        "ranked_guesses": [
+          "bridge",
+          "canyon",
+          "atlas"
+        ],
+        "rationale": "'bridge' directly relates to passage, 'canyon' is a natural passage, 'atlas' contains maps of passages. Previous clues suggest physical/geographic connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.9,
+          "captain": 0.55,
+          "lantern": 0.45,
+          "secret": 0.75,
+          "water": 0.65
+        },
+        "ranked_guesses": [
+          "bridge",
+          "secret",
+          "water",
+          "captain",
+          "lantern"
+        ],
+        "rationale": "'passage' most directly connects to 'bridge' as a physical passage, followed by 'secret' (secret passage) and 'water' (water passage).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fall",
+        "count": 2,
+        "rationale": "Fall suggests the season autumn and also water falling, linking the unrevealed red words autumn and water."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.85,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "autumn",
+          "water"
+        ],
+        "rationale": "autumn is the season called fall; water relates to falling (waterfall)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.85,
+          "water": 0.65
+        },
+        "ranked_guesses": [
+          "autumn",
+          "water"
+        ],
+        "rationale": "autumn is the direct synonym for fall; water pairs with waterfall, a common phrase.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.85
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "Fall directly clues autumn; water also fits as waterfall, but autumn is more certain.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "health",
+        "count": 3,
+        "rationale": "Connects to doctor, secret (medical secrets), and spirit (medicinal spirit) which are all blue words remaining."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "silence": 0.3,
+          "spirit": 0.3,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "water",
+          "silence",
+          "spirit"
+        ],
+        "rationale": "'doctor' is the strongest health-related word on the board. 'water' is a secondary health-related option. 'silence' and 'spirit' are weak mental health associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.6,
+          "doctor": 0.95,
+          "silence": 0.35,
+          "spirit": 0.5,
+          "water": 0.4
+        },
+        "ranked_guesses": [
+          "doctor",
+          "beacon",
+          "spirit",
+          "water",
+          "silence"
+        ],
+        "rationale": "'health' strongly suggests 'doctor' as the primary guess. 'beacon' and 'spirit' are secondary associations, while 'water' and 'silence' are weaker fits.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.4,
+          "doctor": 0.9,
+          "spirit": 0.3,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "doctor",
+          "water",
+          "cloud",
+          "spirit"
+        ],
+        "rationale": "doctor is the strongest direct association with health; water is a plausible stretch; others are weaker connections",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "magnetic",
+        "count": 2,
+        "rationale": "Both beacon and magnet are associated with magnetism, linking two remaining red words without touching other board terms."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "map",
+        "count": 2,
+        "rationale": "Connects atlas and canyon as geographic terms."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.95,
+          "beacon": 0.75,
+          "captain": 0.65
+        },
+        "ranked_guesses": [
+          "atlas",
+          "beacon",
+          "captain"
+        ],
+        "rationale": "'Atlas' is the strongest direct connection to 'map'. 'Beacon' and 'captain' are plausible secondary connections as they can appear on maps or relate to navigation.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.7,
+          "atlas": 0.9,
+          "beacon": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "airport",
+          "beacon"
+        ],
+        "rationale": "'atlas' is directly related to maps, 'airport' is commonly marked on maps, and 'beacon' is often represented on maps. These are the most likely targets for the 'map' clue with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "atlas": 0.9
+        },
+        "ranked_guesses": [
+          "atlas",
+          "airport"
+        ],
+        "rationale": "Clue 'map' with count 2 strongly suggests 'atlas' (directly a map collection) and 'airport' (navigation/flight maps). These are the most direct connections on the remaining board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "electric",
+        "count": 3,
+        "rationale": "Beacon (light), magnet, and water can all be associated with electricity, linking three remaining red words while avoiding blue and assassin terms."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.78
+        },
+        "ranked_guesses": [
+          "magnet"
+        ],
+        "rationale": "Electric clue likely targets items related to electricity or magnetism; magnet fits and was hinted at by the earlier illegal magnetic clue, suggesting it is a red word.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.85
+        },
+        "ranked_guesses": [
+          "beacon"
+        ],
+        "rationale": "Beacon, lantern, and magnet all relate to electricity (light, magnetic fields, electric devices) and fit the count of 3 without obvious conflicts.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.68,
+          "lantern": 0.73,
+          "magnet": 0.78
+        },
+        "ranked_guesses": [
+          "magnet",
+          "lantern",
+          "beacon"
+        ],
+        "rationale": "Electric relates to magnetism, electric lanterns, and electric beacons; these fit the clue and avoid known blue words.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mystery",
+        "count": 3,
+        "rationale": "Connects directly to 'secret' and loosely to 'canyon' and 'spirit' as mysterious natural elements while avoiding red words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.85
+        },
+        "ranked_guesses": [
+          "secret"
+        ],
+        "rationale": "'Secret' is the most direct synonym for 'mystery' and fits the clue perfectly. The other remaining words don't have as strong a connection to the clue word.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.85,
+          "dream": 0.75,
+          "secret": 0.95
+        },
+        "ranked_guesses": [
+          "secret",
+          "alien",
+          "dream"
+        ],
+        "rationale": "'secret' is most directly associated with 'mystery'. 'alien' frequently appears in mystery/sci-fi contexts. 'dream' can have mysterious connotations. All are unrevealed and plausible blue team targets for count 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.8,
+          "dream": 0.75,
+          "secret": 0.9
+        },
+        "ranked_guesses": [
+          "secret",
+          "alien",
+          "dream"
+        ],
+        "rationale": "The clue 'mystery' with count 3 suggests these three words are likely blue team's remaining words connected to the theme. 'secret' is the most direct connection, 'alien' fits the mysterious entity theme, and 'dream' relates to mysterious states.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "deep",
+        "count": 3,
+        "rationale": "Deep water, deep silence, and deep dream all share the adjective 'deep', linking the three remaining red words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.78
+        },
+        "ranked_guesses": [
+          "canyon"
+        ],
+        "rationale": "Deep canyon fits the clue and avoids other teams' words",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.78
+        },
+        "ranked_guesses": [
+          "canyon"
+        ],
+        "rationale": "A canyon is famously described as deep; also deep water and deep dream are possible, but canyon is the strongest link.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ghost",
+        "count": 1,
+        "rationale": "Direct synonym for the remaining blue word 'spirit' without matching any board substrings."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.9
+        },
+        "ranked_guesses": [
+          "spirit"
+        ],
+        "rationale": "'Ghost' strongly associates with 'spirit' as a direct synonym, and 'spirit' remains unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.95
+        },
+        "ranked_guesses": [
+          "spirit"
+        ],
+        "rationale": "'spirit' is the most direct synonym for 'ghost' and the count of 1 strongly indicates this is the intended target.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spirit": 0.85
+        },
+        "ranked_guesses": [
+          "spirit"
+        ],
+        "rationale": "Direct synonym for 'ghost' and still unrevealed, making it the most likely target for the count=1 clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "book"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "novel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "paper"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "poet"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ship"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "harbor"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "passage"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fall"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "health"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "magnetic",
+        "count": 2,
+        "rationale": "Both beacon and magnet are associated with magnetism, linking two remaining red words without touching other board terms."
+      },
+      "event": "illegal_clue",
+      "matched_word": "magnet",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "map"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "airport"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "electric"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "beacon"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mystery"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "secret"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "deep"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "canyon"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "ghost"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "spirit"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 45,
+    "public_event_count": 34,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-003-openai_gpt_oss_120b-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "heat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.65,
+              "flame": 0.85,
+              "summer": 0.78
+            },
+            "ranked_guesses": [
+              "flame",
+              "summer",
+              "canyon"
+            ],
+            "rationale": "Heat evokes fire (flame), warm season (summer), and hot dry places like a canyon.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.85
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "Heat most directly suggests fire, matching 'flame'",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.92,
+              "lantern": 0.78,
+              "summer": 0.85
+            },
+            "ranked_guesses": [
+              "flame",
+              "summer",
+              "lantern"
+            ],
+            "rationale": "Flame is a direct source of heat; summer is the season associated with hot weather; lantern also produces heat while providing light.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 3,
+          "rationale": "Many red words relate to warmth or energy (flame, magnet, water can be hot)"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "book"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.7,
+              "novel": 0.95,
+              "paper": 0.9,
+              "poet": 0.85
+            },
+            "ranked_guesses": [
+              "novel",
+              "paper",
+              "poet",
+              "atlas"
+            ],
+            "rationale": "'book' strongly suggests 'novel' (directly related), 'paper' (component), 'poet' (literary connection), and 'atlas' (type of book). These are the most relevant unrevealed words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.6,
+              "novel": 0.9,
+              "paper": 0.85,
+              "poet": 0.75
+            },
+            "ranked_guesses": [
+              "novel",
+              "paper",
+              "poet",
+              "atlas"
+            ],
+            "rationale": "Clue 'book' with count 3 strongly suggests words directly related to books. 'novel' and 'paper' are top candidates. 'poet' and 'atlas' are secondary connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.85,
+              "novel": 0.95,
+              "paper": 0.8,
+              "poet": 0.75
+            },
+            "ranked_guesses": [
+              "novel",
+              "atlas",
+              "paper",
+              "poet"
+            ],
+            "rationale": "'book' strongly associates with 'novel' (directly), 'atlas' (book of maps), 'paper' (material), and 'poet' (literary context). These are the most relevant words given the clue and remaining board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "novel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "paper"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "book",
+          "count": 3,
+          "rationale": "Connects to novel, paper, and secret."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ship"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.85
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "anchor is directly tied to ships and fits the clue count",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.85,
+              "captain": 0.75,
+              "harbor": 0.8
+            },
+            "ranked_guesses": [
+              "anchor",
+              "harbor",
+              "captain"
+            ],
+            "rationale": "All three are directly linked to ships: anchor, harbor, and captain.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.85,
+              "captain": 0.75,
+              "harbor": 0.8
+            },
+            "ranked_guesses": [
+              "anchor",
+              "harbor",
+              "captain"
+            ],
+            "rationale": "Ship clue likely points to ship-related terms; anchor, harbor and captain are strong associations.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "harbor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ship",
+          "count": 3,
+          "rationale": "Anchor, beacon and water are all associated with ships."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "passage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.75
+            },
+            "ranked_guesses": [
+              "bridge",
+              "lantern",
+              "beacon"
+            ],
+            "rationale": "Passage most directly relates to bridge as a physical passage/corridor. Lantern and beacon are more metaphorical.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.6,
+              "bridge": 0.9,
+              "canyon": 0.7
+            },
+            "ranked_guesses": [
+              "bridge",
+              "canyon",
+              "atlas"
+            ],
+            "rationale": "'bridge' directly relates to passage, 'canyon' is a natural passage, 'atlas' contains maps of passages. Previous clues suggest physical/geographic connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.9,
+              "captain": 0.55,
+              "lantern": 0.45,
+              "secret": 0.75,
+              "water": 0.65
+            },
+            "ranked_guesses": [
+              "bridge",
+              "secret",
+              "water",
+              "captain",
+              "lantern"
+            ],
+            "rationale": "'passage' most directly connects to 'bridge' as a physical passage, followed by 'secret' (secret passage) and 'water' (water passage).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "passage",
+          "count": 3,
+          "rationale": "Connects to bridge (a passage), canyon (a passage through rock), and secret (a secret passage)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fall"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.85,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "autumn",
+              "water"
+            ],
+            "rationale": "autumn is the season called fall; water relates to falling (waterfall)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.85,
+              "water": 0.65
+            },
+            "ranked_guesses": [
+              "autumn",
+              "water"
+            ],
+            "rationale": "autumn is the direct synonym for fall; water pairs with waterfall, a common phrase.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.85
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "Fall directly clues autumn; water also fits as waterfall, but autumn is more certain.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fall",
+          "count": 2,
+          "rationale": "Fall suggests the season autumn and also water falling, linking the unrevealed red words autumn and water."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "health"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "silence": 0.3,
+              "spirit": 0.3,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "water",
+              "silence",
+              "spirit"
+            ],
+            "rationale": "'doctor' is the strongest health-related word on the board. 'water' is a secondary health-related option. 'silence' and 'spirit' are weak mental health associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.6,
+              "doctor": 0.95,
+              "silence": 0.35,
+              "spirit": 0.5,
+              "water": 0.4
+            },
+            "ranked_guesses": [
+              "doctor",
+              "beacon",
+              "spirit",
+              "water",
+              "silence"
+            ],
+            "rationale": "'health' strongly suggests 'doctor' as the primary guess. 'beacon' and 'spirit' are secondary associations, while 'water' and 'silence' are weaker fits.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.4,
+              "doctor": 0.9,
+              "spirit": 0.3,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "doctor",
+              "water",
+              "cloud",
+              "spirit"
+            ],
+            "rationale": "doctor is the strongest direct association with health; water is a plausible stretch; others are weaker connections",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "health",
+          "count": 3,
+          "rationale": "Connects to doctor, secret (medical secrets), and spirit (medicinal spirit) which are all blue words remaining."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "map"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "airport"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "electric"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "beacon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "magnetic",
+          "count": 2,
+          "rationale": "Both beacon and magnet are associated with magnetism, linking two remaining red words without touching other board terms."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mystery"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.95,
+              "beacon": 0.75,
+              "captain": 0.65
+            },
+            "ranked_guesses": [
+              "atlas",
+              "beacon",
+              "captain"
+            ],
+            "rationale": "'Atlas' is the strongest direct connection to 'map'. 'Beacon' and 'captain' are plausible secondary connections as they can appear on maps or relate to navigation.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.7,
+              "atlas": 0.9,
+              "beacon": 0.6
+            },
+            "ranked_guesses": [
+              "atlas",
+              "airport",
+              "beacon"
+            ],
+            "rationale": "'atlas' is directly related to maps, 'airport' is commonly marked on maps, and 'beacon' is often represented on maps. These are the most likely targets for the 'map' clue with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "atlas": 0.9
+            },
+            "ranked_guesses": [
+              "atlas",
+              "airport"
+            ],
+            "rationale": "Clue 'map' with count 2 strongly suggests 'atlas' (directly a map collection) and 'airport' (navigation/flight maps). These are the most direct connections on the remaining board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "secret"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "map",
+          "count": 2,
+          "rationale": "Connects atlas and canyon as geographic terms."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "deep"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "magnet": 0.78
+            },
+            "ranked_guesses": [
+              "magnet"
+            ],
+            "rationale": "Electric clue likely targets items related to electricity or magnetism; magnet fits and was hinted at by the earlier illegal magnetic clue, suggesting it is a red word.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.85
+            },
+            "ranked_guesses": [
+              "beacon"
+            ],
+            "rationale": "Beacon, lantern, and magnet all relate to electricity (light, magnetic fields, electric devices) and fit the count of 3 without obvious conflicts.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.68,
+              "lantern": 0.73,
+              "magnet": 0.78
+            },
+            "ranked_guesses": [
+              "magnet",
+              "lantern",
+              "beacon"
+            ],
+            "rationale": "Electric relates to magnetism, electric lanterns, and electric beacons; these fit the clue and avoid known blue words.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "canyon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "electric",
+          "count": 3,
+          "rationale": "Beacon (light), magnet, and water can all be associated with electricity, linking three remaining red words while avoiding blue and assassin terms."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "ghost"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.85
+            },
+            "ranked_guesses": [
+              "secret"
+            ],
+            "rationale": "'Secret' is the most direct synonym for 'mystery' and fits the clue perfectly. The other remaining words don't have as strong a connection to the clue word.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.85,
+              "dream": 0.75,
+              "secret": 0.95
+            },
+            "ranked_guesses": [
+              "secret",
+              "alien",
+              "dream"
+            ],
+            "rationale": "'secret' is most directly associated with 'mystery'. 'alien' frequently appears in mystery/sci-fi contexts. 'dream' can have mysterious connotations. All are unrevealed and plausible blue team targets for count 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.8,
+              "dream": 0.75,
+              "secret": 0.9
+            },
+            "ranked_guesses": [
+              "secret",
+              "alien",
+              "dream"
+            ],
+            "rationale": "The clue 'mystery' with count 3 suggests these three words are likely blue team's remaining words connected to the theme. 'secret' is the most direct connection, 'alien' fits the mysterious entity theme, and 'dream' relates to mysterious states.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "spirit"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mystery",
+          "count": 3,
+          "rationale": "Connects directly to 'secret' and loosely to 'canyon' and 'spirit' as mysterious natural elements while avoiding red words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "blue",
+      "battery": "red",
+      "beacon": "blue",
+      "bread": "blue",
+      "circle": "assassin",
+      "comet": "blue",
+      "compass": "neutral",
+      "copper": "blue",
+      "dream": "neutral",
+      "engine": "neutral",
+      "festival": "neutral",
+      "hammer": "red",
+      "harbor": "red",
+      "island": "blue",
+      "jungle": "red",
+      "ladder": "neutral",
+      "metal": "neutral",
+      "orange": "red",
+      "rocket": "blue",
+      "sailor": "red",
+      "spring": "neutral",
+      "telescope": "blue",
+      "tunnel": "red",
+      "village": "red",
+      "winter": "red"
+    },
+    "revealed": [
+      "battery",
+      "compass"
+    ],
+    "words": {
+      "anchor": "blue",
+      "battery": "red",
+      "beacon": "blue",
+      "bread": "blue",
+      "circle": "assassin",
+      "comet": "blue",
+      "compass": "neutral",
+      "copper": "blue",
+      "dream": "neutral",
+      "engine": "neutral",
+      "festival": "neutral",
+      "hammer": "red",
+      "harbor": "red",
+      "island": "blue",
+      "jungle": "red",
+      "ladder": "neutral",
+      "metal": "neutral",
+      "orange": "red",
+      "rocket": "blue",
+      "sailor": "red",
+      "spring": "neutral",
+      "telescope": "blue",
+      "tunnel": "red",
+      "village": "red",
+      "winter": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "Kimi K2 Thinking-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Kimi K2 Thinking-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.9
+        },
+        "ranked_guesses": [
+          "battery"
+        ],
+        "rationale": "Battery is a classic fallback/backup power source",
+        "stop": false
+      },
+      "agent_id": "Kimi K2 Thinking-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.5,
+          "battery": 0.9,
+          "harbor": 0.6
+        },
+        "ranked_guesses": [
+          "battery",
+          "harbor",
+          "anchor"
+        ],
+        "rationale": "Backup battery is the most direct example of a fallback system",
+        "stop": true
+      },
+      "agent_id": "Kimi K2 Thinking-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "Related to guiding or finding direction, linking to anchor, compass, and telescope."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6,
+          "beacon": 0.7,
+          "compass": 0.9
+        },
+        "ranked_guesses": [
+          "compass",
+          "beacon",
+          "anchor"
+        ],
+        "rationale": "These words are all related to navigation.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6,
+          "beacon": 0.7,
+          "compass": 0.9
+        },
+        "ranked_guesses": [
+          "compass",
+          "beacon",
+          "anchor"
+        ],
+        "rationale": "These words are closely related to navigation.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6,
+          "beacon": 0.7,
+          "compass": 0.9
+        },
+        "ranked_guesses": [
+          "compass",
+          "beacon",
+          "anchor"
+        ],
+        "rationale": "These words are related to navigation.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "battery"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "compass"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 5,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-174341-m04",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Kimi K2 Thinking",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Kimi K2 Thinking-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.9
+            },
+            "ranked_guesses": [
+              "battery"
+            ],
+            "rationale": "Battery is a classic fallback/backup power source",
+            "stop": false
+          },
+          "agent_id": "Kimi K2 Thinking-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.5,
+              "battery": 0.9,
+              "harbor": 0.6
+            },
+            "ranked_guesses": [
+              "battery",
+              "harbor",
+              "anchor"
+            ],
+            "rationale": "Backup battery is the most direct example of a fallback system",
+            "stop": true
+          },
+          "agent_id": "Kimi K2 Thinking-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "battery"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "Kimi K2 Thinking-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.6,
+              "beacon": 0.7,
+              "compass": 0.9
+            },
+            "ranked_guesses": [
+              "compass",
+              "beacon",
+              "anchor"
+            ],
+            "rationale": "These words are all related to navigation.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.6,
+              "beacon": 0.7,
+              "compass": 0.9
+            },
+            "ranked_guesses": [
+              "compass",
+              "beacon",
+              "anchor"
+            ],
+            "rationale": "These words are closely related to navigation.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.6,
+              "beacon": 0.7,
+              "compass": 0.9
+            },
+            "ranked_guesses": [
+              "compass",
+              "beacon",
+              "anchor"
+            ],
+            "rationale": "These words are related to navigation.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "compass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "Related to guiding or finding direction, linking to anchor, compass, and telescope."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

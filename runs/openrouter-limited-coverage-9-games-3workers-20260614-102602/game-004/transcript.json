@@ -1,0 +1,2581 @@
+{
+  "board": {
+    "identities": {
+      "bomb": "red",
+      "bond": "blue",
+      "box": "assassin",
+      "brush": "neutral",
+      "chest": "neutral",
+      "crane": "neutral",
+      "crash": "neutral",
+      "dance": "blue",
+      "doctor": "red",
+      "duck": "blue",
+      "field": "neutral",
+      "fish": "neutral",
+      "foot": "red",
+      "horseshoe": "red",
+      "hospital": "blue",
+      "lap": "neutral",
+      "orange": "blue",
+      "play": "red",
+      "school": "red",
+      "spine": "blue",
+      "stock": "red",
+      "string": "red",
+      "thief": "blue",
+      "time": "red",
+      "unicorn": "blue"
+    },
+    "revealed": [
+      "bomb",
+      "bond",
+      "brush",
+      "crash",
+      "dance",
+      "doctor",
+      "duck",
+      "field",
+      "foot",
+      "horseshoe",
+      "hospital",
+      "orange",
+      "play",
+      "school",
+      "spine",
+      "stock",
+      "string",
+      "thief",
+      "unicorn"
+    ],
+    "words": {
+      "bomb": "red",
+      "bond": "blue",
+      "box": "assassin",
+      "brush": "neutral",
+      "chest": "neutral",
+      "crane": "neutral",
+      "crash": "neutral",
+      "dance": "blue",
+      "doctor": "red",
+      "duck": "blue",
+      "field": "neutral",
+      "fish": "neutral",
+      "foot": "red",
+      "horseshoe": "red",
+      "hospital": "blue",
+      "lap": "neutral",
+      "orange": "blue",
+      "play": "red",
+      "school": "red",
+      "spine": "blue",
+      "stock": "red",
+      "string": "red",
+      "thief": "blue",
+      "time": "red",
+      "unicorn": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sports",
+        "count": 3,
+        "rationale": "links 'play', 'horseshoe', and 'foot' (as in football) for red team words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.75,
+          "field": 0.85,
+          "horseshoe": 0.95,
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "horseshoe",
+          "play",
+          "field",
+          "dance"
+        ],
+        "rationale": "'horseshoe' (horseshoes is a sport), 'play' (sports involve playing), and 'field' (sports field) are direct, high-confidence matches for 'sports 3'. 'Dance' is borderline but often considered a sport. Prioritized obviousness and safety.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.75,
+          "field": 0.85,
+          "horseshoe": 0.95,
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "horseshoe",
+          "play",
+          "field",
+          "dance"
+        ],
+        "rationale": "'horseshoe' (horseshoe pitching), 'play' (sports activity), and 'field' (sports venue) are direct, high-confidence matches for 'sports 3'. 'Dance' is borderline but included as the 4th option due to sports-like activities (e.g., competitive dance). No opponent clue to avoid. Top 3 exceed 0.70 confidence.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "field": 0.8,
+          "horseshoe": 0.95,
+          "play": 0.85
+        },
+        "ranked_guesses": [
+          "horseshoe",
+          "play",
+          "field"
+        ],
+        "rationale": "'horseshoe' (horseshoes is a sport), 'play' (sports involve play), and 'field' (sports field) are the strongest direct matches to 'sports 3'. Confidence in these exceeds 0.70; lower-confidence words are excluded per rules.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 3,
+        "rationale": "The words 'dance', 'hospital', 'orange', 'spine', 'thief', and 'unicorn' can be associated with celebration. The clue avoids substrings of unrevealed words and focuses on blue words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "celebration": 0.75,
+          "dance": 0.8
+        },
+        "ranked_guesses": [
+          "dance",
+          "celebration"
+        ],
+        "rationale": "Dance and celebration are directly related to the theme of celebration.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "celebration": 0.75,
+          "dance": 0.8
+        },
+        "ranked_guesses": [
+          "dance",
+          "celebration"
+        ],
+        "rationale": "Dance and celebration are directly related to the theme of celebration.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "celebration": 0.75,
+          "dance": 0.8
+        },
+        "ranked_guesses": [
+          "dance",
+          "celebration"
+        ],
+        "rationale": "Dance and celebration are directly related to the theme of celebration.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 2,
+        "rationale": "links 'doctor' and 'hospital' for red team, avoids assassin/neutral/blue conflicts."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "hospital": 0.92
+        },
+        "ranked_guesses": [
+          "doctor",
+          "hospital"
+        ],
+        "rationale": "Highest-confidence direct matches for 'medical 2' are 'doctor' and 'hospital' (both >=0.90). Avoid opponent's 'celebration'-linked words (e.g., 'unicorn'). No need to stop; two clear guesses remain.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "hospital": 0.92
+        },
+        "ranked_guesses": [
+          "doctor",
+          "hospital"
+        ],
+        "rationale": "Highest-confidence direct matches for 'medical 2' are **doctor** and **hospital** (both >0.90). 'Foot' and 'spine' are medical-adjacent but below 0.70 threshold. Avoid opponent's 'celebration'-linked words (e.g., 'unicorn'). No assassin risk detected in top picks.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.95,
+          "hospital": 0.92
+        },
+        "ranked_guesses": [
+          "doctor",
+          "hospital"
+        ],
+        "rationale": "Highest-confidence direct matches for 'medical 2' are 'doctor' and 'hospital' (both >0.90). Avoid opponent's 'celebration'-linked words (e.g., 'unicorn'). Remaining words lack sufficient medical association to meet the 0.70 threshold for further guesses this turn.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "juice",
+        "count": 2,
+        "rationale": "Associated with 'orange' and 'unicorn', both blue words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "juice": 0.75,
+          "orange": 0.8
+        },
+        "ranked_guesses": [
+          "orange",
+          "juice"
+        ],
+        "rationale": "Orange and juice are directly related to the clue 'juice' and are likely to be on the blue team's side.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.8
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a type of juice, matching the clue 'juice 2' with high confidence.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "juice": 0.75,
+          "orange": 0.85
+        },
+        "ranked_guesses": [
+          "orange",
+          "juice"
+        ],
+        "rationale": "Both 'orange' and 'juice' are directly related to the clue 'juice'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "market",
+        "count": 3,
+        "rationale": "links to **stock**, **string** (as in stock market/string of trades), and **bomb** (as in 'bombed in the market'), while avoiding direct overlaps with remaining words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.78,
+          "crash": 0.85,
+          "stock": 0.92
+        },
+        "ranked_guesses": [
+          "stock",
+          "crash",
+          "bond"
+        ],
+        "rationale": "'market' strongly ties to **stock** (stock market, 0.92) and **crash** (market crash, 0.85) as top direct matches. **Bond** (financial/bond market, 0.78) is the 3rd-highest and meets the 0.70 threshold. Lower-confidence words (e.g., 'foot' as in 'market foot traffic') fail the threshold. Opponent clues ('celebration', 'juice') have no overlap here. Prioritize **stock** first as the safest high-confidence guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.78,
+          "crash": 0.85,
+          "stock": 0.92
+        },
+        "ranked_guesses": [
+          "stock",
+          "crash",
+          "bond"
+        ],
+        "rationale": "'market 3' strongly ties to **stock** (stock market, 0.92) and **crash** (market crash, 0.85) as top direct matches. **Bond** (financial bonds, 0.78) is the 3rd-highest and meets the \u22650.70 threshold. Lower-confidence words (e.g., *foot* as 'market foot traffic') are excluded. Opponent clues ('celebration', 'juice') and prior revealed words (e.g., *play*, *field*) pose no conflict here. Proceed with **stock** first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.78,
+          "crash": 0.85,
+          "stock": 0.92
+        },
+        "ranked_guesses": [
+          "stock",
+          "crash",
+          "bond"
+        ],
+        "rationale": "'market 3' strongly ties to **stock** (stock market, 0.92) and **crash** (market crash, 0.85) as top direct matches. **Bond** (financial bonds, 0.78) is the 3rd-best fit. All others fall below 0.70 or are ambiguous/off-topic (e.g., 'string' as 'stock ticker string' is weaker). Avoid opponent-linked words (e.g., 'unicorn' could vaguely tie to 'juice' mythically). Prioritize high-confidence market terms first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 2,
+        "rationale": "Fruit is associated with 'orange' and 'unicorn' (unicorn fruit)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.9
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a direct match for the 'fruit' clue and is unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.9
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a direct match for the 'fruit' clue and is already associated with the blue team.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.9
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a direct match for the 'fruit' clue and is a blue word.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "backpack",
+        "count": 2,
+        "rationale": "hints at 'string' (backpack straps) and 'spine' (backbone, but riskier\u2014team may avoid if unsure)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chest": 0.75,
+          "string": 0.85
+        },
+        "ranked_guesses": [
+          "string",
+          "chest"
+        ],
+        "rationale": "'string' is a direct backpack association (e.g., drawstring, straps). 'chest' ties to backpacks (chest straps) but is weaker. 'box' and 'spine' are borderline but lack clear ties. No opponent-clue conflicts detected. Only 'string' and 'chest' meet the 0.70 threshold.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "'Duck' and 'unicorn' are associated with animals and are safe guesses."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "unicorn": 0.8
+        },
+        "ranked_guesses": [
+          "unicorn"
+        ],
+        "rationale": "The clue 'animal 2' suggests words related to animals. 'Unicorn' is a direct match as it is a mythical animal, aligning well with the clue. The confidence level is high due to its clear connection to the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "unicorn": 0.8
+        },
+        "ranked_guesses": [
+          "unicorn"
+        ],
+        "rationale": "The clue 'animal 2' suggests words related to animals. 'unicorn' is a direct match to this clue with a confidence of 0.8, making it a strong candidate for guessing.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "duck": 0.8,
+          "fish": 0.75,
+          "unicorn": 0.7
+        },
+        "ranked_guesses": [
+          "duck",
+          "fish",
+          "unicorn"
+        ],
+        "rationale": "Duck, fish, and unicorn are strong animal-related matches.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "back",
+        "count": 3,
+        "rationale": "Targets 'spine', 'string', and 'foot'\u2014all related to the back (spine as backbone, string as 'backstring' in some contexts, and foot as in 'back of the foot'). Avoids assassin ('box') and neutral words. High efficiency for remaining red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "backpack": 0.85,
+          "spine": 0.95,
+          "string": 0.7
+        },
+        "ranked_guesses": [
+          "spine",
+          "backpack",
+          "string"
+        ],
+        "rationale": "\"spine\" is the strongest direct match for 'back' (anatomical reference). \"backpack\" is a compound word directly tied to 'back' and likely intended. \"string\" (as in 'backstring') is borderline but meets the 0.70 threshold. Lower-confidence words like 'lap' (e.g., 'backlap') or 'foot' (e.g., 'backfoot') are excluded. Opponent clues ('animal', 'fruit') rule out 'duck'/'fish'. No assassin risk detected for top 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "backpack": 0.85,
+          "spine": 0.95,
+          "string": 0.7
+        },
+        "ranked_guesses": [
+          "spine",
+          "backpack",
+          "string"
+        ],
+        "rationale": "'spine' is the most direct and literal association with 'back' (e.g., 'backbone' or 'spinal column'), making it the highest-confidence guess. 'Backpack' is a compound word explicitly containing 'back,' ensuring a strong match. 'String' (as in 'backstring' or 'back of a bow') is a plausible but weaker third. Lower-confidence words like 'lap' (e.g., 'backlap') or 'foot' (e.g., 'backfoot') fail to meet the 0.70 threshold. Avoiding opponent-tied words (e.g., 'bond' from prior clues) and risky/neutral terms (e.g., 'bomb').",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "backpack": 0.85,
+          "spine": 0.95,
+          "string": 0.7
+        },
+        "ranked_guesses": [
+          "spine",
+          "backpack",
+          "string"
+        ],
+        "rationale": "\"spine\" is the most direct and literal association with 'back' (e.g., 'backbone' or 'spinal column'), making it the highest-confidence guess. \"backpack\" is a compound word explicitly containing 'back,' ensuring a strong match. \"string\" (as in 'backstring' or 'back of a bow') is a plausible but less direct association, meeting the 0.70 threshold. Lower-confidence words like \"lap\" (e.g., 'lap of the back') or \"foot\" (e.g., 'back foot') fail to meet the threshold. Opponent clues ('animal,' 'fruit') are avoided; no assassin risk is inferred for top guesses.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "feathers",
+        "count": 2,
+        "rationale": "Associated with 'duck' and 'thief' (as in 'thief in the night')"
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "duck": 0.8
+        },
+        "ranked_guesses": [
+          "duck"
+        ],
+        "rationale": "The clue 'feathers' suggests a connection to 'duck', which is a direct match for the current clue and is a safe word for the blue team.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.8
+        },
+        "ranked_guesses": [
+          "brush"
+        ],
+        "rationale": "The clue 'feathers' suggests a connection to 'brush' due to the association with feathers and brushes, which are commonly used for cleaning feathers. This match is direct and obvious, making 'brush' a strong candidate for the guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "duck": 0.8
+        },
+        "ranked_guesses": [
+          "duck"
+        ],
+        "rationale": "The clue 'feathers' suggests a direct match with 'duck', which is a word belonging to the blue team. The confidence level is high, indicating a strong match.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "explode",
+        "count": 2,
+        "rationale": "Directly hints at 'bomb' and indirectly at 'string' (as in fuse/string for explosives). Avoids all board substrings and revealed words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.95
+        },
+        "ranked_guesses": [
+          "bomb"
+        ],
+        "rationale": "'bomb' is the strongest and most direct association with 'explode' (0.95 confidence). No other unrevealed word has a meaningful connection to the clue. All other words are below 0.70 confidence and should not be guessed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.95
+        },
+        "ranked_guesses": [
+          "bomb"
+        ],
+        "rationale": "'bomb' is the strongest and most direct association with 'explode' (0.95 confidence). It is the only word meeting the >=0.70 threshold. No other unrevealed words have a clear or safe connection to the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.95
+        },
+        "ranked_guesses": [
+          "bomb"
+        ],
+        "rationale": "'bomb' is the strongest and most direct association with 'explode' (0.95 confidence). No other unrevealed word has a meaningful connection to the clue. All other words are baseline (0.05) or negligible (0.10 for 'crane' due to distant 'construction' ties).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "measure",
+        "count": 2,
+        "rationale": "links 'foot' and 'string' as units of measurement (foot for length, string for theory/length)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.85,
+          "string": 0.75
+        },
+        "ranked_guesses": [
+          "foot",
+          "string"
+        ],
+        "rationale": "'foot' is a direct unit of measure (12 inches); 'string' relates to 'measure' via 'string theory' or 'measuring string.' Confidence in 'time' is below threshold (0.60). No opponent-clue conflicts detected for top guesses.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.85,
+          "string": 0.75
+        },
+        "ranked_guesses": [
+          "foot",
+          "string"
+        ],
+        "rationale": "'foot' is a unit of **measure** (12 inches = 1 foot) and 'string' can refer to a **measure**d length (e.g., 'string of lights' or 'measuring string'). Both are direct, high-confidence matches to the clue. No opponent ties or obvious risks.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fashion",
+        "count": 2,
+        "rationale": "Hints at 'brush' and 'thief' without using substrings of revealed words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.8
+        },
+        "ranked_guesses": [
+          "bond"
+        ],
+        "rationale": "The clue 'fashion 2' suggests words related to fashion. 'Bond' fits this theme as it can relate to fashion through concepts like fashion bonds or partnerships in fashion. It is a direct match with confidence 0.8.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.8
+        },
+        "ranked_guesses": [
+          "brush"
+        ],
+        "rationale": "Brush is related to fashion as it is a common tool used in styling hair, which fits the 'fashion' clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.75
+        },
+        "ranked_guesses": [
+          "brush"
+        ],
+        "rationale": "Brush is related to fashion and has a confidence of 0.75.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "classroom",
+        "count": 2,
+        "rationale": "direct link to 'school' and 'time' (as in 'school time'), both remaining red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.95
+        },
+        "ranked_guesses": [
+          "school"
+        ],
+        "rationale": "'school' is the strongest and most direct association with 'classroom' (confidence 0.95). No other unrevealed word has a meaningful connection to the clue. Opponent clues ('celebration', 'juice', etc.) do not overlap with this guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.95
+        },
+        "ranked_guesses": [
+          "school"
+        ],
+        "rationale": "'school' is the strongest and most direct association with 'classroom' (0.95 confidence). It is the only word meeting the >=0.70 threshold. No opponent-clue conflicts detected for 'school'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.95
+        },
+        "ranked_guesses": [
+          "school"
+        ],
+        "rationale": "'school' is the strongest and most direct association with 'classroom' (0.95 confidence). It is the only unrevealed word meeting the >=0.70 threshold. No other words (e.g., 'lap' as in 'laptop' or 'desk lap') reach the required confidence for guessing. Opponent clues ('celebration', 'juice', etc.) do not conflict with this guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "time",
+        "count": 2,
+        "rationale": "Associated with 'time' and 'thief' without matching any board words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "secure",
+        "count": 1,
+        "rationale": "hints at 'bond' as the only remaining blue word for red team to avoid."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.85
+        },
+        "ranked_guesses": [
+          "bond"
+        ],
+        "rationale": "'bond' is the strongest direct association with 'secure' (e.g., secure bond, financial/bonding context). No other unrevealed word reaches the 0.70 confidence threshold for a safe guess. Opponent clues ('celebration', 'juice', etc.) do not strongly overlap with these words, reducing interference risk. Only 'bond' meets the confidence rule.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.85,
+          "chest": 0.75
+        },
+        "ranked_guesses": [
+          "bond",
+          "chest"
+        ],
+        "rationale": "'bond' is a strong, direct association with 'secure' (e.g., secure bond, financial or trust-based). 'Chest' (e.g., secure chest, treasure/lockbox) also fits but is slightly less direct. No other unrevealed words reach the 0.70 threshold for a confident guess. Prioritize 'bond' first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.85,
+          "chest": 0.75
+        },
+        "ranked_guesses": [
+          "bond",
+          "chest"
+        ],
+        "rationale": "'secure' strongly ties to **bond** (e.g., 'secure bond' in finance/trust) and **chest** (e.g., 'secure chest' for safes/lockboxes). Both exceed 0.70 confidence. Lower-confidence words (e.g., 'box') lack direct association or overlap with opponent clues (e.g., 'thief' could relate to 'fashion' or 'celebration' indirectly). Prioritize obvious matches first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "stealth",
+        "count": 1,
+        "rationale": "Associated with 'thief' without matching any board words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "thief": 0.75
+        },
+        "ranked_guesses": [
+          "thief"
+        ],
+        "rationale": "Thief is associated with stealth and is a direct match for the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "thief": 0.8
+        },
+        "ranked_guesses": [
+          "thief"
+        ],
+        "rationale": "Thief is strongly associated with stealth and is a direct match for the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "thief": 0.75
+        },
+        "ranked_guesses": [
+          "thief"
+        ],
+        "rationale": "Thief is associated with stealth, fitting the clue well.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sports"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "horseshoe"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "play"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "field"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dance"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hospital"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "juice"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "orange"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "market"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "stock"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "crash"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "backpack"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "unicorn"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "back"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spine"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "feathers"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "duck"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explode"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bomb"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "agent_id": "Phi-4-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "measure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "foot"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "string"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fashion"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "brush"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "classroom"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "school"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "time",
+        "count": 2,
+        "rationale": "Associated with 'time' and 'thief' without matching any board words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "time",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "secure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bond"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "stealth"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "thief"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 65,
+    "public_event_count": 46,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-004-mistralai_mistral_medium_3_1-vs-microsoft_phi_4",
+    "team_blue": "Phi-4",
+    "team_red": "Mistral Medium 3.1",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sports"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.75,
+              "field": 0.85,
+              "horseshoe": 0.95,
+              "play": 0.9
+            },
+            "ranked_guesses": [
+              "horseshoe",
+              "play",
+              "field",
+              "dance"
+            ],
+            "rationale": "'horseshoe' (horseshoes is a sport), 'play' (sports involve playing), and 'field' (sports field) are direct, high-confidence matches for 'sports 3'. 'Dance' is borderline but often considered a sport. Prioritized obviousness and safety.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.75,
+              "field": 0.85,
+              "horseshoe": 0.95,
+              "play": 0.9
+            },
+            "ranked_guesses": [
+              "horseshoe",
+              "play",
+              "field",
+              "dance"
+            ],
+            "rationale": "'horseshoe' (horseshoe pitching), 'play' (sports activity), and 'field' (sports venue) are direct, high-confidence matches for 'sports 3'. 'Dance' is borderline but included as the 4th option due to sports-like activities (e.g., competitive dance). No opponent clue to avoid. Top 3 exceed 0.70 confidence.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "field": 0.8,
+              "horseshoe": 0.95,
+              "play": 0.85
+            },
+            "ranked_guesses": [
+              "horseshoe",
+              "play",
+              "field"
+            ],
+            "rationale": "'horseshoe' (horseshoes is a sport), 'play' (sports involve play), and 'field' (sports field) are the strongest direct matches to 'sports 3'. Confidence in these exceeds 0.70; lower-confidence words are excluded per rules.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "horseshoe"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "play"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "field"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sports",
+          "count": 3,
+          "rationale": "links 'play', 'horseshoe', and 'foot' (as in football) for red team words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "celebration": 0.75,
+              "dance": 0.8
+            },
+            "ranked_guesses": [
+              "dance",
+              "celebration"
+            ],
+            "rationale": "Dance and celebration are directly related to the theme of celebration.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "celebration": 0.75,
+              "dance": 0.8
+            },
+            "ranked_guesses": [
+              "dance",
+              "celebration"
+            ],
+            "rationale": "Dance and celebration are directly related to the theme of celebration.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "celebration": 0.75,
+              "dance": 0.8
+            },
+            "ranked_guesses": [
+              "dance",
+              "celebration"
+            ],
+            "rationale": "Dance and celebration are directly related to the theme of celebration.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dance"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 3,
+          "rationale": "The words 'dance', 'hospital', 'orange', 'spine', 'thief', and 'unicorn' can be associated with celebration. The clue avoids substrings of unrevealed words and focuses on blue words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "hospital": 0.92
+            },
+            "ranked_guesses": [
+              "doctor",
+              "hospital"
+            ],
+            "rationale": "Highest-confidence direct matches for 'medical 2' are 'doctor' and 'hospital' (both >=0.90). Avoid opponent's 'celebration'-linked words (e.g., 'unicorn'). No need to stop; two clear guesses remain.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "hospital": 0.92
+            },
+            "ranked_guesses": [
+              "doctor",
+              "hospital"
+            ],
+            "rationale": "Highest-confidence direct matches for 'medical 2' are **doctor** and **hospital** (both >0.90). 'Foot' and 'spine' are medical-adjacent but below 0.70 threshold. Avoid opponent's 'celebration'-linked words (e.g., 'unicorn'). No assassin risk detected in top picks.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.95,
+              "hospital": 0.92
+            },
+            "ranked_guesses": [
+              "doctor",
+              "hospital"
+            ],
+            "rationale": "Highest-confidence direct matches for 'medical 2' are 'doctor' and 'hospital' (both >0.90). Avoid opponent's 'celebration'-linked words (e.g., 'unicorn'). Remaining words lack sufficient medical association to meet the 0.70 threshold for further guesses this turn.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hospital"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 2,
+          "rationale": "links 'doctor' and 'hospital' for red team, avoids assassin/neutral/blue conflicts."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "juice"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "juice": 0.75,
+              "orange": 0.8
+            },
+            "ranked_guesses": [
+              "orange",
+              "juice"
+            ],
+            "rationale": "Orange and juice are directly related to the clue 'juice' and are likely to be on the blue team's side.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.8
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a type of juice, matching the clue 'juice 2' with high confidence.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "juice": 0.75,
+              "orange": 0.85
+            },
+            "ranked_guesses": [
+              "orange",
+              "juice"
+            ],
+            "rationale": "Both 'orange' and 'juice' are directly related to the clue 'juice'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "orange"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "juice",
+          "count": 2,
+          "rationale": "Associated with 'orange' and 'unicorn', both blue words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "market"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.78,
+              "crash": 0.85,
+              "stock": 0.92
+            },
+            "ranked_guesses": [
+              "stock",
+              "crash",
+              "bond"
+            ],
+            "rationale": "'market' strongly ties to **stock** (stock market, 0.92) and **crash** (market crash, 0.85) as top direct matches. **Bond** (financial/bond market, 0.78) is the 3rd-highest and meets the 0.70 threshold. Lower-confidence words (e.g., 'foot' as in 'market foot traffic') fail the threshold. Opponent clues ('celebration', 'juice') have no overlap here. Prioritize **stock** first as the safest high-confidence guess.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.78,
+              "crash": 0.85,
+              "stock": 0.92
+            },
+            "ranked_guesses": [
+              "stock",
+              "crash",
+              "bond"
+            ],
+            "rationale": "'market 3' strongly ties to **stock** (stock market, 0.92) and **crash** (market crash, 0.85) as top direct matches. **Bond** (financial bonds, 0.78) is the 3rd-highest and meets the \u22650.70 threshold. Lower-confidence words (e.g., *foot* as 'market foot traffic') are excluded. Opponent clues ('celebration', 'juice') and prior revealed words (e.g., *play*, *field*) pose no conflict here. Proceed with **stock** first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.78,
+              "crash": 0.85,
+              "stock": 0.92
+            },
+            "ranked_guesses": [
+              "stock",
+              "crash",
+              "bond"
+            ],
+            "rationale": "'market 3' strongly ties to **stock** (stock market, 0.92) and **crash** (market crash, 0.85) as top direct matches. **Bond** (financial bonds, 0.78) is the 3rd-best fit. All others fall below 0.70 or are ambiguous/off-topic (e.g., 'string' as 'stock ticker string' is weaker). Avoid opponent-linked words (e.g., 'unicorn' could vaguely tie to 'juice' mythically). Prioritize high-confidence market terms first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "stock"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "crash"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "market",
+          "count": 3,
+          "rationale": "links to **stock**, **string** (as in stock market/string of trades), and **bomb** (as in 'bombed in the market'), while avoiding direct overlaps with remaining words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.9
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a direct match for the 'fruit' clue and is unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.9
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a direct match for the 'fruit' clue and is already associated with the blue team.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.9
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a direct match for the 'fruit' clue and is a blue word.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fruit",
+          "count": 2,
+          "rationale": "Fruit is associated with 'orange' and 'unicorn' (unicorn fruit)."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "backpack"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "chest": 0.75,
+              "string": 0.85
+            },
+            "ranked_guesses": [
+              "string",
+              "chest"
+            ],
+            "rationale": "'string' is a direct backpack association (e.g., drawstring, straps). 'chest' ties to backpacks (chest straps) but is weaker. 'box' and 'spine' are borderline but lack clear ties. No opponent-clue conflicts detected. Only 'string' and 'chest' meet the 0.70 threshold.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "backpack",
+          "count": 2,
+          "rationale": "hints at 'string' (backpack straps) and 'spine' (backbone, but riskier\u2014team may avoid if unsure)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "unicorn": 0.8
+            },
+            "ranked_guesses": [
+              "unicorn"
+            ],
+            "rationale": "The clue 'animal 2' suggests words related to animals. 'Unicorn' is a direct match as it is a mythical animal, aligning well with the clue. The confidence level is high due to its clear connection to the clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "unicorn": 0.8
+            },
+            "ranked_guesses": [
+              "unicorn"
+            ],
+            "rationale": "The clue 'animal 2' suggests words related to animals. 'unicorn' is a direct match to this clue with a confidence of 0.8, making it a strong candidate for guessing.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "duck": 0.8,
+              "fish": 0.75,
+              "unicorn": 0.7
+            },
+            "ranked_guesses": [
+              "duck",
+              "fish",
+              "unicorn"
+            ],
+            "rationale": "Duck, fish, and unicorn are strong animal-related matches.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "unicorn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "'Duck' and 'unicorn' are associated with animals and are safe guesses."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "back"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "backpack": 0.85,
+              "spine": 0.95,
+              "string": 0.7
+            },
+            "ranked_guesses": [
+              "spine",
+              "backpack",
+              "string"
+            ],
+            "rationale": "\"spine\" is the strongest direct match for 'back' (anatomical reference). \"backpack\" is a compound word directly tied to 'back' and likely intended. \"string\" (as in 'backstring') is borderline but meets the 0.70 threshold. Lower-confidence words like 'lap' (e.g., 'backlap') or 'foot' (e.g., 'backfoot') are excluded. Opponent clues ('animal', 'fruit') rule out 'duck'/'fish'. No assassin risk detected for top 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "backpack": 0.85,
+              "spine": 0.95,
+              "string": 0.7
+            },
+            "ranked_guesses": [
+              "spine",
+              "backpack",
+              "string"
+            ],
+            "rationale": "'spine' is the most direct and literal association with 'back' (e.g., 'backbone' or 'spinal column'), making it the highest-confidence guess. 'Backpack' is a compound word explicitly containing 'back,' ensuring a strong match. 'String' (as in 'backstring' or 'back of a bow') is a plausible but weaker third. Lower-confidence words like 'lap' (e.g., 'backlap') or 'foot' (e.g., 'backfoot') fail to meet the 0.70 threshold. Avoiding opponent-tied words (e.g., 'bond' from prior clues) and risky/neutral terms (e.g., 'bomb').",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "backpack": 0.85,
+              "spine": 0.95,
+              "string": 0.7
+            },
+            "ranked_guesses": [
+              "spine",
+              "backpack",
+              "string"
+            ],
+            "rationale": "\"spine\" is the most direct and literal association with 'back' (e.g., 'backbone' or 'spinal column'), making it the highest-confidence guess. \"backpack\" is a compound word explicitly containing 'back,' ensuring a strong match. \"string\" (as in 'backstring' or 'back of a bow') is a plausible but less direct association, meeting the 0.70 threshold. Lower-confidence words like \"lap\" (e.g., 'lap of the back') or \"foot\" (e.g., 'back foot') fail to meet the threshold. Opponent clues ('animal,' 'fruit') are avoided; no assassin risk is inferred for top guesses.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "back",
+          "count": 3,
+          "rationale": "Targets 'spine', 'string', and 'foot'\u2014all related to the back (spine as backbone, string as 'backstring' in some contexts, and foot as in 'back of the foot'). Avoids assassin ('box') and neutral words. High efficiency for remaining red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "feathers"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "duck": 0.8
+            },
+            "ranked_guesses": [
+              "duck"
+            ],
+            "rationale": "The clue 'feathers' suggests a connection to 'duck', which is a direct match for the current clue and is a safe word for the blue team.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.8
+            },
+            "ranked_guesses": [
+              "brush"
+            ],
+            "rationale": "The clue 'feathers' suggests a connection to 'brush' due to the association with feathers and brushes, which are commonly used for cleaning feathers. This match is direct and obvious, making 'brush' a strong candidate for the guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "duck": 0.8
+            },
+            "ranked_guesses": [
+              "duck"
+            ],
+            "rationale": "The clue 'feathers' suggests a direct match with 'duck', which is a word belonging to the blue team. The confidence level is high, indicating a strong match.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "duck"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "feathers",
+          "count": 2,
+          "rationale": "Associated with 'duck' and 'thief' (as in 'thief in the night')"
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explode"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.95
+            },
+            "ranked_guesses": [
+              "bomb"
+            ],
+            "rationale": "'bomb' is the strongest and most direct association with 'explode' (0.95 confidence). No other unrevealed word has a meaningful connection to the clue. All other words are below 0.70 confidence and should not be guessed.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.95
+            },
+            "ranked_guesses": [
+              "bomb"
+            ],
+            "rationale": "'bomb' is the strongest and most direct association with 'explode' (0.95 confidence). It is the only word meeting the >=0.70 threshold. No other unrevealed words have a clear or safe connection to the clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.95
+            },
+            "ranked_guesses": [
+              "bomb"
+            ],
+            "rationale": "'bomb' is the strongest and most direct association with 'explode' (0.95 confidence). No other unrevealed word has a meaningful connection to the clue. All other words are baseline (0.05) or negligible (0.10 for 'crane' due to distant 'construction' ties).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bomb"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "explode",
+          "count": 2,
+          "rationale": "Directly hints at 'bomb' and indirectly at 'string' (as in fuse/string for explosives). Avoids all board substrings and revealed words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "measure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.85,
+              "string": 0.75
+            },
+            "ranked_guesses": [
+              "foot",
+              "string"
+            ],
+            "rationale": "'foot' is a direct unit of measure (12 inches); 'string' relates to 'measure' via 'string theory' or 'measuring string.' Confidence in 'time' is below threshold (0.60). No opponent-clue conflicts detected for top guesses.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.85,
+              "string": 0.75
+            },
+            "ranked_guesses": [
+              "foot",
+              "string"
+            ],
+            "rationale": "'foot' is a unit of **measure** (12 inches = 1 foot) and 'string' can refer to a **measure**d length (e.g., 'string of lights' or 'measuring string'). Both are direct, high-confidence matches to the clue. No opponent ties or obvious risks.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "foot"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "string"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fashion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.8
+            },
+            "ranked_guesses": [
+              "bond"
+            ],
+            "rationale": "The clue 'fashion 2' suggests words related to fashion. 'Bond' fits this theme as it can relate to fashion through concepts like fashion bonds or partnerships in fashion. It is a direct match with confidence 0.8.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.8
+            },
+            "ranked_guesses": [
+              "brush"
+            ],
+            "rationale": "Brush is related to fashion as it is a common tool used in styling hair, which fits the 'fashion' clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.75
+            },
+            "ranked_guesses": [
+              "brush"
+            ],
+            "rationale": "Brush is related to fashion and has a confidence of 0.75.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "brush"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fashion",
+          "count": 2,
+          "rationale": "Hints at 'brush' and 'thief' without using substrings of revealed words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "classroom"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "school": 0.95
+            },
+            "ranked_guesses": [
+              "school"
+            ],
+            "rationale": "'school' is the strongest and most direct association with 'classroom' (confidence 0.95). No other unrevealed word has a meaningful connection to the clue. Opponent clues ('celebration', 'juice', etc.) do not overlap with this guess.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.95
+            },
+            "ranked_guesses": [
+              "school"
+            ],
+            "rationale": "'school' is the strongest and most direct association with 'classroom' (0.95 confidence). It is the only word meeting the >=0.70 threshold. No opponent-clue conflicts detected for 'school'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.95
+            },
+            "ranked_guesses": [
+              "school"
+            ],
+            "rationale": "'school' is the strongest and most direct association with 'classroom' (0.95 confidence). It is the only unrevealed word meeting the >=0.70 threshold. No other words (e.g., 'lap' as in 'laptop' or 'desk lap') reach the required confidence for guessing. Opponent clues ('celebration', 'juice', etc.) do not conflict with this guess.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "school"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "classroom",
+          "count": 2,
+          "rationale": "direct link to 'school' and 'time' (as in 'school time'), both remaining red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "secure"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bond"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "stealth"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "thief"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "time",
+          "count": 2,
+          "rationale": "Associated with 'time' and 'thief' without matching any board words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

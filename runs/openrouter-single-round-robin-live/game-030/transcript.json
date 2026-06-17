@@ -1,0 +1,2378 @@
+{
+  "board": {
+    "identities": {
+      "ambulance": "neutral",
+      "battery": "blue",
+      "casino": "red",
+      "cover": "blue",
+      "disease": "neutral",
+      "dog": "neutral",
+      "eye": "neutral",
+      "france": "blue",
+      "hollywood": "neutral",
+      "loch ness": "assassin",
+      "mouse": "red",
+      "nut": "blue",
+      "opera": "red",
+      "pass": "red",
+      "pipe": "red",
+      "ring": "neutral",
+      "ruler": "red",
+      "smuggler": "neutral",
+      "stock": "blue",
+      "temple": "red",
+      "theater": "red",
+      "tokyo": "blue",
+      "triangle": "blue",
+      "tube": "red",
+      "water": "blue"
+    },
+    "revealed": [
+      "battery",
+      "casino",
+      "cover",
+      "france",
+      "nut",
+      "opera",
+      "pipe",
+      "stock",
+      "theater",
+      "tokyo",
+      "triangle",
+      "tube",
+      "water"
+    ],
+    "words": {
+      "ambulance": "neutral",
+      "battery": "blue",
+      "casino": "red",
+      "cover": "blue",
+      "disease": "neutral",
+      "dog": "neutral",
+      "eye": "neutral",
+      "france": "blue",
+      "hollywood": "neutral",
+      "loch ness": "assassin",
+      "mouse": "red",
+      "nut": "blue",
+      "opera": "red",
+      "pass": "red",
+      "pipe": "red",
+      "ring": "neutral",
+      "ruler": "red",
+      "smuggler": "neutral",
+      "stock": "blue",
+      "temple": "red",
+      "theater": "red",
+      "tokyo": "blue",
+      "triangle": "blue",
+      "tube": "red",
+      "water": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "performance",
+        "count": 4,
+        "rationale": "covers opera, theater, temple (as a venue for cultural performances), and pass (as in 'dress rehearsal' or 'passing' in a show context). Avoids assassin/neutral risks while targeting high-density red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "power",
+        "count": 1,
+        "rationale": "battery is a source of power"
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.8
+        },
+        "ranked_guesses": [
+          "battery"
+        ],
+        "rationale": "battery is related to power",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.8
+        },
+        "ranked_guesses": [
+          "battery"
+        ],
+        "rationale": "battery is a direct source of power",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.8
+        },
+        "ranked_guesses": [
+          "battery"
+        ],
+        "rationale": "Battery is a direct source of power, matching the clue 'power'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "royalty",
+        "count": 3,
+        "rationale": "links to 'ruler', 'temple', and 'opera' (king/queen, crown jewels, royal opera) \u2013 all red."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.75,
+          "opera": 0.35,
+          "ruler": 0.95,
+          "temple": 0.45,
+          "tokyo": 0.55
+        },
+        "ranked_guesses": [
+          "ruler",
+          "france",
+          "tokyo",
+          "temple",
+          "opera"
+        ],
+        "rationale": "\"ruler\" is directly associated with royalty (e.g., kings/queens). \"france\" ties to monarchy (e.g., Louis XIV). Others are weaker but plausible (e.g., \"tokyo\" for Japanese emperor, \"temple\" for royal ceremonies). Prioritizing highest-confidence first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "finance",
+        "count": 2,
+        "rationale": "Stock and water are both related to finance and markets."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "stock": 0.8
+        },
+        "ranked_guesses": [
+          "stock"
+        ],
+        "rationale": "Stock is closely related to finance.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "stock": 0.8
+        },
+        "ranked_guesses": [
+          "stock"
+        ],
+        "rationale": "finance is closely related to stock",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "stock": 0.8
+        },
+        "ranked_guesses": [
+          "stock"
+        ],
+        "rationale": "finance is closely related to stock, which is a strong guess for the current clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "plumbing",
+        "count": 3,
+        "rationale": "links 'pipe', 'tube', and 'nut' (as in pipe-fitting) for red team, avoiding neutral/assassin conflicts."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.95,
+          "tube": 0.85,
+          "water": 0.75
+        },
+        "ranked_guesses": [
+          "pipe",
+          "tube",
+          "water"
+        ],
+        "rationale": "'pipe' is the most direct plumbing-related term; 'tube' is a close secondary; 'water' is a tertiary association with plumbing systems.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pipe": 0.95,
+          "tube": 0.85,
+          "water": 0.75
+        },
+        "ranked_guesses": [
+          "pipe",
+          "tube",
+          "water"
+        ],
+        "rationale": "\"pipe\" is the most direct plumbing-related term; \"tube\" is a close synonym; \"water\" is tangentially related to plumbing systems.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tech",
+        "count": 2,
+        "rationale": "'tech' can hint at 'cover' (as in tech cover) and 'tokyo' (a tech hub), both blue words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tube": 0.8
+        },
+        "ranked_guesses": [
+          "tube"
+        ],
+        "rationale": "tube is related to tech and has not been revealed yet",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tube": 0.8
+        },
+        "ranked_guesses": [
+          "tube"
+        ],
+        "rationale": "tube is related to tech and has not been revealed yet",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "loch ness": 0.8
+        },
+        "ranked_guesses": [
+          "loch ness"
+        ],
+        "rationale": "Loch Ness is associated with technology through the concept of sonar and underwater exploration technology, which fits the clue 'tech'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "monarchy",
+        "count": 3,
+        "rationale": "links ruler, temple, opera (royalty/aristocracy themes; avoids direct 'royalty' repeat)"
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.75,
+          "ruler": 0.95,
+          "tokyo": 0.55
+        },
+        "ranked_guesses": [
+          "ruler",
+          "france",
+          "tokyo"
+        ],
+        "rationale": "\"ruler\" is a direct synonym for monarchy (e.g., king/queen). \"france\" and \"tokyo\" are historical/geopolitical ties (e.g., French monarchy, Japanese emperor), but lower confidence due to broader associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cover",
+        "count": 1,
+        "rationale": "Directly related to one of our unguessed words, and not too broad to lead to other words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "crown",
+        "count": 3,
+        "rationale": "links to temple (crown jewels), ruler (monarch's crown), and opera (crown of sonnets or royal operas). Avoids assassin/neutral/blue overlaps while targeting 3 critical reds."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ring": 0.95,
+          "ruler": 0.85,
+          "temple": 0.65,
+          "tokyo": 0.55
+        },
+        "ranked_guesses": [
+          "ring",
+          "ruler",
+          "temple",
+          "tokyo"
+        ],
+        "rationale": "\"ring\" is most directly associated with \"crown\" (e.g., crown jewels, royal rings). \"Ruler\" is a monarch or measuring tool (less direct). \"Temple\" and \"tokyo\" are weaker but could relate to imperial/royal contexts (e.g., Emperor of Japan, temples as royal sites). Prioritizing highest-confidence first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "protect",
+        "count": 1,
+        "rationale": "Suggests 'cover', a blue team word, without directly using the word or a substring of it."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cover": 0.8
+        },
+        "ranked_guesses": [
+          "cover"
+        ],
+        "rationale": "The word 'cover' is directly related to the clue 'protect' and is a strong candidate on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cover": 0.8
+        },
+        "ranked_guesses": [
+          "cover"
+        ],
+        "rationale": "The clue 'protect' is strongly associated with the word 'cover' on the board, as 'cover' can mean to protect or shield something.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cover": 0.8
+        },
+        "ranked_guesses": [
+          "cover"
+        ],
+        "rationale": "The word 'cover' is directly related to the clue 'protect' and is a strong candidate on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ancient",
+        "count": 3,
+        "rationale": "targets temple, opera, and ruler; avoids assassin and neutral words while maximizing red word coverage."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "casino": 0.62,
+          "france": 0.68,
+          "hollywood": 0.72,
+          "loch ness": 0.92,
+          "opera": 0.75,
+          "ruler": 0.88,
+          "temple": 0.95,
+          "tokyo": 0.65
+        },
+        "ranked_guesses": [
+          "temple",
+          "loch ness",
+          "ruler",
+          "opera",
+          "hollywood",
+          "france",
+          "tokyo",
+          "casino"
+        ],
+        "rationale": "\"temple\" is the strongest guess due to its direct association with ancient civilizations (e.g., Greek/Roman temples, Angkor Wat). \"Loch Ness\" and \"ruler\" (e.g., ancient kings/pharaohs) are also highly relevant. Other words like \"opera\" or \"hollywood\" are weaker but could loosely tie to ancient themes (e.g., Greek theater, historical films). Low-confidence words are unrelated or modern.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nut",
+        "count": 1,
+        "rationale": "It's a single blue word that doesn't have strong connections to other words on the board, minimizing the risk of leading to a wrong guess."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "stage",
+        "count": 4,
+        "rationale": "links opera, theater, temple, and pass (as in 'pass the stage')\u2014all red words, with minimal neutral/blue overlap."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "casino": 0.65,
+          "hollywood": 0.75,
+          "opera": 0.85,
+          "theater": 0.95
+        },
+        "ranked_guesses": [
+          "theater",
+          "opera",
+          "hollywood",
+          "casino"
+        ],
+        "rationale": "'stage' strongly connects to 'theater' (primary venue for staged performances), 'opera' (staged musical theater), and 'hollywood' (film/performance industry). 'Casino' is a weaker but plausible link (e.g., stage shows in casinos). Prior clues like 'performance' and 'plumbing' reduce overlap risk with other words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shell",
+        "count": 1,
+        "rationale": "Nut is a type of shell, and it's a safe word that doesn't connect to other words on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nut": 0.8
+        },
+        "ranked_guesses": [
+          "nut"
+        ],
+        "rationale": "Shell can be associated with a nut, as some nuts have a hard outer shell.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nut": 0.8
+        },
+        "ranked_guesses": [
+          "nut"
+        ],
+        "rationale": "Shell can be associated with a nut, as some nuts have a hard outer shell.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "loch ness": 0.8
+        },
+        "ranked_guesses": [
+          "loch ness"
+        ],
+        "rationale": "Loch Ness is a body of water, and 'shell' can be associated with water, especially in the context of sea creatures or objects found in water.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "shogun",
+        "count": 2,
+        "rationale": "'tokyo' and 'ruler' are both strongly associated with the concept of a shogun in Japanese history, while avoiding overlap with other words on the board."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ruler": 0.75,
+          "temple": 0.85,
+          "tokyo": 0.95
+        },
+        "ranked_guesses": [
+          "tokyo",
+          "temple",
+          "ruler"
+        ],
+        "rationale": "Shogun is a historical Japanese military leader; 'tokyo' is the most direct link. 'Temple' and 'ruler' are secondary associations with Japanese culture and feudal hierarchy.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ruler": 0.75,
+          "temple": 0.85,
+          "tokyo": 0.95
+        },
+        "ranked_guesses": [
+          "tokyo",
+          "temple",
+          "ruler"
+        ],
+        "rationale": "\"shogun\" is a historical Japanese military leader; **tokyo** is the most direct link (capital of Japan). **temple** and **ruler** are secondary associations (samurai culture, feudal hierarchy). Count=2 suggests two related words remain.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "tech",
+        "count": 1,
+        "rationale": "Refers to the remaining blue word 'triangle', which can be associated with technology or a tech gadget, without directly revealing it."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "triangle": 0.8
+        },
+        "ranked_guesses": [
+          "triangle"
+        ],
+        "rationale": "Triangle is often associated with technology, especially in the context of computer graphics and engineering.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.8
+        },
+        "ranked_guesses": [
+          "france"
+        ],
+        "rationale": "France is a country known for its technological advancements and contributions to tech, making it a plausible guess for the 'tech' clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "france": 0.8
+        },
+        "ranked_guesses": [
+          "france"
+        ],
+        "rationale": "France is a country known for its technology and innovation, making it a plausible guess for the 'tech' clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "measure",
+        "count": 3,
+        "rationale": "Links to 'triangle' (geometric), 'ruler' (measuring tool), and 'ring' (circular measure) while avoiding direct overlap with assassin or neutral words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "triangle",
+        "count": 1,
+        "rationale": "It's the last unguessed blue word and does not have strong connections to other words on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "venice",
+        "count": 3,
+        "rationale": "Links to 'opera' (famous La Fenice), 'theater' (historical Venetian theaters), and 'temple' (e.g., San Marco as a place of reverence). Avoids assassin and neutral words while targeting three remaining red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "casino": 0.95,
+          "hollywood": 0.75,
+          "opera": 0.9,
+          "theater": 0.85
+        },
+        "ranked_guesses": [
+          "casino",
+          "opera",
+          "theater",
+          "hollywood"
+        ],
+        "rationale": "Venice is strongly associated with 'casino' (e.g., Venice casinos), 'opera' (e.g., La Fenice), and 'theater' (e.g., Commedia dell'arte). 'Hollywood' is a weaker but plausible link via film festivals or cultural ties. Prioritized by directness of association.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "casino": 0.95,
+          "opera": 0.85,
+          "smuggler": 0.55,
+          "theater": 0.75
+        },
+        "ranked_guesses": [
+          "casino",
+          "opera",
+          "theater",
+          "smuggler"
+        ],
+        "rationale": "Venice is strongly associated with **casino** (e.g., Casino di Venezia) and **opera** (e.g., La Fenice). **Theater** is a weaker but plausible link (e.g., Venetian theater history). **Smuggler** is a stretch but could relate to Venice\u2019s historic trade/black-market ties. Prioritizing highest-confidence associations first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "casino": 0.95,
+          "loch ness": 0.65,
+          "opera": 0.9,
+          "theater": 0.85
+        },
+        "ranked_guesses": [
+          "casino",
+          "opera",
+          "theater",
+          "loch ness"
+        ],
+        "rationale": "Venice is strongly associated with **casino** (e.g., gambling culture), **opera** (La Fenice), and **theater** (Commedia dell'arte). 'Loch Ness' is a distant guess due to water connections but far less likely.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "geometry",
+        "count": 1,
+        "rationale": "Triangle is the last unguessed blue word and geometry is a broad term that can hint at shapes without directly mentioning the word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "triangle": 0.9
+        },
+        "ranked_guesses": [
+          "triangle"
+        ],
+        "rationale": "Geometry is directly related to triangle, and it's the only unguessed blue word left that fits the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "triangle": 0.9
+        },
+        "ranked_guesses": [
+          "triangle"
+        ],
+        "rationale": "Geometry is directly related to triangle, which is the only unguessed blue word left that fits the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "triangle": 0.9
+        },
+        "ranked_guesses": [
+          "triangle"
+        ],
+        "rationale": "Geometry is directly related to triangle, which is the only unguessed blue word that fits the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "performance"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "power"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "battery"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royalty"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "finance"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "stock"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "plumbing"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pipe"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tube"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "water"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tech"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "monarchy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "cover",
+        "count": 1,
+        "rationale": "Directly related to one of our unguessed words, and not too broad to lead to other words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cover",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "crown"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "protect"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "cover"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ancient"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "nut",
+        "count": 1,
+        "rationale": "It's a single blue word that doesn't have strong connections to other words on the board, minimizing the risk of leading to a wrong guess."
+      },
+      "event": "illegal_clue",
+      "matched_word": "nut",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "stage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "shell"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nut"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shogun"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tokyo"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tech"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "france"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "measure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "triangle",
+        "count": 1,
+        "rationale": "It's the last unguessed blue word and does not have strong connections to other words on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "triangle",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "venice"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "casino"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "opera"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "theater"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "geometry"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "triangle"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 71,
+    "public_event_count": 47,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-030-mistralai_mistral_medium_3_1-vs-qwen_qwen_2_5_72b_instruct",
+    "team_blue": "Qwen2.5 72B Instruct",
+    "team_red": "Mistral Medium 3.1",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "performance"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "performance",
+          "count": 4,
+          "rationale": "covers opera, theater, temple (as a venue for cultural performances), and pass (as in 'dress rehearsal' or 'passing' in a show context). Avoids assassin/neutral risks while targeting high-density red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "power"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.8
+            },
+            "ranked_guesses": [
+              "battery"
+            ],
+            "rationale": "battery is related to power",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.8
+            },
+            "ranked_guesses": [
+              "battery"
+            ],
+            "rationale": "battery is a direct source of power",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.8
+            },
+            "ranked_guesses": [
+              "battery"
+            ],
+            "rationale": "Battery is a direct source of power, matching the clue 'power'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "battery"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "power",
+          "count": 1,
+          "rationale": "battery is a source of power"
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royalty"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "france": 0.75,
+              "opera": 0.35,
+              "ruler": 0.95,
+              "temple": 0.45,
+              "tokyo": 0.55
+            },
+            "ranked_guesses": [
+              "ruler",
+              "france",
+              "tokyo",
+              "temple",
+              "opera"
+            ],
+            "rationale": "\"ruler\" is directly associated with royalty (e.g., kings/queens). \"france\" ties to monarchy (e.g., Louis XIV). Others are weaker but plausible (e.g., \"tokyo\" for Japanese emperor, \"temple\" for royal ceremonies). Prioritizing highest-confidence first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "royalty",
+          "count": 3,
+          "rationale": "links to 'ruler', 'temple', and 'opera' (king/queen, crown jewels, royal opera) \u2013 all red."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "finance"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "stock": 0.8
+            },
+            "ranked_guesses": [
+              "stock"
+            ],
+            "rationale": "Stock is closely related to finance.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "stock": 0.8
+            },
+            "ranked_guesses": [
+              "stock"
+            ],
+            "rationale": "finance is closely related to stock",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "stock": 0.8
+            },
+            "ranked_guesses": [
+              "stock"
+            ],
+            "rationale": "finance is closely related to stock, which is a strong guess for the current clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "stock"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "finance",
+          "count": 2,
+          "rationale": "Stock and water are both related to finance and markets."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "plumbing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.95,
+              "tube": 0.85,
+              "water": 0.75
+            },
+            "ranked_guesses": [
+              "pipe",
+              "tube",
+              "water"
+            ],
+            "rationale": "'pipe' is the most direct plumbing-related term; 'tube' is a close secondary; 'water' is a tertiary association with plumbing systems.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pipe": 0.95,
+              "tube": 0.85,
+              "water": 0.75
+            },
+            "ranked_guesses": [
+              "pipe",
+              "tube",
+              "water"
+            ],
+            "rationale": "\"pipe\" is the most direct plumbing-related term; \"tube\" is a close synonym; \"water\" is tangentially related to plumbing systems.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pipe"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tube"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "water"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "plumbing",
+          "count": 3,
+          "rationale": "links 'pipe', 'tube', and 'nut' (as in pipe-fitting) for red team, avoiding neutral/assassin conflicts."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tech"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "tube": 0.8
+            },
+            "ranked_guesses": [
+              "tube"
+            ],
+            "rationale": "tube is related to tech and has not been revealed yet",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tube": 0.8
+            },
+            "ranked_guesses": [
+              "tube"
+            ],
+            "rationale": "tube is related to tech and has not been revealed yet",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "loch ness": 0.8
+            },
+            "ranked_guesses": [
+              "loch ness"
+            ],
+            "rationale": "Loch Ness is associated with technology through the concept of sonar and underwater exploration technology, which fits the clue 'tech'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "tech",
+          "count": 2,
+          "rationale": "'tech' can hint at 'cover' (as in tech cover) and 'tokyo' (a tech hub), both blue words."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "monarchy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "france": 0.75,
+              "ruler": 0.95,
+              "tokyo": 0.55
+            },
+            "ranked_guesses": [
+              "ruler",
+              "france",
+              "tokyo"
+            ],
+            "rationale": "\"ruler\" is a direct synonym for monarchy (e.g., king/queen). \"france\" and \"tokyo\" are historical/geopolitical ties (e.g., French monarchy, Japanese emperor), but lower confidence due to broader associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "monarchy",
+          "count": 3,
+          "rationale": "links ruler, temple, opera (royalty/aristocracy themes; avoids direct 'royalty' repeat)"
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "crown"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "protect"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "cover"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "cover",
+          "count": 1,
+          "rationale": "Directly related to one of our unguessed words, and not too broad to lead to other words."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ancient"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ring": 0.95,
+              "ruler": 0.85,
+              "temple": 0.65,
+              "tokyo": 0.55
+            },
+            "ranked_guesses": [
+              "ring",
+              "ruler",
+              "temple",
+              "tokyo"
+            ],
+            "rationale": "\"ring\" is most directly associated with \"crown\" (e.g., crown jewels, royal rings). \"Ruler\" is a monarch or measuring tool (less direct). \"Temple\" and \"tokyo\" are weaker but could relate to imperial/royal contexts (e.g., Emperor of Japan, temples as royal sites). Prioritizing highest-confidence first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "crown",
+          "count": 3,
+          "rationale": "links to temple (crown jewels), ruler (monarch's crown), and opera (crown of sonnets or royal operas). Avoids assassin/neutral/blue overlaps while targeting 3 critical reds."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "stage"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "shell"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cover": 0.8
+            },
+            "ranked_guesses": [
+              "cover"
+            ],
+            "rationale": "The word 'cover' is directly related to the clue 'protect' and is a strong candidate on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cover": 0.8
+            },
+            "ranked_guesses": [
+              "cover"
+            ],
+            "rationale": "The clue 'protect' is strongly associated with the word 'cover' on the board, as 'cover' can mean to protect or shield something.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cover": 0.8
+            },
+            "ranked_guesses": [
+              "cover"
+            ],
+            "rationale": "The word 'cover' is directly related to the clue 'protect' and is a strong candidate on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nut"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "protect",
+          "count": 1,
+          "rationale": "Suggests 'cover', a blue team word, without directly using the word or a substring of it."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shogun"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "casino": 0.62,
+              "france": 0.68,
+              "hollywood": 0.72,
+              "loch ness": 0.92,
+              "opera": 0.75,
+              "ruler": 0.88,
+              "temple": 0.95,
+              "tokyo": 0.65
+            },
+            "ranked_guesses": [
+              "temple",
+              "loch ness",
+              "ruler",
+              "opera",
+              "hollywood",
+              "france",
+              "tokyo",
+              "casino"
+            ],
+            "rationale": "\"temple\" is the strongest guess due to its direct association with ancient civilizations (e.g., Greek/Roman temples, Angkor Wat). \"Loch Ness\" and \"ruler\" (e.g., ancient kings/pharaohs) are also highly relevant. Other words like \"opera\" or \"hollywood\" are weaker but could loosely tie to ancient themes (e.g., Greek theater, historical films). Low-confidence words are unrelated or modern.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tokyo"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ancient",
+          "count": 3,
+          "rationale": "targets temple, opera, and ruler; avoids assassin and neutral words while maximizing red word coverage."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "tech"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "france"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nut",
+          "count": 1,
+          "rationale": "It's a single blue word that doesn't have strong connections to other words on the board, minimizing the risk of leading to a wrong guess."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "measure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "casino": 0.65,
+              "hollywood": 0.75,
+              "opera": 0.85,
+              "theater": 0.95
+            },
+            "ranked_guesses": [
+              "theater",
+              "opera",
+              "hollywood",
+              "casino"
+            ],
+            "rationale": "'stage' strongly connects to 'theater' (primary venue for staged performances), 'opera' (staged musical theater), and 'hollywood' (film/performance industry). 'Casino' is a weaker but plausible link (e.g., stage shows in casinos). Prior clues like 'performance' and 'plumbing' reduce overlap risk with other words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "stage",
+          "count": 4,
+          "rationale": "links opera, theater, temple, and pass (as in 'pass the stage')\u2014all red words, with minimal neutral/blue overlap."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "venice"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "casino"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "opera"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "theater"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "geometry"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "nut": 0.8
+            },
+            "ranked_guesses": [
+              "nut"
+            ],
+            "rationale": "Shell can be associated with a nut, as some nuts have a hard outer shell.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "nut": 0.8
+            },
+            "ranked_guesses": [
+              "nut"
+            ],
+            "rationale": "Shell can be associated with a nut, as some nuts have a hard outer shell.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "loch ness": 0.8
+            },
+            "ranked_guesses": [
+              "loch ness"
+            ],
+            "rationale": "Loch Ness is a body of water, and 'shell' can be associated with water, especially in the context of sea creatures or objects found in water.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "triangle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "shell",
+          "count": 1,
+          "rationale": "Nut is a type of shell, and it's a safe word that doesn't connect to other words on the board."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,1319 @@
+{
+  "board": {
+    "identities": {
+      "agent": "neutral",
+      "airport": "red",
+      "baker": "blue",
+      "butter": "neutral",
+      "captain": "red",
+      "desert": "blue",
+      "festival": "red",
+      "flame": "blue",
+      "forest": "blue",
+      "ghost": "neutral",
+      "hammer": "red",
+      "kernel": "blue",
+      "ladder": "neutral",
+      "leather": "blue",
+      "mirror": "red",
+      "planet": "neutral",
+      "river": "red",
+      "robot": "red",
+      "silence": "neutral",
+      "singer": "neutral",
+      "spirit": "blue",
+      "storm": "red",
+      "sugar": "red",
+      "summer": "blue",
+      "telescope": "assassin"
+    },
+    "revealed": [
+      "baker",
+      "desert",
+      "flame",
+      "forest",
+      "kernel",
+      "leather",
+      "planet",
+      "river",
+      "robot",
+      "spirit",
+      "summer"
+    ],
+    "words": {
+      "agent": "neutral",
+      "airport": "red",
+      "baker": "blue",
+      "butter": "neutral",
+      "captain": "red",
+      "desert": "blue",
+      "festival": "red",
+      "flame": "blue",
+      "forest": "blue",
+      "ghost": "neutral",
+      "hammer": "red",
+      "kernel": "blue",
+      "ladder": "neutral",
+      "leather": "blue",
+      "mirror": "red",
+      "planet": "neutral",
+      "river": "red",
+      "robot": "red",
+      "silence": "neutral",
+      "singer": "neutral",
+      "spirit": "blue",
+      "storm": "red",
+      "sugar": "red",
+      "summer": "blue",
+      "telescope": "assassin"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "storm",
+        "count": 2,
+        "rationale": "'storm' connects to 'river' (both weather-related) and 'flame' (as in 'storm and flame' or 'stormy weather'). Avoids direct matches and the assassin."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "heat",
+        "count": 4,
+        "rationale": "Heat links baker (baking), desert (hot climate), flame (source of heat) and summer (hot season) without matching any board word."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.85,
+          "festival": 0.7,
+          "flame": 0.9,
+          "summer": 0.95
+        },
+        "ranked_guesses": [
+          "summer",
+          "flame",
+          "desert",
+          "festival"
+        ],
+        "rationale": "Heat directly evokes summer, flame as a source of heat, desert as a hot environment, and festivals often associated with warm weather.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.75,
+          "desert": 0.9,
+          "flame": 0.8,
+          "summer": 0.85
+        },
+        "ranked_guesses": [
+          "desert",
+          "summer",
+          "flame",
+          "butter"
+        ],
+        "rationale": "Heat suggests hot environments (desert), hot season (summer), source of heat (flame), and something that melts with heat (butter).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.7,
+          "desert": 0.85,
+          "flame": 0.8,
+          "summer": 0.75
+        },
+        "ranked_guesses": [
+          "desert",
+          "flame",
+          "summer",
+          "baker"
+        ],
+        "rationale": "All four are strongly linked to 'heat' (hot desert, fire flame, hot summer, baker uses heat in ovens).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "journey",
+        "count": 3,
+        "rationale": "Connects to 'desert', 'summer', and 'river' (all travel or environmental contexts) without touching the assassin or direct board matches."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.75,
+          "river": 0.65,
+          "robot": 0.7,
+          "singer": 0.55,
+          "spirit": 0.6
+        },
+        "ranked_guesses": [
+          "planet",
+          "robot",
+          "river",
+          "spirit",
+          "singer"
+        ],
+        "rationale": "'journey' likely connects to words like 'planet' (space journey), 'robot' (mechanical journey), 'river' (literal journey), 'spirit' (ghostly journey), or 'singer' (musical journey). Prioritizing higher-confidence guesses while avoiding already revealed blue words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.85,
+          "planet": 0.9,
+          "robot": 0.8,
+          "telescope": 0.75
+        },
+        "ranked_guesses": [
+          "planet",
+          "airport",
+          "robot",
+          "telescope"
+        ],
+        "rationale": "journey strongly associates with travel, space, or exploration. planet, airport, and robot fit these themes, while telescope is a weaker but still plausible connection.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.85,
+          "river": 0.8,
+          "robot": 0.7,
+          "spirit": 0.65,
+          "telescope": 0.75
+        },
+        "ranked_guesses": [
+          "planet",
+          "river",
+          "telescope",
+          "robot",
+          "spirit"
+        ],
+        "rationale": "Journey strongly relates to travel or exploration, so 'planet' (space travel), 'river' (journey by water), and 'telescope' (exploration) are top guesses. 'Robot' and 'spirit' are less directly connected but still plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "woodland",
+        "count": 5,
+        "rationale": "Links forest, leather, spirit, kernel, and baker (wood\u2011fired ovens) without matching any board word."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.9,
+          "ghost": 0.55,
+          "ladder": 0.5,
+          "river": 0.75,
+          "spirit": 0.6
+        },
+        "ranked_guesses": [
+          "forest",
+          "river",
+          "spirit",
+          "ghost",
+          "ladder"
+        ],
+        "rationale": "woodland evokes forest and related natural elements like rivers, spirits, ghosts and tree ladders",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "forest": 0.92,
+          "ghost": 0.6,
+          "river": 0.78,
+          "silence": 0.55,
+          "spirit": 0.65
+        },
+        "ranked_guesses": [
+          "forest",
+          "river",
+          "spirit",
+          "ghost",
+          "silence"
+        ],
+        "rationale": "All five relate to woodland: forest is direct, river runs through woods, spirit/ghost are folklore of woods, silence evokes quiet forest ambience.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.85,
+          "forest": 0.95,
+          "ghost": 0.65,
+          "ladder": 0.75,
+          "spirit": 0.7
+        },
+        "ranked_guesses": [
+          "forest",
+          "festival",
+          "ladder",
+          "spirit",
+          "ghost"
+        ],
+        "rationale": "Woodland directly points to forest; festival hints at Woodstock; ladder is typically wooden; forest spirit and ghost are common woodland themes.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "journey",
+        "count": 3,
+        "rationale": "'journey' connects to 'desert' (travel), 'summer' (vacation), and 'spirit' (soul or traveler's spirit). Avoids direct matches and the assassin."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "river": 0.9
+        },
+        "ranked_guesses": [
+          "river"
+        ],
+        "rationale": "'river' is a direct match for 'journey' (e.g., river journey) and is still unrevealed. Avoids neutral 'planet' and red's own 'river' is already revealed.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.75,
+          "silence": 0.55,
+          "singer": 0.6,
+          "spirit": 0.7,
+          "telescope": 0.65
+        },
+        "ranked_guesses": [
+          "robot",
+          "spirit",
+          "telescope",
+          "singer",
+          "silence"
+        ],
+        "rationale": "'journey' likely connects to 'robot' (space exploration), 'spirit' (as in journey of the soul), or 'telescope' (observing distant journeys). Avoids neutral 'planet' and red's 'river'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.75,
+          "silence": 0.65,
+          "singer": 0.6,
+          "spirit": 0.7,
+          "telescope": 0.55
+        },
+        "ranked_guesses": [
+          "robot",
+          "spirit",
+          "silence",
+          "singer",
+          "telescope"
+        ],
+        "rationale": "'journey' likely connects to 'robot' (space exploration), 'spirit' (journey of the soul), or 'silence' (journey inward). Avoids already revealed words and the assassin.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "grain",
+        "count": 3,
+        "rationale": "grain ties to baker (flour from grain), kernel (grain seed), and leather (grain leather texture)"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.78,
+          "festival": 0.65,
+          "kernel": 0.85
+        },
+        "ranked_guesses": [
+          "kernel",
+          "baker",
+          "festival"
+        ],
+        "rationale": "Grain suggests kernel (the seed), baker (uses grain to bake), and festival (harvest festivals tied to grain)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.6,
+          "kernel": 0.85,
+          "leather": 0.55
+        },
+        "ranked_guesses": [
+          "kernel",
+          "baker",
+          "leather"
+        ],
+        "rationale": "grain links to kernel (grain kernel), baker (uses grain to bake), and leather (grain leather)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.78,
+          "kernel": 0.85,
+          "sugar": 0.62
+        },
+        "ranked_guesses": [
+          "kernel",
+          "baker",
+          "sugar"
+        ],
+        "rationale": "Grain evokes seed (kernel), baking (baker) and sweetener (sugar) as common associations.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "tide",
+        "count": 2,
+        "rationale": "'tide' connects to 'river' (water movement) and 'summer' (tidal patterns in summer). Avoids direct matches, the assassin, and neutral words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.75,
+          "captain": 0.7,
+          "singer": 0.65
+        },
+        "ranked_guesses": [
+          "agent",
+          "captain",
+          "singer"
+        ],
+        "rationale": "'tide' likely connects to 'agent' (tide as in 'tide pod' or 'tide brand'), 'captain' (tide as in 'tide and time'), or 'singer' (tide as in 'tide singer' or 'tide music'). These are plausible red team words not yet revealed and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.75,
+          "spirit": 0.7
+        },
+        "ranked_guesses": [
+          "robot",
+          "spirit"
+        ],
+        "rationale": "'tide' likely relates to 'robot' (tide as in 'robot tide' or robotic waves) and 'spirit' (tide as in 'tide spirit' or emotional tide). Both are unclaimed and plausible connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.9,
+          "spirit": 0.85
+        },
+        "ranked_guesses": [
+          "robot",
+          "spirit"
+        ],
+        "rationale": "'tide' likely connects to 'robot' (tide as in 'robot tide' or robotic waves) and 'spirit' (tide as in 'spirit of the tide'). Both are unclaimed and plausible under the clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "hide",
+        "count": 1,
+        "rationale": "Leather is made from animal hide"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leather": 0.9
+        },
+        "ranked_guesses": [
+          "leather"
+        ],
+        "rationale": "\u2018Hide\u2019 is a synonym for animal skin, i.e., leather, making it the most likely blue word.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leather": 0.85
+        },
+        "ranked_guesses": [
+          "leather"
+        ],
+        "rationale": "hide directly refers to animal skin, which is leather",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "leather": 0.85
+        },
+        "ranked_guesses": [
+          "leather"
+        ],
+        "rationale": "Hide (animal skin) is directly turned into leather",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "storm",
+        "count": 2,
+        "rationale": "'storm' connects to 'river' (both weather-related) and 'flame' (as in 'storm and flame' or 'stormy weather'). Avoids direct matches and the assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "storm",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "desert"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "woodland"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "river"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spirit"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "grain"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "kernel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "baker"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tide"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "hide"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "leather"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 29,
+    "public_event_count": 22,
+    "reason": "all_words_found",
+    "seed": "limited-random-14-models-7way-20260608-021458-m04",
+    "team_blue": "GPT-OSS 120B",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "heat"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "desert"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "storm",
+          "count": 2,
+          "rationale": "'storm' connects to 'river' (both weather-related) and 'flame' (as in 'storm and flame' or 'stormy weather'). Avoids direct matches and the assassin."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "woodland"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.85,
+              "festival": 0.7,
+              "flame": 0.9,
+              "summer": 0.95
+            },
+            "ranked_guesses": [
+              "summer",
+              "flame",
+              "desert",
+              "festival"
+            ],
+            "rationale": "Heat directly evokes summer, flame as a source of heat, desert as a hot environment, and festivals often associated with warm weather.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.75,
+              "desert": 0.9,
+              "flame": 0.8,
+              "summer": 0.85
+            },
+            "ranked_guesses": [
+              "desert",
+              "summer",
+              "flame",
+              "butter"
+            ],
+            "rationale": "Heat suggests hot environments (desert), hot season (summer), source of heat (flame), and something that melts with heat (butter).",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.7,
+              "desert": 0.85,
+              "flame": 0.8,
+              "summer": 0.75
+            },
+            "ranked_guesses": [
+              "desert",
+              "flame",
+              "summer",
+              "baker"
+            ],
+            "rationale": "All four are strongly linked to 'heat' (hot desert, fire flame, hot summer, baker uses heat in ovens).",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "river"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 4,
+          "rationale": "Heat links baker (baking), desert (hot climate), flame (source of heat) and summer (hot season) without matching any board word."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.75,
+              "river": 0.65,
+              "robot": 0.7,
+              "singer": 0.55,
+              "spirit": 0.6
+            },
+            "ranked_guesses": [
+              "planet",
+              "robot",
+              "river",
+              "spirit",
+              "singer"
+            ],
+            "rationale": "'journey' likely connects to words like 'planet' (space journey), 'robot' (mechanical journey), 'river' (literal journey), 'spirit' (ghostly journey), or 'singer' (musical journey). Prioritizing higher-confidence guesses while avoiding already revealed blue words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.85,
+              "planet": 0.9,
+              "robot": 0.8,
+              "telescope": 0.75
+            },
+            "ranked_guesses": [
+              "planet",
+              "airport",
+              "robot",
+              "telescope"
+            ],
+            "rationale": "journey strongly associates with travel, space, or exploration. planet, airport, and robot fit these themes, while telescope is a weaker but still plausible connection.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.85,
+              "river": 0.8,
+              "robot": 0.7,
+              "spirit": 0.65,
+              "telescope": 0.75
+            },
+            "ranked_guesses": [
+              "planet",
+              "river",
+              "telescope",
+              "robot",
+              "spirit"
+            ],
+            "rationale": "Journey strongly relates to travel or exploration, so 'planet' (space travel), 'river' (journey by water), and 'telescope' (exploration) are top guesses. 'Robot' and 'spirit' are less directly connected but still plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spirit"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 3,
+          "rationale": "Connects to 'desert', 'summer', and 'river' (all travel or environmental contexts) without touching the assassin or direct board matches."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "grain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "forest": 0.9,
+              "ghost": 0.55,
+              "ladder": 0.5,
+              "river": 0.75,
+              "spirit": 0.6
+            },
+            "ranked_guesses": [
+              "forest",
+              "river",
+              "spirit",
+              "ghost",
+              "ladder"
+            ],
+            "rationale": "woodland evokes forest and related natural elements like rivers, spirits, ghosts and tree ladders",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "forest": 0.92,
+              "ghost": 0.6,
+              "river": 0.78,
+              "silence": 0.55,
+              "spirit": 0.65
+            },
+            "ranked_guesses": [
+              "forest",
+              "river",
+              "spirit",
+              "ghost",
+              "silence"
+            ],
+            "rationale": "All five relate to woodland: forest is direct, river runs through woods, spirit/ghost are folklore of woods, silence evokes quiet forest ambience.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.85,
+              "forest": 0.95,
+              "ghost": 0.65,
+              "ladder": 0.75,
+              "spirit": 0.7
+            },
+            "ranked_guesses": [
+              "forest",
+              "festival",
+              "ladder",
+              "spirit",
+              "ghost"
+            ],
+            "rationale": "Woodland directly points to forest; festival hints at Woodstock; ladder is typically wooden; forest spirit and ghost are common woodland themes.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "kernel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "baker"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "woodland",
+          "count": 5,
+          "rationale": "Links forest, leather, spirit, kernel, and baker (wood\u2011fired ovens) without matching any board word."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "tide"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "river": 0.9
+            },
+            "ranked_guesses": [
+              "river"
+            ],
+            "rationale": "'river' is a direct match for 'journey' (e.g., river journey) and is still unrevealed. Avoids neutral 'planet' and red's own 'river' is already revealed.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.75,
+              "silence": 0.55,
+              "singer": 0.6,
+              "spirit": 0.7,
+              "telescope": 0.65
+            },
+            "ranked_guesses": [
+              "robot",
+              "spirit",
+              "telescope",
+              "singer",
+              "silence"
+            ],
+            "rationale": "'journey' likely connects to 'robot' (space exploration), 'spirit' (as in journey of the soul), or 'telescope' (observing distant journeys). Avoids neutral 'planet' and red's 'river'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.75,
+              "silence": 0.65,
+              "singer": 0.6,
+              "spirit": 0.7,
+              "telescope": 0.55
+            },
+            "ranked_guesses": [
+              "robot",
+              "spirit",
+              "silence",
+              "singer",
+              "telescope"
+            ],
+            "rationale": "'journey' likely connects to 'robot' (space exploration), 'spirit' (journey of the soul), or 'silence' (journey inward). Avoids already revealed words and the assassin.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 3,
+          "rationale": "'journey' connects to 'desert' (travel), 'summer' (vacation), and 'spirit' (soul or traveler's spirit). Avoids direct matches and the assassin."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "hide"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.78,
+              "festival": 0.65,
+              "kernel": 0.85
+            },
+            "ranked_guesses": [
+              "kernel",
+              "baker",
+              "festival"
+            ],
+            "rationale": "Grain suggests kernel (the seed), baker (uses grain to bake), and festival (harvest festivals tied to grain)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.6,
+              "kernel": 0.85,
+              "leather": 0.55
+            },
+            "ranked_guesses": [
+              "kernel",
+              "baker",
+              "leather"
+            ],
+            "rationale": "grain links to kernel (grain kernel), baker (uses grain to bake), and leather (grain leather)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.78,
+              "kernel": 0.85,
+              "sugar": 0.62
+            },
+            "ranked_guesses": [
+              "kernel",
+              "baker",
+              "sugar"
+            ],
+            "rationale": "Grain evokes seed (kernel), baking (baker) and sweetener (sugar) as common associations.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "leather"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "grain",
+          "count": 3,
+          "rationale": "grain ties to baker (flour from grain), kernel (grain seed), and leather (grain leather texture)"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

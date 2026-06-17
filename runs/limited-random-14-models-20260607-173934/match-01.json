@@ -1,0 +1,1596 @@
+{
+  "board": {
+    "identities": {
+      "alien": "blue",
+      "anchor": "red",
+      "bread": "neutral",
+      "canyon": "blue",
+      "castle": "neutral",
+      "circle": "red",
+      "dancer": "red",
+      "dream": "blue",
+      "hammer": "blue",
+      "helmet": "neutral",
+      "hunter": "assassin",
+      "island": "blue",
+      "magnet": "red",
+      "memory": "red",
+      "museum": "red",
+      "mystery": "red",
+      "palace": "blue",
+      "pilot": "red",
+      "silence": "neutral",
+      "spider": "neutral",
+      "spirit": "blue",
+      "stone": "blue",
+      "storm": "neutral",
+      "telescope": "red",
+      "travel": "neutral"
+    },
+    "revealed": [
+      "anchor",
+      "dancer",
+      "hammer",
+      "magnet",
+      "memory",
+      "museum",
+      "pilot",
+      "storm"
+    ],
+    "words": {
+      "alien": "blue",
+      "anchor": "red",
+      "bread": "neutral",
+      "canyon": "blue",
+      "castle": "neutral",
+      "circle": "red",
+      "dancer": "red",
+      "dream": "blue",
+      "hammer": "blue",
+      "helmet": "neutral",
+      "hunter": "assassin",
+      "island": "blue",
+      "magnet": "red",
+      "memory": "red",
+      "museum": "red",
+      "mystery": "red",
+      "palace": "blue",
+      "pilot": "red",
+      "silence": "neutral",
+      "spider": "neutral",
+      "spirit": "blue",
+      "stone": "blue",
+      "storm": "neutral",
+      "telescope": "red",
+      "travel": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "performance",
+        "count": 3,
+        "rationale": "The words 'dancer', 'memory', and 'mystery' can be associated with performance, as dancers perform, memories can be of performances, and mysteries can be part of theatrical performances."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9,
+          "pilot": 0.6,
+          "travel": 0.5
+        },
+        "ranked_guesses": [
+          "dancer",
+          "pilot",
+          "travel"
+        ],
+        "rationale": "'dancer' is strongly associated with 'performance'. 'pilot' and 'travel' are less directly related but could fit the theme.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9,
+          "dream": 0.6,
+          "memory": 0.7
+        },
+        "ranked_guesses": [
+          "dancer",
+          "memory",
+          "dream"
+        ],
+        "rationale": "'dancer' is strongly associated with 'performance'. 'memory' and 'dream' are secondary associations, as performances can evoke memories or be dream-like.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.9,
+          "dream": 0.7,
+          "memory": 0.6
+        },
+        "ranked_guesses": [
+          "dancer",
+          "dream",
+          "memory"
+        ],
+        "rationale": "'dancer' is strongly associated with 'performance', followed by 'dream' and 'memory' which can relate to theatrical or artistic performances.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "thunder",
+        "count": 1,
+        "rationale": "Connects to storm for a blue word without matching any board term in the clue."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.03,
+          "mystery": 0.03,
+          "silence": 0.1,
+          "spirit": 0.06,
+          "storm": 0.78
+        },
+        "ranked_guesses": [
+          "storm",
+          "silence",
+          "spirit",
+          "dream",
+          "mystery"
+        ],
+        "rationale": "\u201cThunder\u201d most strongly links to \u201cstorm\u201d on the board; other weaker associations are quieter contrast (\u201csilence\u201d) or atmospheric/unspecified terms (\u201cmystery\u201d, \u201cdream\u201d, \u201cspirit\u201d).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 0.68,
+          "thunder": 0.32
+        },
+        "ranked_guesses": [
+          "storm",
+          "thunder"
+        ],
+        "rationale": "Thunder most directly relates to storm; thunder itself is likely but not on the board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.06,
+          "memory": 0.05,
+          "silence": 0.18,
+          "spirit": 0.05,
+          "storm": 0.66
+        },
+        "ranked_guesses": [
+          "storm",
+          "silence",
+          "hammer",
+          "memory",
+          "spirit"
+        ],
+        "rationale": "\u201cThunder\u201d most strongly matches the nearby weather/atmosphere concept \u201cstorm\u201d; weaker associations go to contrast with \u201csilence\u201d or vague effects like \u201cmemory/spirit\u201d or physical impact \u201chammer\u201d.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "The words 'anchor', 'magnet', and 'hammer' are all associated with metal, which connects to multiple red team words without revealing any directly."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.8,
+          "helmet": 0.7,
+          "magnet": 0.9
+        },
+        "ranked_guesses": [
+          "magnet",
+          "hammer",
+          "helmet"
+        ],
+        "rationale": "The clue 'metal' strongly suggests words related to metal objects or properties. 'magnet' is highly associated with metal, 'hammer' is often made of metal, and 'helmet' can be metal as well. These are the top three guesses based on the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.7,
+          "helmet": 0.5,
+          "magnet": 0.6
+        },
+        "ranked_guesses": [
+          "hammer",
+          "magnet",
+          "helmet"
+        ],
+        "rationale": "The clue 'metal' suggests objects commonly made of metal. 'Hammer', 'magnet', and 'helmet' fit this category and are unrevealed words on the board.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.9,
+          "helmet": 0.8,
+          "magnet": 0.7
+        },
+        "ranked_guesses": [
+          "hammer",
+          "helmet",
+          "magnet"
+        ],
+        "rationale": "hammer, helmet, and magnet are all strongly associated with metal. hammer is the most confident guess due to its direct connection to metalworking.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "imagination",
+        "count": 2,
+        "rationale": "Points to BLUE words like dream and spirit without matching other board words."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.66,
+          "imagination": 0.02,
+          "memory": 0.22,
+          "mystery": 0.1
+        },
+        "ranked_guesses": [
+          "dream",
+          "memory",
+          "mystery",
+          "imagination"
+        ],
+        "rationale": "Imagination most strongly maps to dream; related ideas on the board are memory and mystery.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.72,
+          "memory": 0.28,
+          "mystery": 0.22,
+          "silence": 0.12,
+          "spirit": 0.18
+        },
+        "ranked_guesses": [
+          "dream",
+          "memory",
+          "mystery",
+          "spirit",
+          "silence"
+        ],
+        "rationale": "Imagination most strongly matches DREAM (imagined/fantasy scenarios). Secondary links: MEMORY (mental images) and MYSTERY (creative imagining).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.62,
+          "imagination": 0.02,
+          "memory": 0.24,
+          "mystery": 0.12,
+          "spirit": 0.07
+        },
+        "ranked_guesses": [
+          "dream",
+          "memory",
+          "mystery",
+          "spirit",
+          "imagination"
+        ],
+        "rationale": "Imagination most directly maps to 'dream' and 'memory' on the board; 'mystery'/'spirit' are weaker thematic fits.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sailor",
+        "count": 2,
+        "rationale": "'anchor' and 'pilot' are both related to sailing or maritime activities, fitting the clue 'sailor'."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "pilot": 0.9,
+          "travel": 0.5
+        },
+        "ranked_guesses": [
+          "pilot",
+          "anchor",
+          "travel"
+        ],
+        "rationale": "'pilot' is strongly associated with 'sailor' as both are maritime professions. 'anchor' is also related to sailing but slightly less directly. 'travel' is a weaker connection but still relevant.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "pilot": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "pilot"
+        ],
+        "rationale": "The clue 'sailor' strongly relates to 'anchor' (nautical term) and 'pilot' (maritime profession). 'Anchor' is the most confident guess.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "pilot": 0.9,
+          "travel": 0.5
+        },
+        "ranked_guesses": [
+          "pilot",
+          "anchor",
+          "travel"
+        ],
+        "rationale": "'pilot' is strongly associated with 'sailor' as both are maritime professions. 'anchor' is a nautical term, and 'travel' can relate to sailing. Other words have weaker connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "lab",
+        "count": 1,
+        "rationale": "Links to MEMORY and MYSTERY, avoiding blue words that might overlap other meanings."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.38,
+          "telescope": 0.62
+        },
+        "ranked_guesses": [
+          "telescope",
+          "museum"
+        ],
+        "rationale": "With clue \"lab\" (1 left clue), strongest links are research/seeing tools like telescope and science display places like museum; other remaining words are less direct.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.08,
+          "memory": 0.18,
+          "museum": 0.2,
+          "mystery": 0.12,
+          "telescope": 0.42
+        },
+        "ranked_guesses": [
+          "telescope",
+          "museum",
+          "memory",
+          "mystery",
+          "helmet"
+        ],
+        "rationale": "\u201clab\u201d fits observation/experiments (telescope) and research/knowledge settings (museum, memory, mystery). Helmet is a weaker lab-adjacent guess.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.08,
+          "memory": 0.18,
+          "museum": 0.25,
+          "mystery": 0.06,
+          "silence": 0.1,
+          "telescope": 0.33
+        },
+        "ranked_guesses": [
+          "telescope",
+          "museum",
+          "memory",
+          "silence",
+          "dream",
+          "mystery"
+        ],
+        "rationale": "With clue 'lab', scientific/observation terms fit best: telescope; labs also suggest museum/study and memory/learning.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "attraction",
+        "count": 3,
+        "rationale": "The words 'magnet', 'museum', and 'telescope' are all related to the concept of attraction\u2014magnet for physical attraction, museum for cultural attraction, and telescope for celestial attraction."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.6,
+          "magnet": 0.9,
+          "museum": 0.7
+        },
+        "ranked_guesses": [
+          "magnet",
+          "museum",
+          "castle"
+        ],
+        "rationale": "'magnet' is a strong match for 'attraction' due to its physical property. 'museum' and 'castle' are also places of attraction, but slightly less directly related.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.6,
+          "magnet": 0.9,
+          "museum": 0.7
+        },
+        "ranked_guesses": [
+          "magnet",
+          "museum",
+          "castle"
+        ],
+        "rationale": "'magnet' is strongly related to 'attraction', 'museum' and 'castle' are tourist attractions.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "magnet": 0.9,
+          "spider": 0.7,
+          "stone": 0.6
+        },
+        "ranked_guesses": [
+          "magnet",
+          "spider",
+          "stone"
+        ],
+        "rationale": "The clue 'attraction' strongly suggests 'magnet' due to magnetic attraction. 'Spider' and 'stone' are less direct but plausible associations (spider's web attraction, stone as a natural attraction).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "memory",
+        "count": 1,
+        "rationale": "Points toward the already-unrevealed blue word linked to remembering."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mind",
+        "count": 2,
+        "rationale": "Connects to 'memory' (recall) and 'mystery' (something unknown or puzzling). Both are red words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "memory": 0.9,
+          "spirit": 0.6
+        },
+        "ranked_guesses": [
+          "memory",
+          "dream",
+          "spirit"
+        ],
+        "rationale": "The clue 'mind' strongly relates to 'memory' and 'dream'. 'Spirit' is a secondary association. Given the count of 2, 'memory' and 'dream' are the most likely targets.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "memory": 0.9,
+          "spirit": 0.6
+        },
+        "ranked_guesses": [
+          "memory",
+          "dream",
+          "spirit"
+        ],
+        "rationale": "'mind' is strongly associated with 'memory' and 'dream', and somewhat with 'spirit'. These are the most relevant unrevealed words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.7,
+          "memory": 0.9,
+          "spirit": 0.6
+        },
+        "ranked_guesses": [
+          "memory",
+          "dream",
+          "spirit"
+        ],
+        "rationale": "'mind' is strongly associated with 'memory' and 'dream', which are both unrevealed. 'spirit' is a secondary guess as it relates to the mind but is less directly connected.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mindful",
+        "count": 2,
+        "rationale": "Suggests being careful and attentive; points to remaining blue concepts tied to perception/awareness without naming them."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dream": 0.62,
+          "silence": 0.22,
+          "spirit": 0.16
+        },
+        "ranked_guesses": [
+          "dream",
+          "silence",
+          "spirit"
+        ],
+        "rationale": "Mindful suggests calming/awareness; dream fits reflective mindfulness, silence fits calm, and spirit is a weaker fit for mindful presence.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "castle": 0.03,
+          "dream": 0.46,
+          "mystery": 0.02,
+          "silence": 0.2,
+          "spirit": 0.14,
+          "stone": 0.01,
+          "telescope": 0.06,
+          "travel": 0.08
+        },
+        "ranked_guesses": [
+          "dream",
+          "silence",
+          "spirit",
+          "travel",
+          "telescope",
+          "castle",
+          "mystery",
+          "stone"
+        ],
+        "rationale": "\u201cMindful\u201d suggests mental state/attention; most on-theme among unrevealed are dream (mind/inner), then silence (mindful quiet) and spirit (mindfulness/awareness).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.07,
+          "dream": 0.42,
+          "silence": 0.2,
+          "spirit": 0.1,
+          "telescope": 0.16,
+          "travel": 0.05
+        },
+        "ranked_guesses": [
+          "dream",
+          "silence",
+          "telescope",
+          "spirit",
+          "circle",
+          "travel"
+        ],
+        "rationale": "Mindful suggests relaxation/inner awareness; most aligned remain unrevealed: dream or silence.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "performance"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dancer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "thunder"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "storm"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hammer"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "imagination"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sailor"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pilot"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "lab"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "attraction"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "museum"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "memory",
+        "count": 1,
+        "rationale": "Points toward the already-unrevealed blue word linked to remembering."
+      },
+      "event": "illegal_clue",
+      "matched_word": "memory",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mind"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "memory"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mindful"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 37,
+    "public_event_count": 25,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-173934-m01",
+    "team_blue": "GPT-5.4-nano",
+    "team_red": "DeepSeek V3 0324",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "performance"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.9,
+              "pilot": 0.6,
+              "travel": 0.5
+            },
+            "ranked_guesses": [
+              "dancer",
+              "pilot",
+              "travel"
+            ],
+            "rationale": "'dancer' is strongly associated with 'performance'. 'pilot' and 'travel' are less directly related but could fit the theme.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.9,
+              "dream": 0.6,
+              "memory": 0.7
+            },
+            "ranked_guesses": [
+              "dancer",
+              "memory",
+              "dream"
+            ],
+            "rationale": "'dancer' is strongly associated with 'performance'. 'memory' and 'dream' are secondary associations, as performances can evoke memories or be dream-like.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.9,
+              "dream": 0.7,
+              "memory": 0.6
+            },
+            "ranked_guesses": [
+              "dancer",
+              "dream",
+              "memory"
+            ],
+            "rationale": "'dancer' is strongly associated with 'performance', followed by 'dream' and 'memory' which can relate to theatrical or artistic performances.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dancer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "performance",
+          "count": 3,
+          "rationale": "The words 'dancer', 'memory', and 'mystery' can be associated with performance, as dancers perform, memories can be of performances, and mysteries can be part of theatrical performances."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "thunder"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.03,
+              "mystery": 0.03,
+              "silence": 0.1,
+              "spirit": 0.06,
+              "storm": 0.78
+            },
+            "ranked_guesses": [
+              "storm",
+              "silence",
+              "spirit",
+              "dream",
+              "mystery"
+            ],
+            "rationale": "\u201cThunder\u201d most strongly links to \u201cstorm\u201d on the board; other weaker associations are quieter contrast (\u201csilence\u201d) or atmospheric/unspecified terms (\u201cmystery\u201d, \u201cdream\u201d, \u201cspirit\u201d).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "storm": 0.68,
+              "thunder": 0.32
+            },
+            "ranked_guesses": [
+              "storm",
+              "thunder"
+            ],
+            "rationale": "Thunder most directly relates to storm; thunder itself is likely but not on the board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.06,
+              "memory": 0.05,
+              "silence": 0.18,
+              "spirit": 0.05,
+              "storm": 0.66
+            },
+            "ranked_guesses": [
+              "storm",
+              "silence",
+              "hammer",
+              "memory",
+              "spirit"
+            ],
+            "rationale": "\u201cThunder\u201d most strongly matches the nearby weather/atmosphere concept \u201cstorm\u201d; weaker associations go to contrast with \u201csilence\u201d or vague effects like \u201cmemory/spirit\u201d or physical impact \u201chammer\u201d.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "storm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "thunder",
+          "count": 1,
+          "rationale": "Connects to storm for a blue word without matching any board term in the clue."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.8,
+              "helmet": 0.7,
+              "magnet": 0.9
+            },
+            "ranked_guesses": [
+              "magnet",
+              "hammer",
+              "helmet"
+            ],
+            "rationale": "The clue 'metal' strongly suggests words related to metal objects or properties. 'magnet' is highly associated with metal, 'hammer' is often made of metal, and 'helmet' can be metal as well. These are the top three guesses based on the clue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.7,
+              "helmet": 0.5,
+              "magnet": 0.6
+            },
+            "ranked_guesses": [
+              "hammer",
+              "magnet",
+              "helmet"
+            ],
+            "rationale": "The clue 'metal' suggests objects commonly made of metal. 'Hammer', 'magnet', and 'helmet' fit this category and are unrevealed words on the board.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.9,
+              "helmet": 0.8,
+              "magnet": 0.7
+            },
+            "ranked_guesses": [
+              "hammer",
+              "helmet",
+              "magnet"
+            ],
+            "rationale": "hammer, helmet, and magnet are all strongly associated with metal. hammer is the most confident guess due to its direct connection to metalworking.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hammer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "The words 'anchor', 'magnet', and 'hammer' are all associated with metal, which connects to multiple red team words without revealing any directly."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "imagination"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.66,
+              "imagination": 0.02,
+              "memory": 0.22,
+              "mystery": 0.1
+            },
+            "ranked_guesses": [
+              "dream",
+              "memory",
+              "mystery",
+              "imagination"
+            ],
+            "rationale": "Imagination most strongly maps to dream; related ideas on the board are memory and mystery.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.72,
+              "memory": 0.28,
+              "mystery": 0.22,
+              "silence": 0.12,
+              "spirit": 0.18
+            },
+            "ranked_guesses": [
+              "dream",
+              "memory",
+              "mystery",
+              "spirit",
+              "silence"
+            ],
+            "rationale": "Imagination most strongly matches DREAM (imagined/fantasy scenarios). Secondary links: MEMORY (mental images) and MYSTERY (creative imagining).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.62,
+              "imagination": 0.02,
+              "memory": 0.24,
+              "mystery": 0.12,
+              "spirit": 0.07
+            },
+            "ranked_guesses": [
+              "dream",
+              "memory",
+              "mystery",
+              "spirit",
+              "imagination"
+            ],
+            "rationale": "Imagination most directly maps to 'dream' and 'memory' on the board; 'mystery'/'spirit' are weaker thematic fits.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "imagination",
+          "count": 2,
+          "rationale": "Points to BLUE words like dream and spirit without matching other board words."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sailor"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "pilot": 0.9,
+              "travel": 0.5
+            },
+            "ranked_guesses": [
+              "pilot",
+              "anchor",
+              "travel"
+            ],
+            "rationale": "'pilot' is strongly associated with 'sailor' as both are maritime professions. 'anchor' is also related to sailing but slightly less directly. 'travel' is a weaker connection but still relevant.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "pilot": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "pilot"
+            ],
+            "rationale": "The clue 'sailor' strongly relates to 'anchor' (nautical term) and 'pilot' (maritime profession). 'Anchor' is the most confident guess.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "pilot": 0.9,
+              "travel": 0.5
+            },
+            "ranked_guesses": [
+              "pilot",
+              "anchor",
+              "travel"
+            ],
+            "rationale": "'pilot' is strongly associated with 'sailor' as both are maritime professions. 'anchor' is a nautical term, and 'travel' can relate to sailing. Other words have weaker connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pilot"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sailor",
+          "count": 2,
+          "rationale": "'anchor' and 'pilot' are both related to sailing or maritime activities, fitting the clue 'sailor'."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "lab"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.38,
+              "telescope": 0.62
+            },
+            "ranked_guesses": [
+              "telescope",
+              "museum"
+            ],
+            "rationale": "With clue \"lab\" (1 left clue), strongest links are research/seeing tools like telescope and science display places like museum; other remaining words are less direct.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.08,
+              "memory": 0.18,
+              "museum": 0.2,
+              "mystery": 0.12,
+              "telescope": 0.42
+            },
+            "ranked_guesses": [
+              "telescope",
+              "museum",
+              "memory",
+              "mystery",
+              "helmet"
+            ],
+            "rationale": "\u201clab\u201d fits observation/experiments (telescope) and research/knowledge settings (museum, memory, mystery). Helmet is a weaker lab-adjacent guess.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dream": 0.08,
+              "memory": 0.18,
+              "museum": 0.25,
+              "mystery": 0.06,
+              "silence": 0.1,
+              "telescope": 0.33
+            },
+            "ranked_guesses": [
+              "telescope",
+              "museum",
+              "memory",
+              "silence",
+              "dream",
+              "mystery"
+            ],
+            "rationale": "With clue 'lab', scientific/observation terms fit best: telescope; labs also suggest museum/study and memory/learning.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "lab",
+          "count": 1,
+          "rationale": "Links to MEMORY and MYSTERY, avoiding blue words that might overlap other meanings."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "attraction"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.6,
+              "magnet": 0.9,
+              "museum": 0.7
+            },
+            "ranked_guesses": [
+              "magnet",
+              "museum",
+              "castle"
+            ],
+            "rationale": "'magnet' is a strong match for 'attraction' due to its physical property. 'museum' and 'castle' are also places of attraction, but slightly less directly related.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "castle": 0.6,
+              "magnet": 0.9,
+              "museum": 0.7
+            },
+            "ranked_guesses": [
+              "magnet",
+              "museum",
+              "castle"
+            ],
+            "rationale": "'magnet' is strongly related to 'attraction', 'museum' and 'castle' are tourist attractions.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "magnet": 0.9,
+              "spider": 0.7,
+              "stone": 0.6
+            },
+            "ranked_guesses": [
+              "magnet",
+              "spider",
+              "stone"
+            ],
+            "rationale": "The clue 'attraction' strongly suggests 'magnet' due to magnetic attraction. 'Spider' and 'stone' are less direct but plausible associations (spider's web attraction, stone as a natural attraction).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "museum"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "attraction",
+          "count": 3,
+          "rationale": "The words 'magnet', 'museum', and 'telescope' are all related to the concept of attraction\u2014magnet for physical attraction, museum for cultural attraction, and telescope for celestial attraction."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mind"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "memory"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mindful"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "memory",
+          "count": 1,
+          "rationale": "Points toward the already-unrevealed blue word linked to remembering."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

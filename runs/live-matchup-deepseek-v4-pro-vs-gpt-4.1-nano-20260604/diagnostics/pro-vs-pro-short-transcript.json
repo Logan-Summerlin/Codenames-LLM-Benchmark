@@ -1,0 +1,317 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "baker": "blue",
+      "bridge": "neutral",
+      "butter": "neutral",
+      "canyon": "red",
+      "circle": "assassin",
+      "family": "blue",
+      "farmer": "red",
+      "flower": "red",
+      "guitar": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "machine": "neutral",
+      "metal": "blue",
+      "paper": "red",
+      "poet": "red",
+      "pyramid": "red",
+      "singer": "red",
+      "spirit": "blue",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "blue",
+      "travel": "neutral",
+      "village": "neutral"
+    },
+    "revealed": [
+      "canyon",
+      "flower"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "baker": "blue",
+      "bridge": "neutral",
+      "butter": "neutral",
+      "canyon": "red",
+      "circle": "assassin",
+      "family": "blue",
+      "farmer": "red",
+      "flower": "red",
+      "guitar": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "machine": "neutral",
+      "metal": "blue",
+      "paper": "red",
+      "poet": "red",
+      "pyramid": "red",
+      "singer": "red",
+      "spirit": "blue",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "blue",
+      "travel": "neutral",
+      "village": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects to canyon, flower, and storm without overlapping with blue or assassin words."
+      },
+      "agent_id": "diag-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.8,
+          "flower": 0.9,
+          "storm": 0.5,
+          "summer": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "flower",
+          "canyon",
+          "tiger",
+          "summer",
+          "storm"
+        ],
+        "rationale": "Nature clue suggests natural elements. Flower is a strong fit. Canyon is a natural landform. Tiger is a wild animal. Summer is a season. Storm is a weather phenomenon. These are top candidates.",
+        "stop": false
+      },
+      "agent_id": "diag-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.4,
+          "butter": 0.35,
+          "canyon": 0.9,
+          "flower": 0.85,
+          "honey": 0.3,
+          "spirit": 0.25,
+          "storm": 0.55,
+          "summer": 0.7,
+          "tiger": 0.6,
+          "village": 0.5
+        },
+        "ranked_guesses": [
+          "canyon",
+          "flower",
+          "summer",
+          "tiger",
+          "storm",
+          "village",
+          "bridge",
+          "butter",
+          "honey",
+          "spirit"
+        ],
+        "rationale": "Nature-related words: canyon (natural landform), flower (plant), summer (season), tiger (animal), storm (weather), village (rural/natural setting). 'Canyon' and 'flower' are strongest. 'Summer' is a season, often associated with nature. 'Tiger' is wildlife. 'Storm' is natural phenomenon. 'Village' is less directly nature but can be natural setting. Other words like 'bridge', 'butter', 'honey', 'spirit' are less directly nature. We need 3 guesses, so top 3 are canyon, flower, summer.",
+        "stop": false
+      },
+      "agent_id": "diag-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.9,
+          "flower": 0.8,
+          "storm": 0.5,
+          "summer": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "canyon",
+          "flower",
+          "tiger",
+          "summer",
+          "storm"
+        ],
+        "rationale": "Nature clue suggests natural features and elements. Canyon is a natural landform, flower is a plant, tiger is an animal. Summer and storm are natural phenomena but less directly tied to 'nature' as a category. Confidences reflect strength of association.",
+        "stop": false
+      },
+      "agent_id": "diag-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "canyon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 4,
+    "reason": null,
+    "seed": 1,
+    "team_blue": "diag-blue",
+    "team_red": "diag-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.8,
+              "flower": 0.9,
+              "storm": 0.5,
+              "summer": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "flower",
+              "canyon",
+              "tiger",
+              "summer",
+              "storm"
+            ],
+            "rationale": "Nature clue suggests natural elements. Flower is a strong fit. Canyon is a natural landform. Tiger is a wild animal. Summer is a season. Storm is a weather phenomenon. These are top candidates.",
+            "stop": false
+          },
+          "agent_id": "diag-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.4,
+              "butter": 0.35,
+              "canyon": 0.9,
+              "flower": 0.85,
+              "honey": 0.3,
+              "spirit": 0.25,
+              "storm": 0.55,
+              "summer": 0.7,
+              "tiger": 0.6,
+              "village": 0.5
+            },
+            "ranked_guesses": [
+              "canyon",
+              "flower",
+              "summer",
+              "tiger",
+              "storm",
+              "village",
+              "bridge",
+              "butter",
+              "honey",
+              "spirit"
+            ],
+            "rationale": "Nature-related words: canyon (natural landform), flower (plant), summer (season), tiger (animal), storm (weather), village (rural/natural setting). 'Canyon' and 'flower' are strongest. 'Summer' is a season, often associated with nature. 'Tiger' is wildlife. 'Storm' is natural phenomenon. 'Village' is less directly nature but can be natural setting. Other words like 'bridge', 'butter', 'honey', 'spirit' are less directly nature. We need 3 guesses, so top 3 are canyon, flower, summer.",
+            "stop": false
+          },
+          "agent_id": "diag-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.9,
+              "flower": 0.8,
+              "storm": 0.5,
+              "summer": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "canyon",
+              "flower",
+              "tiger",
+              "summer",
+              "storm"
+            ],
+            "rationale": "Nature clue suggests natural features and elements. Canyon is a natural landform, flower is a plant, tiger is an animal. Summer and storm are natural phenomena but less directly tied to 'nature' as a category. Confidences reflect strength of association.",
+            "stop": false
+          },
+          "agent_id": "diag-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "canyon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects to canyon, flower, and storm without overlapping with blue or assassin words."
+        },
+        "agent_id": "diag-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    }
+  ]
+}

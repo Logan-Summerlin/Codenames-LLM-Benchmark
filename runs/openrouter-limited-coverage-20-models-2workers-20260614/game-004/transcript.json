@@ -1,0 +1,4313 @@
+{
+  "board": {
+    "identities": {
+      "bomb": "red",
+      "bond": "blue",
+      "box": "assassin",
+      "brush": "neutral",
+      "chest": "neutral",
+      "crane": "neutral",
+      "crash": "neutral",
+      "dance": "blue",
+      "doctor": "red",
+      "duck": "blue",
+      "field": "neutral",
+      "fish": "neutral",
+      "foot": "red",
+      "horseshoe": "red",
+      "hospital": "blue",
+      "lap": "neutral",
+      "orange": "blue",
+      "play": "red",
+      "school": "red",
+      "spine": "blue",
+      "stock": "red",
+      "string": "red",
+      "thief": "blue",
+      "time": "red",
+      "unicorn": "blue"
+    },
+    "revealed": [
+      "bond",
+      "brush",
+      "crash",
+      "dance",
+      "duck",
+      "horseshoe",
+      "hospital",
+      "orange",
+      "play",
+      "school",
+      "spine",
+      "stock",
+      "string",
+      "thief",
+      "time",
+      "unicorn"
+    ],
+    "words": {
+      "bomb": "red",
+      "bond": "blue",
+      "box": "assassin",
+      "brush": "neutral",
+      "chest": "neutral",
+      "crane": "neutral",
+      "crash": "neutral",
+      "dance": "blue",
+      "doctor": "red",
+      "duck": "blue",
+      "field": "neutral",
+      "fish": "neutral",
+      "foot": "red",
+      "horseshoe": "red",
+      "hospital": "blue",
+      "lap": "neutral",
+      "orange": "blue",
+      "play": "red",
+      "school": "red",
+      "spine": "blue",
+      "stock": "red",
+      "string": "red",
+      "thief": "blue",
+      "time": "red",
+      "unicorn": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sports",
+        "count": 3,
+        "rationale": "links 'play', 'horseshoe', and 'foot' (football) for red team, avoiding direct word matches or substrings."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.3,
+          "crash": 0.65,
+          "dance": 0.6,
+          "field": 0.92,
+          "foot": 0.95,
+          "horseshoe": 0.75,
+          "lap": 0.88,
+          "play": 0.85,
+          "school": 0.5,
+          "string": 0.4
+        },
+        "ranked_guesses": [
+          "foot",
+          "field",
+          "lap",
+          "play",
+          "horseshoe",
+          "crash",
+          "dance",
+          "school",
+          "string",
+          "bond"
+        ],
+        "rationale": "'foot' (as in football), 'field' (sports field), and 'lap' (racing) are direct sports associations. 'play' is broad but relevant. 'horseshoe' (horseshoes game) is plausible but niche. Others are weaker or tangential (e.g., 'crash' for motorsports, 'dance' for dance sports). Prioritized highest-confidence first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 3,
+        "rationale": "The words 'dance', 'hospital', 'orange', 'spine', 'thief', and 'unicorn' are associated with celebration or events that could involve celebration."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.7
+        },
+        "ranked_guesses": [
+          "dance"
+        ],
+        "rationale": "Dance is often associated with celebrations and fits the clue 'celebration' well.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.7,
+          "play": 0.5,
+          "school": 0.6
+        },
+        "ranked_guesses": [
+          "dance",
+          "school",
+          "play"
+        ],
+        "rationale": "These words are commonly associated with celebrations and are likely linked to the clue 'celebration'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.7,
+          "doctor": 0.4,
+          "play": 0.5,
+          "school": 0.6
+        },
+        "ranked_guesses": [
+          "dance",
+          "school",
+          "play",
+          "doctor"
+        ],
+        "rationale": "The clue 'celebration' suggests words associated with festivities or events. 'Dance' and 'play' are directly linked to celebrations, while 'school' could relate to events like proms or graduations. 'Doctor' is less directly related but could be considered in contexts like health celebrations.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "medical",
+        "count": 3,
+        "rationale": "links 'doctor', 'hospital', and 'foot' (as in 'foot doctor')\u2014all red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chest": 0.65,
+          "crash": 0.45,
+          "doctor": 0.92,
+          "foot": 0.55,
+          "hospital": 0.95,
+          "spine": 0.75
+        },
+        "ranked_guesses": [
+          "hospital",
+          "doctor",
+          "spine",
+          "chest",
+          "foot",
+          "crash"
+        ],
+        "rationale": "Top 3 are direct medical associations ('hospital', 'doctor', 'spine'). 'Chest' and 'foot' are body parts (lower confidence). 'Crash' is a stretch (e.g., 'crash cart') but less likely. Clue count=3 suggests multiple strong links.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chest": 0.75,
+          "crash": 0.55,
+          "doctor": 0.92,
+          "foot": 0.65,
+          "hospital": 0.95,
+          "spine": 0.85
+        },
+        "ranked_guesses": [
+          "hospital",
+          "doctor",
+          "spine",
+          "chest",
+          "foot",
+          "crash"
+        ],
+        "rationale": "\"hospital\" and \"doctor\" are directly tied to *medical*; \"spine\" (medical anatomy) and \"chest\" (thoracic medicine) are strong secondary associations; \"foot\" (podiatry) and \"crash\" (emergency/trauma) are weaker but plausible. Clue count=3 suggests prioritizing the top 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.3,
+          "chest": 0.65,
+          "crash": 0.45,
+          "doctor": 0.92,
+          "foot": 0.55,
+          "hospital": 0.95,
+          "spine": 0.75
+        },
+        "ranked_guesses": [
+          "hospital",
+          "doctor",
+          "spine",
+          "chest",
+          "foot",
+          "crash",
+          "brush"
+        ],
+        "rationale": "\"hospital\" and \"doctor\" are directly tied to **medical** with highest confidence. \"spine\" (medical anatomy) and \"chest\" (body part, medical context) follow. Lower-confidence words like \"crash\" (medical emergency) and \"brush\" (toothbrush) are speculative. Clue count = 3 suggests multiple strong connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "juice",
+        "count": 3,
+        "rationale": "Associated with 'orange', 'unicorn', and 'thief' without matching substrings or revealing words directly."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.9
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "The clue 'juice' strongly suggests 'orange' due to its direct association with orange juice. Other words like 'fruit' or 'drink' could be related, but 'orange' is the most direct and confident guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.9
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "The clue 'juice' strongly suggests 'orange' due to its direct association with orange juice. Other words like 'fruit' or 'drink' are not on the board.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 0.9
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "The clue 'juice' strongly suggests 'orange' due to its direct association with orange juice, and it hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "luck",
+        "count": 3,
+        "rationale": "Targets **horseshoe**, **foot** (as in 'lucky foot'), and **play** (as in 'luck of the draw' or 'lucky play'). Avoids assassin (**box**), neutrals, and blue words. Highlights thematic connection without direct overlap."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.65,
+          "foot": 0.5,
+          "horseshoe": 0.95,
+          "play": 0.6,
+          "unicorn": 0.75
+        },
+        "ranked_guesses": [
+          "horseshoe",
+          "unicorn",
+          "dance",
+          "play",
+          "foot"
+        ],
+        "rationale": "\"horseshoe\" is the strongest association with *luck* (common idiom: 'lucky horseshoe'). \"unicorn\" ties to mythical luck, while \"dance\"/\"play\" are weaker but could relate to 'lucky break' or 'luck of the draw'. \"foot\" is a stretch (e.g., 'lucky foot'). Prior clues (e.g., *medical*, *sports*) suggest avoiding overlaps like \"doctor\" or \"field\".",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.45,
+          "horseshoe": 0.95,
+          "play": 0.35,
+          "unicorn": 0.65
+        },
+        "ranked_guesses": [
+          "horseshoe",
+          "unicorn",
+          "dance",
+          "play"
+        ],
+        "rationale": "\"horseshoe\" is the most direct association with 'luck' (commonly considered a lucky charm). \"unicorn\" is mythical and often tied to luck/fortune in folklore. \"dance\" and \"play\" are weaker but could relate to 'luck' in contexts like 'dance of luck' or 'play your luck'. Prioritizing the strongest semantic link first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 2,
+        "rationale": "Fruit is associated with 'orange' and 'unicorn' (unicorn fruit, a mythical creature often depicted with a horn)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fruit": 0.9
+        },
+        "ranked_guesses": [
+          "fruit"
+        ],
+        "rationale": "The clue 'fruit' directly relates to 'orange', which has already been correctly guessed. 'Fruit' is a strong association for 'orange', making it a high-confidence guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.7,
+          "grape": 0.5,
+          "pear": 0.6
+        },
+        "ranked_guesses": [
+          "apple",
+          "pear",
+          "grape"
+        ],
+        "rationale": "The clue 'fruit' suggests common fruits. 'Apple', 'pear', and 'grape' are typical fruits not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.7
+        },
+        "ranked_guesses": [
+          "apple"
+        ],
+        "rationale": "The clue 'fruit' with a count of 2 suggests two fruit-related words. 'Orange' is already revealed, so 'apple' is a strong candidate.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "injury",
+        "count": 3,
+        "rationale": "links doctor, foot, and crash for red team, avoids all board substrings and forbidden words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "magic",
+        "count": 2,
+        "rationale": "Associated with 'unicorn' and 'spine' (as in spine-tingling magic)"
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spine": 0.7
+        },
+        "ranked_guesses": [
+          "spine"
+        ],
+        "rationale": "Spine is associated with magic (e.g., spine-tingling, magical spine) and is not revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spine": 0.7
+        },
+        "ranked_guesses": [
+          "spine"
+        ],
+        "rationale": "Spine relates to magic through mystical or fantastical connotations, and is not revealed or associated with red.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spine": 0.7
+        },
+        "ranked_guesses": [
+          "spine"
+        ],
+        "rationale": "Spine relates to magic through mystical or fantasy themes, and is unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "market",
+        "count": 3,
+        "rationale": "targets stock, string (as in 'stock market' and 'string of trades'), and bomb (as in 'bombed in the market'); avoids direct matches and substrings."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.85,
+          "chest": 0.65,
+          "crash": 0.75,
+          "fish": 0.55,
+          "foot": 0.45,
+          "stock": 0.95
+        },
+        "ranked_guesses": [
+          "stock",
+          "bond",
+          "crash",
+          "chest",
+          "fish",
+          "foot"
+        ],
+        "rationale": "\"stock\" is the most direct association with 'market' (e.g., stock market). \"bond\" is also financial. \"crash\" relates to market crashes. Others are weaker but plausible (e.g., \"fish market\", \"flea market\" for 'foot'). Prioritized financial terms first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "'Thief' and 'unicorn' are associated with animals."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "duck": 0.7
+        },
+        "ranked_guesses": [
+          "duck"
+        ],
+        "rationale": "The clue 'animal' with a count of 2 suggests two animal-related words. 'Unicorn' is already revealed, so 'duck' is a strong candidate.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "duck": 0.7
+        },
+        "ranked_guesses": [
+          "duck"
+        ],
+        "rationale": "Duck is an animal and has not been revealed, fitting the clue 'animal'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "duck": 0.7
+        },
+        "ranked_guesses": [
+          "duck"
+        ],
+        "rationale": "Duck is an animal and fits the clue 'animal' without being revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "investment",
+        "count": 3,
+        "rationale": "targets stock, bond, string (as in 'string of investments' or 'stock/bond market strings')."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.92,
+          "chest": 0.55,
+          "crane": 0.5,
+          "crash": 0.45,
+          "field": 0.15,
+          "foot": 0.3,
+          "play": 0.2,
+          "school": 0.25,
+          "stock": 0.95,
+          "time": 0.65
+        },
+        "ranked_guesses": [
+          "stock",
+          "bond",
+          "time",
+          "chest",
+          "crane",
+          "crash",
+          "foot",
+          "school",
+          "play",
+          "field"
+        ],
+        "rationale": "\"stock\" and \"bond\" are the most direct financial/investment terms; \"time\" relates to long-term investments; others are progressively weaker associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bond": 0.92,
+          "chest": 0.65,
+          "crash": 0.75,
+          "stock": 0.95,
+          "time": 0.55
+        },
+        "ranked_guesses": [
+          "stock",
+          "bond",
+          "crash",
+          "chest",
+          "time"
+        ],
+        "rationale": "\"stock\" and \"bond\" are direct financial/investment terms. \"crash\" relates to market crashes. \"chest\" (as in treasure chest) and \"time\" (as in 'time is money') are weaker but plausible thematic links. Prioritizing highest-confidence financial terms first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "performance",
+        "count": 2,
+        "rationale": "Associated with 'dance' and 'play', both blue words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.7
+        },
+        "ranked_guesses": [
+          "dance"
+        ],
+        "rationale": "The clue 'performance' suggests words related to performing arts or activities. 'Dance' fits well as a performance-related word and is unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.7,
+          "play": 0.6
+        },
+        "ranked_guesses": [
+          "dance",
+          "play"
+        ],
+        "rationale": "The clue 'performance' suggests words related to performing arts or entertainment. 'Dance' and 'play' are strong candidates as they are commonly associated with performances.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.7,
+          "play": 0.6
+        },
+        "ranked_guesses": [
+          "dance",
+          "play"
+        ],
+        "rationale": "The clue 'performance' suggests words related to performing arts or entertainment. 'Dance' and 'play' are closely related to 'performance' and have not been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "backpack",
+        "count": 2,
+        "rationale": "hints at 'string' (backpack straps) and 'school' (backpacks are associated with school)"
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "movement",
+        "count": 2,
+        "rationale": "Targets 'dance' and 'spine' without using substrings of unrevealed words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.6,
+          "dance": 0.7,
+          "foot": 0.2,
+          "play": 0.4,
+          "school": 0.3,
+          "spine": 0.5
+        },
+        "ranked_guesses": [
+          "dance",
+          "crane",
+          "spine",
+          "play",
+          "school",
+          "foot"
+        ],
+        "rationale": "The clue 'movement' suggests words related to motion or physical activity. 'Dance' is a strong candidate due to its direct connection to movement. 'Crane' and 'spine' are also related to physical movement or posture. 'Play' and 'school' can involve movement activities, while 'foot' is a body part associated with movement.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.6,
+          "dance": 0.7,
+          "spine": 0.5
+        },
+        "ranked_guesses": [
+          "dance",
+          "crane",
+          "spine"
+        ],
+        "rationale": "The clue 'movement' suggests words related to motion or action. 'Dance' is a direct form of movement, 'crane' can imply movement in construction or machinery, and 'spine' relates to bodily movement.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dance": 0.8
+        },
+        "ranked_guesses": [
+          "dance"
+        ],
+        "rationale": "The clue 'movement' suggests words related to motion or action. 'Dance' fits well as it involves movement and is not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "clock",
+        "count": 2,
+        "rationale": "links 'time' and 'string' (as in pendulum or clock hands connected by a string)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lap": 0.75,
+          "play": 0.65,
+          "time": 0.95
+        },
+        "ranked_guesses": [
+          "time",
+          "lap",
+          "play"
+        ],
+        "rationale": "\"time\" is the most direct synonym for \"clock\" (count=2). \"Lap\" (as in lap time) and \"play\" (as in playtime) are weaker but plausible associations. High confidence in \"time\" due to direct lexical link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lap": 0.65,
+          "play": 0.4,
+          "time": 0.95
+        },
+        "ranked_guesses": [
+          "time",
+          "lap",
+          "play"
+        ],
+        "rationale": "\"time\" is the most direct synonym for \"clock\"; \"lap\" relates to timekeeping (e.g., lap *time*); \"play\" is a weaker stretch (e.g., *play* clock in sports). High confidence in \"time\" due to semantic proximity.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lap": 0.55,
+          "play": 0.65,
+          "string": 0.75,
+          "time": 0.95
+        },
+        "ranked_guesses": [
+          "time",
+          "string",
+          "play",
+          "lap"
+        ],
+        "rationale": "\"time\" is the most direct synonym/association with \"clock\"; \"string\" (as in pendulum), \"play\" (clockwork toy), and \"lap\" (stopwatch/lap timer) are secondary but plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "entertainment",
+        "count": 2,
+        "rationale": "The words 'spine' and 'thief' are associated with entertainment, avoiding any direct match with current board words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The clue 'entertainment' suggests words related to fun or performance. 'Play' fits well with this theme and has not been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The clue 'entertainment' suggests words related to fun or leisure activities. 'Play' fits well with this theme and is unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The clue 'entertainment' strongly relates to 'play' as a form of entertainment, and it hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "pain",
+        "count": 3,
+        "rationale": "targets doctor (medical), foot (sore), and string (pulling, as in 'painful tug'). Avoids assassin ('box'), neutrals, and blue team words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crash": 0.85,
+          "doctor": 0.75,
+          "foot": 0.8,
+          "headache": 0.7,
+          "spine": 0.92
+        },
+        "ranked_guesses": [
+          "spine",
+          "crash",
+          "foot",
+          "doctor",
+          "headache"
+        ],
+        "rationale": "\"Spine\" is the most direct association with physical pain (e.g., back pain). \"Crash\" and \"foot\" also relate to pain (e.g., car crash, foot injury). \"Doctor\" is tangential but linked to treating pain. Avoiding already-revealed words like \"hospital\" and \"time\" (e.g., 'time heals pain' too abstract).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crash": 0.78,
+          "doctor": 0.72,
+          "foot": 0.85,
+          "headache": 0.65,
+          "spine": 0.92
+        },
+        "ranked_guesses": [
+          "spine",
+          "foot",
+          "crash",
+          "doctor",
+          "headache"
+        ],
+        "rationale": "\"Spine\" is the strongest guess due to its direct association with physical pain (e.g., back pain, spinal injury). \"Foot\" follows closely (e.g., foot pain, plantar fasciitis). \"Crash\" ties to traumatic pain (e.g., car crash injuries), while \"doctor\" connects to pain treatment. Avoiding already-revealed medical/body terms (e.g., \"hospital\"). Count=3 suggests multiple pain-related words remain.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fashion",
+        "count": 2,
+        "rationale": "Hints at 'string' and 'thief' without using substrings of unrevealed words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.7
+        },
+        "ranked_guesses": [
+          "brush"
+        ],
+        "rationale": "The clue 'fashion' suggests words related to style or clothing. 'Brush' is a common tool in fashion for grooming, making it a plausible guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.7
+        },
+        "ranked_guesses": [
+          "brush"
+        ],
+        "rationale": "The clue 'fashion' suggests words related to clothing or style. 'Brush' is commonly associated with fashion, as it can refer to a makeup brush or a brush used in tailoring.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.7
+        },
+        "ranked_guesses": [
+          "brush"
+        ],
+        "rationale": "The clue 'fashion' suggests words related to style or clothing. 'Brush' is commonly associated with fashion, particularly in terms of grooming or makeup.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "emergency",
+        "count": 2,
+        "rationale": "Targets 'doctor' and 'foot' (as in 'emergency room' and 'emergency brake/foot pedal'). Avoids assassin ('box') and neutral words. Highlights critical red words remaining."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.75,
+          "chest": 0.45,
+          "crash": 0.95,
+          "doctor": 0.85,
+          "foot": 0.55
+        },
+        "ranked_guesses": [
+          "crash",
+          "doctor",
+          "bomb",
+          "foot",
+          "chest"
+        ],
+        "rationale": "\"crash\" is the strongest emergency-related word; \"doctor\" and \"bomb\" are secondary associations. Lower-confidence words like \"foot\" (emergency brake) and \"chest\" (chest pains) are distant connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.75,
+          "chest": 0.45,
+          "crash": 0.95,
+          "doctor": 0.85,
+          "foot": 0.55
+        },
+        "ranked_guesses": [
+          "crash",
+          "doctor",
+          "bomb",
+          "foot",
+          "chest"
+        ],
+        "rationale": "\"crash\" is the strongest emergency-related word; \"doctor\" and \"bomb\" are secondary associations; lower-confidence words are tangential but plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 2,
+        "rationale": "The word 'dance' is associated with celebration, and 'unicorn' is often linked to whimsical or magical celebrations."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fish": 0.7
+        },
+        "ranked_guesses": [
+          "fish"
+        ],
+        "rationale": "The clue 'celebration' could relate to 'fish' as in 'fish party' or 'fish fry', which are types of celebrations.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fish": 0.7
+        },
+        "ranked_guesses": [
+          "fish"
+        ],
+        "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been guessed yet and fits the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fish": 0.7
+        },
+        "ranked_guesses": [
+          "fish"
+        ],
+        "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been revealed yet and fits the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "education",
+        "count": 2,
+        "rationale": "Targets 'school' and 'string' (as in 'string theory' or 'string instruments' taught in schools). Avoids assassin ('box') and neutral words. High efficiency for remaining red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.6,
+          "school": 0.95
+        },
+        "ranked_guesses": [
+          "school",
+          "doctor"
+        ],
+        "rationale": "Strongest link to 'education(2)' is **school** (direct association). **Doctor** is secondary (medical education), but weaker. Avoiding 'play'/'dance' (revealed as non-red) and 'brush'/'string' (low relevance).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.65,
+          "school": 0.95
+        },
+        "ranked_guesses": [
+          "school",
+          "doctor"
+        ],
+        "rationale": "\"school\" is the most direct and high-confidence link to 'education' (count=2). 'doctor' is a secondary guess due to its association with professional training/education, though weaker.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.15,
+          "doctor": 0.65,
+          "field": 0.35,
+          "school": 0.95
+        },
+        "ranked_guesses": [
+          "school",
+          "doctor",
+          "field",
+          "brush"
+        ],
+        "rationale": "\"school\" is the most direct and high-confidence association with \"education.\" \"doctor\" is a secondary guess due to potential overlap with professional training (e.g., medical school). Remaining words are low-confidence fillers based on tangential or thematic connections (e.g., \"field\" for field trips, \"brush\" for art education).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 1,
+        "rationale": "Associated with 'unicorn', a mythical creature"
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "unicorn": 0.9
+        },
+        "ranked_guesses": [
+          "unicorn"
+        ],
+        "rationale": "The clue 'mythical' strongly suggests 'unicorn' as it is the only mythical creature on the board.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "unicorn": 0.9
+        },
+        "ranked_guesses": [
+          "unicorn"
+        ],
+        "rationale": "The clue 'mythical' strongly relates to 'unicorn', which is already revealed as a blue word.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "unicorn": 0.9
+        },
+        "ranked_guesses": [
+          "unicorn"
+        ],
+        "rationale": "The clue 'mythical' strongly suggests 'unicorn', which is already revealed as a blue word.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fiber",
+        "count": 2,
+        "rationale": "targets 'string' and 'foot' (as in 'arch' or 'tendon'), avoids assassin/neutral/blue."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.75,
+          "field": 0.4,
+          "foot": 0.6,
+          "lap": 0.55,
+          "string": 0.95
+        },
+        "ranked_guesses": [
+          "string",
+          "brush",
+          "foot",
+          "lap",
+          "field"
+        ],
+        "rationale": "\"string\" is the most direct association with \"fiber\" (e.g., fiber-optic cables, natural fibers like cotton/string). \"Brush\" secondary due to bristles/fibers. Lower-confidence guesses explore tangential connections (e.g., \"foot\" for muscle fibers, \"lap\" for fabric/lapels).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.75,
+          "foot": 0.55,
+          "lap": 0.45,
+          "string": 0.95
+        },
+        "ranked_guesses": [
+          "string",
+          "brush",
+          "foot",
+          "lap"
+        ],
+        "rationale": "\"String\" is the most direct association with *fiber* (e.g., fiber-optic cables, natural fibers like cotton/hemp spun into string). \"Brush\" secondary due to bristles often being fiber-based. Lower-confidence guesses like \"foot\" (shoe fibers) and \"lap\" (lap pool lanes marked by fibers) are stretches but plausible.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "brush": 0.7,
+          "foot": 0.4,
+          "lap": 0.3,
+          "string": 0.95
+        },
+        "ranked_guesses": [
+          "string",
+          "brush",
+          "foot",
+          "lap"
+        ],
+        "rationale": "\"string\" is the most direct association with *fiber* (e.g., fiber-optic cables, natural fibers like cotton/hemp spun into string). \"Brush\" secondary due to bristles (fibers). Lower-confidence guesses like \"foot\" (arch/fiber connections) and \"lap\" (lap pool lanes marked by fibers) are stretches but included for completeness.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 2,
+        "rationale": "The word 'celebration' is associated with 'dance' and 'unicorn', both blue words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fish": 0.7
+        },
+        "ranked_guesses": [
+          "fish"
+        ],
+        "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been guessed yet and fits the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fish": 0.7
+        },
+        "ranked_guesses": [
+          "fish"
+        ],
+        "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been guessed yet and fits the theme.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fish": 0.7
+        },
+        "ranked_guesses": [
+          "fish"
+        ],
+        "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been revealed yet, making it a strong candidate.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "quack",
+        "count": 2,
+        "rationale": "Directly ties to 'duck' and subtly hints at 'foot' (as in webbed feet)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chest": 0.015,
+          "doctor": 0.03,
+          "duck": 0.95
+        },
+        "ranked_guesses": [
+          "duck",
+          "doctor",
+          "chest"
+        ],
+        "rationale": "Direct phonetic/associative link: 'quack' \u2192 'duck' (count=2). Secondary guesses are low-confidence fallbacks.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.15,
+          "duck": 0.95
+        },
+        "ranked_guesses": [
+          "duck",
+          "doctor"
+        ],
+        "rationale": "\"quack\" is a sound strongly associated with \"duck\" (0.95). \"doctor\" is a distant secondary guess (0.15) due to tenuous link to 'quack' as slang for unqualified practitioners, but unlikely.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.03,
+          "duck": 0.95,
+          "foot": 0.015
+        },
+        "ranked_guesses": [
+          "duck",
+          "doctor",
+          "foot"
+        ],
+        "rationale": "Direct phonetic/associative link: 'quack' \u2192 **duck** (primary). 'Doctor' (weak, 'quack' as slang for imposter) and 'foot' (weaker, 'webbed foot') are distant secondary options.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fashion",
+        "count": 1,
+        "rationale": "Associated with 'string' through clothing accessories"
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.7
+        },
+        "ranked_guesses": [
+          "box"
+        ],
+        "rationale": "The clue 'fashion' suggests items related to clothing or accessories. 'Box' can be associated with fashion through packaging or storage of fashion items, and it hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.7
+        },
+        "ranked_guesses": [
+          "box"
+        ],
+        "rationale": "The clue 'fashion' suggests items related to clothing or accessories. 'Box' can be associated with fashion as a container for clothing or accessories, and it hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.7
+        },
+        "ranked_guesses": [
+          "box"
+        ],
+        "rationale": "The clue 'fashion' suggests items related to clothing or accessories. 'Box' could be associated with packaging or storing fashion items, making it a plausible guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "steal",
+        "count": 1,
+        "rationale": "Directly connects to 'thief', the only remaining blue word for the opponent; avoids all board substrings and hidden red words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.02,
+          "chest": 0.015,
+          "fish": 0.01,
+          "thief": 0.95
+        },
+        "ranked_guesses": [
+          "thief",
+          "bomb",
+          "chest",
+          "fish"
+        ],
+        "rationale": "Direct association of 'thief' with 'steal'; other words ('bomb', 'chest', 'fish') are distant or unrelated but listed as fallback options. Low stop confidence due to clear primary guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.02,
+          "chest": 0.01,
+          "fish": 0.01,
+          "foot": 0.01,
+          "thief": 0.95
+        },
+        "ranked_guesses": [
+          "thief",
+          "bomb",
+          "chest",
+          "foot",
+          "fish"
+        ],
+        "rationale": "Direct association: 'thief' is the most obvious word linked to 'steal' (count=1). Other words have negligible or indirect connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.02,
+          "chest": 0.015,
+          "fish": 0.01,
+          "thief": 0.95
+        },
+        "ranked_guesses": [
+          "thief",
+          "bomb",
+          "chest",
+          "fish"
+        ],
+        "rationale": "Direct association of 'thief' with 'steal'; other words are low-probability stretches (e.g., 'bomb' as 'stealing secrets' or 'fish' as 'stealing bait'). High confidence in 'thief' as the only clear link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sports"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "medical"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hospital"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "juice"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "orange"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "luck"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "horseshoe"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "unicorn"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "injury"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "market"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "investment"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "stock"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bond"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "performance"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "backpack"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "movement"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dance"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "clock"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "time"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "entertainment"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "play"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "pain"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spine"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fashion"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "emergency"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "crash"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "school"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fiber"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "string"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "brush"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "quack"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "duck"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fashion"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "steal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "opponent_completed",
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "thief"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 108,
+    "public_event_count": 61,
+    "reason": "opponent_completed",
+    "seed": "openrouter-codenames-004-mistralai_mistral_medium_3_1-vs-microsoft_phi_4",
+    "team_blue": "Phi-4",
+    "team_red": "Mistral Medium 3.1",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sports"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.3,
+              "crash": 0.65,
+              "dance": 0.6,
+              "field": 0.92,
+              "foot": 0.95,
+              "horseshoe": 0.75,
+              "lap": 0.88,
+              "play": 0.85,
+              "school": 0.5,
+              "string": 0.4
+            },
+            "ranked_guesses": [
+              "foot",
+              "field",
+              "lap",
+              "play",
+              "horseshoe",
+              "crash",
+              "dance",
+              "school",
+              "string",
+              "bond"
+            ],
+            "rationale": "'foot' (as in football), 'field' (sports field), and 'lap' (racing) are direct sports associations. 'play' is broad but relevant. 'horseshoe' (horseshoes game) is plausible but niche. Others are weaker or tangential (e.g., 'crash' for motorsports, 'dance' for dance sports). Prioritized highest-confidence first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sports",
+          "count": 3,
+          "rationale": "links 'play', 'horseshoe', and 'foot' (football) for red team, avoiding direct word matches or substrings."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.7
+            },
+            "ranked_guesses": [
+              "dance"
+            ],
+            "rationale": "Dance is often associated with celebrations and fits the clue 'celebration' well.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.7,
+              "play": 0.5,
+              "school": 0.6
+            },
+            "ranked_guesses": [
+              "dance",
+              "school",
+              "play"
+            ],
+            "rationale": "These words are commonly associated with celebrations and are likely linked to the clue 'celebration'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.7,
+              "doctor": 0.4,
+              "play": 0.5,
+              "school": 0.6
+            },
+            "ranked_guesses": [
+              "dance",
+              "school",
+              "play",
+              "doctor"
+            ],
+            "rationale": "The clue 'celebration' suggests words associated with festivities or events. 'Dance' and 'play' are directly linked to celebrations, while 'school' could relate to events like proms or graduations. 'Doctor' is less directly related but could be considered in contexts like health celebrations.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 3,
+          "rationale": "The words 'dance', 'hospital', 'orange', 'spine', 'thief', and 'unicorn' are associated with celebration or events that could involve celebration."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "medical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "chest": 0.65,
+              "crash": 0.45,
+              "doctor": 0.92,
+              "foot": 0.55,
+              "hospital": 0.95,
+              "spine": 0.75
+            },
+            "ranked_guesses": [
+              "hospital",
+              "doctor",
+              "spine",
+              "chest",
+              "foot",
+              "crash"
+            ],
+            "rationale": "Top 3 are direct medical associations ('hospital', 'doctor', 'spine'). 'Chest' and 'foot' are body parts (lower confidence). 'Crash' is a stretch (e.g., 'crash cart') but less likely. Clue count=3 suggests multiple strong links.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "chest": 0.75,
+              "crash": 0.55,
+              "doctor": 0.92,
+              "foot": 0.65,
+              "hospital": 0.95,
+              "spine": 0.85
+            },
+            "ranked_guesses": [
+              "hospital",
+              "doctor",
+              "spine",
+              "chest",
+              "foot",
+              "crash"
+            ],
+            "rationale": "\"hospital\" and \"doctor\" are directly tied to *medical*; \"spine\" (medical anatomy) and \"chest\" (thoracic medicine) are strong secondary associations; \"foot\" (podiatry) and \"crash\" (emergency/trauma) are weaker but plausible. Clue count=3 suggests prioritizing the top 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.3,
+              "chest": 0.65,
+              "crash": 0.45,
+              "doctor": 0.92,
+              "foot": 0.55,
+              "hospital": 0.95,
+              "spine": 0.75
+            },
+            "ranked_guesses": [
+              "hospital",
+              "doctor",
+              "spine",
+              "chest",
+              "foot",
+              "crash",
+              "brush"
+            ],
+            "rationale": "\"hospital\" and \"doctor\" are directly tied to **medical** with highest confidence. \"spine\" (medical anatomy) and \"chest\" (body part, medical context) follow. Lower-confidence words like \"crash\" (medical emergency) and \"brush\" (toothbrush) are speculative. Clue count = 3 suggests multiple strong connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hospital"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medical",
+          "count": 3,
+          "rationale": "links 'doctor', 'hospital', and 'foot' (as in 'foot doctor')\u2014all red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "juice"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.9
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "The clue 'juice' strongly suggests 'orange' due to its direct association with orange juice. Other words like 'fruit' or 'drink' could be related, but 'orange' is the most direct and confident guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.9
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "The clue 'juice' strongly suggests 'orange' due to its direct association with orange juice. Other words like 'fruit' or 'drink' are not on the board.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 0.9
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "The clue 'juice' strongly suggests 'orange' due to its direct association with orange juice, and it hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "orange"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "juice",
+          "count": 3,
+          "rationale": "Associated with 'orange', 'unicorn', and 'thief' without matching substrings or revealing words directly."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "luck"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.65,
+              "foot": 0.5,
+              "horseshoe": 0.95,
+              "play": 0.6,
+              "unicorn": 0.75
+            },
+            "ranked_guesses": [
+              "horseshoe",
+              "unicorn",
+              "dance",
+              "play",
+              "foot"
+            ],
+            "rationale": "\"horseshoe\" is the strongest association with *luck* (common idiom: 'lucky horseshoe'). \"unicorn\" ties to mythical luck, while \"dance\"/\"play\" are weaker but could relate to 'lucky break' or 'luck of the draw'. \"foot\" is a stretch (e.g., 'lucky foot'). Prior clues (e.g., *medical*, *sports*) suggest avoiding overlaps like \"doctor\" or \"field\".",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.45,
+              "horseshoe": 0.95,
+              "play": 0.35,
+              "unicorn": 0.65
+            },
+            "ranked_guesses": [
+              "horseshoe",
+              "unicorn",
+              "dance",
+              "play"
+            ],
+            "rationale": "\"horseshoe\" is the most direct association with 'luck' (commonly considered a lucky charm). \"unicorn\" is mythical and often tied to luck/fortune in folklore. \"dance\" and \"play\" are weaker but could relate to 'luck' in contexts like 'dance of luck' or 'play your luck'. Prioritizing the strongest semantic link first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "horseshoe"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "unicorn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "luck",
+          "count": 3,
+          "rationale": "Targets **horseshoe**, **foot** (as in 'lucky foot'), and **play** (as in 'luck of the draw' or 'lucky play'). Avoids assassin (**box**), neutrals, and blue words. Highlights thematic connection without direct overlap."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fruit": 0.9
+            },
+            "ranked_guesses": [
+              "fruit"
+            ],
+            "rationale": "The clue 'fruit' directly relates to 'orange', which has already been correctly guessed. 'Fruit' is a strong association for 'orange', making it a high-confidence guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.7,
+              "grape": 0.5,
+              "pear": 0.6
+            },
+            "ranked_guesses": [
+              "apple",
+              "pear",
+              "grape"
+            ],
+            "rationale": "The clue 'fruit' suggests common fruits. 'Apple', 'pear', and 'grape' are typical fruits not yet revealed.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.7
+            },
+            "ranked_guesses": [
+              "apple"
+            ],
+            "rationale": "The clue 'fruit' with a count of 2 suggests two fruit-related words. 'Orange' is already revealed, so 'apple' is a strong candidate.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fruit",
+          "count": 2,
+          "rationale": "Fruit is associated with 'orange' and 'unicorn' (unicorn fruit, a mythical creature often depicted with a horn)."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "injury"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "injury",
+          "count": 3,
+          "rationale": "links doctor, foot, and crash for red team, avoids all board substrings and forbidden words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spine": 0.7
+            },
+            "ranked_guesses": [
+              "spine"
+            ],
+            "rationale": "Spine is associated with magic (e.g., spine-tingling, magical spine) and is not revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spine": 0.7
+            },
+            "ranked_guesses": [
+              "spine"
+            ],
+            "rationale": "Spine relates to magic through mystical or fantastical connotations, and is not revealed or associated with red.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spine": 0.7
+            },
+            "ranked_guesses": [
+              "spine"
+            ],
+            "rationale": "Spine relates to magic through mystical or fantasy themes, and is unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "magic",
+          "count": 2,
+          "rationale": "Associated with 'unicorn' and 'spine' (as in spine-tingling magic)"
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "market"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.85,
+              "chest": 0.65,
+              "crash": 0.75,
+              "fish": 0.55,
+              "foot": 0.45,
+              "stock": 0.95
+            },
+            "ranked_guesses": [
+              "stock",
+              "bond",
+              "crash",
+              "chest",
+              "fish",
+              "foot"
+            ],
+            "rationale": "\"stock\" is the most direct association with 'market' (e.g., stock market). \"bond\" is also financial. \"crash\" relates to market crashes. Others are weaker but plausible (e.g., \"fish market\", \"flea market\" for 'foot'). Prioritized financial terms first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "market",
+          "count": 3,
+          "rationale": "targets stock, string (as in 'stock market' and 'string of trades'), and bomb (as in 'bombed in the market'); avoids direct matches and substrings."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "duck": 0.7
+            },
+            "ranked_guesses": [
+              "duck"
+            ],
+            "rationale": "The clue 'animal' with a count of 2 suggests two animal-related words. 'Unicorn' is already revealed, so 'duck' is a strong candidate.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "duck": 0.7
+            },
+            "ranked_guesses": [
+              "duck"
+            ],
+            "rationale": "Duck is an animal and has not been revealed, fitting the clue 'animal'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "duck": 0.7
+            },
+            "ranked_guesses": [
+              "duck"
+            ],
+            "rationale": "Duck is an animal and fits the clue 'animal' without being revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "'Thief' and 'unicorn' are associated with animals."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "investment"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.92,
+              "chest": 0.55,
+              "crane": 0.5,
+              "crash": 0.45,
+              "field": 0.15,
+              "foot": 0.3,
+              "play": 0.2,
+              "school": 0.25,
+              "stock": 0.95,
+              "time": 0.65
+            },
+            "ranked_guesses": [
+              "stock",
+              "bond",
+              "time",
+              "chest",
+              "crane",
+              "crash",
+              "foot",
+              "school",
+              "play",
+              "field"
+            ],
+            "rationale": "\"stock\" and \"bond\" are the most direct financial/investment terms; \"time\" relates to long-term investments; others are progressively weaker associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bond": 0.92,
+              "chest": 0.65,
+              "crash": 0.75,
+              "stock": 0.95,
+              "time": 0.55
+            },
+            "ranked_guesses": [
+              "stock",
+              "bond",
+              "crash",
+              "chest",
+              "time"
+            ],
+            "rationale": "\"stock\" and \"bond\" are direct financial/investment terms. \"crash\" relates to market crashes. \"chest\" (as in treasure chest) and \"time\" (as in 'time is money') are weaker but plausible thematic links. Prioritizing highest-confidence financial terms first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "stock"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bond"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "investment",
+          "count": 3,
+          "rationale": "targets stock, bond, string (as in 'string of investments' or 'stock/bond market strings')."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "performance"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.7
+            },
+            "ranked_guesses": [
+              "dance"
+            ],
+            "rationale": "The clue 'performance' suggests words related to performing arts or activities. 'Dance' fits well as a performance-related word and is unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.7,
+              "play": 0.6
+            },
+            "ranked_guesses": [
+              "dance",
+              "play"
+            ],
+            "rationale": "The clue 'performance' suggests words related to performing arts or entertainment. 'Dance' and 'play' are strong candidates as they are commonly associated with performances.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.7,
+              "play": 0.6
+            },
+            "ranked_guesses": [
+              "dance",
+              "play"
+            ],
+            "rationale": "The clue 'performance' suggests words related to performing arts or entertainment. 'Dance' and 'play' are closely related to 'performance' and have not been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "performance",
+          "count": 2,
+          "rationale": "Associated with 'dance' and 'play', both blue words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "backpack"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "backpack",
+          "count": 2,
+          "rationale": "hints at 'string' (backpack straps) and 'school' (backpacks are associated with school)"
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "movement"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.6,
+              "dance": 0.7,
+              "foot": 0.2,
+              "play": 0.4,
+              "school": 0.3,
+              "spine": 0.5
+            },
+            "ranked_guesses": [
+              "dance",
+              "crane",
+              "spine",
+              "play",
+              "school",
+              "foot"
+            ],
+            "rationale": "The clue 'movement' suggests words related to motion or physical activity. 'Dance' is a strong candidate due to its direct connection to movement. 'Crane' and 'spine' are also related to physical movement or posture. 'Play' and 'school' can involve movement activities, while 'foot' is a body part associated with movement.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.6,
+              "dance": 0.7,
+              "spine": 0.5
+            },
+            "ranked_guesses": [
+              "dance",
+              "crane",
+              "spine"
+            ],
+            "rationale": "The clue 'movement' suggests words related to motion or action. 'Dance' is a direct form of movement, 'crane' can imply movement in construction or machinery, and 'spine' relates to bodily movement.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dance": 0.8
+            },
+            "ranked_guesses": [
+              "dance"
+            ],
+            "rationale": "The clue 'movement' suggests words related to motion or action. 'Dance' fits well as it involves movement and is not yet revealed.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dance"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "movement",
+          "count": 2,
+          "rationale": "Targets 'dance' and 'spine' without using substrings of unrevealed words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "clock"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lap": 0.75,
+              "play": 0.65,
+              "time": 0.95
+            },
+            "ranked_guesses": [
+              "time",
+              "lap",
+              "play"
+            ],
+            "rationale": "\"time\" is the most direct synonym for \"clock\" (count=2). \"Lap\" (as in lap time) and \"play\" (as in playtime) are weaker but plausible associations. High confidence in \"time\" due to direct lexical link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lap": 0.65,
+              "play": 0.4,
+              "time": 0.95
+            },
+            "ranked_guesses": [
+              "time",
+              "lap",
+              "play"
+            ],
+            "rationale": "\"time\" is the most direct synonym for \"clock\"; \"lap\" relates to timekeeping (e.g., lap *time*); \"play\" is a weaker stretch (e.g., *play* clock in sports). High confidence in \"time\" due to semantic proximity.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lap": 0.55,
+              "play": 0.65,
+              "string": 0.75,
+              "time": 0.95
+            },
+            "ranked_guesses": [
+              "time",
+              "string",
+              "play",
+              "lap"
+            ],
+            "rationale": "\"time\" is the most direct synonym/association with \"clock\"; \"string\" (as in pendulum), \"play\" (clockwork toy), and \"lap\" (stopwatch/lap timer) are secondary but plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "time"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "clock",
+          "count": 2,
+          "rationale": "links 'time' and 'string' (as in pendulum or clock hands connected by a string)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "entertainment"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "play": 0.9
+            },
+            "ranked_guesses": [
+              "play"
+            ],
+            "rationale": "The clue 'entertainment' suggests words related to fun or performance. 'Play' fits well with this theme and has not been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "play": 0.9
+            },
+            "ranked_guesses": [
+              "play"
+            ],
+            "rationale": "The clue 'entertainment' suggests words related to fun or leisure activities. 'Play' fits well with this theme and is unrevealed.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "play": 0.9
+            },
+            "ranked_guesses": [
+              "play"
+            ],
+            "rationale": "The clue 'entertainment' strongly relates to 'play' as a form of entertainment, and it hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "play"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "entertainment",
+          "count": 2,
+          "rationale": "The words 'spine' and 'thief' are associated with entertainment, avoiding any direct match with current board words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "pain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "crash": 0.85,
+              "doctor": 0.75,
+              "foot": 0.8,
+              "headache": 0.7,
+              "spine": 0.92
+            },
+            "ranked_guesses": [
+              "spine",
+              "crash",
+              "foot",
+              "doctor",
+              "headache"
+            ],
+            "rationale": "\"Spine\" is the most direct association with physical pain (e.g., back pain). \"Crash\" and \"foot\" also relate to pain (e.g., car crash, foot injury). \"Doctor\" is tangential but linked to treating pain. Avoiding already-revealed words like \"hospital\" and \"time\" (e.g., 'time heals pain' too abstract).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crash": 0.78,
+              "doctor": 0.72,
+              "foot": 0.85,
+              "headache": 0.65,
+              "spine": 0.92
+            },
+            "ranked_guesses": [
+              "spine",
+              "foot",
+              "crash",
+              "doctor",
+              "headache"
+            ],
+            "rationale": "\"Spine\" is the strongest guess due to its direct association with physical pain (e.g., back pain, spinal injury). \"Foot\" follows closely (e.g., foot pain, plantar fasciitis). \"Crash\" ties to traumatic pain (e.g., car crash injuries), while \"doctor\" connects to pain treatment. Avoiding already-revealed medical/body terms (e.g., \"hospital\"). Count=3 suggests multiple pain-related words remain.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "pain",
+          "count": 3,
+          "rationale": "targets doctor (medical), foot (sore), and string (pulling, as in 'painful tug'). Avoids assassin ('box'), neutrals, and blue team words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fashion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.7
+            },
+            "ranked_guesses": [
+              "brush"
+            ],
+            "rationale": "The clue 'fashion' suggests words related to style or clothing. 'Brush' is a common tool in fashion for grooming, making it a plausible guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.7
+            },
+            "ranked_guesses": [
+              "brush"
+            ],
+            "rationale": "The clue 'fashion' suggests words related to clothing or style. 'Brush' is commonly associated with fashion, as it can refer to a makeup brush or a brush used in tailoring.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.7
+            },
+            "ranked_guesses": [
+              "brush"
+            ],
+            "rationale": "The clue 'fashion' suggests words related to style or clothing. 'Brush' is commonly associated with fashion, particularly in terms of grooming or makeup.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fashion",
+          "count": 2,
+          "rationale": "Hints at 'string' and 'thief' without using substrings of unrevealed words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "emergency"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.75,
+              "chest": 0.45,
+              "crash": 0.95,
+              "doctor": 0.85,
+              "foot": 0.55
+            },
+            "ranked_guesses": [
+              "crash",
+              "doctor",
+              "bomb",
+              "foot",
+              "chest"
+            ],
+            "rationale": "\"crash\" is the strongest emergency-related word; \"doctor\" and \"bomb\" are secondary associations. Lower-confidence words like \"foot\" (emergency brake) and \"chest\" (chest pains) are distant connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.75,
+              "chest": 0.45,
+              "crash": 0.95,
+              "doctor": 0.85,
+              "foot": 0.55
+            },
+            "ranked_guesses": [
+              "crash",
+              "doctor",
+              "bomb",
+              "foot",
+              "chest"
+            ],
+            "rationale": "\"crash\" is the strongest emergency-related word; \"doctor\" and \"bomb\" are secondary associations; lower-confidence words are tangential but plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "crash"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "emergency",
+          "count": 2,
+          "rationale": "Targets 'doctor' and 'foot' (as in 'emergency room' and 'emergency brake/foot pedal'). Avoids assassin ('box') and neutral words. Highlights critical red words remaining."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fish": 0.7
+            },
+            "ranked_guesses": [
+              "fish"
+            ],
+            "rationale": "The clue 'celebration' could relate to 'fish' as in 'fish party' or 'fish fry', which are types of celebrations.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fish": 0.7
+            },
+            "ranked_guesses": [
+              "fish"
+            ],
+            "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been guessed yet and fits the theme.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fish": 0.7
+            },
+            "ranked_guesses": [
+              "fish"
+            ],
+            "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been revealed yet and fits the theme.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 2,
+          "rationale": "The word 'dance' is associated with celebration, and 'unicorn' is often linked to whimsical or magical celebrations."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.6,
+              "school": 0.95
+            },
+            "ranked_guesses": [
+              "school",
+              "doctor"
+            ],
+            "rationale": "Strongest link to 'education(2)' is **school** (direct association). **Doctor** is secondary (medical education), but weaker. Avoiding 'play'/'dance' (revealed as non-red) and 'brush'/'string' (low relevance).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.65,
+              "school": 0.95
+            },
+            "ranked_guesses": [
+              "school",
+              "doctor"
+            ],
+            "rationale": "\"school\" is the most direct and high-confidence link to 'education' (count=2). 'doctor' is a secondary guess due to its association with professional training/education, though weaker.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.15,
+              "doctor": 0.65,
+              "field": 0.35,
+              "school": 0.95
+            },
+            "ranked_guesses": [
+              "school",
+              "doctor",
+              "field",
+              "brush"
+            ],
+            "rationale": "\"school\" is the most direct and high-confidence association with \"education.\" \"doctor\" is a secondary guess due to potential overlap with professional training (e.g., medical school). Remaining words are low-confidence fillers based on tangential or thematic connections (e.g., \"field\" for field trips, \"brush\" for art education).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "school"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "education",
+          "count": 2,
+          "rationale": "Targets 'school' and 'string' (as in 'string theory' or 'string instruments' taught in schools). Avoids assassin ('box') and neutral words. High efficiency for remaining red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "mythical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "unicorn": 0.9
+            },
+            "ranked_guesses": [
+              "unicorn"
+            ],
+            "rationale": "The clue 'mythical' strongly suggests 'unicorn' as it is the only mythical creature on the board.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "unicorn": 0.9
+            },
+            "ranked_guesses": [
+              "unicorn"
+            ],
+            "rationale": "The clue 'mythical' strongly relates to 'unicorn', which is already revealed as a blue word.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "unicorn": 0.9
+            },
+            "ranked_guesses": [
+              "unicorn"
+            ],
+            "rationale": "The clue 'mythical' strongly suggests 'unicorn', which is already revealed as a blue word.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythical",
+          "count": 1,
+          "rationale": "Associated with 'unicorn', a mythical creature"
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fiber"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.75,
+              "field": 0.4,
+              "foot": 0.6,
+              "lap": 0.55,
+              "string": 0.95
+            },
+            "ranked_guesses": [
+              "string",
+              "brush",
+              "foot",
+              "lap",
+              "field"
+            ],
+            "rationale": "\"string\" is the most direct association with \"fiber\" (e.g., fiber-optic cables, natural fibers like cotton/string). \"Brush\" secondary due to bristles/fibers. Lower-confidence guesses explore tangential connections (e.g., \"foot\" for muscle fibers, \"lap\" for fabric/lapels).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.75,
+              "foot": 0.55,
+              "lap": 0.45,
+              "string": 0.95
+            },
+            "ranked_guesses": [
+              "string",
+              "brush",
+              "foot",
+              "lap"
+            ],
+            "rationale": "\"String\" is the most direct association with *fiber* (e.g., fiber-optic cables, natural fibers like cotton/hemp spun into string). \"Brush\" secondary due to bristles often being fiber-based. Lower-confidence guesses like \"foot\" (shoe fibers) and \"lap\" (lap pool lanes marked by fibers) are stretches but plausible.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "brush": 0.7,
+              "foot": 0.4,
+              "lap": 0.3,
+              "string": 0.95
+            },
+            "ranked_guesses": [
+              "string",
+              "brush",
+              "foot",
+              "lap"
+            ],
+            "rationale": "\"string\" is the most direct association with *fiber* (e.g., fiber-optic cables, natural fibers like cotton/hemp spun into string). \"Brush\" secondary due to bristles (fibers). Lower-confidence guesses like \"foot\" (arch/fiber connections) and \"lap\" (lap pool lanes marked by fibers) are stretches but included for completeness.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "string"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "brush"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fiber",
+          "count": 2,
+          "rationale": "targets 'string' and 'foot' (as in 'arch' or 'tendon'), avoids assassin/neutral/blue."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fish": 0.7
+            },
+            "ranked_guesses": [
+              "fish"
+            ],
+            "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been guessed yet and fits the theme.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fish": 0.7
+            },
+            "ranked_guesses": [
+              "fish"
+            ],
+            "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been guessed yet and fits the theme.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fish": 0.7
+            },
+            "ranked_guesses": [
+              "fish"
+            ],
+            "rationale": "The clue 'celebration' suggests words related to festivities or events. 'Fish' could be associated with celebrations like parties or events involving seafood. It hasn't been revealed yet, making it a strong candidate.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 2,
+          "rationale": "The word 'celebration' is associated with 'dance' and 'unicorn', both blue words."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "quack"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "chest": 0.015,
+              "doctor": 0.03,
+              "duck": 0.95
+            },
+            "ranked_guesses": [
+              "duck",
+              "doctor",
+              "chest"
+            ],
+            "rationale": "Direct phonetic/associative link: 'quack' \u2192 'duck' (count=2). Secondary guesses are low-confidence fallbacks.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.15,
+              "duck": 0.95
+            },
+            "ranked_guesses": [
+              "duck",
+              "doctor"
+            ],
+            "rationale": "\"quack\" is a sound strongly associated with \"duck\" (0.95). \"doctor\" is a distant secondary guess (0.15) due to tenuous link to 'quack' as slang for unqualified practitioners, but unlikely.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.03,
+              "duck": 0.95,
+              "foot": 0.015
+            },
+            "ranked_guesses": [
+              "duck",
+              "doctor",
+              "foot"
+            ],
+            "rationale": "Direct phonetic/associative link: 'quack' \u2192 **duck** (primary). 'Doctor' (weak, 'quack' as slang for imposter) and 'foot' (weaker, 'webbed foot') are distant secondary options.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "duck"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "quack",
+          "count": 2,
+          "rationale": "Directly ties to 'duck' and subtly hints at 'foot' (as in webbed feet)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fashion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "box": 0.7
+            },
+            "ranked_guesses": [
+              "box"
+            ],
+            "rationale": "The clue 'fashion' suggests items related to clothing or accessories. 'Box' can be associated with fashion through packaging or storage of fashion items, and it hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "box": 0.7
+            },
+            "ranked_guesses": [
+              "box"
+            ],
+            "rationale": "The clue 'fashion' suggests items related to clothing or accessories. 'Box' can be associated with fashion as a container for clothing or accessories, and it hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "box": 0.7
+            },
+            "ranked_guesses": [
+              "box"
+            ],
+            "rationale": "The clue 'fashion' suggests items related to clothing or accessories. 'Box' could be associated with packaging or storing fashion items, making it a plausible guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fashion",
+          "count": 1,
+          "rationale": "Associated with 'string' through clothing accessories"
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "steal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.02,
+              "chest": 0.015,
+              "fish": 0.01,
+              "thief": 0.95
+            },
+            "ranked_guesses": [
+              "thief",
+              "bomb",
+              "chest",
+              "fish"
+            ],
+            "rationale": "Direct association of 'thief' with 'steal'; other words ('bomb', 'chest', 'fish') are distant or unrelated but listed as fallback options. Low stop confidence due to clear primary guess.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.02,
+              "chest": 0.01,
+              "fish": 0.01,
+              "foot": 0.01,
+              "thief": 0.95
+            },
+            "ranked_guesses": [
+              "thief",
+              "bomb",
+              "chest",
+              "foot",
+              "fish"
+            ],
+            "rationale": "Direct association: 'thief' is the most obvious word linked to 'steal' (count=1). Other words have negligible or indirect connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.02,
+              "chest": 0.015,
+              "fish": 0.01,
+              "thief": 0.95
+            },
+            "ranked_guesses": [
+              "thief",
+              "bomb",
+              "chest",
+              "fish"
+            ],
+            "rationale": "Direct association of 'thief' with 'steal'; other words are low-probability stretches (e.g., 'bomb' as 'stealing secrets' or 'fish' as 'stealing bait'). High confidence in 'thief' as the only clear link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "opponent_completed",
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "thief"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "steal",
+          "count": 1,
+          "rationale": "Directly connects to 'thief', the only remaining blue word for the opponent; avoids all board substrings and hidden red words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "board": {
+    "identities": {
+      "agent": "neutral",
+      "atlas": "neutral",
+      "butter": "neutral",
+      "circle": "red",
+      "cloud": "blue",
+      "comet": "red",
+      "doctor": "neutral",
+      "flame": "red",
+      "hunter": "blue",
+      "jungle": "blue",
+      "kernel": "blue",
+      "museum": "neutral",
+      "novel": "assassin",
+      "orange": "red",
+      "planet": "red",
+      "poet": "blue",
+      "pyramid": "red",
+      "rocket": "blue",
+      "singer": "neutral",
+      "spring": "red",
+      "tiger": "blue",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "red",
+      "writer": "blue"
+    },
+    "revealed": [
+      "comet",
+      "planet",
+      "rocket"
+    ],
+    "words": {
+      "agent": "neutral",
+      "atlas": "neutral",
+      "butter": "neutral",
+      "circle": "red",
+      "cloud": "blue",
+      "comet": "red",
+      "doctor": "neutral",
+      "flame": "red",
+      "hunter": "blue",
+      "jungle": "blue",
+      "kernel": "blue",
+      "museum": "neutral",
+      "novel": "assassin",
+      "orange": "red",
+      "planet": "red",
+      "poet": "blue",
+      "pyramid": "red",
+      "rocket": "blue",
+      "singer": "neutral",
+      "spring": "red",
+      "tiger": "blue",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "red",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "celestial",
+        "count": 3,
+        "rationale": "Links to 'comet', 'planet', and 'rocket' (though rocket is blue, it's a risk to connect to space theme; but primary red targets are comet and planet, with spring as a stretch for celestial events like equinox). Actually, 'spring' can be a season related to celestial events. Better to aim for 'comet', 'planet', and 'spring' (vernal equinox). Avoids 'rocket' which is blue. 'Celestial' doesn't directly match any board word."
+      },
+      "agent_id": "deepseek-v4-pro-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "{'word': 'comet', 'confidence': 0.95}",
+          "{'word': 'planet', 'confidence': 0.9}",
+          "{'word': 'cloud', 'confidence': 0.85}",
+          "{'word': 'rocket', 'confidence': 0.7}",
+          "{'word': 'voyage', 'confidence': 0.6}"
+        ],
+        "rationale": "Celestial relates to the sky or outer space. Comet, planet, and cloud are directly celestial. Rocket and voyage are space-related but less directly celestial. Guessing top 3 due to clue count of 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.4,
+          "comet": 0.95,
+          "planet": 0.9,
+          "rocket": 0.7,
+          "voyage": 0.3
+        },
+        "ranked_guesses": [
+          "comet",
+          "planet",
+          "rocket",
+          "cloud",
+          "voyage"
+        ],
+        "rationale": "Celestial relates to space and the sky. Comet and planet are strong matches. Rocket is space-related but less directly celestial. Cloud is sky-related but not necessarily celestial. Voyage could be space voyage but is weaker. Guessing top 3 due to clue count of 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.05,
+          "atlas": 0.3,
+          "butter": 0.05,
+          "circle": 0.1,
+          "cloud": 0.5,
+          "comet": 0.95,
+          "doctor": 0.05,
+          "flame": 0.1,
+          "hunter": 0.05,
+          "jungle": 0.05,
+          "kernel": 0.05,
+          "museum": 0.05,
+          "novel": 0.05,
+          "orange": 0.05,
+          "planet": 0.9,
+          "poet": 0.05,
+          "pyramid": 0.2,
+          "rocket": 0.7,
+          "singer": 0.05,
+          "spring": 0.1,
+          "tiger": 0.05,
+          "violin": 0.05,
+          "voyage": 0.4,
+          "wizard": 0.05,
+          "writer": 0.05
+        },
+        "ranked_guesses": [
+          "comet",
+          "planet",
+          "rocket",
+          "cloud",
+          "voyage",
+          "atlas",
+          "pyramid",
+          "spring",
+          "flame",
+          "circle",
+          "wizard",
+          "orange",
+          "tiger",
+          "jungle",
+          "hunter",
+          "novel",
+          "poet",
+          "writer",
+          "singer",
+          "doctor",
+          "agent",
+          "butter",
+          "kernel",
+          "museum",
+          "violin"
+        ],
+        "rationale": "Celestial relates to sky, space, heavens. Top guesses: comet (celestial object), planet (celestial body), rocket (goes to space). Cloud is sky-related but less directly celestial. Voyage could be space voyage. Atlas might be a celestial atlas. Others are low confidence.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "celestial"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "comet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 4,
+    "reason": null,
+    "seed": "diag-60606",
+    "team_blue": "gpt-4.1-nano-blue",
+    "team_red": "deepseek-v4-pro-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "celestial"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "{'word': 'comet', 'confidence': 0.95}",
+              "{'word': 'planet', 'confidence': 0.9}",
+              "{'word': 'cloud', 'confidence': 0.85}",
+              "{'word': 'rocket', 'confidence': 0.7}",
+              "{'word': 'voyage', 'confidence': 0.6}"
+            ],
+            "rationale": "Celestial relates to the sky or outer space. Comet, planet, and cloud are directly celestial. Rocket and voyage are space-related but less directly celestial. Guessing top 3 due to clue count of 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.4,
+              "comet": 0.95,
+              "planet": 0.9,
+              "rocket": 0.7,
+              "voyage": 0.3
+            },
+            "ranked_guesses": [
+              "comet",
+              "planet",
+              "rocket",
+              "cloud",
+              "voyage"
+            ],
+            "rationale": "Celestial relates to space and the sky. Comet and planet are strong matches. Rocket is space-related but less directly celestial. Cloud is sky-related but not necessarily celestial. Voyage could be space voyage but is weaker. Guessing top 3 due to clue count of 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.05,
+              "atlas": 0.3,
+              "butter": 0.05,
+              "circle": 0.1,
+              "cloud": 0.5,
+              "comet": 0.95,
+              "doctor": 0.05,
+              "flame": 0.1,
+              "hunter": 0.05,
+              "jungle": 0.05,
+              "kernel": 0.05,
+              "museum": 0.05,
+              "novel": 0.05,
+              "orange": 0.05,
+              "planet": 0.9,
+              "poet": 0.05,
+              "pyramid": 0.2,
+              "rocket": 0.7,
+              "singer": 0.05,
+              "spring": 0.1,
+              "tiger": 0.05,
+              "violin": 0.05,
+              "voyage": 0.4,
+              "wizard": 0.05,
+              "writer": 0.05
+            },
+            "ranked_guesses": [
+              "comet",
+              "planet",
+              "rocket",
+              "cloud",
+              "voyage",
+              "atlas",
+              "pyramid",
+              "spring",
+              "flame",
+              "circle",
+              "wizard",
+              "orange",
+              "tiger",
+              "jungle",
+              "hunter",
+              "novel",
+              "poet",
+              "writer",
+              "singer",
+              "doctor",
+              "agent",
+              "butter",
+              "kernel",
+              "museum",
+              "violin"
+            ],
+            "rationale": "Celestial relates to sky, space, heavens. Top guesses: comet (celestial object), planet (celestial body), rocket (goes to space). Cloud is sky-related but less directly celestial. Voyage could be space voyage. Atlas might be a celestial atlas. Others are low confidence.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "comet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celestial",
+          "count": 3,
+          "rationale": "Links to 'comet', 'planet', and 'rocket' (though rocket is blue, it's a risk to connect to space theme; but primary red targets are comet and planet, with spring as a stretch for celestial events like equinox). Actually, 'spring' can be a season related to celestial events. Better to aim for 'comet', 'planet', and 'spring' (vernal equinox). Avoids 'rocket' which is blue. 'Celestial' doesn't directly match any board word."
+        },
+        "agent_id": "deepseek-v4-pro-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

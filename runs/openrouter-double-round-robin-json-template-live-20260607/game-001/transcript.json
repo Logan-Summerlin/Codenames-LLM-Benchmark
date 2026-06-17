@@ -1,0 +1,4574 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "neutral",
+      "atlas": "blue",
+      "cheese": "blue",
+      "circle": "blue",
+      "copper": "blue",
+      "dancer": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "family": "red",
+      "farmer": "red",
+      "flame": "blue",
+      "fox": "neutral",
+      "ghost": "neutral",
+      "kernel": "neutral",
+      "leather": "blue",
+      "metal": "neutral",
+      "robot": "blue",
+      "silence": "red",
+      "silver": "blue",
+      "station": "red",
+      "telescope": "red",
+      "temple": "red",
+      "tiger": "red",
+      "violin": "red",
+      "water": "assassin"
+    },
+    "revealed": [
+      "anchor",
+      "atlas",
+      "copper",
+      "dancer",
+      "doctor",
+      "family",
+      "farmer",
+      "flame",
+      "metal",
+      "robot",
+      "silver",
+      "tiger",
+      "violin"
+    ],
+    "words": {
+      "anchor": "neutral",
+      "atlas": "blue",
+      "cheese": "blue",
+      "circle": "blue",
+      "copper": "blue",
+      "dancer": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "family": "red",
+      "farmer": "red",
+      "flame": "blue",
+      "fox": "neutral",
+      "ghost": "neutral",
+      "kernel": "neutral",
+      "leather": "blue",
+      "metal": "neutral",
+      "robot": "blue",
+      "silence": "red",
+      "silver": "blue",
+      "station": "red",
+      "telescope": "red",
+      "temple": "red",
+      "tiger": "red",
+      "violin": "red",
+      "water": "assassin"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "associated with violin"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.2,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer"
+        ],
+        "rationale": "Both words are related to music",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.2,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer"
+        ],
+        "rationale": "Both words are related to music, but violin is a more direct connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.2,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "violin",
+          "dancer"
+        ],
+        "rationale": "Both words are related to music.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 2,
+        "rationale": "Related to the words silver and copper, both of which are blue."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "silver"
+        ],
+        "rationale": "Both copper and silver are metals, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "silver"
+        ],
+        "rationale": "Both copper and silver are types of metal, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "silver"
+        ],
+        "rationale": "Both copper and silver are metals, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "family",
+        "count": 3,
+        "rationale": "multiple red words related to family"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "farmer": 0.4
+        },
+        "ranked_guesses": [
+          "family",
+          "farmer"
+        ],
+        "rationale": "family clue matches family and farmer",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "farmer": 0.6
+        },
+        "ranked_guesses": [
+          "family",
+          "farmer"
+        ],
+        "rationale": "Family clue matches family word and farmer is a related concept",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "farmer": 0.4
+        },
+        "ranked_guesses": [
+          "family",
+          "farmer"
+        ],
+        "rationale": "family clue is strong and farmer is a related concept",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "robotics",
+        "count": 2,
+        "rationale": "Robot relates to technology and machinery, which can connect to metal and flame."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "Robot is closely related to robotics and fits the clue well.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "Robot is directly related to robotics and is a strong connection.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.9
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "Robot is directly related to robotics and is a strong association.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "dance",
+        "count": 3,
+        "rationale": "Multiple words related to movement and performance"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.8
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "The clue 'dance' is likely related to the word 'dancer'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.8
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "The clue 'dance' is very likely to relate to the word 'dancer'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.8
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "strong connection to dance clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Related to 'copper' and 'silver', both of which are blue words."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "metal": 0.9
+        },
+        "ranked_guesses": [
+          "metal"
+        ],
+        "rationale": "Metallic directly relates to metal, and it's a strong connection.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "metal": 0.9
+        },
+        "ranked_guesses": [
+          "metal"
+        ],
+        "rationale": "Metallic directly relates to metal, making it a strong guess.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "metal": 0.9
+        },
+        "ranked_guesses": [
+          "metal"
+        ],
+        "rationale": "Metallic directly relates to metal, which is a strong connection.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farm",
+        "count": 2,
+        "rationale": "farmer and family"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "farm clue matches farmer",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "farmer is a common word associated with farm",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "farm clue relates to farmer",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "element",
+        "count": 2,
+        "rationale": "Refers to copper and silver, both are chemical elements."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.7,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "flame",
+          "water"
+        ],
+        "rationale": "Both flame and water are elements, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.6,
+          "water": 0.7
+        },
+        "ranked_guesses": [
+          "water",
+          "flame"
+        ],
+        "rationale": "Both water and flame are elements, fitting the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.6,
+          "water": 0.7
+        },
+        "ranked_guesses": [
+          "water",
+          "flame"
+        ],
+        "rationale": "Both words are elements, fitting the clue 'element'.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "station",
+        "count": 3,
+        "rationale": "Multiple words related to a place or location"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "station clue relates to anchor",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8,
+          "atlas": 0.6,
+          "telescope": 0.4
+        },
+        "ranked_guesses": [
+          "anchor",
+          "atlas",
+          "telescope"
+        ],
+        "rationale": "Words related to the concept of 'station'",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.8
+        },
+        "ranked_guesses": [
+          "anchor"
+        ],
+        "rationale": "Anchor is a common word associated with stations",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Atlas and telescope are related to exploration and discovery."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farmers",
+        "count": 2,
+        "rationale": "farmer and family"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "already revealed as red",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "farmer": 0.9
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'farmers' and have already been revealed as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'farmers' and have already been identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Related to 'atlas' and 'telescope', both involve discovering or navigating."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "rural",
+        "count": 2,
+        "rationale": "farmer and other countryside-related words"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'rural' and have already been identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.7,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'rural' and are already known to be on the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.7,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'rural' and have already been identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Related to 'atlas' and 'telescope', both associated with exploration."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for exploration of landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farmhouse",
+        "count": 2,
+        "rationale": "Associates with farmer and rural"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.7,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are closely related to the clue 'farmhouse' and have already been identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.8,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'farmhouse' and have already been identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.7,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'farmhouse' and have already been identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Related to 'atlas' and 'telescope', both of which involve exploration."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for geographical exploration.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "rural",
+        "count": 2,
+        "rationale": "farm and farmer"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'rural' and have already been identified as red words.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "family"
+        ],
+        "rationale": "Both words are related to the clue 'rural' and have been previously identified as red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "farmer is already revealed as red, and the clue 'rural' is likely related to it",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to 'atlas' and 'telescope', both of which involve exploration."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farm",
+        "count": 2,
+        "rationale": "associated with farmer"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "already revealed word related to farm",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "already guessed word is related to the clue",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8
+        },
+        "ranked_guesses": [
+          "atlas"
+        ],
+        "rationale": "farm is related to atlas",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovering new places, which connects to 'atlas' and 'telescope'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "atlas"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and atlas for exploring geography.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "temple",
+        "count": 2,
+        "rationale": "Relating to station and family"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.8,
+          "circle": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "atlas",
+          "telescope",
+          "circle"
+        ],
+        "rationale": "Words related to temple, like atlas and telescope, are likely to be red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.7,
+          "station": 0.5,
+          "telescope": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "telescope",
+          "station"
+        ],
+        "rationale": "Words related to temple, like atlas and telescope, are likely to be red.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.6,
+          "circle": 0.4,
+          "telescope": 0.8
+        },
+        "ranked_guesses": [
+          "telescope",
+          "atlas",
+          "circle"
+        ],
+        "rationale": "Temple clue is related to structures or buildings, so I'm guessing words that fit this theme.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovery and adventure, fitting for 'telescope' and 'station'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for exploring vast landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "station",
+        "count": 2,
+        "rationale": "trying to get remaining red words"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.3,
+          "circle": 0.5,
+          "temple": 0.8
+        },
+        "ranked_guesses": [
+          "temple",
+          "circle",
+          "cheese"
+        ],
+        "rationale": "station clue is related to temple and circle is a common word with station, cheese is a weak connection",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.8
+        },
+        "ranked_guesses": [
+          "cheese"
+        ],
+        "rationale": "station clue is related to a place, and cheese is a word that is not yet revealed and could be related to a station",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.8
+        },
+        "ranked_guesses": [
+          "cheese"
+        ],
+        "rationale": "station clue is related to transportation, and cheese is a word that is often associated with transportation (e.g. cheese wagon)",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovery and adventure, which connects to 'telescope' and 'station'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space, desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fire",
+        "count": 2,
+        "rationale": "flame and other associations"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "fire clue and flame is a related word",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "fire clue is related to flame",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "fire clue and flame is a related word",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovering new places, which connects to 'station' and 'telescope'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for exploring vast landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Multiple animal-related words on the board"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fox": 0.2,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "fox"
+        ],
+        "rationale": "Both words are animals, which matches the current clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger"
+        ],
+        "rationale": "The clue 'animal' is likely related to the word 'tiger'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fox": 0.6,
+          "tiger": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "fox"
+        ],
+        "rationale": "Both words are animals and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "explore",
+        "count": 2,
+        "rationale": "Related to discovering new places, which connects to 'station' and 'telescope'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for viewing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert for exploring vast landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "doctor",
+        "count": 1,
+        "rationale": "single word association"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'doctor' is a single-word clue, and the word 'doctor' is still on the board, so it's a good guess.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 0.8
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue 'doctor' is a single word clue, so it's likely to be a precise match.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "doctor": 1.0
+        },
+        "ranked_guesses": [
+          "doctor"
+        ],
+        "rationale": "The clue is 'doctor' with a count of 1, so it's likely the only word that fits.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exploration",
+        "count": 2,
+        "rationale": "Related to discovering new places, which connects to 'telescope' and 'station'."
+      },
+      "agent_id": "GPT-4o mini-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.6,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "telescope",
+          "desert"
+        ],
+        "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+        "stop": false
+      },
+      "agent_id": "GPT-4o mini-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "violin"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "silver"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "family"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "family"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "robotics"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "dance"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dancer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metallic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "metal"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farm"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "farmer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "element"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "station"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farmers"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rural"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farmhouse"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rural"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farm"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "temple"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "station"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fire"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tiger"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "doctor"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 120,
+    "public_event_count": 68,
+    "reason": null,
+    "seed": "openrouter-codenames-001-meta_llama_llama_3_70b_instruct-vs-openai_gpt_4o_mini",
+    "team_blue": "GPT-4o mini",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.2,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer"
+            ],
+            "rationale": "Both words are related to music",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.2,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer"
+            ],
+            "rationale": "Both words are related to music, but violin is a more direct connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.2,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "violin",
+              "dancer"
+            ],
+            "rationale": "Both words are related to music.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "violin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "associated with violin"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "silver"
+            ],
+            "rationale": "Both copper and silver are metals, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "silver"
+            ],
+            "rationale": "Both copper and silver are types of metal, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "silver"
+            ],
+            "rationale": "Both copper and silver are metals, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "silver"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 2,
+          "rationale": "Related to the words silver and copper, both of which are blue."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "family"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "farmer": 0.4
+            },
+            "ranked_guesses": [
+              "family",
+              "farmer"
+            ],
+            "rationale": "family clue matches family and farmer",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "farmer": 0.6
+            },
+            "ranked_guesses": [
+              "family",
+              "farmer"
+            ],
+            "rationale": "Family clue matches family word and farmer is a related concept",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "farmer": 0.4
+            },
+            "ranked_guesses": [
+              "family",
+              "farmer"
+            ],
+            "rationale": "family clue is strong and farmer is a related concept",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "family"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "family",
+          "count": 3,
+          "rationale": "multiple red words related to family"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "robotics"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "Robot is closely related to robotics and fits the clue well.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "Robot is directly related to robotics and is a strong connection.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.9
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "Robot is directly related to robotics and is a strong association.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "robotics",
+          "count": 2,
+          "rationale": "Robot relates to technology and machinery, which can connect to metal and flame."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "dance"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.8
+            },
+            "ranked_guesses": [
+              "dancer"
+            ],
+            "rationale": "The clue 'dance' is likely related to the word 'dancer'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.8
+            },
+            "ranked_guesses": [
+              "dancer"
+            ],
+            "rationale": "The clue 'dance' is very likely to relate to the word 'dancer'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.8
+            },
+            "ranked_guesses": [
+              "dancer"
+            ],
+            "rationale": "strong connection to dance clue",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dancer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dance",
+          "count": 3,
+          "rationale": "Multiple words related to movement and performance"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metallic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "metal": 0.9
+            },
+            "ranked_guesses": [
+              "metal"
+            ],
+            "rationale": "Metallic directly relates to metal, and it's a strong connection.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "metal": 0.9
+            },
+            "ranked_guesses": [
+              "metal"
+            ],
+            "rationale": "Metallic directly relates to metal, making it a strong guess.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "metal": 0.9
+            },
+            "ranked_guesses": [
+              "metal"
+            ],
+            "rationale": "Metallic directly relates to metal, which is a strong connection.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "metal"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metallic",
+          "count": 2,
+          "rationale": "Related to 'copper' and 'silver', both of which are blue words."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farm"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "farm clue matches farmer",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "farmer is a common word associated with farm",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "farm clue relates to farmer",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "farmer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "farm",
+          "count": 2,
+          "rationale": "farmer and family"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "element"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.7,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "flame",
+              "water"
+            ],
+            "rationale": "Both flame and water are elements, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.6,
+              "water": 0.7
+            },
+            "ranked_guesses": [
+              "water",
+              "flame"
+            ],
+            "rationale": "Both water and flame are elements, fitting the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.6,
+              "water": 0.7
+            },
+            "ranked_guesses": [
+              "water",
+              "flame"
+            ],
+            "rationale": "Both words are elements, fitting the clue 'element'.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "element",
+          "count": 2,
+          "rationale": "Refers to copper and silver, both are chemical elements."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "station"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "station clue relates to anchor",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8,
+              "atlas": 0.6,
+              "telescope": 0.4
+            },
+            "ranked_guesses": [
+              "anchor",
+              "atlas",
+              "telescope"
+            ],
+            "rationale": "Words related to the concept of 'station'",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.8
+            },
+            "ranked_guesses": [
+              "anchor"
+            ],
+            "rationale": "Anchor is a common word associated with stations",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "station",
+          "count": 3,
+          "rationale": "Multiple words related to a place or location"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for geographical exploration.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 2,
+          "rationale": "Atlas and telescope are related to exploration and discovery."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farmers"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "already revealed as red",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "farmer": 0.9
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'farmers' and have already been revealed as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'farmers' and have already been identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "farmers",
+          "count": 2,
+          "rationale": "farmer and family"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 2,
+          "rationale": "Related to 'atlas' and 'telescope', both involve discovering or navigating."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rural"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'rural' and have already been identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.7,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'rural' and are already known to be on the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.7,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'rural' and have already been identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "rural",
+          "count": 2,
+          "rationale": "farmer and other countryside-related words"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for exploration of landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 2,
+          "rationale": "Related to 'atlas' and 'telescope', both associated with exploration."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farmhouse"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.7,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are closely related to the clue 'farmhouse' and have already been identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.8,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'farmhouse' and have already been identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.7,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'farmhouse' and have already been identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "farmhouse",
+          "count": 2,
+          "rationale": "Associates with farmer and rural"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for space exploration and desert for geographical exploration.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a vast area to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for geographical exploration.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 2,
+          "rationale": "Related to 'atlas' and 'telescope', both of which involve exploration."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "rural"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'rural' and have already been identified as red words.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "family"
+            ],
+            "rationale": "Both words are related to the clue 'rural' and have been previously identified as red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "farmer is already revealed as red, and the clue 'rural' is likely related to it",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "rural",
+          "count": 2,
+          "rationale": "farm and farmer"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "Related to 'atlas' and 'telescope', both of which involve exploration."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "farm"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "already revealed word related to farm",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "already guessed word is related to the clue",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8
+            },
+            "ranked_guesses": [
+              "atlas"
+            ],
+            "rationale": "farm is related to atlas",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "farm",
+          "count": 2,
+          "rationale": "associated with farmer"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "atlas"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and atlas for exploring geography.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "Related to discovering new places, which connects to 'atlas' and 'telescope'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "temple"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.8,
+              "circle": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "atlas",
+              "telescope",
+              "circle"
+            ],
+            "rationale": "Words related to temple, like atlas and telescope, are likely to be red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.7,
+              "station": 0.5,
+              "telescope": 0.6
+            },
+            "ranked_guesses": [
+              "atlas",
+              "telescope",
+              "station"
+            ],
+            "rationale": "Words related to temple, like atlas and telescope, are likely to be red.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.6,
+              "circle": 0.4,
+              "telescope": 0.8
+            },
+            "ranked_guesses": [
+              "telescope",
+              "atlas",
+              "circle"
+            ],
+            "rationale": "Temple clue is related to structures or buildings, so I'm guessing words that fit this theme.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "temple",
+          "count": 2,
+          "rationale": "Relating to station and family"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for exploring vast landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "Related to discovery and adventure, fitting for 'telescope' and 'station'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "station"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.3,
+              "circle": 0.5,
+              "temple": 0.8
+            },
+            "ranked_guesses": [
+              "temple",
+              "circle",
+              "cheese"
+            ],
+            "rationale": "station clue is related to temple and circle is a common word with station, cheese is a weak connection",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.8
+            },
+            "ranked_guesses": [
+              "cheese"
+            ],
+            "rationale": "station clue is related to a place, and cheese is a word that is not yet revealed and could be related to a station",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.8
+            },
+            "ranked_guesses": [
+              "cheese"
+            ],
+            "rationale": "station clue is related to transportation, and cheese is a word that is often associated with transportation (e.g. cheese wagon)",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "station",
+          "count": 2,
+          "rationale": "trying to get remaining red words"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space, desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "Related to discovery and adventure, which connects to 'telescope' and 'station'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fire"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "fire clue and flame is a related word",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "fire clue is related to flame",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "fire clue and flame is a related word",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fire",
+          "count": 2,
+          "rationale": "flame and other associations"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for exploring vast landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "Related to discovering new places, which connects to 'station' and 'telescope'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fox": 0.2,
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger",
+              "fox"
+            ],
+            "rationale": "Both words are animals, which matches the current clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger"
+            ],
+            "rationale": "The clue 'animal' is likely related to the word 'tiger'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fox": 0.6,
+              "tiger": 0.8
+            },
+            "ranked_guesses": [
+              "tiger",
+              "fox"
+            ],
+            "rationale": "Both words are animals and fit the clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tiger"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Multiple animal-related words on the board"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "explore"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for viewing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert for exploring vast landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "explore",
+          "count": 2,
+          "rationale": "Related to discovering new places, which connects to 'station' and 'telescope'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "doctor"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'doctor' is a single-word clue, and the word 'doctor' is still on the board, so it's a good guess.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 0.8
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue 'doctor' is a single word clue, so it's likely to be a precise match.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "doctor": 1.0
+            },
+            "ranked_guesses": [
+              "doctor"
+            ],
+            "rationale": "The clue is 'doctor' with a count of 1, so it's likely the only word that fits.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "doctor",
+          "count": 1,
+          "rationale": "single word association"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exploration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for exploring space and desert for exploring landscapes.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.6,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "telescope",
+              "desert"
+            ],
+            "rationale": "Both words relate to exploration; telescope for observing and desert as a place to explore.",
+            "stop": false
+          },
+          "agent_id": "GPT-4o mini-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "exploration",
+          "count": 2,
+          "rationale": "Related to discovering new places, which connects to 'telescope' and 'station'."
+        },
+        "agent_id": "GPT-4o mini-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

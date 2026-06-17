@@ -1,0 +1,2853 @@
+{
+  "board": {
+    "identities": {
+      "australia": "assassin",
+      "ball": "blue",
+      "bermuda": "neutral",
+      "berry": "blue",
+      "bill": "blue",
+      "bug": "red",
+      "bugle": "neutral",
+      "chick": "red",
+      "china": "neutral",
+      "jack": "neutral",
+      "jet": "blue",
+      "jupiter": "red",
+      "leprechaun": "red",
+      "loch ness": "blue",
+      "model": "red",
+      "mouse": "red",
+      "olive": "red",
+      "parachute": "neutral",
+      "play": "blue",
+      "plot": "red",
+      "police": "blue",
+      "rose": "blue",
+      "round": "neutral",
+      "satellite": "neutral",
+      "soul": "red"
+    },
+    "revealed": [
+      "ball",
+      "berry",
+      "bill",
+      "bugle",
+      "jet",
+      "leprechaun",
+      "loch ness",
+      "mouse",
+      "play",
+      "police",
+      "rose",
+      "round",
+      "satellite",
+      "soul"
+    ],
+    "words": {
+      "australia": "assassin",
+      "ball": "blue",
+      "bermuda": "neutral",
+      "berry": "blue",
+      "bill": "blue",
+      "bug": "red",
+      "bugle": "neutral",
+      "chick": "red",
+      "china": "neutral",
+      "jack": "neutral",
+      "jet": "blue",
+      "jupiter": "red",
+      "leprechaun": "red",
+      "loch ness": "blue",
+      "model": "red",
+      "mouse": "red",
+      "olive": "red",
+      "parachute": "neutral",
+      "play": "blue",
+      "plot": "red",
+      "police": "blue",
+      "rose": "blue",
+      "round": "neutral",
+      "satellite": "neutral",
+      "soul": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "orbit",
+        "count": 1,
+        "rationale": "Connects to satellite/jet-like space/flight concepts while avoiding the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.1,
+          "jupiter": 0.22,
+          "model": 0.05,
+          "plot": 0.08,
+          "satellite": 0.86
+        },
+        "ranked_guesses": [
+          "satellite",
+          "jupiter",
+          "jet",
+          "plot",
+          "model"
+        ],
+        "rationale": "orbit strongly matches satellite; jupiter is orbital/space-related but weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.22,
+          "model": 0.03,
+          "plot": 0.01,
+          "round": 0.05,
+          "satellite": 0.78
+        },
+        "ranked_guesses": [
+          "satellite",
+          "jupiter",
+          "round",
+          "model",
+          "plot"
+        ],
+        "rationale": "\u201cOrbit\u201d strongly links to satellites; next best is a planet (Jupiter).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.12,
+          "jupiter": 0.23,
+          "model": 0.05,
+          "mouse": 0.04,
+          "plot": 0.06,
+          "round": 0.1,
+          "satellite": 0.78
+        },
+        "ranked_guesses": [
+          "satellite",
+          "jupiter",
+          "jet",
+          "round",
+          "plot",
+          "model",
+          "mouse"
+        ],
+        "rationale": "\u201cOrbit\u201d strongly links to a satellite; Jupiter is a common orbital target; weaker links include generic space/round/model/plot ideas.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 2,
+        "rationale": "'berry' and 'olive' are both fruits, but 'olive' is red, so focusing on 'berry' and potentially 'rose' (though 'rose' is a flower, it's sometimes associated with fruits like rosehips)."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.9,
+          "olive": 0.7,
+          "rose": 0.6
+        },
+        "ranked_guesses": [
+          "berry",
+          "olive",
+          "rose"
+        ],
+        "rationale": "'berry' is a strong match for 'fruit' and fits the clue count. 'olive' and 'rose' are also fruits but slightly less common associations.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.7,
+          "olive": 0.6,
+          "rose": 0.5
+        },
+        "ranked_guesses": [
+          "berry",
+          "olive",
+          "rose"
+        ],
+        "rationale": "The clue 'fruit' suggests words related to fruits. 'berry' is a strong candidate as it directly fits. 'olive' and 'rose' are also plausible as they can be associated with fruits (olives are fruits, roses produce rosehips).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.9,
+          "olive": 0.7,
+          "rose": 0.6
+        },
+        "ranked_guesses": [
+          "berry",
+          "olive",
+          "rose"
+        ],
+        "rationale": "'berry' is strongly associated with 'fruit'. 'olive' and 'rose' are also fruits, though less commonly thought of as such.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "asgard",
+        "count": 1,
+        "rationale": "Points to JUPITER/LEPRECHAUN-themed space/myth connections without touching existing board words."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.26,
+          "leprechaun": 0.12,
+          "model": 0.1,
+          "plot": 0.18,
+          "police": 0.08,
+          "soul": 0.14
+        },
+        "ranked_guesses": [
+          "jupiter",
+          "plot",
+          "soul",
+          "leprechaun",
+          "model",
+          "police"
+        ],
+        "rationale": "Asgard is a Norse realm tied to gods like Odin; on the board the closest thematic hit is the space/god association with Jupiter, with looser alternatives like soul/plot.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.68,
+          "model": 0.32
+        },
+        "ranked_guesses": [
+          "jupiter",
+          "model"
+        ],
+        "rationale": "Asgard is a Norse realm often associated with gods; remaining board words that fit broadly are 'jupiter' (god/realm) over unrelated options.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.62,
+          "plot": 0.38
+        },
+        "ranked_guesses": [
+          "jupiter",
+          "plot"
+        ],
+        "rationale": "\u201cAsgard\u201d (Norse realm) most strongly points to Jupiter via myth/sky association; if not, \u201cplot\u201d fits broader myth/story framing.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "police",
+        "count": 1,
+        "rationale": "The word 'police' is directly related to 'bill' (as in police bill) and 'play' (as in police play), but to avoid ambiguity and ensure a safe guess, I'm limiting the count to 1."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "leprechaun",
+        "count": 1,
+        "rationale": "Points to the red word linked by theme\u2014'leprechaun' aligns strongly with the magical figure; safest single target."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "The words 'bugle' and 'play' are both related to music. 'Bugle' is a musical instrument, and 'play' can refer to playing music."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.9,
+          "play": 0.7,
+          "soul": 0.6
+        },
+        "ranked_guesses": [
+          "bugle",
+          "play",
+          "soul"
+        ],
+        "rationale": "'bugle' is a musical instrument, strongly linked to 'music'. 'play' and 'soul' have musical connotations but are less direct.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.9,
+          "play": 0.7,
+          "soul": 0.6
+        },
+        "ranked_guesses": [
+          "bugle",
+          "play",
+          "soul"
+        ],
+        "rationale": "'bugle' is a musical instrument, closely related to 'music'. 'play' can relate to playing music, and 'soul' connects to soul music. These are the strongest associations with the clue 'music'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.9,
+          "play": 0.7,
+          "soul": 0.6
+        },
+        "ranked_guesses": [
+          "bugle",
+          "play",
+          "soul"
+        ],
+        "rationale": "'bugle' is a musical instrument, strongly related to 'music'. 'play' and 'soul' are also related to music, but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "prank",
+        "count": 2,
+        "rationale": "Suggests playful mischief that can point to JUPITER (as a prank on a \"planet\") and PLOT (a prank/plot). Avoids assassin risk with Australia."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouse": 0.22,
+          "play": 0.5,
+          "plot": 0.28
+        },
+        "ranked_guesses": [
+          "play",
+          "plot",
+          "mouse"
+        ],
+        "rationale": "Prank often maps to 'play' (a prank is a kind of play) and 'plot' (to prank someone); 'mouse' fits 'joke' prank style only secondarily.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouse": 0.28,
+          "play": 0.48,
+          "plot": 0.72
+        },
+        "ranked_guesses": [
+          "plot",
+          "play",
+          "mouse"
+        ],
+        "rationale": "\u201cPrank\u201d most strongly links to \u201cplot\u201d (scheming/joke plotting) and \u201cplay\u201d (playing a prank); \u201cmouse\u201d is weaker (mouse trap/keyboard prank).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouse": 0.58,
+          "play": 0.16,
+          "plot": 0.26
+        },
+        "ranked_guesses": [
+          "mouse",
+          "plot",
+          "play"
+        ],
+        "rationale": "\u201cPrank\u201d best matches a \u201cmouse\u201d (as in mouse traps/April-fool tricks), then \u201cplot\u201d (set up a prank), then \u201cplay\u201d (play a prank).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "water",
+        "count": 2,
+        "rationale": "'Loch Ness' is a lake, and 'ball' can be associated with water (e.g., water polo ball). Both are blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bill": 0.6,
+          "jet": 0.5,
+          "loch ness": 0.7
+        },
+        "ranked_guesses": [
+          "loch ness",
+          "bill",
+          "jet"
+        ],
+        "rationale": "'loch ness' is strongly associated with water, 'bill' could relate to water bill, and 'jet' refers to water jet.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.7,
+          "bermuda": 0.6,
+          "bill": 0.5
+        },
+        "ranked_guesses": [
+          "ball",
+          "bermuda",
+          "bill"
+        ],
+        "rationale": "'ball' relates to water sports, 'bermuda' is associated with the Bermuda Triangle (water), and 'bill' could refer to a water bill.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.6,
+          "olive": 0.7,
+          "round": 0.5
+        },
+        "ranked_guesses": [
+          "olive",
+          "ball",
+          "round"
+        ],
+        "rationale": "'water' could relate to 'olive' (olive oil is liquid), 'ball' (water balloon), and 'round' (shape of water droplets).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "jack",
+        "count": 1,
+        "rationale": "Points to 'jack' as a common name, likely linked to the red word 'chick' via nicknaming; aiming for a safe single guess."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "The words 'mouse' and 'bug' are both animals and are safe blue targets."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.7,
+          "mouse": 0.9
+        },
+        "ranked_guesses": [
+          "mouse",
+          "chick"
+        ],
+        "rationale": "'mouse' and 'chick' are both animals. 'mouse' is more commonly associated with the clue 'animal', hence higher confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.5,
+          "chick": 0.7,
+          "mouse": 0.9
+        },
+        "ranked_guesses": [
+          "mouse",
+          "chick",
+          "bug"
+        ],
+        "rationale": "'mouse' and 'chick' are clear animals, with 'mouse' being more common. 'Bug' is a stretch but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "chick": 0.7,
+          "mouse": 0.9
+        },
+        "ranked_guesses": [
+          "mouse",
+          "chick",
+          "bug"
+        ],
+        "rationale": "The clue 'animal' suggests words like 'mouse' (common animal), 'chick' (baby bird), and 'bug' (small creature). 'Mouse' is the most obvious, followed by 'chick' and 'bug'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "chickensoup",
+        "count": 1,
+        "rationale": "Points to the red word 'soul' via the phrase 'chicken soup for the soul'."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "The words 'jet' and 'parachute' are both related to flying or flight, making this a safe clue that connects two blue words without directly revealing any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.9,
+          "parachute": 0.7
+        },
+        "ranked_guesses": [
+          "jet",
+          "parachute"
+        ],
+        "rationale": "'jet' is strongly associated with 'flight' as a mode of air travel. 'parachute' is related to flight as it is used during descent from flight, but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.9,
+          "parachute": 0.7
+        },
+        "ranked_guesses": [
+          "jet",
+          "parachute"
+        ],
+        "rationale": "The clue 'flight' strongly suggests 'jet' as a primary guess due to its direct association with flying. 'Parachute' is a secondary guess as it is also related to flight but less directly than 'jet'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.9,
+          "parachute": 0.7
+        },
+        "ranked_guesses": [
+          "jet",
+          "parachute"
+        ],
+        "rationale": "'jet' is strongly associated with 'flight' as a type of aircraft. 'parachute' is related to flight but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "soul",
+        "count": 1,
+        "rationale": "Directly connected to the red word 'soul'."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "police",
+        "count": 2,
+        "rationale": "The word 'police' connects to 'bill' (police bill) and 'play' (police play), both blue words. This clue avoids revealing any board words directly and targets two remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "olive",
+        "count": 1,
+        "rationale": "Directly points to the remaining red word olive (olive color/theme)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "scottish",
+        "count": 2,
+        "rationale": "The word 'scottish' connects to 'loch ness' (a Scottish lake) and 'play' (as in Scottish play, a nickname for Macbeth), both blue words. This avoids revealing any board words directly and targets two remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.6,
+          "loch ness": 0.9
+        },
+        "ranked_guesses": [
+          "loch ness",
+          "bermuda"
+        ],
+        "rationale": "'loch ness' is strongly associated with Scotland, fitting the clue 'scottish'. 'bermuda' is less directly related but could be a stretch due to Bermuda shorts being a type of clothing sometimes associated with Scottish attire.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bugle": 0.8,
+          "mouse": 0.9
+        },
+        "ranked_guesses": [
+          "bugle",
+          "mouse"
+        ],
+        "rationale": "short reason",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.6,
+          "loch ness": 0.9
+        },
+        "ranked_guesses": [
+          "loch ness",
+          "bermuda"
+        ],
+        "rationale": "'loch ness' is strongly associated with Scottish folklore, making it the top guess. 'bermuda' is a secondary guess due to the Bermuda Triangle's mystery, loosely connecting to Scottish themes.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "jupiter",
+        "count": 1,
+        "rationale": "Strongly links to the red word 'Jupiter' on the board (astronomy/name association)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "currency",
+        "count": 2,
+        "rationale": "The word 'currency' connects to 'bill' (as in dollar bill) and 'play' (as in play money), both of which are blue words. This clue avoids any direct reference to board words and targets two remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "australia": 0.7,
+          "bill": 0.9
+        },
+        "ranked_guesses": [
+          "bill",
+          "australia"
+        ],
+        "rationale": "'bill' is strongly associated with currency (e.g., dollar bill). 'australia' is also linked via its currency (Australian dollar), but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.6,
+          "bill": 0.9,
+          "china": 0.7
+        },
+        "ranked_guesses": [
+          "bill",
+          "china",
+          "ball"
+        ],
+        "rationale": "'bill' is strongly associated with currency (e.g., dollar bill). 'china' relates to currency (yuan) and 'ball' could loosely connect to currency (e.g., ballpark figure).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.7,
+          "bill": 0.9,
+          "round": 0.6
+        },
+        "ranked_guesses": [
+          "bill",
+          "ball",
+          "round"
+        ],
+        "rationale": "'bill' is strongly associated with currency (e.g., dollar bill). 'ball' and 'round' are less direct but could relate to coins (round shape) or ball as slang for money.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "artifact",
+        "count": 1,
+        "rationale": "Points to the remaining red word model via items/representations."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "model": 0.64,
+          "parachute": 0.36
+        },
+        "ranked_guesses": [
+          "model",
+          "parachute"
+        ],
+        "rationale": "\"Artifact\" most likely points to a manufactured item/exhibit like \"model\"; next best is something preserved/kept like \"parachute\".",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "australia": 0.1,
+          "china": 0.1,
+          "model": 0.42,
+          "parachute": 0.22,
+          "plot": 0.16
+        },
+        "ranked_guesses": [
+          "model",
+          "parachute",
+          "plot",
+          "china",
+          "australia"
+        ],
+        "rationale": "Artifact most strongly fits a 'model' (e.g., museum model/exhibit), with 'parachute' as a possible historic/tech artifact.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "model": 0.64,
+          "parachute": 0.36
+        },
+        "ranked_guesses": [
+          "model",
+          "parachute"
+        ],
+        "rationale": "\u201cartifact\u201d most strongly suggests something made/collected like a model; parachute is a possible but weaker related object.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 2,
+        "rationale": "The word 'mythical' connects to 'loch ness' (mythical creature) and 'leprechaun' (mythical figure), both of which are unrevealed blue and red words respectively. This avoids direct board word matches and targets two relevant words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.7,
+          "leprechaun": 0.9
+        },
+        "ranked_guesses": [
+          "leprechaun",
+          "jupiter"
+        ],
+        "rationale": "The clue 'mythical' strongly suggests 'leprechaun' (mythical creature) and 'jupiter' (mythical Roman god). 'Leprechaun' is the most direct match.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.7,
+          "leprechaun": 0.9
+        },
+        "ranked_guesses": [
+          "leprechaun",
+          "jupiter"
+        ],
+        "rationale": "'leprechaun' is strongly associated with mythical creatures, and 'jupiter' is a mythical Roman god. Both fit the clue 'mythical' well.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.7,
+          "leprechaun": 0.9
+        },
+        "ranked_guesses": [
+          "leprechaun",
+          "jupiter"
+        ],
+        "rationale": "The clue 'mythical' strongly suggests creatures or beings from myths. 'Leprechaun' is a mythical creature from Irish folklore, and 'Jupiter' is the Roman king of gods, fitting the mythical theme. 'Leprechaun' is ranked higher due to clearer mythical association.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "police",
+        "count": 2,
+        "rationale": "Links to the remaining blue words via 'police play' and 'police bill'."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shape",
+        "count": 2,
+        "rationale": "The word 'shape' connects to 'ball' (a spherical shape) and 'rose' (the shape of a rose flower), both of which are blue words. This clue avoids revealing any board words directly and targets two remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "model": 0.6,
+          "round": 0.7
+        },
+        "ranked_guesses": [
+          "ball",
+          "round",
+          "model"
+        ],
+        "rationale": "The clue 'shape' strongly relates to 'ball' and 'round' as they are common shapes. 'Model' is a less direct association but still plausible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "round": 0.8
+        },
+        "ranked_guesses": [
+          "ball",
+          "round"
+        ],
+        "rationale": "The clue 'shape' strongly relates to 'ball' (a spherical shape) and 'round' (a descriptor of shape). Both are highly relevant to the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "round": 0.8
+        },
+        "ranked_guesses": [
+          "ball",
+          "round"
+        ],
+        "rationale": "The clue 'shape' strongly relates to 'ball' (a spherical shape) and 'round' (a descriptor of shape). Both are likely targets given the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "spirit",
+        "count": 1,
+        "rationale": "Points to the remaining red word 'soul' (a soul is a spirit)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "australia": 0.02,
+          "chick": 0.03,
+          "jupiter": 0.18,
+          "model": 0.06,
+          "soul": 0.7
+        },
+        "ranked_guesses": [
+          "soul",
+          "jupiter",
+          "model",
+          "chick",
+          "australia"
+        ],
+        "rationale": "\u201cSpirit\u201d most strongly maps to \u201csoul\u201d, with weaker links to \u201cJupiter\u201d (divine/spiritual associations).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.15,
+          "model": 0.03,
+          "olive": 0.08,
+          "play": 0.02,
+          "plot": 0.01,
+          "police": 0.0,
+          "soul": 0.7
+        },
+        "ranked_guesses": [
+          "soul",
+          "chick",
+          "olive",
+          "model",
+          "play",
+          "plot",
+          "police"
+        ],
+        "rationale": "Clue 'spirit' most directly matches 'soul' on the board; next best is 'chick' (as in 'little spirit/imp') but weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "parachute": 0.2,
+          "soul": 0.8
+        },
+        "ranked_guesses": [
+          "soul",
+          "parachute"
+        ],
+        "rationale": "\u201cSpirit\u201d most strongly maps to \u201csoul\u201d on the board; \u201cparachute\u201d is a weaker secondary association (rescues/afterlife imagery).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "police",
+        "count": 2,
+        "rationale": "The word 'police' connects to 'play' (police play) and 'rose' (police rose, as in the flower often associated with ceremonies). This avoids direct board word matches and targets two remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "bottle",
+        "count": 1,
+        "rationale": "A safe pointer for the remaining red word 'olive' via 'olive bottle' / olives in brine."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.2,
+          "model": 0.34,
+          "parachute": 0.46
+        },
+        "ranked_guesses": [
+          "parachute",
+          "model",
+          "chick"
+        ],
+        "rationale": "With clue 'bottle' and 2 guesses left, best remaining fits are 'parachute' (bottle parachute refers to parachute/airdrop gear sometimes called a bottle) then 'model' (bottle as a verb: bottle up/model effects), with 'chick' as a weaker link (bottle of 'chick' is unlikely).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.45,
+          "model": 0.25,
+          "parachute": 0.1,
+          "plot": 0.2
+        },
+        "ranked_guesses": [
+          "chick",
+          "model",
+          "plot",
+          "parachute"
+        ],
+        "rationale": "Active clue 'bottle' most strongly fits 'chick' (bottle a chick / captive), then 'model' (bottle model / bottle on a model bottle), with 'plot'/'parachute' weaker via bottles/containment and bottled supply associations.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "china": 0.3,
+          "olive": 0.7
+        },
+        "ranked_guesses": [
+          "olive",
+          "china"
+        ],
+        "rationale": "\u201cBottle\u201d most naturally points to \u201colive\u201d (olive oil in a bottle). Next likely is \u201cchina\u201d (porcelain bottle/containers).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "authority",
+        "count": 2,
+        "rationale": "The word 'authority' connects to 'police' and 'play' (as in 'police play' or 'authority play'), both remaining blue words, without directly revealing any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.7,
+          "police": 0.9
+        },
+        "ranked_guesses": [
+          "police",
+          "play"
+        ],
+        "rationale": "'authority' strongly relates to 'police' (law enforcement authority) and 'play' (authority in a play, like a director).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.7,
+          "police": 0.9,
+          "rose": 0.6
+        },
+        "ranked_guesses": [
+          "police",
+          "play",
+          "rose"
+        ],
+        "rationale": "The clue 'authority' strongly connects to 'police' (as in police authority) and 'play' (as in authority in play). 'Rose' is a weaker connection (authority symbol in some contexts).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.7,
+          "police": 0.9
+        },
+        "ranked_guesses": [
+          "police",
+          "play"
+        ],
+        "rationale": "'authority' strongly relates to 'police' (law enforcement authority) and 'play' (authority in a theatrical or authoritative context).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "oz",
+        "count": 1,
+        "rationale": "Points to the remaining red word Australia via the idea of an Australian \u2018land\u2019/country nickname associated with \u2018Oz\u2019."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "australia": 0.1,
+          "model": 0.44,
+          "olive": 0.24,
+          "parachute": 0.1,
+          "plot": 0.12
+        },
+        "ranked_guesses": [
+          "model",
+          "olive",
+          "plot",
+          "parachute",
+          "australia"
+        ],
+        "rationale": "Clue 'oz' most directly suggests an 'ounce' (common measure symbol oz); among unrevealed remaining words, 'model' best fits with 'model' as in measurement/modeling, while other options are weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "australia": 0.24,
+          "bermuda": 0.18,
+          "chick": 0.06,
+          "china": 0.16,
+          "model": 0.12,
+          "olive": 0.05,
+          "parachute": 0.1,
+          "plot": 0.07
+        },
+        "ranked_guesses": [
+          "australia",
+          "bermuda",
+          "china",
+          "model",
+          "parachute",
+          "plot",
+          "chick",
+          "olive"
+        ],
+        "rationale": "Clue 'oz' most strongly points to the country nickname 'Aussie/Australia' (also 'Oz' as slang). Other plausible cultural 'Oz' uses: Bermuda (Brit. territory), China (movie title/region references), or general 'model'/'parachute' links, but Australia is the safest.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "chick": 0.16,
+          "model": 0.22,
+          "parachute": 0.36,
+          "play": 0.12,
+          "plot": 0.14
+        },
+        "ranked_guesses": [
+          "parachute",
+          "model",
+          "chick",
+          "plot",
+          "play"
+        ],
+        "rationale": "Clue 'oz' most strongly points to 'parachute' (parachute = 'skydiver' associated with Oz/landing) and secondarily to 'model'/'plot'/'play' (Oz as a fictional/story world). 'chick' is weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flower",
+        "count": 2,
+        "rationale": "The word 'flower' connects to 'rose' (a type of flower) and 'play' (as in flower play, though less directly). This avoids any direct board word matches and targets two remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olive": 0.6,
+          "rose": 0.9
+        },
+        "ranked_guesses": [
+          "rose",
+          "olive"
+        ],
+        "rationale": "The clue 'flower' strongly suggests 'rose' as it is a common flower. 'Olive' is less directly related but could be associated with olive flowers.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "rose": 0.9
+        },
+        "ranked_guesses": [
+          "rose",
+          "bug"
+        ],
+        "rationale": "The clue 'flower' strongly suggests 'rose' as it is a common flower. 'Bug' is a secondary guess as it can be associated with flowers (e.g., bugs on flowers).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olive": 0.6,
+          "rose": 0.9
+        },
+        "ranked_guesses": [
+          "rose",
+          "olive"
+        ],
+        "rationale": "'rose' is a clear match for 'flower' with high confidence. 'olive' is a weaker connection (olive branch as a symbol) but still plausible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "chick",
+        "count": 1,
+        "rationale": "Points to the remaining red word 'chick' thematically (chicken/chick)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "game",
+        "count": 1,
+        "rationale": "The word 'play' is the remaining blue word, and 'game' is a safe clue that connects to it without directly matching any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The clue 'game' strongly suggests 'play' as it is directly related to games and is a remaining blue word.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The clue 'game' strongly suggests 'play' as it is directly related to games and is the most obvious remaining word.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "play": 0.9
+        },
+        "ranked_guesses": [
+          "play"
+        ],
+        "rationale": "The clue 'game' strongly relates to 'play' as in 'play a game', which is a clear and direct connection.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "orbit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "satellite"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "berry"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "asgard"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "police",
+        "count": 1,
+        "rationale": "The word 'police' is directly related to 'bill' (as in police bill) and 'play' (as in police play), but to avoid ambiguity and ensure a safe guess, I'm limiting the count to 1."
+      },
+      "event": "illegal_clue",
+      "matched_word": "police",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "leprechaun",
+        "count": 1,
+        "rationale": "Points to the red word linked by theme\u2014'leprechaun' aligns strongly with the magical figure; safest single target."
+      },
+      "event": "illegal_clue",
+      "matched_word": "leprechaun",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bugle"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "prank"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "jack",
+        "count": 1,
+        "rationale": "Points to 'jack' as a common name, likely linked to the red word 'chick' via nicknaming; aiming for a safe single guess."
+      },
+      "event": "illegal_clue",
+      "matched_word": "jack",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mouse"
+    },
+    {
+      "clue": {
+        "clue": "chickensoup",
+        "count": 1,
+        "rationale": "Points to the red word 'soul' via the phrase 'chicken soup for the soul'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "chick",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "jet"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "soul",
+        "count": 1,
+        "rationale": "Directly connected to the red word 'soul'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "soul",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "police",
+        "count": 2,
+        "rationale": "The word 'police' connects to 'bill' (police bill) and 'play' (police play), both blue words. This clue avoids revealing any board words directly and targets two remaining blue words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "police",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "olive",
+        "count": 1,
+        "rationale": "Directly points to the remaining red word olive (olive color/theme)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "olive",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "scottish"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "loch ness"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "jupiter",
+        "count": 1,
+        "rationale": "Strongly links to the red word 'Jupiter' on the board (astronomy/name association)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "jupiter",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "currency"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bill"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "artifact"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "leprechaun"
+    },
+    {
+      "clue": {
+        "clue": "police",
+        "count": 2,
+        "rationale": "Links to the remaining blue words via 'police play' and 'police bill'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "police",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shape"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ball"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "round"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "spirit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "soul"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "police",
+        "count": 2,
+        "rationale": "The word 'police' connects to 'play' (police play) and 'rose' (police rose, as in the flower often associated with ceremonies). This avoids direct board word matches and targets two remaining blue words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "police",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bottle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "authority"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "police"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "oz"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flower"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "rose"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "chick",
+        "count": 1,
+        "rationale": "Points to the remaining red word 'chick' thematically (chicken/chick)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "chick",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "game"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "play"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 87,
+    "public_event_count": 57,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-046-openai_gpt_5_4_nano-vs-deepseek_deepseek_chat_v3_0324",
+    "team_blue": "DeepSeek V3 0324",
+    "team_red": "GPT-5.4-nano",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "orbit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.1,
+              "jupiter": 0.22,
+              "model": 0.05,
+              "plot": 0.08,
+              "satellite": 0.86
+            },
+            "ranked_guesses": [
+              "satellite",
+              "jupiter",
+              "jet",
+              "plot",
+              "model"
+            ],
+            "rationale": "orbit strongly matches satellite; jupiter is orbital/space-related but weaker.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jupiter": 0.22,
+              "model": 0.03,
+              "plot": 0.01,
+              "round": 0.05,
+              "satellite": 0.78
+            },
+            "ranked_guesses": [
+              "satellite",
+              "jupiter",
+              "round",
+              "model",
+              "plot"
+            ],
+            "rationale": "\u201cOrbit\u201d strongly links to satellites; next best is a planet (Jupiter).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.12,
+              "jupiter": 0.23,
+              "model": 0.05,
+              "mouse": 0.04,
+              "plot": 0.06,
+              "round": 0.1,
+              "satellite": 0.78
+            },
+            "ranked_guesses": [
+              "satellite",
+              "jupiter",
+              "jet",
+              "round",
+              "plot",
+              "model",
+              "mouse"
+            ],
+            "rationale": "\u201cOrbit\u201d strongly links to a satellite; Jupiter is a common orbital target; weaker links include generic space/round/model/plot ideas.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "satellite"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "orbit",
+          "count": 1,
+          "rationale": "Connects to satellite/jet-like space/flight concepts while avoiding the assassin."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "berry": 0.9,
+              "olive": 0.7,
+              "rose": 0.6
+            },
+            "ranked_guesses": [
+              "berry",
+              "olive",
+              "rose"
+            ],
+            "rationale": "'berry' is a strong match for 'fruit' and fits the clue count. 'olive' and 'rose' are also fruits but slightly less common associations.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "berry": 0.7,
+              "olive": 0.6,
+              "rose": 0.5
+            },
+            "ranked_guesses": [
+              "berry",
+              "olive",
+              "rose"
+            ],
+            "rationale": "The clue 'fruit' suggests words related to fruits. 'berry' is a strong candidate as it directly fits. 'olive' and 'rose' are also plausible as they can be associated with fruits (olives are fruits, roses produce rosehips).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "berry": 0.9,
+              "olive": 0.7,
+              "rose": 0.6
+            },
+            "ranked_guesses": [
+              "berry",
+              "olive",
+              "rose"
+            ],
+            "rationale": "'berry' is strongly associated with 'fruit'. 'olive' and 'rose' are also fruits, though less commonly thought of as such.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "berry"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fruit",
+          "count": 2,
+          "rationale": "'berry' and 'olive' are both fruits, but 'olive' is red, so focusing on 'berry' and potentially 'rose' (though 'rose' is a flower, it's sometimes associated with fruits like rosehips)."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "asgard"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jupiter": 0.26,
+              "leprechaun": 0.12,
+              "model": 0.1,
+              "plot": 0.18,
+              "police": 0.08,
+              "soul": 0.14
+            },
+            "ranked_guesses": [
+              "jupiter",
+              "plot",
+              "soul",
+              "leprechaun",
+              "model",
+              "police"
+            ],
+            "rationale": "Asgard is a Norse realm tied to gods like Odin; on the board the closest thematic hit is the space/god association with Jupiter, with looser alternatives like soul/plot.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jupiter": 0.68,
+              "model": 0.32
+            },
+            "ranked_guesses": [
+              "jupiter",
+              "model"
+            ],
+            "rationale": "Asgard is a Norse realm often associated with gods; remaining board words that fit broadly are 'jupiter' (god/realm) over unrelated options.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jupiter": 0.62,
+              "plot": 0.38
+            },
+            "ranked_guesses": [
+              "jupiter",
+              "plot"
+            ],
+            "rationale": "\u201cAsgard\u201d (Norse realm) most strongly points to Jupiter via myth/sky association; if not, \u201cplot\u201d fits broader myth/story framing.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "asgard",
+          "count": 1,
+          "rationale": "Points to JUPITER/LEPRECHAUN-themed space/myth connections without touching existing board words."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bugle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "police",
+          "count": 1,
+          "rationale": "The word 'police' is directly related to 'bill' (as in police bill) and 'play' (as in police play), but to avoid ambiguity and ensure a safe guess, I'm limiting the count to 1."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "prank"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "leprechaun",
+          "count": 1,
+          "rationale": "Points to the red word linked by theme\u2014'leprechaun' aligns strongly with the magical figure; safest single target."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bugle": 0.9,
+              "play": 0.7,
+              "soul": 0.6
+            },
+            "ranked_guesses": [
+              "bugle",
+              "play",
+              "soul"
+            ],
+            "rationale": "'bugle' is a musical instrument, strongly linked to 'music'. 'play' and 'soul' have musical connotations but are less direct.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bugle": 0.9,
+              "play": 0.7,
+              "soul": 0.6
+            },
+            "ranked_guesses": [
+              "bugle",
+              "play",
+              "soul"
+            ],
+            "rationale": "'bugle' is a musical instrument, closely related to 'music'. 'play' can relate to playing music, and 'soul' connects to soul music. These are the strongest associations with the clue 'music'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bugle": 0.9,
+              "play": 0.7,
+              "soul": 0.6
+            },
+            "ranked_guesses": [
+              "bugle",
+              "play",
+              "soul"
+            ],
+            "rationale": "'bugle' is a musical instrument, strongly related to 'music'. 'play' and 'soul' are also related to music, but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "The words 'bugle' and 'play' are both related to music. 'Bugle' is a musical instrument, and 'play' can refer to playing music."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mouse"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "jet"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "scottish"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "loch ness"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "currency"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bill"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "artifact"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mouse": 0.22,
+              "play": 0.5,
+              "plot": 0.28
+            },
+            "ranked_guesses": [
+              "play",
+              "plot",
+              "mouse"
+            ],
+            "rationale": "Prank often maps to 'play' (a prank is a kind of play) and 'plot' (to prank someone); 'mouse' fits 'joke' prank style only secondarily.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mouse": 0.28,
+              "play": 0.48,
+              "plot": 0.72
+            },
+            "ranked_guesses": [
+              "plot",
+              "play",
+              "mouse"
+            ],
+            "rationale": "\u201cPrank\u201d most strongly links to \u201cplot\u201d (scheming/joke plotting) and \u201cplay\u201d (playing a prank); \u201cmouse\u201d is weaker (mouse trap/keyboard prank).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mouse": 0.58,
+              "play": 0.16,
+              "plot": 0.26
+            },
+            "ranked_guesses": [
+              "mouse",
+              "plot",
+              "play"
+            ],
+            "rationale": "\u201cPrank\u201d best matches a \u201cmouse\u201d (as in mouse traps/April-fool tricks), then \u201cplot\u201d (set up a prank), then \u201cplay\u201d (play a prank).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "prank",
+          "count": 2,
+          "rationale": "Suggests playful mischief that can point to JUPITER (as a prank on a \"planet\") and PLOT (a prank/plot). Avoids assassin risk with Australia."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bill": 0.6,
+              "jet": 0.5,
+              "loch ness": 0.7
+            },
+            "ranked_guesses": [
+              "loch ness",
+              "bill",
+              "jet"
+            ],
+            "rationale": "'loch ness' is strongly associated with water, 'bill' could relate to water bill, and 'jet' refers to water jet.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.7,
+              "bermuda": 0.6,
+              "bill": 0.5
+            },
+            "ranked_guesses": [
+              "ball",
+              "bermuda",
+              "bill"
+            ],
+            "rationale": "'ball' relates to water sports, 'bermuda' is associated with the Bermuda Triangle (water), and 'bill' could refer to a water bill.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.6,
+              "olive": 0.7,
+              "round": 0.5
+            },
+            "ranked_guesses": [
+              "olive",
+              "ball",
+              "round"
+            ],
+            "rationale": "'water' could relate to 'olive' (olive oil is liquid), 'ball' (water balloon), and 'round' (shape of water droplets).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "leprechaun"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "water",
+          "count": 2,
+          "rationale": "'Loch Ness' is a lake, and 'ball' can be associated with water (e.g., water polo ball). Both are blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "shape"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ball"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "round"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "spirit"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "soul"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "jack",
+          "count": 1,
+          "rationale": "Points to 'jack' as a common name, likely linked to the red word 'chick' via nicknaming; aiming for a safe single guess."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bottle"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "authority"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "chick": 0.7,
+              "mouse": 0.9
+            },
+            "ranked_guesses": [
+              "mouse",
+              "chick"
+            ],
+            "rationale": "'mouse' and 'chick' are both animals. 'mouse' is more commonly associated with the clue 'animal', hence higher confidence.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bug": 0.5,
+              "chick": 0.7,
+              "mouse": 0.9
+            },
+            "ranked_guesses": [
+              "mouse",
+              "chick",
+              "bug"
+            ],
+            "rationale": "'mouse' and 'chick' are clear animals, with 'mouse' being more common. 'Bug' is a stretch but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bug": 0.6,
+              "chick": 0.7,
+              "mouse": 0.9
+            },
+            "ranked_guesses": [
+              "mouse",
+              "chick",
+              "bug"
+            ],
+            "rationale": "The clue 'animal' suggests words like 'mouse' (common animal), 'chick' (baby bird), and 'bug' (small creature). 'Mouse' is the most obvious, followed by 'chick' and 'bug'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "police"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "The words 'mouse' and 'bug' are both animals and are safe blue targets."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "oz"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "chickensoup",
+          "count": 1,
+          "rationale": "Points to the red word 'soul' via the phrase 'chicken soup for the soul'."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flower"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.9,
+              "parachute": 0.7
+            },
+            "ranked_guesses": [
+              "jet",
+              "parachute"
+            ],
+            "rationale": "'jet' is strongly associated with 'flight' as a mode of air travel. 'parachute' is related to flight as it is used during descent from flight, but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.9,
+              "parachute": 0.7
+            },
+            "ranked_guesses": [
+              "jet",
+              "parachute"
+            ],
+            "rationale": "The clue 'flight' strongly suggests 'jet' as a primary guess due to its direct association with flying. 'Parachute' is a secondary guess as it is also related to flight but less directly than 'jet'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.9,
+              "parachute": 0.7
+            },
+            "ranked_guesses": [
+              "jet",
+              "parachute"
+            ],
+            "rationale": "'jet' is strongly associated with 'flight' as a type of aircraft. 'parachute' is related to flight but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "rose"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "The words 'jet' and 'parachute' are both related to flying or flight, making this a safe clue that connects two blue words without directly revealing any board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "game"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "play"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

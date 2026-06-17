@@ -1,0 +1,263 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "blue",
+      "atlas": "neutral",
+      "baker": "blue",
+      "camera": "blue",
+      "captain": "blue",
+      "castle": "red",
+      "cloud": "blue",
+      "comet": "neutral",
+      "compass": "neutral",
+      "family": "neutral",
+      "flame": "red",
+      "island": "neutral",
+      "magnet": "blue",
+      "museum": "neutral",
+      "novel": "blue",
+      "river": "red",
+      "salt": "red",
+      "secret": "red",
+      "silver": "neutral",
+      "spider": "red",
+      "spring": "assassin",
+      "temple": "red",
+      "voyage": "blue",
+      "winter": "red",
+      "wizard": "red"
+    },
+    "revealed": [
+      "wizard"
+    ],
+    "words": {
+      "anchor": "blue",
+      "atlas": "neutral",
+      "baker": "blue",
+      "camera": "blue",
+      "captain": "blue",
+      "castle": "red",
+      "cloud": "blue",
+      "comet": "neutral",
+      "compass": "neutral",
+      "family": "neutral",
+      "flame": "red",
+      "island": "neutral",
+      "magnet": "blue",
+      "museum": "neutral",
+      "novel": "blue",
+      "river": "red",
+      "salt": "red",
+      "secret": "red",
+      "silver": "neutral",
+      "spider": "red",
+      "spring": "assassin",
+      "temple": "red",
+      "voyage": "blue",
+      "winter": "red",
+      "wizard": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "magic",
+        "count": 2,
+        "rationale": "Connects wizard and temple (or secret), but wizard is the strongest link."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.4,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "secret"
+        ],
+        "rationale": "Wizard is directly associated with magic. Secret is a common thematic link to magic (magic secrets).",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.3,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "secret"
+        ],
+        "rationale": "Wizard is directly associated with magic. Secret is a secondary possibility as magic often involves secrets.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.3,
+          "wizard": 0.9
+        },
+        "ranked_guesses": [
+          "wizard",
+          "secret"
+        ],
+        "rationale": "Wizard is directly associated with magic. Secret is a common theme in magic tricks.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "magnetism",
+        "count": 2,
+        "rationale": "Points toward BLUE words like magnet and compass through navigation/attraction concepts."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "wizard"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "magnetism",
+        "count": 2,
+        "rationale": "Points toward BLUE words like magnet and compass through navigation/attraction concepts."
+      },
+      "event": "illegal_clue",
+      "matched_word": "magnet",
+      "reason": "substring",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 5,
+    "public_event_count": 4,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-174341-m01",
+    "team_blue": "GPT-5.4-nano",
+    "team_red": "Gemma 4 31B",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "magic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.4,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "secret"
+            ],
+            "rationale": "Wizard is directly associated with magic. Secret is a common thematic link to magic (magic secrets).",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.3,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "secret"
+            ],
+            "rationale": "Wizard is directly associated with magic. Secret is a secondary possibility as magic often involves secrets.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.3,
+              "wizard": 0.9
+            },
+            "ranked_guesses": [
+              "wizard",
+              "secret"
+            ],
+            "rationale": "Wizard is directly associated with magic. Secret is a common theme in magic tricks.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "magic",
+          "count": 2,
+          "rationale": "Connects wizard and temple (or secret), but wizard is the strongest link."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    }
+  ]
+}

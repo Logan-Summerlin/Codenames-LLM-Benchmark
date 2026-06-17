@@ -1,0 +1,434 @@
+{
+  "board": {
+    "identities": {
+      "atlas": "red",
+      "bread": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "engine": "red",
+      "festival": "blue",
+      "flame": "red",
+      "ghost": "neutral",
+      "hammer": "neutral",
+      "honey": "neutral",
+      "hunter": "blue",
+      "island": "blue",
+      "kernel": "red",
+      "metal": "red",
+      "nurse": "blue",
+      "orange": "red",
+      "palace": "red",
+      "pyramid": "blue",
+      "river": "blue",
+      "silence": "neutral",
+      "stone": "assassin",
+      "teacher": "blue",
+      "tunnel": "red",
+      "water": "neutral",
+      "writer": "blue"
+    },
+    "revealed": [
+      "atlas",
+      "pyramid",
+      "river"
+    ],
+    "words": {
+      "atlas": "red",
+      "bread": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "engine": "red",
+      "festival": "blue",
+      "flame": "red",
+      "ghost": "neutral",
+      "hammer": "neutral",
+      "honey": "neutral",
+      "hunter": "blue",
+      "island": "blue",
+      "kernel": "red",
+      "metal": "red",
+      "nurse": "blue",
+      "orange": "red",
+      "palace": "red",
+      "pyramid": "blue",
+      "river": "blue",
+      "silence": "neutral",
+      "stone": "assassin",
+      "teacher": "blue",
+      "tunnel": "red",
+      "water": "neutral",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "mythology",
+        "count": 2,
+        "rationale": "Atlas and pyramid are both associated with mythology; Atlas from Greek myth and pyramid from ancient Egyptian beliefs."
+      },
+      "agent_id": "DeepSeek V3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.9,
+          "ghost": 0.6,
+          "pyramid": 0.7
+        },
+        "ranked_guesses": [
+          "atlas",
+          "pyramid",
+          "ghost"
+        ],
+        "rationale": "Atlas and Pyramid are strongly tied to mythology; Ghost has weaker mythological connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.9,
+          "pyramid": 0.7
+        },
+        "ranked_guesses": [
+          "atlas",
+          "pyramid"
+        ],
+        "rationale": "Atlas is a figure from mythology, pyramid may relate to Egyptian myths; both fit the clue with high confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.9,
+          "ghost": 0.6,
+          "pyramid": 0.7
+        },
+        "ranked_guesses": [
+          "atlas",
+          "pyramid",
+          "ghost"
+        ],
+        "rationale": "Atlas and Pyramid are strongly tied to mythology; Ghost has mythological connections but weaker.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "egypt",
+        "count": 2,
+        "rationale": "Egypt links pyramids and river"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.8,
+          "river": 0.8
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "river"
+        ],
+        "rationale": "Both pyramid and river strongly relate to Egypt; pyramids are iconic Egyptian landmarks and the Nile is central to Egyptian geography.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.9,
+          "river": 0.55
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "river"
+        ],
+        "rationale": "Egypt = pyramid; Nile river as a secondary link.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.8,
+          "river": 0.8
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "river"
+        ],
+        "rationale": "Both words strongly associated with Egypt (pyramids and the Nile/river).",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythology"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "egypt"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "river"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 7,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-174341-m07",
+    "team_blue": "GPT-5 Nano",
+    "team_red": "DeepSeek V3.1",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.9,
+              "ghost": 0.6,
+              "pyramid": 0.7
+            },
+            "ranked_guesses": [
+              "atlas",
+              "pyramid",
+              "ghost"
+            ],
+            "rationale": "Atlas and Pyramid are strongly tied to mythology; Ghost has weaker mythological connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.9,
+              "pyramid": 0.7
+            },
+            "ranked_guesses": [
+              "atlas",
+              "pyramid"
+            ],
+            "rationale": "Atlas is a figure from mythology, pyramid may relate to Egyptian myths; both fit the clue with high confidence.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.9,
+              "ghost": 0.6,
+              "pyramid": 0.7
+            },
+            "ranked_guesses": [
+              "atlas",
+              "pyramid",
+              "ghost"
+            ],
+            "rationale": "Atlas and Pyramid are strongly tied to mythology; Ghost has mythological connections but weaker.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythology",
+          "count": 2,
+          "rationale": "Atlas and pyramid are both associated with mythology; Atlas from Greek myth and pyramid from ancient Egyptian beliefs."
+        },
+        "agent_id": "DeepSeek V3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "egypt"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.8,
+              "river": 0.8
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "river"
+            ],
+            "rationale": "Both pyramid and river strongly relate to Egypt; pyramids are iconic Egyptian landmarks and the Nile is central to Egyptian geography.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.9,
+              "river": 0.55
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "river"
+            ],
+            "rationale": "Egypt = pyramid; Nile river as a secondary link.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.8,
+              "river": 0.8
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "river"
+            ],
+            "rationale": "Both words strongly associated with Egypt (pyramids and the Nile/river).",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "river"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "egypt",
+          "count": 2,
+          "rationale": "Egypt links pyramids and river"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

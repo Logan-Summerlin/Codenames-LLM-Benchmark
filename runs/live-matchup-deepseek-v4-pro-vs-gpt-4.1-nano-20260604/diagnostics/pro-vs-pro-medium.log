@@ -1,0 +1,24 @@
+DIAG pro-vs-pro-medium start red=deepseek/deepseek-v4-pro blue=deepseek/deepseek-v4-pro timeout=45 attempts=1
+Traceback (most recent call last):
+  File "/home/agentbot/workspace/codenames-llm-benchmark/scripts/run_openrouter_matchup_game.py", line 69, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/agentbot/workspace/codenames-llm-benchmark/scripts/run_openrouter_matchup_game.py", line 48, in main
+    record = run_game(red, blue, seed=args.seed, max_turns=args.max_turns)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agentbot/workspace/codenames-llm-benchmark/src/codenames_benchmark/runner.py", line 55, in run_game
+    return _run_on_board(red_team, blue_team, generate_board(seed=seed, starting_team=Team.RED), seed=seed, max_turns=max_turns)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agentbot/workspace/codenames-llm-benchmark/src/codenames_benchmark/runner.py", line 28, in _run_on_board
+    clue_action = team.spymaster.choose_clue(spy_obs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agentbot/workspace/codenames-llm-benchmark/src/codenames_benchmark/agents/llm_agents.py", line 61, in choose_clue
+    response = self.client.complete(LLMRequest(self.model, _messages(prompt, observation.to_dict()), temperature=self.temperature, json_schema={"type":"object"}))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agentbot/workspace/codenames-llm-benchmark/src/codenames_benchmark/llm/openrouter.py", line 50, in complete
+    data = self._post_json(payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agentbot/workspace/codenames-llm-benchmark/src/codenames_benchmark/llm/openrouter.py", line 85, in _post_json
+    raise RuntimeError(f"OpenRouter request failed via node fetch after {attempts} attempts: {last_error}")
+RuntimeError: OpenRouter request failed via node fetch after 1 attempts: node fetch timed out after 45.0 seconds
+DIAG pro-vs-pro-medium failed status=1 transcript_exists=no

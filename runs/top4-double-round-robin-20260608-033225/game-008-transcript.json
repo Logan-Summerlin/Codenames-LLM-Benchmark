@@ -1,0 +1,583 @@
+{
+  "board": {
+    "identities": {
+      "airport": "blue",
+      "alien": "neutral",
+      "butter": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "desert": "blue",
+      "dream": "blue",
+      "engine": "neutral",
+      "forest": "red",
+      "harbor": "neutral",
+      "jungle": "red",
+      "leather": "red",
+      "library": "neutral",
+      "magnet": "red",
+      "palace": "blue",
+      "paper": "blue",
+      "planet": "red",
+      "river": "assassin",
+      "robot": "red",
+      "singer": "neutral",
+      "spirit": "blue",
+      "sugar": "blue",
+      "temple": "red",
+      "violin": "blue",
+      "water": "red"
+    },
+    "revealed": [
+      "desert",
+      "forest",
+      "river"
+    ],
+    "words": {
+      "airport": "blue",
+      "alien": "neutral",
+      "butter": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "desert": "blue",
+      "dream": "blue",
+      "engine": "neutral",
+      "forest": "red",
+      "harbor": "neutral",
+      "jungle": "red",
+      "leather": "red",
+      "library": "neutral",
+      "magnet": "red",
+      "palace": "blue",
+      "paper": "blue",
+      "planet": "red",
+      "river": "assassin",
+      "robot": "red",
+      "singer": "neutral",
+      "spirit": "blue",
+      "sugar": "blue",
+      "temple": "red",
+      "violin": "blue",
+      "water": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "nature",
+        "count": 4,
+        "rationale": "evokes natural features: forest, jungle, cloud and water"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "forest": 0.8,
+          "jungle": 0.8,
+          "river": 0.8
+        },
+        "ranked_guesses": [
+          "forest",
+          "jungle",
+          "river",
+          "desert"
+        ],
+        "rationale": "Nature-related terms: forest, jungle, river, desert.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.92,
+          "forest": 0.95,
+          "jungle": 0.9,
+          "river": 0.88
+        },
+        "ranked_guesses": [
+          "forest",
+          "desert",
+          "jungle",
+          "river"
+        ],
+        "rationale": "Four obvious nature-related words: forest, desert, jungle, and river.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "forest": 0.8,
+          "jungle": 0.8,
+          "river": 0.8
+        },
+        "ranked_guesses": [
+          "forest",
+          "river",
+          "jungle",
+          "desert"
+        ],
+        "rationale": "nature-related words fitting the clue; four strongest nature matches.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 0.45
+        },
+        "ranked_guesses": [
+          "paper"
+        ],
+        "rationale": "fallback suggests a backup or plan B, paper can represent a backup copy",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "engine": 0.78
+        },
+        "ranked_guesses": [
+          "engine"
+        ],
+        "rationale": "fallback often means a backup or secondary option, like a backup engine",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "harbor": 0.65
+        },
+        "ranked_guesses": [
+          "harbor"
+        ],
+        "rationale": "fallback suggests a safe place or backup location; harbor fits as a safe haven",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 4,
+        "rationale": "Earthly/natural world theme links to several red words on the board."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.92,
+          "river": 0.89,
+          "water": 0.88
+        },
+        "ranked_guesses": [
+          "jungle",
+          "river",
+          "water"
+        ],
+        "rationale": "Nature-themed; forest already found, jungle/river/water fit clue 'nature'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "river": 0.8
+        },
+        "ranked_guesses": [
+          "river"
+        ],
+        "rationale": "Nature-related term that fits the clue 'nature'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.8,
+          "jungle": 0.8,
+          "river": 0.8,
+          "water": 0.8
+        },
+        "ranked_guesses": [
+          "river",
+          "water",
+          "jungle",
+          "cloud"
+        ],
+        "rationale": "All four are strongly related to nature (river, water, jungle, cloud) and are not blue/neutral words on the board.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "desert"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "river"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 12,
+    "public_event_count": 7,
+    "reason": "assassin",
+    "seed": "top4-double-round-robin-008-openai_gpt_5_nano-vs-openai_gpt_oss_120b",
+    "team_blue": "GPT-OSS 120B",
+    "team_red": "GPT-5 Nano",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "forest": 0.8,
+              "jungle": 0.8,
+              "river": 0.8
+            },
+            "ranked_guesses": [
+              "forest",
+              "jungle",
+              "river",
+              "desert"
+            ],
+            "rationale": "Nature-related terms: forest, jungle, river, desert.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.92,
+              "forest": 0.95,
+              "jungle": 0.9,
+              "river": 0.88
+            },
+            "ranked_guesses": [
+              "forest",
+              "desert",
+              "jungle",
+              "river"
+            ],
+            "rationale": "Four obvious nature-related words: forest, desert, jungle, and river.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "forest": 0.8,
+              "jungle": 0.8,
+              "river": 0.8
+            },
+            "ranked_guesses": [
+              "forest",
+              "river",
+              "jungle",
+              "desert"
+            ],
+            "rationale": "nature-related words fitting the clue; four strongest nature matches.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "desert"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 4,
+          "rationale": "evokes natural features: forest, jungle, cloud and water"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "paper": 0.45
+            },
+            "ranked_guesses": [
+              "paper"
+            ],
+            "rationale": "fallback suggests a backup or plan B, paper can represent a backup copy",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "engine": 0.78
+            },
+            "ranked_guesses": [
+              "engine"
+            ],
+            "rationale": "fallback often means a backup or secondary option, like a backup engine",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "harbor": 0.65
+            },
+            "ranked_guesses": [
+              "harbor"
+            ],
+            "rationale": "fallback suggests a safe place or backup location; harbor fits as a safe haven",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.92,
+              "river": 0.89,
+              "water": 0.88
+            },
+            "ranked_guesses": [
+              "jungle",
+              "river",
+              "water"
+            ],
+            "rationale": "Nature-themed; forest already found, jungle/river/water fit clue 'nature'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "river": 0.8
+            },
+            "ranked_guesses": [
+              "river"
+            ],
+            "rationale": "Nature-related term that fits the clue 'nature'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.8,
+              "jungle": 0.8,
+              "river": 0.8,
+              "water": 0.8
+            },
+            "ranked_guesses": [
+              "river",
+              "water",
+              "jungle",
+              "cloud"
+            ],
+            "rationale": "All four are strongly related to nature (river, water, jungle, cloud) and are not blue/neutral words on the board.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "river"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 4,
+          "rationale": "Earthly/natural world theme links to several red words on the board."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

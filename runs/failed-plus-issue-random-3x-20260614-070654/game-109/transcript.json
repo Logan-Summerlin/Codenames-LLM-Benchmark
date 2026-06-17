@@ -1,0 +1,4166 @@
+{
+  "board": {
+    "identities": {
+      "arm": "blue",
+      "bear": "blue",
+      "bill": "neutral",
+      "bond": "red",
+      "copper": "blue",
+      "cycle": "assassin",
+      "england": "red",
+      "foot": "blue",
+      "hood": "neutral",
+      "mexico": "red",
+      "millionaire": "red",
+      "moscow": "neutral",
+      "park": "neutral",
+      "pipe": "neutral",
+      "poison": "blue",
+      "pool": "red",
+      "server": "blue",
+      "ship": "blue",
+      "smuggler": "red",
+      "space": "red",
+      "spider": "neutral",
+      "spot": "red",
+      "swing": "blue",
+      "switch": "red",
+      "washington": "neutral"
+    },
+    "revealed": [
+      "england",
+      "poison",
+      "ship",
+      "spider"
+    ],
+    "words": {
+      "arm": "blue",
+      "bear": "blue",
+      "bill": "neutral",
+      "bond": "red",
+      "copper": "blue",
+      "cycle": "assassin",
+      "england": "red",
+      "foot": "blue",
+      "hood": "neutral",
+      "mexico": "red",
+      "millionaire": "red",
+      "moscow": "neutral",
+      "park": "neutral",
+      "pipe": "neutral",
+      "poison": "blue",
+      "pool": "red",
+      "server": "blue",
+      "ship": "blue",
+      "smuggler": "red",
+      "space": "red",
+      "spider": "neutral",
+      "spot": "red",
+      "swing": "blue",
+      "switch": "red",
+      "washington": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "travel",
+        "count": 3,
+        "rationale": "Connects to ship, space, and england."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "england": 0.75,
+          "mexico": 0.7,
+          "moscow": 0.65
+        },
+        "ranked_guesses": [
+          "england",
+          "mexico",
+          "moscow"
+        ],
+        "rationale": "'Travel' suggests places, and these are countries on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "england": 0.75,
+          "mexico": 0.65,
+          "moscow": 0.55
+        },
+        "ranked_guesses": [
+          "england",
+          "mexico",
+          "moscow"
+        ],
+        "rationale": "'Travel' often involves countries, and these are the most prominent country names on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "england": 0.6,
+          "mexico": 0.65,
+          "washington": 0.55
+        },
+        "ranked_guesses": [
+          "mexico",
+          "england",
+          "washington"
+        ],
+        "rationale": "'Travel' often involves countries or places, making Mexico, England, and Washington reasonable guesses.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 2,
+        "rationale": "associated with copper and poison"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.7,
+          "pipe": 0.3
+        },
+        "ranked_guesses": [
+          "copper",
+          "pipe"
+        ],
+        "rationale": "copper is a type of metal and pipe can be made of metal",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.7,
+          "pipe": 0.3
+        },
+        "ranked_guesses": [
+          "copper",
+          "pipe"
+        ],
+        "rationale": "copper is a type of metal and pipe can be made of metal",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.7,
+          "pipe": 0.3
+        },
+        "ranked_guesses": [
+          "copper",
+          "pipe"
+        ],
+        "rationale": "copper is a type of metal and pipe can be made of metal",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "location",
+        "count": 3,
+        "rationale": "Hints at Mexico, Moscow, and Washington."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "moscow": 0.6
+        },
+        "ranked_guesses": [
+          "moscow"
+        ],
+        "rationale": "'location' connects to countries and cities, Moscow is a prominent location.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mexico": 0.7
+        },
+        "ranked_guesses": [
+          "mexico"
+        ],
+        "rationale": "'location' connects to countries, and Mexico is a country on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mexico": 0.55,
+          "moscow": 0.65,
+          "park": 0.75
+        },
+        "ranked_guesses": [
+          "park",
+          "moscow",
+          "mexico"
+        ],
+        "rationale": "'location' connects to places, and these are all locations.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "leg",
+        "count": 2,
+        "rationale": "associated with body parts"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.7,
+          "leg": 0.3
+        },
+        "ranked_guesses": [
+          "foot",
+          "leg"
+        ],
+        "rationale": "The clue 'leg' is likely related to 'foot', which is a body part, and 'leg' itself could be a direct reference to the word on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.7,
+          "leg": 0.3
+        },
+        "ranked_guesses": [
+          "foot",
+          "leg"
+        ],
+        "rationale": "The clue 'leg' is likely related to 'foot' due to their anatomical connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.7,
+          "leg": 0.3
+        },
+        "ranked_guesses": [
+          "foot",
+          "leg"
+        ],
+        "rationale": "The clue 'leg' is likely related to 'foot', which is a body part, and 'leg' itself could be a direct match.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "danger",
+        "count": 2,
+        "rationale": "Connects to poison and cycle."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.6
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "'danger' can relate to being at sea, suggesting 'ship'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.6
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "'danger' can relate to being at sea, and 'ship' is on the board.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.6
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "'danger' can relate to being at sea, and 'ship' is a relevant word.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "associated with ship and server"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.7,
+          "space": 0.3
+        },
+        "ranked_guesses": [
+          "ship",
+          "space"
+        ],
+        "rationale": "The clue 'navigation' is related to both 'ship' and 'space', but 'ship' is a more direct connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.6,
+          "space": 0.4
+        },
+        "ranked_guesses": [
+          "ship",
+          "space"
+        ],
+        "rationale": "The clue 'navigation' is related to both 'ship' and 'space', but 'ship' is a more direct connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.7,
+          "space": 0.3
+        },
+        "ranked_guesses": [
+          "ship",
+          "space"
+        ],
+        "rationale": "The clue 'navigation' is related to both 'ship' and 'space', but 'ship' is a more direct connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vessel",
+        "count": 3,
+        "rationale": "Refers to ship, pool, and server."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "'vessel' strongly relates to 'ship'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "'Vessel' relates to 'ship' as both are types of water transportation.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "'vessel' relates to 'ship' and there are no immediately obvious negative associations.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "toxic",
+        "count": 2,
+        "rationale": "relates to poison and possibly other blue words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poison": 0.8
+        },
+        "ranked_guesses": [
+          "poison"
+        ],
+        "rationale": "The clue 'toxic' is closely related to 'poison', which is a word on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poison": 0.8
+        },
+        "ranked_guesses": [
+          "poison"
+        ],
+        "rationale": "The clue 'toxic' is closely related to 'poison', which is a word on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poison": 0.8
+        },
+        "ranked_guesses": [
+          "poison"
+        ],
+        "rationale": "poison is related to toxic",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "wealth",
+        "count": 2,
+        "rationale": "referencing millionaire and potentially spot"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "millionaire": 0.7
+        },
+        "ranked_guesses": [
+          "millionaire"
+        ],
+        "rationale": "'Wealth' connects to 'millionaire' and it hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "millionaire": 0.7
+        },
+        "ranked_guesses": [
+          "millionaire"
+        ],
+        "rationale": "'Wealth' connects to 'millionaire' and it hasn't been revealed yet.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "millionaire": 0.6
+        },
+        "ranked_guesses": [
+          "millionaire"
+        ],
+        "rationale": "'Wealth' connects to 'millionaire' and it hasn't been guessed yet.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "web",
+        "count": 2,
+        "rationale": "associated with spider and server"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.8
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "The clue 'web' is closely related to 'spider', which is a common association.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.8
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "The clue 'web' is closely related to 'spider', which is a common association.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.8
+        },
+        "ranked_guesses": [
+          "spider"
+        ],
+        "rationale": "The clue 'web' is closely related to 'spider'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 2,
+        "rationale": "Connects to England and potentially Mexico (historical royalty)"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'royal' can relate to parks as royal parks.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'royal' can relate to parks as in royal parks.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'royal' can relate to parks as in royal parks.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "play",
+        "count": 2,
+        "rationale": "associated with recreational activities"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.4,
+          "pool": 0.6
+        },
+        "ranked_guesses": [
+          "pool",
+          "park"
+        ],
+        "rationale": "The clue 'play' is related to leisure activities, and 'pool' and 'park' are both places where people often play.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.4,
+          "pool": 0.6
+        },
+        "ranked_guesses": [
+          "pool",
+          "park"
+        ],
+        "rationale": "The clue 'play' is related to leisure activities, and 'pool' and 'park' are both places where people often play.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.4,
+          "pool": 0.6
+        },
+        "ranked_guesses": [
+          "pool",
+          "park"
+        ],
+        "rationale": "The clue 'play' is related to leisure activities, and 'pool' and 'park' are both places where people often play.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "area",
+        "count": 2,
+        "rationale": "Connecting spot and space."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.7
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'area' can relate to a park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'area' can relate to a park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'area' can relate to a park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "movement",
+        "count": 2,
+        "rationale": "associated with words on the board"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.2,
+          "cycle": 0.6,
+          "foot": 0.4
+        },
+        "ranked_guesses": [
+          "cycle",
+          "foot",
+          "arm"
+        ],
+        "rationale": "The clue 'movement' is related to words that imply action or physical activity, so 'cycle', 'foot', and 'arm' are possible guesses.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.2,
+          "cycle": 0.6,
+          "foot": 0.4
+        },
+        "ranked_guesses": [
+          "cycle",
+          "foot",
+          "arm"
+        ],
+        "rationale": "The clue 'movement' is related to words that imply action or physical activity, so 'cycle', 'foot', and 'arm' are possible guesses.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.2,
+          "cycle": 0.6,
+          "foot": 0.4
+        },
+        "ranked_guesses": [
+          "cycle",
+          "foot",
+          "arm"
+        ],
+        "rationale": "The clue 'movement' is related to words that imply action or physical activity, so I'm guessing 'cycle', 'foot', and 'arm' as they are all related to movement in some way.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "control",
+        "count": 2,
+        "rationale": "connects switch and server"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'control' can relate to managing a 'park' or having control over a space.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'control' can relate to managing a 'park' or having control over it.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'control' can relate to managing a 'park' or having control over a space.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "limb",
+        "count": 2,
+        "rationale": "related to body parts"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.7,
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "arm",
+          "foot"
+        ],
+        "rationale": "The clue 'limb' is related to body parts, and 'arm' and 'foot' are the most relevant words on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.7,
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "arm",
+          "foot"
+        ],
+        "rationale": "The clue 'limb' is related to body parts, and 'arm' and 'foot' are the most likely words on the board that fit this description.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.7,
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "arm",
+          "foot"
+        ],
+        "rationale": "The clue 'limb' is related to body parts, so 'arm' and 'foot' are the most likely guesses.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "bright",
+        "count": 2,
+        "rationale": "Connecting to copper and spot."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "bright can relate to park as in a bright sunny park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "bright can relate to park as in a bright park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "bright can relate to park as in a bright park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "exercise",
+        "count": 2,
+        "rationale": "associated with foot and swing"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.4,
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "foot",
+          "arm"
+        ],
+        "rationale": "The clue 'exercise' is related to physical activity, and 'foot' and 'arm' are both body parts that are often used in exercise.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "leg": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "leg"
+        ],
+        "rationale": "The clue 'exercise' is related to physical activity, and 'arm' and 'leg' are both body parts often used in exercise.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "leg": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "leg"
+        ],
+        "rationale": "The clue 'exercise' is related to physical activity, and 'arm' and 'leg' are both body parts that are often exercised.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nation",
+        "count": 2,
+        "rationale": "Hints at Mexico and England."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'Nation' can relate to 'park' as in national park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'Nation' can relate to 'park' as in national park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6
+        },
+        "ranked_guesses": [
+          "arm"
+        ],
+        "rationale": "'Nation' can relate to 'arm' as in armed forces.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "computer",
+        "count": 2,
+        "rationale": "related to server"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "server": 0.7,
+          "space": 0.3
+        },
+        "ranked_guesses": [
+          "server",
+          "space"
+        ],
+        "rationale": "The clue 'computer' is related to 'server' and 'space' can be related to computer space, but 'server' is a more direct connection.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "server": 0.7,
+          "switch": 0.4
+        },
+        "ranked_guesses": [
+          "server",
+          "switch"
+        ],
+        "rationale": "The clue 'computer' is related to technology, and 'server' and 'switch' are both technology-related words on the board.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "server": 0.7,
+          "space": 0.3
+        },
+        "ranked_guesses": [
+          "server",
+          "space"
+        ],
+        "rationale": "The clue 'computer' is related to 'server' and 'space' can be related to computer space or storage.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mark",
+        "count": 2,
+        "rationale": "Connects to spot and potentially smuggler."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6
+        },
+        "ranked_guesses": [
+          "arm"
+        ],
+        "rationale": "'mark' could relate to leaving a 'mark' on something, and an 'arm' can leave a mark (tattoo, injury).",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6
+        },
+        "ranked_guesses": [
+          "arm"
+        ],
+        "rationale": "'mark' can relate to leaving a 'mark' on an 'arm' with a tattoo or injury.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6
+        },
+        "ranked_guesses": [
+          "arm"
+        ],
+        "rationale": "'mark' can relate to 'arm' as in leaving a mark or a physical arm.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "recreation",
+        "count": 2,
+        "rationale": "associated with leisure activities"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6,
+          "pool": 0.4
+        },
+        "ranked_guesses": [
+          "park",
+          "pool"
+        ],
+        "rationale": "The clue 'recreation' is related to leisure activities, and both 'park' and 'pool' are common places for recreational activities.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6,
+          "pool": 0.4
+        },
+        "ranked_guesses": [
+          "park",
+          "pool"
+        ],
+        "rationale": "The clue 'recreation' is related to leisure activities, and both 'park' and 'pool' are common places for recreation.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6,
+          "pool": 0.4
+        },
+        "ranked_guesses": [
+          "park",
+          "pool"
+        ],
+        "rationale": "The clue 'recreation' is related to leisure activities, and both 'park' and 'pool' are common places for recreation.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "risk",
+        "count": 2,
+        "rationale": "Connects to 'spot' and 'cycle'"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'risk' can relate to 'park' as in a skate park or taking risks in a park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pool": 0.6
+        },
+        "ranked_guesses": [
+          "pool"
+        ],
+        "rationale": "'risk' can relate to 'pool' as in a risk of drowning or danger near water.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "foot"
+        ],
+        "rationale": "'risk' and 'foot' both relate to potential dangers or hazards.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "network",
+        "count": 2,
+        "rationale": "associated with server and possibly other blue words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "server": 0.7,
+          "switch": 0.4
+        },
+        "ranked_guesses": [
+          "server",
+          "switch"
+        ],
+        "rationale": "The clue 'network' is related to computer systems, and 'server' and 'switch' are both relevant terms in that context.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "server": 0.7,
+          "switch": 0.4
+        },
+        "ranked_guesses": [
+          "server",
+          "switch"
+        ],
+        "rationale": "The clue 'network' is related to computer systems, so I'm guessing 'server' and 'switch' as they are both relevant to networking.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "server": 0.7,
+          "switch": 0.4
+        },
+        "ranked_guesses": [
+          "server",
+          "switch"
+        ],
+        "rationale": "The clue 'network' is related to computer systems, and 'server' and 'switch' are both relevant terms in this context.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "device",
+        "count": 2,
+        "rationale": "Connecting to server and switch."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'device' can relate to 'park' as in a technology park or a device used in a park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'device' can relate to 'park' as in a technology park or a device used in a park.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'device' can relate to 'park' as in a technology park or a place to store devices.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flex",
+        "count": 2,
+        "rationale": "associated with words on the board"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.4,
+          "foot": 0.6
+        },
+        "ranked_guesses": [
+          "foot",
+          "arm"
+        ],
+        "rationale": "The clue 'flex' is related to flexibility, which is often associated with body parts like 'foot' and 'arm'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "foot": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "foot"
+        ],
+        "rationale": "The clue 'flex' is related to flexibility, which is often associated with body parts like 'arm' and 'foot' that can bend or move in various ways.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "foot": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "foot"
+        ],
+        "rationale": "The clue 'flex' is related to flexibility, which is often associated with body parts like 'arm' and 'foot' that can bend or move in various ways.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fluid",
+        "count": 2,
+        "rationale": "Connects to pool and potentially copper."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'fluid' can relate to parks with water features like pools or rivers.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'fluid' can relate to 'park' as in a fluid landscape or a park's flow.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "park": 0.6
+        },
+        "ranked_guesses": [
+          "park"
+        ],
+        "rationale": "'fluid' can relate to 'park' as in a fluid space or a park with water features.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "support",
+        "count": 2,
+        "rationale": "associated with swing and server"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.7,
+          "leg": 0.6
+        },
+        "ranked_guesses": [
+          "arm",
+          "leg"
+        ],
+        "rationale": "The clue 'support' is related to the words 'arm' and 'leg', which are both body parts that provide support.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "leg": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "leg"
+        ],
+        "rationale": "The clue 'support' is related to the words 'arm' and 'leg', which are both body parts that provide support.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "spot": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "spot"
+        ],
+        "rationale": "The clue 'support' is related to the word 'arm' as in 'arm support', and also 'spot' as in 'spot support'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "bearings",
+        "count": 2,
+        "rationale": "Connects to 'bear' and 'copper' (bearings can be made of copper)."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metallic",
+        "count": 2,
+        "rationale": "Relates to copper and possibly other blue words"
+      },
+      "agent_id": "Llama 3.3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.3,
+          "copper": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "bear"
+        ],
+        "rationale": "The clue 'metallic' is related to 'copper' which is a metallic element.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.3,
+          "copper": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "bear"
+        ],
+        "rationale": "The clue 'metallic' is related to 'copper' which is a metallic element.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.3,
+          "copper": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "bear"
+        ],
+        "rationale": "The clue 'metallic' is related to 'copper' which is a metallic element, and 'bear' could be related to metal through 'bearings'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "england"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "location"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "leg"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "danger"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vessel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ship"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "toxic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "poison"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wealth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "web"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spider"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "play"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "area"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "movement"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "control"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "limb"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "bright"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exercise"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "nation"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "computer"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mark"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "recreation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "risk"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "network"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "device"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flex"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fluid"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "support"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "bearings",
+        "count": 2,
+        "rationale": "Connects to 'bear' and 'copper' (bearings can be made of copper)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "bear",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metallic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 117,
+    "public_event_count": 61,
+    "reason": null,
+    "seed": "issue-random-109-google_gemma_3_27b_it-vs-meta_llama_llama_3_3_70b_instruct",
+    "team_blue": "Llama 3.3 70B Instruct",
+    "team_red": "Gemma 3 27B",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "travel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "england": 0.75,
+              "mexico": 0.7,
+              "moscow": 0.65
+            },
+            "ranked_guesses": [
+              "england",
+              "mexico",
+              "moscow"
+            ],
+            "rationale": "'Travel' suggests places, and these are countries on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "england": 0.75,
+              "mexico": 0.65,
+              "moscow": 0.55
+            },
+            "ranked_guesses": [
+              "england",
+              "mexico",
+              "moscow"
+            ],
+            "rationale": "'Travel' often involves countries, and these are the most prominent country names on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "england": 0.6,
+              "mexico": 0.65,
+              "washington": 0.55
+            },
+            "ranked_guesses": [
+              "mexico",
+              "england",
+              "washington"
+            ],
+            "rationale": "'Travel' often involves countries or places, making Mexico, England, and Washington reasonable guesses.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "england"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 3,
+          "rationale": "Connects to ship, space, and england."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.7,
+              "pipe": 0.3
+            },
+            "ranked_guesses": [
+              "copper",
+              "pipe"
+            ],
+            "rationale": "copper is a type of metal and pipe can be made of metal",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.7,
+              "pipe": 0.3
+            },
+            "ranked_guesses": [
+              "copper",
+              "pipe"
+            ],
+            "rationale": "copper is a type of metal and pipe can be made of metal",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.7,
+              "pipe": 0.3
+            },
+            "ranked_guesses": [
+              "copper",
+              "pipe"
+            ],
+            "rationale": "copper is a type of metal and pipe can be made of metal",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 2,
+          "rationale": "associated with copper and poison"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "location"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "moscow": 0.6
+            },
+            "ranked_guesses": [
+              "moscow"
+            ],
+            "rationale": "'location' connects to countries and cities, Moscow is a prominent location.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mexico": 0.7
+            },
+            "ranked_guesses": [
+              "mexico"
+            ],
+            "rationale": "'location' connects to countries, and Mexico is a country on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mexico": 0.55,
+              "moscow": 0.65,
+              "park": 0.75
+            },
+            "ranked_guesses": [
+              "park",
+              "moscow",
+              "mexico"
+            ],
+            "rationale": "'location' connects to places, and these are all locations.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "location",
+          "count": 3,
+          "rationale": "Hints at Mexico, Moscow, and Washington."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "leg"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.7,
+              "leg": 0.3
+            },
+            "ranked_guesses": [
+              "foot",
+              "leg"
+            ],
+            "rationale": "The clue 'leg' is likely related to 'foot', which is a body part, and 'leg' itself could be a direct reference to the word on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.7,
+              "leg": 0.3
+            },
+            "ranked_guesses": [
+              "foot",
+              "leg"
+            ],
+            "rationale": "The clue 'leg' is likely related to 'foot' due to their anatomical connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.7,
+              "leg": 0.3
+            },
+            "ranked_guesses": [
+              "foot",
+              "leg"
+            ],
+            "rationale": "The clue 'leg' is likely related to 'foot', which is a body part, and 'leg' itself could be a direct match.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "leg",
+          "count": 2,
+          "rationale": "associated with body parts"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "danger"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.6
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "'danger' can relate to being at sea, suggesting 'ship'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.6
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "'danger' can relate to being at sea, and 'ship' is on the board.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.6
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "'danger' can relate to being at sea, and 'ship' is a relevant word.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "danger",
+          "count": 2,
+          "rationale": "Connects to poison and cycle."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.7,
+              "space": 0.3
+            },
+            "ranked_guesses": [
+              "ship",
+              "space"
+            ],
+            "rationale": "The clue 'navigation' is related to both 'ship' and 'space', but 'ship' is a more direct connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.6,
+              "space": 0.4
+            },
+            "ranked_guesses": [
+              "ship",
+              "space"
+            ],
+            "rationale": "The clue 'navigation' is related to both 'ship' and 'space', but 'ship' is a more direct connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.7,
+              "space": 0.3
+            },
+            "ranked_guesses": [
+              "ship",
+              "space"
+            ],
+            "rationale": "The clue 'navigation' is related to both 'ship' and 'space', but 'ship' is a more direct connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "associated with ship and server"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vessel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "'vessel' strongly relates to 'ship'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "'Vessel' relates to 'ship' as both are types of water transportation.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "'vessel' relates to 'ship' and there are no immediately obvious negative associations.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ship"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vessel",
+          "count": 3,
+          "rationale": "Refers to ship, pool, and server."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "toxic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "poison": 0.8
+            },
+            "ranked_guesses": [
+              "poison"
+            ],
+            "rationale": "The clue 'toxic' is closely related to 'poison', which is a word on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "poison": 0.8
+            },
+            "ranked_guesses": [
+              "poison"
+            ],
+            "rationale": "The clue 'toxic' is closely related to 'poison', which is a word on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "poison": 0.8
+            },
+            "ranked_guesses": [
+              "poison"
+            ],
+            "rationale": "poison is related to toxic",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "poison"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "toxic",
+          "count": 2,
+          "rationale": "relates to poison and possibly other blue words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wealth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "millionaire": 0.7
+            },
+            "ranked_guesses": [
+              "millionaire"
+            ],
+            "rationale": "'Wealth' connects to 'millionaire' and it hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "millionaire": 0.7
+            },
+            "ranked_guesses": [
+              "millionaire"
+            ],
+            "rationale": "'Wealth' connects to 'millionaire' and it hasn't been revealed yet.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "millionaire": 0.6
+            },
+            "ranked_guesses": [
+              "millionaire"
+            ],
+            "rationale": "'Wealth' connects to 'millionaire' and it hasn't been guessed yet.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "wealth",
+          "count": 2,
+          "rationale": "referencing millionaire and potentially spot"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "web"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.8
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "The clue 'web' is closely related to 'spider', which is a common association.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.8
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "The clue 'web' is closely related to 'spider', which is a common association.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.8
+            },
+            "ranked_guesses": [
+              "spider"
+            ],
+            "rationale": "The clue 'web' is closely related to 'spider'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spider"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "web",
+          "count": 2,
+          "rationale": "associated with spider and server"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'royal' can relate to parks as royal parks.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'royal' can relate to parks as in royal parks.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'royal' can relate to parks as in royal parks.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "royal",
+          "count": 2,
+          "rationale": "Connects to England and potentially Mexico (historical royalty)"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "play"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.4,
+              "pool": 0.6
+            },
+            "ranked_guesses": [
+              "pool",
+              "park"
+            ],
+            "rationale": "The clue 'play' is related to leisure activities, and 'pool' and 'park' are both places where people often play.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.4,
+              "pool": 0.6
+            },
+            "ranked_guesses": [
+              "pool",
+              "park"
+            ],
+            "rationale": "The clue 'play' is related to leisure activities, and 'pool' and 'park' are both places where people often play.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.4,
+              "pool": 0.6
+            },
+            "ranked_guesses": [
+              "pool",
+              "park"
+            ],
+            "rationale": "The clue 'play' is related to leisure activities, and 'pool' and 'park' are both places where people often play.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "play",
+          "count": 2,
+          "rationale": "associated with recreational activities"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "area"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.7
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'area' can relate to a park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'area' can relate to a park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'area' can relate to a park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "area",
+          "count": 2,
+          "rationale": "Connecting spot and space."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "movement"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.2,
+              "cycle": 0.6,
+              "foot": 0.4
+            },
+            "ranked_guesses": [
+              "cycle",
+              "foot",
+              "arm"
+            ],
+            "rationale": "The clue 'movement' is related to words that imply action or physical activity, so 'cycle', 'foot', and 'arm' are possible guesses.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.2,
+              "cycle": 0.6,
+              "foot": 0.4
+            },
+            "ranked_guesses": [
+              "cycle",
+              "foot",
+              "arm"
+            ],
+            "rationale": "The clue 'movement' is related to words that imply action or physical activity, so 'cycle', 'foot', and 'arm' are possible guesses.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.2,
+              "cycle": 0.6,
+              "foot": 0.4
+            },
+            "ranked_guesses": [
+              "cycle",
+              "foot",
+              "arm"
+            ],
+            "rationale": "The clue 'movement' is related to words that imply action or physical activity, so I'm guessing 'cycle', 'foot', and 'arm' as they are all related to movement in some way.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "movement",
+          "count": 2,
+          "rationale": "associated with words on the board"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "control"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'control' can relate to managing a 'park' or having control over a space.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'control' can relate to managing a 'park' or having control over it.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'control' can relate to managing a 'park' or having control over a space.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "control",
+          "count": 2,
+          "rationale": "connects switch and server"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "limb"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.7,
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "arm",
+              "foot"
+            ],
+            "rationale": "The clue 'limb' is related to body parts, and 'arm' and 'foot' are the most relevant words on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.7,
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "arm",
+              "foot"
+            ],
+            "rationale": "The clue 'limb' is related to body parts, and 'arm' and 'foot' are the most likely words on the board that fit this description.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.7,
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "arm",
+              "foot"
+            ],
+            "rationale": "The clue 'limb' is related to body parts, so 'arm' and 'foot' are the most likely guesses.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "limb",
+          "count": 2,
+          "rationale": "related to body parts"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "bright"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "bright can relate to park as in a bright sunny park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "bright can relate to park as in a bright park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "bright can relate to park as in a bright park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "bright",
+          "count": 2,
+          "rationale": "Connecting to copper and spot."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "exercise"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.4,
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "foot",
+              "arm"
+            ],
+            "rationale": "The clue 'exercise' is related to physical activity, and 'foot' and 'arm' are both body parts that are often used in exercise.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "leg": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "leg"
+            ],
+            "rationale": "The clue 'exercise' is related to physical activity, and 'arm' and 'leg' are both body parts often used in exercise.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "leg": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "leg"
+            ],
+            "rationale": "The clue 'exercise' is related to physical activity, and 'arm' and 'leg' are both body parts that are often exercised.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "exercise",
+          "count": 2,
+          "rationale": "associated with foot and swing"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "nation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'Nation' can relate to 'park' as in national park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'Nation' can relate to 'park' as in national park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6
+            },
+            "ranked_guesses": [
+              "arm"
+            ],
+            "rationale": "'Nation' can relate to 'arm' as in armed forces.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "nation",
+          "count": 2,
+          "rationale": "Hints at Mexico and England."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "computer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "server": 0.7,
+              "space": 0.3
+            },
+            "ranked_guesses": [
+              "server",
+              "space"
+            ],
+            "rationale": "The clue 'computer' is related to 'server' and 'space' can be related to computer space, but 'server' is a more direct connection.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "server": 0.7,
+              "switch": 0.4
+            },
+            "ranked_guesses": [
+              "server",
+              "switch"
+            ],
+            "rationale": "The clue 'computer' is related to technology, and 'server' and 'switch' are both technology-related words on the board.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "server": 0.7,
+              "space": 0.3
+            },
+            "ranked_guesses": [
+              "server",
+              "space"
+            ],
+            "rationale": "The clue 'computer' is related to 'server' and 'space' can be related to computer space or storage.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "computer",
+          "count": 2,
+          "rationale": "related to server"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mark"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6
+            },
+            "ranked_guesses": [
+              "arm"
+            ],
+            "rationale": "'mark' could relate to leaving a 'mark' on something, and an 'arm' can leave a mark (tattoo, injury).",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6
+            },
+            "ranked_guesses": [
+              "arm"
+            ],
+            "rationale": "'mark' can relate to leaving a 'mark' on an 'arm' with a tattoo or injury.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6
+            },
+            "ranked_guesses": [
+              "arm"
+            ],
+            "rationale": "'mark' can relate to 'arm' as in leaving a mark or a physical arm.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "mark",
+          "count": 2,
+          "rationale": "Connects to spot and potentially smuggler."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "recreation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6,
+              "pool": 0.4
+            },
+            "ranked_guesses": [
+              "park",
+              "pool"
+            ],
+            "rationale": "The clue 'recreation' is related to leisure activities, and both 'park' and 'pool' are common places for recreational activities.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6,
+              "pool": 0.4
+            },
+            "ranked_guesses": [
+              "park",
+              "pool"
+            ],
+            "rationale": "The clue 'recreation' is related to leisure activities, and both 'park' and 'pool' are common places for recreation.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6,
+              "pool": 0.4
+            },
+            "ranked_guesses": [
+              "park",
+              "pool"
+            ],
+            "rationale": "The clue 'recreation' is related to leisure activities, and both 'park' and 'pool' are common places for recreation.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "recreation",
+          "count": 2,
+          "rationale": "associated with leisure activities"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "risk"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'risk' can relate to 'park' as in a skate park or taking risks in a park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pool": 0.6
+            },
+            "ranked_guesses": [
+              "pool"
+            ],
+            "rationale": "'risk' can relate to 'pool' as in a risk of drowning or danger near water.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "foot"
+            ],
+            "rationale": "'risk' and 'foot' both relate to potential dangers or hazards.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "risk",
+          "count": 2,
+          "rationale": "Connects to 'spot' and 'cycle'"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "network"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "server": 0.7,
+              "switch": 0.4
+            },
+            "ranked_guesses": [
+              "server",
+              "switch"
+            ],
+            "rationale": "The clue 'network' is related to computer systems, and 'server' and 'switch' are both relevant terms in that context.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "server": 0.7,
+              "switch": 0.4
+            },
+            "ranked_guesses": [
+              "server",
+              "switch"
+            ],
+            "rationale": "The clue 'network' is related to computer systems, so I'm guessing 'server' and 'switch' as they are both relevant to networking.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "server": 0.7,
+              "switch": 0.4
+            },
+            "ranked_guesses": [
+              "server",
+              "switch"
+            ],
+            "rationale": "The clue 'network' is related to computer systems, and 'server' and 'switch' are both relevant terms in this context.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "network",
+          "count": 2,
+          "rationale": "associated with server and possibly other blue words"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "device"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'device' can relate to 'park' as in a technology park or a device used in a park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'device' can relate to 'park' as in a technology park or a device used in a park.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'device' can relate to 'park' as in a technology park or a place to store devices.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "device",
+          "count": 2,
+          "rationale": "Connecting to server and switch."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flex"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.4,
+              "foot": 0.6
+            },
+            "ranked_guesses": [
+              "foot",
+              "arm"
+            ],
+            "rationale": "The clue 'flex' is related to flexibility, which is often associated with body parts like 'foot' and 'arm'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "foot": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "foot"
+            ],
+            "rationale": "The clue 'flex' is related to flexibility, which is often associated with body parts like 'arm' and 'foot' that can bend or move in various ways.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "foot": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "foot"
+            ],
+            "rationale": "The clue 'flex' is related to flexibility, which is often associated with body parts like 'arm' and 'foot' that can bend or move in various ways.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flex",
+          "count": 2,
+          "rationale": "associated with words on the board"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fluid"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'fluid' can relate to parks with water features like pools or rivers.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'fluid' can relate to 'park' as in a fluid landscape or a park's flow.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "park": 0.6
+            },
+            "ranked_guesses": [
+              "park"
+            ],
+            "rationale": "'fluid' can relate to 'park' as in a fluid space or a park with water features.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fluid",
+          "count": 2,
+          "rationale": "Connects to pool and potentially copper."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "support"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.7,
+              "leg": 0.6
+            },
+            "ranked_guesses": [
+              "arm",
+              "leg"
+            ],
+            "rationale": "The clue 'support' is related to the words 'arm' and 'leg', which are both body parts that provide support.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "leg": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "leg"
+            ],
+            "rationale": "The clue 'support' is related to the words 'arm' and 'leg', which are both body parts that provide support.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "spot": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "spot"
+            ],
+            "rationale": "The clue 'support' is related to the word 'arm' as in 'arm support', and also 'spot' as in 'spot support'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3.3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "support",
+          "count": 2,
+          "rationale": "associated with swing and server"
+        },
+        "agent_id": "Llama 3.3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "metallic"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

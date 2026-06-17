@@ -1,0 +1,2643 @@
+{
+  "board": {
+    "identities": {
+      "antarctica": "neutral",
+      "bug": "red",
+      "center": "blue",
+      "cook": "red",
+      "dance": "neutral",
+      "degree": "neutral",
+      "dragon": "blue",
+      "eagle": "red",
+      "fighter": "blue",
+      "helicopter": "neutral",
+      "hood": "red",
+      "kid": "red",
+      "lawyer": "blue",
+      "link": "neutral",
+      "mail": "blue",
+      "mouth": "blue",
+      "plate": "red",
+      "princess": "blue",
+      "rose": "red",
+      "saturn": "neutral",
+      "ship": "red",
+      "spell": "assassin",
+      "theater": "neutral",
+      "tower": "blue",
+      "trip": "red"
+    },
+    "revealed": [
+      "center",
+      "cook",
+      "dragon",
+      "eagle",
+      "fighter",
+      "helicopter",
+      "hood",
+      "kid",
+      "lawyer",
+      "mail",
+      "mouth",
+      "plate",
+      "princess",
+      "rose",
+      "ship",
+      "tower"
+    ],
+    "words": {
+      "antarctica": "neutral",
+      "bug": "red",
+      "center": "blue",
+      "cook": "red",
+      "dance": "neutral",
+      "degree": "neutral",
+      "dragon": "blue",
+      "eagle": "red",
+      "fighter": "blue",
+      "helicopter": "neutral",
+      "hood": "red",
+      "kid": "red",
+      "lawyer": "blue",
+      "link": "neutral",
+      "mail": "blue",
+      "mouth": "blue",
+      "plate": "red",
+      "princess": "blue",
+      "rose": "red",
+      "saturn": "neutral",
+      "ship": "red",
+      "spell": "assassin",
+      "theater": "neutral",
+      "tower": "blue",
+      "trip": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "feather",
+        "count": 1,
+        "rationale": "Eagle is a bird, and birds have feathers."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.8
+        },
+        "ranked_guesses": [
+          "eagle"
+        ],
+        "rationale": "Eagle is strongly associated with feathers.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.8
+        },
+        "ranked_guesses": [
+          "eagle"
+        ],
+        "rationale": "Eagle is strongly associated with feathers.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.8
+        },
+        "ranked_guesses": [
+          "eagle"
+        ],
+        "rationale": "Eagle is strongly associated with feathers.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 2,
+        "rationale": "Connects to 'princess' and 'dragon', both blue words, without directly revealing them."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.7,
+          "fighter": 0.5,
+          "princess": 0.9
+        },
+        "ranked_guesses": [
+          "princess",
+          "dragon",
+          "fighter"
+        ],
+        "rationale": "'royal' suggests 'princess' as the strongest connection, followed by 'dragon' (often associated with royalty) and 'fighter' (as in royal guard or knight).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.5,
+          "fighter": 0.6,
+          "princess": 0.9
+        },
+        "ranked_guesses": [
+          "princess",
+          "fighter",
+          "dragon"
+        ],
+        "rationale": "'princess' is strongly associated with 'royal', 'fighter' could relate to 'royal' as in royal guard, and 'dragon' is a stretch but sometimes linked to royalty in myths.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.6,
+          "fighter": 0.7,
+          "princess": 0.9
+        },
+        "ranked_guesses": [
+          "princess",
+          "fighter",
+          "dragon"
+        ],
+        "rationale": "'princess' is strongly associated with 'royal', 'fighter' and 'dragon' are secondary guesses related to royalty or medieval themes.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vehicle",
+        "count": 3,
+        "rationale": "Covers 'ship', 'helicopter', and 'cook' (as in a vehicle for food)"
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helicopter": 0.8
+        },
+        "ranked_guesses": [
+          "helicopter"
+        ],
+        "rationale": "Helicopter is a vehicle and fits the clue 'vehicle'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helicopter": 0.8
+        },
+        "ranked_guesses": [
+          "helicopter"
+        ],
+        "rationale": "Helicopter is a vehicle and fits the clue 'vehicle'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helicopter": 0.8
+        },
+        "ranked_guesses": [
+          "helicopter"
+        ],
+        "rationale": "Helicopter is a vehicle and matches the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "royalty",
+        "count": 2,
+        "rationale": "The words 'dragon' and 'princess' are both associated with royalty, and 'princess' has already been revealed, leaving 'dragon' as the primary target. 'Tower' could also loosely fit as a castle structure, but 'dragon' is the stronger connection."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.7,
+          "rose": 0.6
+        },
+        "ranked_guesses": [
+          "dragon",
+          "rose"
+        ],
+        "rationale": "'dragon' and 'rose' are associated with royalty. Dragon is often a symbol in royal crests, and rose is linked to royal gardens or symbols.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.7,
+          "rose": 0.9
+        },
+        "ranked_guesses": [
+          "rose",
+          "dragon"
+        ],
+        "rationale": "'rose' is strongly associated with royalty (e.g., War of the Roses). 'dragon' is a mythical creature often linked to royalty in folklore.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.6,
+          "rose": 0.7
+        },
+        "ranked_guesses": [
+          "rose",
+          "dragon"
+        ],
+        "rationale": "'rose' is associated with royalty (e.g., War of the Roses), and 'dragon' is a mythical creature often linked to royalty in stories.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "kitchen",
+        "count": 1,
+        "rationale": "Cook is a red word and closely related to kitchen."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cook": 0.8
+        },
+        "ranked_guesses": [
+          "cook"
+        ],
+        "rationale": "Cook is the most likely word associated with kitchen in the current board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cook": 0.8
+        },
+        "ranked_guesses": [
+          "cook"
+        ],
+        "rationale": "Cook is the most directly related to kitchen among the remaining words.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cook": 0.8
+        },
+        "ranked_guesses": [
+          "cook"
+        ],
+        "rationale": "Cook is the most directly related to kitchen among the remaining words.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythical",
+        "count": 2,
+        "rationale": "Dragon and fighter are both associated with mythical creatures or warriors, fitting the clue."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "saturn": 0.7
+        },
+        "ranked_guesses": [
+          "dragon",
+          "saturn"
+        ],
+        "rationale": "'dragon' is strongly associated with 'mythical' and 'saturn' is also a mythical figure.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "saturn": 0.7,
+          "tower": 0.5
+        },
+        "ranked_guesses": [
+          "dragon",
+          "saturn",
+          "tower"
+        ],
+        "rationale": "'dragon' is strongly associated with 'mythical'. 'saturn' (Roman god) and 'tower' (mythical structures like Babel) are secondary.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.9,
+          "saturn": 0.7
+        },
+        "ranked_guesses": [
+          "dragon",
+          "saturn"
+        ],
+        "rationale": "'dragon' is strongly associated with 'mythical'. 'saturn' is also mythical but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ship",
+        "count": 1,
+        "rationale": "Directly related to the word 'ship' which is a red team word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "justice",
+        "count": 2,
+        "rationale": "Connects to 'lawyer' and 'fighter' (as in 'fighter for justice'), both blue team words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.6,
+          "lawyer": 0.9,
+          "saturn": 0.3
+        },
+        "ranked_guesses": [
+          "lawyer",
+          "fighter",
+          "saturn"
+        ],
+        "rationale": "'lawyer' is strongly associated with 'justice'. 'fighter' could relate to justice in a broader sense, and 'saturn' is a weaker connection.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.6,
+          "lawyer": 0.9,
+          "tower": 0.5
+        },
+        "ranked_guesses": [
+          "lawyer",
+          "fighter",
+          "tower"
+        ],
+        "rationale": "'lawyer' is strongly associated with 'justice'. 'fighter' and 'tower' are less directly related but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.7,
+          "lawyer": 0.9,
+          "saturn": 0.5
+        },
+        "ranked_guesses": [
+          "lawyer",
+          "fighter",
+          "saturn"
+        ],
+        "rationale": "'lawyer' is strongly associated with 'justice'. 'fighter' could relate to justice in a broader sense, and 'saturn' is a stretch but could relate to Roman mythology and justice.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sail",
+        "count": 1,
+        "rationale": "Indirectly related to 'ship', a red team word, without directly mentioning it."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "The clue 'sail' is strongly associated with 'ship', which is a red team word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "The clue 'sail' is strongly associated with 'ship', which is a red team word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "The clue 'sail' is strongly associated with 'ship', which is a remaining word on the board and a likely target for the red team.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fighter",
+        "count": 1,
+        "rationale": "'fighter' connects to 'dragon' and 'eagle' which are already revealed, but also hints at the remaining blue word 'fighter'."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "marine",
+        "count": 1,
+        "rationale": "\u6697\u793a\u4e0e\u6d77\u6d0b\u76f8\u5173\u7684\u8bcd\uff0c\u5982'ship'\u3002"
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "The clue 'marine' strongly suggests 'ship', which is a red team word and has not been guessed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "The clue 'marine' strongly suggests 'ship', which is a red team word and has not been guessed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ship": 0.8
+        },
+        "ranked_guesses": [
+          "ship"
+        ],
+        "rationale": "The word 'marine' is strongly associated with 'ship', which is a red team word and has not been guessed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "castle",
+        "count": 2,
+        "rationale": "'castle' connects to 'tower' and 'fighter' (as in castle defenders), both blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.7,
+          "tower": 0.9
+        },
+        "ranked_guesses": [
+          "tower",
+          "fighter"
+        ],
+        "rationale": "'castle' strongly relates to 'tower' as part of castle structures, and 'fighter' could relate to knights or defenders of a castle.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.7,
+          "tower": 0.9
+        },
+        "ranked_guesses": [
+          "tower",
+          "fighter"
+        ],
+        "rationale": "'castle' strongly relates to 'tower' as part of castle structures. 'fighter' is less directly related but could fit if considering knights or defenders.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fighter": 0.7,
+          "tower": 0.9
+        },
+        "ranked_guesses": [
+          "tower",
+          "fighter"
+        ],
+        "rationale": "'castle' strongly suggests 'tower' as part of a castle structure. 'fighter' is less directly related but could fit as a defender of a castle.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "hood",
+        "count": 1,
+        "rationale": "Hood is a red team word and can be guessed directly as it does not match any other word on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "warrior",
+        "count": 2,
+        "rationale": "'fighter' and 'dragon' are both blue words that can be associated with 'warrior', and neither is directly revealed in the clue."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "fighter": 0.9,
+          "kid": 0.5
+        },
+        "ranked_guesses": [
+          "fighter",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'fighter' strongly relates to 'warrior'. 'bug' and 'kid' are less likely but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "fighter": 0.9,
+          "kid": 0.5
+        },
+        "ranked_guesses": [
+          "fighter",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'fighter' is strongly associated with 'warrior'. 'bug' and 'kid' are less obvious but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "fighter": 0.9,
+          "kid": 0.5
+        },
+        "ranked_guesses": [
+          "fighter",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'fighter' strongly relates to 'warrior'. 'bug' and 'kid' are less obvious but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "cover",
+        "count": 1,
+        "rationale": "Hood can be associated with cover, as in a hood covering the head."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.8
+        },
+        "ranked_guesses": [
+          "hood"
+        ],
+        "rationale": "Hood can be a cover, like a cloak or a car hood, matching the clue 'cover'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.8
+        },
+        "ranked_guesses": [
+          "hood"
+        ],
+        "rationale": "Hood is the only remaining word that fits the clue 'cover' and is a red team word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hood": 0.8
+        },
+        "ranked_guesses": [
+          "hood"
+        ],
+        "rationale": "Hood can be a cover or part of a garment that covers the head, aligning with the clue 'cover'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "postal",
+        "count": 2,
+        "rationale": "'mail' and 'center' are both related to postal services, fitting the remaining blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mail": 0.9,
+          "saturn": 0.6
+        },
+        "ranked_guesses": [
+          "mail",
+          "saturn"
+        ],
+        "rationale": "'mail' is strongly associated with 'postal'. 'saturn' is a stretch but could relate to postal services via the planet's rings resembling mail delivery routes.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "mail": 0.9,
+          "saturn": 0.3
+        },
+        "ranked_guesses": [
+          "mail",
+          "bug",
+          "saturn"
+        ],
+        "rationale": "'postal' strongly relates to 'mail'. 'bug' could relate to postal service issues, and 'saturn' is a stretch for postal stamps.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.6,
+          "mail": 0.9,
+          "saturn": 0.3
+        },
+        "ranked_guesses": [
+          "mail",
+          "link",
+          "saturn"
+        ],
+        "rationale": "'postal' strongly relates to 'mail'. 'link' could relate to postal chains. 'saturn' is a weaker guess related to postal services via mythology.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "plate",
+        "count": 1,
+        "rationale": "Plate is a red team word and can be guessed directly as it does not match any other word on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "body",
+        "count": 2,
+        "rationale": "'mouth' and 'center' are both parts of the body, and both are blue team words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "kid": 0.5,
+          "mouth": 0.7
+        },
+        "ranked_guesses": [
+          "mouth",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'body' suggests parts of the body or related terms. 'mouth' is a direct body part, 'bug' could relate to 'body' in terms of 'bug body', and 'kid' is a weaker association as 'kid' can mean child or young goat.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "kid": 0.5,
+          "mouth": 0.7
+        },
+        "ranked_guesses": [
+          "mouth",
+          "bug",
+          "kid"
+        ],
+        "rationale": "The clue 'body' suggests words related to parts of the body or creatures. 'Mouth' is a direct body part, 'bug' can be associated with body parts (e.g., insect legs), and 'kid' is a weaker association (child's body).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "kid": 0.5,
+          "mouth": 0.7
+        },
+        "ranked_guesses": [
+          "mouth",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'mouth' is a part of the body, 'bug' can be associated with body parts like legs or antennae, and 'kid' is a stretch but could relate to 'body' in terms of family (kid as a child).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "dish",
+        "count": 1,
+        "rationale": "Plate is a kitchen item, often used as a dish."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plate": 0.8
+        },
+        "ranked_guesses": [
+          "plate"
+        ],
+        "rationale": "Plate is the only word left that could be related to 'dish'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plate": 0.8
+        },
+        "ranked_guesses": [
+          "plate"
+        ],
+        "rationale": "Plate is directly related to the clue 'dish' and is a red team word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plate": 0.8
+        },
+        "ranked_guesses": [
+          "plate"
+        ],
+        "rationale": "Plate is directly related to the clue 'dish' and is a red team word.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "body",
+        "count": 2,
+        "rationale": "Connects to 'mouth' and 'center' which are both blue team words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.7,
+          "kid": 0.5,
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'mouth' is a clear part of the body, 'bug' can refer to insects which have body parts, and 'kid' is a weaker association as children have bodies.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bug": 0.6,
+          "kid": 0.5,
+          "mouth": 0.7
+        },
+        "ranked_guesses": [
+          "mouth",
+          "bug",
+          "kid"
+        ],
+        "rationale": "'body' suggests parts of the body or related terms. 'mouth' is a part of the body, 'bug' can be associated with body parts (e.g., antennae), and 'kid' is a weaker association.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "young",
+        "count": 1,
+        "rationale": "'Young' can hint at 'kid', which is a red team word and does not match any other word on the board."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kid": 0.8
+        },
+        "ranked_guesses": [
+          "kid"
+        ],
+        "rationale": "The word 'young' is most closely associated with 'kid' on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kid": 0.8
+        },
+        "ranked_guesses": [
+          "kid"
+        ],
+        "rationale": "'Young' is most likely associated with 'kid' on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kid": 0.8
+        },
+        "ranked_guesses": [
+          "kid"
+        ],
+        "rationale": "The word 'young' is most likely to be associated with 'kid' on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "hub",
+        "count": 1,
+        "rationale": "'hub' connects to 'center', the remaining blue word, without directly revealing it or matching any other board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "center": 0.9
+        },
+        "ranked_guesses": [
+          "center"
+        ],
+        "rationale": "The clue 'hub' suggests a central point or connection, and 'center' is the most directly related word on the board.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "center": 0.9
+        },
+        "ranked_guesses": [
+          "center"
+        ],
+        "rationale": "The clue 'hub' suggests a central point or connection, and 'center' is the most directly related word remaining on the board.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "center": 0.9
+        },
+        "ranked_guesses": [
+          "center"
+        ],
+        "rationale": "'hub' suggests a central point, and 'center' is the most directly related word on the board.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "feather"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "princess"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vehicle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "helicopter"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royalty"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "rose"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "kitchen"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cook"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "ship",
+        "count": 1,
+        "rationale": "Directly related to the word 'ship' which is a red team word."
+      },
+      "event": "illegal_clue",
+      "matched_word": "ship",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "justice"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "lawyer"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sail"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ship"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "fighter",
+        "count": 1,
+        "rationale": "'fighter' connects to 'dragon' and 'eagle' which are already revealed, but also hints at the remaining blue word 'fighter'."
+      },
+      "event": "illegal_clue",
+      "matched_word": "fighter",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "marine"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "castle"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "tower"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "hood",
+        "count": 1,
+        "rationale": "Hood is a red team word and can be guessed directly as it does not match any other word on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "hood",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "warrior"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fighter"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "cover"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hood"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "postal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mail"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "plate",
+        "count": 1,
+        "rationale": "Plate is a red team word and can be guessed directly as it does not match any other word on the board."
+      },
+      "event": "illegal_clue",
+      "matched_word": "plate",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "body"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "dish"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "plate"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "body"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mouth"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "young"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "kid"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "hub"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "center"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 76,
+    "public_event_count": 53,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-002-qwen_qwen_2_5_72b_instruct-vs-deepseek_deepseek_chat_v3_0324",
+    "team_blue": "DeepSeek V3 0324",
+    "team_red": "Qwen2.5 72B Instruct",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "feather"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.8
+            },
+            "ranked_guesses": [
+              "eagle"
+            ],
+            "rationale": "Eagle is strongly associated with feathers.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.8
+            },
+            "ranked_guesses": [
+              "eagle"
+            ],
+            "rationale": "Eagle is strongly associated with feathers.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.8
+            },
+            "ranked_guesses": [
+              "eagle"
+            ],
+            "rationale": "Eagle is strongly associated with feathers.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "feather",
+          "count": 1,
+          "rationale": "Eagle is a bird, and birds have feathers."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.7,
+              "fighter": 0.5,
+              "princess": 0.9
+            },
+            "ranked_guesses": [
+              "princess",
+              "dragon",
+              "fighter"
+            ],
+            "rationale": "'royal' suggests 'princess' as the strongest connection, followed by 'dragon' (often associated with royalty) and 'fighter' (as in royal guard or knight).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.5,
+              "fighter": 0.6,
+              "princess": 0.9
+            },
+            "ranked_guesses": [
+              "princess",
+              "fighter",
+              "dragon"
+            ],
+            "rationale": "'princess' is strongly associated with 'royal', 'fighter' could relate to 'royal' as in royal guard, and 'dragon' is a stretch but sometimes linked to royalty in myths.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.6,
+              "fighter": 0.7,
+              "princess": 0.9
+            },
+            "ranked_guesses": [
+              "princess",
+              "fighter",
+              "dragon"
+            ],
+            "rationale": "'princess' is strongly associated with 'royal', 'fighter' and 'dragon' are secondary guesses related to royalty or medieval themes.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "princess"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "royal",
+          "count": 2,
+          "rationale": "Connects to 'princess' and 'dragon', both blue words, without directly revealing them."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "vehicle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "helicopter": 0.8
+            },
+            "ranked_guesses": [
+              "helicopter"
+            ],
+            "rationale": "Helicopter is a vehicle and fits the clue 'vehicle'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helicopter": 0.8
+            },
+            "ranked_guesses": [
+              "helicopter"
+            ],
+            "rationale": "Helicopter is a vehicle and fits the clue 'vehicle'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helicopter": 0.8
+            },
+            "ranked_guesses": [
+              "helicopter"
+            ],
+            "rationale": "Helicopter is a vehicle and matches the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "helicopter"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vehicle",
+          "count": 3,
+          "rationale": "Covers 'ship', 'helicopter', and 'cook' (as in a vehicle for food)"
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royalty"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.7,
+              "rose": 0.6
+            },
+            "ranked_guesses": [
+              "dragon",
+              "rose"
+            ],
+            "rationale": "'dragon' and 'rose' are associated with royalty. Dragon is often a symbol in royal crests, and rose is linked to royal gardens or symbols.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.7,
+              "rose": 0.9
+            },
+            "ranked_guesses": [
+              "rose",
+              "dragon"
+            ],
+            "rationale": "'rose' is strongly associated with royalty (e.g., War of the Roses). 'dragon' is a mythical creature often linked to royalty in folklore.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.6,
+              "rose": 0.7
+            },
+            "ranked_guesses": [
+              "rose",
+              "dragon"
+            ],
+            "rationale": "'rose' is associated with royalty (e.g., War of the Roses), and 'dragon' is a mythical creature often linked to royalty in stories.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "rose"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "royalty",
+          "count": 2,
+          "rationale": "The words 'dragon' and 'princess' are both associated with royalty, and 'princess' has already been revealed, leaving 'dragon' as the primary target. 'Tower' could also loosely fit as a castle structure, but 'dragon' is the stronger connection."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "kitchen"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cook": 0.8
+            },
+            "ranked_guesses": [
+              "cook"
+            ],
+            "rationale": "Cook is the most likely word associated with kitchen in the current board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cook": 0.8
+            },
+            "ranked_guesses": [
+              "cook"
+            ],
+            "rationale": "Cook is the most directly related to kitchen among the remaining words.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cook": 0.8
+            },
+            "ranked_guesses": [
+              "cook"
+            ],
+            "rationale": "Cook is the most directly related to kitchen among the remaining words.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cook"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "kitchen",
+          "count": 1,
+          "rationale": "Cook is a red word and closely related to kitchen."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythical"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "saturn": 0.7
+            },
+            "ranked_guesses": [
+              "dragon",
+              "saturn"
+            ],
+            "rationale": "'dragon' is strongly associated with 'mythical' and 'saturn' is also a mythical figure.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "saturn": 0.7,
+              "tower": 0.5
+            },
+            "ranked_guesses": [
+              "dragon",
+              "saturn",
+              "tower"
+            ],
+            "rationale": "'dragon' is strongly associated with 'mythical'. 'saturn' (Roman god) and 'tower' (mythical structures like Babel) are secondary.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.9,
+              "saturn": 0.7
+            },
+            "ranked_guesses": [
+              "dragon",
+              "saturn"
+            ],
+            "rationale": "'dragon' is strongly associated with 'mythical'. 'saturn' is also mythical but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythical",
+          "count": 2,
+          "rationale": "Dragon and fighter are both associated with mythical creatures or warriors, fitting the clue."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "justice"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "lawyer"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "sail"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ship"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ship",
+          "count": 1,
+          "rationale": "Directly related to the word 'ship' which is a red team word."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "marine"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "castle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.6,
+              "lawyer": 0.9,
+              "saturn": 0.3
+            },
+            "ranked_guesses": [
+              "lawyer",
+              "fighter",
+              "saturn"
+            ],
+            "rationale": "'lawyer' is strongly associated with 'justice'. 'fighter' could relate to justice in a broader sense, and 'saturn' is a weaker connection.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.6,
+              "lawyer": 0.9,
+              "tower": 0.5
+            },
+            "ranked_guesses": [
+              "lawyer",
+              "fighter",
+              "tower"
+            ],
+            "rationale": "'lawyer' is strongly associated with 'justice'. 'fighter' and 'tower' are less directly related but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.7,
+              "lawyer": 0.9,
+              "saturn": 0.5
+            },
+            "ranked_guesses": [
+              "lawyer",
+              "fighter",
+              "saturn"
+            ],
+            "rationale": "'lawyer' is strongly associated with 'justice'. 'fighter' could relate to justice in a broader sense, and 'saturn' is a stretch but could relate to Roman mythology and justice.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "tower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "justice",
+          "count": 2,
+          "rationale": "Connects to 'lawyer' and 'fighter' (as in 'fighter for justice'), both blue team words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "warrior"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fighter"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "cover"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "The clue 'sail' is strongly associated with 'ship', which is a red team word.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "The clue 'sail' is strongly associated with 'ship', which is a red team word.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "The clue 'sail' is strongly associated with 'ship', which is a remaining word on the board and a likely target for the red team.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hood"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sail",
+          "count": 1,
+          "rationale": "Indirectly related to 'ship', a red team word, without directly mentioning it."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "postal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mail"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fighter",
+          "count": 1,
+          "rationale": "'fighter' connects to 'dragon' and 'eagle' which are already revealed, but also hints at the remaining blue word 'fighter'."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "body"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "dish"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "The clue 'marine' strongly suggests 'ship', which is a red team word and has not been guessed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "The clue 'marine' strongly suggests 'ship', which is a red team word and has not been guessed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ship": 0.8
+            },
+            "ranked_guesses": [
+              "ship"
+            ],
+            "rationale": "The word 'marine' is strongly associated with 'ship', which is a red team word and has not been guessed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "plate"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "marine",
+          "count": 1,
+          "rationale": "\u6697\u793a\u4e0e\u6d77\u6d0b\u76f8\u5173\u7684\u8bcd\uff0c\u5982'ship'\u3002"
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "body"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.7,
+              "tower": 0.9
+            },
+            "ranked_guesses": [
+              "tower",
+              "fighter"
+            ],
+            "rationale": "'castle' strongly relates to 'tower' as part of castle structures, and 'fighter' could relate to knights or defenders of a castle.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.7,
+              "tower": 0.9
+            },
+            "ranked_guesses": [
+              "tower",
+              "fighter"
+            ],
+            "rationale": "'castle' strongly relates to 'tower' as part of castle structures. 'fighter' is less directly related but could fit if considering knights or defenders.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fighter": 0.7,
+              "tower": 0.9
+            },
+            "ranked_guesses": [
+              "tower",
+              "fighter"
+            ],
+            "rationale": "'castle' strongly suggests 'tower' as part of a castle structure. 'fighter' is less directly related but could fit as a defender of a castle.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mouth"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "castle",
+          "count": 2,
+          "rationale": "'castle' connects to 'tower' and 'fighter' (as in castle defenders), both blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "young"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "kid"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "hood",
+          "count": 1,
+          "rationale": "Hood is a red team word and can be guessed directly as it does not match any other word on the board."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "hub"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bug": 0.6,
+              "fighter": 0.9,
+              "kid": 0.5
+            },
+            "ranked_guesses": [
+              "fighter",
+              "bug",
+              "kid"
+            ],
+            "rationale": "'fighter' strongly relates to 'warrior'. 'bug' and 'kid' are less likely but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bug": 0.6,
+              "fighter": 0.9,
+              "kid": 0.5
+            },
+            "ranked_guesses": [
+              "fighter",
+              "bug",
+              "kid"
+            ],
+            "rationale": "'fighter' is strongly associated with 'warrior'. 'bug' and 'kid' are less obvious but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bug": 0.6,
+              "fighter": 0.9,
+              "kid": 0.5
+            },
+            "ranked_guesses": [
+              "fighter",
+              "bug",
+              "kid"
+            ],
+            "rationale": "'fighter' strongly relates to 'warrior'. 'bug' and 'kid' are less obvious but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "center"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "warrior",
+          "count": 2,
+          "rationale": "'fighter' and 'dragon' are both blue words that can be associated with 'warrior', and neither is directly revealed in the clue."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

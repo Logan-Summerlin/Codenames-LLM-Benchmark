@@ -1,0 +1,1070 @@
+{
+  "board": {
+    "identities": {
+      "airport": "blue",
+      "alien": "red",
+      "anchor": "red",
+      "animal": "red",
+      "artist": "neutral",
+      "castle": "assassin",
+      "circle": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "flower": "red",
+      "ghost": "blue",
+      "guitar": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "jungle": "neutral",
+      "kernel": "red",
+      "mirror": "blue",
+      "robot": "blue",
+      "rocket": "blue",
+      "sailor": "neutral",
+      "shadow": "red",
+      "silver": "blue",
+      "spirit": "blue",
+      "station": "neutral",
+      "summer": "red"
+    },
+    "revealed": [
+      "desert",
+      "summer"
+    ],
+    "words": {
+      "airport": "blue",
+      "alien": "red",
+      "anchor": "red",
+      "animal": "red",
+      "artist": "neutral",
+      "castle": "assassin",
+      "circle": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "flower": "red",
+      "ghost": "blue",
+      "guitar": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "jungle": "neutral",
+      "kernel": "red",
+      "mirror": "blue",
+      "robot": "blue",
+      "rocket": "blue",
+      "sailor": "neutral",
+      "shadow": "red",
+      "silver": "blue",
+      "spirit": "blue",
+      "station": "neutral",
+      "summer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sun",
+        "count": 4,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.6,
+          "desert": 0.8,
+          "flower": 0.7,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "desert",
+          "flower",
+          "circle"
+        ],
+        "rationale": "These four words have strong associations with the sun: summer is the sunniest season, desert is hot and sunny, flower (especially sunflower) is sun-related, and circle is the sun's shape.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "flower": 0.7,
+          "shadow": 0.6,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "desert",
+          "flower",
+          "shadow"
+        ],
+        "rationale": "Sun relates to summer, desert (hot), sunflower, and shadows. These are most likely.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.6,
+          "desert": 0.8,
+          "flower": 0.7,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "desert",
+          "flower",
+          "circle"
+        ],
+        "rationale": "Clue 'sun' strongly suggests words related to heat, brightness, or solar associations. Summer is the season of sun, desert is a hot sunny place, flower may refer to sunflower, and circle represents the sun's shape.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shiny",
+        "count": 4,
+        "rationale": "Connects silver, mirror, rocket, and robot, all of which are often described as shiny. Avoids strong associations with red words."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.9,
+          "robot": 0.7,
+          "rocket": 0.7,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "mirror",
+          "silver",
+          "robot",
+          "rocket"
+        ],
+        "rationale": "Mirror and silver are directly associated with shininess. Robot and rocket may be made of shiny metal.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.9,
+          "robot": 0.7,
+          "rocket": 0.6,
+          "silver": 0.85
+        },
+        "ranked_guesses": [
+          "mirror",
+          "silver",
+          "robot",
+          "rocket"
+        ],
+        "rationale": "Mirror is inherently shiny; silver is a shiny metal; robots often have shiny metallic surfaces; rockets are often made of shiny metal. These are the most direct associations with 'shiny'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6,
+          "mirror": 0.9,
+          "rocket": 0.5,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "mirror",
+          "silver",
+          "anchor",
+          "rocket"
+        ],
+        "rationale": "Mirror and silver are directly shiny. Anchor and rocket are metal objects often shiny. Other possibilities like robot or alien are less certain.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "seed",
+        "count": 2,
+        "rationale": "Covers red words kernel and flower, avoiding blue and assassin."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.9,
+          "kernel": 0.8
+        },
+        "ranked_guesses": [
+          "flower",
+          "kernel"
+        ],
+        "rationale": "Seed is directly associated with flower (from seeds) and kernel (a type of seed). Both are on the board and likely red.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.85,
+          "kernel": 0.95
+        },
+        "ranked_guesses": [
+          "kernel",
+          "flower"
+        ],
+        "rationale": "Seed directly relates to kernel (a seed) and flower (grows from seed). Other words like honey are less direct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.8,
+          "kernel": 0.9
+        },
+        "ranked_guesses": [
+          "kernel",
+          "flower"
+        ],
+        "rationale": "Kernel and flower are directly related to seed. Desert and summer already revealed. No other strong associations.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "Connects silver, robot, and rocket (all blue). Though anchor (red) is also metal, it's a manageable risk."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "robot": 0.7,
+          "silver": 0.9
+        },
+        "ranked_guesses": [
+          "silver",
+          "anchor",
+          "robot"
+        ],
+        "rationale": "Silver is a direct metal. Anchors and robots are commonly made of metal, matching the clue 'metal' with count 3.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "robot": 0.6,
+          "silver": 0.9
+        },
+        "ranked_guesses": [
+          "silver",
+          "anchor",
+          "robot"
+        ],
+        "rationale": "Silver is directly a metal. Anchor is commonly made of metal. Robot implies metallic construction. Guessing three as per clue count, then stopping.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "robot": 0.6,
+          "silver": 0.9
+        },
+        "ranked_guesses": [
+          "silver",
+          "anchor",
+          "robot"
+        ],
+        "rationale": "Silver is a metal, anchor is typically made of metal, robot is often metallic.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "garden",
+        "count": 4,
+        "rationale": "animal, flower, kernel, and shadow are all elements associated with a garden."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.9,
+          "honey": 0.6,
+          "jungle": 0.5,
+          "kernel": 0.7
+        },
+        "ranked_guesses": [
+          "flower",
+          "kernel",
+          "honey",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.9,
+          "honey": 0.7,
+          "jungle": 0.6,
+          "kernel": 0.5
+        },
+        "ranked_guesses": [
+          "flower",
+          "honey",
+          "jungle",
+          "kernel"
+        ],
+        "rationale": "Garden clue strongly suggests flower, honey (bees), jungle (wild garden), and kernel (seed).",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.9,
+          "honey": 0.8,
+          "jungle": 0.6,
+          "kernel": 0.7
+        },
+        "ranked_guesses": [
+          "flower",
+          "honey",
+          "kernel",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "phantom",
+        "count": 2,
+        "rationale": "Ghost and spirit are both supernatural entities."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "spirit": 0.85
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "Phantom relates to ghosts and spirits. Ghost is most direct, spirit is also closely related. Count is 2, so guessing both and stopping.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "spirit": 0.8
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "Phantom is synonymous with ghost and spirit.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "shadow": 0.6,
+          "spirit": 0.8
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit",
+          "shadow"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "sun"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "desert"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "shiny"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "seed"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "garden"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "phantom"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 24,
+    "public_event_count": 13,
+    "reason": null,
+    "seed": "3",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "sun"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.6,
+              "desert": 0.8,
+              "flower": 0.7,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "desert",
+              "flower",
+              "circle"
+            ],
+            "rationale": "These four words have strong associations with the sun: summer is the sunniest season, desert is hot and sunny, flower (especially sunflower) is sun-related, and circle is the sun's shape.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "flower": 0.7,
+              "shadow": 0.6,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "desert",
+              "flower",
+              "shadow"
+            ],
+            "rationale": "Sun relates to summer, desert (hot), sunflower, and shadows. These are most likely.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.6,
+              "desert": 0.8,
+              "flower": 0.7,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "desert",
+              "flower",
+              "circle"
+            ],
+            "rationale": "Clue 'sun' strongly suggests words related to heat, brightness, or solar associations. Summer is the season of sun, desert is a hot sunny place, flower may refer to sunflower, and circle represents the sun's shape.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "desert"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sun",
+          "count": 4,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "shiny"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.9,
+              "robot": 0.7,
+              "rocket": 0.7,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "mirror",
+              "silver",
+              "robot",
+              "rocket"
+            ],
+            "rationale": "Mirror and silver are directly associated with shininess. Robot and rocket may be made of shiny metal.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.9,
+              "robot": 0.7,
+              "rocket": 0.6,
+              "silver": 0.85
+            },
+            "ranked_guesses": [
+              "mirror",
+              "silver",
+              "robot",
+              "rocket"
+            ],
+            "rationale": "Mirror is inherently shiny; silver is a shiny metal; robots often have shiny metallic surfaces; rockets are often made of shiny metal. These are the most direct associations with 'shiny'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.6,
+              "mirror": 0.9,
+              "rocket": 0.5,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "mirror",
+              "silver",
+              "anchor",
+              "rocket"
+            ],
+            "rationale": "Mirror and silver are directly shiny. Anchor and rocket are metal objects often shiny. Other possibilities like robot or alien are less certain.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "shiny",
+          "count": 4,
+          "rationale": "Connects silver, mirror, rocket, and robot, all of which are often described as shiny. Avoids strong associations with red words."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "seed"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.9,
+              "kernel": 0.8
+            },
+            "ranked_guesses": [
+              "flower",
+              "kernel"
+            ],
+            "rationale": "Seed is directly associated with flower (from seeds) and kernel (a type of seed). Both are on the board and likely red.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.85,
+              "kernel": 0.95
+            },
+            "ranked_guesses": [
+              "kernel",
+              "flower"
+            ],
+            "rationale": "Seed directly relates to kernel (a seed) and flower (grows from seed). Other words like honey are less direct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.8,
+              "kernel": 0.9
+            },
+            "ranked_guesses": [
+              "kernel",
+              "flower"
+            ],
+            "rationale": "Kernel and flower are directly related to seed. Desert and summer already revealed. No other strong associations.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "seed",
+          "count": 2,
+          "rationale": "Covers red words kernel and flower, avoiding blue and assassin."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "robot": 0.7,
+              "silver": 0.9
+            },
+            "ranked_guesses": [
+              "silver",
+              "anchor",
+              "robot"
+            ],
+            "rationale": "Silver is a direct metal. Anchors and robots are commonly made of metal, matching the clue 'metal' with count 3.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "robot": 0.6,
+              "silver": 0.9
+            },
+            "ranked_guesses": [
+              "silver",
+              "anchor",
+              "robot"
+            ],
+            "rationale": "Silver is directly a metal. Anchor is commonly made of metal. Robot implies metallic construction. Guessing three as per clue count, then stopping.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "robot": 0.6,
+              "silver": 0.9
+            },
+            "ranked_guesses": [
+              "silver",
+              "anchor",
+              "robot"
+            ],
+            "rationale": "Silver is a metal, anchor is typically made of metal, robot is often metallic.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "Connects silver, robot, and rocket (all blue). Though anchor (red) is also metal, it's a manageable risk."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "garden"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.9,
+              "honey": 0.6,
+              "jungle": 0.5,
+              "kernel": 0.7
+            },
+            "ranked_guesses": [
+              "flower",
+              "kernel",
+              "honey",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.9,
+              "honey": 0.7,
+              "jungle": 0.6,
+              "kernel": 0.5
+            },
+            "ranked_guesses": [
+              "flower",
+              "honey",
+              "jungle",
+              "kernel"
+            ],
+            "rationale": "Garden clue strongly suggests flower, honey (bees), jungle (wild garden), and kernel (seed).",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.9,
+              "honey": 0.8,
+              "jungle": 0.6,
+              "kernel": 0.7
+            },
+            "ranked_guesses": [
+              "flower",
+              "honey",
+              "kernel",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "garden",
+          "count": 4,
+          "rationale": "animal, flower, kernel, and shadow are all elements associated with a garden."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "phantom"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "spirit": 0.85
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "Phantom relates to ghosts and spirits. Ghost is most direct, spirit is also closely related. Count is 2, so guessing both and stopping.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "spirit": 0.8
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "Phantom is synonymous with ghost and spirit.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "shadow": 0.6,
+              "spirit": 0.8
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit",
+              "shadow"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "phantom",
+          "count": 2,
+          "rationale": "Ghost and spirit are both supernatural entities."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

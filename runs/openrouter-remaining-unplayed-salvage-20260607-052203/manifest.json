@@ -1,0 +1,38 @@
+{
+  "benchmark": "codenames-openrouter-remaining-unplayed-salvage",
+  "created_at_utc": "2026-06-07T05:22:03.102193+00:00",
+  "elo_initial": 1500.0,
+  "elo_k": 32.0,
+  "game_count": 2,
+  "max_turns": 30,
+  "model_count": 4,
+  "models": [
+    {
+      "label": "DeepSeek V4 Flash",
+      "provider": "DeepSeek",
+      "provider_tag": "deepseek",
+      "slug": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "label": "Mistral Small 4",
+      "provider": "Mistral",
+      "provider_tag": "mistral",
+      "slug": "mistralai/mistral-small-2603"
+    },
+    {
+      "label": "MiMo V2.5",
+      "provider": "Xiaomi",
+      "provider_tag": "xiaomi/fp8",
+      "slug": "xiaomi/mimo-v2.5"
+    },
+    {
+      "label": "MiniMax M3",
+      "provider": "Minimax",
+      "provider_tag": "minimax/fp8",
+      "slug": "minimax/minimax-m3"
+    }
+  ],
+  "pairing_policy": "adjacent pairing over remaining unplayed models that are not currently rate-limited",
+  "provider_policy": "provider.order is pinned per model and allow_fallbacks is false",
+  "schema_version": 1
+}

@@ -1,0 +1,1135 @@
+{
+  "board": {
+    "identities": {
+      "airport": "red",
+      "baker": "blue",
+      "bread": "red",
+      "castle": "red",
+      "comet": "blue",
+      "eagle": "neutral",
+      "flower": "red",
+      "forest": "blue",
+      "galaxy": "neutral",
+      "harbor": "red",
+      "helmet": "blue",
+      "highway": "neutral",
+      "ladder": "assassin",
+      "leather": "red",
+      "memory": "red",
+      "mountain": "blue",
+      "nurse": "blue",
+      "paper": "neutral",
+      "planet": "neutral",
+      "robot": "red",
+      "salt": "red",
+      "summer": "blue",
+      "teacher": "neutral",
+      "telescope": "blue",
+      "village": "neutral"
+    },
+    "revealed": [
+      "castle",
+      "galaxy",
+      "harbor",
+      "ladder",
+      "salt",
+      "village"
+    ],
+    "words": {
+      "airport": "red",
+      "baker": "blue",
+      "bread": "red",
+      "castle": "red",
+      "comet": "blue",
+      "eagle": "neutral",
+      "flower": "red",
+      "forest": "blue",
+      "galaxy": "neutral",
+      "harbor": "red",
+      "helmet": "blue",
+      "highway": "neutral",
+      "ladder": "assassin",
+      "leather": "red",
+      "memory": "red",
+      "mountain": "blue",
+      "nurse": "blue",
+      "paper": "neutral",
+      "planet": "neutral",
+      "robot": "red",
+      "salt": "red",
+      "summer": "blue",
+      "teacher": "neutral",
+      "telescope": "blue",
+      "village": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "medieval",
+        "count": 3,
+        "rationale": "Links to castle, leather, and bread, all red words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.0,
+          "baker": 0.45,
+          "bread": 0.5,
+          "castle": 0.95,
+          "comet": 0.0,
+          "eagle": 0.3,
+          "flower": 0.25,
+          "forest": 0.4,
+          "galaxy": 0.0,
+          "harbor": 0.0,
+          "helmet": 0.75,
+          "highway": 0.0,
+          "ladder": 0.0,
+          "leather": 0.6,
+          "memory": 1.0,
+          "mountain": 0.35,
+          "nurse": 0.0,
+          "paper": 0.15,
+          "planet": 0.0,
+          "robot": 0.0,
+          "salt": 0.2,
+          "summer": 1.0,
+          "teacher": 1.0,
+          "telescope": 0.0,
+          "village": 0.85
+        },
+        "ranked_guesses": [
+          "castle",
+          "village",
+          "helmet",
+          "leather",
+          "bread",
+          "baker",
+          "forest",
+          "mountain",
+          "eagle",
+          "flower",
+          "salt",
+          "paper",
+          "teacher",
+          "memory",
+          "summer",
+          "airport",
+          "comet",
+          "galaxy",
+          "harbor",
+          "highway",
+          "ladder",
+          "nurse",
+          "planet",
+          "robot",
+          "telescope"
+        ],
+        "rationale": "Clue 'medieval' strongly suggests 'castle' (fortified structure), 'village' (common medieval settlement), and 'helmet' (knight's armor). 'Leather' and 'bread' are plausible but less direct. Other words have weak or no connection.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "['castle', 0.95]",
+          "['village', 0.85]",
+          "['helmet', 0.75]",
+          "['leather', 0.65]",
+          "['bread', 0.55]",
+          "['baker', 0.45]",
+          "['forest', 0.35]",
+          "['mountain', 0.25]",
+          "['flower', 0.15]",
+          "['eagle', 0.05]"
+        ],
+        "rationale": "Medieval strongly suggests castle, village, and helmet (knight's helmet). Leather is also plausible for medieval armor or goods. Bread and baker are less strong but possible. Other words are less related.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.5,
+          "castle": 0.95,
+          "helmet": 0.7,
+          "leather": 0.6,
+          "village": 0.85
+        },
+        "ranked_guesses": [
+          "castle",
+          "village",
+          "helmet",
+          "leather",
+          "bread"
+        ],
+        "rationale": "Medieval suggests castle (strongest), village (common medieval setting), helmet (knight's armor), leather (common material), bread (staple food). Other words like forest, mountain, harbor, etc. are less directly medieval.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "Related to harbor and mountain, both associated with travel and exploration."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.75,
+          "galaxy": 0.6,
+          "harbor": 0.8
+        },
+        "ranked_guesses": [
+          "harbor",
+          "airport",
+          "galaxy"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or locations. 'Harbor' and 'airport' are directly associated with travel and navigation. 'Galaxy' relates to space exploration, which also involves navigation. 'Castle' and 'village' are less directly connected, especially since 'castle' was previously guessed by red and revealed as red, and 'village' was neutral. Prior guesses indicate a focus on travel and exploration themes.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.6,
+          "galaxy": 0.4,
+          "harbor": 0.7
+        },
+        "ranked_guesses": [
+          "harbor",
+          "airport",
+          "galaxy"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to travel, exploration, or places associated with movement. 'Harbor' and 'airport' are strongly linked to navigation and travel. 'Galaxy' relates to space navigation, which fits the theme. 'Castle' and 'village' are less directly connected, and 'mountain' could also be considered, but the first three are more closely associated with navigation and travel.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.7,
+          "galaxy": 0.6,
+          "harbor": 0.8
+        },
+        "ranked_guesses": [
+          "harbor",
+          "airport",
+          "galaxy"
+        ],
+        "rationale": "The clue 'navigation' suggests places or objects related to travel or exploration. 'Harbor' and 'airport' are directly associated with transportation and navigation. 'Galaxy' relates to space navigation, fitting the theme. 'Castle' and 'village' are less directly connected, and 'mountain' or 'forest' could also be considered but are less specific to navigation.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sodium",
+        "count": 2,
+        "rationale": "Connects salt (sodium chloride) and bread (often contains salt)."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.3,
+          "bread": 0.2,
+          "salt": 0.95
+        },
+        "ranked_guesses": [
+          "salt",
+          "baker",
+          "bread"
+        ],
+        "rationale": "Sodium strongly relates to salt (sodium chloride). Baker and bread are loosely related via baking soda, but much less likely. Salt is the top guess.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.05,
+          "baker": 0.3,
+          "bread": 0.2,
+          "comet": 0.05,
+          "eagle": 0.05,
+          "flower": 0.05,
+          "forest": 0.05,
+          "galaxy": 0.05,
+          "helmet": 0.05,
+          "highway": 0.05,
+          "ladder": 0.05,
+          "leather": 0.05,
+          "memory": 0.05,
+          "mountain": 0.05,
+          "nurse": 0.1,
+          "paper": 0.05,
+          "planet": 0.05,
+          "robot": 0.05,
+          "salt": 0.95,
+          "summer": 0.05,
+          "teacher": 0.05,
+          "telescope": 0.05
+        },
+        "ranked_guesses": [
+          "salt",
+          "baker",
+          "bread",
+          "nurse",
+          "teacher",
+          "memory",
+          "paper",
+          "robot",
+          "leather",
+          "helmet",
+          "ladder",
+          "highway",
+          "airport",
+          "summer",
+          "mountain",
+          "forest",
+          "flower",
+          "eagle",
+          "comet",
+          "galaxy",
+          "planet",
+          "telescope"
+        ],
+        "rationale": "Sodium strongly suggests salt (sodium chloride). Baker and bread are related to salt in baking, but less direct. The clue count is 2, so salt is the primary guess. We have 3 guesses remaining, so we can guess salt and then reassess.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.6,
+          "bread": 0.5,
+          "nurse": 0.3,
+          "salt": 0.95,
+          "teacher": 0.2
+        },
+        "ranked_guesses": [
+          "salt",
+          "baker",
+          "bread",
+          "nurse",
+          "teacher"
+        ],
+        "rationale": "Sodium strongly suggests salt (sodium chloride). Baker and bread are related to salt in baking. Nurse and teacher are less likely but could relate to sodium in health/education contexts. We have 3 guesses remaining and need 2 more red words, so we should guess salt first, then consider baker if needed.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "Focuses on words related to travel and exploration, such as 'galaxy' and 'mountain', which are associated with navigation and discovery."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.8,
+          "planet": 0.75,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "planet",
+          "telescope"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to space or exploration. 'Galaxy', 'planet', and 'telescope' are strongly associated with space navigation and observation, making them the most relevant choices.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.8,
+          "planet": 0.75,
+          "telescope": 0.7
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "planet",
+          "telescope"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to space or exploration. 'Galaxy', 'planet', and 'telescope' are strongly associated with space navigation and observation. 'Galaxy' and 'planet' are more directly related to navigation in space, while 'telescope' is a tool used for observing celestial navigation.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "galaxy": 0.8,
+          "planet": 0.75,
+          "telescope": 0.6
+        },
+        "ranked_guesses": [
+          "galaxy",
+          "planet",
+          "telescope"
+        ],
+        "rationale": "The clue 'navigation' suggests words related to space or exploration. 'Galaxy' and 'planet' are strongly associated with navigation in space, while 'telescope' is a tool used for observing celestial navigation. 'Galaxy' and 'planet' are the top guesses due to their direct connection to navigation in space, with 'telescope' being a secondary option.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.6,
+          "ladder": 0.8,
+          "leather": 0.4
+        },
+        "ranked_guesses": [
+          "ladder",
+          "helmet",
+          "leather"
+        ],
+        "rationale": "Clue 'fallback' count 1 suggests a single word related to retreat or secondary option. 'Ladder' is a strong candidate as a fallback escape route. 'Helmet' and 'leather' are less directly related but could be fallback gear. We have 2 guesses remaining, but only 1 word needed. I'll guess 'ladder' first.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ladder": 0.7
+        },
+        "ranked_guesses": [
+          "ladder"
+        ],
+        "rationale": "The clue 'fallback' with count 1 suggests a single remaining red word. 'Ladder' is a strong candidate as a fallback option (e.g., a ladder as a backup means of escape). Other words like 'memory' or 'paper' could be fallback plans, but 'ladder' is the most direct physical fallback. Confidence is moderate due to ambiguity.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ladder": 0.7
+        },
+        "ranked_guesses": [
+          "ladder"
+        ],
+        "rationale": "Clue 'fallback' with count 1 suggests a word meaning retreat or alternative. 'Ladder' is a strong candidate as it can be used to fall back or retreat. Other words like 'memory' or 'paper' don't fit as well. Confidence is moderate due to limited context.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "medieval"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "castle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "village"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "harbor"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sodium"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "salt"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "galaxy"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "ladder"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 20,
+    "public_event_count": 12,
+    "reason": "assassin",
+    "seed": 3,
+    "team_blue": "gpt-4.1-nano",
+    "team_red": "deepseek-v4-pro",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "medieval"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.0,
+              "baker": 0.45,
+              "bread": 0.5,
+              "castle": 0.95,
+              "comet": 0.0,
+              "eagle": 0.3,
+              "flower": 0.25,
+              "forest": 0.4,
+              "galaxy": 0.0,
+              "harbor": 0.0,
+              "helmet": 0.75,
+              "highway": 0.0,
+              "ladder": 0.0,
+              "leather": 0.6,
+              "memory": 1.0,
+              "mountain": 0.35,
+              "nurse": 0.0,
+              "paper": 0.15,
+              "planet": 0.0,
+              "robot": 0.0,
+              "salt": 0.2,
+              "summer": 1.0,
+              "teacher": 1.0,
+              "telescope": 0.0,
+              "village": 0.85
+            },
+            "ranked_guesses": [
+              "castle",
+              "village",
+              "helmet",
+              "leather",
+              "bread",
+              "baker",
+              "forest",
+              "mountain",
+              "eagle",
+              "flower",
+              "salt",
+              "paper",
+              "teacher",
+              "memory",
+              "summer",
+              "airport",
+              "comet",
+              "galaxy",
+              "harbor",
+              "highway",
+              "ladder",
+              "nurse",
+              "planet",
+              "robot",
+              "telescope"
+            ],
+            "rationale": "Clue 'medieval' strongly suggests 'castle' (fortified structure), 'village' (common medieval settlement), and 'helmet' (knight's armor). 'Leather' and 'bread' are plausible but less direct. Other words have weak or no connection.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "['castle', 0.95]",
+              "['village', 0.85]",
+              "['helmet', 0.75]",
+              "['leather', 0.65]",
+              "['bread', 0.55]",
+              "['baker', 0.45]",
+              "['forest', 0.35]",
+              "['mountain', 0.25]",
+              "['flower', 0.15]",
+              "['eagle', 0.05]"
+            ],
+            "rationale": "Medieval strongly suggests castle, village, and helmet (knight's helmet). Leather is also plausible for medieval armor or goods. Bread and baker are less strong but possible. Other words are less related.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.5,
+              "castle": 0.95,
+              "helmet": 0.7,
+              "leather": 0.6,
+              "village": 0.85
+            },
+            "ranked_guesses": [
+              "castle",
+              "village",
+              "helmet",
+              "leather",
+              "bread"
+            ],
+            "rationale": "Medieval suggests castle (strongest), village (common medieval setting), helmet (knight's armor), leather (common material), bread (staple food). Other words like forest, mountain, harbor, etc. are less directly medieval.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "castle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "village"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "medieval",
+          "count": 3,
+          "rationale": "Links to castle, leather, and bread, all red words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.75,
+              "galaxy": 0.6,
+              "harbor": 0.8
+            },
+            "ranked_guesses": [
+              "harbor",
+              "airport",
+              "galaxy"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or locations. 'Harbor' and 'airport' are directly associated with travel and navigation. 'Galaxy' relates to space exploration, which also involves navigation. 'Castle' and 'village' are less directly connected, especially since 'castle' was previously guessed by red and revealed as red, and 'village' was neutral. Prior guesses indicate a focus on travel and exploration themes.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.6,
+              "galaxy": 0.4,
+              "harbor": 0.7
+            },
+            "ranked_guesses": [
+              "harbor",
+              "airport",
+              "galaxy"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to travel, exploration, or places associated with movement. 'Harbor' and 'airport' are strongly linked to navigation and travel. 'Galaxy' relates to space navigation, which fits the theme. 'Castle' and 'village' are less directly connected, and 'mountain' could also be considered, but the first three are more closely associated with navigation and travel.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.7,
+              "galaxy": 0.6,
+              "harbor": 0.8
+            },
+            "ranked_guesses": [
+              "harbor",
+              "airport",
+              "galaxy"
+            ],
+            "rationale": "The clue 'navigation' suggests places or objects related to travel or exploration. 'Harbor' and 'airport' are directly associated with transportation and navigation. 'Galaxy' relates to space navigation, fitting the theme. 'Castle' and 'village' are less directly connected, and 'mountain' or 'forest' could also be considered but are less specific to navigation.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "harbor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "Related to harbor and mountain, both associated with travel and exploration."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sodium"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.3,
+              "bread": 0.2,
+              "salt": 0.95
+            },
+            "ranked_guesses": [
+              "salt",
+              "baker",
+              "bread"
+            ],
+            "rationale": "Sodium strongly relates to salt (sodium chloride). Baker and bread are loosely related via baking soda, but much less likely. Salt is the top guess.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.05,
+              "baker": 0.3,
+              "bread": 0.2,
+              "comet": 0.05,
+              "eagle": 0.05,
+              "flower": 0.05,
+              "forest": 0.05,
+              "galaxy": 0.05,
+              "helmet": 0.05,
+              "highway": 0.05,
+              "ladder": 0.05,
+              "leather": 0.05,
+              "memory": 0.05,
+              "mountain": 0.05,
+              "nurse": 0.1,
+              "paper": 0.05,
+              "planet": 0.05,
+              "robot": 0.05,
+              "salt": 0.95,
+              "summer": 0.05,
+              "teacher": 0.05,
+              "telescope": 0.05
+            },
+            "ranked_guesses": [
+              "salt",
+              "baker",
+              "bread",
+              "nurse",
+              "teacher",
+              "memory",
+              "paper",
+              "robot",
+              "leather",
+              "helmet",
+              "ladder",
+              "highway",
+              "airport",
+              "summer",
+              "mountain",
+              "forest",
+              "flower",
+              "eagle",
+              "comet",
+              "galaxy",
+              "planet",
+              "telescope"
+            ],
+            "rationale": "Sodium strongly suggests salt (sodium chloride). Baker and bread are related to salt in baking, but less direct. The clue count is 2, so salt is the primary guess. We have 3 guesses remaining, so we can guess salt and then reassess.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.6,
+              "bread": 0.5,
+              "nurse": 0.3,
+              "salt": 0.95,
+              "teacher": 0.2
+            },
+            "ranked_guesses": [
+              "salt",
+              "baker",
+              "bread",
+              "nurse",
+              "teacher"
+            ],
+            "rationale": "Sodium strongly suggests salt (sodium chloride). Baker and bread are related to salt in baking. Nurse and teacher are less likely but could relate to sodium in health/education contexts. We have 3 guesses remaining and need 2 more red words, so we should guess salt first, then consider baker if needed.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "salt"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sodium",
+          "count": 2,
+          "rationale": "Connects salt (sodium chloride) and bread (often contains salt)."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.8,
+              "planet": 0.75,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "galaxy",
+              "planet",
+              "telescope"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to space or exploration. 'Galaxy', 'planet', and 'telescope' are strongly associated with space navigation and observation, making them the most relevant choices.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.8,
+              "planet": 0.75,
+              "telescope": 0.7
+            },
+            "ranked_guesses": [
+              "galaxy",
+              "planet",
+              "telescope"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to space or exploration. 'Galaxy', 'planet', and 'telescope' are strongly associated with space navigation and observation. 'Galaxy' and 'planet' are more directly related to navigation in space, while 'telescope' is a tool used for observing celestial navigation.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "galaxy": 0.8,
+              "planet": 0.75,
+              "telescope": 0.6
+            },
+            "ranked_guesses": [
+              "galaxy",
+              "planet",
+              "telescope"
+            ],
+            "rationale": "The clue 'navigation' suggests words related to space or exploration. 'Galaxy' and 'planet' are strongly associated with navigation in space, while 'telescope' is a tool used for observing celestial navigation. 'Galaxy' and 'planet' are the top guesses due to their direct connection to navigation in space, with 'telescope' being a secondary option.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "galaxy"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "Focuses on words related to travel and exploration, such as 'galaxy' and 'mountain', which are associated with navigation and discovery."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.6,
+              "ladder": 0.8,
+              "leather": 0.4
+            },
+            "ranked_guesses": [
+              "ladder",
+              "helmet",
+              "leather"
+            ],
+            "rationale": "Clue 'fallback' count 1 suggests a single word related to retreat or secondary option. 'Ladder' is a strong candidate as a fallback escape route. 'Helmet' and 'leather' are less directly related but could be fallback gear. We have 2 guesses remaining, but only 1 word needed. I'll guess 'ladder' first.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ladder": 0.7
+            },
+            "ranked_guesses": [
+              "ladder"
+            ],
+            "rationale": "The clue 'fallback' with count 1 suggests a single remaining red word. 'Ladder' is a strong candidate as a fallback option (e.g., a ladder as a backup means of escape). Other words like 'memory' or 'paper' could be fallback plans, but 'ladder' is the most direct physical fallback. Confidence is moderate due to ambiguity.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ladder": 0.7
+            },
+            "ranked_guesses": [
+              "ladder"
+            ],
+            "rationale": "Clue 'fallback' with count 1 suggests a word meaning retreat or alternative. 'Ladder' is a strong candidate as it can be used to fall back or retreat. Other words like 'memory' or 'paper' don't fit as well. Confidence is moderate due to limited context.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "ladder"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

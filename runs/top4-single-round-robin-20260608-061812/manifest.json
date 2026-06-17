@@ -1,0 +1,41 @@
+{
+  "benchmark": "codenames-openrouter-top4-single-round-robin",
+  "created_at_utc": "2026-06-08T06:18:12.524440+00:00",
+  "game_count": 6,
+  "max_turns": 30,
+  "model_count": 4,
+  "models": [
+    {
+      "label": "Gemini 3.1 Flash Lite",
+      "provider": "Google",
+      "provider_tag": "google-vertex/global",
+      "reasoning_effort": null,
+      "slug": "google/gemini-3.1-flash-lite"
+    },
+    {
+      "label": "GPT-OSS 120B",
+      "provider": "Google",
+      "provider_tag": "google-vertex/global",
+      "reasoning_effort": "low",
+      "slug": "openai/gpt-oss-120b"
+    },
+    {
+      "label": "GPT-5 Nano",
+      "provider": "Azure",
+      "provider_tag": "azure/swedencentral",
+      "reasoning_effort": null,
+      "slug": "openai/gpt-5-nano"
+    },
+    {
+      "label": "Gemma 4 31B",
+      "provider": "Parasail",
+      "provider_tag": "parasail/fp8",
+      "reasoning_effort": null,
+      "slug": "google/gemma-4-31b-it"
+    }
+  ],
+  "parallel_workers": 2,
+  "provider_policy": "provider.order is pinned per model and allow_fallbacks is false",
+  "reasoning_policy": "reasoning.effort is set per model when present in models.json",
+  "schema_version": 1
+}

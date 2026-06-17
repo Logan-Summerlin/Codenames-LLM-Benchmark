@@ -1,0 +1,47 @@
+{
+  "benchmark": "codenames-openrouter-single-round-robin",
+  "created_at_utc": "2026-06-14T07:41:02.797411+00:00",
+  "elo_initial": 1500.0,
+  "elo_k": 32.0,
+  "game_count": 6,
+  "max_tokens": 10000,
+  "max_turns": 1,
+  "model_count": 4,
+  "model_preset": "top4",
+  "models": [
+    {
+      "label": "Llama 3.3 70B Instruct",
+      "provider": "Inceptron",
+      "provider_tag": "inceptron/fp8",
+      "reasoning_effort": null,
+      "slug": "meta-llama/llama-3.3-70b-instruct"
+    },
+    {
+      "label": "GPT-5.4-nano",
+      "provider": "Azure",
+      "provider_tag": "azure",
+      "reasoning_effort": null,
+      "slug": "openai/gpt-5.4-nano"
+    },
+    {
+      "label": "Phi-4",
+      "provider": "Microsoft",
+      "provider_tag": null,
+      "reasoning_effort": null,
+      "slug": "microsoft/phi-4"
+    },
+    {
+      "label": "Qwen 3 32B",
+      "provider": "Qwen",
+      "provider_tag": null,
+      "reasoning_effort": null,
+      "slug": "qwen/qwen3-32b"
+    }
+  ],
+  "provider_policy": "provider.order uses the live OpenRouter active-provider allowlist and allow_fallbacks is enabled when multiple routes exist",
+  "reasoning_policy": "reasoning.effort is set per model when present in models.json",
+  "round_size": 2,
+  "schedule_mode": "single-round-robin",
+  "schema_version": 1,
+  "seed_prefix": "cli-test"
+}

@@ -1,0 +1,75 @@
+{
+  "benchmark": "codenames-openrouter-double-round-robin",
+  "created_at_utc": "2026-06-07T03:19:46.338069+00:00",
+  "elo_initial": 1500.0,
+  "elo_k": 32.0,
+  "game_count": 90,
+  "max_turns": 30,
+  "model_count": 10,
+  "models": [
+    {
+      "label": "Llama 3 70B Instruct",
+      "provider": "Novita",
+      "provider_tag": "novita/fp8",
+      "slug": "meta-llama/llama-3-70b-instruct"
+    },
+    {
+      "label": "GPT-4o mini",
+      "provider": "Azure",
+      "provider_tag": "azure/swedencentral",
+      "slug": "openai/gpt-4o-mini"
+    },
+    {
+      "label": "Qwen2.5 72B Instruct",
+      "provider": "DeepInfra",
+      "provider_tag": "deepinfra/fp8",
+      "slug": "qwen/qwen-2.5-72b-instruct"
+    },
+    {
+      "label": "DeepSeek V3 0324",
+      "provider": "ModelRun",
+      "provider_tag": "modelrun/fp4",
+      "slug": "deepseek/deepseek-chat-v3-0324"
+    },
+    {
+      "label": "Qwen3 235B A22B Thinking 2507",
+      "provider": "WandB",
+      "provider_tag": "wandb/bf16",
+      "slug": "qwen/qwen3-235b-a22b-thinking-2507"
+    },
+    {
+      "label": "Mistral Small 4",
+      "provider": "Mistral",
+      "provider_tag": "mistral",
+      "slug": "mistralai/mistral-small-2603"
+    },
+    {
+      "label": "MiMo V2.5",
+      "provider": "Xiaomi",
+      "provider_tag": "xiaomi/fp8",
+      "slug": "xiaomi/mimo-v2.5"
+    },
+    {
+      "label": "MiniMax M3",
+      "provider": "Minimax",
+      "provider_tag": "minimax/fp8",
+      "slug": "minimax/minimax-m3"
+    },
+    {
+      "label": "GPT-5 Nano",
+      "provider": "Azure",
+      "provider_tag": "azure/swedencentral",
+      "slug": "openai/gpt-5-nano"
+    },
+    {
+      "label": "DeepSeek V4 Flash",
+      "provider": "DeepSeek",
+      "provider_tag": "deepseek",
+      "slug": "deepseek/deepseek-v4-flash"
+    }
+  ],
+  "provider_policy": "provider.order is pinned per model and allow_fallbacks is false",
+  "schema_version": 1,
+  "scoring_policy": "terminal red/blue wins update as wins; missing winner or bounded non-terminal games update as Elo draws",
+  "seed_prefix": "openrouter-codenames"
+}

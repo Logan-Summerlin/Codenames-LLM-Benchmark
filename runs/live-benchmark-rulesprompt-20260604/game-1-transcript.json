@@ -1,0 +1,2043 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    },
+    "revealed": [
+      "alien",
+      "artist",
+      "camera",
+      "cloud",
+      "helmet",
+      "jungle",
+      "novel",
+      "planet",
+      "poet",
+      "rocket",
+      "singer",
+      "spider",
+      "spirit",
+      "summer",
+      "temple",
+      "voyage",
+      "wizard",
+      "writer"
+    ],
+    "words": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "travel",
+        "count": 4,
+        "rationale": "Balloon (travel by air), jungle (travel destination), planet (space travel), summer (travel season) are all red words associated with travel."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "planet": 0.6,
+          "rocket": 0.7,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "rocket",
+          "balloon",
+          "planet"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6,
+          "balloon": 0.75,
+          "camera": 0.5,
+          "jungle": 0.4,
+          "planet": 0.7,
+          "rocket": 0.8,
+          "summer": 0.3,
+          "temple": 0.4,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "rocket",
+          "balloon",
+          "planet",
+          "agent",
+          "camera",
+          "jungle",
+          "temple",
+          "summer"
+        ],
+        "rationale": "The clue 'travel' suggests words directly related to travel: voyage (synonym), rocket (space travel), balloon (hot air balloon travel), planet (destination), agent (travel agent), camera (travel photography), and travel destinations like jungle and temple, as well as travel season summer.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "planet": 0.7,
+          "rocket": 0.8,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "voyage",
+          "rocket",
+          "planet",
+          "balloon"
+        ],
+        "rationale": "Voyage is a direct synonym for travel. Rocket and balloon are travel vehicles, planet is a destination. All strong associations.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "soul",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.5,
+          "poet": 0.7,
+          "singer": 0.6,
+          "spirit": 0.9,
+          "temple": 0.3
+        },
+        "ranked_guesses": [
+          "spirit",
+          "poet",
+          "singer",
+          "artist",
+          "temple"
+        ],
+        "rationale": "The clue 'soul' strongly suggests 'spirit' as a direct synonym. 'Poet' and 'singer' are associated with soulful expression. 'Artist' and 'temple' are moderately related. We plan to guess multiple words if correct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "poet": 0.7,
+          "singer": 0.6,
+          "spirit": 0.9
+        },
+        "ranked_guesses": [
+          "spirit",
+          "poet",
+          "singer"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.7,
+          "poet": 0.75,
+          "spirit": 0.9
+        },
+        "ranked_guesses": [
+          "spirit",
+          "poet",
+          "artist"
+        ],
+        "rationale": "Spirit is a direct synonym for soul. Poet and artist are often associated with expressing the soul.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "cloud": 0.95,
+          "planet": 0.9,
+          "rocket": 0.85
+        },
+        "ranked_guesses": [
+          "cloud",
+          "planet",
+          "rocket",
+          "balloon"
+        ],
+        "rationale": "These words are strongly associated with 'sky': clouds are in the sky, planets appear in the night sky, rockets travel into the sky, and balloons float in the sky. Given the clue count of 3, we can guess up to 4 words; these are the most likely red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "planet": 0.7,
+          "rocket": 0.8
+        },
+        "ranked_guesses": [
+          "cloud",
+          "rocket",
+          "planet"
+        ],
+        "rationale": "Cloud is directly sky-related. Rocket travels to sky. Planet is in sky. These are the most likely red words for clue 'sky'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "planet": 0.8,
+          "rocket": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "planet",
+          "rocket"
+        ],
+        "rationale": "Cloud, planet, and rocket are directly associated with the sky (atmosphere and space). Balloon and beacon are also sky-related but less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "creative",
+        "count": 3,
+        "rationale": "Connects artist, singer, and writer, all blue words."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.9,
+          "novel": 0.7,
+          "writer": 0.8
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "novel"
+        ],
+        "rationale": "Artist and writer are most directly associated with creativity; novel also fits creative writing. Other candidates like singer, guitar, camera are less direct. Since clue count is 3, stopping after these three guesses.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.95,
+          "singer": 0.85,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "singer"
+        ],
+        "rationale": "These are direct creative professions strongly associated with the clue 'creative'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.95,
+          "camera": 0.65,
+          "guitar": 0.7,
+          "museum": 0.6,
+          "novel": 0.85,
+          "singer": 0.8,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "novel",
+          "singer",
+          "guitar",
+          "camera",
+          "museum"
+        ],
+        "rationale": "The clue 'creative' directly suggests artist, writer, and novel as products of creativity. Singer and guitar are also creative, but slightly less direct. Camera and museum have creative associations but weaker. Stopping after three high-confidence guesses aligns with clue count.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "hot",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "jungle": 0.7,
+          "summer": 0.8
+        },
+        "ranked_guesses": [
+          "summer",
+          "jungle",
+          "balloon"
+        ],
+        "rationale": "Clue 'hot' points to temperature-related words. Summer is hot season, jungle is hot/humid, balloon relates to hot air. Other possibilities like winter are opposite, and remaining words are less directly associated.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "jungle": 0.7,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "jungle",
+          "balloon"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "jungle": 0.7,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "jungle",
+          "balloon"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "head",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.9,
+          "temple": 0.8
+        },
+        "ranked_guesses": [
+          "helmet",
+          "temple"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.9,
+          "temple": 0.7
+        },
+        "ranked_guesses": [
+          "helmet",
+          "temple"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.9,
+          "temple": 0.8
+        },
+        "ranked_guesses": [
+          "helmet",
+          "temple"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mission",
+        "count": 4,
+        "rationale": "Connects agent, balloon, jungle, and silver (all red) through the concept of an adventure or task."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "alien": 0.9,
+          "beacon": 0.7,
+          "camera": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "agent",
+          "beacon",
+          "camera"
+        ],
+        "rationale": "The clue 'mission' suggests space missions (alien), spy missions (agent, beacon, camera). These are likely the remaining red words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7,
+          "alien": 0.9,
+          "beacon": 0.8,
+          "camera": 0.6
+        },
+        "ranked_guesses": [
+          "alien",
+          "beacon",
+          "agent",
+          "camera"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7,
+          "alien": 0.8,
+          "beacon": 0.6,
+          "camera": 0.5
+        },
+        "ranked_guesses": [
+          "alien",
+          "agent",
+          "beacon",
+          "camera"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "science",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "silver": 0.7
+        },
+        "ranked_guesses": [
+          "camera",
+          "silver"
+        ],
+        "rationale": "The clue 'science' suggests scientific instruments or elements. 'camera' is a scientific tool, and 'silver' is a chemical element. Both are unrevealed and likely blue words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "beacon": 0.3,
+          "camera": 0.9,
+          "silver": 0.5,
+          "spider": 0.4
+        },
+        "ranked_guesses": [
+          "camera",
+          "balloon",
+          "silver",
+          "spider",
+          "beacon"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.3,
+          "camera": 0.9,
+          "museum": 0.5,
+          "silver": 0.8,
+          "spider": 0.4
+        },
+        "ranked_guesses": [
+          "camera",
+          "silver",
+          "museum",
+          "spider",
+          "balloon"
+        ],
+        "rationale": "The clue 'science' suggests words like camera (optics) and silver (chemistry). Museum is a place for science but less direct. Spider and balloon are also possible but less likely.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "expedition",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "beacon": 0.7,
+          "jungle": 0.8
+        },
+        "ranked_guesses": [
+          "jungle",
+          "beacon",
+          "balloon"
+        ],
+        "rationale": "Expedition suggests exploration. Jungle is a common expedition destination, beacon is a navigation tool for expeditions, and balloon is used in exploration. These are the most likely red words among unrevealed.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.7,
+          "beacon": 0.6,
+          "jungle": 0.9,
+          "museum": 0.8,
+          "winter": 0.5
+        },
+        "ranked_guesses": [
+          "jungle",
+          "museum",
+          "balloon",
+          "beacon",
+          "winter"
+        ],
+        "rationale": "Expedition suggests exploration. 'Jungle' is a classic expedition location. 'Museum' relates to artifacts from expeditions. 'Balloon' is used for air expeditions. 'Beacon' aids navigation. 'Winter' for polar expeditions. All are unrevealed red candidates.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.6,
+          "beacon": 0.7,
+          "jungle": 0.9
+        },
+        "ranked_guesses": [
+          "jungle",
+          "beacon",
+          "balloon"
+        ],
+        "rationale": "Expedition strongly relates to jungle (exploration destination), beacon (signaling in expeditions), and balloon (aerial expeditions). Other unrevealed words have weaker connections.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "creepy",
+        "count": 2,
+        "rationale": "Both 'museum' and 'spider' can be associated with 'creepy' \u2014 spiders are often considered creepy, and some museums (like those with dark exhibits) can evoke a creepy feeling. Avoids other words like wizard (assassin) and reds."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.5,
+          "spider": 0.9,
+          "wizard": 0.7
+        },
+        "ranked_guesses": [
+          "spider",
+          "wizard",
+          "museum"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.6,
+          "spider": 0.9
+        },
+        "ranked_guesses": [
+          "spider",
+          "museum"
+        ],
+        "rationale": "Spider is strongly associated with 'creepy' (arachnophobia). Museum can be creepy if haunted or dark, e.g., 'creepy museum'. Other options like wizard or winter are less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spider": 0.95,
+          "wizard": 0.7
+        },
+        "ranked_guesses": [
+          "spider",
+          "wizard"
+        ],
+        "rationale": "Spider is strongly associated with creepy. Wizard can be creepy in folklore. Other words like museum or winter are less directly connected.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "soul"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spirit"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "poet"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "creative"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "artist"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "singer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "novel"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "hot"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "head"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "helmet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "mission"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "expedition"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jungle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creepy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spider"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "wizard"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 40,
+    "public_event_count": 31,
+    "reason": "assassin",
+    "seed": "1",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "travel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "planet": 0.6,
+              "rocket": 0.7,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "rocket",
+              "balloon",
+              "planet"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6,
+              "balloon": 0.75,
+              "camera": 0.5,
+              "jungle": 0.4,
+              "planet": 0.7,
+              "rocket": 0.8,
+              "summer": 0.3,
+              "temple": 0.4,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "rocket",
+              "balloon",
+              "planet",
+              "agent",
+              "camera",
+              "jungle",
+              "temple",
+              "summer"
+            ],
+            "rationale": "The clue 'travel' suggests words directly related to travel: voyage (synonym), rocket (space travel), balloon (hot air balloon travel), planet (destination), agent (travel agent), camera (travel photography), and travel destinations like jungle and temple, as well as travel season summer.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "planet": 0.7,
+              "rocket": 0.8,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "voyage",
+              "rocket",
+              "planet",
+              "balloon"
+            ],
+            "rationale": "Voyage is a direct synonym for travel. Rocket and balloon are travel vehicles, planet is a destination. All strong associations.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 4,
+          "rationale": "Balloon (travel by air), jungle (travel destination), planet (space travel), summer (travel season) are all red words associated with travel."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "soul"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.5,
+              "poet": 0.7,
+              "singer": 0.6,
+              "spirit": 0.9,
+              "temple": 0.3
+            },
+            "ranked_guesses": [
+              "spirit",
+              "poet",
+              "singer",
+              "artist",
+              "temple"
+            ],
+            "rationale": "The clue 'soul' strongly suggests 'spirit' as a direct synonym. 'Poet' and 'singer' are associated with soulful expression. 'Artist' and 'temple' are moderately related. We plan to guess multiple words if correct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "poet": 0.7,
+              "singer": 0.6,
+              "spirit": 0.9
+            },
+            "ranked_guesses": [
+              "spirit",
+              "poet",
+              "singer"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.7,
+              "poet": 0.75,
+              "spirit": 0.9
+            },
+            "ranked_guesses": [
+              "spirit",
+              "poet",
+              "artist"
+            ],
+            "rationale": "Spirit is a direct synonym for soul. Poet and artist are often associated with expressing the soul.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spirit"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "soul",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "cloud": 0.95,
+              "planet": 0.9,
+              "rocket": 0.85
+            },
+            "ranked_guesses": [
+              "cloud",
+              "planet",
+              "rocket",
+              "balloon"
+            ],
+            "rationale": "These words are strongly associated with 'sky': clouds are in the sky, planets appear in the night sky, rockets travel into the sky, and balloons float in the sky. Given the clue count of 3, we can guess up to 4 words; these are the most likely red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "planet": 0.7,
+              "rocket": 0.8
+            },
+            "ranked_guesses": [
+              "cloud",
+              "rocket",
+              "planet"
+            ],
+            "rationale": "Cloud is directly sky-related. Rocket travels to sky. Planet is in sky. These are the most likely red words for clue 'sky'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "planet": 0.8,
+              "rocket": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "planet",
+              "rocket"
+            ],
+            "rationale": "Cloud, planet, and rocket are directly associated with the sky (atmosphere and space). Balloon and beacon are also sky-related but less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "creative"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.9,
+              "novel": 0.7,
+              "writer": 0.8
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "novel"
+            ],
+            "rationale": "Artist and writer are most directly associated with creativity; novel also fits creative writing. Other candidates like singer, guitar, camera are less direct. Since clue count is 3, stopping after these three guesses.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.95,
+              "singer": 0.85,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "singer"
+            ],
+            "rationale": "These are direct creative professions strongly associated with the clue 'creative'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.95,
+              "camera": 0.65,
+              "guitar": 0.7,
+              "museum": 0.6,
+              "novel": 0.85,
+              "singer": 0.8,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "novel",
+              "singer",
+              "guitar",
+              "camera",
+              "museum"
+            ],
+            "rationale": "The clue 'creative' directly suggests artist, writer, and novel as products of creativity. Singer and guitar are also creative, but slightly less direct. Camera and museum have creative associations but weaker. Stopping after three high-confidence guesses aligns with clue count.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "artist"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "singer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "novel"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "creative",
+          "count": 3,
+          "rationale": "Connects artist, singer, and writer, all blue words."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "hot"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "jungle": 0.7,
+              "summer": 0.8
+            },
+            "ranked_guesses": [
+              "summer",
+              "jungle",
+              "balloon"
+            ],
+            "rationale": "Clue 'hot' points to temperature-related words. Summer is hot season, jungle is hot/humid, balloon relates to hot air. Other possibilities like winter are opposite, and remaining words are less directly associated.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "jungle": 0.7,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "jungle",
+              "balloon"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "jungle": 0.7,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "jungle",
+              "balloon"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "hot",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "head"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.9,
+              "temple": 0.8
+            },
+            "ranked_guesses": [
+              "helmet",
+              "temple"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.9,
+              "temple": 0.7
+            },
+            "ranked_guesses": [
+              "helmet",
+              "temple"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.9,
+              "temple": 0.8
+            },
+            "ranked_guesses": [
+              "helmet",
+              "temple"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "helmet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "head",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "mission"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "alien": 0.9,
+              "beacon": 0.7,
+              "camera": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "agent",
+              "beacon",
+              "camera"
+            ],
+            "rationale": "The clue 'mission' suggests space missions (alien), spy missions (agent, beacon, camera). These are likely the remaining red words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.7,
+              "alien": 0.9,
+              "beacon": 0.8,
+              "camera": 0.6
+            },
+            "ranked_guesses": [
+              "alien",
+              "beacon",
+              "agent",
+              "camera"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.7,
+              "alien": 0.8,
+              "beacon": 0.6,
+              "camera": 0.5
+            },
+            "ranked_guesses": [
+              "alien",
+              "agent",
+              "beacon",
+              "camera"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mission",
+          "count": 4,
+          "rationale": "Connects agent, balloon, jungle, and silver (all red) through the concept of an adventure or task."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "silver": 0.7
+            },
+            "ranked_guesses": [
+              "camera",
+              "silver"
+            ],
+            "rationale": "The clue 'science' suggests scientific instruments or elements. 'camera' is a scientific tool, and 'silver' is a chemical element. Both are unrevealed and likely blue words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "beacon": 0.3,
+              "camera": 0.9,
+              "silver": 0.5,
+              "spider": 0.4
+            },
+            "ranked_guesses": [
+              "camera",
+              "balloon",
+              "silver",
+              "spider",
+              "beacon"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.3,
+              "camera": 0.9,
+              "museum": 0.5,
+              "silver": 0.8,
+              "spider": 0.4
+            },
+            "ranked_guesses": [
+              "camera",
+              "silver",
+              "museum",
+              "spider",
+              "balloon"
+            ],
+            "rationale": "The clue 'science' suggests words like camera (optics) and silver (chemistry). Museum is a place for science but less direct. Spider and balloon are also possible but less likely.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "science",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "expedition"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "beacon": 0.7,
+              "jungle": 0.8
+            },
+            "ranked_guesses": [
+              "jungle",
+              "beacon",
+              "balloon"
+            ],
+            "rationale": "Expedition suggests exploration. Jungle is a common expedition destination, beacon is a navigation tool for expeditions, and balloon is used in exploration. These are the most likely red words among unrevealed.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.7,
+              "beacon": 0.6,
+              "jungle": 0.9,
+              "museum": 0.8,
+              "winter": 0.5
+            },
+            "ranked_guesses": [
+              "jungle",
+              "museum",
+              "balloon",
+              "beacon",
+              "winter"
+            ],
+            "rationale": "Expedition suggests exploration. 'Jungle' is a classic expedition location. 'Museum' relates to artifacts from expeditions. 'Balloon' is used for air expeditions. 'Beacon' aids navigation. 'Winter' for polar expeditions. All are unrevealed red candidates.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.6,
+              "beacon": 0.7,
+              "jungle": 0.9
+            },
+            "ranked_guesses": [
+              "jungle",
+              "beacon",
+              "balloon"
+            ],
+            "rationale": "Expedition strongly relates to jungle (exploration destination), beacon (signaling in expeditions), and balloon (aerial expeditions). Other unrevealed words have weaker connections.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jungle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "expedition",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "creepy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.5,
+              "spider": 0.9,
+              "wizard": 0.7
+            },
+            "ranked_guesses": [
+              "spider",
+              "wizard",
+              "museum"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.6,
+              "spider": 0.9
+            },
+            "ranked_guesses": [
+              "spider",
+              "museum"
+            ],
+            "rationale": "Spider is strongly associated with 'creepy' (arachnophobia). Museum can be creepy if haunted or dark, e.g., 'creepy museum'. Other options like wizard or winter are less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spider": 0.95,
+              "wizard": 0.7
+            },
+            "ranked_guesses": [
+              "spider",
+              "wizard"
+            ],
+            "rationale": "Spider is strongly associated with creepy. Wizard can be creepy in folklore. Other words like museum or winter are less directly connected.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spider"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "creepy",
+          "count": 2,
+          "rationale": "Both 'museum' and 'spider' can be associated with 'creepy' \u2014 spiders are often considered creepy, and some museums (like those with dark exhibits) can evoke a creepy feeling. Avoids other words like wizard (assassin) and reds."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

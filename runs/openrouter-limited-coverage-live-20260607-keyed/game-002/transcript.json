@@ -1,0 +1,2008 @@
+{
+  "board": {
+    "identities": {
+      "alien": "blue",
+      "bridge": "blue",
+      "canyon": "neutral",
+      "cheese": "neutral",
+      "dancer": "red",
+      "eagle": "neutral",
+      "ember": "red",
+      "festival": "red",
+      "flame": "red",
+      "fox": "blue",
+      "guitar": "blue",
+      "harbor": "blue",
+      "island": "red",
+      "machine": "red",
+      "magnet": "red",
+      "nurse": "blue",
+      "palace": "red",
+      "paper": "red",
+      "poet": "blue",
+      "robot": "assassin",
+      "sailor": "neutral",
+      "silence": "neutral",
+      "spirit": "neutral",
+      "village": "blue",
+      "wizard": "neutral"
+    },
+    "revealed": [
+      "alien",
+      "bridge",
+      "ember",
+      "festival",
+      "flame",
+      "fox",
+      "guitar",
+      "harbor",
+      "nurse",
+      "palace",
+      "poet",
+      "village"
+    ],
+    "words": {
+      "alien": "blue",
+      "bridge": "blue",
+      "canyon": "neutral",
+      "cheese": "neutral",
+      "dancer": "red",
+      "eagle": "neutral",
+      "ember": "red",
+      "festival": "red",
+      "flame": "red",
+      "fox": "blue",
+      "guitar": "blue",
+      "harbor": "blue",
+      "island": "red",
+      "machine": "red",
+      "magnet": "red",
+      "nurse": "blue",
+      "palace": "red",
+      "paper": "red",
+      "poet": "blue",
+      "robot": "assassin",
+      "sailor": "neutral",
+      "silence": "neutral",
+      "spirit": "neutral",
+      "village": "blue",
+      "wizard": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "island",
+        "count": 1,
+        "rationale": "Island is a red word, and it's a unique location that doesn't overlap with blue team words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "'guitar' and 'poet' (as poets often write lyrics) are both related to music, and this avoids overlapping with other team's words or the assassin."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.6,
+          "guitar": 0.9,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "guitar",
+          "sailor",
+          "dancer"
+        ],
+        "rationale": "'guitar' is strongly associated with 'music'. 'sailor' and 'dancer' can also relate to music (sea shanties, dance music), but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.6,
+          "guitar": 0.9,
+          "silence": 0.7
+        },
+        "ranked_guesses": [
+          "guitar",
+          "silence",
+          "dancer"
+        ],
+        "rationale": "'guitar' is strongly associated with 'music'. 'silence' can relate to music as the absence of sound, and 'dancer' often performs to music. These are the top guesses based on the clue 'music'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.7,
+          "guitar": 0.9,
+          "silence": 0.5
+        },
+        "ranked_guesses": [
+          "guitar",
+          "dancer",
+          "silence"
+        ],
+        "rationale": "'guitar' is strongly associated with 'music'. 'dancer' can relate to music through dance. 'silence' is a weaker connection but could imply absence of music.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fire",
+        "count": 3,
+        "rationale": "Flame, ember, and festival can all be associated with fire."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.8
+        },
+        "ranked_guesses": [
+          "ember"
+        ],
+        "rationale": "Ember is directly related to fire, making it a strong candidate for the current clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.8
+        },
+        "ranked_guesses": [
+          "ember"
+        ],
+        "rationale": "Ember is directly related to fire, making it a strong guess.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ember": 0.8
+        },
+        "ranked_guesses": [
+          "ember"
+        ],
+        "rationale": "Ember is directly related to fire, making it a strong candidate for the current clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Fox and eagle are both animals, and fox is a blue word while eagle is neutral, avoiding the assassin (robot)."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "fox": 0.9
+        },
+        "ranked_guesses": [
+          "fox",
+          "eagle"
+        ],
+        "rationale": "fox and eagle are the most obvious animal-related words on the board. fox is more commonly associated with the term 'animal' and is likely the primary target, while eagle is a strong secondary guess.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.3,
+          "eagle": 0.7,
+          "fox": 0.9
+        },
+        "ranked_guesses": [
+          "fox",
+          "eagle",
+          "dancer"
+        ],
+        "rationale": "fox and eagle are clearly animals, with fox being more common. dancer is a stretch but could relate to animal movements.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "fox": 0.9,
+          "robot": 0.5
+        },
+        "ranked_guesses": [
+          "fox",
+          "eagle",
+          "robot"
+        ],
+        "rationale": "fox and eagle are clear animal-related words with high confidence; robot is a stretch but could be considered in some contexts.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 1,
+        "rationale": "Festival is a red word and 'celebration' is closely related without directly revealing the board word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "Festival is strongly associated with celebration and is a unique word on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "Festival is strongly associated with celebration and is a unique match on the board.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "Festival is a strong match for the clue 'celebration' and is not yet revealed.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "urban",
+        "count": 2,
+        "rationale": "'village' and 'harbor' are both blue words related to urban or populated areas, avoiding overlap with red words and the assassin."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "palace": 0.5,
+          "village": 0.7
+        },
+        "ranked_guesses": [
+          "village",
+          "bridge",
+          "palace"
+        ],
+        "rationale": "'urban' suggests city-related words. 'village' is a small urban area, 'bridge' is common in cities, and 'palace' can be found in urban settings.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "palace": 0.5,
+          "village": 0.7
+        },
+        "ranked_guesses": [
+          "village",
+          "bridge",
+          "palace"
+        ],
+        "rationale": "'urban' suggests city-related words. 'village' is a small urban area, 'bridge' is often urban infrastructure, and 'palace' can be found in urban settings.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.6,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "robot",
+          "machine"
+        ],
+        "rationale": "Both 'robot' and 'machine' relate to urban environments and technology, fitting the clue 'urban'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "celebration",
+        "count": 1,
+        "rationale": "Festival is already revealed, and celebration can hint at other red words like 'palace' or 'paper'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "Festival is a strong match for the clue 'celebration' and has not been guessed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dancer": 0.8
+        },
+        "ranked_guesses": [
+          "dancer"
+        ],
+        "rationale": "Dancer is associated with celebration and fits the theme of the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "festival": 0.8
+        },
+        "ranked_guesses": [
+          "festival"
+        ],
+        "rationale": "Festival is a strong match for 'celebration' and has not been guessed yet.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "water",
+        "count": 2,
+        "rationale": "'harbor' and 'bridge' are both related to water, and neither overlaps with other team's words or the assassin."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "harbor": 0.9
+        },
+        "ranked_guesses": [
+          "harbor",
+          "bridge"
+        ],
+        "rationale": "The clue 'water' suggests words related to bodies of water or water-related structures. 'Harbor' is a strong fit as it is directly associated with water. 'Bridge' is also a good candidate as many bridges span water.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "harbor": 0.8,
+          "island": 0.4
+        },
+        "ranked_guesses": [
+          "harbor",
+          "bridge",
+          "island"
+        ],
+        "rationale": "'water' suggests words related to bodies of water. 'harbor' is a strong match, 'bridge' can be associated with water, and 'island' is surrounded by water but was previously an illegal clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "harbor": 0.7,
+          "island": 0.5
+        },
+        "ranked_guesses": [
+          "harbor",
+          "bridge",
+          "island"
+        ],
+        "rationale": "'water' suggests words related to bodies of water or water features. 'harbor' is a strong match as it's directly related to water. 'bridge' often spans water, and 'island' is surrounded by water, though it was previously a red word.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 1,
+        "rationale": "Flame is a red word and 'light' can be associated with it without directly revealing the word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "Flame is associated with light and is a plausible guess for the current clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "Flame is the only word that directly relates to the clue 'light'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.8
+        },
+        "ranked_guesses": [
+          "flame"
+        ],
+        "rationale": "Flame is directly associated with light, making it a strong candidate for the current clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "space",
+        "count": 2,
+        "rationale": "Alien and bridge can both be associated with space (alien as extraterrestrial, bridge as a spaceship term like 'bridge of a starship')."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "alien",
+          "robot"
+        ],
+        "rationale": "'alien' strongly relates to 'space' as extraterrestrial beings, and 'robot' fits due to potential space exploration technology.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "alien",
+          "robot"
+        ],
+        "rationale": "'alien' is strongly associated with 'space' and is unrevealed. 'robot' is a secondary guess as robots are often associated with space exploration.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.9,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "alien",
+          "robot"
+        ],
+        "rationale": "'alien' strongly relates to 'space' as extraterrestrial beings, and 'robot' can be associated with space exploration.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "island",
+        "count": 1,
+        "rationale": "Island is a red word and it's a unique location that doesn't overlap with blue team words."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "literary",
+        "count": 2,
+        "rationale": "Connects to 'poet' and 'bridge' (as in 'Bridge of Sighs' or literary references). Avoids 'robot' (assassin) and other team's words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 0.7,
+          "poet": 0.9,
+          "sailor": 0.5
+        },
+        "ranked_guesses": [
+          "poet",
+          "paper",
+          "sailor"
+        ],
+        "rationale": "'poet' is highly literary, 'paper' relates to writing, and 'sailor' could be literary in context.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.5,
+          "paper": 0.7,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "paper",
+          "bridge"
+        ],
+        "rationale": "'poet' is strongly associated with 'literary'. 'paper' is also literary but less directly. 'bridge' is a stretch but could relate to literary bridges in stories.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.5,
+          "paper": 0.7,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "paper",
+          "bridge"
+        ],
+        "rationale": "'poet' is strongly associated with 'literary', 'paper' is also related, and 'bridge' is a weaker connection.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "landmark",
+        "count": 1,
+        "rationale": "Island is a significant geographical feature that can be considered a landmark, guiding the guesser to the red word 'island'."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Palace is a significant landmark and fits the clue 'landmark' well.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Palace is a significant landmark and fits the clue 'landmark' well.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "Palace is a significant landmark and fits the clue 'landmark'.",
+        "stop": false
+      },
+      "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 2,
+        "rationale": "Bridge and nurse are both related to construction\u2014bridge as a physical structure and nurse as someone who helps 'build' health."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "machine": 0.6
+        },
+        "ranked_guesses": [
+          "bridge",
+          "machine"
+        ],
+        "rationale": "'construction' relates to 'bridge' (a constructed structure) and 'machine' (constructed device).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "robot": 0.5
+        },
+        "ranked_guesses": [
+          "bridge",
+          "robot"
+        ],
+        "rationale": "'bridge' fits 'construction' well as it is a built structure. 'robot' is a stretch but could relate to constructed machines.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.9,
+          "machine": 0.7
+        },
+        "ranked_guesses": [
+          "bridge",
+          "machine"
+        ],
+        "rationale": "Bridge fits construction well as a built structure. Machine is less direct but could relate to construction equipment.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "magnetic",
+        "count": 1,
+        "rationale": "Magnet is a red word and 'magnetic' is closely related without directly revealing the board word."
+      },
+      "agent_id": "Qwen2.5 72B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "health",
+        "count": 1,
+        "rationale": "'Nurse' is the remaining blue word, and 'health' is a related concept without directly revealing the word."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nurse": 0.9
+        },
+        "ranked_guesses": [
+          "nurse"
+        ],
+        "rationale": "'health' strongly relates to 'nurse', which is the most obvious remaining word.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nurse": 0.9
+        },
+        "ranked_guesses": [
+          "nurse"
+        ],
+        "rationale": "'nurse' is the most directly related to 'health' among remaining words.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nurse": 0.9
+        },
+        "ranked_guesses": [
+          "nurse"
+        ],
+        "rationale": "The clue 'health' strongly suggests 'nurse' as it is directly related to healthcare.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "island",
+        "count": 1,
+        "rationale": "Island is a red word, and it's a unique location that doesn't overlap with blue team words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "island",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "fire"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ember"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fox"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "festival"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "urban"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "village"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "celebration"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "harbor"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "alien"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "island",
+        "count": 1,
+        "rationale": "Island is a red word and it's a unique location that doesn't overlap with blue team words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "island",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "literary"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "poet"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "landmark"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "palace"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "magnetic",
+        "count": 1,
+        "rationale": "Magnet is a red word and 'magnetic' is closely related without directly revealing the board word."
+      },
+      "event": "illegal_clue",
+      "matched_word": "magnet",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "health"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "nurse"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 55,
+    "public_event_count": 40,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-002-qwen_qwen_2_5_72b_instruct-vs-deepseek_deepseek_chat_v3_0324",
+    "team_blue": "DeepSeek V3 0324",
+    "team_red": "Qwen2.5 72B Instruct",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "fire"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ember"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "island",
+          "count": 1,
+          "rationale": "Island is a red word, and it's a unique location that doesn't overlap with blue team words."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.6,
+              "guitar": 0.9,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "guitar",
+              "sailor",
+              "dancer"
+            ],
+            "rationale": "'guitar' is strongly associated with 'music'. 'sailor' and 'dancer' can also relate to music (sea shanties, dance music), but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.6,
+              "guitar": 0.9,
+              "silence": 0.7
+            },
+            "ranked_guesses": [
+              "guitar",
+              "silence",
+              "dancer"
+            ],
+            "rationale": "'guitar' is strongly associated with 'music'. 'silence' can relate to music as the absence of sound, and 'dancer' often performs to music. These are the top guesses based on the clue 'music'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.7,
+              "guitar": 0.9,
+              "silence": 0.5
+            },
+            "ranked_guesses": [
+              "guitar",
+              "dancer",
+              "silence"
+            ],
+            "rationale": "'guitar' is strongly associated with 'music'. 'dancer' can relate to music through dance. 'silence' is a weaker connection but could imply absence of music.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fox"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "'guitar' and 'poet' (as poets often write lyrics) are both related to music, and this avoids overlapping with other team's words or the assassin."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.8
+            },
+            "ranked_guesses": [
+              "ember"
+            ],
+            "rationale": "Ember is directly related to fire, making it a strong candidate for the current clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.8
+            },
+            "ranked_guesses": [
+              "ember"
+            ],
+            "rationale": "Ember is directly related to fire, making it a strong guess.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ember": 0.8
+            },
+            "ranked_guesses": [
+              "ember"
+            ],
+            "rationale": "Ember is directly related to fire, making it a strong candidate for the current clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "festival"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fire",
+          "count": 3,
+          "rationale": "Flame, ember, and festival can all be associated with fire."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "urban"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "fox": 0.9
+            },
+            "ranked_guesses": [
+              "fox",
+              "eagle"
+            ],
+            "rationale": "fox and eagle are the most obvious animal-related words on the board. fox is more commonly associated with the term 'animal' and is likely the primary target, while eagle is a strong secondary guess.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.3,
+              "eagle": 0.7,
+              "fox": 0.9
+            },
+            "ranked_guesses": [
+              "fox",
+              "eagle",
+              "dancer"
+            ],
+            "rationale": "fox and eagle are clearly animals, with fox being more common. dancer is a stretch but could relate to animal movements.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "fox": 0.9,
+              "robot": 0.5
+            },
+            "ranked_guesses": [
+              "fox",
+              "eagle",
+              "robot"
+            ],
+            "rationale": "fox and eagle are clear animal-related words with high confidence; robot is a stretch but could be considered in some contexts.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "village"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Fox and eagle are both animals, and fox is a blue word while eagle is neutral, avoiding the assassin (robot)."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "celebration"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "Festival is strongly associated with celebration and is a unique word on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "Festival is strongly associated with celebration and is a unique match on the board.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "Festival is a strong match for the clue 'celebration' and is not yet revealed.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 1,
+          "rationale": "Festival is a red word and 'celebration' is closely related without directly revealing the board word."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "water"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "palace": 0.5,
+              "village": 0.7
+            },
+            "ranked_guesses": [
+              "village",
+              "bridge",
+              "palace"
+            ],
+            "rationale": "'urban' suggests city-related words. 'village' is a small urban area, 'bridge' is common in cities, and 'palace' can be found in urban settings.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "palace": 0.5,
+              "village": 0.7
+            },
+            "ranked_guesses": [
+              "village",
+              "bridge",
+              "palace"
+            ],
+            "rationale": "'urban' suggests city-related words. 'village' is a small urban area, 'bridge' is often urban infrastructure, and 'palace' can be found in urban settings.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "machine": 0.6,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "robot",
+              "machine"
+            ],
+            "rationale": "Both 'robot' and 'machine' relate to urban environments and technology, fitting the clue 'urban'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "harbor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "urban",
+          "count": 2,
+          "rationale": "'village' and 'harbor' are both blue words related to urban or populated areas, avoiding overlap with red words and the assassin."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "Festival is a strong match for the clue 'celebration' and has not been guessed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dancer": 0.8
+            },
+            "ranked_guesses": [
+              "dancer"
+            ],
+            "rationale": "Dancer is associated with celebration and fits the theme of the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "festival": 0.8
+            },
+            "ranked_guesses": [
+              "festival"
+            ],
+            "rationale": "Festival is a strong match for 'celebration' and has not been guessed yet.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "celebration",
+          "count": 1,
+          "rationale": "Festival is already revealed, and celebration can hint at other red words like 'palace' or 'paper'."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "space"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "harbor": 0.9
+            },
+            "ranked_guesses": [
+              "harbor",
+              "bridge"
+            ],
+            "rationale": "The clue 'water' suggests words related to bodies of water or water-related structures. 'Harbor' is a strong fit as it is directly associated with water. 'Bridge' is also a good candidate as many bridges span water.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "harbor": 0.8,
+              "island": 0.4
+            },
+            "ranked_guesses": [
+              "harbor",
+              "bridge",
+              "island"
+            ],
+            "rationale": "'water' suggests words related to bodies of water. 'harbor' is a strong match, 'bridge' can be associated with water, and 'island' is surrounded by water but was previously an illegal clue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "harbor": 0.7,
+              "island": 0.5
+            },
+            "ranked_guesses": [
+              "harbor",
+              "bridge",
+              "island"
+            ],
+            "rationale": "'water' suggests words related to bodies of water or water features. 'harbor' is a strong match as it's directly related to water. 'bridge' often spans water, and 'island' is surrounded by water, though it was previously a red word.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "alien"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "water",
+          "count": 2,
+          "rationale": "'harbor' and 'bridge' are both related to water, and neither overlaps with other team's words or the assassin."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "literary"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "landmark"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "Flame is associated with light and is a plausible guess for the current clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "Flame is the only word that directly relates to the clue 'light'.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.8
+            },
+            "ranked_guesses": [
+              "flame"
+            ],
+            "rationale": "Flame is directly associated with light, making it a strong candidate for the current clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen2.5 72B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "palace"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 1,
+          "rationale": "Flame is a red word and 'light' can be associated with it without directly revealing the word."
+        },
+        "agent_id": "Qwen2.5 72B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "alien",
+              "robot"
+            ],
+            "rationale": "'alien' strongly relates to 'space' as extraterrestrial beings, and 'robot' fits due to potential space exploration technology.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "alien",
+              "robot"
+            ],
+            "rationale": "'alien' is strongly associated with 'space' and is unrevealed. 'robot' is a secondary guess as robots are often associated with space exploration.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.9,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "alien",
+              "robot"
+            ],
+            "rationale": "'alien' strongly relates to 'space' as extraterrestrial beings, and 'robot' can be associated with space exploration.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "space",
+          "count": 2,
+          "rationale": "Alien and bridge can both be associated with space (alien as extraterrestrial, bridge as a spaceship term like 'bridge of a starship')."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "health"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "nurse"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    },
+    "revealed": [
+      "jungle",
+      "voyage"
+    ],
+    "words": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "adventure",
+        "count": 6,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "balloon": 0.5,
+          "camera": 0.55,
+          "helmet": 0.6,
+          "jungle": 0.9,
+          "planet": 0.75,
+          "rocket": 0.85,
+          "temple": 0.8,
+          "voyage": 0.95,
+          "wizard": 0.65
+        },
+        "ranked_guesses": [
+          "voyage",
+          "jungle",
+          "rocket",
+          "temple",
+          "planet",
+          "alien",
+          "wizard",
+          "helmet",
+          "camera",
+          "balloon"
+        ],
+        "rationale": "Voyage directly means adventure; jungle, temple, rocket, planet, alien, wizard are typical adventure settings; helmet and camera are adventure gear; balloon is adventure travel.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "jungle": 0.9,
+          "planet": 0.75,
+          "rocket": 0.8,
+          "spirit": 0.6,
+          "temple": 0.65,
+          "voyage": 0.85
+        },
+        "ranked_guesses": [
+          "jungle",
+          "voyage",
+          "rocket",
+          "planet",
+          "alien",
+          "temple",
+          "spirit"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.8,
+          "jungle": 0.9,
+          "planet": 0.7,
+          "rocket": 0.8,
+          "temple": 0.7,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "jungle",
+          "voyage",
+          "rocket",
+          "alien",
+          "planet",
+          "temple"
+        ],
+        "rationale": "Adventure clue strongly suggests words related to exploration, travel, and danger. Jungle, voyage, rocket, alien, planet, and temple are all common adventure themes.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 6,
+        "word": "adventure"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jungle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 3,
+    "reason": null,
+    "seed": "1",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 6,
+        "word": "adventure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "balloon": 0.5,
+              "camera": 0.55,
+              "helmet": 0.6,
+              "jungle": 0.9,
+              "planet": 0.75,
+              "rocket": 0.85,
+              "temple": 0.8,
+              "voyage": 0.95,
+              "wizard": 0.65
+            },
+            "ranked_guesses": [
+              "voyage",
+              "jungle",
+              "rocket",
+              "temple",
+              "planet",
+              "alien",
+              "wizard",
+              "helmet",
+              "camera",
+              "balloon"
+            ],
+            "rationale": "Voyage directly means adventure; jungle, temple, rocket, planet, alien, wizard are typical adventure settings; helmet and camera are adventure gear; balloon is adventure travel.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "jungle": 0.9,
+              "planet": 0.75,
+              "rocket": 0.8,
+              "spirit": 0.6,
+              "temple": 0.65,
+              "voyage": 0.85
+            },
+            "ranked_guesses": [
+              "jungle",
+              "voyage",
+              "rocket",
+              "planet",
+              "alien",
+              "temple",
+              "spirit"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.8,
+              "jungle": 0.9,
+              "planet": 0.7,
+              "rocket": 0.8,
+              "temple": 0.7,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "jungle",
+              "voyage",
+              "rocket",
+              "alien",
+              "planet",
+              "temple"
+            ],
+            "rationale": "Adventure clue strongly suggests words related to exploration, travel, and danger. Jungle, voyage, rocket, alien, planet, and temple are all common adventure themes.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jungle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "adventure",
+          "count": 6,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

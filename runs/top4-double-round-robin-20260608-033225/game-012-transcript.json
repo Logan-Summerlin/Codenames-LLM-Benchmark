@@ -1,0 +1,2991 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "airport": "blue",
+      "atlas": "neutral",
+      "autumn": "blue",
+      "bread": "red",
+      "camera": "red",
+      "captain": "neutral",
+      "compass": "blue",
+      "dancer": "red",
+      "family": "neutral",
+      "farmer": "blue",
+      "ghost": "neutral",
+      "harbor": "assassin",
+      "lantern": "neutral",
+      "mirror": "blue",
+      "museum": "neutral",
+      "orange": "red",
+      "palace": "blue",
+      "robot": "blue",
+      "secret": "red",
+      "silence": "red",
+      "teacher": "red",
+      "temple": "red",
+      "village": "red",
+      "voyage": "neutral"
+    },
+    "revealed": [
+      "agent",
+      "airport",
+      "atlas",
+      "autumn",
+      "bread",
+      "camera",
+      "captain",
+      "compass",
+      "farmer",
+      "mirror",
+      "orange",
+      "palace",
+      "robot",
+      "secret",
+      "silence",
+      "teacher",
+      "temple",
+      "village",
+      "voyage"
+    ],
+    "words": {
+      "agent": "blue",
+      "airport": "blue",
+      "atlas": "neutral",
+      "autumn": "blue",
+      "bread": "red",
+      "camera": "red",
+      "captain": "neutral",
+      "compass": "blue",
+      "dancer": "red",
+      "family": "neutral",
+      "farmer": "blue",
+      "ghost": "neutral",
+      "harbor": "assassin",
+      "lantern": "neutral",
+      "mirror": "blue",
+      "museum": "neutral",
+      "orange": "red",
+      "palace": "blue",
+      "robot": "blue",
+      "secret": "red",
+      "silence": "red",
+      "teacher": "red",
+      "temple": "red",
+      "village": "red",
+      "voyage": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "education",
+        "count": 2,
+        "rationale": "Connects teacher and temple (as a place of learning/study) or potentially village, but teacher is the strongest link."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.3,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "museum"
+        ],
+        "rationale": "Teacher is directly related to education; museum is a place of learning.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.3,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "museum"
+        ],
+        "rationale": "Teacher is directly related to education. Museum is a place of learning.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.3,
+          "teacher": 0.9
+        },
+        "ranked_guesses": [
+          "teacher",
+          "museum"
+        ],
+        "rationale": "Teacher is directly related to education. Museum is a place of learning.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 2,
+        "rationale": "concept connected to finding paths and travel; hints two blue words related to navigation"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.8
+        },
+        "ranked_guesses": [
+          "compass"
+        ],
+        "rationale": "Direct navigation tool; strongly tied to navigation.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.87,
+          "compass": 0.92
+        },
+        "ranked_guesses": [
+          "compass",
+          "atlas"
+        ],
+        "rationale": "Direct navigation terms; compass is a navigation tool, atlas is a map for navigation.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.9,
+          "compass": 0.85
+        },
+        "ranked_guesses": [
+          "atlas",
+          "compass"
+        ],
+        "rationale": "Direct navigation-related terms; atlas maps routes and compass aids direction, both strong fits for the clue 'navigation' and unlikely to be red or blocked.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "religion",
+        "count": 2,
+        "rationale": "Connects temple and palace (though palace is blue, temple is red) - wait, palace is blue. Let's try temple and village or secret. Actually, temple and village are both red. Let's use 'spiritual' or 'faith' for temple and secret? No, 'shrine' is not there. Let's go with 'sacred' for temple and secret."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.3,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "ghost"
+        ],
+        "rationale": "Temple is directly related to religion. Ghost is a secondary possibility related to spiritual beliefs.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.3,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "ghost"
+        ],
+        "rationale": "Temple is directly related to religion. Ghost is a secondary possibility related to spiritual beliefs.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.3,
+          "temple": 0.9
+        },
+        "ranked_guesses": [
+          "temple",
+          "ghost"
+        ],
+        "rationale": "Temple is directly related to religion. Ghost is a secondary possibility related to spiritual beliefs.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "travel",
+        "count": 2,
+        "rationale": "two blue words tied to travel (airport and voyage)"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "voyage",
+          "airport"
+        ],
+        "rationale": "Two travel-related words align with the clue travel (voyage, airport) and are unrevealed.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "voyage"
+        ],
+        "rationale": "Direct travel-related term matching the clue",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.8,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "voyage",
+          "airport"
+        ],
+        "rationale": "Direct travel terms aligned with the clue; picks low risk of red words like temple/teacher and use unrevealed travel-related tiles.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "quiet",
+        "count": 2,
+        "rationale": "Connects to 'silence' and 'secret', both of which are red words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.6,
+          "silence": 0.9
+        },
+        "ranked_guesses": [
+          "silence",
+          "secret"
+        ],
+        "rationale": "'Silence' is a direct synonym for quiet, and 'secret' is something kept quiet.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.6,
+          "silence": 0.9
+        },
+        "ranked_guesses": [
+          "silence",
+          "secret"
+        ],
+        "rationale": "'Silence' is a direct synonym for quiet, and 'secret' is something kept quiet.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.6,
+          "silence": 0.9
+        },
+        "ranked_guesses": [
+          "silence",
+          "secret"
+        ],
+        "rationale": "'Silence' is a direct synonym for quiet, and 'secret' is something kept quiet.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "glass",
+        "count": 3,
+        "rationale": "material linking blue targets through glass usage (reflective, architectural, travel contexts)"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mirror": 0.8
+        },
+        "ranked_guesses": [
+          "mirror"
+        ],
+        "rationale": "Directly associated with glass; mirrors are made of glass.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.7,
+          "lantern": 0.65,
+          "mirror": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "camera",
+          "lantern"
+        ],
+        "rationale": "Glass-related items on board: mirror (glass), camera (lens/glass), lantern (glass enclosure).",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.6,
+          "lantern": 0.65,
+          "mirror": 0.9
+        },
+        "ranked_guesses": [
+          "mirror",
+          "lantern",
+          "camera"
+        ],
+        "rationale": "glass-related items: mirror is a direct glass item; lantern and camera are plausible glass-based items.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "In a professional or intelligence context, an 'agent' can be a fallback or a contingency plan/person.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "In a professional or espionage context, an 'agent' can be a fallback or a contingency plan/person.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "In a technical or espionage context, an 'agent' can be a fallback or a backup operative.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "gate",
+        "count": 3,
+        "rationale": "logic gates for robotics, airport gates, and palace gates"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.85,
+          "harbor": 0.6,
+          "palace": 0.65
+        },
+        "ranked_guesses": [
+          "airport",
+          "palace",
+          "harbor"
+        ],
+        "rationale": "Most direct 'gate' connections: airport gate, palace gate, harbor gate.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.8
+        },
+        "ranked_guesses": [
+          "airport"
+        ],
+        "rationale": "Gate commonly associated with airports (airport gate)",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.85,
+          "harbor": 0.5,
+          "palace": 0.6
+        },
+        "ranked_guesses": [
+          "airport",
+          "palace",
+          "harbor"
+        ],
+        "rationale": "Airport is the strongest direct link to 'gate' (boarding gate); palace commonly has gates; harbor can have gates/entrances as a weaker link among remaining options.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "citrus",
+        "count": 1,
+        "rationale": "Orange is a red word and a citrus fruit."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 1.0
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a type of citrus fruit.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 1.0
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a type of citrus fruit.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "orange": 1.0
+        },
+        "ranked_guesses": [
+          "orange"
+        ],
+        "rationale": "Orange is a citrus fruit.",
+        "stop": true
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "harvest",
+        "count": 2,
+        "rationale": "ties to seasonal farming; harvest season links autumn and farming"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.8
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "Directly tied to harvest; not yet revealed and safer than other harvest-related options.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8
+        },
+        "ranked_guesses": [
+          "autumn"
+        ],
+        "rationale": "Autumn is strongly associated with harvest as the harvest season.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.8,
+          "bread": 0.8
+        },
+        "ranked_guesses": [
+          "autumn",
+          "bread"
+        ],
+        "rationale": "harvest commonly links to autumn and bread from crops",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "community",
+        "count": 2,
+        "rationale": "Village and family are related to community, but family is neutral. Village is red. Bread and dancer are also red. Let's try 'rural' for village and farmer, but farmer is blue. Let's try 'town' for village and palace, but palace is blue. Let's try 'mystery' for secret and ghost, but ghost is neutral. Let's try 'bakery' for bread. Let's try 'performance' for dancer. Let's try 'hidden' for secret."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village",
+          "family"
+        ],
+        "rationale": "Village and family are the strongest associations with 'community' among the remaining words.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village",
+          "family"
+        ],
+        "rationale": "Village and family are both strong synonyms or components of a community.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "village": 0.9
+        },
+        "ranked_guesses": [
+          "village",
+          "family"
+        ],
+        "rationale": "Village and family are both strong synonyms or components of a community.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "guard",
+        "count": 3,
+        "rationale": "associates with palace guards, robot guards, and secret agents"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "palace": 0.8
+        },
+        "ranked_guesses": [
+          "palace"
+        ],
+        "rationale": "strong association with guards (palace guards) and fits the 'guard' clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "harbor": 0.6,
+          "museum": 0.65,
+          "palace": 0.75
+        },
+        "ranked_guesses": [
+          "palace",
+          "museum",
+          "harbor"
+        ],
+        "rationale": "Words associated with guarding/protection of places (palace guards, museum security, harbor guards).",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "harbor": 0.6,
+          "museum": 0.65,
+          "palace": 0.75
+        },
+        "ranked_guesses": [
+          "palace",
+          "museum",
+          "harbor"
+        ],
+        "rationale": "Strong guard associations: guarded places (palace, museum) and coast guard-related harbor.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "hidden",
+        "count": 2,
+        "rationale": "Targets 'secret' and 'camera' (as in hidden camera)."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6,
+          "secret": 0.9
+        },
+        "ranked_guesses": [
+          "secret",
+          "agent"
+        ],
+        "rationale": "'Secret' is a direct synonym for 'hidden'. 'Agent' (like a secret agent) is also strongly associated with being hidden or undercover.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6,
+          "secret": 0.9
+        },
+        "ranked_guesses": [
+          "secret",
+          "agent"
+        ],
+        "rationale": "'Secret' is a direct synonym for 'hidden'. 'Agent' (like a secret agent) also fits the theme of being hidden or undercover.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.6,
+          "secret": 0.9
+        },
+        "ranked_guesses": [
+          "secret",
+          "agent"
+        ],
+        "rationale": "'Secret' is a direct synonym for 'hidden'. 'Agent' often refers to a secret agent or undercover operative.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "worker",
+        "count": 3,
+        "rationale": "Connects three blue concepts tied to labor (humans and machine)."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "Robot fits 'worker' theme; likely a blue card on the board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.8,
+          "farmer": 0.8,
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "farmer",
+          "robot",
+          "captain"
+        ],
+        "rationale": "Farmer and robot clearly relate to 'worker'; captain is a plausible job-related guess to complete the three.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.7,
+          "farmer": 0.85,
+          "robot": 0.75
+        },
+        "ranked_guesses": [
+          "farmer",
+          "robot",
+          "captain"
+        ],
+        "rationale": "Matches the worker theme: farmer is a worker; robots are workers; captain is a job/role.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "bakery",
+        "count": 1,
+        "rationale": "The only remaining red words are bread, camera, and dancer. Bakery directly relates to bread."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 1.0
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "Bread is the most direct association with a bakery.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 1.0
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "Bread is the most direct association with a bakery.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 1.0
+        },
+        "ranked_guesses": [
+          "bread"
+        ],
+        "rationale": "The clue 'bakery' is a direct association with 'bread'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "spybot",
+        "count": 2,
+        "rationale": "blends spy and bot imagery to hint at two blue words"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "robot",
+          "agent"
+        ],
+        "rationale": "Spybot clue suggests robot (and agent) as related targets.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.8,
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "robot",
+          "camera"
+        ],
+        "rationale": "Spybot clue points to ROBOT and CAMERA (spy tools) as blue words.",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.3,
+          "robot": 0.85
+        },
+        "ranked_guesses": [
+          "robot",
+          "agent"
+        ],
+        "rationale": "robot is a direct match to 'bot' in the clue; agent is a plausible spy-related word but less certain.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "photography",
+        "count": 2,
+        "rationale": "The remaining red words are 'camera' and 'dancer'. While 'photography' strongly links to 'camera', it is a safer bet than trying to link both, but 'dancer' is the only other red word left. Wait, looking at the board, red words remaining are 'camera' and 'dancer'. 'Photography' targets 'camera'. 'Performance' might target 'dancer'. Let's try 'art' to cover both 'camera' and 'dancer'."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "museum": 0.4
+        },
+        "ranked_guesses": [
+          "camera",
+          "museum"
+        ],
+        "rationale": "Camera is the most direct association with photography. Museum is a secondary possibility as they often house photography collections.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "museum": 0.4
+        },
+        "ranked_guesses": [
+          "camera",
+          "museum"
+        ],
+        "rationale": "Camera is the most direct association with photography. Museum is a secondary possibility as they often house photography collections.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "camera": 0.9,
+          "museum": 0.4
+        },
+        "ranked_guesses": [
+          "camera",
+          "museum"
+        ],
+        "rationale": "Camera is the most direct association with photography. Museum is a secondary possibility as they often house photography collections.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "spy",
+        "count": 1,
+        "rationale": "points to the remaining blue word"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "spy directly points to 'agent' (unrevealed word)",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "Direct synonym of spy; 'agent' is unrevealed and strongly linked to the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "Spy synonym directly on board (agent).",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "compass"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "religion"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "quiet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "silence"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "glass"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "gate"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "airport"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "citrus"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "orange"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "harvest"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "community"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "village"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "guard"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "palace"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "hidden"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "secret"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "worker"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "farmer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "captain"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bakery"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bread"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spybot"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "photography"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "camera"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "spy"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "agent"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 72,
+    "public_event_count": 51,
+    "reason": "all_words_found",
+    "seed": "top4-double-round-robin-012-google_gemma_4_31b_it-vs-openai_gpt_5_nano",
+    "team_blue": "GPT-5 Nano",
+    "team_red": "Gemma 4 31B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "education"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.3,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "museum"
+            ],
+            "rationale": "Teacher is directly related to education; museum is a place of learning.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.3,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "museum"
+            ],
+            "rationale": "Teacher is directly related to education. Museum is a place of learning.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.3,
+              "teacher": 0.9
+            },
+            "ranked_guesses": [
+              "teacher",
+              "museum"
+            ],
+            "rationale": "Teacher is directly related to education. Museum is a place of learning.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "education",
+          "count": 2,
+          "rationale": "Connects teacher and temple (as a place of learning/study) or potentially village, but teacher is the strongest link."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.8
+            },
+            "ranked_guesses": [
+              "compass"
+            ],
+            "rationale": "Direct navigation tool; strongly tied to navigation.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.87,
+              "compass": 0.92
+            },
+            "ranked_guesses": [
+              "compass",
+              "atlas"
+            ],
+            "rationale": "Direct navigation terms; compass is a navigation tool, atlas is a map for navigation.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.9,
+              "compass": 0.85
+            },
+            "ranked_guesses": [
+              "atlas",
+              "compass"
+            ],
+            "rationale": "Direct navigation-related terms; atlas maps routes and compass aids direction, both strong fits for the clue 'navigation' and unlikely to be red or blocked.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "compass"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 2,
+          "rationale": "concept connected to finding paths and travel; hints two blue words related to navigation"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "religion"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.3,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "ghost"
+            ],
+            "rationale": "Temple is directly related to religion. Ghost is a secondary possibility related to spiritual beliefs.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.3,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "ghost"
+            ],
+            "rationale": "Temple is directly related to religion. Ghost is a secondary possibility related to spiritual beliefs.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.3,
+              "temple": 0.9
+            },
+            "ranked_guesses": [
+              "temple",
+              "ghost"
+            ],
+            "rationale": "Temple is directly related to religion. Ghost is a secondary possibility related to spiritual beliefs.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "religion",
+          "count": 2,
+          "rationale": "Connects temple and palace (though palace is blue, temple is red) - wait, palace is blue. Let's try temple and village or secret. Actually, temple and village are both red. Let's use 'spiritual' or 'faith' for temple and secret? No, 'shrine' is not there. Let's go with 'sacred' for temple and secret."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "travel"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "voyage",
+              "airport"
+            ],
+            "rationale": "Two travel-related words align with the clue travel (voyage, airport) and are unrevealed.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "voyage"
+            ],
+            "rationale": "Direct travel-related term matching the clue",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.8,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "voyage",
+              "airport"
+            ],
+            "rationale": "Direct travel terms aligned with the clue; picks low risk of red words like temple/teacher and use unrevealed travel-related tiles.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "travel",
+          "count": 2,
+          "rationale": "two blue words tied to travel (airport and voyage)"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "quiet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.6,
+              "silence": 0.9
+            },
+            "ranked_guesses": [
+              "silence",
+              "secret"
+            ],
+            "rationale": "'Silence' is a direct synonym for quiet, and 'secret' is something kept quiet.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.6,
+              "silence": 0.9
+            },
+            "ranked_guesses": [
+              "silence",
+              "secret"
+            ],
+            "rationale": "'Silence' is a direct synonym for quiet, and 'secret' is something kept quiet.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.6,
+              "silence": 0.9
+            },
+            "ranked_guesses": [
+              "silence",
+              "secret"
+            ],
+            "rationale": "'Silence' is a direct synonym for quiet, and 'secret' is something kept quiet.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "silence"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "quiet",
+          "count": 2,
+          "rationale": "Connects to 'silence' and 'secret', both of which are red words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "glass"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mirror": 0.8
+            },
+            "ranked_guesses": [
+              "mirror"
+            ],
+            "rationale": "Directly associated with glass; mirrors are made of glass.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.7,
+              "lantern": 0.65,
+              "mirror": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "camera",
+              "lantern"
+            ],
+            "rationale": "Glass-related items on board: mirror (glass), camera (lens/glass), lantern (glass enclosure).",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.6,
+              "lantern": 0.65,
+              "mirror": 0.9
+            },
+            "ranked_guesses": [
+              "mirror",
+              "lantern",
+              "camera"
+            ],
+            "rationale": "glass-related items: mirror is a direct glass item; lantern and camera are plausible glass-based items.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "glass",
+          "count": 3,
+          "rationale": "material linking blue targets through glass usage (reflective, architectural, travel contexts)"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "In a professional or intelligence context, an 'agent' can be a fallback or a contingency plan/person.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "In a professional or espionage context, an 'agent' can be a fallback or a contingency plan/person.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "In a technical or espionage context, an 'agent' can be a fallback or a backup operative.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "gate"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.85,
+              "harbor": 0.6,
+              "palace": 0.65
+            },
+            "ranked_guesses": [
+              "airport",
+              "palace",
+              "harbor"
+            ],
+            "rationale": "Most direct 'gate' connections: airport gate, palace gate, harbor gate.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.8
+            },
+            "ranked_guesses": [
+              "airport"
+            ],
+            "rationale": "Gate commonly associated with airports (airport gate)",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.85,
+              "harbor": 0.5,
+              "palace": 0.6
+            },
+            "ranked_guesses": [
+              "airport",
+              "palace",
+              "harbor"
+            ],
+            "rationale": "Airport is the strongest direct link to 'gate' (boarding gate); palace commonly has gates; harbor can have gates/entrances as a weaker link among remaining options.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "airport"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "gate",
+          "count": 3,
+          "rationale": "logic gates for robotics, airport gates, and palace gates"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "citrus"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "orange": 1.0
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a type of citrus fruit.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 1.0
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a type of citrus fruit.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "orange": 1.0
+            },
+            "ranked_guesses": [
+              "orange"
+            ],
+            "rationale": "Orange is a citrus fruit.",
+            "stop": true
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "orange"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "citrus",
+          "count": 1,
+          "rationale": "Orange is a red word and a citrus fruit."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "harvest"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.8
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "Directly tied to harvest; not yet revealed and safer than other harvest-related options.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8
+            },
+            "ranked_guesses": [
+              "autumn"
+            ],
+            "rationale": "Autumn is strongly associated with harvest as the harvest season.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.8,
+              "bread": 0.8
+            },
+            "ranked_guesses": [
+              "autumn",
+              "bread"
+            ],
+            "rationale": "harvest commonly links to autumn and bread from crops",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "harvest",
+          "count": 2,
+          "rationale": "ties to seasonal farming; harvest season links autumn and farming"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "community"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "village": 0.9
+            },
+            "ranked_guesses": [
+              "village",
+              "family"
+            ],
+            "rationale": "Village and family are the strongest associations with 'community' among the remaining words.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "village": 0.9
+            },
+            "ranked_guesses": [
+              "village",
+              "family"
+            ],
+            "rationale": "Village and family are both strong synonyms or components of a community.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "village": 0.9
+            },
+            "ranked_guesses": [
+              "village",
+              "family"
+            ],
+            "rationale": "Village and family are both strong synonyms or components of a community.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "village"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "community",
+          "count": 2,
+          "rationale": "Village and family are related to community, but family is neutral. Village is red. Bread and dancer are also red. Let's try 'rural' for village and farmer, but farmer is blue. Let's try 'town' for village and palace, but palace is blue. Let's try 'mystery' for secret and ghost, but ghost is neutral. Let's try 'bakery' for bread. Let's try 'performance' for dancer. Let's try 'hidden' for secret."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "guard"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "palace": 0.8
+            },
+            "ranked_guesses": [
+              "palace"
+            ],
+            "rationale": "strong association with guards (palace guards) and fits the 'guard' clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "harbor": 0.6,
+              "museum": 0.65,
+              "palace": 0.75
+            },
+            "ranked_guesses": [
+              "palace",
+              "museum",
+              "harbor"
+            ],
+            "rationale": "Words associated with guarding/protection of places (palace guards, museum security, harbor guards).",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "harbor": 0.6,
+              "museum": 0.65,
+              "palace": 0.75
+            },
+            "ranked_guesses": [
+              "palace",
+              "museum",
+              "harbor"
+            ],
+            "rationale": "Strong guard associations: guarded places (palace, museum) and coast guard-related harbor.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "palace"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "guard",
+          "count": 3,
+          "rationale": "associates with palace guards, robot guards, and secret agents"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "hidden"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6,
+              "secret": 0.9
+            },
+            "ranked_guesses": [
+              "secret",
+              "agent"
+            ],
+            "rationale": "'Secret' is a direct synonym for 'hidden'. 'Agent' (like a secret agent) is also strongly associated with being hidden or undercover.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6,
+              "secret": 0.9
+            },
+            "ranked_guesses": [
+              "secret",
+              "agent"
+            ],
+            "rationale": "'Secret' is a direct synonym for 'hidden'. 'Agent' (like a secret agent) also fits the theme of being hidden or undercover.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.6,
+              "secret": 0.9
+            },
+            "ranked_guesses": [
+              "secret",
+              "agent"
+            ],
+            "rationale": "'Secret' is a direct synonym for 'hidden'. 'Agent' often refers to a secret agent or undercover operative.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "secret"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "hidden",
+          "count": 2,
+          "rationale": "Targets 'secret' and 'camera' (as in hidden camera)."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "worker"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "Robot fits 'worker' theme; likely a blue card on the board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.8,
+              "farmer": 0.8,
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "farmer",
+              "robot",
+              "captain"
+            ],
+            "rationale": "Farmer and robot clearly relate to 'worker'; captain is a plausible job-related guess to complete the three.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.7,
+              "farmer": 0.85,
+              "robot": 0.75
+            },
+            "ranked_guesses": [
+              "farmer",
+              "robot",
+              "captain"
+            ],
+            "rationale": "Matches the worker theme: farmer is a worker; robots are workers; captain is a job/role.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "farmer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "captain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "worker",
+          "count": 3,
+          "rationale": "Connects three blue concepts tied to labor (humans and machine)."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "bakery"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bread": 1.0
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "Bread is the most direct association with a bakery.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 1.0
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "Bread is the most direct association with a bakery.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 1.0
+            },
+            "ranked_guesses": [
+              "bread"
+            ],
+            "rationale": "The clue 'bakery' is a direct association with 'bread'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bread"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "bakery",
+          "count": 1,
+          "rationale": "The only remaining red words are bread, camera, and dancer. Bakery directly relates to bread."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "spybot"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "robot",
+              "agent"
+            ],
+            "rationale": "Spybot clue suggests robot (and agent) as related targets.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.8,
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "robot",
+              "camera"
+            ],
+            "rationale": "Spybot clue points to ROBOT and CAMERA (spy tools) as blue words.",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.3,
+              "robot": 0.85
+            },
+            "ranked_guesses": [
+              "robot",
+              "agent"
+            ],
+            "rationale": "robot is a direct match to 'bot' in the clue; agent is a plausible spy-related word but less certain.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spybot",
+          "count": 2,
+          "rationale": "blends spy and bot imagery to hint at two blue words"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "photography"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "museum": 0.4
+            },
+            "ranked_guesses": [
+              "camera",
+              "museum"
+            ],
+            "rationale": "Camera is the most direct association with photography. Museum is a secondary possibility as they often house photography collections.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "museum": 0.4
+            },
+            "ranked_guesses": [
+              "camera",
+              "museum"
+            ],
+            "rationale": "Camera is the most direct association with photography. Museum is a secondary possibility as they often house photography collections.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "camera": 0.9,
+              "museum": 0.4
+            },
+            "ranked_guesses": [
+              "camera",
+              "museum"
+            ],
+            "rationale": "Camera is the most direct association with photography. Museum is a secondary possibility as they often house photography collections.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "camera"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "photography",
+          "count": 2,
+          "rationale": "The remaining red words are 'camera' and 'dancer'. While 'photography' strongly links to 'camera', it is a safer bet than trying to link both, but 'dancer' is the only other red word left. Wait, looking at the board, red words remaining are 'camera' and 'dancer'. 'Photography' targets 'camera'. 'Performance' might target 'dancer'. Let's try 'art' to cover both 'camera' and 'dancer'."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "spy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "spy directly points to 'agent' (unrevealed word)",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "Direct synonym of spy; 'agent' is unrevealed and strongly linked to the clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "Spy synonym directly on board (agent).",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "agent"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spy",
+          "count": 1,
+          "rationale": "points to the remaining blue word"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

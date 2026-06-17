@@ -1,0 +1,1632 @@
+{
+  "board": {
+    "identities": {
+      "alps": "neutral",
+      "antarctica": "blue",
+      "australia": "neutral",
+      "beijing": "blue",
+      "berlin": "red",
+      "bridge": "red",
+      "button": "blue",
+      "calf": "neutral",
+      "cat": "assassin",
+      "church": "neutral",
+      "cloak": "red",
+      "cycle": "blue",
+      "draft": "neutral",
+      "dragon": "red",
+      "eagle": "blue",
+      "ground": "neutral",
+      "hook": "red",
+      "jet": "blue",
+      "lawyer": "red",
+      "nail": "blue",
+      "octopus": "red",
+      "rock": "neutral",
+      "round": "red",
+      "tower": "blue",
+      "yard": "red"
+    },
+    "revealed": [
+      "antarctica",
+      "australia",
+      "beijing",
+      "bridge",
+      "button",
+      "cycle",
+      "draft",
+      "dragon",
+      "eagle",
+      "hook",
+      "jet",
+      "lawyer",
+      "nail",
+      "round",
+      "tower"
+    ],
+    "words": {
+      "alps": "neutral",
+      "antarctica": "blue",
+      "australia": "neutral",
+      "beijing": "blue",
+      "berlin": "red",
+      "bridge": "red",
+      "button": "blue",
+      "calf": "neutral",
+      "cat": "assassin",
+      "church": "neutral",
+      "cloak": "red",
+      "cycle": "blue",
+      "draft": "neutral",
+      "dragon": "red",
+      "eagle": "blue",
+      "ground": "neutral",
+      "hook": "red",
+      "jet": "blue",
+      "lawyer": "red",
+      "nail": "blue",
+      "octopus": "red",
+      "rock": "neutral",
+      "round": "red",
+      "tower": "blue",
+      "yard": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "law",
+        "count": 1,
+        "rationale": "Law directly points to the red word 'lawyer'"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "Connects jet and eagle as both are related to flight/air travel"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "jet": 0.95
+        },
+        "ranked_guesses": [
+          "jet",
+          "eagle"
+        ],
+        "rationale": "Flight strongly associates with air travel and flying birds. 'Jet' (airplane) and 'eagle' (flying bird) are the most direct matches for the clue 'flight' with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "jet": 0.95
+        },
+        "ranked_guesses": [
+          "jet",
+          "eagle"
+        ],
+        "rationale": "'flight' strongly suggests 'jet' (aircraft) and 'eagle' (bird that flies). Other words have weaker or no direct connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.6,
+          "beijing": 0.55,
+          "dragon": 0.85,
+          "eagle": 0.9,
+          "jet": 0.95
+        },
+        "ranked_guesses": [
+          "jet",
+          "eagle",
+          "dragon",
+          "alps",
+          "beijing"
+        ],
+        "rationale": "'flight' most directly relates to 'jet', followed by 'eagle' and 'dragon'. Geographical places and cities are less likely associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mythic",
+        "count": 2,
+        "rationale": "Both dragon and octopus are mythical or legendary creatures."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.45,
+          "dragon": 0.78
+        },
+        "ranked_guesses": [
+          "dragon",
+          "cloak"
+        ],
+        "rationale": "dragon is a classic mythic creature; cloak could hint at mythic magical items",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.45,
+          "dragon": 0.85
+        },
+        "ranked_guesses": [
+          "dragon",
+          "bridge"
+        ],
+        "rationale": "Dragon is a classic mythic creature; bridge is less clear but could fit mythic tales",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.45,
+          "dragon": 0.85
+        },
+        "ranked_guesses": [
+          "dragon",
+          "cloak"
+        ],
+        "rationale": "Dragon is a classic mythic creature; cloak is a mythic magical item",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "place",
+        "count": 2,
+        "rationale": "Connects the two location words antarctica and beijing without overlapping with red words or the assassin"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.85,
+          "antarctica": 0.9,
+          "australia": 0.8,
+          "beijing": 0.75,
+          "berlin": 0.7
+        },
+        "ranked_guesses": [
+          "antarctica",
+          "alps",
+          "australia",
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "'place' clue with count 2 strongly suggests geographical locations; antarctica is the most unambiguous place",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.95,
+          "antarctica": 0.95,
+          "australia": 0.9,
+          "beijing": 0.9,
+          "berlin": 0.9
+        },
+        "ranked_guesses": [
+          "alps",
+          "antarctica",
+          "australia",
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "'place' strongly suggests geographic locations; alps and antarctica are clear matches for the count of 2",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "antarctica": 0.9,
+          "australia": 0.85,
+          "beijing": 0.7,
+          "berlin": 0.65,
+          "church": 0.6,
+          "ground": 0.3,
+          "round": 0.2,
+          "tower": 0.55,
+          "yard": 0.3
+        },
+        "ranked_guesses": [
+          "antarctica",
+          "australia",
+          "beijing",
+          "berlin",
+          "tower",
+          "church",
+          "ground",
+          "yard",
+          "round"
+        ],
+        "rationale": "The clue 'place' with count 2 strongly suggests geographical locations. 'antarctica' and 'australia' are the most obvious continents fitting the clue. 'beijing' and 'berlin' are capital cities that also fit. 'tower' and 'church' are building types that could be considered places. Other words are less likely to match the broad 'place' category.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "court",
+        "count": 1,
+        "rationale": "Court suggests the red word 'lawyer'"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lawyer": 0.92
+        },
+        "ranked_guesses": [
+          "lawyer"
+        ],
+        "rationale": "court directly relates to lawyer, the remaining red word",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lawyer": 0.85
+        },
+        "ranked_guesses": [
+          "lawyer"
+        ],
+        "rationale": "Court suggests legal setting, pointing to the red word 'lawyer' which is still unrevealed.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lawyer": 0.85
+        },
+        "ranked_guesses": [
+          "lawyer"
+        ],
+        "rationale": "court suggests legal context, pointing to the red word 'lawyer'",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "fasten",
+        "count": 2,
+        "rationale": "Connects 'button' and 'nail' as items commonly used for fastening."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "button": 0.9,
+          "hook": 0.85
+        },
+        "ranked_guesses": [
+          "button",
+          "hook"
+        ],
+        "rationale": "'fasten' directly relates to 'button' (fasten a button) and 'hook' (fasten with a hook), both remaining on the board. These are the strongest associations with the given clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "button": 0.8,
+          "hook": 0.8
+        },
+        "ranked_guesses": [
+          "button",
+          "hook"
+        ],
+        "rationale": "'fasten' directly relates to 'button' (fastened) and 'hook' (used to fasten), both plausible blue team words with count 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "button": 0.7,
+          "hook": 0.6,
+          "nail": 0.5
+        },
+        "ranked_guesses": [
+          "button",
+          "hook",
+          "nail"
+        ],
+        "rationale": "'fasten' strongly suggests 'button' and 'hook' as direct associations; 'nail' is plausible but less direct",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "construction",
+        "count": 2,
+        "rationale": "Both bridge and yard are associated with building and construction."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.75,
+          "nail": 0.75
+        },
+        "ranked_guesses": [
+          "bridge",
+          "nail"
+        ],
+        "rationale": "Construction evokes building elements like bridges and nails, likely red agents.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.78,
+          "nail": 0.65
+        },
+        "ranked_guesses": [
+          "bridge",
+          "nail"
+        ],
+        "rationale": "Construction evokes structures like bridges and the fasteners used such as nails.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.78
+        },
+        "ranked_guesses": [
+          "bridge"
+        ],
+        "rationale": "construction often involves building bridges",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "time",
+        "count": 3,
+        "rationale": "Connects to all three remaining blue words: Beijing (time zone), cycle (time cycle), and tower (clock tower)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.55,
+          "cycle": 0.95,
+          "round": 0.7,
+          "tower": 0.65
+        },
+        "ranked_guesses": [
+          "cycle",
+          "round",
+          "tower",
+          "church"
+        ],
+        "rationale": "The clue 'time' with count 3 suggests three time-related words. 'cycle' is the strongest direct match. 'round' and 'tower' are common timekeeping associations (round clock faces, clock towers). 'church' is a weaker but plausible connection as church bells mark time.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.75,
+          "cycle": 0.9,
+          "tower": 0.85
+        },
+        "ranked_guesses": [
+          "cycle",
+          "tower",
+          "beijing"
+        ],
+        "rationale": "'time' strongly connects to 'cycle' (time cycle), 'tower' (clock tower), and 'beijing' (time zone reference). These are the top 3 remaining words with clearest time associations.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cycle": 0.9,
+          "draft": 0.7,
+          "round": 0.9
+        },
+        "ranked_guesses": [
+          "round",
+          "cycle",
+          "draft"
+        ],
+        "rationale": "'round' and 'cycle' are strongly associated with time measurement, while 'draft' can refer to historical time periods. All three remain unrevealed and fit the clue count of 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "official",
+        "count": 3,
+        "rationale": "Points to red words like Berlin (capital), cloak (official attire), and yard (official grounds)"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.6,
+          "draft": 0.75,
+          "yard": 0.65
+        },
+        "ranked_guesses": [
+          "draft",
+          "yard",
+          "church"
+        ],
+        "rationale": "Official documents (draft), official spaces (yard), and official institutions (church)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.75,
+          "berlin": 0.73,
+          "draft": 0.7
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin",
+          "draft"
+        ],
+        "rationale": "Official relates to capitals/government (Beijing, Berlin) and formal documents (draft).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "draft": 0.78
+        },
+        "ranked_guesses": [
+          "draft"
+        ],
+        "rationale": "An 'official' document often starts as a draft; the word fits the clue best among remaining candidates.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "china",
+        "count": 2,
+        "rationale": "Directly points to 'beijing' and loosely connects to 'tower' (e.g., China-related towers or Beijing landmarks)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.95,
+          "ground": 0.25,
+          "tower": 0.7
+        },
+        "ranked_guesses": [
+          "beijing",
+          "tower",
+          "ground"
+        ],
+        "rationale": "'china' clue strongly points to 'beijing' (capital). 'tower' likely refers to Great Wall towers. 'ground' is a random third guess as remaining words have low China relevance.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.95
+        },
+        "ranked_guesses": [
+          "beijing"
+        ],
+        "rationale": "Beijing is the capital of China and the most direct association with the clue 'china'",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.95,
+          "octopus": 0.3,
+          "tower": 0.7
+        },
+        "ranked_guesses": [
+          "beijing",
+          "tower",
+          "octopus"
+        ],
+        "rationale": "'china' strongly points to 'beijing' (capital). 'tower' relates to Great Wall of China. 'octopus' is a loose connection to Chinese cuisine as a speculative third guess.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "law",
+        "count": 1,
+        "rationale": "Law directly points to the red word 'lawyer'"
+      },
+      "event": "illegal_clue",
+      "matched_word": "lawyer",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "jet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "place"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "antarctica"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "australia"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "court"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lawyer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fasten"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "button"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "hook"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "time"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "cycle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "round"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "official"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "draft"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "china"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beijing"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "tower"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 37,
+    "public_event_count": 28,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-003-openai_gpt_oss_120b-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "jet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythic"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "law",
+          "count": 1,
+          "rationale": "Law directly points to the red word 'lawyer'"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "place"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "jet": 0.95
+            },
+            "ranked_guesses": [
+              "jet",
+              "eagle"
+            ],
+            "rationale": "Flight strongly associates with air travel and flying birds. 'Jet' (airplane) and 'eagle' (flying bird) are the most direct matches for the clue 'flight' with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "jet": 0.95
+            },
+            "ranked_guesses": [
+              "jet",
+              "eagle"
+            ],
+            "rationale": "'flight' strongly suggests 'jet' (aircraft) and 'eagle' (bird that flies). Other words have weaker or no direct connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.6,
+              "beijing": 0.55,
+              "dragon": 0.85,
+              "eagle": 0.9,
+              "jet": 0.95
+            },
+            "ranked_guesses": [
+              "jet",
+              "eagle",
+              "dragon",
+              "alps",
+              "beijing"
+            ],
+            "rationale": "'flight' most directly relates to 'jet', followed by 'eagle' and 'dragon'. Geographical places and cities are less likely associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "antarctica"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "australia"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "Connects jet and eagle as both are related to flight/air travel"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "court"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloak": 0.45,
+              "dragon": 0.78
+            },
+            "ranked_guesses": [
+              "dragon",
+              "cloak"
+            ],
+            "rationale": "dragon is a classic mythic creature; cloak could hint at mythic magical items",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.45,
+              "dragon": 0.85
+            },
+            "ranked_guesses": [
+              "dragon",
+              "bridge"
+            ],
+            "rationale": "Dragon is a classic mythic creature; bridge is less clear but could fit mythic tales",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloak": 0.45,
+              "dragon": 0.85
+            },
+            "ranked_guesses": [
+              "dragon",
+              "cloak"
+            ],
+            "rationale": "Dragon is a classic mythic creature; cloak is a mythic magical item",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lawyer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythic",
+          "count": 2,
+          "rationale": "Both dragon and octopus are mythical or legendary creatures."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fasten"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.85,
+              "antarctica": 0.9,
+              "australia": 0.8,
+              "beijing": 0.75,
+              "berlin": 0.7
+            },
+            "ranked_guesses": [
+              "antarctica",
+              "alps",
+              "australia",
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "'place' clue with count 2 strongly suggests geographical locations; antarctica is the most unambiguous place",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.95,
+              "antarctica": 0.95,
+              "australia": 0.9,
+              "beijing": 0.9,
+              "berlin": 0.9
+            },
+            "ranked_guesses": [
+              "alps",
+              "antarctica",
+              "australia",
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "'place' strongly suggests geographic locations; alps and antarctica are clear matches for the count of 2",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "antarctica": 0.9,
+              "australia": 0.85,
+              "beijing": 0.7,
+              "berlin": 0.65,
+              "church": 0.6,
+              "ground": 0.3,
+              "round": 0.2,
+              "tower": 0.55,
+              "yard": 0.3
+            },
+            "ranked_guesses": [
+              "antarctica",
+              "australia",
+              "beijing",
+              "berlin",
+              "tower",
+              "church",
+              "ground",
+              "yard",
+              "round"
+            ],
+            "rationale": "The clue 'place' with count 2 strongly suggests geographical locations. 'antarctica' and 'australia' are the most obvious continents fitting the clue. 'beijing' and 'berlin' are capital cities that also fit. 'tower' and 'church' are building types that could be considered places. Other words are less likely to match the broad 'place' category.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "button"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "hook"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "place",
+          "count": 2,
+          "rationale": "Connects the two location words antarctica and beijing without overlapping with red words or the assassin"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "construction"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lawyer": 0.92
+            },
+            "ranked_guesses": [
+              "lawyer"
+            ],
+            "rationale": "court directly relates to lawyer, the remaining red word",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lawyer": 0.85
+            },
+            "ranked_guesses": [
+              "lawyer"
+            ],
+            "rationale": "Court suggests legal setting, pointing to the red word 'lawyer' which is still unrevealed.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lawyer": 0.85
+            },
+            "ranked_guesses": [
+              "lawyer"
+            ],
+            "rationale": "court suggests legal context, pointing to the red word 'lawyer'",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "court",
+          "count": 1,
+          "rationale": "Court suggests the red word 'lawyer'"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "time"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "button": 0.9,
+              "hook": 0.85
+            },
+            "ranked_guesses": [
+              "button",
+              "hook"
+            ],
+            "rationale": "'fasten' directly relates to 'button' (fasten a button) and 'hook' (fasten with a hook), both remaining on the board. These are the strongest associations with the given clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "button": 0.8,
+              "hook": 0.8
+            },
+            "ranked_guesses": [
+              "button",
+              "hook"
+            ],
+            "rationale": "'fasten' directly relates to 'button' (fastened) and 'hook' (used to fasten), both plausible blue team words with count 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "button": 0.7,
+              "hook": 0.6,
+              "nail": 0.5
+            },
+            "ranked_guesses": [
+              "button",
+              "hook",
+              "nail"
+            ],
+            "rationale": "'fasten' strongly suggests 'button' and 'hook' as direct associations; 'nail' is plausible but less direct",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "cycle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "round"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fasten",
+          "count": 2,
+          "rationale": "Connects 'button' and 'nail' as items commonly used for fastening."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "official"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.75,
+              "nail": 0.75
+            },
+            "ranked_guesses": [
+              "bridge",
+              "nail"
+            ],
+            "rationale": "Construction evokes building elements like bridges and nails, likely red agents.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.78,
+              "nail": 0.65
+            },
+            "ranked_guesses": [
+              "bridge",
+              "nail"
+            ],
+            "rationale": "Construction evokes structures like bridges and the fasteners used such as nails.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.78
+            },
+            "ranked_guesses": [
+              "bridge"
+            ],
+            "rationale": "construction often involves building bridges",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "draft"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "construction",
+          "count": 2,
+          "rationale": "Both bridge and yard are associated with building and construction."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "china"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "church": 0.55,
+              "cycle": 0.95,
+              "round": 0.7,
+              "tower": 0.65
+            },
+            "ranked_guesses": [
+              "cycle",
+              "round",
+              "tower",
+              "church"
+            ],
+            "rationale": "The clue 'time' with count 3 suggests three time-related words. 'cycle' is the strongest direct match. 'round' and 'tower' are common timekeeping associations (round clock faces, clock towers). 'church' is a weaker but plausible connection as church bells mark time.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.75,
+              "cycle": 0.9,
+              "tower": 0.85
+            },
+            "ranked_guesses": [
+              "cycle",
+              "tower",
+              "beijing"
+            ],
+            "rationale": "'time' strongly connects to 'cycle' (time cycle), 'tower' (clock tower), and 'beijing' (time zone reference). These are the top 3 remaining words with clearest time associations.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cycle": 0.9,
+              "draft": 0.7,
+              "round": 0.9
+            },
+            "ranked_guesses": [
+              "round",
+              "cycle",
+              "draft"
+            ],
+            "rationale": "'round' and 'cycle' are strongly associated with time measurement, while 'draft' can refer to historical time periods. All three remain unrevealed and fit the clue count of 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beijing"
+        },
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "tower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "time",
+          "count": 3,
+          "rationale": "Connects to all three remaining blue words: Beijing (time zone), cycle (time cycle), and tower (clock tower)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

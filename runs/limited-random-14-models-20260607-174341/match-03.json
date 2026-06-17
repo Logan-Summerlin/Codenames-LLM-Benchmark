@@ -1,0 +1,427 @@
+{
+  "board": {
+    "identities": {
+      "balloon": "red",
+      "camera": "blue",
+      "canyon": "blue",
+      "cheese": "neutral",
+      "desert": "blue",
+      "dream": "neutral",
+      "galaxy": "red",
+      "hammer": "neutral",
+      "honey": "assassin",
+      "hunter": "red",
+      "island": "blue",
+      "kernel": "neutral",
+      "mountain": "red",
+      "museum": "blue",
+      "novel": "neutral",
+      "palace": "neutral",
+      "pilot": "red",
+      "poet": "blue",
+      "pyramid": "red",
+      "sailor": "red",
+      "shadow": "blue",
+      "temple": "red",
+      "tiger": "blue",
+      "tunnel": "red",
+      "wood": "neutral"
+    },
+    "revealed": [
+      "mountain",
+      "pilot"
+    ],
+    "words": {
+      "balloon": "red",
+      "camera": "blue",
+      "canyon": "blue",
+      "cheese": "neutral",
+      "desert": "blue",
+      "dream": "neutral",
+      "galaxy": "red",
+      "hammer": "neutral",
+      "honey": "assassin",
+      "hunter": "red",
+      "island": "blue",
+      "kernel": "neutral",
+      "mountain": "red",
+      "museum": "blue",
+      "novel": "neutral",
+      "palace": "neutral",
+      "pilot": "red",
+      "poet": "blue",
+      "pyramid": "red",
+      "sailor": "red",
+      "shadow": "blue",
+      "temple": "red",
+      "tiger": "blue",
+      "tunnel": "red",
+      "wood": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "explorer",
+        "count": 3,
+        "rationale": "associated with adventure and travel"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hunter": 0.6,
+          "pilot": 0.8,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "pilot",
+          "sailor",
+          "hunter"
+        ],
+        "rationale": "All three words are related to exploration or travel, matching the clue 'explorer'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hunter": 0.6,
+          "pilot": 0.8,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "pilot",
+          "sailor",
+          "hunter"
+        ],
+        "rationale": "Words related to exploration and travel.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hunter": 0.6,
+          "pilot": 0.8,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "pilot",
+          "sailor",
+          "hunter"
+        ],
+        "rationale": "All three words are related to exploration or travel, matching the clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "landscape",
+        "count": 3,
+        "rationale": "Canyon, desert, and island are all types of geographical landscapes."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.95,
+          "desert": 0.9,
+          "mountain": 0.95
+        },
+        "ranked_guesses": [
+          "mountain",
+          "canyon",
+          "desert"
+        ],
+        "rationale": "These three words are classic examples of geographical landscapes.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.95,
+          "desert": 0.9,
+          "mountain": 0.95
+        },
+        "ranked_guesses": [
+          "mountain",
+          "canyon",
+          "desert"
+        ],
+        "rationale": "Mountain, canyon, and desert are classic geographical landscape features.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.95,
+          "desert": 0.9,
+          "mountain": 0.95
+        },
+        "ranked_guesses": [
+          "mountain",
+          "canyon",
+          "desert"
+        ],
+        "rationale": "Mountain, canyon, and desert are classic geographical landscape features.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "explorer"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pilot"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "landscape"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mountain"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 5,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-174341-m03",
+    "team_blue": "Gemini 3.1 Flash Lite",
+    "team_red": "Llama 3 70B Instruct",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "explorer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hunter": 0.6,
+              "pilot": 0.8,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "pilot",
+              "sailor",
+              "hunter"
+            ],
+            "rationale": "All three words are related to exploration or travel, matching the clue 'explorer'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hunter": 0.6,
+              "pilot": 0.8,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "pilot",
+              "sailor",
+              "hunter"
+            ],
+            "rationale": "Words related to exploration and travel.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hunter": 0.6,
+              "pilot": 0.8,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "pilot",
+              "sailor",
+              "hunter"
+            ],
+            "rationale": "All three words are related to exploration or travel, matching the clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pilot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "explorer",
+          "count": 3,
+          "rationale": "associated with adventure and travel"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "landscape"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.95,
+              "desert": 0.9,
+              "mountain": 0.95
+            },
+            "ranked_guesses": [
+              "mountain",
+              "canyon",
+              "desert"
+            ],
+            "rationale": "These three words are classic examples of geographical landscapes.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.95,
+              "desert": 0.9,
+              "mountain": 0.95
+            },
+            "ranked_guesses": [
+              "mountain",
+              "canyon",
+              "desert"
+            ],
+            "rationale": "Mountain, canyon, and desert are classic geographical landscape features.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.95,
+              "desert": 0.9,
+              "mountain": 0.95
+            },
+            "ranked_guesses": [
+              "mountain",
+              "canyon",
+              "desert"
+            ],
+            "rationale": "Mountain, canyon, and desert are classic geographical landscape features.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mountain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "landscape",
+          "count": 3,
+          "rationale": "Canyon, desert, and island are all types of geographical landscapes."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

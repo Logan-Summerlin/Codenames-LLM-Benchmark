@@ -1,0 +1,2667 @@
+{
+  "board": {
+    "identities": {
+      "alien": "assassin",
+      "atlantis": "red",
+      "bar": "red",
+      "bugle": "red",
+      "canada": "red",
+      "degree": "neutral",
+      "dog": "neutral",
+      "dress": "blue",
+      "dwarf": "blue",
+      "fan": "neutral",
+      "glove": "blue",
+      "jet": "red",
+      "line": "red",
+      "maple": "neutral",
+      "note": "red",
+      "penguin": "blue",
+      "phoenix": "blue",
+      "pistol": "neutral",
+      "pupil": "blue",
+      "ring": "neutral",
+      "scale": "neutral",
+      "screen": "red",
+      "shoe": "red",
+      "staff": "blue",
+      "worm": "blue"
+    },
+    "revealed": [
+      "bar",
+      "dog",
+      "dress",
+      "dwarf",
+      "glove",
+      "note",
+      "penguin",
+      "phoenix",
+      "pupil",
+      "ring",
+      "shoe",
+      "staff",
+      "worm"
+    ],
+    "words": {
+      "alien": "assassin",
+      "atlantis": "red",
+      "bar": "red",
+      "bugle": "red",
+      "canada": "red",
+      "degree": "neutral",
+      "dog": "neutral",
+      "dress": "blue",
+      "dwarf": "blue",
+      "fan": "neutral",
+      "glove": "blue",
+      "jet": "red",
+      "line": "red",
+      "maple": "neutral",
+      "note": "red",
+      "penguin": "blue",
+      "phoenix": "blue",
+      "pistol": "neutral",
+      "pupil": "blue",
+      "ring": "neutral",
+      "scale": "neutral",
+      "screen": "red",
+      "shoe": "red",
+      "staff": "blue",
+      "worm": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "bird",
+        "count": 2,
+        "rationale": "Penguin and phoenix are both types of birds."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "penguin": 0.9,
+          "phoenix": 0.85
+        },
+        "ranked_guesses": [
+          "penguin",
+          "phoenix"
+        ],
+        "rationale": "Both penguin and phoenix are bird-related words, with penguin being a direct avian species and phoenix a mythological bird.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "penguin": 0.85,
+          "phoenix": 0.9
+        },
+        "ranked_guesses": [
+          "phoenix",
+          "penguin"
+        ],
+        "rationale": "'Bird' directly connects to penguin and phoenix, both avian species on the board",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "penguin": 0.95,
+          "phoenix": 0.92
+        },
+        "ranked_guesses": [
+          "penguin",
+          "phoenix"
+        ],
+        "rationale": "Both 'penguin' and 'phoenix' are direct bird-related words on the board matching the clue's count of 2.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "wing",
+        "count": 2,
+        "rationale": "associations with flight/birds connect to blue team words 'jet' and 'line' without touching board terms"
+      },
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bird": 0.7,
+          "fly": 0.6
+        },
+        "ranked_guesses": [
+          "bird",
+          "fly"
+        ],
+        "rationale": "Clue 'wing' (2) suggests flight/bird words; 'bird' is already on the board and strongly fits, while 'fly' is a common winged action. Avoiding overlap with revealed blue targets.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bird": 0.7,
+          "fly": 0.6
+        },
+        "ranked_guesses": [
+          "bird",
+          "fly"
+        ],
+        "rationale": "Clue 'wing' (2) suggests flight/bird words; board has 'bird' absent but 'bar'/'glove'/ring' etc as weak alternatives; picking obvious high-confidence bird associates before lower-associate alternatives.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bird": 0.7,
+          "fly": 0.6
+        },
+        "ranked_guesses": [
+          "bird",
+          "fly"
+        ],
+        "rationale": "Clue 'wing' (2) suggests flight/bird associations; board shows penguin+phoenix already taken by blue, leaving bird-family words as primary and fly as secondary.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "school",
+        "count": 2,
+        "rationale": "Targets 'pupil' and 'staff' as school-related terms."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "degree": 0.9,
+          "pupil": 0.95,
+          "staff": 0.7
+        },
+        "ranked_guesses": [
+          "pupil",
+          "degree",
+          "staff"
+        ],
+        "rationale": "School directly connects to pupil (students) and degree (education outcomes). Staff is a weaker but possible association.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pupil": 0.8,
+          "staff": 0.7
+        },
+        "ranked_guesses": [
+          "pupil",
+          "staff"
+        ],
+        "rationale": "\"pupil\" is directly related to school and present on the board. \"staff\" is a common school-associated term also available.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pupil": 0.8,
+          "staff": 0.7
+        },
+        "ranked_guesses": [
+          "pupil",
+          "staff"
+        ],
+        "rationale": "school directly relates to pupil (students) and staff (teachers/workers)",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 9,
+        "rationale": "Sky connects to red words like atlantis, bar, bugle, canada, jet, line, note, screen, shoe via concepts like blue sky, cloud, flight, air; avoids revealed blue words and the assassin."
+      },
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "bugle": 0.3,
+          "degree": 0.4,
+          "dwarf": 0.35,
+          "fan": 0.45,
+          "glove": 0.5,
+          "maple": 0.55,
+          "note": 0.6,
+          "ring": 0.65
+        },
+        "ranked_guesses": [
+          "bar",
+          "ring",
+          "note",
+          "maple",
+          "glove",
+          "fan",
+          "degree",
+          "dwarf",
+          "bugle"
+        ],
+        "rationale": "sky (9) suggests neutral/commons: bar, ring, note, maple, glove, fan, degree, dwarf, bugle; excludes bird-related and sky-related words already revealed or implied.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "ring": 0.6,
+          "scale": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "ring",
+          "scale"
+        ],
+        "rationale": "sky-themed words left on the board that are neutral and could connect to 'sky' (bar as cloud-bar, ring as sky ring, scale as fish in sky metaphor), avoiding penguin/phoenix/pupil already revealed as blue.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "bugle": 0.3,
+          "degree": 0.4,
+          "dwarf": 0.35,
+          "fan": 0.45,
+          "glove": 0.5,
+          "maple": 0.55,
+          "note": 0.6,
+          "ring": 0.65
+        },
+        "ranked_guesses": [
+          "bar",
+          "ring",
+          "note",
+          "maple",
+          "glove",
+          "fan",
+          "degree",
+          "dwarf",
+          "bugle"
+        ],
+        "rationale": "sky (9) suggests neutral/commons not yet revealed; avoiding dress, alien, jet, screen, staff, worm that lean toward other teams; picks lean reds.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "clothing",
+        "count": 5,
+        "rationale": "Glove and dress are clothing items; others may be inferred as accessories or related terms."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dress": 0.95,
+          "glove": 0.92,
+          "line": 0.7,
+          "ring": 0.85,
+          "shoe": 0.9
+        },
+        "ranked_guesses": [
+          "dress",
+          "glove",
+          "shoe",
+          "ring",
+          "line"
+        ],
+        "rationale": "Clothing-related items like dress, glove, shoe, and ring are clear fits; 'line' could refer to a clothing line.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dress": 0.8,
+          "glove": 0.75,
+          "line": 0.65,
+          "ring": 0.7,
+          "shoe": 0.75
+        },
+        "ranked_guesses": [
+          "dress",
+          "glove",
+          "shoe",
+          "ring",
+          "line"
+        ],
+        "rationale": "Clothing-related words remaining on board with 5 count clue",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dress": 0.95,
+          "glove": 0.9,
+          "line": 0.8,
+          "ring": 0.85,
+          "shoe": 0.88
+        },
+        "ranked_guesses": [
+          "dress",
+          "glove",
+          "shoe",
+          "ring",
+          "line"
+        ],
+        "rationale": "Clothing-related terms on the board include dress, glove, shoe, ring, and line (clothing line).",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 8,
+        "rationale": "Sky connects to multiple red team words: atlantis, bar, bugle, canada, jet, line, note, screen - all evoking sky, air, blue, wind, or flight concepts without using the actual words."
+      },
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.4,
+          "bar": 0.7,
+          "bugle": 0.35,
+          "note": 0.65,
+          "ring": 0.6,
+          "scale": 0.55,
+          "screen": 0.5,
+          "staff": 0.45
+        },
+        "ranked_guesses": [
+          "bar",
+          "note",
+          "ring",
+          "scale",
+          "screen",
+          "staff",
+          "alien",
+          "bugle"
+        ],
+        "rationale": "sky (8) connects to neutral/bar/note/ring/scale/screen and avoids red dress/glove/penguin/pupil/shoe and blue penguin/phoenix/pupil; best neutral candidates first.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.45,
+          "bar": 0.7,
+          "bugle": 0.4,
+          "dwarf": 0.35,
+          "maple": 0.55,
+          "note": 0.6,
+          "ring": 0.65,
+          "worm": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "ring",
+          "note",
+          "maple",
+          "worm",
+          "alien",
+          "bugle",
+          "dwarf"
+        ],
+        "rationale": "sky (8) strongly associates with neutral words like sky-related or open-field terms; among remaining neutrals, bar/ring are top matches while alien/bugle/dwarf are weaker candidates and we should stop to avoid overreaching.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.5,
+          "atlantis": 0.5,
+          "bar": 0.7,
+          "bugle": 0.5,
+          "degree": 0.5,
+          "dwarf": 0.5,
+          "fan": 0.5,
+          "jet": 0.5,
+          "line": 0.5,
+          "maple": 0.5,
+          "note": 0.6,
+          "pistol": 0.5,
+          "ring": 0.6,
+          "scale": 0.6,
+          "screen": 0.6,
+          "staff": 0.5,
+          "worm": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "note",
+          "ring",
+          "scale",
+          "screen",
+          "alien",
+          "atlantis",
+          "bugle",
+          "degree",
+          "dwarf",
+          "fan",
+          "jet",
+          "line",
+          "maple",
+          "pistol",
+          "staff",
+          "worm"
+        ],
+        "rationale": "sky (8) matches neutral words lacking strong overlap with blue words already revealed; low-risk candidates listed first to avoid hitting remaining blue or assassin.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "creature",
+        "count": 3,
+        "rationale": "Connects dwarf (fantasy creature), worm (animal), and staff (could be part of a creature's group)"
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.8,
+          "dog": 0.75,
+          "worm": 0.7
+        },
+        "ranked_guesses": [
+          "alien",
+          "dog",
+          "worm"
+        ],
+        "rationale": "'Creature' likely refers to non-human entities like alien, dog, and worm, which are all on the board and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.85,
+          "dog": 0.8,
+          "dwarf": 0.7,
+          "worm": 0.65
+        },
+        "ranked_guesses": [
+          "alien",
+          "dog",
+          "dwarf",
+          "worm"
+        ],
+        "rationale": "'Creature' directly connects to alien (extraterrestrial being), dog (animal), dwarf (mythical creature), and worm (invertebrate). These are the most salient biological/entity interpretations of the clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "dog": 0.8,
+          "worm": 0.6
+        },
+        "ranked_guesses": [
+          "dog",
+          "alien",
+          "worm"
+        ],
+        "rationale": "Clue 'creature' likely refers to animals/mythical beings; dog, alien, and worm are clear creature associations with no immediate red flags.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "winged",
+        "count": 2,
+        "rationale": "For red team: connects to 'jet' and 'line' (winged flight concepts) to reach 2 unguessed red words."
+      },
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "note": 0.6,
+          "worm": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "note",
+          "worm"
+        ],
+        "rationale": "Given the red team's remaining words (alien, atlantis, bar, canada, degree, dwarf, fan, jet, line, maple, note, pistol, ring, scale, screen, staff, worm) and the 'winged' clue, words with flight or air associations like bar, note, and worm are plausible guesses; bar can imply wing bar, note evokes 'tweet', and worm can metaphorically 'fly' as kite.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "note": 0.6,
+          "worm": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "note",
+          "worm"
+        ],
+        "rationale": "Given the active clue 'winged' (count 2) and remaining red candidates, 'bar' aligns with potential associations like wing/bar chart; 'note' with wing/note of a bird; 'worm' is weaker but some winged creatures (moths) have worm stages. Only 3 guesses remain and no clear 2-word match, so stopping after exploring plausible links.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "note": 0.6,
+          "worm": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "note",
+          "worm"
+        ],
+        "rationale": "Given the red team's remaining words (alien, atlantis, bar, canada, degree, dwarf, fan, jet, line, maple, note, pistol, ring, scale, screen, staff, worm) and the 'winged' clue, words like bar, note, and worm are plausible thematic fits; confidence is capped at 3 guesses.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mining",
+        "count": 3,
+        "rationale": "Connects dwarf (dwarf miners), staff (mining staff), and worm (pests in mines)."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.8,
+          "dwarf": 0.9,
+          "line": 0.85
+        },
+        "ranked_guesses": [
+          "dwarf",
+          "line",
+          "bar"
+        ],
+        "rationale": "'Dwarf' (mining term for a small mine), 'line' (mining seam/line), and 'bar' (metal bar from mining) are strong connections to the 'mining' clue.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "ring": 0.65,
+          "staff": 0.6
+        },
+        "ranked_guesses": [
+          "bar",
+          "ring",
+          "staff"
+        ],
+        "rationale": "Mining relates to minerals/tools; bar (metal bar), ring (ore rings), staff (mining tools) are plausible connections.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "line": 0.65,
+          "staff": 0.6
+        },
+        "ranked_guesses": [
+          "bar",
+          "line",
+          "staff"
+        ],
+        "rationale": "'Mining' relates to extraction tools/materials. 'Bar' (metal bars), 'line' (mining lines), and 'staff' (mining tools) are plausible connections.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "victory",
+        "count": 7,
+        "rationale": "Represents the 7 remaining red words on the board, aligning with the team's goal to achieve victory."
+      },
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.2,
+          "bugle": 0.1,
+          "maple": 0.6,
+          "note": 0.7,
+          "ring": 0.5,
+          "scale": 0.4,
+          "worm": 0.3
+        },
+        "ranked_guesses": [
+          "note",
+          "maple",
+          "ring",
+          "scale",
+          "worm",
+          "alien",
+          "bugle"
+        ],
+        "rationale": "Given 7 'victory' (red) remaining and red\u2019s recent sky/weapon/school associations, candidates are words not yet revealed that semantically fit: musical note, tree/maple, jewelry/ring, measurement/scale, creature/worm, space/alien, instrument/bugle. Lower confidence on more abstract matches.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.7,
+          "bugle": 0.6,
+          "canada": 0.02,
+          "degree": 0.01,
+          "dwarf": 0.5,
+          "fan": 0.4,
+          "jet": 0.3,
+          "line": 0.2,
+          "maple": 0.85,
+          "note": 0.9,
+          "pistol": 0.15,
+          "ring": 0.1,
+          "scale": 0.08,
+          "screen": 0.05,
+          "staff": 0.04,
+          "worm": 0.03
+        },
+        "ranked_guesses": [
+          "note",
+          "maple",
+          "alien",
+          "bugle",
+          "dwarf",
+          "fan",
+          "jet",
+          "line",
+          "pistol",
+          "ring",
+          "scale",
+          "screen",
+          "staff",
+          "worm",
+          "canada",
+          "degree"
+        ],
+        "rationale": "7 remaining for 'victory'. Strong candidates: 'note' and 'maple' (high-frequency red words). Avoid blues already revealed (penguin, phoenix, pupil, dress, glove, shoe) and neutrals (dog). Prioritizing red-safe words with common associations.",
+        "stop": false
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "maple": 0.6,
+          "note": 0.7,
+          "ring": 0.5,
+          "scale": 0.4,
+          "screen": 0.3,
+          "staff": 0.2,
+          "worm": 0.1
+        },
+        "ranked_guesses": [
+          "note",
+          "maple",
+          "ring",
+          "scale",
+          "screen",
+          "staff",
+          "worm"
+        ],
+        "rationale": "Given 7 remaining guesses for 'victory', candidates are limited to unrevealed words not semantically aligned with prior clues; these are the weakest remaining matches to avoid wasting guesses.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "small",
+        "count": 3,
+        "rationale": "Hints at dwarf (small stature), worm (small creature), and staff (small group of people)."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dwarf": 0.9,
+          "ring": 0.8,
+          "worm": 0.85
+        },
+        "ranked_guesses": [
+          "dwarf",
+          "worm",
+          "ring"
+        ],
+        "rationale": "'dwarf' and 'worm' directly relate to small size, while 'ring' can imply small circular objects.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dwarf": 0.9,
+          "ring": 0.7,
+          "worm": 0.75
+        },
+        "ranked_guesses": [
+          "dwarf",
+          "worm",
+          "ring"
+        ],
+        "rationale": "'small' directly relates to 'dwarf', while 'worm' and 'ring' are common small objects.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dwarf": 0.9,
+          "line": 0.6,
+          "worm": 0.7
+        },
+        "ranked_guesses": [
+          "dwarf",
+          "worm",
+          "line"
+        ],
+        "rationale": "'small' directly relates to 'dwarf' and 'worm' as clear size associations; 'line' is a weaker but possible interpretation.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "outfit",
+        "count": 1,
+        "rationale": "represents clothing, connects to 'dress' on the board without stating it directly"
+      },
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.25,
+          "bugle": 0.25,
+          "canada": 0.25,
+          "degree": 0.25,
+          "fan": 0.25,
+          "jet": 0.25,
+          "line": 0.25,
+          "maple": 0.25,
+          "pistol": 0.25,
+          "scale": 0.25,
+          "screen": 0.25,
+          "staff": 0.25
+        },
+        "ranked_guesses": [
+          "alien",
+          "bugle",
+          "canada",
+          "degree",
+          "fan",
+          "jet",
+          "line",
+          "maple",
+          "pistol",
+          "scale",
+          "screen",
+          "staff"
+        ],
+        "rationale": "Clue 'outfit' (1) has no remaining red words on board; stop to avoid neutral/blue guesses.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.25,
+          "bugle": 0.25,
+          "canada": 0.25,
+          "degree": 0.25,
+          "fan": 0.25,
+          "jet": 0.25,
+          "line": 0.25,
+          "maple": 0.25,
+          "scale": 0.25,
+          "screen": 0.25
+        },
+        "ranked_guesses": [
+          "alien",
+          "bugle",
+          "canada",
+          "degree",
+          "fan",
+          "jet",
+          "line",
+          "maple",
+          "scale",
+          "screen"
+        ],
+        "rationale": "Clue is 'outfit' (1). No remaining red words match; all candidates are neutral words unlikely to fit.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.25,
+          "bugle": 0.25,
+          "canada": 0.25,
+          "degree": 0.25,
+          "fan": 0.25,
+          "jet": 0.25,
+          "line": 0.25,
+          "maple": 0.25,
+          "scale": 0.25,
+          "screen": 0.25
+        },
+        "ranked_guesses": [
+          "alien",
+          "bugle",
+          "canada",
+          "degree",
+          "fan",
+          "jet",
+          "line",
+          "maple",
+          "scale",
+          "screen"
+        ],
+        "rationale": "Clue 'outfit' (1) strongly suggests clothing-related words; among remaining candidates, only 'dress' and 'glove' are plausible but already revealed as blue. No red-safe clothing words remain, so passing.",
+        "stop": true
+      },
+      "agent_id": "Ling 2.6 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "team",
+        "count": 1,
+        "rationale": "staff is the only remaining blue word, and team is a synonym that connects directly to it without overlapping board words."
+      },
+      "agent_id": "Qwen 3 32B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "staff": 0.9
+        },
+        "ranked_guesses": [
+          "staff"
+        ],
+        "rationale": "'Staff' is a direct component of a team, fitting the clue 'team' with high relevance.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.45,
+          "line": 0.55,
+          "staff": 0.75
+        },
+        "ranked_guesses": [
+          "staff",
+          "line",
+          "fan"
+        ],
+        "rationale": "'Team' directly relates to 'staff' as a group working together, while 'line' and 'fan' have weaker but possible connections.",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jet": 0.55,
+          "maple": 0.6,
+          "staff": 0.75
+        },
+        "ranked_guesses": [
+          "staff",
+          "maple",
+          "jet"
+        ],
+        "rationale": "Clue 'team' likely refers to 'staff' (team members) or sports teams like 'maple' (Leafs) or 'jet' (Jets).",
+        "stop": false
+      },
+      "agent_id": "Qwen 3 32B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "agent_id": "Ling 2.6 Flash-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "bird"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "penguin"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "phoenix"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wing"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "school"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pupil"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 9,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "clothing"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dress"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "glove"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "shoe"
+    },
+    {
+      "clue": {
+        "count": 8,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "creature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dog"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "winged"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mining"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bar"
+    },
+    {
+      "clue": {
+        "count": 7,
+        "word": "victory"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "note"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "small"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dwarf"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "worm"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ring"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "outfit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "team"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "staff"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 52,
+    "public_event_count": 35,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-011-inclusionai_ling_2_6_flash-vs-qwen_qwen3_32b",
+    "team_blue": "Qwen 3 32B",
+    "team_red": "Ling 2.6 Flash",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "bird"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "penguin": 0.9,
+              "phoenix": 0.85
+            },
+            "ranked_guesses": [
+              "penguin",
+              "phoenix"
+            ],
+            "rationale": "Both penguin and phoenix are bird-related words, with penguin being a direct avian species and phoenix a mythological bird.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "penguin": 0.85,
+              "phoenix": 0.9
+            },
+            "ranked_guesses": [
+              "phoenix",
+              "penguin"
+            ],
+            "rationale": "'Bird' directly connects to penguin and phoenix, both avian species on the board",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "penguin": 0.95,
+              "phoenix": 0.92
+            },
+            "ranked_guesses": [
+              "penguin",
+              "phoenix"
+            ],
+            "rationale": "Both 'penguin' and 'phoenix' are direct bird-related words on the board matching the clue's count of 2.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "penguin"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "phoenix"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "bird",
+          "count": 2,
+          "rationale": "Penguin and phoenix are both types of birds."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bird": 0.7,
+              "fly": 0.6
+            },
+            "ranked_guesses": [
+              "bird",
+              "fly"
+            ],
+            "rationale": "Clue 'wing' (2) suggests flight/bird words; 'bird' is already on the board and strongly fits, while 'fly' is a common winged action. Avoiding overlap with revealed blue targets.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bird": 0.7,
+              "fly": 0.6
+            },
+            "ranked_guesses": [
+              "bird",
+              "fly"
+            ],
+            "rationale": "Clue 'wing' (2) suggests flight/bird words; board has 'bird' absent but 'bar'/'glove'/ring' etc as weak alternatives; picking obvious high-confidence bird associates before lower-associate alternatives.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bird": 0.7,
+              "fly": 0.6
+            },
+            "ranked_guesses": [
+              "bird",
+              "fly"
+            ],
+            "rationale": "Clue 'wing' (2) suggests flight/bird associations; board shows penguin+phoenix already taken by blue, leaving bird-family words as primary and fly as secondary.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "wing",
+          "count": 2,
+          "rationale": "associations with flight/birds connect to blue team words 'jet' and 'line' without touching board terms"
+        },
+        "agent_id": "Ling 2.6 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "school"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "degree": 0.9,
+              "pupil": 0.95,
+              "staff": 0.7
+            },
+            "ranked_guesses": [
+              "pupil",
+              "degree",
+              "staff"
+            ],
+            "rationale": "School directly connects to pupil (students) and degree (education outcomes). Staff is a weaker but possible association.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pupil": 0.8,
+              "staff": 0.7
+            },
+            "ranked_guesses": [
+              "pupil",
+              "staff"
+            ],
+            "rationale": "\"pupil\" is directly related to school and present on the board. \"staff\" is a common school-associated term also available.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pupil": 0.8,
+              "staff": 0.7
+            },
+            "ranked_guesses": [
+              "pupil",
+              "staff"
+            ],
+            "rationale": "school directly relates to pupil (students) and staff (teachers/workers)",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pupil"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "school",
+          "count": 2,
+          "rationale": "Targets 'pupil' and 'staff' as school-related terms."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 9,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "bugle": 0.3,
+              "degree": 0.4,
+              "dwarf": 0.35,
+              "fan": 0.45,
+              "glove": 0.5,
+              "maple": 0.55,
+              "note": 0.6,
+              "ring": 0.65
+            },
+            "ranked_guesses": [
+              "bar",
+              "ring",
+              "note",
+              "maple",
+              "glove",
+              "fan",
+              "degree",
+              "dwarf",
+              "bugle"
+            ],
+            "rationale": "sky (9) suggests neutral/commons: bar, ring, note, maple, glove, fan, degree, dwarf, bugle; excludes bird-related and sky-related words already revealed or implied.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "ring": 0.6,
+              "scale": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "ring",
+              "scale"
+            ],
+            "rationale": "sky-themed words left on the board that are neutral and could connect to 'sky' (bar as cloud-bar, ring as sky ring, scale as fish in sky metaphor), avoiding penguin/phoenix/pupil already revealed as blue.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "bugle": 0.3,
+              "degree": 0.4,
+              "dwarf": 0.35,
+              "fan": 0.45,
+              "glove": 0.5,
+              "maple": 0.55,
+              "note": 0.6,
+              "ring": 0.65
+            },
+            "ranked_guesses": [
+              "bar",
+              "ring",
+              "note",
+              "maple",
+              "glove",
+              "fan",
+              "degree",
+              "dwarf",
+              "bugle"
+            ],
+            "rationale": "sky (9) suggests neutral/commons not yet revealed; avoiding dress, alien, jet, screen, staff, worm that lean toward other teams; picks lean reds.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 9,
+          "rationale": "Sky connects to red words like atlantis, bar, bugle, canada, jet, line, note, screen, shoe via concepts like blue sky, cloud, flight, air; avoids revealed blue words and the assassin."
+        },
+        "agent_id": "Ling 2.6 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "clothing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dress": 0.95,
+              "glove": 0.92,
+              "line": 0.7,
+              "ring": 0.85,
+              "shoe": 0.9
+            },
+            "ranked_guesses": [
+              "dress",
+              "glove",
+              "shoe",
+              "ring",
+              "line"
+            ],
+            "rationale": "Clothing-related items like dress, glove, shoe, and ring are clear fits; 'line' could refer to a clothing line.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dress": 0.8,
+              "glove": 0.75,
+              "line": 0.65,
+              "ring": 0.7,
+              "shoe": 0.75
+            },
+            "ranked_guesses": [
+              "dress",
+              "glove",
+              "shoe",
+              "ring",
+              "line"
+            ],
+            "rationale": "Clothing-related words remaining on board with 5 count clue",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dress": 0.95,
+              "glove": 0.9,
+              "line": 0.8,
+              "ring": 0.85,
+              "shoe": 0.88
+            },
+            "ranked_guesses": [
+              "dress",
+              "glove",
+              "shoe",
+              "ring",
+              "line"
+            ],
+            "rationale": "Clothing-related terms on the board include dress, glove, shoe, ring, and line (clothing line).",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dress"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "glove"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "shoe"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "clothing",
+          "count": 5,
+          "rationale": "Glove and dress are clothing items; others may be inferred as accessories or related terms."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 8,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.4,
+              "bar": 0.7,
+              "bugle": 0.35,
+              "note": 0.65,
+              "ring": 0.6,
+              "scale": 0.55,
+              "screen": 0.5,
+              "staff": 0.45
+            },
+            "ranked_guesses": [
+              "bar",
+              "note",
+              "ring",
+              "scale",
+              "screen",
+              "staff",
+              "alien",
+              "bugle"
+            ],
+            "rationale": "sky (8) connects to neutral/bar/note/ring/scale/screen and avoids red dress/glove/penguin/pupil/shoe and blue penguin/phoenix/pupil; best neutral candidates first.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.45,
+              "bar": 0.7,
+              "bugle": 0.4,
+              "dwarf": 0.35,
+              "maple": 0.55,
+              "note": 0.6,
+              "ring": 0.65,
+              "worm": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "ring",
+              "note",
+              "maple",
+              "worm",
+              "alien",
+              "bugle",
+              "dwarf"
+            ],
+            "rationale": "sky (8) strongly associates with neutral words like sky-related or open-field terms; among remaining neutrals, bar/ring are top matches while alien/bugle/dwarf are weaker candidates and we should stop to avoid overreaching.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.5,
+              "atlantis": 0.5,
+              "bar": 0.7,
+              "bugle": 0.5,
+              "degree": 0.5,
+              "dwarf": 0.5,
+              "fan": 0.5,
+              "jet": 0.5,
+              "line": 0.5,
+              "maple": 0.5,
+              "note": 0.6,
+              "pistol": 0.5,
+              "ring": 0.6,
+              "scale": 0.6,
+              "screen": 0.6,
+              "staff": 0.5,
+              "worm": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "note",
+              "ring",
+              "scale",
+              "screen",
+              "alien",
+              "atlantis",
+              "bugle",
+              "degree",
+              "dwarf",
+              "fan",
+              "jet",
+              "line",
+              "maple",
+              "pistol",
+              "staff",
+              "worm"
+            ],
+            "rationale": "sky (8) matches neutral words lacking strong overlap with blue words already revealed; low-risk candidates listed first to avoid hitting remaining blue or assassin.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 8,
+          "rationale": "Sky connects to multiple red team words: atlantis, bar, bugle, canada, jet, line, note, screen - all evoking sky, air, blue, wind, or flight concepts without using the actual words."
+        },
+        "agent_id": "Ling 2.6 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "creature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.8,
+              "dog": 0.75,
+              "worm": 0.7
+            },
+            "ranked_guesses": [
+              "alien",
+              "dog",
+              "worm"
+            ],
+            "rationale": "'Creature' likely refers to non-human entities like alien, dog, and worm, which are all on the board and fit the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.85,
+              "dog": 0.8,
+              "dwarf": 0.7,
+              "worm": 0.65
+            },
+            "ranked_guesses": [
+              "alien",
+              "dog",
+              "dwarf",
+              "worm"
+            ],
+            "rationale": "'Creature' directly connects to alien (extraterrestrial being), dog (animal), dwarf (mythical creature), and worm (invertebrate). These are the most salient biological/entity interpretations of the clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "dog": 0.8,
+              "worm": 0.6
+            },
+            "ranked_guesses": [
+              "dog",
+              "alien",
+              "worm"
+            ],
+            "rationale": "Clue 'creature' likely refers to animals/mythical beings; dog, alien, and worm are clear creature associations with no immediate red flags.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dog"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "creature",
+          "count": 3,
+          "rationale": "Connects dwarf (fantasy creature), worm (animal), and staff (could be part of a creature's group)"
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "winged"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "note": 0.6,
+              "worm": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "note",
+              "worm"
+            ],
+            "rationale": "Given the red team's remaining words (alien, atlantis, bar, canada, degree, dwarf, fan, jet, line, maple, note, pistol, ring, scale, screen, staff, worm) and the 'winged' clue, words with flight or air associations like bar, note, and worm are plausible guesses; bar can imply wing bar, note evokes 'tweet', and worm can metaphorically 'fly' as kite.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "note": 0.6,
+              "worm": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "note",
+              "worm"
+            ],
+            "rationale": "Given the active clue 'winged' (count 2) and remaining red candidates, 'bar' aligns with potential associations like wing/bar chart; 'note' with wing/note of a bird; 'worm' is weaker but some winged creatures (moths) have worm stages. Only 3 guesses remain and no clear 2-word match, so stopping after exploring plausible links.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "note": 0.6,
+              "worm": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "note",
+              "worm"
+            ],
+            "rationale": "Given the red team's remaining words (alien, atlantis, bar, canada, degree, dwarf, fan, jet, line, maple, note, pistol, ring, scale, screen, staff, worm) and the 'winged' clue, words like bar, note, and worm are plausible thematic fits; confidence is capped at 3 guesses.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "winged",
+          "count": 2,
+          "rationale": "For red team: connects to 'jet' and 'line' (winged flight concepts) to reach 2 unguessed red words."
+        },
+        "agent_id": "Ling 2.6 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mining"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.8,
+              "dwarf": 0.9,
+              "line": 0.85
+            },
+            "ranked_guesses": [
+              "dwarf",
+              "line",
+              "bar"
+            ],
+            "rationale": "'Dwarf' (mining term for a small mine), 'line' (mining seam/line), and 'bar' (metal bar from mining) are strong connections to the 'mining' clue.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "ring": 0.65,
+              "staff": 0.6
+            },
+            "ranked_guesses": [
+              "bar",
+              "ring",
+              "staff"
+            ],
+            "rationale": "Mining relates to minerals/tools; bar (metal bar), ring (ore rings), staff (mining tools) are plausible connections.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "line": 0.65,
+              "staff": 0.6
+            },
+            "ranked_guesses": [
+              "bar",
+              "line",
+              "staff"
+            ],
+            "rationale": "'Mining' relates to extraction tools/materials. 'Bar' (metal bars), 'line' (mining lines), and 'staff' (mining tools) are plausible connections.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mining",
+          "count": 3,
+          "rationale": "Connects dwarf (dwarf miners), staff (mining staff), and worm (pests in mines)."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 7,
+        "word": "victory"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.2,
+              "bugle": 0.1,
+              "maple": 0.6,
+              "note": 0.7,
+              "ring": 0.5,
+              "scale": 0.4,
+              "worm": 0.3
+            },
+            "ranked_guesses": [
+              "note",
+              "maple",
+              "ring",
+              "scale",
+              "worm",
+              "alien",
+              "bugle"
+            ],
+            "rationale": "Given 7 'victory' (red) remaining and red\u2019s recent sky/weapon/school associations, candidates are words not yet revealed that semantically fit: musical note, tree/maple, jewelry/ring, measurement/scale, creature/worm, space/alien, instrument/bugle. Lower confidence on more abstract matches.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.7,
+              "bugle": 0.6,
+              "canada": 0.02,
+              "degree": 0.01,
+              "dwarf": 0.5,
+              "fan": 0.4,
+              "jet": 0.3,
+              "line": 0.2,
+              "maple": 0.85,
+              "note": 0.9,
+              "pistol": 0.15,
+              "ring": 0.1,
+              "scale": 0.08,
+              "screen": 0.05,
+              "staff": 0.04,
+              "worm": 0.03
+            },
+            "ranked_guesses": [
+              "note",
+              "maple",
+              "alien",
+              "bugle",
+              "dwarf",
+              "fan",
+              "jet",
+              "line",
+              "pistol",
+              "ring",
+              "scale",
+              "screen",
+              "staff",
+              "worm",
+              "canada",
+              "degree"
+            ],
+            "rationale": "7 remaining for 'victory'. Strong candidates: 'note' and 'maple' (high-frequency red words). Avoid blues already revealed (penguin, phoenix, pupil, dress, glove, shoe) and neutrals (dog). Prioritizing red-safe words with common associations.",
+            "stop": false
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "maple": 0.6,
+              "note": 0.7,
+              "ring": 0.5,
+              "scale": 0.4,
+              "screen": 0.3,
+              "staff": 0.2,
+              "worm": 0.1
+            },
+            "ranked_guesses": [
+              "note",
+              "maple",
+              "ring",
+              "scale",
+              "screen",
+              "staff",
+              "worm"
+            ],
+            "rationale": "Given 7 remaining guesses for 'victory', candidates are limited to unrevealed words not semantically aligned with prior clues; these are the weakest remaining matches to avoid wasting guesses.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "note"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "victory",
+          "count": 7,
+          "rationale": "Represents the 7 remaining red words on the board, aligning with the team's goal to achieve victory."
+        },
+        "agent_id": "Ling 2.6 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "small"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dwarf": 0.9,
+              "ring": 0.8,
+              "worm": 0.85
+            },
+            "ranked_guesses": [
+              "dwarf",
+              "worm",
+              "ring"
+            ],
+            "rationale": "'dwarf' and 'worm' directly relate to small size, while 'ring' can imply small circular objects.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dwarf": 0.9,
+              "ring": 0.7,
+              "worm": 0.75
+            },
+            "ranked_guesses": [
+              "dwarf",
+              "worm",
+              "ring"
+            ],
+            "rationale": "'small' directly relates to 'dwarf', while 'worm' and 'ring' are common small objects.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dwarf": 0.9,
+              "line": 0.6,
+              "worm": 0.7
+            },
+            "ranked_guesses": [
+              "dwarf",
+              "worm",
+              "line"
+            ],
+            "rationale": "'small' directly relates to 'dwarf' and 'worm' as clear size associations; 'line' is a weaker but possible interpretation.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dwarf"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "worm"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ring"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "small",
+          "count": 3,
+          "rationale": "Hints at dwarf (small stature), worm (small creature), and staff (small group of people)."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "outfit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.25,
+              "bugle": 0.25,
+              "canada": 0.25,
+              "degree": 0.25,
+              "fan": 0.25,
+              "jet": 0.25,
+              "line": 0.25,
+              "maple": 0.25,
+              "pistol": 0.25,
+              "scale": 0.25,
+              "screen": 0.25,
+              "staff": 0.25
+            },
+            "ranked_guesses": [
+              "alien",
+              "bugle",
+              "canada",
+              "degree",
+              "fan",
+              "jet",
+              "line",
+              "maple",
+              "pistol",
+              "scale",
+              "screen",
+              "staff"
+            ],
+            "rationale": "Clue 'outfit' (1) has no remaining red words on board; stop to avoid neutral/blue guesses.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.25,
+              "bugle": 0.25,
+              "canada": 0.25,
+              "degree": 0.25,
+              "fan": 0.25,
+              "jet": 0.25,
+              "line": 0.25,
+              "maple": 0.25,
+              "scale": 0.25,
+              "screen": 0.25
+            },
+            "ranked_guesses": [
+              "alien",
+              "bugle",
+              "canada",
+              "degree",
+              "fan",
+              "jet",
+              "line",
+              "maple",
+              "scale",
+              "screen"
+            ],
+            "rationale": "Clue is 'outfit' (1). No remaining red words match; all candidates are neutral words unlikely to fit.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.25,
+              "bugle": 0.25,
+              "canada": 0.25,
+              "degree": 0.25,
+              "fan": 0.25,
+              "jet": 0.25,
+              "line": 0.25,
+              "maple": 0.25,
+              "scale": 0.25,
+              "screen": 0.25
+            },
+            "ranked_guesses": [
+              "alien",
+              "bugle",
+              "canada",
+              "degree",
+              "fan",
+              "jet",
+              "line",
+              "maple",
+              "scale",
+              "screen"
+            ],
+            "rationale": "Clue 'outfit' (1) strongly suggests clothing-related words; among remaining candidates, only 'dress' and 'glove' are plausible but already revealed as blue. No red-safe clothing words remain, so passing.",
+            "stop": true
+          },
+          "agent_id": "Ling 2.6 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "outfit",
+          "count": 1,
+          "rationale": "represents clothing, connects to 'dress' on the board without stating it directly"
+        },
+        "agent_id": "Ling 2.6 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "team"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "staff": 0.9
+            },
+            "ranked_guesses": [
+              "staff"
+            ],
+            "rationale": "'Staff' is a direct component of a team, fitting the clue 'team' with high relevance.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fan": 0.45,
+              "line": 0.55,
+              "staff": 0.75
+            },
+            "ranked_guesses": [
+              "staff",
+              "line",
+              "fan"
+            ],
+            "rationale": "'Team' directly relates to 'staff' as a group working together, while 'line' and 'fan' have weaker but possible connections.",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jet": 0.55,
+              "maple": 0.6,
+              "staff": 0.75
+            },
+            "ranked_guesses": [
+              "staff",
+              "maple",
+              "jet"
+            ],
+            "rationale": "Clue 'team' likely refers to 'staff' (team members) or sports teams like 'maple' (Leafs) or 'jet' (Jets).",
+            "stop": false
+          },
+          "agent_id": "Qwen 3 32B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "staff"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "team",
+          "count": 1,
+          "rationale": "staff is the only remaining blue word, and team is a synonym that connects directly to it without overlapping board words."
+        },
+        "agent_id": "Qwen 3 32B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

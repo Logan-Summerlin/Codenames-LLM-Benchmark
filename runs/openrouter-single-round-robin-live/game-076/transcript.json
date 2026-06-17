@@ -1,0 +1,3092 @@
+{
+  "board": {
+    "identities": {
+      "beijing": "blue",
+      "bomb": "neutral",
+      "box": "blue",
+      "cap": "red",
+      "cell": "neutral",
+      "charge": "neutral",
+      "code": "blue",
+      "green": "red",
+      "hole": "blue",
+      "hollywood": "neutral",
+      "jupiter": "neutral",
+      "ketchup": "red",
+      "luck": "red",
+      "microscope": "blue",
+      "millionaire": "neutral",
+      "mint": "red",
+      "nail": "red",
+      "olympus": "red",
+      "pitch": "blue",
+      "princess": "red",
+      "pyramid": "neutral",
+      "rose": "red",
+      "sound": "blue",
+      "temple": "assassin",
+      "whip": "blue"
+    },
+    "revealed": [
+      "cell",
+      "microscope",
+      "princess",
+      "pyramid"
+    ],
+    "words": {
+      "beijing": "blue",
+      "bomb": "neutral",
+      "box": "blue",
+      "cap": "red",
+      "cell": "neutral",
+      "charge": "neutral",
+      "code": "blue",
+      "green": "red",
+      "hole": "blue",
+      "hollywood": "neutral",
+      "jupiter": "neutral",
+      "ketchup": "red",
+      "luck": "red",
+      "microscope": "blue",
+      "millionaire": "neutral",
+      "mint": "red",
+      "nail": "red",
+      "olympus": "red",
+      "pitch": "blue",
+      "princess": "red",
+      "pyramid": "neutral",
+      "rose": "red",
+      "sound": "blue",
+      "temple": "assassin",
+      "whip": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "pascal",
+        "count": 1,
+        "rationale": "Points to luck/odds (\"luck\")."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cap": 0.18,
+          "cell": 0.06,
+          "code": 0.1,
+          "jupiter": 0.02,
+          "microscope": 0.62,
+          "pyramid": 0.02
+        },
+        "ranked_guesses": [
+          "microscope",
+          "cap",
+          "code",
+          "cell",
+          "pyramid",
+          "jupiter"
+        ],
+        "rationale": "\"Pascal\" suggests Blaise Pascal (math/physics, including computing/logic) and also points to scientific/technical terms; microscope is the strongest thematic match, with cap/code as secondary.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cell": 0.1,
+          "code": 0.22,
+          "microscope": 0.46,
+          "sound": 0.12,
+          "temple": 0.1
+        },
+        "ranked_guesses": [
+          "microscope",
+          "code",
+          "sound",
+          "cell",
+          "temple"
+        ],
+        "rationale": "Pascal most strongly evokes Blaise Pascal and science/math; microscope is most direct. Secondary ties: code (Pascal language), sound/cell/temple via incidental associations.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.04,
+          "box": 0.16,
+          "cell": 0.11,
+          "code": 0.12,
+          "jupiter": 0.03,
+          "microscope": 0.46,
+          "pyramid": 0.09,
+          "temple": 0.06
+        },
+        "ranked_guesses": [
+          "microscope",
+          "box",
+          "code",
+          "cell",
+          "pyramid",
+          "temple",
+          "beijing",
+          "jupiter"
+        ],
+        "rationale": "Pascal suggests math/science/inventor angles; microscope is the closest match, with code/logic-adjacent terms next.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "science",
+        "count": 3,
+        "rationale": "Targets 'microscope', 'cell', and 'sound' (acoustics) as blue team words. Avoids direct overlap with board words while maximizing coverage of remaining blue words (8 left)."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cell": 0.85,
+          "code": 0.65,
+          "jupiter": 0.35,
+          "microscope": 0.95,
+          "pyramid": 0.25
+        },
+        "ranked_guesses": [
+          "microscope",
+          "cell",
+          "code",
+          "jupiter",
+          "pyramid"
+        ],
+        "rationale": "**microscope** is a direct science tool; **cell** is a biological science term; **code** relates to computer science. Lower confidence on **jupiter** (astronomy) and **pyramid** (archeology/geometry). Clue count=3 suggests multiple strong links.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cell": 0.85,
+          "code": 0.65,
+          "jupiter": 0.45,
+          "microscope": 0.95,
+          "pyramid": 0.3
+        },
+        "ranked_guesses": [
+          "microscope",
+          "cell",
+          "code",
+          "jupiter",
+          "pyramid"
+        ],
+        "rationale": "\"microscope\" is a direct science tool; \"cell\" is a core biological term; \"code\" relates to computer science; others are weaker but tangentially linked (e.g., \"jupiter\" for astronomy, \"pyramid\" for archaeology). Prioritized strongest associations first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fate",
+        "count": 2,
+        "rationale": "Points to red words like luck/rose themes without touching forbidden board terms."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.08,
+          "luck": 0.7,
+          "olympus": 0.06,
+          "princess": 0.05,
+          "pyramid": 0.1,
+          "temple": 0.18
+        },
+        "ranked_guesses": [
+          "luck",
+          "temple",
+          "pyramid",
+          "beijing",
+          "olympus",
+          "princess"
+        ],
+        "rationale": "With clue 'fate', strongest match is 'luck'; secondary links to destiny/religion/myth are 'temple' or mythic/prophetic 'olympus' and ancient/fortunes like 'pyramid'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "code": 0.18,
+          "jupiter": 0.1,
+          "luck": 0.46,
+          "princess": 0.08,
+          "temple": 0.12
+        },
+        "ranked_guesses": [
+          "luck",
+          "code",
+          "temple",
+          "jupiter",
+          "princess"
+        ],
+        "rationale": "Clue 'fate' best matches 'luck'; other softer links: destiny/controlled outcomes like 'code' or 'temple' (prophecy), and mythic/omens like 'jupiter' or fairy-tale 'princess'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.1,
+          "bomb": 0.05,
+          "box": 0.02,
+          "cap": 0.02,
+          "charge": 0.05,
+          "code": 0.12,
+          "green": 0.02,
+          "hole": 0.01,
+          "hollywood": 0.04,
+          "jupiter": 0.08,
+          "luck": 0.72,
+          "millionaire": 0.04,
+          "mint": 0.02,
+          "nail": 0.02,
+          "olympus": 0.02,
+          "pitch": 0.02,
+          "princess": 0.18,
+          "pyramid": 0.07,
+          "rose": 0.03,
+          "sound": 0.04,
+          "temple": 0.06,
+          "whip": 0.02
+        },
+        "ranked_guesses": [
+          "luck",
+          "princess",
+          "code",
+          "beijing",
+          "jupiter",
+          "pyramid",
+          "temple",
+          "bomb",
+          "charge",
+          "sound",
+          "hollywood",
+          "millionaire",
+          "rose",
+          "green",
+          "cap",
+          "box",
+          "mint",
+          "nail",
+          "olympus",
+          "pitch",
+          "whip",
+          "hole"
+        ],
+        "rationale": "With clue 'fate', 'luck' best matches (common phrasing: fate/luck). Secondary thematic options: 'princess' (destiny/fairytale) and 'code' (fate as a predetermined code).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 3,
+        "rationale": "links to 'sound', 'pitch', and 'whip' (as in 'whip' sound effects in orchestras or 'crack the whip' in music tempo). Avoids assassin ('temple') and neutral/red words. High-efficiency play for blue team."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pitch": 0.85,
+          "rose": 0.65,
+          "sound": 0.95
+        },
+        "ranked_guesses": [
+          "sound",
+          "pitch",
+          "rose"
+        ],
+        "rationale": "'sound' is directly tied to music; 'pitch' is a musical term; 'rose' is a stretch (e.g., 'Rose' in music like Guns N' Roses) but lower confidence. Highest priority on 'sound'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mint",
+        "count": 1,
+        "rationale": "Points to a single red word (mint) that strongly matches the clue while avoiding risky links to the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "baseball",
+        "count": 3,
+        "rationale": "Links to 'pitch', 'hole', and 'sound' (crowd noise) while avoiding red/assassin words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "lady",
+        "count": 1,
+        "rationale": "Points to princess as a likely connection while avoiding the assassin and blue words."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.03,
+          "princess": 0.66,
+          "pyramid": 0.04,
+          "rose": 0.18,
+          "whip": 0.08
+        },
+        "ranked_guesses": [
+          "princess",
+          "rose",
+          "whip",
+          "pyramid",
+          "nail"
+        ],
+        "rationale": "Clue 'lady' most directly fits 'princess' (female noble). 'rose' is a common term of address/romantic association; other options are weaker.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "luck": 0.04,
+          "pitch": 0.06,
+          "princess": 0.62,
+          "rose": 0.18,
+          "temple": 0.07,
+          "whip": 0.03
+        },
+        "ranked_guesses": [
+          "princess",
+          "rose",
+          "temple",
+          "pitch",
+          "luck",
+          "whip"
+        ],
+        "rationale": "\u201cLady\u201d most directly links to \u201cprincess\u201d; softer associations could be \u201crose\u201d (lady-like/romantic) or \u201ctemple\u201d (lady of the temple), but less certain.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.02,
+          "cap": 0.01,
+          "lady": 0.0,
+          "mint": 0.08,
+          "nail": 0.01,
+          "princess": 0.62,
+          "pyramid": 0.02,
+          "rose": 0.13,
+          "temptle": 0.03,
+          "whip": 0.06
+        },
+        "ranked_guesses": [
+          "princess",
+          "rose",
+          "mint",
+          "whip",
+          "temptle",
+          "pyramid",
+          "box",
+          "cap",
+          "nail",
+          "lady"
+        ],
+        "rationale": "\u201clady\u201d most directly maps to \u201cprincess\u201d; other softer romantic/feminine links are \u201crose\u201d and \u201cmint\u201d (as \u201cmint\u201d = fresh/young/ladylike). Avoid crime/action words.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "laboratory",
+        "count": 3,
+        "rationale": "links to 'microscope' (already guessed), 'code', and 'sound' (lab equipment/results) while avoiding red/neutral/assassin overlaps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "royalty",
+        "count": 3,
+        "rationale": "Points to several remaining red words tied to status/titles: princess, cap, olympus."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cap": 0.08,
+          "millionaire": 0.2,
+          "princess": 0.78,
+          "pyramid": 0.03,
+          "whip": 0.05
+        },
+        "ranked_guesses": [
+          "princess",
+          "millionaire",
+          "cap",
+          "whip",
+          "pyramid"
+        ],
+        "rationale": "\u201croyalty\u201d most directly fits princess; secondarily could point to wealth (millionaire) or headwear/symbols (cap, whip) but less strongly.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cap": 0.48,
+          "millionaire": 0.35,
+          "princess": 0.88,
+          "temple": 0.22,
+          "whip": 0.42
+        },
+        "ranked_guesses": [
+          "princess",
+          "cap",
+          "whip",
+          "millionaire",
+          "temple"
+        ],
+        "rationale": "Clue 'royalty' most directly fits princess; next closest are cap (crown/royal headwear), whip (royal authority/justice), millionaire (wealth/upper class), and temple (royal/palace associations).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cap": 0.19,
+          "millionaire": 0.06,
+          "mint": 0.01,
+          "princess": 0.62,
+          "whip": 0.13
+        },
+        "ranked_guesses": [
+          "princess",
+          "cap",
+          "whip",
+          "millionaire",
+          "mint"
+        ],
+        "rationale": "Clue 'royalty' most directly fits 'princess'; 'cap' and 'whip' are secondary royal associations, then 'millionaire' (wealth/status) and 'mint' (coinage).",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "baseball",
+        "count": 3,
+        "rationale": "'pitch' (baseball throw), 'box' (dugout), and 'sound' (bat crack) are all blue words tied to baseball, avoiding red/neutral/assassin overlaps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bomb": 0.65,
+          "cap": 0.85,
+          "hole": 0.75,
+          "pitch": 0.95,
+          "whip": 0.6
+        },
+        "ranked_guesses": [
+          "pitch",
+          "cap",
+          "hole",
+          "bomb",
+          "whip"
+        ],
+        "rationale": "\"pitch\" is the most direct baseball term (pitcher's mound, pitching). \"cap\" (baseball cap) and \"hole\" (dugout or field positions) are secondary. Lower-confidence words like \"bomb\" (home run slang) and \"whip\" (WHIP stat) are plausible but less direct.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "castle",
+        "count": 1,
+        "rationale": "Points to the red word \"temple\" via the idea of sacred/royal grounds, while avoiding other red options like mint/rose/luck."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.32,
+          "temple": 0.68
+        },
+        "ranked_guesses": [
+          "temple",
+          "pyramid"
+        ],
+        "rationale": "\u201cCastle\u201d suggests a fortified/royal structure; best matches are other ancient/monument buildings: temple and pyramid.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.34,
+          "temple": 0.62
+        },
+        "ranked_guesses": [
+          "temple",
+          "pyramid"
+        ],
+        "rationale": "Castle suggests monumental structures; temple is closest among remaining, pyramid is also a strong structure/fortress-style link but slightly less direct.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.03,
+          "box": 0.06,
+          "charge": 0.05,
+          "code": 0.04,
+          "luck": 0.03,
+          "olympus": 0.16,
+          "pyramid": 0.22,
+          "temple": 0.36
+        },
+        "ranked_guesses": [
+          "temple",
+          "pyramid",
+          "olympus",
+          "box",
+          "charge",
+          "code",
+          "beijing",
+          "hollywood",
+          "jupiter",
+          "luck",
+          "green",
+          "rose",
+          "mint",
+          "pitch",
+          "sound",
+          "hole",
+          "nail",
+          "millionaire",
+          "ketchup",
+          "bomb",
+          "cap",
+          "whip"
+        ],
+        "rationale": "Castle strongly fits other fortress/old-world landmarks/structures on the board: temple/pyramid/olympus; avoid tactical/electrical words like bomb/charge.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "baseball",
+        "count": 3,
+        "rationale": "'pitch' (baseball pitch), 'hole' (dugout or hole in a baseball field), and 'sound' (sound of the bat hitting the ball) are all blue words strongly connected to baseball. Avoids red and neutral words while steering clear of the assassin."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "reign",
+        "count": 2,
+        "rationale": "Points to remaining red royalty-related words like olympus and cap; avoids direct ties to the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lucky": 0.1,
+          "royalty": 0.72,
+          "temple": 0.18
+        },
+        "ranked_guesses": [
+          "royalty",
+          "temple",
+          "lucky"
+        ],
+        "rationale": "\u2018Reign\u2019 strongly points to rule/royalty; next closest board word is \u2018temple\u2019 (power/legitimacy), then \u2018luck\u2019 as a weaker thematic fit.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.04,
+          "cap": 0.28,
+          "jupiter": 0.01,
+          "pyramid": 0.14,
+          "rose": 0.08,
+          "temple": 0.18,
+          "whip": 0.23
+        },
+        "ranked_guesses": [
+          "cap",
+          "whip",
+          "temple",
+          "pyramid",
+          "rose",
+          "beijing",
+          "jupiter"
+        ],
+        "rationale": "Clue REIGN most directly links to royalty (already got princess). Remaining likely associations: CAP (royal cap), WHIP (regal punishment/discipline), TEMPLE (divine rule), then weaker/indirect options.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.08,
+          "cap": 0.62,
+          "charge": 0.16,
+          "luck": 0.12,
+          "temple": 0.24,
+          "whip": 0.18
+        },
+        "ranked_guesses": [
+          "cap",
+          "temple",
+          "whip",
+          "charge",
+          "luck",
+          "box"
+        ],
+        "rationale": "Clue 'reign' strongly links to royalty/crown-related ideas on board; 'cap' fits crown/cap/kingly headwear, with 'temple' (royal/temple) and 'whip/charge' as weaker thematic connections.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "voice",
+        "count": 2,
+        "rationale": "links to 'sound' (voice/sound) and 'pitch' (voice pitch), both blue; avoids red/neutral/assassin overlaps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pitch": 0.85,
+          "sound": 0.95
+        },
+        "ranked_guesses": [
+          "sound",
+          "pitch"
+        ],
+        "rationale": "'voice' strongly associates with 'sound' (primary) and 'pitch' (musical/tonal context). Both are high-probability blue targets given the clue count (2).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "olympus",
+        "count": 1,
+        "rationale": "Points to the remaining red god/temple-name word while avoiding links to the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "base",
+        "count": 3,
+        "rationale": "Links to **box** (baseball base), **pitch** (baseball pitch), and **code** (base code) while avoiding red/neutral/assassin words. High-efficiency play for 3 blue words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.72,
+          "code": 0.92,
+          "pitch": 0.85,
+          "sound": 0.78
+        },
+        "ranked_guesses": [
+          "code",
+          "pitch",
+          "sound",
+          "box"
+        ],
+        "rationale": "Clue 'base-3' strongly connects to **code** (base code, programming base), **pitch** (baseball pitch, base of a sound), and **sound** (base frequency, bass sound). **Box** (base of operations, home base) is a moderate fit. **Temple** and **pyramid** are weaker but could relate to architectural bases. Avoiding **bomb** (high-risk, assassin potential) and **hollywood**/**ketchup** (no clear link). Prioritizing high-confidence, low-risk words first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "olympus",
+        "count": 1,
+        "rationale": "Targets the remaining red mythology-related word without pointing to the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "baseball",
+        "count": 3,
+        "rationale": "links to pitch, hole, and box\u2014all blue words\u2014while avoiding red or assassin risks."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "minty",
+        "count": 1,
+        "rationale": "Points to MINT, a red word strongly linked to \u201cminty,\u201d with low risk of touching the assassin or blue words."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "melody",
+        "count": 2,
+        "rationale": "links SOUND (blue) and PITCH (blue) as musical terms, avoiding red/neutral/assassin risks."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pitch": 0.92,
+          "sound": 0.95
+        },
+        "ranked_guesses": [
+          "sound",
+          "pitch"
+        ],
+        "rationale": "'melody' strongly correlates with 'sound' (primary) and 'pitch' (musical tone), both high-confidence guesses. Count=2 suggests two related words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ketchup",
+        "count": 1,
+        "rationale": "Directly points to the remaining red food word KETCHUP with minimal risk of touching the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sports",
+        "count": 3,
+        "rationale": "links to pitch (baseball), box (boxing), and whip (horse racing) as blue words, avoiding red and assassin."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mint",
+        "count": 1,
+        "rationale": "Directly suggests the red word mint (money/coin mint)."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "wonder",
+        "count": 2,
+        "rationale": "links to 'hole' (wonder-hole) and 'sound' (wonders of sound), both blue words, while avoiding red and assassin."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.55,
+          "olympus": 0.75,
+          "pyramid": 0.92,
+          "rose": 0.65,
+          "temple": 0.88
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "temple",
+          "olympus",
+          "rose",
+          "jupiter"
+        ],
+        "rationale": "\"Wonder\" strongly associates with **Seven Wonders of the World**: *pyramid* (Giza), *temple* (Artemis), *olympus* (Zeus statue), and *jupiter* (Colossus of Rhodes). *Rose* (e.g., *Hanging Gardens* speculation) is a weaker but plausible link. Prioritized unguessed, high-confidence wonder-related words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olympus": 0.75,
+          "pyramid": 0.85,
+          "rose": 0.55,
+          "temple": 0.7
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "olympus",
+          "temple",
+          "rose"
+        ],
+        "rationale": "\"wonder\" strongly associates with **Seven Wonders of the World**: *pyramid* (Giza), *olympus* (Statue of Zeus at Olympia), and *temple* (Artemis). *Rose* (e.g., Rose Red/Wonder) is a weaker but plausible link. Prioritized unguessed wonder-related words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olympus": 0.88,
+          "pyramid": 0.92,
+          "rose": 0.72,
+          "temple": 0.85
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "olympus",
+          "temple",
+          "rose"
+        ],
+        "rationale": "\"wonder\" strongly associates with **Seven Wonders of the World**: *pyramid* (Giza), *olympus* (Statue of Zeus), *temple* (Artemis). *Rose* (e.g., Rose Red/Wonder) is a weaker but plausible link. Prioritized unrevealed high-confidence targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fertility",
+        "count": 2,
+        "rationale": "Links to remaining red words rose and green."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "code": 0.2,
+          "luck": 0.25,
+          "temple": 0.55
+        },
+        "ranked_guesses": [
+          "temple",
+          "luck",
+          "code"
+        ],
+        "rationale": "Fertility most strongly links to temple (rituals, fertility cults); luck is a secondary possible association (good fortune, conception); code is weaker via 'blooming'/'programming' vibes but less direct.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "luck": 0.32,
+          "mint": 0.16,
+          "rose": 0.52
+        },
+        "ranked_guesses": [
+          "rose",
+          "luck",
+          "mint"
+        ],
+        "rationale": "Fertility suggests things like flowers (rose). Also loosely ties to growth/fortune (luck); mint only weakly via abundance.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "luck": 0.46,
+          "mint": 0.28,
+          "rose": 0.26
+        },
+        "ranked_guesses": [
+          "luck",
+          "mint",
+          "rose"
+        ],
+        "rationale": "Fertility points to growth/virility or pregnancy vibes; best matches are luck (favorable conception) then mint (newness/growth association). Rose can also suggest life/romance but is less direct.",
+        "stop": false
+      },
+      "agent_id": "GPT-5.4-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "concert",
+        "count": 3,
+        "rationale": "links to SOUND, PITCH, and WHIP (as in 'whip' in a concert hall or conductor's baton) while avoiding red/assassin words."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pitch": 0.88,
+          "rose": 0.75,
+          "sound": 0.92
+        },
+        "ranked_guesses": [
+          "sound",
+          "pitch",
+          "rose"
+        ],
+        "rationale": "\"sound\" is the strongest link to *concert* (music/audio context), followed by \"pitch\" (musical tone). \"Rose\" is a stretch (e.g., 'rose at a concert') but plausible. Avoiding \"temple\" (ambiguous) and \"hollywood\" (unrelated).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "minted",
+        "count": 1,
+        "rationale": "Points to the remaining red word MINT via the idea of making coins."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "orchestra",
+        "count": 3,
+        "rationale": "links to PITCH (musical), SOUND (orchestral), and WHIP (conductor\u2019s baton) as blue words, avoiding red/assassin."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "rose",
+        "count": 1,
+        "rationale": "Strongly points to the red word ROSE while avoiding links to the assassin."
+      },
+      "agent_id": "GPT-5.4-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "high",
+        "count": 3,
+        "rationale": "links to **pitch** (high pitch in music/sound), **hole** (high hole in golf/altitude), and **sound** (high volume) as blue words, while avoiding red/neutral/assassin risks."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jupiter": 0.7,
+          "olympus": 0.92,
+          "pitch": 0.75,
+          "sound": 0.65,
+          "temple": 0.88
+        },
+        "ranked_guesses": [
+          "olympus",
+          "temple",
+          "pitch",
+          "jupiter",
+          "sound"
+        ],
+        "rationale": "\"Olympus\" (mountain/god) and \"temple\" (tall structure) are the strongest direct associations with \"high\"; \"pitch\" (high sound/music) and \"jupiter\" (high-altitude planet) are secondary. \"Sound\" (high-pitched) is weaker but plausible. No obvious assassin risk in top 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "pascal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "science"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "microscope"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "cell"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fate"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "mint",
+        "count": 1,
+        "rationale": "Points to a single red word (mint) that strongly matches the clue while avoiding risky links to the assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "mint",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "lady"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "laboratory"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royalty"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "princess"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "castle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "reign"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "voice"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "olympus",
+        "count": 1,
+        "rationale": "Points to the remaining red god/temple-name word while avoiding links to the assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "olympus",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "base"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "olympus",
+        "count": 1,
+        "rationale": "Targets the remaining red mythology-related word without pointing to the assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "olympus",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "minty",
+        "count": 1,
+        "rationale": "Points to MINT, a red word strongly linked to \u201cminty,\u201d with low risk of touching the assassin or blue words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "mint",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "melody"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "ketchup",
+        "count": 1,
+        "rationale": "Directly points to the remaining red food word KETCHUP with minimal risk of touching the assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "ketchup",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sports"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "mint",
+        "count": 1,
+        "rationale": "Directly suggests the red word mint (money/coin mint)."
+      },
+      "event": "illegal_clue",
+      "matched_word": "mint",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wonder"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fertility"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "concert"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "minted",
+        "count": 1,
+        "rationale": "Points to the remaining red word MINT via the idea of making coins."
+      },
+      "event": "illegal_clue",
+      "matched_word": "mint",
+      "reason": "morphological_variant",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "orchestra"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "rose",
+        "count": 1,
+        "rationale": "Strongly points to the red word ROSE while avoiding links to the assassin."
+      },
+      "event": "illegal_clue",
+      "matched_word": "rose",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "high"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 96,
+    "public_event_count": 54,
+    "reason": null,
+    "seed": "openrouter-codenames-single-076-openai_gpt_5_4_nano-vs-mistralai_mistral_medium_3_1",
+    "team_blue": "Mistral Medium 3.1",
+    "team_red": "GPT-5.4-nano",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 1,
+        "word": "pascal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cap": 0.18,
+              "cell": 0.06,
+              "code": 0.1,
+              "jupiter": 0.02,
+              "microscope": 0.62,
+              "pyramid": 0.02
+            },
+            "ranked_guesses": [
+              "microscope",
+              "cap",
+              "code",
+              "cell",
+              "pyramid",
+              "jupiter"
+            ],
+            "rationale": "\"Pascal\" suggests Blaise Pascal (math/physics, including computing/logic) and also points to scientific/technical terms; microscope is the strongest thematic match, with cap/code as secondary.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cell": 0.1,
+              "code": 0.22,
+              "microscope": 0.46,
+              "sound": 0.12,
+              "temple": 0.1
+            },
+            "ranked_guesses": [
+              "microscope",
+              "code",
+              "sound",
+              "cell",
+              "temple"
+            ],
+            "rationale": "Pascal most strongly evokes Blaise Pascal and science/math; microscope is most direct. Secondary ties: code (Pascal language), sound/cell/temple via incidental associations.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.04,
+              "box": 0.16,
+              "cell": 0.11,
+              "code": 0.12,
+              "jupiter": 0.03,
+              "microscope": 0.46,
+              "pyramid": 0.09,
+              "temple": 0.06
+            },
+            "ranked_guesses": [
+              "microscope",
+              "box",
+              "code",
+              "cell",
+              "pyramid",
+              "temple",
+              "beijing",
+              "jupiter"
+            ],
+            "rationale": "Pascal suggests math/science/inventor angles; microscope is the closest match, with code/logic-adjacent terms next.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "pascal",
+          "count": 1,
+          "rationale": "Points to luck/odds (\"luck\")."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "science"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cell": 0.85,
+              "code": 0.65,
+              "jupiter": 0.35,
+              "microscope": 0.95,
+              "pyramid": 0.25
+            },
+            "ranked_guesses": [
+              "microscope",
+              "cell",
+              "code",
+              "jupiter",
+              "pyramid"
+            ],
+            "rationale": "**microscope** is a direct science tool; **cell** is a biological science term; **code** relates to computer science. Lower confidence on **jupiter** (astronomy) and **pyramid** (archeology/geometry). Clue count=3 suggests multiple strong links.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cell": 0.85,
+              "code": 0.65,
+              "jupiter": 0.45,
+              "microscope": 0.95,
+              "pyramid": 0.3
+            },
+            "ranked_guesses": [
+              "microscope",
+              "cell",
+              "code",
+              "jupiter",
+              "pyramid"
+            ],
+            "rationale": "\"microscope\" is a direct science tool; \"cell\" is a core biological term; \"code\" relates to computer science; others are weaker but tangentially linked (e.g., \"jupiter\" for astronomy, \"pyramid\" for archaeology). Prioritized strongest associations first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "microscope"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "cell"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "science",
+          "count": 3,
+          "rationale": "Targets 'microscope', 'cell', and 'sound' (acoustics) as blue team words. Avoids direct overlap with board words while maximizing coverage of remaining blue words (8 left)."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fate"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.08,
+              "luck": 0.7,
+              "olympus": 0.06,
+              "princess": 0.05,
+              "pyramid": 0.1,
+              "temple": 0.18
+            },
+            "ranked_guesses": [
+              "luck",
+              "temple",
+              "pyramid",
+              "beijing",
+              "olympus",
+              "princess"
+            ],
+            "rationale": "With clue 'fate', strongest match is 'luck'; secondary links to destiny/religion/myth are 'temple' or mythic/prophetic 'olympus' and ancient/fortunes like 'pyramid'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "code": 0.18,
+              "jupiter": 0.1,
+              "luck": 0.46,
+              "princess": 0.08,
+              "temple": 0.12
+            },
+            "ranked_guesses": [
+              "luck",
+              "code",
+              "temple",
+              "jupiter",
+              "princess"
+            ],
+            "rationale": "Clue 'fate' best matches 'luck'; other softer links: destiny/controlled outcomes like 'code' or 'temple' (prophecy), and mythic/omens like 'jupiter' or fairy-tale 'princess'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.1,
+              "bomb": 0.05,
+              "box": 0.02,
+              "cap": 0.02,
+              "charge": 0.05,
+              "code": 0.12,
+              "green": 0.02,
+              "hole": 0.01,
+              "hollywood": 0.04,
+              "jupiter": 0.08,
+              "luck": 0.72,
+              "millionaire": 0.04,
+              "mint": 0.02,
+              "nail": 0.02,
+              "olympus": 0.02,
+              "pitch": 0.02,
+              "princess": 0.18,
+              "pyramid": 0.07,
+              "rose": 0.03,
+              "sound": 0.04,
+              "temple": 0.06,
+              "whip": 0.02
+            },
+            "ranked_guesses": [
+              "luck",
+              "princess",
+              "code",
+              "beijing",
+              "jupiter",
+              "pyramid",
+              "temple",
+              "bomb",
+              "charge",
+              "sound",
+              "hollywood",
+              "millionaire",
+              "rose",
+              "green",
+              "cap",
+              "box",
+              "mint",
+              "nail",
+              "olympus",
+              "pitch",
+              "whip",
+              "hole"
+            ],
+            "rationale": "With clue 'fate', 'luck' best matches (common phrasing: fate/luck). Secondary thematic options: 'princess' (destiny/fairytale) and 'code' (fate as a predetermined code).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "fate",
+          "count": 2,
+          "rationale": "Points to red words like luck/rose themes without touching forbidden board terms."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pitch": 0.85,
+              "rose": 0.65,
+              "sound": 0.95
+            },
+            "ranked_guesses": [
+              "sound",
+              "pitch",
+              "rose"
+            ],
+            "rationale": "'sound' is directly tied to music; 'pitch' is a musical term; 'rose' is a stretch (e.g., 'Rose' in music like Guns N' Roses) but lower confidence. Highest priority on 'sound'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 3,
+          "rationale": "links to 'sound', 'pitch', and 'whip' (as in 'whip' sound effects in orchestras or 'crack the whip' in music tempo). Avoids assassin ('temple') and neutral/red words. High-efficiency play for blue team."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "lady"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "mint",
+          "count": 1,
+          "rationale": "Points to a single red word (mint) that strongly matches the clue while avoiding risky links to the assassin."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "laboratory"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "baseball",
+          "count": 3,
+          "rationale": "Links to 'pitch', 'hole', and 'sound' (crowd noise) while avoiding red/assassin words."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royalty"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "nail": 0.03,
+              "princess": 0.66,
+              "pyramid": 0.04,
+              "rose": 0.18,
+              "whip": 0.08
+            },
+            "ranked_guesses": [
+              "princess",
+              "rose",
+              "whip",
+              "pyramid",
+              "nail"
+            ],
+            "rationale": "Clue 'lady' most directly fits 'princess' (female noble). 'rose' is a common term of address/romantic association; other options are weaker.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "luck": 0.04,
+              "pitch": 0.06,
+              "princess": 0.62,
+              "rose": 0.18,
+              "temple": 0.07,
+              "whip": 0.03
+            },
+            "ranked_guesses": [
+              "princess",
+              "rose",
+              "temple",
+              "pitch",
+              "luck",
+              "whip"
+            ],
+            "rationale": "\u201cLady\u201d most directly links to \u201cprincess\u201d; softer associations could be \u201crose\u201d (lady-like/romantic) or \u201ctemple\u201d (lady of the temple), but less certain.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "box": 0.02,
+              "cap": 0.01,
+              "lady": 0.0,
+              "mint": 0.08,
+              "nail": 0.01,
+              "princess": 0.62,
+              "pyramid": 0.02,
+              "rose": 0.13,
+              "temptle": 0.03,
+              "whip": 0.06
+            },
+            "ranked_guesses": [
+              "princess",
+              "rose",
+              "mint",
+              "whip",
+              "temptle",
+              "pyramid",
+              "box",
+              "cap",
+              "nail",
+              "lady"
+            ],
+            "rationale": "\u201clady\u201d most directly maps to \u201cprincess\u201d; other softer romantic/feminine links are \u201crose\u201d and \u201cmint\u201d (as \u201cmint\u201d = fresh/young/ladylike). Avoid crime/action words.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "princess"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "lady",
+          "count": 1,
+          "rationale": "Points to princess as a likely connection while avoiding the assassin and blue words."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "laboratory",
+          "count": 3,
+          "rationale": "links to 'microscope' (already guessed), 'code', and 'sound' (lab equipment/results) while avoiding red/neutral/assassin overlaps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "castle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cap": 0.08,
+              "millionaire": 0.2,
+              "princess": 0.78,
+              "pyramid": 0.03,
+              "whip": 0.05
+            },
+            "ranked_guesses": [
+              "princess",
+              "millionaire",
+              "cap",
+              "whip",
+              "pyramid"
+            ],
+            "rationale": "\u201croyalty\u201d most directly fits princess; secondarily could point to wealth (millionaire) or headwear/symbols (cap, whip) but less strongly.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cap": 0.48,
+              "millionaire": 0.35,
+              "princess": 0.88,
+              "temple": 0.22,
+              "whip": 0.42
+            },
+            "ranked_guesses": [
+              "princess",
+              "cap",
+              "whip",
+              "millionaire",
+              "temple"
+            ],
+            "rationale": "Clue 'royalty' most directly fits princess; next closest are cap (crown/royal headwear), whip (royal authority/justice), millionaire (wealth/upper class), and temple (royal/palace associations).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cap": 0.19,
+              "millionaire": 0.06,
+              "mint": 0.01,
+              "princess": 0.62,
+              "whip": 0.13
+            },
+            "ranked_guesses": [
+              "princess",
+              "cap",
+              "whip",
+              "millionaire",
+              "mint"
+            ],
+            "rationale": "Clue 'royalty' most directly fits 'princess'; 'cap' and 'whip' are secondary royal associations, then 'millionaire' (wealth/status) and 'mint' (coinage).",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "royalty",
+          "count": 3,
+          "rationale": "Points to several remaining red words tied to status/titles: princess, cap, olympus."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bomb": 0.65,
+              "cap": 0.85,
+              "hole": 0.75,
+              "pitch": 0.95,
+              "whip": 0.6
+            },
+            "ranked_guesses": [
+              "pitch",
+              "cap",
+              "hole",
+              "bomb",
+              "whip"
+            ],
+            "rationale": "\"pitch\" is the most direct baseball term (pitcher's mound, pitching). \"cap\" (baseball cap) and \"hole\" (dugout or field positions) are secondary. Lower-confidence words like \"bomb\" (home run slang) and \"whip\" (WHIP stat) are plausible but less direct.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "baseball",
+          "count": 3,
+          "rationale": "'pitch' (baseball throw), 'box' (dugout), and 'sound' (bat crack) are all blue words tied to baseball, avoiding red/neutral/assassin overlaps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "reign"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.32,
+              "temple": 0.68
+            },
+            "ranked_guesses": [
+              "temple",
+              "pyramid"
+            ],
+            "rationale": "\u201cCastle\u201d suggests a fortified/royal structure; best matches are other ancient/monument buildings: temple and pyramid.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.34,
+              "temple": 0.62
+            },
+            "ranked_guesses": [
+              "temple",
+              "pyramid"
+            ],
+            "rationale": "Castle suggests monumental structures; temple is closest among remaining, pyramid is also a strong structure/fortress-style link but slightly less direct.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.03,
+              "box": 0.06,
+              "charge": 0.05,
+              "code": 0.04,
+              "luck": 0.03,
+              "olympus": 0.16,
+              "pyramid": 0.22,
+              "temple": 0.36
+            },
+            "ranked_guesses": [
+              "temple",
+              "pyramid",
+              "olympus",
+              "box",
+              "charge",
+              "code",
+              "beijing",
+              "hollywood",
+              "jupiter",
+              "luck",
+              "green",
+              "rose",
+              "mint",
+              "pitch",
+              "sound",
+              "hole",
+              "nail",
+              "millionaire",
+              "ketchup",
+              "bomb",
+              "cap",
+              "whip"
+            ],
+            "rationale": "Castle strongly fits other fortress/old-world landmarks/structures on the board: temple/pyramid/olympus; avoid tactical/electrical words like bomb/charge.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "castle",
+          "count": 1,
+          "rationale": "Points to the red word \"temple\" via the idea of sacred/royal grounds, while avoiding other red options like mint/rose/luck."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "voice"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "baseball",
+          "count": 3,
+          "rationale": "'pitch' (baseball pitch), 'hole' (dugout or hole in a baseball field), and 'sound' (sound of the bat hitting the ball) are all blue words strongly connected to baseball. Avoids red and neutral words while steering clear of the assassin."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "base"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "baseball"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "melody"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sports"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wonder"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "fertility"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lucky": 0.1,
+              "royalty": 0.72,
+              "temple": 0.18
+            },
+            "ranked_guesses": [
+              "royalty",
+              "temple",
+              "lucky"
+            ],
+            "rationale": "\u2018Reign\u2019 strongly points to rule/royalty; next closest board word is \u2018temple\u2019 (power/legitimacy), then \u2018luck\u2019 as a weaker thematic fit.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.04,
+              "cap": 0.28,
+              "jupiter": 0.01,
+              "pyramid": 0.14,
+              "rose": 0.08,
+              "temple": 0.18,
+              "whip": 0.23
+            },
+            "ranked_guesses": [
+              "cap",
+              "whip",
+              "temple",
+              "pyramid",
+              "rose",
+              "beijing",
+              "jupiter"
+            ],
+            "rationale": "Clue REIGN most directly links to royalty (already got princess). Remaining likely associations: CAP (royal cap), WHIP (regal punishment/discipline), TEMPLE (divine rule), then weaker/indirect options.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "box": 0.08,
+              "cap": 0.62,
+              "charge": 0.16,
+              "luck": 0.12,
+              "temple": 0.24,
+              "whip": 0.18
+            },
+            "ranked_guesses": [
+              "cap",
+              "temple",
+              "whip",
+              "charge",
+              "luck",
+              "box"
+            ],
+            "rationale": "Clue 'reign' strongly links to royalty/crown-related ideas on board; 'cap' fits crown/cap/kingly headwear, with 'temple' (royal/temple) and 'whip/charge' as weaker thematic connections.",
+            "stop": false
+          },
+          "agent_id": "GPT-5.4-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "reign",
+          "count": 2,
+          "rationale": "Points to remaining red royalty-related words like olympus and cap; avoids direct ties to the assassin."
+        },
+        "agent_id": "GPT-5.4-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "concert"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pitch": 0.85,
+              "sound": 0.95
+            },
+            "ranked_guesses": [
+              "sound",
+              "pitch"
+            ],
+            "rationale": "'voice' strongly associates with 'sound' (primary) and 'pitch' (musical/tonal context). Both are high-probability blue targets given the clue count (2).",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "voice",
+          "count": 2,
+          "rationale": "links to 'sound' (voice/sound) and 'pitch' (voice pitch), both blue; avoids red/neutral/assassin overlaps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "orchestra"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "high"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

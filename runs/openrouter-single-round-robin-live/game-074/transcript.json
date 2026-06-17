@@ -1,0 +1,1790 @@
+{
+  "board": {
+    "identities": {
+      "alps": "red",
+      "ambulance": "blue",
+      "atlantis": "neutral",
+      "australia": "blue",
+      "ball": "red",
+      "bell": "red",
+      "berry": "red",
+      "casino": "neutral",
+      "cat": "blue",
+      "china": "blue",
+      "club": "neutral",
+      "comic": "neutral",
+      "diamond": "neutral",
+      "fair": "red",
+      "fighter": "blue",
+      "fish": "blue",
+      "lab": "red",
+      "life": "neutral",
+      "mole": "blue",
+      "mouth": "red",
+      "pan": "blue",
+      "spring": "red",
+      "unicorn": "red",
+      "vacuum": "neutral",
+      "watch": "assassin"
+    },
+    "revealed": [
+      "alps",
+      "atlantis",
+      "ball",
+      "bell",
+      "berry",
+      "cat",
+      "fair",
+      "fish",
+      "lab",
+      "life",
+      "mouth",
+      "pan",
+      "spring",
+      "unicorn"
+    ],
+    "words": {
+      "alps": "red",
+      "ambulance": "blue",
+      "atlantis": "neutral",
+      "australia": "blue",
+      "ball": "red",
+      "bell": "red",
+      "berry": "red",
+      "casino": "neutral",
+      "cat": "blue",
+      "china": "blue",
+      "club": "neutral",
+      "comic": "neutral",
+      "diamond": "neutral",
+      "fair": "red",
+      "fighter": "blue",
+      "fish": "blue",
+      "lab": "red",
+      "life": "neutral",
+      "mole": "blue",
+      "mouth": "red",
+      "pan": "blue",
+      "spring": "red",
+      "unicorn": "red",
+      "vacuum": "neutral",
+      "watch": "assassin"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "mountain",
+        "count": 2,
+        "rationale": "Alps are mountains and spring is often associated with mountain snowmelt."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.95,
+          "spring": 0.6
+        },
+        "ranked_guesses": [
+          "alps",
+          "spring"
+        ],
+        "rationale": "Alps is a direct mountain range, and spring is a common feature found on mountains.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.95,
+          "spring": 0.6
+        },
+        "ranked_guesses": [
+          "alps",
+          "spring"
+        ],
+        "rationale": "Alps is a direct mountain range, and spring is a common geographical feature found in mountains.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alps": 0.95,
+          "mole": 0.7
+        },
+        "ranked_guesses": [
+          "alps",
+          "mole"
+        ],
+        "rationale": "Alps are mountains, and a mole is a small mountain-like mound.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ocean",
+        "count": 3,
+        "rationale": "Targets 'australia', 'fish', and 'atlantis' (though 'atlantis' is neutral, it\u2019s a calculated risk to prioritize two blue words). Avoids direct overlap with board words and maximizes blue exposure while minimizing red/assassin risk."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ambulance": 0.02,
+          "atlantis": 0.95,
+          "australia": 0.9,
+          "ball": 0.15,
+          "bell": 0.02,
+          "berry": 0.1,
+          "casino": 0.05,
+          "cat": 0.05,
+          "china": 0.05,
+          "club": 0.05,
+          "comic": 0.05,
+          "diamond": 0.05,
+          "fair": 0.05,
+          "fighter": 0.05,
+          "fish": 0.85,
+          "lab": 0.05,
+          "life": 0.6,
+          "mole": 0.05,
+          "mouth": 0.3,
+          "pan": 0.25,
+          "spring": 0.55,
+          "unicorn": 0.05,
+          "vacuum": 0.05,
+          "watch": 0.2
+        },
+        "ranked_guesses": [
+          "atlantis",
+          "australia",
+          "fish",
+          "life",
+          "spring",
+          "mouth",
+          "pan",
+          "watch",
+          "ball",
+          "berry",
+          "casino",
+          "cat",
+          "china",
+          "club",
+          "comic",
+          "diamond",
+          "fair",
+          "fighter",
+          "lab",
+          "mole",
+          "unicorn",
+          "vacuum",
+          "ambulance",
+          "bell"
+        ],
+        "rationale": "\"Atlantis\" is mythically underwater/ocean-linked; \"Australia\" is a continent surrounded by oceans; \"fish\" directly relates. Lower-confidence words like \"life\" (ocean as life source) and \"spring\" (water-related) follow. Avoiding unrelated words like \"ambulance\" or \"bell\". Clue count is 3, so prioritizing top 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlantis": 0.95,
+          "australia": 0.9,
+          "fish": 0.75,
+          "life": 0.6
+        },
+        "ranked_guesses": [
+          "atlantis",
+          "australia",
+          "fish",
+          "life"
+        ],
+        "rationale": "Strongest associations with 'ocean': **atlantis** (mythical ocean city), **australia** (continent surrounded by ocean), **fish** (ocean life), and **life** (ocean as origin of life). Prioritized uniqueness and directness of link.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "science",
+        "count": 2,
+        "rationale": "Lab and spring are associated with scientific contexts."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.95,
+          "life": 0.85
+        },
+        "ranked_guesses": [
+          "lab",
+          "life"
+        ],
+        "rationale": "Lab is a direct location for science, and life is often studied in biological sciences.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.95,
+          "life": 0.85
+        },
+        "ranked_guesses": [
+          "lab",
+          "life"
+        ],
+        "rationale": "Lab is a direct location for science, and life is often associated with life sciences.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lab": 0.95,
+          "vacuum": 0.85
+        },
+        "ranked_guesses": [
+          "lab",
+          "vacuum"
+        ],
+        "rationale": "Lab is a direct location for science, and vacuum is a common scientific tool/concept.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "panda",
+        "count": 3,
+        "rationale": "links to 'china', 'cat', and 'berry' (bamboo association) for blue team words, avoiding assassin and neutral traps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "carnival",
+        "count": 3,
+        "rationale": "Connects 'ball', 'bell', and 'fair' which are all associated with carnival games or settings."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.7,
+          "comic": 0.6,
+          "fair": 0.95
+        },
+        "ranked_guesses": [
+          "fair",
+          "ball",
+          "comic"
+        ],
+        "rationale": "Fair is a direct synonym for carnival. Ball and comic are associated with carnival themes.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.7,
+          "comic": 0.6,
+          "fair": 0.95
+        },
+        "ranked_guesses": [
+          "fair",
+          "ball",
+          "comic"
+        ],
+        "rationale": "Fair is a direct synonym for carnival, ball relates to carnival dances, and comic relates to carnival performers.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.7,
+          "comic": 0.6,
+          "fair": 0.95
+        },
+        "ranked_guesses": [
+          "fair",
+          "ball",
+          "comic"
+        ],
+        "rationale": "Fair is a direct synonym for carnival. Ball and comic are associated with carnival themes.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 4,
+        "rationale": "links to 'cat', 'mole', 'fish', and 'unicorn' for blue team words, maximizing coverage while avoiding assassin and neutral traps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cat": 0.95,
+          "fish": 0.9,
+          "mole": 0.65,
+          "unicorn": 0.7
+        },
+        "ranked_guesses": [
+          "cat",
+          "fish",
+          "unicorn",
+          "mole"
+        ],
+        "rationale": "'cat' and 'fish' are direct animals; 'unicorn' is mythical but fits; 'mole' is less obvious but still an animal. Prioritized highest-confidence literal animals first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cat": 0.85,
+          "fish": 0.9,
+          "mole": 0.75,
+          "unicorn": 0.95
+        },
+        "ranked_guesses": [
+          "unicorn",
+          "fish",
+          "cat",
+          "mole"
+        ],
+        "rationale": "Highest confidence in 'unicorn' (mythical animal), followed by 'fish' (aquatic animal), 'cat' (common pet), and 'mole' (burrowing animal). Avoids ambiguous terms like 'berry' or 'spring' that could be plants/seasons.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "round",
+        "count": 3,
+        "rationale": "'ball', 'bell', and 'mouth' are all rounded objects or shapes."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.9,
+          "bell": 0.7,
+          "pan": 0.6
+        },
+        "ranked_guesses": [
+          "ball",
+          "bell",
+          "pan"
+        ],
+        "rationale": "Ball is round, bell is often round, and pan is round.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.95,
+          "bell": 0.7,
+          "mole": 0.6
+        },
+        "ranked_guesses": [
+          "ball",
+          "bell",
+          "mole"
+        ],
+        "rationale": "Ball is round, bell is often round, and mole is a round animal/feature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ball": 0.95,
+          "mole": 0.6,
+          "pan": 0.7
+        },
+        "ranked_guesses": [
+          "ball",
+          "pan",
+          "mole"
+        ],
+        "rationale": "Ball is round, pan is round, and mole is a round skin spot.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "dig",
+        "count": 3,
+        "rationale": "links to 'mole', 'australia' (digging/mining), and 'pan' (gold pan) for blue team words, avoiding assassin ('watch') and neutral traps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "australia": 0.65,
+          "diamond": 0.75,
+          "mole": 0.95,
+          "spring": 0.55
+        },
+        "ranked_guesses": [
+          "mole",
+          "diamond",
+          "australia",
+          "spring"
+        ],
+        "rationale": "'mole' is a burrowing animal strongly linked to 'dig'. 'diamond' (mining), 'australia' (digging culture/opals), and 'spring' (digging wells) are weaker but plausible. Prioritizing highest-confidence first.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "season",
+        "count": 2,
+        "rationale": "'Spring' is a season, and 'berry' is often associated with seasonal harvesting."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.7,
+          "spring": 0.95
+        },
+        "ranked_guesses": [
+          "spring",
+          "berry"
+        ],
+        "rationale": "Spring is a season, and berries are seasonal fruits.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.6,
+          "spring": 0.9
+        },
+        "ranked_guesses": [
+          "spring",
+          "berry"
+        ],
+        "rationale": "Spring is a season, and berry is often associated with seasonal harvesting.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.6,
+          "spring": 0.95
+        },
+        "ranked_guesses": [
+          "spring",
+          "berry"
+        ],
+        "rationale": "Spring is a season, and berries are seasonal fruits.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "cook",
+        "count": 3,
+        "rationale": "links to 'pan', 'china' (as in 'chinaware'), and 'mole' (as in 'mole sauce') for blue team words, avoiding assassin and neutral traps."
+      },
+      "agent_id": "Mistral Medium 3.1-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.75,
+          "china": 0.65,
+          "pan": 0.95
+        },
+        "ranked_guesses": [
+          "pan",
+          "berry",
+          "china"
+        ],
+        "rationale": "'pan' is directly cookware. 'berry' (e.g., cranberry sauce) and 'china' (porcelain dishes) are secondary cooking associations. Prioritized unguessed blue-likely words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.75,
+          "club": 0.55,
+          "comic": 0.45,
+          "pan": 0.95
+        },
+        "ranked_guesses": [
+          "pan",
+          "berry",
+          "club",
+          "comic"
+        ],
+        "rationale": "'pan' is the most direct cooking-related word; 'berry' ties to baking/cooking; 'club' (sandwich) and 'comic' (cookbook/comic) are weaker but plausible. Avoiding 'mouth' (too vague) and 'vacuum' (unrelated).",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "berry": 0.75,
+          "club": 0.65,
+          "comic": 0.55,
+          "pan": 0.95
+        },
+        "ranked_guesses": [
+          "pan",
+          "berry",
+          "club",
+          "comic"
+        ],
+        "rationale": "'pan' is the strongest direct link to 'cook' (cookware). 'berry' ties to cooking (e.g., baking). 'club' (sandwich) and 'comic' (cookbook parodies) are weaker but plausible. Avoiding revealed words and low-confidence options like 'australia' or 'casino'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Medium 3.1-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "anatomy",
+        "count": 1,
+        "rationale": "The only remaining red word is 'mouth', which is a part of the human anatomy."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth"
+        ],
+        "rationale": "Mouth is a direct part of human anatomy.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth"
+        ],
+        "rationale": "Mouth is a direct part of human anatomy.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth"
+        ],
+        "rationale": "Mouth is a direct part of human anatomy.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "mountain"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "alps"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ocean"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "atlantis"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "lab"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "life"
+    },
+    {
+      "clue": {
+        "clue": "panda",
+        "count": 3,
+        "rationale": "links to 'china', 'cat', and 'berry' (bamboo association) for blue team words, avoiding assassin and neutral traps."
+      },
+      "event": "illegal_clue",
+      "matched_word": "pan",
+      "reason": "substring",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "carnival"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "fair"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fish"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "cat"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "unicorn"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "round"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ball"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bell"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "dig"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "season"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spring"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "cook"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pan"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "berry"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "anatomy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "mouth"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 41,
+    "public_event_count": 30,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-074-google_gemini_3_1_flash_lite-vs-mistralai_mistral_medium_3_1",
+    "team_blue": "Mistral Medium 3.1",
+    "team_red": "Gemini 3.1 Flash Lite",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "mountain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.95,
+              "spring": 0.6
+            },
+            "ranked_guesses": [
+              "alps",
+              "spring"
+            ],
+            "rationale": "Alps is a direct mountain range, and spring is a common feature found on mountains.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.95,
+              "spring": 0.6
+            },
+            "ranked_guesses": [
+              "alps",
+              "spring"
+            ],
+            "rationale": "Alps is a direct mountain range, and spring is a common geographical feature found in mountains.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alps": 0.95,
+              "mole": 0.7
+            },
+            "ranked_guesses": [
+              "alps",
+              "mole"
+            ],
+            "rationale": "Alps are mountains, and a mole is a small mountain-like mound.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "alps"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mountain",
+          "count": 2,
+          "rationale": "Alps are mountains and spring is often associated with mountain snowmelt."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ocean"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ambulance": 0.02,
+              "atlantis": 0.95,
+              "australia": 0.9,
+              "ball": 0.15,
+              "bell": 0.02,
+              "berry": 0.1,
+              "casino": 0.05,
+              "cat": 0.05,
+              "china": 0.05,
+              "club": 0.05,
+              "comic": 0.05,
+              "diamond": 0.05,
+              "fair": 0.05,
+              "fighter": 0.05,
+              "fish": 0.85,
+              "lab": 0.05,
+              "life": 0.6,
+              "mole": 0.05,
+              "mouth": 0.3,
+              "pan": 0.25,
+              "spring": 0.55,
+              "unicorn": 0.05,
+              "vacuum": 0.05,
+              "watch": 0.2
+            },
+            "ranked_guesses": [
+              "atlantis",
+              "australia",
+              "fish",
+              "life",
+              "spring",
+              "mouth",
+              "pan",
+              "watch",
+              "ball",
+              "berry",
+              "casino",
+              "cat",
+              "china",
+              "club",
+              "comic",
+              "diamond",
+              "fair",
+              "fighter",
+              "lab",
+              "mole",
+              "unicorn",
+              "vacuum",
+              "ambulance",
+              "bell"
+            ],
+            "rationale": "\"Atlantis\" is mythically underwater/ocean-linked; \"Australia\" is a continent surrounded by oceans; \"fish\" directly relates. Lower-confidence words like \"life\" (ocean as life source) and \"spring\" (water-related) follow. Avoiding unrelated words like \"ambulance\" or \"bell\". Clue count is 3, so prioritizing top 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlantis": 0.95,
+              "australia": 0.9,
+              "fish": 0.75,
+              "life": 0.6
+            },
+            "ranked_guesses": [
+              "atlantis",
+              "australia",
+              "fish",
+              "life"
+            ],
+            "rationale": "Strongest associations with 'ocean': **atlantis** (mythical ocean city), **australia** (continent surrounded by ocean), **fish** (ocean life), and **life** (ocean as origin of life). Prioritized uniqueness and directness of link.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "atlantis"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ocean",
+          "count": 3,
+          "rationale": "Targets 'australia', 'fish', and 'atlantis' (though 'atlantis' is neutral, it\u2019s a calculated risk to prioritize two blue words). Avoids direct overlap with board words and maximizes blue exposure while minimizing red/assassin risk."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "science"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.95,
+              "life": 0.85
+            },
+            "ranked_guesses": [
+              "lab",
+              "life"
+            ],
+            "rationale": "Lab is a direct location for science, and life is often studied in biological sciences.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.95,
+              "life": 0.85
+            },
+            "ranked_guesses": [
+              "lab",
+              "life"
+            ],
+            "rationale": "Lab is a direct location for science, and life is often associated with life sciences.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "lab": 0.95,
+              "vacuum": 0.85
+            },
+            "ranked_guesses": [
+              "lab",
+              "vacuum"
+            ],
+            "rationale": "Lab is a direct location for science, and vacuum is a common scientific tool/concept.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "lab"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "life"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "science",
+          "count": 2,
+          "rationale": "Lab and spring are associated with scientific contexts."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "carnival"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "fair"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "animal"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fish"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "cat"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "unicorn"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "panda",
+          "count": 3,
+          "rationale": "links to 'china', 'cat', and 'berry' (bamboo association) for blue team words, avoiding assassin and neutral traps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "round"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.7,
+              "comic": 0.6,
+              "fair": 0.95
+            },
+            "ranked_guesses": [
+              "fair",
+              "ball",
+              "comic"
+            ],
+            "rationale": "Fair is a direct synonym for carnival. Ball and comic are associated with carnival themes.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.7,
+              "comic": 0.6,
+              "fair": 0.95
+            },
+            "ranked_guesses": [
+              "fair",
+              "ball",
+              "comic"
+            ],
+            "rationale": "Fair is a direct synonym for carnival, ball relates to carnival dances, and comic relates to carnival performers.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.7,
+              "comic": 0.6,
+              "fair": 0.95
+            },
+            "ranked_guesses": [
+              "fair",
+              "ball",
+              "comic"
+            ],
+            "rationale": "Fair is a direct synonym for carnival. Ball and comic are associated with carnival themes.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ball"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bell"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "carnival",
+          "count": 3,
+          "rationale": "Connects 'ball', 'bell', and 'fair' which are all associated with carnival games or settings."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "dig"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cat": 0.95,
+              "fish": 0.9,
+              "mole": 0.65,
+              "unicorn": 0.7
+            },
+            "ranked_guesses": [
+              "cat",
+              "fish",
+              "unicorn",
+              "mole"
+            ],
+            "rationale": "'cat' and 'fish' are direct animals; 'unicorn' is mythical but fits; 'mole' is less obvious but still an animal. Prioritized highest-confidence literal animals first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cat": 0.85,
+              "fish": 0.9,
+              "mole": 0.75,
+              "unicorn": 0.95
+            },
+            "ranked_guesses": [
+              "unicorn",
+              "fish",
+              "cat",
+              "mole"
+            ],
+            "rationale": "Highest confidence in 'unicorn' (mythical animal), followed by 'fish' (aquatic animal), 'cat' (common pet), and 'mole' (burrowing animal). Avoids ambiguous terms like 'berry' or 'spring' that could be plants/seasons.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 4,
+          "rationale": "links to 'cat', 'mole', 'fish', and 'unicorn' for blue team words, maximizing coverage while avoiding assassin and neutral traps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "season"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.9,
+              "bell": 0.7,
+              "pan": 0.6
+            },
+            "ranked_guesses": [
+              "ball",
+              "bell",
+              "pan"
+            ],
+            "rationale": "Ball is round, bell is often round, and pan is round.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.95,
+              "bell": 0.7,
+              "mole": 0.6
+            },
+            "ranked_guesses": [
+              "ball",
+              "bell",
+              "mole"
+            ],
+            "rationale": "Ball is round, bell is often round, and mole is a round animal/feature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ball": 0.95,
+              "mole": 0.6,
+              "pan": 0.7
+            },
+            "ranked_guesses": [
+              "ball",
+              "pan",
+              "mole"
+            ],
+            "rationale": "Ball is round, pan is round, and mole is a round skin spot.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spring"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "round",
+          "count": 3,
+          "rationale": "'ball', 'bell', and 'mouth' are all rounded objects or shapes."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "cook"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "australia": 0.65,
+              "diamond": 0.75,
+              "mole": 0.95,
+              "spring": 0.55
+            },
+            "ranked_guesses": [
+              "mole",
+              "diamond",
+              "australia",
+              "spring"
+            ],
+            "rationale": "'mole' is a burrowing animal strongly linked to 'dig'. 'diamond' (mining), 'australia' (digging culture/opals), and 'spring' (digging wells) are weaker but plausible. Prioritizing highest-confidence first.",
+            "stop": false
+          },
+          "agent_id": "Mistral Medium 3.1-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pan"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "berry"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dig",
+          "count": 3,
+          "rationale": "links to 'mole', 'australia' (digging/mining), and 'pan' (gold pan) for blue team words, avoiding assassin ('watch') and neutral traps."
+        },
+        "agent_id": "Mistral Medium 3.1-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "anatomy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "berry": 0.7,
+              "spring": 0.95
+            },
+            "ranked_guesses": [
+              "spring",
+              "berry"
+            ],
+            "rationale": "Spring is a season, and berries are seasonal fruits.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "berry": 0.6,
+              "spring": 0.9
+            },
+            "ranked_guesses": [
+              "spring",
+              "berry"
+            ],
+            "rationale": "Spring is a season, and berry is often associated with seasonal harvesting.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "berry": 0.6,
+              "spring": 0.95
+            },
+            "ranked_guesses": [
+              "spring",
+              "berry"
+            ],
+            "rationale": "Spring is a season, and berries are seasonal fruits.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "mouth"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "season",
+          "count": 2,
+          "rationale": "'Spring' is a season, and 'berry' is often associated with seasonal harvesting."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

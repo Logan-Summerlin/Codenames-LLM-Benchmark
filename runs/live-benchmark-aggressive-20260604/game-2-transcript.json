@@ -1,0 +1,1401 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    },
+    "revealed": [
+      "agent",
+      "autumn",
+      "baker",
+      "beacon",
+      "cloud",
+      "copper",
+      "flower",
+      "machine",
+      "magnet",
+      "robot",
+      "station",
+      "travel",
+      "voyage",
+      "writer"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "journey",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.95,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Travel and voyage are direct synonyms of 'journey'. The clue count is 2, so we guess these two and stop.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.9,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Travel and voyage are direct synonyms of journey, making them very likely red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Journey directly relates to travel and voyage as synonyms. Atlas is also related but less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "profession",
+        "count": 3,
+        "rationale": "Connects three blue words: agent, anchor, writer."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "anchor": 0.7,
+          "baker": 0.9,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "writer",
+          "baker",
+          "agent",
+          "anchor"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.75,
+          "baker": 0.9,
+          "writer": 0.85
+        },
+        "ranked_guesses": [
+          "baker",
+          "writer",
+          "agent"
+        ],
+        "rationale": "Baker and writer are straightforward professions. Agent also fits (travel agent, secret agent). Anchor and copper are alternatives but less likely.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.9,
+          "baker": 0.85,
+          "writer": 0.8
+        },
+        "ranked_guesses": [
+          "agent",
+          "baker",
+          "writer"
+        ],
+        "rationale": "Profession clue suggests jobs. Agent, baker, writer are clear professions. Anchor is possible but less certain. Avoid travel and voyage which are red.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "magnet": 0.8,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "robot"
+        ],
+        "rationale": "Copper is a direct metal. Magnet is often metallic. Robot is commonly made of metal.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "magnet": 0.8,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "robot"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "machine": 0.7,
+          "magnet": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "machine"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "train",
+        "count": 2,
+        "rationale": "Machine and station both relate to trains; no other board words are associated."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 1.0,
+          "station": 1.0
+        },
+        "ranked_guesses": [
+          "station",
+          "machine"
+        ],
+        "rationale": "Station is directly related to trains as a stop. Machine is a broad term for trains as mechanical vehicles. Other words like atlas or beacon are less directly connected.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.5,
+          "station": 0.9
+        },
+        "ranked_guesses": [
+          "station",
+          "machine"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "machine": 0.65,
+          "station": 0.85
+        },
+        "ranked_guesses": [
+          "station",
+          "machine"
+        ],
+        "rationale": "Train strongly suggests 'station' (train station) and 'machine' (train as a machine). Both are unrevealed.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "foliage",
+        "count": 2,
+        "rationale": "Autumn and jungle are both associated with foliage (leaves, plants). This clue targets two of our remaining red words and avoids the assassin and other dangerous words."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "flower": 0.7
+        },
+        "ranked_guesses": [
+          "autumn",
+          "flower"
+        ],
+        "rationale": "Foliage strongly relates to autumn leaves and flowers, both unrevealed and likely red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "jungle": 0.8
+        },
+        "ranked_guesses": [
+          "autumn",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "autumn": 0.9,
+          "flower": 0.8
+        },
+        "ranked_guesses": [
+          "autumn",
+          "flower"
+        ],
+        "rationale": "Foliage suggests plants and leaves; autumn and flower are directly related.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "job",
+        "count": 3,
+        "rationale": "Agent, anchor, and writer are all common occupations, and none of the remaining red or assassin words are likely to be associated with jobs."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "anchor": 0.7,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "writer",
+          "agent",
+          "anchor"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.8,
+          "anchor": 0.7,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "writer",
+          "agent",
+          "anchor"
+        ],
+        "rationale": "The clue 'job' (count 3) suggests professions. 'Writer' and 'agent' are clear jobs; 'anchor' (news anchor) also fits. Other possible jobs like 'baker' are already revealed neutral. 'Wizard' is less likely. These three are the strongest candidates for blue words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7,
+          "anchor": 0.6,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "writer",
+          "agent",
+          "anchor"
+        ],
+        "rationale": "These words are common occupations related to 'job'.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fog",
+        "count": 3,
+        "rationale": "Cloud, jungle, and mirror all relate to fog: fog is a cloud near the ground, jungles often have fog, and mirrors can fog up."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.7,
+          "cloud": 0.9,
+          "jungle": 0.5
+        },
+        "ranked_guesses": [
+          "cloud",
+          "beacon",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.7,
+          "cloud": 0.9
+        },
+        "ranked_guesses": [
+          "cloud",
+          "beacon"
+        ],
+        "rationale": "Cloud is directly related to fog as a weather phenomenon. Beacon is associated with fog signals. Third guesses like anchor or mirror are weak, so stopping to avoid risking neutral or blue words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.8,
+          "cloud": 0.9,
+          "mirror": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "beacon",
+          "mirror"
+        ],
+        "rationale": "Fog is a low cloud, so 'cloud' is directly related. Beacons are used in fog for navigation. Mirrors can fog up with condensation. These are the three most plausible red words among unrevealed options.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "profession"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "baker"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "copper"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "magnet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "train"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "foliage"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "autumn"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "job"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "fog"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "beacon"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 28,
+    "public_event_count": 25,
+    "reason": "assassin",
+    "seed": "2",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.95,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Travel and voyage are direct synonyms of 'journey'. The clue count is 2, so we guess these two and stop.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.9,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Travel and voyage are direct synonyms of journey, making them very likely red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Journey directly relates to travel and voyage as synonyms. Atlas is also related but less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "profession"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "anchor": 0.7,
+              "baker": 0.9,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "writer",
+              "baker",
+              "agent",
+              "anchor"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.75,
+              "baker": 0.9,
+              "writer": 0.85
+            },
+            "ranked_guesses": [
+              "baker",
+              "writer",
+              "agent"
+            ],
+            "rationale": "Baker and writer are straightforward professions. Agent also fits (travel agent, secret agent). Anchor and copper are alternatives but less likely.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.9,
+              "baker": 0.85,
+              "writer": 0.8
+            },
+            "ranked_guesses": [
+              "agent",
+              "baker",
+              "writer"
+            ],
+            "rationale": "Profession clue suggests jobs. Agent, baker, writer are clear professions. Anchor is possible but less certain. Avoid travel and voyage which are red.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "baker"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "profession",
+          "count": 3,
+          "rationale": "Connects three blue words: agent, anchor, writer."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "magnet": 0.8,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "robot"
+            ],
+            "rationale": "Copper is a direct metal. Magnet is often metallic. Robot is commonly made of metal.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "magnet": 0.8,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "robot"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "machine": 0.7,
+              "magnet": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "machine"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "copper"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "magnet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "train"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "machine": 1.0,
+              "station": 1.0
+            },
+            "ranked_guesses": [
+              "station",
+              "machine"
+            ],
+            "rationale": "Station is directly related to trains as a stop. Machine is a broad term for trains as mechanical vehicles. Other words like atlas or beacon are less directly connected.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "machine": 0.5,
+              "station": 0.9
+            },
+            "ranked_guesses": [
+              "station",
+              "machine"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "machine": 0.65,
+              "station": 0.85
+            },
+            "ranked_guesses": [
+              "station",
+              "machine"
+            ],
+            "rationale": "Train strongly suggests 'station' (train station) and 'machine' (train as a machine). Both are unrevealed.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "train",
+          "count": 2,
+          "rationale": "Machine and station both relate to trains; no other board words are associated."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "foliage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "flower": 0.7
+            },
+            "ranked_guesses": [
+              "autumn",
+              "flower"
+            ],
+            "rationale": "Foliage strongly relates to autumn leaves and flowers, both unrevealed and likely red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "jungle": 0.8
+            },
+            "ranked_guesses": [
+              "autumn",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "autumn": 0.9,
+              "flower": 0.8
+            },
+            "ranked_guesses": [
+              "autumn",
+              "flower"
+            ],
+            "rationale": "Foliage suggests plants and leaves; autumn and flower are directly related.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "autumn"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "foliage",
+          "count": 2,
+          "rationale": "Autumn and jungle are both associated with foliage (leaves, plants). This clue targets two of our remaining red words and avoids the assassin and other dangerous words."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "job"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "anchor": 0.7,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "writer",
+              "agent",
+              "anchor"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.8,
+              "anchor": 0.7,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "writer",
+              "agent",
+              "anchor"
+            ],
+            "rationale": "The clue 'job' (count 3) suggests professions. 'Writer' and 'agent' are clear jobs; 'anchor' (news anchor) also fits. Other possible jobs like 'baker' are already revealed neutral. 'Wizard' is less likely. These three are the strongest candidates for blue words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.7,
+              "anchor": 0.6,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "writer",
+              "agent",
+              "anchor"
+            ],
+            "rationale": "These words are common occupations related to 'job'.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "job",
+          "count": 3,
+          "rationale": "Agent, anchor, and writer are all common occupations, and none of the remaining red or assassin words are likely to be associated with jobs."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "fog"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.7,
+              "cloud": 0.9,
+              "jungle": 0.5
+            },
+            "ranked_guesses": [
+              "cloud",
+              "beacon",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.7,
+              "cloud": 0.9
+            },
+            "ranked_guesses": [
+              "cloud",
+              "beacon"
+            ],
+            "rationale": "Cloud is directly related to fog as a weather phenomenon. Beacon is associated with fog signals. Third guesses like anchor or mirror are weak, so stopping to avoid risking neutral or blue words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.8,
+              "cloud": 0.9,
+              "mirror": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "beacon",
+              "mirror"
+            ],
+            "rationale": "Fog is a low cloud, so 'cloud' is directly related. Beacons are used in fog for navigation. Mirrors can fog up with condensation. These are the three most plausible red words among unrevealed options.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "beacon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fog",
+          "count": 3,
+          "rationale": "Cloud, jungle, and mirror all relate to fog: fog is a cloud near the ground, jungles often have fog, and mirrors can fog up."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

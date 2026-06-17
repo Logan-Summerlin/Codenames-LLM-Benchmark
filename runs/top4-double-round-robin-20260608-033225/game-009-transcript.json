@@ -1,0 +1,621 @@
+{
+  "board": {
+    "identities": {
+      "animal": "neutral",
+      "baker": "blue",
+      "bread": "blue",
+      "bridge": "assassin",
+      "camera": "red",
+      "desert": "red",
+      "family": "red",
+      "hammer": "red",
+      "harbor": "neutral",
+      "highway": "red",
+      "island": "blue",
+      "kernel": "neutral",
+      "leather": "red",
+      "mystery": "blue",
+      "poet": "blue",
+      "robot": "red",
+      "salt": "neutral",
+      "silence": "red",
+      "silver": "red",
+      "stone": "blue",
+      "temple": "neutral",
+      "tunnel": "blue",
+      "village": "neutral",
+      "violin": "neutral",
+      "voyage": "blue"
+    },
+    "revealed": [
+      "bread",
+      "bridge",
+      "hammer",
+      "highway",
+      "robot",
+      "silver"
+    ],
+    "words": {
+      "animal": "neutral",
+      "baker": "blue",
+      "bread": "blue",
+      "bridge": "assassin",
+      "camera": "red",
+      "desert": "red",
+      "family": "red",
+      "hammer": "red",
+      "harbor": "neutral",
+      "highway": "red",
+      "island": "blue",
+      "kernel": "neutral",
+      "leather": "red",
+      "mystery": "blue",
+      "poet": "blue",
+      "robot": "red",
+      "salt": "neutral",
+      "silence": "red",
+      "silver": "red",
+      "stone": "blue",
+      "temple": "neutral",
+      "tunnel": "blue",
+      "village": "neutral",
+      "violin": "neutral",
+      "voyage": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "Hammer, robot, and silver are all associated with metal"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.8,
+          "robot": 0.75,
+          "silver": 0.85
+        },
+        "ranked_guesses": [
+          "silver",
+          "hammer",
+          "robot"
+        ],
+        "rationale": "silver is a metal, hammer is typically metal, robot is made of metal",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hammer": 0.8,
+          "robot": 0.75,
+          "silver": 0.85
+        },
+        "ranked_guesses": [
+          "silver",
+          "hammer",
+          "robot"
+        ],
+        "rationale": "All are strongly associated with metal: silver is a metal, hammer is typically metal, robot is made of metal.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "carbohydrate",
+        "count": 2,
+        "rationale": "Connects baker and bread."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.9,
+          "kernel": 0.4
+        },
+        "ranked_guesses": [
+          "bread",
+          "kernel"
+        ],
+        "rationale": "Bread is a primary source of carbohydrates. Kernel (as in corn/grain) is also a carbohydrate source.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.9,
+          "kernel": 0.4
+        },
+        "ranked_guesses": [
+          "bread",
+          "kernel"
+        ],
+        "rationale": "Bread is a primary source of carbohydrates. Kernel (as in corn/grain) is also a carbohydrate.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bread": 0.9,
+          "kernel": 0.6
+        },
+        "ranked_guesses": [
+          "bread",
+          "kernel"
+        ],
+        "rationale": "Bread is a primary source of carbohydrates. Kernel (as in corn) is also a carbohydrate.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "road",
+        "count": 2,
+        "rationale": "Both 'highway' and 'desert' can be associated with roads/travel routes."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.8,
+          "highway": 0.85
+        },
+        "ranked_guesses": [
+          "highway",
+          "bridge"
+        ],
+        "rationale": "road relates to ways of travel; highway and bridge are common road-associated terms",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.85,
+          "highway": 0.85
+        },
+        "ranked_guesses": [
+          "highway",
+          "bridge"
+        ],
+        "rationale": "road suggests transport routes; highway and bridge are direct road concepts",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.78,
+          "highway": 0.85
+        },
+        "ranked_guesses": [
+          "highway",
+          "bridge"
+        ],
+        "rationale": "Road clue points to transportation routes; highway and bridge are direct road-related terms.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "silver"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "hammer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "carbohydrate"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bread"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "road"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "highway"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "bridge"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 12,
+    "public_event_count": 11,
+    "reason": "assassin",
+    "seed": "top4-double-round-robin-009-openai_gpt_oss_120b-vs-google_gemma_4_31b_it",
+    "team_blue": "Gemma 4 31B",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.8,
+              "robot": 0.75,
+              "silver": 0.85
+            },
+            "ranked_guesses": [
+              "silver",
+              "hammer",
+              "robot"
+            ],
+            "rationale": "silver is a metal, hammer is typically metal, robot is made of metal",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hammer": 0.8,
+              "robot": 0.75,
+              "silver": 0.85
+            },
+            "ranked_guesses": [
+              "silver",
+              "hammer",
+              "robot"
+            ],
+            "rationale": "All are strongly associated with metal: silver is a metal, hammer is typically metal, robot is made of metal.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "silver"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "hammer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "Hammer, robot, and silver are all associated with metal"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "carbohydrate"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.9,
+              "kernel": 0.4
+            },
+            "ranked_guesses": [
+              "bread",
+              "kernel"
+            ],
+            "rationale": "Bread is a primary source of carbohydrates. Kernel (as in corn/grain) is also a carbohydrate source.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.9,
+              "kernel": 0.4
+            },
+            "ranked_guesses": [
+              "bread",
+              "kernel"
+            ],
+            "rationale": "Bread is a primary source of carbohydrates. Kernel (as in corn/grain) is also a carbohydrate.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bread": 0.9,
+              "kernel": 0.6
+            },
+            "ranked_guesses": [
+              "bread",
+              "kernel"
+            ],
+            "rationale": "Bread is a primary source of carbohydrates. Kernel (as in corn) is also a carbohydrate.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bread"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "carbohydrate",
+          "count": 2,
+          "rationale": "Connects baker and bread."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "road"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.8,
+              "highway": 0.85
+            },
+            "ranked_guesses": [
+              "highway",
+              "bridge"
+            ],
+            "rationale": "road relates to ways of travel; highway and bridge are common road-associated terms",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.85,
+              "highway": 0.85
+            },
+            "ranked_guesses": [
+              "highway",
+              "bridge"
+            ],
+            "rationale": "road suggests transport routes; highway and bridge are direct road concepts",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.78,
+              "highway": 0.85
+            },
+            "ranked_guesses": [
+              "highway",
+              "bridge"
+            ],
+            "rationale": "Road clue points to transportation routes; highway and bridge are direct road-related terms.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "highway"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "road",
+          "count": 2,
+          "rationale": "Both 'highway' and 'desert' can be associated with roads/travel routes."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

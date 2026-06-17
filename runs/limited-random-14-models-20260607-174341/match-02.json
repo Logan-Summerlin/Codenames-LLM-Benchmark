@@ -1,0 +1,269 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "atlas": "red",
+      "autumn": "neutral",
+      "balloon": "red",
+      "butter": "red",
+      "camera": "neutral",
+      "castle": "neutral",
+      "circle": "red",
+      "cloud": "neutral",
+      "compass": "red",
+      "eagle": "blue",
+      "flame": "blue",
+      "guitar": "neutral",
+      "harbor": "blue",
+      "helmet": "red",
+      "mirror": "blue",
+      "pilot": "neutral",
+      "rocket": "blue",
+      "sailor": "assassin",
+      "storm": "red",
+      "temple": "blue",
+      "tunnel": "blue",
+      "water": "neutral",
+      "wood": "red",
+      "writer": "red"
+    },
+    "revealed": [
+      "compass",
+      "sailor"
+    ],
+    "words": {
+      "agent": "blue",
+      "atlas": "red",
+      "autumn": "neutral",
+      "balloon": "red",
+      "butter": "red",
+      "camera": "neutral",
+      "castle": "neutral",
+      "circle": "red",
+      "cloud": "neutral",
+      "compass": "red",
+      "eagle": "blue",
+      "flame": "blue",
+      "guitar": "neutral",
+      "harbor": "blue",
+      "helmet": "red",
+      "mirror": "blue",
+      "pilot": "neutral",
+      "rocket": "blue",
+      "sailor": "assassin",
+      "storm": "red",
+      "temple": "blue",
+      "tunnel": "blue",
+      "water": "neutral",
+      "wood": "red",
+      "writer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "navigation",
+        "count": 3,
+        "rationale": "The words 'atlas', 'compass', and 'helmet' are all related to navigation, which is a safe clue that avoids direct matches with any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.9,
+          "pilot": 0.6,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor",
+          "pilot"
+        ],
+        "rationale": "'compass' is strongly related to navigation, 'sailor' and 'pilot' are professions involving navigation.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.9,
+          "pilot": 0.6,
+          "sailor": 0.7
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor",
+          "pilot"
+        ],
+        "rationale": "'compass' is strongly associated with navigation, 'sailor' and 'pilot' are professions involving navigation.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "compass": 0.9,
+          "pilot": 0.7,
+          "sailor": 0.8
+        },
+        "ranked_guesses": [
+          "compass",
+          "sailor",
+          "pilot"
+        ],
+        "rationale": "'compass' is strongly associated with navigation, 'sailor' and 'pilot' are professions involving navigation.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "compass"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "sailor"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 3,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-20260607-174341-m02",
+    "team_blue": "MiMo V2.5",
+    "team_red": "DeepSeek V3 0324",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "navigation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.9,
+              "pilot": 0.6,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor",
+              "pilot"
+            ],
+            "rationale": "'compass' is strongly related to navigation, 'sailor' and 'pilot' are professions involving navigation.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.9,
+              "pilot": 0.6,
+              "sailor": 0.7
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor",
+              "pilot"
+            ],
+            "rationale": "'compass' is strongly associated with navigation, 'sailor' and 'pilot' are professions involving navigation.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "compass": 0.9,
+              "pilot": 0.7,
+              "sailor": 0.8
+            },
+            "ranked_guesses": [
+              "compass",
+              "sailor",
+              "pilot"
+            ],
+            "rationale": "'compass' is strongly associated with navigation, 'sailor' and 'pilot' are professions involving navigation.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "compass"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "sailor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "navigation",
+          "count": 3,
+          "rationale": "The words 'atlas', 'compass', and 'helmet' are all related to navigation, which is a safe clue that avoids direct matches with any board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

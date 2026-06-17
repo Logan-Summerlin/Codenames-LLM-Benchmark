@@ -1,0 +1,1153 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    },
+    "revealed": [
+      "agent",
+      "anchor",
+      "atlas",
+      "mirror",
+      "station",
+      "travel",
+      "voyage",
+      "writer"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "atlas": "neutral",
+      "autumn": "red",
+      "baker": "neutral",
+      "beacon": "assassin",
+      "cloud": "red",
+      "copper": "red",
+      "desert": "blue",
+      "ember": "blue",
+      "flower": "neutral",
+      "galaxy": "neutral",
+      "honey": "blue",
+      "jungle": "red",
+      "machine": "blue",
+      "magnet": "red",
+      "mirror": "red",
+      "palace": "neutral",
+      "robot": "red",
+      "station": "blue",
+      "travel": "red",
+      "violin": "neutral",
+      "voyage": "red",
+      "wizard": "neutral",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "journey",
+        "count": 2,
+        "rationale": "Travel and voyage are synonyms for journey, and both are red words."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.9,
+          "voyage": 0.85
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Both 'travel' and 'voyage' are direct synonyms of the clue 'journey' and are likely the intended targets.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.5,
+          "atlas": 0.7,
+          "travel": 0.9,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage",
+          "atlas",
+          "anchor"
+        ],
+        "rationale": "Travel and voyage are direct synonyms of journey. Atlas is a map used for journeys. Anchor is related to sea journeys.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.95,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "Direct synonyms for journey.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "media",
+        "count": 4,
+        "rationale": "Connects agent, anchor, writer, station as media-related terms."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7,
+          "anchor": 0.9,
+          "station": 0.85,
+          "writer": 0.8
+        },
+        "ranked_guesses": [
+          "anchor",
+          "station",
+          "writer",
+          "agent"
+        ],
+        "rationale": "Anchor and station are directly related to media (news anchor, TV station). Writer is also associated (journalist). Agent could be a press agent. Other possibilities like mirror or beacon are weaker.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7,
+          "anchor": 0.9,
+          "station": 0.8,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "anchor",
+          "writer",
+          "station",
+          "agent"
+        ],
+        "rationale": "Anchor, writer, station, and agent are all closely tied to media (news anchor, journalist, TV station, press agent).",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "mirror": 0.6,
+          "station": 0.7,
+          "writer": 0.8
+        },
+        "ranked_guesses": [
+          "anchor",
+          "writer",
+          "station",
+          "mirror"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 3,
+        "rationale": "Connects copper, magnet, and robot, all of which are associated with metal."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "machine": 0.7,
+          "magnet": 0.8
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "machine"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "magnet": 0.8,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "robot"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.9,
+          "machine": 0.7,
+          "magnet": 0.8,
+          "robot": 0.6
+        },
+        "ranked_guesses": [
+          "copper",
+          "magnet",
+          "machine",
+          "robot"
+        ],
+        "rationale": "Copper is a metal, magnet is a metal, machine is often made of metal, robot is often made of metal. These are the strongest associations with the clue 'metal'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "heat",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.7,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember is directly heat-related; desert is associated with high heat. Other candidates like baker or beacon are less direct.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember is directly associated with heat (hot coal). Desert is also strongly associated with heat (hot climate). Both are unrevealed and likely Blue words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember and desert are strongly associated with heat, likely the intended words for the clue 'heat'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "trip",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.9,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.5,
+          "desert": 0.3,
+          "jungle": 0.2,
+          "travel": 0.9,
+          "voyage": 0.85
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage",
+          "atlas",
+          "desert",
+          "jungle"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "travel": 0.9,
+          "voyage": 0.9
+        },
+        "ranked_guesses": [
+          "travel",
+          "voyage"
+        ],
+        "rationale": "The clue 'trip' strongly suggests travel-related words. 'Travel' and 'voyage' are direct synonyms and are both on the board, not yet revealed. 'Atlas' is also travel-related but less direct; count is 2 so these two are the most likely.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "heat",
+        "count": 2,
+        "rationale": "Connects desert and ember; both are associated with high temperature. Avoids red words and assassin."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.9,
+          "ember": 0.95
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember is directly associated with heat (hot coal), and desert is a hot environment. Both are likely blue words. Other words like beacon or copper are less direct. We stop after two guesses as per the clue count.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.8,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember and desert are the strongest direct associations with heat among unrevealed words, considering previous clues and avoiding potential red words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.7,
+          "ember": 0.9
+        },
+        "ranked_guesses": [
+          "ember",
+          "desert"
+        ],
+        "rationale": "Ember directly refers to heat; desert is a hot environment.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "media"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "trip"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "travel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "atlas"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 24,
+    "public_event_count": 18,
+    "reason": null,
+    "seed": "2",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "journey"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.9,
+              "voyage": 0.85
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Both 'travel' and 'voyage' are direct synonyms of the clue 'journey' and are likely the intended targets.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.5,
+              "atlas": 0.7,
+              "travel": 0.9,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage",
+              "atlas",
+              "anchor"
+            ],
+            "rationale": "Travel and voyage are direct synonyms of journey. Atlas is a map used for journeys. Anchor is related to sea journeys.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.95,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "Direct synonyms for journey.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "journey",
+          "count": 2,
+          "rationale": "Travel and voyage are synonyms for journey, and both are red words."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "media"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.7,
+              "anchor": 0.9,
+              "station": 0.85,
+              "writer": 0.8
+            },
+            "ranked_guesses": [
+              "anchor",
+              "station",
+              "writer",
+              "agent"
+            ],
+            "rationale": "Anchor and station are directly related to media (news anchor, TV station). Writer is also associated (journalist). Agent could be a press agent. Other possibilities like mirror or beacon are weaker.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.7,
+              "anchor": 0.9,
+              "station": 0.8,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "anchor",
+              "writer",
+              "station",
+              "agent"
+            ],
+            "rationale": "Anchor, writer, station, and agent are all closely tied to media (news anchor, journalist, TV station, press agent).",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "mirror": 0.6,
+              "station": 0.7,
+              "writer": 0.8
+            },
+            "ranked_guesses": [
+              "anchor",
+              "writer",
+              "station",
+              "mirror"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "media",
+          "count": 4,
+          "rationale": "Connects agent, anchor, writer, station as media-related terms."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "machine": 0.7,
+              "magnet": 0.8
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "machine"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "magnet": 0.8,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "robot"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.9,
+              "machine": 0.7,
+              "magnet": 0.8,
+              "robot": 0.6
+            },
+            "ranked_guesses": [
+              "copper",
+              "magnet",
+              "machine",
+              "robot"
+            ],
+            "rationale": "Copper is a metal, magnet is a metal, machine is often made of metal, robot is often made of metal. These are the strongest associations with the clue 'metal'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 3,
+          "rationale": "Connects copper, magnet, and robot, all of which are associated with metal."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.7,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember is directly heat-related; desert is associated with high heat. Other candidates like baker or beacon are less direct.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember is directly associated with heat (hot coal). Desert is also strongly associated with heat (hot climate). Both are unrevealed and likely Blue words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember and desert are strongly associated with heat, likely the intended words for the clue 'heat'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "trip"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.9,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.5,
+              "desert": 0.3,
+              "jungle": 0.2,
+              "travel": 0.9,
+              "voyage": 0.85
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage",
+              "atlas",
+              "desert",
+              "jungle"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "travel": 0.9,
+              "voyage": 0.9
+            },
+            "ranked_guesses": [
+              "travel",
+              "voyage"
+            ],
+            "rationale": "The clue 'trip' strongly suggests travel-related words. 'Travel' and 'voyage' are direct synonyms and are both on the board, not yet revealed. 'Atlas' is also travel-related but less direct; count is 2 so these two are the most likely.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "travel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "atlas"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "trip",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.9,
+              "ember": 0.95
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember is directly associated with heat (hot coal), and desert is a hot environment. Both are likely blue words. Other words like beacon or copper are less direct. We stop after two guesses as per the clue count.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.8,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember and desert are the strongest direct associations with heat among unrevealed words, considering previous clues and avoiding potential red words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.7,
+              "ember": 0.9
+            },
+            "ranked_guesses": [
+              "ember",
+              "desert"
+            ],
+            "rationale": "Ember directly refers to heat; desert is a hot environment.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 2,
+          "rationale": "Connects desert and ember; both are associated with high temperature. Avoids red words and assassin."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    }
+  ]
+}

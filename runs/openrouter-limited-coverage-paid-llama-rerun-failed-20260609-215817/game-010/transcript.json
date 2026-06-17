@@ -1,0 +1,3394 @@
+{
+  "board": {
+    "identities": {
+      "centaur": "assassin",
+      "china": "blue",
+      "comic": "neutral",
+      "diamond": "blue",
+      "dinosaur": "red",
+      "egypt": "neutral",
+      "ice cream": "blue",
+      "ivory": "neutral",
+      "knight": "red",
+      "mine": "neutral",
+      "missile": "blue",
+      "phoenix": "red",
+      "pin": "red",
+      "pipe": "blue",
+      "plot": "blue",
+      "pyramid": "red",
+      "rabbit": "blue",
+      "strike": "red",
+      "tap": "neutral",
+      "tie": "red",
+      "train": "red",
+      "trip": "neutral",
+      "vacuum": "blue",
+      "washer": "red",
+      "washington": "neutral"
+    },
+    "revealed": [
+      "centaur",
+      "china",
+      "diamond",
+      "ice cream",
+      "missile",
+      "phoenix",
+      "pin",
+      "train",
+      "vacuum"
+    ],
+    "words": {
+      "centaur": "assassin",
+      "china": "blue",
+      "comic": "neutral",
+      "diamond": "blue",
+      "dinosaur": "red",
+      "egypt": "neutral",
+      "ice cream": "blue",
+      "ivory": "neutral",
+      "knight": "red",
+      "mine": "neutral",
+      "missile": "blue",
+      "phoenix": "red",
+      "pin": "red",
+      "pipe": "blue",
+      "plot": "blue",
+      "pyramid": "red",
+      "rabbit": "blue",
+      "strike": "red",
+      "tap": "neutral",
+      "tie": "red",
+      "train": "red",
+      "trip": "neutral",
+      "vacuum": "blue",
+      "washer": "red",
+      "washington": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "knight",
+        "count": 2,
+        "rationale": "The word 'knight' is on the board, and it is a red word. Giving a clue related to 'knight' would allow the red team to potentially reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "'Flight' connects to 'airplane' concepts, hinting at 'missile' (blue) and 'plane' (blue, via 'china' as in 'china plate' but not direct; better: 'flight' hints at 'air' and 'travel', linking to 'trip' (neutral) and 'train' (red) but avoiding assassin. Actually, 'flight' hints at 'bird' (phoenix is red, but avoid). Better: 'flight' hints at 'aircraft' which is 'missile' (blue) and 'plane' (blue via 'china' not direct). Wait, 'flight' can hint at 'escape' or 'run', but 'rabbit' (blue) runs. So 'flight' hints at 'rabbit' (blue) and 'missile' (blue)."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "train": 0.7,
+          "trip": 0.6,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "vacuum"
+        ],
+        "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related travel words, 'vacuum' could relate to flight in space context, but all are speculative.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pin": 0.5,
+          "train": 0.7,
+          "trip": 0.6
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "pin"
+        ],
+        "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related travel words, 'pin' could be a flight pin or badge.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "missile": 0.5,
+          "train": 0.7,
+          "trip": 0.6
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "missile"
+        ],
+        "rationale": "'Flight' suggests air travel or movement; 'train' and 'trip' are related to travel, while 'missile' can be associated with flight paths.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "battle",
+        "count": 2,
+        "rationale": "The words 'knight', 'strike', 'pin', and 'washer' are all related to the concept of battle, so a clue of 'battle' could allow the red team to reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8,
+          "missile": 0.6,
+          "strike": 0.7
+        },
+        "ranked_guesses": [
+          "strike",
+          "missile",
+          "battle"
+        ],
+        "rationale": "The clue 'battle' with a count of 2 suggests that the guesser should look for words related to battle or combat. 'Strike', 'missile', and 'battle' seem like the most relevant guesses.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "missile": 0.8,
+          "strike": 0.7
+        },
+        "ranked_guesses": [
+          "missile",
+          "strike"
+        ],
+        "rationale": "The clue 'battle' could refer to a missile or a strike, which are both military-related words on the board.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "missile": 0.8,
+          "strike": 0.7,
+          "tap": 0.6
+        },
+        "ranked_guesses": [
+          "missile",
+          "strike",
+          "tap"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, so I should look for words related to battle or combat on the board. 'Missile', 'strike', and 'tap' seem like good guesses that fit the clue.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "The clue 'flight' connects to 'airplane' themes, hinting at 'missile' (already revealed) and 'plane' related words like 'strike' (red) or 'rabbit' (blue), but focusing on blue words 'missile' and 'rabbit' without directly naming board words."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "strike": 0.5,
+          "train": 0.7,
+          "trip": 0.6
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "strike"
+        ],
+        "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related travel words, 'strike' could be a flight strike. No obvious red/bystander words match perfectly.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "train": 0.7,
+          "trip": 0.6,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "vacuum"
+        ],
+        "rationale": "'Flight' suggests travel or movement; 'train' and 'trip' are direct travel-related words, while 'vacuum' could relate to air travel (vacuum tubes/airplanes).",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plane": 0.6,
+          "train": 0.7,
+          "trip": 0.65
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "plane"
+        ],
+        "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related to journeys, and 'plane' is a direct synonym, but none are on the board, so I'm guessing the closest thematic words.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "strike",
+        "count": 2,
+        "rationale": "The word 'strike' is on the board and is a red word. Giving a clue related to 'strike' would allow the red team to potentially reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The clue 'aviation' connects to 'missile' (already revealed blue) and 'plane' (related to 'train' and 'trip'), but avoids direct board words and targets a remaining blue word like 'rabbit' (associated with flight) or 'pipe' (as in pipeline), while staying safe from assassin 'centaur'."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airplane": 0.6,
+          "flight": 0.65,
+          "plane": 0.7
+        },
+        "ranked_guesses": [
+          "plane",
+          "flight",
+          "airplane"
+        ],
+        "rationale": "Clue 'aviation' with count 1 suggests a single related word; 'plane' is a direct synonym, 'flight' and 'airplane' are closely associated, and none are revealed yet.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.7,
+          "train": 0.6,
+          "trip": 0.5
+        },
+        "ranked_guesses": [
+          "flight",
+          "train",
+          "trip"
+        ],
+        "rationale": "Clue 'aviation' with count 1 suggests a single word related to flight; 'flight' is a direct match, 'train' and 'trip' are related travel terms, but 'flight' is most confident.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.5,
+          "china": 0.5,
+          "comic": 0.5,
+          "diamond": 0.5,
+          "dinosaur": 0.5,
+          "egypt": 0.5,
+          "ice cream": 0.5,
+          "ivory": 0.5,
+          "knight": 0.5,
+          "mine": 0.5,
+          "phoenix": 0.5,
+          "pin": 0.5,
+          "pipe": 0.5,
+          "plot": 0.5,
+          "pyramid": 0.5,
+          "rabbit": 0.5,
+          "strike": 0.5,
+          "tap": 0.5,
+          "tie": 0.5,
+          "train": 0.5,
+          "trip": 0.5,
+          "vacuum": 0.5,
+          "washer": 0.5,
+          "washington": 0.5
+        },
+        "ranked_guesses": [
+          "centaur",
+          "china",
+          "comic",
+          "diamond",
+          "dinosaur",
+          "egypt",
+          "ice cream",
+          "ivory",
+          "knight",
+          "mine",
+          "phoenix",
+          "pin",
+          "pipe",
+          "plot",
+          "pyramid",
+          "rabbit",
+          "strike",
+          "tap",
+          "tie",
+          "train",
+          "trip",
+          "vacuum",
+          "washer",
+          "washington"
+        ],
+        "rationale": "Clue 'aviation' relates to flight/aircraft; no direct matches on board, so guess any unrevealed word with low confidence.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "The word 'flight' is related to the revealed 'missile' word, and could help the blue team reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "train": 0.7,
+          "trip": 0.6,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "vacuum"
+        ],
+        "rationale": "The clue 'flight' suggests words related to travel or transportation. 'Train', 'trip', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "train": 0.8,
+          "trip": 0.7,
+          "vacuum": 0.6
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "vacuum"
+        ],
+        "rationale": "The clue 'flight' suggests words related to travel or transportation. 'Train', 'trip', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "train": 0.7,
+          "trip": 0.6,
+          "vacuum": 0.5
+        },
+        "ranked_guesses": [
+          "train",
+          "trip",
+          "vacuum"
+        ],
+        "rationale": "The clue 'flight' suggests words related to travel or transportation. 'Train', 'trip', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The hint 'aviation' connects to 'missile' (blue) and 'plane' concepts, but only 'missile' is unrevealed blue; other aviation-related words like 'strike' (red) and 'train' (red) are already revealed or dangerous, so count 1 is safe."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.6,
+          "ice cream": 0.7,
+          "pin": 0.3,
+          "vacuum": 0.5,
+          "washer": 0.4
+        },
+        "ranked_guesses": [
+          "ice cream",
+          "diamond",
+          "vacuum",
+          "washer",
+          "pin"
+        ],
+        "rationale": "Aviation relates to flight; 'ice cream' is a common Codenames association with 'flight' (ice cream truck), and other words like diamond (jewel), vacuum (air), washer (laundry) are less direct but plausible.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.6,
+          "ice cream": 0.7,
+          "pin": 0.3,
+          "vacuum": 0.5,
+          "washer": 0.4
+        },
+        "ranked_guesses": [
+          "ice cream",
+          "diamond",
+          "vacuum",
+          "washer",
+          "pin"
+        ],
+        "rationale": "Aviation relates to flight; 'ice cream' is a frozen treat (cold like high altitude), 'diamond' is hard (like aircraft materials), 'vacuum' relates to space/air, 'washer' could be a part, 'pin' is a fastener; none are direct but best fits among unrevealed words.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.6,
+          "ice cream": 0.7,
+          "pin": 0.3,
+          "vacuum": 0.5,
+          "washer": 0.4
+        },
+        "ranked_guesses": [
+          "ice cream",
+          "diamond",
+          "vacuum",
+          "washer",
+          "pin"
+        ],
+        "rationale": "Aviation clue suggests sky/air-related words; 'ice cream' (clouds), 'diamond' (sky), 'vacuum' (space), 'washer' (laundry), 'pin' (aviation pin) are plausible but not direct matches; no obvious single word fits perfectly, so ranking based on loose associations.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "The words 'missile' and 'train' have already been revealed, and they are both transportation-related words. Giving a clue related to 'flight' could allow the blue team to reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.6,
+          "plane": 0.8,
+          "wing": 0.7
+        },
+        "ranked_guesses": [
+          "plane",
+          "wing",
+          "air"
+        ],
+        "rationale": "The clue 'flight' has been given multiple times, so words related to aviation or flight are likely good guesses.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pin": 0.7,
+          "tap": 0.6,
+          "vacuum": 0.8
+        },
+        "ranked_guesses": [
+          "vacuum",
+          "pin",
+          "tap"
+        ],
+        "rationale": "The clue 'flight' suggests words related to aviation, so I'm guessing 'vacuum' (as in airplane vacuum), 'pin' (as in pilot's wings), and 'tap' (as in airplane tapping).",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pin": 0.8,
+          "tap": 0.7,
+          "vacuum": 0.6
+        },
+        "ranked_guesses": [
+          "pin",
+          "tap",
+          "vacuum"
+        ],
+        "rationale": "The clue 'flight' with a count of 2 suggests words related to aviation or travel. 'Pin', 'tap', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The hint 'aviation' connects to 'missile' and 'aircraft' themes, but only 'missile' is revealed blue; other blue words like 'diamond' and 'pipe' are not directly related, so a count of 1 is safe to avoid assassin or red words."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.6,
+          "egypt": 0.5,
+          "ice cream": 0.7
+        },
+        "ranked_guesses": [
+          "ice cream",
+          "diamond",
+          "egypt"
+        ],
+        "rationale": "Clue 'aviation' count 1 suggests one related word; 'ice cream' could be a stretch for 'flight' (ice cream flight?), 'diamond' for 'aviation' (jewel?), 'egypt' for 'pyramid' (aviation history?); no strong matches, but guessing to use remaining guesses.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.6
+        },
+        "ranked_guesses": [
+          "centaur"
+        ],
+        "rationale": "Clue 'aviation' suggests air-related words; 'centaur' is the only remaining word that could loosely relate to flight/mythology, but confidence is low due to ambiguity.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "aviation": 0.9
+        },
+        "ranked_guesses": [
+          "aviation"
+        ],
+        "rationale": "Clue 'aviation' count 1, board has 'aviation' not revealed, likely target.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "The word 'flight' is related to the 'aviation' clue given by the blue team, and it does not directly match any words currently on the board."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.9
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "The active clue is 'flight' with a count of 2, and the board contains words related to aviation like 'missile', 'train', and 'vacuum'. The clue seems to be pointing to words related to flight or aviation.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.9
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "The active clue is 'flight' with a count of 2, and the board contains words related to aviation like 'missile', 'train', and 'vacuum'. The red team has already guessed 'train' and 'pin' successfully, so 'flight' seems like a strong next guess.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.9
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "The active clue is 'flight' with a count of 2, and the team is red. The words 'train' and 'pin' have already been revealed as red words, so 'flight' is likely a good guess for the red team.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The hint 'aviation' connects to 'missile' (blue) and 'plane' concepts, but 'plane' is not on the board; it avoids direct board words and targets a remaining blue word like 'diamond' or 'rabbit' through association."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "'Aviation' clue count 1 suggests a single word; 'diamond' is a known aviation term (diamond formation) and is unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.4,
+          "china": 0.5,
+          "comic": 0.4,
+          "diamond": 0.6,
+          "dinosaur": 0.4,
+          "egypt": 0.5,
+          "ice cream": 0.7,
+          "ivory": 0.3,
+          "knight": 0.3,
+          "mine": 0.3,
+          "phoenix": 0.3,
+          "pipe": 0.3,
+          "plot": 0.3,
+          "pyramid": 0.3,
+          "rabbit": 0.3,
+          "strike": 0.3,
+          "tap": 0.3,
+          "tie": 0.3,
+          "trip": 0.3,
+          "washer": 0.3,
+          "washington": 0.3
+        },
+        "ranked_guesses": [
+          "ice cream",
+          "diamond",
+          "egypt",
+          "china",
+          "comic",
+          "centaur",
+          "dinosaur",
+          "ivory",
+          "knight",
+          "mine",
+          "phoenix",
+          "pipe",
+          "plot",
+          "pyramid",
+          "rabbit",
+          "strike",
+          "tap",
+          "tie",
+          "trip",
+          "washer",
+          "washington"
+        ],
+        "rationale": "Clue 'aviation' count 1 suggests one related word. 'Ice cream' is a common association with aviation (airlines serve it), and it's unrevealed. Other words like 'diamond' or 'egypt' have weaker links. Prioritizing plausible thematic matches.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ice cream": 0.7
+        },
+        "ranked_guesses": [
+          "ice cream"
+        ],
+        "rationale": "'Aviation' clue count 1; 'ice cream' is unrevealed and could relate to flight (airlines serve ice cream) or be a neutral guess.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "battle",
+        "count": 2,
+        "rationale": "The word 'battle' is not on the board, and it is related to the red team's words 'knight', 'strike', and 'tie'. Giving this clue would allow the red team to potentially reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.8,
+          "dinosaur": 0.7,
+          "egypt": 0.6,
+          "pyramid": 0.5
+        },
+        "ranked_guesses": [
+          "diamond",
+          "dinosaur",
+          "egypt",
+          "pyramid"
+        ],
+        "rationale": "The clue 'battle' with a count of 2 suggests words related to war, conflict, or ancient civilizations. Words like 'diamond', 'dinosaur', 'egypt', and 'pyramid' seem plausible guesses.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Given the history of the game, this seems like a reasonable guess to make.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the board state, the most likely red word that fits this clue is 'battle'.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The hint 'aviation' connects to 'missile' and 'ice cream' (both blue and already revealed), but more importantly, it can guide the team to 'rabbit' (blue) and 'diamond' (blue) without touching the assassin or other teams' words."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "china": 0.7
+        },
+        "ranked_guesses": [
+          "china"
+        ],
+        "rationale": "Aviation relates to flight; 'china' is a homophone for 'china' (porcelain) but also a country known for aviation manufacturing, and it's unrevealed and likely a blue word given the context.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Aviation relates to flight; 'diamond' is a gem often associated with luxury aviation or jets, and it's unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "china": 0.7,
+          "diamond": 0.6,
+          "egypt": 0.5,
+          "pyramid": 0.4,
+          "washington": 0.3
+        },
+        "ranked_guesses": [
+          "china",
+          "diamond",
+          "egypt",
+          "pyramid",
+          "washington"
+        ],
+        "rationale": "Aviation clue suggests travel/flight; unrevealed words like china, diamond, egypt, pyramid, washington relate to destinations or landmarks, with china and diamond having highest association to flight/travel.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "battle",
+        "count": 2,
+        "rationale": "The word 'battle' is related to the red team's words 'knight', 'strike', 'tie', and 'washer' on the board, and would allow the red team to potentially reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.9
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the revealed words on the board, 'battle' seems like a strong guess that could reveal more red words.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the words already revealed, 'battle' seems like a reasonable guess that could reveal more red words.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the revealed words on the board, 'battle' seems like a reasonable guess that could potentially reveal more red words.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The hint 'aviation' connects to blue words like 'missile' and 'ice cream' without containing any board words, and it's safe from the assassin 'centaur'."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Aviation relates to flight; diamond is a gem often associated with luxury aviation or as a metaphor for clarity in flight paths; other words like centaur, dinosaur, egypt are less directly related.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Aviation relates to flight; diamond is a gem often associated with aircraft instruments or luxury travel, and it's unrevealed and likely blue.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Aviation relates to flight and aircraft; diamond is a gem often associated with luxury travel or aviation themes, and it's unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": "The word 'flight' is related to the 'aviation' clue given by the blue team, and it could help the red team reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.9
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "The active clue is 'flight' with a count of 2, and the board contains words like 'train', 'pin', and 'vacuum' which are related to the concept of 'flight'. Therefore, 'flight' is the most likely guess.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.9
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "The clue 'flight' has been given multiple times, and the revealed words 'train' and 'pin' are related to the theme of 'flight'. Therefore, I am confident that 'flight' is a good guess.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.8
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "The active clue is 'flight' with a count of 2, and the board contains several words related to flight like 'train', 'pin', and 'vacuum'. This suggests that 'flight' is a good clue to try and guess more of the red team's words.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The word 'aviation' is not on the board and connects to multiple unrevealed blue words like 'diamond' and 'rabbit' (associated with flight/air), while avoiding the assassin 'centaur' and red words."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.7
+        },
+        "ranked_guesses": [
+          "phoenix"
+        ],
+        "rationale": "Aviation relates to flight; phoenix is a mythical bird associated with flight and is unrevealed.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Aviation relates to flight and aircraft; 'diamond' is a gem that could metaphorically link to 'aviation' via 'diamond formation' in flying, and it's an unrevealed blue word.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond"
+        ],
+        "rationale": "Aviation relates to flight; 'diamond' is a gem that could be associated with 'flight' as a metaphor or in aviation contexts (e.g., diamond formation). It's unrevealed and not a known red/blue word.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "battle",
+        "count": 2,
+        "rationale": "The word 'battle' is related to the red team's words 'knight', 'strike', 'tie', and 'washer' on the board. Giving this clue would allow the red team to potentially reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests that a word related to 'battle' is likely to be a red word on the board. Since the guesses remaining is 3, it makes sense to guess a word related to 'battle' as the next guess.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Given the revealed identities, 'battle' seems like a reasonable guess that could potentially reveal more red words.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Since the board has revealed several blue words, the red team may be trying to find more of their own words to gain an advantage.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "The hint 'aviation' connects to blue words like 'missile' and 'ice cream' without containing any board words or substrings, and it's safe from the assassin 'centaur'."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.6
+        },
+        "ranked_guesses": [
+          "centaur"
+        ],
+        "rationale": "Aviation clue count 1 suggests one related word; 'centaur' is unrevealed and could metaphorically link to flight/mythical creatures, while avoiding known red/blue words.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flight": 0.7
+        },
+        "ranked_guesses": [
+          "flight"
+        ],
+        "rationale": "Clue 'aviation' count 1; 'flight' is a direct synonym and not revealed, while other words like 'plane' or 'pilot' are not on board.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7
+        },
+        "ranked_guesses": [
+          "centaur"
+        ],
+        "rationale": "Aviation relates to flight; centaur is a mythical creature often associated with sky/flight in some contexts, and it's unrevealed and likely blue.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "battle",
+        "count": 2,
+        "rationale": "The word 'battle' is related to the red team's words 'knight', 'strike', 'tie', and 'washer' on the board. Giving this clue would allow the red team to potentially reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.9
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests that 'battle' is likely a relevant word on the board. The red team has already guessed 'pin', 'train', and 'vacuum' successfully, so 'battle' seems like a reasonable next guess.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.9
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Since the red team has already revealed 'pin' and 'train', 'battle' seems like a strong guess that could reveal additional red words.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, and the red team has revealed the words 'pin' and 'train' which are related to battle. Therefore, 'battle' is the most likely next guess for the red team.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "Blue team needs to reveal 3 more words; 'aviation' connects to 'missile' and 'plane' concepts without matching any board words, and count 1 is safe to avoid assassin."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.7
+        },
+        "ranked_guesses": [
+          "phoenix"
+        ],
+        "rationale": "Aviation suggests flight; phoenix is a mythical bird associated with flight and is unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "phoenix": 0.7
+        },
+        "ranked_guesses": [
+          "phoenix"
+        ],
+        "rationale": "Clue 'aviation' likely relates to flying; 'phoenix' is a mythical bird that flies, and is unrevealed on the board.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7
+        },
+        "ranked_guesses": [
+          "centaur"
+        ],
+        "rationale": "Aviation relates to flight; centaur is a mythical creature often associated with sky or flight in some contexts, and it's unrevealed and not a known red word.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "battle",
+        "count": 2,
+        "rationale": "The word 'battle' is related to the red team's words 'knight', 'strike', and 'pyramid', which have not yet been revealed. Giving a clue related to 'battle' could help the red team reveal more of their words."
+      },
+      "agent_id": "Claude 3 Haiku-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.8
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, and the red team has not yet revealed any words related to 'battle'. This suggests that 'battle' is a promising guess for the red team.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.9
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Given the history of the game, the red team has already revealed some military-related words like 'missile' and 'pin', so 'battle' seems like a reasonable next guess.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battle": 0.9
+        },
+        "ranked_guesses": [
+          "battle"
+        ],
+        "rationale": "The active clue is 'battle' with a count of 2, and the red team has revealed the words 'phoenix', 'pin', and 'train' so far. The word 'battle' is likely to be a red word that the red team is trying to reveal.",
+        "stop": false
+      },
+      "agent_id": "Claude 3 Haiku-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "aviation",
+        "count": 1,
+        "rationale": "Blue team has 3 hidden words left: pipe, plot, rabbit. 'Aviation' connects to 'pipe' (as in pipeline), 'plot' (as in storyline), and 'rabbit' (as in rabbit ears for antennas), but is not a board word and avoids the assassin."
+      },
+      "agent_id": "MiMo V2 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7
+        },
+        "ranked_guesses": [
+          "centaur"
+        ],
+        "rationale": "Clue 'aviation' likely relates to flying/aircraft; 'centaur' is the only unrevealed word that could metaphorically relate (mythical creature, not directly aviation but best remaining fit).",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plane": 0.75
+        },
+        "ranked_guesses": [
+          "plane"
+        ],
+        "rationale": "Clue 'aviation' with count 1; 'plane' is a direct synonym, not revealed, and not a known assassin or red word.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "centaur": 0.7
+        },
+        "ranked_guesses": [
+          "centaur"
+        ],
+        "rationale": "Aviation clue count 1, centaur is unrevealed and could relate to mythical flight, while other words like comic or dinosaur are less directly connected.",
+        "stop": false
+      },
+      "agent_id": "MiMo V2 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "clue": "knight",
+        "count": 2,
+        "rationale": "The word 'knight' is on the board, and it is a red word. Giving a clue related to 'knight' would allow the red team to potentially reveal more of their words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "knight",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "missile"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "strike",
+        "count": 2,
+        "rationale": "The word 'strike' is on the board and is a red word. Giving a clue related to 'strike' would allow the red team to potentially reveal more of their words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "strike",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "train"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pin"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "vacuum"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ice cream"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "china"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "diamond"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "phoenix"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "blue",
+      "terminal": true,
+      "winner": "red",
+      "word": "centaur"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 90,
+    "public_event_count": 51,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-010-anthropic_claude_3_haiku-vs-xiaomi_mimo_v2_flash",
+    "team_blue": "MiMo V2 Flash",
+    "team_red": "Claude 3 Haiku",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "missile"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "knight",
+          "count": 2,
+          "rationale": "The word 'knight' is on the board, and it is a red word. Giving a clue related to 'knight' would allow the red team to potentially reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "train": 0.7,
+              "trip": 0.6,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "vacuum"
+            ],
+            "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related travel words, 'vacuum' could relate to flight in space context, but all are speculative.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pin": 0.5,
+              "train": 0.7,
+              "trip": 0.6
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "pin"
+            ],
+            "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related travel words, 'pin' could be a flight pin or badge.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "missile": 0.5,
+              "train": 0.7,
+              "trip": 0.6
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "missile"
+            ],
+            "rationale": "'Flight' suggests air travel or movement; 'train' and 'trip' are related to travel, while 'missile' can be associated with flight paths.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "'Flight' connects to 'airplane' concepts, hinting at 'missile' (blue) and 'plane' (blue, via 'china' as in 'china plate' but not direct; better: 'flight' hints at 'air' and 'travel', linking to 'trip' (neutral) and 'train' (red) but avoiding assassin. Actually, 'flight' hints at 'bird' (phoenix is red, but avoid). Better: 'flight' hints at 'aircraft' which is 'missile' (blue) and 'plane' (blue via 'china' not direct). Wait, 'flight' can hint at 'escape' or 'run', but 'rabbit' (blue) runs. So 'flight' hints at 'rabbit' (blue) and 'missile' (blue)."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [],
+      "reveals": [],
+      "spymaster_action": null,
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8,
+              "missile": 0.6,
+              "strike": 0.7
+            },
+            "ranked_guesses": [
+              "strike",
+              "missile",
+              "battle"
+            ],
+            "rationale": "The clue 'battle' with a count of 2 suggests that the guesser should look for words related to battle or combat. 'Strike', 'missile', and 'battle' seem like the most relevant guesses.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "missile": 0.8,
+              "strike": 0.7
+            },
+            "ranked_guesses": [
+              "missile",
+              "strike"
+            ],
+            "rationale": "The clue 'battle' could refer to a missile or a strike, which are both military-related words on the board.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "missile": 0.8,
+              "strike": 0.7,
+              "tap": 0.6
+            },
+            "ranked_guesses": [
+              "missile",
+              "strike",
+              "tap"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, so I should look for words related to battle or combat on the board. 'Missile', 'strike', and 'tap' seem like good guesses that fit the clue.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "train"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "battle",
+          "count": 2,
+          "rationale": "The words 'knight', 'strike', 'pin', and 'washer' are all related to the concept of battle, so a clue of 'battle' could allow the red team to reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "strike": 0.5,
+              "train": 0.7,
+              "trip": 0.6
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "strike"
+            ],
+            "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related travel words, 'strike' could be a flight strike. No obvious red/bystander words match perfectly.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "train": 0.7,
+              "trip": 0.6,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "vacuum"
+            ],
+            "rationale": "'Flight' suggests travel or movement; 'train' and 'trip' are direct travel-related words, while 'vacuum' could relate to air travel (vacuum tubes/airplanes).",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "plane": 0.6,
+              "train": 0.7,
+              "trip": 0.65
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "plane"
+            ],
+            "rationale": "'Flight' suggests air travel; 'train' and 'trip' are related to journeys, and 'plane' is a direct synonym, but none are on the board, so I'm guessing the closest thematic words.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "The clue 'flight' connects to 'airplane' themes, hinting at 'missile' (already revealed) and 'plane' related words like 'strike' (red) or 'rabbit' (blue), but focusing on blue words 'missile' and 'rabbit' without directly naming board words."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pin"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "vacuum"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "strike",
+          "count": 2,
+          "rationale": "The word 'strike' is on the board and is a red word. Giving a clue related to 'strike' would allow the red team to potentially reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airplane": 0.6,
+              "flight": 0.65,
+              "plane": 0.7
+            },
+            "ranked_guesses": [
+              "plane",
+              "flight",
+              "airplane"
+            ],
+            "rationale": "Clue 'aviation' with count 1 suggests a single related word; 'plane' is a direct synonym, 'flight' and 'airplane' are closely associated, and none are revealed yet.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.7,
+              "train": 0.6,
+              "trip": 0.5
+            },
+            "ranked_guesses": [
+              "flight",
+              "train",
+              "trip"
+            ],
+            "rationale": "Clue 'aviation' with count 1 suggests a single word related to flight; 'flight' is a direct match, 'train' and 'trip' are related travel terms, but 'flight' is most confident.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.5,
+              "china": 0.5,
+              "comic": 0.5,
+              "diamond": 0.5,
+              "dinosaur": 0.5,
+              "egypt": 0.5,
+              "ice cream": 0.5,
+              "ivory": 0.5,
+              "knight": 0.5,
+              "mine": 0.5,
+              "phoenix": 0.5,
+              "pin": 0.5,
+              "pipe": 0.5,
+              "plot": 0.5,
+              "pyramid": 0.5,
+              "rabbit": 0.5,
+              "strike": 0.5,
+              "tap": 0.5,
+              "tie": 0.5,
+              "train": 0.5,
+              "trip": 0.5,
+              "vacuum": 0.5,
+              "washer": 0.5,
+              "washington": 0.5
+            },
+            "ranked_guesses": [
+              "centaur",
+              "china",
+              "comic",
+              "diamond",
+              "dinosaur",
+              "egypt",
+              "ice cream",
+              "ivory",
+              "knight",
+              "mine",
+              "phoenix",
+              "pin",
+              "pipe",
+              "plot",
+              "pyramid",
+              "rabbit",
+              "strike",
+              "tap",
+              "tie",
+              "train",
+              "trip",
+              "vacuum",
+              "washer",
+              "washington"
+            ],
+            "rationale": "Clue 'aviation' relates to flight/aircraft; no direct matches on board, so guess any unrevealed word with low confidence.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The clue 'aviation' connects to 'missile' (already revealed blue) and 'plane' (related to 'train' and 'trip'), but avoids direct board words and targets a remaining blue word like 'rabbit' (associated with flight) or 'pipe' (as in pipeline), while staying safe from assassin 'centaur'."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "train": 0.7,
+              "trip": 0.6,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "vacuum"
+            ],
+            "rationale": "The clue 'flight' suggests words related to travel or transportation. 'Train', 'trip', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "train": 0.8,
+              "trip": 0.7,
+              "vacuum": 0.6
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "vacuum"
+            ],
+            "rationale": "The clue 'flight' suggests words related to travel or transportation. 'Train', 'trip', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "train": 0.7,
+              "trip": 0.6,
+              "vacuum": 0.5
+            },
+            "ranked_guesses": [
+              "train",
+              "trip",
+              "vacuum"
+            ],
+            "rationale": "The clue 'flight' suggests words related to travel or transportation. 'Train', 'trip', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "The word 'flight' is related to the revealed 'missile' word, and could help the blue team reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.6,
+              "ice cream": 0.7,
+              "pin": 0.3,
+              "vacuum": 0.5,
+              "washer": 0.4
+            },
+            "ranked_guesses": [
+              "ice cream",
+              "diamond",
+              "vacuum",
+              "washer",
+              "pin"
+            ],
+            "rationale": "Aviation relates to flight; 'ice cream' is a common Codenames association with 'flight' (ice cream truck), and other words like diamond (jewel), vacuum (air), washer (laundry) are less direct but plausible.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.6,
+              "ice cream": 0.7,
+              "pin": 0.3,
+              "vacuum": 0.5,
+              "washer": 0.4
+            },
+            "ranked_guesses": [
+              "ice cream",
+              "diamond",
+              "vacuum",
+              "washer",
+              "pin"
+            ],
+            "rationale": "Aviation relates to flight; 'ice cream' is a frozen treat (cold like high altitude), 'diamond' is hard (like aircraft materials), 'vacuum' relates to space/air, 'washer' could be a part, 'pin' is a fastener; none are direct but best fits among unrevealed words.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.6,
+              "ice cream": 0.7,
+              "pin": 0.3,
+              "vacuum": 0.5,
+              "washer": 0.4
+            },
+            "ranked_guesses": [
+              "ice cream",
+              "diamond",
+              "vacuum",
+              "washer",
+              "pin"
+            ],
+            "rationale": "Aviation clue suggests sky/air-related words; 'ice cream' (clouds), 'diamond' (sky), 'vacuum' (space), 'washer' (laundry), 'pin' (aviation pin) are plausible but not direct matches; no obvious single word fits perfectly, so ranking based on loose associations.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ice cream"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The hint 'aviation' connects to 'missile' (blue) and 'plane' concepts, but only 'missile' is unrevealed blue; other aviation-related words like 'strike' (red) and 'train' (red) are already revealed or dangerous, so count 1 is safe."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.6,
+              "plane": 0.8,
+              "wing": 0.7
+            },
+            "ranked_guesses": [
+              "plane",
+              "wing",
+              "air"
+            ],
+            "rationale": "The clue 'flight' has been given multiple times, so words related to aviation or flight are likely good guesses.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pin": 0.7,
+              "tap": 0.6,
+              "vacuum": 0.8
+            },
+            "ranked_guesses": [
+              "vacuum",
+              "pin",
+              "tap"
+            ],
+            "rationale": "The clue 'flight' suggests words related to aviation, so I'm guessing 'vacuum' (as in airplane vacuum), 'pin' (as in pilot's wings), and 'tap' (as in airplane tapping).",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pin": 0.8,
+              "tap": 0.7,
+              "vacuum": 0.6
+            },
+            "ranked_guesses": [
+              "pin",
+              "tap",
+              "vacuum"
+            ],
+            "rationale": "The clue 'flight' with a count of 2 suggests words related to aviation or travel. 'Pin', 'tap', and 'vacuum' seem like reasonable guesses that could be related to the clue.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "The words 'missile' and 'train' have already been revealed, and they are both transportation-related words. Giving a clue related to 'flight' could allow the blue team to reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.6,
+              "egypt": 0.5,
+              "ice cream": 0.7
+            },
+            "ranked_guesses": [
+              "ice cream",
+              "diamond",
+              "egypt"
+            ],
+            "rationale": "Clue 'aviation' count 1 suggests one related word; 'ice cream' could be a stretch for 'flight' (ice cream flight?), 'diamond' for 'aviation' (jewel?), 'egypt' for 'pyramid' (aviation history?); no strong matches, but guessing to use remaining guesses.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.6
+            },
+            "ranked_guesses": [
+              "centaur"
+            ],
+            "rationale": "Clue 'aviation' suggests air-related words; 'centaur' is the only remaining word that could loosely relate to flight/mythology, but confidence is low due to ambiguity.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "aviation": 0.9
+            },
+            "ranked_guesses": [
+              "aviation"
+            ],
+            "rationale": "Clue 'aviation' count 1, board has 'aviation' not revealed, likely target.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "china"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The hint 'aviation' connects to 'missile' and 'aircraft' themes, but only 'missile' is revealed blue; other blue words like 'diamond' and 'pipe' are not directly related, so a count of 1 is safe to avoid assassin or red words."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.9
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "The active clue is 'flight' with a count of 2, and the board contains words related to aviation like 'missile', 'train', and 'vacuum'. The clue seems to be pointing to words related to flight or aviation.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.9
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "The active clue is 'flight' with a count of 2, and the board contains words related to aviation like 'missile', 'train', and 'vacuum'. The red team has already guessed 'train' and 'pin' successfully, so 'flight' seems like a strong next guess.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.9
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "The active clue is 'flight' with a count of 2, and the team is red. The words 'train' and 'pin' have already been revealed as red words, so 'flight' is likely a good guess for the red team.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "The word 'flight' is related to the 'aviation' clue given by the blue team, and it does not directly match any words currently on the board."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "'Aviation' clue count 1 suggests a single word; 'diamond' is a known aviation term (diamond formation) and is unrevealed on the board.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.4,
+              "china": 0.5,
+              "comic": 0.4,
+              "diamond": 0.6,
+              "dinosaur": 0.4,
+              "egypt": 0.5,
+              "ice cream": 0.7,
+              "ivory": 0.3,
+              "knight": 0.3,
+              "mine": 0.3,
+              "phoenix": 0.3,
+              "pipe": 0.3,
+              "plot": 0.3,
+              "pyramid": 0.3,
+              "rabbit": 0.3,
+              "strike": 0.3,
+              "tap": 0.3,
+              "tie": 0.3,
+              "trip": 0.3,
+              "washer": 0.3,
+              "washington": 0.3
+            },
+            "ranked_guesses": [
+              "ice cream",
+              "diamond",
+              "egypt",
+              "china",
+              "comic",
+              "centaur",
+              "dinosaur",
+              "ivory",
+              "knight",
+              "mine",
+              "phoenix",
+              "pipe",
+              "plot",
+              "pyramid",
+              "rabbit",
+              "strike",
+              "tap",
+              "tie",
+              "trip",
+              "washer",
+              "washington"
+            ],
+            "rationale": "Clue 'aviation' count 1 suggests one related word. 'Ice cream' is a common association with aviation (airlines serve it), and it's unrevealed. Other words like 'diamond' or 'egypt' have weaker links. Prioritizing plausible thematic matches.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ice cream": 0.7
+            },
+            "ranked_guesses": [
+              "ice cream"
+            ],
+            "rationale": "'Aviation' clue count 1; 'ice cream' is unrevealed and could relate to flight (airlines serve ice cream) or be a neutral guess.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The hint 'aviation' connects to 'missile' (blue) and 'plane' concepts, but 'plane' is not on the board; it avoids direct board words and targets a remaining blue word like 'diamond' or 'rabbit' through association."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.8,
+              "dinosaur": 0.7,
+              "egypt": 0.6,
+              "pyramid": 0.5
+            },
+            "ranked_guesses": [
+              "diamond",
+              "dinosaur",
+              "egypt",
+              "pyramid"
+            ],
+            "rationale": "The clue 'battle' with a count of 2 suggests words related to war, conflict, or ancient civilizations. Words like 'diamond', 'dinosaur', 'egypt', and 'pyramid' seem plausible guesses.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Given the history of the game, this seems like a reasonable guess to make.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the board state, the most likely red word that fits this clue is 'battle'.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "battle",
+          "count": 2,
+          "rationale": "The word 'battle' is not on the board, and it is related to the red team's words 'knight', 'strike', and 'tie'. Giving this clue would allow the red team to potentially reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "china": 0.7
+            },
+            "ranked_guesses": [
+              "china"
+            ],
+            "rationale": "Aviation relates to flight; 'china' is a homophone for 'china' (porcelain) but also a country known for aviation manufacturing, and it's unrevealed and likely a blue word given the context.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "Aviation relates to flight; 'diamond' is a gem often associated with luxury aviation or jets, and it's unrevealed on the board.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "china": 0.7,
+              "diamond": 0.6,
+              "egypt": 0.5,
+              "pyramid": 0.4,
+              "washington": 0.3
+            },
+            "ranked_guesses": [
+              "china",
+              "diamond",
+              "egypt",
+              "pyramid",
+              "washington"
+            ],
+            "rationale": "Aviation clue suggests travel/flight; unrevealed words like china, diamond, egypt, pyramid, washington relate to destinations or landmarks, with china and diamond having highest association to flight/travel.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "diamond"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The hint 'aviation' connects to 'missile' and 'ice cream' (both blue and already revealed), but more importantly, it can guide the team to 'rabbit' (blue) and 'diamond' (blue) without touching the assassin or other teams' words."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.9
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the revealed words on the board, 'battle' seems like a strong guess that could reveal more red words.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the words already revealed, 'battle' seems like a reasonable guess that could reveal more red words.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests the red team is looking for words related to battle or combat. Given the revealed words on the board, 'battle' seems like a reasonable guess that could potentially reveal more red words.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "battle",
+          "count": 2,
+          "rationale": "The word 'battle' is related to the red team's words 'knight', 'strike', 'tie', and 'washer' on the board, and would allow the red team to potentially reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "Aviation relates to flight; diamond is a gem often associated with luxury aviation or as a metaphor for clarity in flight paths; other words like centaur, dinosaur, egypt are less directly related.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "Aviation relates to flight; diamond is a gem often associated with aircraft instruments or luxury travel, and it's unrevealed and likely blue.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "Aviation relates to flight and aircraft; diamond is a gem often associated with luxury travel or aviation themes, and it's unrevealed on the board.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The hint 'aviation' connects to blue words like 'missile' and 'ice cream' without containing any board words, and it's safe from the assassin 'centaur'."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.9
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "The active clue is 'flight' with a count of 2, and the board contains words like 'train', 'pin', and 'vacuum' which are related to the concept of 'flight'. Therefore, 'flight' is the most likely guess.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.9
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "The clue 'flight' has been given multiple times, and the revealed words 'train' and 'pin' are related to the theme of 'flight'. Therefore, I am confident that 'flight' is a good guess.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.8
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "The active clue is 'flight' with a count of 2, and the board contains several words related to flight like 'train', 'pin', and 'vacuum'. This suggests that 'flight' is a good clue to try and guess more of the red team's words.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": "The word 'flight' is related to the 'aviation' clue given by the blue team, and it could help the red team reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "phoenix": 0.7
+            },
+            "ranked_guesses": [
+              "phoenix"
+            ],
+            "rationale": "Aviation relates to flight; phoenix is a mythical bird associated with flight and is unrevealed.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "Aviation relates to flight and aircraft; 'diamond' is a gem that could metaphorically link to 'aviation' via 'diamond formation' in flying, and it's an unrevealed blue word.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond"
+            ],
+            "rationale": "Aviation relates to flight; 'diamond' is a gem that could be associated with 'flight' as a metaphor or in aviation contexts (e.g., diamond formation). It's unrevealed and not a known red/blue word.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "phoenix"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The word 'aviation' is not on the board and connects to multiple unrevealed blue words like 'diamond' and 'rabbit' (associated with flight/air), while avoiding the assassin 'centaur' and red words."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "battle"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests that a word related to 'battle' is likely to be a red word on the board. Since the guesses remaining is 3, it makes sense to guess a word related to 'battle' as the next guess.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Given the revealed identities, 'battle' seems like a reasonable guess that could potentially reveal more red words.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battle": 0.8
+            },
+            "ranked_guesses": [
+              "battle"
+            ],
+            "rationale": "The active clue is 'battle' with a count of 2, which suggests that the red team is looking for words related to battle or combat. Since the board has revealed several blue words, the red team may be trying to find more of their own words to gain an advantage.",
+            "stop": false
+          },
+          "agent_id": "Claude 3 Haiku-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "battle",
+          "count": 2,
+          "rationale": "The word 'battle' is related to the red team's words 'knight', 'strike', 'tie', and 'washer' on the board. Giving this clue would allow the red team to potentially reveal more of their words."
+        },
+        "agent_id": "Claude 3 Haiku-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "aviation"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.6
+            },
+            "ranked_guesses": [
+              "centaur"
+            ],
+            "rationale": "Aviation clue count 1 suggests one related word; 'centaur' is unrevealed and could metaphorically link to flight/mythical creatures, while avoiding known red/blue words.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flight": 0.7
+            },
+            "ranked_guesses": [
+              "flight"
+            ],
+            "rationale": "Clue 'aviation' count 1; 'flight' is a direct synonym and not revealed, while other words like 'plane' or 'pilot' are not on board.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "centaur": 0.7
+            },
+            "ranked_guesses": [
+              "centaur"
+            ],
+            "rationale": "Aviation relates to flight; centaur is a mythical creature often associated with sky/flight in some contexts, and it's unrevealed and likely blue.",
+            "stop": false
+          },
+          "agent_id": "MiMo V2 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "blue",
+          "terminal": true,
+          "winner": "red",
+          "word": "centaur"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "aviation",
+          "count": 1,
+          "rationale": "The hint 'aviation' connects to blue words like 'missile' and 'ice cream' without containing any board words or substrings, and it's safe from the assassin 'centaur'."
+        },
+        "agent_id": "MiMo V2 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

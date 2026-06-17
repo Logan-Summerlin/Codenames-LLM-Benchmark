@@ -1,0 +1,1127 @@
+{
+  "board": {
+    "identities": {
+      "airport": "red",
+      "animal": "red",
+      "battery": "neutral",
+      "canyon": "blue",
+      "cloud": "blue",
+      "comet": "red",
+      "dancer": "blue",
+      "eagle": "blue",
+      "engine": "assassin",
+      "family": "blue",
+      "forest": "blue",
+      "galaxy": "red",
+      "ghost": "blue",
+      "helmet": "red",
+      "highway": "neutral",
+      "ladder": "neutral",
+      "lantern": "neutral",
+      "museum": "neutral",
+      "nurse": "red",
+      "sailor": "neutral",
+      "secret": "red",
+      "shadow": "red",
+      "station": "red",
+      "sugar": "neutral",
+      "voyage": "blue"
+    },
+    "revealed": [
+      "animal",
+      "canyon",
+      "cloud",
+      "comet",
+      "eagle",
+      "engine",
+      "forest",
+      "galaxy",
+      "helmet",
+      "secret",
+      "station",
+      "voyage"
+    ],
+    "words": {
+      "airport": "red",
+      "animal": "red",
+      "battery": "neutral",
+      "canyon": "blue",
+      "cloud": "blue",
+      "comet": "red",
+      "dancer": "blue",
+      "eagle": "blue",
+      "engine": "assassin",
+      "family": "blue",
+      "forest": "blue",
+      "galaxy": "red",
+      "ghost": "blue",
+      "helmet": "red",
+      "highway": "neutral",
+      "ladder": "neutral",
+      "lantern": "neutral",
+      "museum": "neutral",
+      "nurse": "red",
+      "sailor": "neutral",
+      "secret": "red",
+      "shadow": "red",
+      "station": "red",
+      "sugar": "neutral",
+      "voyage": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "astronaut",
+        "count": 4,
+        "rationale": "Connects helmet, station, comet, and galaxy as elements related to space exploration."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.8,
+          "galaxy": 0.8,
+          "helmet": 0.9,
+          "voyage": 0.7
+        },
+        "ranked_guesses": [
+          "helmet",
+          "galaxy",
+          "comet",
+          "voyage"
+        ],
+        "rationale": "Astronaut relates to space gear (helmet), space objects (galaxy, comet), and space travel (voyage). Other words like station or eagle are possible but less direct.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.9,
+          "galaxy": 0.9,
+          "helmet": 0.9,
+          "station": 0.9,
+          "voyage": 0.8
+        },
+        "ranked_guesses": [
+          "comet",
+          "galaxy",
+          "helmet",
+          "station",
+          "voyage"
+        ],
+        "rationale": "Astronaut relates to space, so comet, galaxy, helmet (astronaut gear), station (space station), and voyage (space travel) are strong candidates; other words like eagle and engine are possible but less direct.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "comet": 0.85,
+          "eagle": 0.7,
+          "galaxy": 0.9,
+          "helmet": 0.9,
+          "station": 0.85
+        },
+        "ranked_guesses": [
+          "helmet",
+          "galaxy",
+          "comet",
+          "station",
+          "eagle"
+        ],
+        "rationale": "Helmet is astronaut gear, galaxy and comet are space objects, station is space station, and eagle refers to Apollo's lunar module.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 4,
+        "rationale": "Connects canyon, cloud, forest, and eagle as natural elements"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.9,
+          "canyon": 0.7,
+          "cloud": 0.65,
+          "eagle": 0.6,
+          "forest": 0.85
+        },
+        "ranked_guesses": [
+          "animal",
+          "forest",
+          "canyon",
+          "cloud",
+          "eagle"
+        ],
+        "rationale": "The clue 'nature' with count 4 strongly suggests words directly related to nature. 'animal' and 'forest' are the most obvious choices with high confidence. Other plausible nature-related words are 'canyon', 'cloud', and 'eagle' with decreasing confidence.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.95,
+          "canyon": 0.8,
+          "cloud": 0.75,
+          "eagle": 0.85,
+          "forest": 0.9
+        },
+        "ranked_guesses": [
+          "animal",
+          "forest",
+          "eagle",
+          "canyon",
+          "cloud"
+        ],
+        "rationale": "Clue 'nature' with count 4 strongly suggests these 5 words as top nature-related candidates. 'animal' and 'forest' are most directly linked, followed by 'eagle' (animal), 'canyon' (natural landscape), and 'cloud' (natural phenomenon).",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.9,
+          "canyon": 0.8,
+          "eagle": 0.8,
+          "forest": 0.9
+        },
+        "ranked_guesses": [
+          "animal",
+          "forest",
+          "canyon",
+          "eagle"
+        ],
+        "rationale": "Clue 'nature' with count 4 strongly suggests these 4 nature-related words as targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "cover",
+        "count": 2,
+        "rationale": "Secret and shadow both relate to hiding or covering; nurse and airport not strongly connected, so clue targets these two red words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.9,
+          "forest": 0.8
+        },
+        "ranked_guesses": [
+          "cloud",
+          "forest"
+        ],
+        "rationale": "'Cloud cover' and 'forest cover' are strong associations with the clue 'cover', and both are unrevealed red candidates.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "secret": 0.9,
+          "shadow": 0.8
+        },
+        "ranked_guesses": [
+          "secret",
+          "shadow"
+        ],
+        "rationale": "Cover implies concealment; secret is hidden and shadow covers light.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.8,
+          "shadow": 0.7
+        },
+        "ranked_guesses": [
+          "cloud",
+          "shadow"
+        ],
+        "rationale": "Cover commonly associates with cloud cover and shadow cover, both direct phrases. Previous space and nature themes support these natural elements.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "wild",
+        "count": 3,
+        "rationale": "Connects eagle (wild bird), forest (wild nature), and ghost (supernatural entity)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "forest": 0.85,
+          "ghost": 0.7
+        },
+        "ranked_guesses": [
+          "eagle",
+          "forest",
+          "ghost"
+        ],
+        "rationale": "'Wild' strongly associates with wild animals (eagle), wild nature (forest), and spooky/untamed concepts (ghost). All are unrevealed and fit the clue count of 3.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.7,
+          "eagle": 0.9,
+          "forest": 0.8,
+          "shadow": 0.5
+        },
+        "ranked_guesses": [
+          "eagle",
+          "forest",
+          "canyon",
+          "shadow"
+        ],
+        "rationale": "Clue 'wild' suggests natural or untamed themes. 'eagle' is a wild animal, 'forest' and 'canyon' are wild natural environments, 'shadow' is a looser fit.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.8,
+          "eagle": 0.95,
+          "forest": 0.9
+        },
+        "ranked_guesses": [
+          "eagle",
+          "forest",
+          "canyon"
+        ],
+        "rationale": "'Wild' strongly suggests natural/untamed concepts. Eagle is a wild animal, forest is wild nature, and canyon is a wild landscape feature. These are the most direct matches among unrevealed blue team words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "mission",
+        "count": 4,
+        "rationale": "Connects airport (air mission), nurse (medical mission), secret (secret mission), and shadow (shadow mission) as red words, with low risk of pointing to blue or assassin words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.6,
+          "ghost": 0.7,
+          "secret": 0.9,
+          "shadow": 0.8
+        },
+        "ranked_guesses": [
+          "secret",
+          "shadow",
+          "ghost",
+          "airport"
+        ],
+        "rationale": "Mission often associates with secret, shadow, ghost, and airport as mission-related words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.5,
+          "engine": 0.7,
+          "ghost": 0.3,
+          "secret": 0.9
+        },
+        "ranked_guesses": [
+          "secret",
+          "engine",
+          "airport",
+          "ghost"
+        ],
+        "rationale": "Mission suggests secret missions, rocket engines, airport control, and ghost operatives in spy/spy-fi contexts.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.8,
+          "engine": 0.7,
+          "highway": 0.5,
+          "sailor": 0.6,
+          "secret": 0.9
+        },
+        "ranked_guesses": [
+          "secret",
+          "airport",
+          "engine",
+          "sailor",
+          "highway"
+        ],
+        "rationale": "Mission evokes covert operations, travel hubs, vehicles, and personnel\u2014secret, airport, engine, sailor, and highway are likely red targets.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "astronaut"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "helmet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "galaxy"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "comet"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "voyage"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "animal"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cover"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "wild"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "forest"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "canyon"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "mission"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "secret"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "engine"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 20,
+    "public_event_count": 18,
+    "reason": "assassin",
+    "seed": "deepseek-v4-flash-vs-mistral-small-4-20260607",
+    "team_blue": "Mistral Small 4",
+    "team_red": "DeepSeek V4 Flash",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "astronaut"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.8,
+              "galaxy": 0.8,
+              "helmet": 0.9,
+              "voyage": 0.7
+            },
+            "ranked_guesses": [
+              "helmet",
+              "galaxy",
+              "comet",
+              "voyage"
+            ],
+            "rationale": "Astronaut relates to space gear (helmet), space objects (galaxy, comet), and space travel (voyage). Other words like station or eagle are possible but less direct.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.9,
+              "galaxy": 0.9,
+              "helmet": 0.9,
+              "station": 0.9,
+              "voyage": 0.8
+            },
+            "ranked_guesses": [
+              "comet",
+              "galaxy",
+              "helmet",
+              "station",
+              "voyage"
+            ],
+            "rationale": "Astronaut relates to space, so comet, galaxy, helmet (astronaut gear), station (space station), and voyage (space travel) are strong candidates; other words like eagle and engine are possible but less direct.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "comet": 0.85,
+              "eagle": 0.7,
+              "galaxy": 0.9,
+              "helmet": 0.9,
+              "station": 0.85
+            },
+            "ranked_guesses": [
+              "helmet",
+              "galaxy",
+              "comet",
+              "station",
+              "eagle"
+            ],
+            "rationale": "Helmet is astronaut gear, galaxy and comet are space objects, station is space station, and eagle refers to Apollo's lunar module.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "helmet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "galaxy"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "comet"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "voyage"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "astronaut",
+          "count": 4,
+          "rationale": "Connects helmet, station, comet, and galaxy as elements related to space exploration."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.9,
+              "canyon": 0.7,
+              "cloud": 0.65,
+              "eagle": 0.6,
+              "forest": 0.85
+            },
+            "ranked_guesses": [
+              "animal",
+              "forest",
+              "canyon",
+              "cloud",
+              "eagle"
+            ],
+            "rationale": "The clue 'nature' with count 4 strongly suggests words directly related to nature. 'animal' and 'forest' are the most obvious choices with high confidence. Other plausible nature-related words are 'canyon', 'cloud', and 'eagle' with decreasing confidence.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.95,
+              "canyon": 0.8,
+              "cloud": 0.75,
+              "eagle": 0.85,
+              "forest": 0.9
+            },
+            "ranked_guesses": [
+              "animal",
+              "forest",
+              "eagle",
+              "canyon",
+              "cloud"
+            ],
+            "rationale": "Clue 'nature' with count 4 strongly suggests these 5 words as top nature-related candidates. 'animal' and 'forest' are most directly linked, followed by 'eagle' (animal), 'canyon' (natural landscape), and 'cloud' (natural phenomenon).",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.9,
+              "canyon": 0.8,
+              "eagle": 0.8,
+              "forest": 0.9
+            },
+            "ranked_guesses": [
+              "animal",
+              "forest",
+              "canyon",
+              "eagle"
+            ],
+            "rationale": "Clue 'nature' with count 4 strongly suggests these 4 nature-related words as targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "animal"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 4,
+          "rationale": "Connects canyon, cloud, forest, and eagle as natural elements"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "cover"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.9,
+              "forest": 0.8
+            },
+            "ranked_guesses": [
+              "cloud",
+              "forest"
+            ],
+            "rationale": "'Cloud cover' and 'forest cover' are strong associations with the clue 'cover', and both are unrevealed red candidates.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "secret": 0.9,
+              "shadow": 0.8
+            },
+            "ranked_guesses": [
+              "secret",
+              "shadow"
+            ],
+            "rationale": "Cover implies concealment; secret is hidden and shadow covers light.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.8,
+              "shadow": 0.7
+            },
+            "ranked_guesses": [
+              "cloud",
+              "shadow"
+            ],
+            "rationale": "Cover commonly associates with cloud cover and shadow cover, both direct phrases. Previous space and nature themes support these natural elements.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "cover",
+          "count": 2,
+          "rationale": "Secret and shadow both relate to hiding or covering; nurse and airport not strongly connected, so clue targets these two red words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "wild"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "forest": 0.85,
+              "ghost": 0.7
+            },
+            "ranked_guesses": [
+              "eagle",
+              "forest",
+              "ghost"
+            ],
+            "rationale": "'Wild' strongly associates with wild animals (eagle), wild nature (forest), and spooky/untamed concepts (ghost). All are unrevealed and fit the clue count of 3.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.7,
+              "eagle": 0.9,
+              "forest": 0.8,
+              "shadow": 0.5
+            },
+            "ranked_guesses": [
+              "eagle",
+              "forest",
+              "canyon",
+              "shadow"
+            ],
+            "rationale": "Clue 'wild' suggests natural or untamed themes. 'eagle' is a wild animal, 'forest' and 'canyon' are wild natural environments, 'shadow' is a looser fit.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.8,
+              "eagle": 0.95,
+              "forest": 0.9
+            },
+            "ranked_guesses": [
+              "eagle",
+              "forest",
+              "canyon"
+            ],
+            "rationale": "'Wild' strongly suggests natural/untamed concepts. Eagle is a wild animal, forest is wild nature, and canyon is a wild landscape feature. These are the most direct matches among unrevealed blue team words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "forest"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "canyon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "wild",
+          "count": 3,
+          "rationale": "Connects eagle (wild bird), forest (wild nature), and ghost (supernatural entity)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "mission"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.6,
+              "ghost": 0.7,
+              "secret": 0.9,
+              "shadow": 0.8
+            },
+            "ranked_guesses": [
+              "secret",
+              "shadow",
+              "ghost",
+              "airport"
+            ],
+            "rationale": "Mission often associates with secret, shadow, ghost, and airport as mission-related words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.5,
+              "engine": 0.7,
+              "ghost": 0.3,
+              "secret": 0.9
+            },
+            "ranked_guesses": [
+              "secret",
+              "engine",
+              "airport",
+              "ghost"
+            ],
+            "rationale": "Mission suggests secret missions, rocket engines, airport control, and ghost operatives in spy/spy-fi contexts.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.8,
+              "engine": 0.7,
+              "highway": 0.5,
+              "sailor": 0.6,
+              "secret": 0.9
+            },
+            "ranked_guesses": [
+              "secret",
+              "airport",
+              "engine",
+              "sailor",
+              "highway"
+            ],
+            "rationale": "Mission evokes covert operations, travel hubs, vehicles, and personnel\u2014secret, airport, engine, sailor, and highway are likely red targets.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "secret"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "engine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mission",
+          "count": 4,
+          "rationale": "Connects airport (air mission), nurse (medical mission), secret (secret mission), and shadow (shadow mission) as red words, with low risk of pointing to blue or assassin words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

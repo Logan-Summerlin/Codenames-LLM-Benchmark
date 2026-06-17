@@ -1,0 +1,1652 @@
+{
+  "board": {
+    "identities": {
+      "apple": "red",
+      "bear": "neutral",
+      "box": "blue",
+      "button": "neutral",
+      "cloak": "neutral",
+      "code": "blue",
+      "dress": "red",
+      "germany": "red",
+      "glove": "blue",
+      "helicopter": "neutral",
+      "ivory": "red",
+      "link": "blue",
+      "log": "blue",
+      "mole": "red",
+      "mount": "red",
+      "nail": "blue",
+      "palm": "neutral",
+      "pants": "neutral",
+      "pool": "red",
+      "post": "blue",
+      "queen": "blue",
+      "saturn": "red",
+      "spike": "assassin",
+      "time": "neutral",
+      "well": "red"
+    },
+    "revealed": [
+      "apple",
+      "bear",
+      "box",
+      "code",
+      "dress",
+      "germany",
+      "glove",
+      "link",
+      "log",
+      "mole",
+      "mount",
+      "nail",
+      "palm",
+      "post",
+      "queen",
+      "well"
+    ],
+    "words": {
+      "apple": "red",
+      "bear": "neutral",
+      "box": "blue",
+      "button": "neutral",
+      "cloak": "neutral",
+      "code": "blue",
+      "dress": "red",
+      "germany": "red",
+      "glove": "blue",
+      "helicopter": "neutral",
+      "ivory": "red",
+      "link": "blue",
+      "log": "blue",
+      "mole": "red",
+      "mount": "red",
+      "nail": "blue",
+      "palm": "neutral",
+      "pants": "neutral",
+      "pool": "red",
+      "post": "blue",
+      "queen": "blue",
+      "saturn": "red",
+      "spike": "assassin",
+      "time": "neutral",
+      "well": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "earth",
+        "count": 5,
+        "rationale": "Many red words are natural or terrestrial: apple (fruit), mole (burrows), mount (mountain), well (water source), pool (body of water)."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "log": 0.75,
+          "mole": 0.76,
+          "mount": 0.78,
+          "palm": 0.74,
+          "well": 0.77
+        },
+        "ranked_guesses": [
+          "mount",
+          "well",
+          "mole",
+          "log",
+          "palm"
+        ],
+        "rationale": "These words are directly associated with earth: mountains, wells, burrowing moles, logs from the ground, and palm trees growing in soil.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "log": 0.8,
+          "mole": 0.84,
+          "mount": 0.86,
+          "palm": 0.78,
+          "well": 0.82
+        },
+        "ranked_guesses": [
+          "mount",
+          "mole",
+          "well",
+          "log",
+          "palm"
+        ],
+        "rationale": "These words are directly associated with earth/ground or natural elements.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": "Only 'mole', 'mount', and 'well' have clear earth connections; confidence for a fifth word is below 0.70, so better to stop.",
+        "stop": true
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mail",
+        "count": 3,
+        "rationale": "Connects to box (mailbox), post (mail post), and code (postal code) which are all Blue words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.9,
+          "code": 0.85,
+          "post": 0.95
+        },
+        "ranked_guesses": [
+          "post",
+          "box",
+          "code"
+        ],
+        "rationale": "'post' and 'box' directly relate to mail (postal service/mailbox). 'code' fits as postal/email verification code. All are strong matches to 'mail 3'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.9,
+          "code": 0.85,
+          "post": 0.95
+        },
+        "ranked_guesses": [
+          "post",
+          "box",
+          "code"
+        ],
+        "rationale": "Strong direct matches to 'mail' clue: post (mail post), box (mailbox), code (postal code)",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "box": 0.85,
+          "code": 0.8,
+          "post": 0.95
+        },
+        "ranked_guesses": [
+          "post",
+          "box",
+          "code"
+        ],
+        "rationale": "Strong matches for 'mail': post (postal service), box (mailbox), code (postal code)",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fruit",
+        "count": 1,
+        "rationale": "Apple is a red word that fits the hint"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.92
+        },
+        "ranked_guesses": [
+          "apple"
+        ],
+        "rationale": "Apple is a direct fruit matching the clue",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.92
+        },
+        "ranked_guesses": [
+          "apple"
+        ],
+        "rationale": "apple is a direct fruit matching the clue",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "apple": 0.9
+        },
+        "ranked_guesses": [
+          "apple"
+        ],
+        "rationale": "Apple is a direct fruit matching the clue",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "hand",
+        "count": 2,
+        "rationale": "Connects to glove and nail as both are hand-related"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "glove": 0.95,
+          "palm": 0.9
+        },
+        "ranked_guesses": [
+          "glove",
+          "palm"
+        ],
+        "rationale": "'glove' and 'palm' are direct parts/accessories of a hand",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "glove": 0.95,
+          "palm": 0.95
+        },
+        "ranked_guesses": [
+          "glove",
+          "palm"
+        ],
+        "rationale": "glove and palm are direct parts of a hand",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "glove": 0.95,
+          "palm": 0.9
+        },
+        "ranked_guesses": [
+          "glove",
+          "palm"
+        ],
+        "rationale": "glove and palm are direct parts/associates of 'hand'",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 3,
+        "rationale": "Connects dress (royal dress), germany (royal history), and ivory (royal ivory/color)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.8,
+          "dress": 0.85,
+          "queen": 0.95
+        },
+        "ranked_guesses": [
+          "queen",
+          "dress",
+          "cloak"
+        ],
+        "rationale": "'queen' is a direct royal match. 'dress' and 'cloak' are common royal attire items fitting the 'royal' clue.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.8,
+          "dress": 0.85,
+          "queen": 0.95
+        },
+        "ranked_guesses": [
+          "queen",
+          "dress",
+          "cloak"
+        ],
+        "rationale": "Direct matches for 'royal': queen is a royal title, dress can be a royal dress, cloak can be a royal cloak",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloak": 0.8,
+          "dress": 0.85,
+          "queen": 0.95
+        },
+        "ranked_guesses": [
+          "queen",
+          "dress",
+          "cloak"
+        ],
+        "rationale": "queen is directly royal, dress and cloak are common royal attire elements",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "winter",
+        "count": 4,
+        "rationale": "All remaining red words (germany, ivory, pool, saturn) can be linked to winter themes"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": "No unrevealed word has a clear, high-confidence association with the clue 'winter' for our red team.",
+        "stop": true
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.86,
+          "cloak": 0.77,
+          "time": 0.73
+        },
+        "ranked_guesses": [
+          "bear",
+          "cloak",
+          "time"
+        ],
+        "rationale": "Bear hibernates in winter, cloak suggests warm clothing, time relates to winter season; no other unrevealed words reach 0.70 confidence.",
+        "stop": true
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bear": 0.85,
+          "cloak": 0.78,
+          "pants": 0.75,
+          "spike": 0.7
+        },
+        "ranked_guesses": [
+          "bear",
+          "cloak",
+          "pants",
+          "spike"
+        ],
+        "rationale": "These words have strong associations with winter (hibernating bear, winter cloak, warm pants, ice spikes).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "metal",
+        "count": 1,
+        "rationale": "Connects to the hidden blue word 'nail'."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.95
+        },
+        "ranked_guesses": [
+          "nail"
+        ],
+        "rationale": "nail is a direct match for the 'metal' clue",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "nail": 0.95
+        },
+        "ranked_guesses": [
+          "nail"
+        ],
+        "rationale": "nail is a common everyday object strongly associated with metal",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "spike": 0.95
+        },
+        "ranked_guesses": [
+          "spike"
+        ],
+        "rationale": "'spike' is a direct match for the 'metal' clue as a metal object",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "berlin",
+        "count": 1,
+        "rationale": "Berlin is strongly associated with Germany, the remaining red word, and unlikely to link to any blue or assassin words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "germany": 0.85
+        },
+        "ranked_guesses": [
+          "germany"
+        ],
+        "rationale": "Berlin is the capital of Germany, strong direct link",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": "All red words are already revealed; no unrevealed word matches the clue with sufficient confidence.",
+        "stop": true
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "germany": 0.85
+        },
+        "ranked_guesses": [
+          "germany"
+        ],
+        "rationale": "Berlin directly points to Germany, likely a red word.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "chain",
+        "count": 1,
+        "rationale": "Direct hint for the remaining Blue word 'link' without risking other words or the assassin."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.95
+        },
+        "ranked_guesses": [
+          "link"
+        ],
+        "rationale": "'link' is a direct component of a chain and matches the clue 'chain 1' perfectly",
+        "stop": true
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.95
+        },
+        "ranked_guesses": [
+          "link"
+        ],
+        "rationale": "'link' directly matches the 'chain' clue as a chain link",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "link": 0.95
+        },
+        "ranked_guesses": [
+          "link"
+        ],
+        "rationale": "'link' directly matches the 'chain' clue as a fundamental component of a chain.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 5,
+        "word": "earth"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mount"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mole"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "well"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "log"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mail"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "post"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "box"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "code"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fruit"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "apple"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "hand"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "glove"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "palm"
+    },
+    {
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "invalid_clue_format",
+      "reason": "invalid_spymaster_output",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "queen"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "dress"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "winter"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bear"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "metal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "nail"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "berlin"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "germany"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "chain"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "link"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 36,
+    "public_event_count": 30,
+    "reason": "all_words_found",
+    "seed": "codenames-live-9-003-openai_gpt_oss_120b-vs-mistralai_mistral_small_2603",
+    "team_blue": "Mistral Small 4",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 5,
+        "word": "earth"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "log": 0.75,
+              "mole": 0.76,
+              "mount": 0.78,
+              "palm": 0.74,
+              "well": 0.77
+            },
+            "ranked_guesses": [
+              "mount",
+              "well",
+              "mole",
+              "log",
+              "palm"
+            ],
+            "rationale": "These words are directly associated with earth: mountains, wells, burrowing moles, logs from the ground, and palm trees growing in soil.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "log": 0.8,
+              "mole": 0.84,
+              "mount": 0.86,
+              "palm": 0.78,
+              "well": 0.82
+            },
+            "ranked_guesses": [
+              "mount",
+              "mole",
+              "well",
+              "log",
+              "palm"
+            ],
+            "rationale": "These words are directly associated with earth/ground or natural elements.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": "Only 'mole', 'mount', and 'well' have clear earth connections; confidence for a fifth word is below 0.70, so better to stop.",
+            "stop": true
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mount"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mole"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "well"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "log"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "earth",
+          "count": 5,
+          "rationale": "Many red words are natural or terrestrial: apple (fruit), mole (burrows), mount (mountain), well (water source), pool (body of water)."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "mail"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "box": 0.9,
+              "code": 0.85,
+              "post": 0.95
+            },
+            "ranked_guesses": [
+              "post",
+              "box",
+              "code"
+            ],
+            "rationale": "'post' and 'box' directly relate to mail (postal service/mailbox). 'code' fits as postal/email verification code. All are strong matches to 'mail 3'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "box": 0.9,
+              "code": 0.85,
+              "post": 0.95
+            },
+            "ranked_guesses": [
+              "post",
+              "box",
+              "code"
+            ],
+            "rationale": "Strong direct matches to 'mail' clue: post (mail post), box (mailbox), code (postal code)",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "box": 0.85,
+              "code": 0.8,
+              "post": 0.95
+            },
+            "ranked_guesses": [
+              "post",
+              "box",
+              "code"
+            ],
+            "rationale": "Strong matches for 'mail': post (postal service), box (mailbox), code (postal code)",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "post"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "box"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "code"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mail",
+          "count": 3,
+          "rationale": "Connects to box (mailbox), post (mail post), and code (postal code) which are all Blue words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fruit"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.92
+            },
+            "ranked_guesses": [
+              "apple"
+            ],
+            "rationale": "Apple is a direct fruit matching the clue",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.92
+            },
+            "ranked_guesses": [
+              "apple"
+            ],
+            "rationale": "apple is a direct fruit matching the clue",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "apple": 0.9
+            },
+            "ranked_guesses": [
+              "apple"
+            ],
+            "rationale": "Apple is a direct fruit matching the clue",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "apple"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fruit",
+          "count": 1,
+          "rationale": "Apple is a red word that fits the hint"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "hand"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "glove": 0.95,
+              "palm": 0.9
+            },
+            "ranked_guesses": [
+              "glove",
+              "palm"
+            ],
+            "rationale": "'glove' and 'palm' are direct parts/accessories of a hand",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "glove": 0.95,
+              "palm": 0.95
+            },
+            "ranked_guesses": [
+              "glove",
+              "palm"
+            ],
+            "rationale": "glove and palm are direct parts of a hand",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "glove": 0.95,
+              "palm": 0.9
+            },
+            "ranked_guesses": [
+              "glove",
+              "palm"
+            ],
+            "rationale": "glove and palm are direct parts/associates of 'hand'",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "glove"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "palm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "hand",
+          "count": 2,
+          "rationale": "Connects to glove and nail as both are hand-related"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "royal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cloak": 0.8,
+              "dress": 0.85,
+              "queen": 0.95
+            },
+            "ranked_guesses": [
+              "queen",
+              "dress",
+              "cloak"
+            ],
+            "rationale": "'queen' is a direct royal match. 'dress' and 'cloak' are common royal attire items fitting the 'royal' clue.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloak": 0.8,
+              "dress": 0.85,
+              "queen": 0.95
+            },
+            "ranked_guesses": [
+              "queen",
+              "dress",
+              "cloak"
+            ],
+            "rationale": "Direct matches for 'royal': queen is a royal title, dress can be a royal dress, cloak can be a royal cloak",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloak": 0.8,
+              "dress": 0.85,
+              "queen": 0.95
+            },
+            "ranked_guesses": [
+              "queen",
+              "dress",
+              "cloak"
+            ],
+            "rationale": "queen is directly royal, dress and cloak are common royal attire elements",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "queen"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "dress"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "winter"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": "No unrevealed word has a clear, high-confidence association with the clue 'winter' for our red team.",
+            "stop": true
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bear": 0.86,
+              "cloak": 0.77,
+              "time": 0.73
+            },
+            "ranked_guesses": [
+              "bear",
+              "cloak",
+              "time"
+            ],
+            "rationale": "Bear hibernates in winter, cloak suggests warm clothing, time relates to winter season; no other unrevealed words reach 0.70 confidence.",
+            "stop": true
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bear": 0.85,
+              "cloak": 0.78,
+              "pants": 0.75,
+              "spike": 0.7
+            },
+            "ranked_guesses": [
+              "bear",
+              "cloak",
+              "pants",
+              "spike"
+            ],
+            "rationale": "These words have strong associations with winter (hibernating bear, winter cloak, warm pants, ice spikes).",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bear"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "winter",
+          "count": 4,
+          "rationale": "All remaining red words (germany, ivory, pool, saturn) can be linked to winter themes"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "metal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "nail": 0.95
+            },
+            "ranked_guesses": [
+              "nail"
+            ],
+            "rationale": "nail is a direct match for the 'metal' clue",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "nail": 0.95
+            },
+            "ranked_guesses": [
+              "nail"
+            ],
+            "rationale": "nail is a common everyday object strongly associated with metal",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "spike": 0.95
+            },
+            "ranked_guesses": [
+              "spike"
+            ],
+            "rationale": "'spike' is a direct match for the 'metal' clue as a metal object",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "nail"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "metal",
+          "count": 1,
+          "rationale": "Connects to the hidden blue word 'nail'."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "berlin"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "germany": 0.85
+            },
+            "ranked_guesses": [
+              "germany"
+            ],
+            "rationale": "Berlin is the capital of Germany, strong direct link",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": "All red words are already revealed; no unrevealed word matches the clue with sufficient confidence.",
+            "stop": true
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "germany": 0.85
+            },
+            "ranked_guesses": [
+              "germany"
+            ],
+            "rationale": "Berlin directly points to Germany, likely a red word.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "germany"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "berlin",
+          "count": 1,
+          "rationale": "Berlin is strongly associated with Germany, the remaining red word, and unlikely to link to any blue or assassin words."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "chain"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "link": 0.95
+            },
+            "ranked_guesses": [
+              "link"
+            ],
+            "rationale": "'link' is a direct component of a chain and matches the clue 'chain 1' perfectly",
+            "stop": true
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "link": 0.95
+            },
+            "ranked_guesses": [
+              "link"
+            ],
+            "rationale": "'link' directly matches the 'chain' clue as a chain link",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "link": 0.95
+            },
+            "ranked_guesses": [
+              "link"
+            ],
+            "rationale": "'link' directly matches the 'chain' clue as a fundamental component of a chain.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "link"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "chain",
+          "count": 1,
+          "rationale": "Direct hint for the remaining Blue word 'link' without risking other words or the assassin."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

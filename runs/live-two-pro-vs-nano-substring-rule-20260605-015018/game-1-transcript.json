@@ -1,0 +1,2086 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    },
+    "revealed": [
+      "agent",
+      "artist",
+      "balloon",
+      "cloud",
+      "guitar",
+      "jungle",
+      "novel",
+      "planet",
+      "poet",
+      "rocket",
+      "silver",
+      "singer",
+      "summer",
+      "writer"
+    ],
+    "words": {
+      "agent": "red",
+      "alien": "neutral",
+      "artist": "blue",
+      "balloon": "red",
+      "beacon": "neutral",
+      "camera": "neutral",
+      "cloud": "red",
+      "guitar": "neutral",
+      "helmet": "blue",
+      "jungle": "red",
+      "museum": "blue",
+      "novel": "red",
+      "planet": "red",
+      "poet": "red",
+      "rocket": "neutral",
+      "silver": "red",
+      "singer": "blue",
+      "spider": "blue",
+      "spirit": "blue",
+      "summer": "red",
+      "temple": "blue",
+      "voyage": "neutral",
+      "winter": "neutral",
+      "wizard": "assassin",
+      "writer": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sky",
+        "count": 3,
+        "rationale": "Connects balloon, cloud, and planet, all associated with the sky."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.9,
+          "cloud": 0.95,
+          "rocket": 0.85
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "rocket"
+        ],
+        "rationale": "The clue 'sky' strongly suggests cloud, balloon, and rocket. Cloud is directly in the sky, balloon floats in the sky, and rocket launches into the sky. These are the most unambiguous associations.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "{'word': 'cloud', 'confidence': 0.95}",
+          "{'word': 'balloon', 'confidence': 0.9}",
+          "{'word': 'rocket', 'confidence': 0.85}"
+        ],
+        "rationale": "The most direct associations with 'sky' are cloud (in the sky), balloon (hot air balloons float in the sky), and rocket (launches into the sky). These three match the clue count of 3 and are the strongest candidates, so we guess all three and stop.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "balloon": 0.9,
+          "cloud": 0.95,
+          "rocket": 0.85
+        },
+        "ranked_guesses": [
+          "cloud",
+          "balloon",
+          "rocket"
+        ],
+        "rationale": "Cloud, balloon, and rocket are directly related to sky.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "art",
+        "count": 2,
+        "rationale": "Related to creative works and cultural items, connecting 'artist', 'museum', 'poet', and 'writer'."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "guitar": 0.6,
+          "museum": 0.4
+        },
+        "ranked_guesses": [
+          "artist",
+          "guitar",
+          "museum"
+        ],
+        "rationale": "The clue 'art' strongly suggests words related to art and creativity. 'Artist' is the most direct association. 'Guitar' and 'museum' are also related to art and culture, but less directly. 'Artist' is the highest confidence guess given the clue and previous guesses.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "guitar": 0.5,
+          "museum": 0.6
+        },
+        "ranked_guesses": [
+          "artist",
+          "museum",
+          "guitar"
+        ],
+        "rationale": "The clue 'art' strongly suggests words related to art and creativity. 'Artist' directly relates to art, making it the top guess. 'Museum' is associated with art collections, so it is a plausible second choice. 'Guitar' is less directly related but can be considered as an artistic instrument, hence the moderate confidence. Other words like 'poet' or 'writer' could also be relevant but are less directly connected to 'art' in this context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "guitar": 0.6,
+          "museum": 0.4
+        },
+        "ranked_guesses": [
+          "artist",
+          "guitar",
+          "museum"
+        ],
+        "rationale": "The clue 'art' strongly suggests words related to art and creativity. 'Artist' is directly related to art and has a high confidence. 'Guitar' and 'museum' are also associated with art and culture, but with slightly lower confidence. The other words are less directly connected to the clue.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.7
+        },
+        "ranked_guesses": [
+          "agent"
+        ],
+        "rationale": "The clue 'fallback' count 1 strongly suggests a backup or retreat. 'Agent' is a common term for a fallback agent. Other possibilities like 'jungle' or 'singer' are less direct. Given count 1, we should guess only one word and stop to avoid risk.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "planet": 0.8
+        },
+        "ranked_guesses": [
+          "planet"
+        ],
+        "rationale": "planet is strongly associated with 'sky' and could be interpreted as a fallback option in a space colonization context.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.75,
+          "spirit": 0.65
+        },
+        "ranked_guesses": [
+          "agent",
+          "spirit"
+        ],
+        "rationale": "'Fallback' strongly suggests 'agent' as in a fallback agent (backup spy). For the missed 'sky' word, 'spirit' connects via the song 'Spirit in the Sky'.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "Related to blue words 'guitar', 'singer', and 'spider' (as a metaphor for web of music)."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.6,
+          "musician": 0.5,
+          "singer": 0.8
+        },
+        "ranked_guesses": [
+          "singer",
+          "guitar",
+          "musician"
+        ],
+        "rationale": "The clue 'music' strongly suggests words related to musical performers or instruments. 'Singer' and 'guitar' are directly associated with music. 'Musician' is a broader term fitting the theme. 'Artist' was already guessed and revealed as blue, so it's less likely to be guessed again. 'Agent' and 'cloud' are less related to music, and 'rocket' is neutral, so less relevant.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "album": 0.6,
+          "guitar": 0.8,
+          "musician": 0.65,
+          "poet": 0.7,
+          "singer": 0.75
+        },
+        "ranked_guesses": [
+          "guitar",
+          "singer",
+          "poet",
+          "musician",
+          "album"
+        ],
+        "rationale": "The clue 'music' suggests words related to musical elements or artists. 'Guitar' and 'singer' are directly associated with music. 'Poet' can relate to lyrics or songwriting. 'Musician' is a broad term fitting the theme. 'Album' also connects to music recordings. 'Agent' and 'artist' are already revealed or guessed, so they are less likely options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "band": 0.6,
+          "guitar": 0.8,
+          "musician": 0.65,
+          "poet": 0.7,
+          "singer": 0.75
+        },
+        "ranked_guesses": [
+          "guitar",
+          "singer",
+          "poet",
+          "musician",
+          "band"
+        ],
+        "rationale": "The clue 'music' suggests words related to musical instruments, performers, or music-related concepts. 'Guitar' and 'singer' are directly associated with music. 'Poet' can be linked to lyrics or songwriting, and 'musician' or 'band' are also relevant. Prior guesses include 'artist', which is related to creative work, and the revealed words 'artist' and 'agent' hint at creative or entertainment fields. The remaining guesses aim to cover a range of music-related terms.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "fallback",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.0,
+          "beacon": 0.1,
+          "camera": 0.0,
+          "helmet": 0.05,
+          "jungle": 0.0,
+          "museum": 0.0,
+          "novel": 0.0,
+          "planet": 0.0,
+          "poet": 0.0,
+          "silver": 0.8,
+          "spider": 0.0,
+          "spirit": 0.0,
+          "summer": 0.0,
+          "temple": 0.05,
+          "voyage": 0.0,
+          "winter": 0.0,
+          "wizard": 0.0,
+          "writer": 0.0
+        },
+        "ranked_guesses": [
+          "silver",
+          "beacon",
+          "temple",
+          "helmet",
+          "writer",
+          "novel",
+          "poet",
+          "spirit",
+          "voyage",
+          "camera",
+          "museum",
+          "jungle",
+          "planet",
+          "alien",
+          "spider",
+          "summer",
+          "winter",
+          "wizard"
+        ],
+        "rationale": "Silver is strongly associated with 'fallback' as it represents the second-place or backup option, e.g., silver medal. The previous 'fallback' clue led to 'agent', possibly a backup operative. No other word fits as clearly.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.3,
+          "poet": 0.2,
+          "silver": 0.7,
+          "writer": 0.5
+        },
+        "ranked_guesses": [
+          "silver",
+          "writer",
+          "novel",
+          "poet"
+        ],
+        "rationale": "Fallback often means a secondary option, like silver medal. Writer is a common fallback career and pairs with agent. Prefer silver for directness.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "artistic",
+        "count": 2,
+        "rationale": "Related to blue words like museum and poet, which are connected to art and creativity."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.6,
+          "novel": 0.4,
+          "poet": 0.8
+        },
+        "ranked_guesses": [
+          "poet",
+          "museum",
+          "novel"
+        ],
+        "rationale": "The clue 'artistic' suggests words related to art and creativity. 'Poet' and 'museum' are strongly associated with art and artistic expression, making them prime guesses. 'Novel' is somewhat related through literature, which is a form of art, but slightly less direct. 'Artist' has already been guessed successfully, so it's less likely to be the next choice.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "museum": 0.6,
+          "poet": 0.5
+        },
+        "ranked_guesses": [
+          "artist",
+          "museum",
+          "poet"
+        ],
+        "rationale": "The word 'artistic' strongly relates to 'artist' (already guessed correctly), and also suggests cultural or creative concepts like 'museum' and 'poet'. 'Museum' fits well with art themes, while 'poet' relates to artistic expression. 'Artist' is the most direct connection, so it is prioritized.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "museum": 0.6,
+          "novel": 0.55,
+          "poet": 0.75
+        },
+        "ranked_guesses": [
+          "poet",
+          "museum",
+          "novel"
+        ],
+        "rationale": "The clue 'artistic' suggests words related to art, literature, and creativity. 'Poet' and 'museum' are strongly associated with art and creativity. 'Novel' also relates to literature and storytelling, fitting the artistic theme. 'Artist' has already been guessed, so it's excluded. 'Museum' and 'poet' are the most directly connected to 'artistic'. 'Novel' is a bit more indirect but still relevant. Remaining guesses are limited, so prioritizing the most relevant options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sun",
+        "count": 3,
+        "rationale": "Links jungle, summer, and planet via solar associations, while avoiding other words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "{'word': 'summer', 'confidence': 0.9}",
+          "{'word': 'planet', 'confidence': 0.7}",
+          "{'word': 'temple', 'confidence': 0.6}"
+        ],
+        "rationale": "Clue 'sun' strongly suggests summer, planet (solar system), and temple (sun worship). We have 4 guesses allowed but only 3 strong matches. Stop after 3 to avoid risking neutral/opponent/assassin.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.6,
+          "planet": 0.95,
+          "summer": 0.95
+        },
+        "ranked_guesses": [
+          "summer",
+          "planet",
+          "beacon"
+        ],
+        "rationale": "Summer and planet are strongly associated with sun. Beacon is a light source, making it the next best candidate. Other words have weaker connections.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.7,
+          "planet": 0.8,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "planet",
+          "beacon"
+        ],
+        "rationale": "Sun is strongly associated with summer and planets orbiting the sun. A beacon is a light signal, metaphorically similar to the sun.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "The words 'singer' and 'guitar' are both related to music, and guessing them could help the blue team."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.6,
+          "guitar": 0.7,
+          "museum": 0.4
+        },
+        "ranked_guesses": [
+          "guitar",
+          "artist",
+          "museum"
+        ],
+        "rationale": "The clue 'music' strongly suggests words related to musical elements or artists. 'Guitar' and 'artist' are directly related to music and have higher confidence. 'Museum' is less directly related but could be associated with music exhibits or art, hence included as a secondary guess.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.6,
+          "museum": 0.4,
+          "novel": 0.3
+        },
+        "ranked_guesses": [
+          "guitar",
+          "museum",
+          "novel"
+        ],
+        "rationale": "The clue 'music' strongly suggests words related to musical elements or themes. 'Guitar' is directly related to music and has a moderate confidence. 'Museum' and 'novel' are less directly connected but could be associated with cultural or artistic contexts related to music or the arts. Given the remaining guesses and the context, these seem like reasonable options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.6,
+          "museum": 0.3,
+          "wizard": 0.1
+        },
+        "ranked_guesses": [
+          "guitar",
+          "museum",
+          "wizard"
+        ],
+        "rationale": "The clue 'music' strongly suggests words related to musical elements or performers. 'Guitar' is directly related to music and has a moderate confidence. 'Museum' could be associated with music exhibits or musical history, but less directly. 'Wizard' is less related but could be linked to magical or fantasy themes often present in musical or artistic contexts. Given the current game state, focusing on musical and artistic words seems most strategic.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "kipling",
+        "count": 3,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.95,
+          "poet": 0.95,
+          "writer": 0.95
+        },
+        "ranked_guesses": [
+          "jungle",
+          "writer",
+          "poet"
+        ],
+        "rationale": "Kipling is most directly associated with 'The Jungle Book', making 'jungle' a strong guess. He was also a famous writer and poet, so 'writer' and 'poet' are clear connections.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.95,
+          "poet": 0.85,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "jungle",
+          "writer",
+          "poet"
+        ],
+        "rationale": "Kipling is most famous for 'The Jungle Book', so jungle is top. He is a writer and a poet, making writer and poet strong connections for the remaining two red words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jungle": 0.95,
+          "poet": 0.85,
+          "writer": 0.9
+        },
+        "ranked_guesses": [
+          "jungle",
+          "writer",
+          "poet"
+        ],
+        "rationale": "Kipling wrote The Jungle Book, so jungle is strong. He was a writer and poet, hence writer and poet. Count is 3, so these three are most likely.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "artistic",
+        "count": 3,
+        "rationale": "The words 'museum', 'helmet', and 'poet' are associated with art and creativity, aligning with the clue 'artistic'."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "art": 0.6,
+          "artist": 0.9,
+          "museum": 0.4,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "art",
+          "museum"
+        ],
+        "rationale": "The clue 'artistic' strongly relates to 'artist' and 'writer', which are both on the board and have high confidence scores. 'Art' is also closely related, but slightly less specific. 'Museum' is a possible guess as it is associated with art, but less directly connected to the clue. Other words like 'agent', 'balloon', 'cloud', 'guitar', 'jungle', 'planet', 'rocket', 'silver', 'singer', 'summer' are less relevant to the 'artistic' theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "museum": 0.6,
+          "novel": 0.5,
+          "writer": 0.7
+        },
+        "ranked_guesses": [
+          "artist",
+          "writer",
+          "museum",
+          "novel"
+        ],
+        "rationale": "The clue 'artistic' strongly relates to 'artist' and 'writer', both associated with art. 'Museum' and 'novel' are also connected to art and creativity, fitting the theme. 'Artist' was already guessed successfully, so it is prioritized. 'Writer' is a close thematic fit, and 'museum' and 'novel' are plausible options based on the artistic theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.9,
+          "artistic": 0.8,
+          "writer": 0.6
+        },
+        "ranked_guesses": [
+          "artist",
+          "artistic",
+          "writer"
+        ],
+        "rationale": "The clue 'artistic' strongly relates to 'artist' and 'writer', both associated with creativity and art. 'Artist' was already guessed successfully, so the next best guess is 'artistic' itself, which directly matches the clue. 'Writer' also fits the artistic theme, though with slightly less certainty. Other words like 'museum' or 'temple' are less directly connected to the clue.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "literary",
+        "count": 2,
+        "rationale": "Both remaining red words, 'novel' and 'poet', are directly associated with literary works."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.99,
+          "poet": 0.95
+        },
+        "ranked_guesses": [
+          "novel",
+          "poet"
+        ],
+        "rationale": "Literary clue strongly points to novel and poet, both remaining and directly related to literature.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.95,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "novel",
+          "poet"
+        ],
+        "rationale": "Novel and poet are directly related to literary. Writer is already revealed as blue, so these are the strongest remaining literary words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "novel": 0.95,
+          "poet": 0.95
+        },
+        "ranked_guesses": [
+          "poet",
+          "novel"
+        ],
+        "rationale": "Literary clue suggests words directly related to literature; poet and novel are the strongest fits.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "balloon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "art"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "artist"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "agent"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "singer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "silver"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "artistic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sun"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "planet"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "kipling"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "jungle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "writer"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "artistic"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "literary"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "novel"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "poet"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 44,
+    "public_event_count": 32,
+    "reason": "all_words_found",
+    "seed": "1",
+    "team_blue": "gpt-4.1-nano",
+    "team_red": "deepseek-v4-pro",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.9,
+              "cloud": 0.95,
+              "rocket": 0.85
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "rocket"
+            ],
+            "rationale": "The clue 'sky' strongly suggests cloud, balloon, and rocket. Cloud is directly in the sky, balloon floats in the sky, and rocket launches into the sky. These are the most unambiguous associations.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "{'word': 'cloud', 'confidence': 0.95}",
+              "{'word': 'balloon', 'confidence': 0.9}",
+              "{'word': 'rocket', 'confidence': 0.85}"
+            ],
+            "rationale": "The most direct associations with 'sky' are cloud (in the sky), balloon (hot air balloons float in the sky), and rocket (launches into the sky). These three match the clue count of 3 and are the strongest candidates, so we guess all three and stop.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "balloon": 0.9,
+              "cloud": 0.95,
+              "rocket": 0.85
+            },
+            "ranked_guesses": [
+              "cloud",
+              "balloon",
+              "rocket"
+            ],
+            "rationale": "Cloud, balloon, and rocket are directly related to sky.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "balloon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 3,
+          "rationale": "Connects balloon, cloud, and planet, all associated with the sky."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "art"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "guitar": 0.6,
+              "museum": 0.4
+            },
+            "ranked_guesses": [
+              "artist",
+              "guitar",
+              "museum"
+            ],
+            "rationale": "The clue 'art' strongly suggests words related to art and creativity. 'Artist' is the most direct association. 'Guitar' and 'museum' are also related to art and culture, but less directly. 'Artist' is the highest confidence guess given the clue and previous guesses.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "guitar": 0.5,
+              "museum": 0.6
+            },
+            "ranked_guesses": [
+              "artist",
+              "museum",
+              "guitar"
+            ],
+            "rationale": "The clue 'art' strongly suggests words related to art and creativity. 'Artist' directly relates to art, making it the top guess. 'Museum' is associated with art collections, so it is a plausible second choice. 'Guitar' is less directly related but can be considered as an artistic instrument, hence the moderate confidence. Other words like 'poet' or 'writer' could also be relevant but are less directly connected to 'art' in this context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "guitar": 0.6,
+              "museum": 0.4
+            },
+            "ranked_guesses": [
+              "artist",
+              "guitar",
+              "museum"
+            ],
+            "rationale": "The clue 'art' strongly suggests words related to art and creativity. 'Artist' is directly related to art and has a high confidence. 'Guitar' and 'museum' are also associated with art and culture, but with slightly lower confidence. The other words are less directly connected to the clue.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "artist"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "art",
+          "count": 2,
+          "rationale": "Related to creative works and cultural items, connecting 'artist', 'museum', 'poet', and 'writer'."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.7
+            },
+            "ranked_guesses": [
+              "agent"
+            ],
+            "rationale": "The clue 'fallback' count 1 strongly suggests a backup or retreat. 'Agent' is a common term for a fallback agent. Other possibilities like 'jungle' or 'singer' are less direct. Given count 1, we should guess only one word and stop to avoid risk.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "planet": 0.8
+            },
+            "ranked_guesses": [
+              "planet"
+            ],
+            "rationale": "planet is strongly associated with 'sky' and could be interpreted as a fallback option in a space colonization context.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.75,
+              "spirit": 0.65
+            },
+            "ranked_guesses": [
+              "agent",
+              "spirit"
+            ],
+            "rationale": "'Fallback' strongly suggests 'agent' as in a fallback agent (backup spy). For the missed 'sky' word, 'spirit' connects via the song 'Spirit in the Sky'.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "agent"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.6,
+              "musician": 0.5,
+              "singer": 0.8
+            },
+            "ranked_guesses": [
+              "singer",
+              "guitar",
+              "musician"
+            ],
+            "rationale": "The clue 'music' strongly suggests words related to musical performers or instruments. 'Singer' and 'guitar' are directly associated with music. 'Musician' is a broader term fitting the theme. 'Artist' was already guessed and revealed as blue, so it's less likely to be guessed again. 'Agent' and 'cloud' are less related to music, and 'rocket' is neutral, so less relevant.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "album": 0.6,
+              "guitar": 0.8,
+              "musician": 0.65,
+              "poet": 0.7,
+              "singer": 0.75
+            },
+            "ranked_guesses": [
+              "guitar",
+              "singer",
+              "poet",
+              "musician",
+              "album"
+            ],
+            "rationale": "The clue 'music' suggests words related to musical elements or artists. 'Guitar' and 'singer' are directly associated with music. 'Poet' can relate to lyrics or songwriting. 'Musician' is a broad term fitting the theme. 'Album' also connects to music recordings. 'Agent' and 'artist' are already revealed or guessed, so they are less likely options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "band": 0.6,
+              "guitar": 0.8,
+              "musician": 0.65,
+              "poet": 0.7,
+              "singer": 0.75
+            },
+            "ranked_guesses": [
+              "guitar",
+              "singer",
+              "poet",
+              "musician",
+              "band"
+            ],
+            "rationale": "The clue 'music' suggests words related to musical instruments, performers, or music-related concepts. 'Guitar' and 'singer' are directly associated with music. 'Poet' can be linked to lyrics or songwriting, and 'musician' or 'band' are also relevant. Prior guesses include 'artist', which is related to creative work, and the revealed words 'artist' and 'agent' hint at creative or entertainment fields. The remaining guesses aim to cover a range of music-related terms.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "singer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "Related to blue words 'guitar', 'singer', and 'spider' (as a metaphor for web of music)."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "fallback"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.0,
+              "beacon": 0.1,
+              "camera": 0.0,
+              "helmet": 0.05,
+              "jungle": 0.0,
+              "museum": 0.0,
+              "novel": 0.0,
+              "planet": 0.0,
+              "poet": 0.0,
+              "silver": 0.8,
+              "spider": 0.0,
+              "spirit": 0.0,
+              "summer": 0.0,
+              "temple": 0.05,
+              "voyage": 0.0,
+              "winter": 0.0,
+              "wizard": 0.0,
+              "writer": 0.0
+            },
+            "ranked_guesses": [
+              "silver",
+              "beacon",
+              "temple",
+              "helmet",
+              "writer",
+              "novel",
+              "poet",
+              "spirit",
+              "voyage",
+              "camera",
+              "museum",
+              "jungle",
+              "planet",
+              "alien",
+              "spider",
+              "summer",
+              "winter",
+              "wizard"
+            ],
+            "rationale": "Silver is strongly associated with 'fallback' as it represents the second-place or backup option, e.g., silver medal. The previous 'fallback' clue led to 'agent', possibly a backup operative. No other word fits as clearly.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.3,
+              "poet": 0.2,
+              "silver": 0.7,
+              "writer": 0.5
+            },
+            "ranked_guesses": [
+              "silver",
+              "writer",
+              "novel",
+              "poet"
+            ],
+            "rationale": "Fallback often means a secondary option, like silver medal. Writer is a common fallback career and pairs with agent. Prefer silver for directness.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "silver"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "fallback",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "artistic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.6,
+              "novel": 0.4,
+              "poet": 0.8
+            },
+            "ranked_guesses": [
+              "poet",
+              "museum",
+              "novel"
+            ],
+            "rationale": "The clue 'artistic' suggests words related to art and creativity. 'Poet' and 'museum' are strongly associated with art and artistic expression, making them prime guesses. 'Novel' is somewhat related through literature, which is a form of art, but slightly less direct. 'Artist' has already been guessed successfully, so it's less likely to be the next choice.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "museum": 0.6,
+              "poet": 0.5
+            },
+            "ranked_guesses": [
+              "artist",
+              "museum",
+              "poet"
+            ],
+            "rationale": "The word 'artistic' strongly relates to 'artist' (already guessed correctly), and also suggests cultural or creative concepts like 'museum' and 'poet'. 'Museum' fits well with art themes, while 'poet' relates to artistic expression. 'Artist' is the most direct connection, so it is prioritized.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "museum": 0.6,
+              "novel": 0.55,
+              "poet": 0.75
+            },
+            "ranked_guesses": [
+              "poet",
+              "museum",
+              "novel"
+            ],
+            "rationale": "The clue 'artistic' suggests words related to art, literature, and creativity. 'Poet' and 'museum' are strongly associated with art and creativity. 'Novel' also relates to literature and storytelling, fitting the artistic theme. 'Artist' has already been guessed, so it's excluded. 'Museum' and 'poet' are the most directly connected to 'artistic'. 'Novel' is a bit more indirect but still relevant. Remaining guesses are limited, so prioritizing the most relevant options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "artistic",
+          "count": 2,
+          "rationale": "Related to blue words like museum and poet, which are connected to art and creativity."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sun"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "{'word': 'summer', 'confidence': 0.9}",
+              "{'word': 'planet', 'confidence': 0.7}",
+              "{'word': 'temple', 'confidence': 0.6}"
+            ],
+            "rationale": "Clue 'sun' strongly suggests summer, planet (solar system), and temple (sun worship). We have 4 guesses allowed but only 3 strong matches. Stop after 3 to avoid risking neutral/opponent/assassin.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.6,
+              "planet": 0.95,
+              "summer": 0.95
+            },
+            "ranked_guesses": [
+              "summer",
+              "planet",
+              "beacon"
+            ],
+            "rationale": "Summer and planet are strongly associated with sun. Beacon is a light source, making it the next best candidate. Other words have weaker connections.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.7,
+              "planet": 0.8,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "planet",
+              "beacon"
+            ],
+            "rationale": "Sun is strongly associated with summer and planets orbiting the sun. A beacon is a light signal, metaphorically similar to the sun.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "planet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sun",
+          "count": 3,
+          "rationale": "Links jungle, summer, and planet via solar associations, while avoiding other words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.6,
+              "guitar": 0.7,
+              "museum": 0.4
+            },
+            "ranked_guesses": [
+              "guitar",
+              "artist",
+              "museum"
+            ],
+            "rationale": "The clue 'music' strongly suggests words related to musical elements or artists. 'Guitar' and 'artist' are directly related to music and have higher confidence. 'Museum' is less directly related but could be associated with music exhibits or art, hence included as a secondary guess.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.6,
+              "museum": 0.4,
+              "novel": 0.3
+            },
+            "ranked_guesses": [
+              "guitar",
+              "museum",
+              "novel"
+            ],
+            "rationale": "The clue 'music' strongly suggests words related to musical elements or themes. 'Guitar' is directly related to music and has a moderate confidence. 'Museum' and 'novel' are less directly connected but could be associated with cultural or artistic contexts related to music or the arts. Given the remaining guesses and the context, these seem like reasonable options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.6,
+              "museum": 0.3,
+              "wizard": 0.1
+            },
+            "ranked_guesses": [
+              "guitar",
+              "museum",
+              "wizard"
+            ],
+            "rationale": "The clue 'music' strongly suggests words related to musical elements or performers. 'Guitar' is directly related to music and has a moderate confidence. 'Museum' could be associated with music exhibits or musical history, but less directly. 'Wizard' is less related but could be linked to magical or fantasy themes often present in musical or artistic contexts. Given the current game state, focusing on musical and artistic words seems most strategic.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 2,
+          "rationale": "The words 'singer' and 'guitar' are both related to music, and guessing them could help the blue team."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "kipling"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.95,
+              "poet": 0.95,
+              "writer": 0.95
+            },
+            "ranked_guesses": [
+              "jungle",
+              "writer",
+              "poet"
+            ],
+            "rationale": "Kipling is most directly associated with 'The Jungle Book', making 'jungle' a strong guess. He was also a famous writer and poet, so 'writer' and 'poet' are clear connections.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.95,
+              "poet": 0.85,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "jungle",
+              "writer",
+              "poet"
+            ],
+            "rationale": "Kipling is most famous for 'The Jungle Book', so jungle is top. He is a writer and a poet, making writer and poet strong connections for the remaining two red words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "jungle": 0.95,
+              "poet": 0.85,
+              "writer": 0.9
+            },
+            "ranked_guesses": [
+              "jungle",
+              "writer",
+              "poet"
+            ],
+            "rationale": "Kipling wrote The Jungle Book, so jungle is strong. He was a writer and poet, hence writer and poet. Count is 3, so these three are most likely.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "jungle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "writer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "kipling",
+          "count": 3,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "artistic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "art": 0.6,
+              "artist": 0.9,
+              "museum": 0.4,
+              "writer": 0.7
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "art",
+              "museum"
+            ],
+            "rationale": "The clue 'artistic' strongly relates to 'artist' and 'writer', which are both on the board and have high confidence scores. 'Art' is also closely related, but slightly less specific. 'Museum' is a possible guess as it is associated with art, but less directly connected to the clue. Other words like 'agent', 'balloon', 'cloud', 'guitar', 'jungle', 'planet', 'rocket', 'silver', 'singer', 'summer' are less relevant to the 'artistic' theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "museum": 0.6,
+              "novel": 0.5,
+              "writer": 0.7
+            },
+            "ranked_guesses": [
+              "artist",
+              "writer",
+              "museum",
+              "novel"
+            ],
+            "rationale": "The clue 'artistic' strongly relates to 'artist' and 'writer', both associated with art. 'Museum' and 'novel' are also connected to art and creativity, fitting the theme. 'Artist' was already guessed successfully, so it is prioritized. 'Writer' is a close thematic fit, and 'museum' and 'novel' are plausible options based on the artistic theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.9,
+              "artistic": 0.8,
+              "writer": 0.6
+            },
+            "ranked_guesses": [
+              "artist",
+              "artistic",
+              "writer"
+            ],
+            "rationale": "The clue 'artistic' strongly relates to 'artist' and 'writer', both associated with creativity and art. 'Artist' was already guessed successfully, so the next best guess is 'artistic' itself, which directly matches the clue. 'Writer' also fits the artistic theme, though with slightly less certainty. Other words like 'museum' or 'temple' are less directly connected to the clue.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "artistic",
+          "count": 3,
+          "rationale": "The words 'museum', 'helmet', and 'poet' are associated with art and creativity, aligning with the clue 'artistic'."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "literary"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.99,
+              "poet": 0.95
+            },
+            "ranked_guesses": [
+              "novel",
+              "poet"
+            ],
+            "rationale": "Literary clue strongly points to novel and poet, both remaining and directly related to literature.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.95,
+              "poet": 0.9
+            },
+            "ranked_guesses": [
+              "novel",
+              "poet"
+            ],
+            "rationale": "Novel and poet are directly related to literary. Writer is already revealed as blue, so these are the strongest remaining literary words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "novel": 0.95,
+              "poet": 0.95
+            },
+            "ranked_guesses": [
+              "poet",
+              "novel"
+            ],
+            "rationale": "Literary clue suggests words directly related to literature; poet and novel are the strongest fits.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "novel"
+        },
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "literary",
+          "count": 2,
+          "rationale": "Both remaining red words, 'novel' and 'poet', are directly associated with literary works."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

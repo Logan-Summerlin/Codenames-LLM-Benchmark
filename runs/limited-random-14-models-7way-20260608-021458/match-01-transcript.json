@@ -1,0 +1,273 @@
+{
+  "board": {
+    "identities": {
+      "anchor": "neutral",
+      "atlas": "red",
+      "autumn": "neutral",
+      "baker": "neutral",
+      "compass": "red",
+      "desert": "red",
+      "family": "red",
+      "forest": "neutral",
+      "ghost": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "machine": "blue",
+      "metal": "blue",
+      "museum": "red",
+      "novel": "red",
+      "pilot": "blue",
+      "poet": "blue",
+      "singer": "neutral",
+      "summer": "blue",
+      "temple": "red",
+      "tiger": "blue",
+      "travel": "red",
+      "voyage": "neutral",
+      "wizard": "assassin",
+      "wood": "blue"
+    },
+    "revealed": [
+      "ghost",
+      "wizard"
+    ],
+    "words": {
+      "anchor": "neutral",
+      "atlas": "red",
+      "autumn": "neutral",
+      "baker": "neutral",
+      "compass": "red",
+      "desert": "red",
+      "family": "red",
+      "forest": "neutral",
+      "ghost": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "machine": "blue",
+      "metal": "blue",
+      "museum": "red",
+      "novel": "red",
+      "pilot": "blue",
+      "poet": "blue",
+      "singer": "neutral",
+      "summer": "blue",
+      "temple": "red",
+      "tiger": "blue",
+      "travel": "red",
+      "voyage": "neutral",
+      "wizard": "assassin",
+      "wood": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "mythology",
+        "count": 3,
+        "rationale": "Atlas is a figure from Greek mythology, compass and temple can be associated with ancient myths and legends."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.8,
+          "tiger": 0.6,
+          "wizard": 0.7
+        },
+        "ranked_guesses": [
+          "ghost",
+          "wizard",
+          "tiger"
+        ],
+        "rationale": "The clue 'mythology' suggests mythical or supernatural entities. 'Ghost', 'wizard', and 'tiger' (as in mythical creatures like were-tigers or divine tigers) fit this theme best.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "temple": 0.7,
+          "wizard": 0.8
+        },
+        "ranked_guesses": [
+          "ghost",
+          "wizard",
+          "temple"
+        ],
+        "rationale": "ghost, wizard, and temple are strongly associated with mythology. ghost is a supernatural entity, wizard is a mythical figure with magical powers, and temple is often linked to ancient myths and legends.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.9,
+          "ghost": 0.5,
+          "temple": 0.7,
+          "wizard": 0.6
+        },
+        "ranked_guesses": [
+          "atlas",
+          "temple",
+          "wizard",
+          "ghost"
+        ],
+        "rationale": "Atlas is strongly associated with mythology as a Titan. Temple and wizard are also linked to myths and legends. Ghost has mythological connections but is less direct.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "mythology"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ghost"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "wizard"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 4,
+    "public_event_count": 3,
+    "reason": "assassin",
+    "seed": "limited-random-14-models-7way-20260608-021458-m01",
+    "team_blue": "Qwen2.5 72B Instruct",
+    "team_red": "DeepSeek V3 0324",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "mythology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.8,
+              "tiger": 0.6,
+              "wizard": 0.7
+            },
+            "ranked_guesses": [
+              "ghost",
+              "wizard",
+              "tiger"
+            ],
+            "rationale": "The clue 'mythology' suggests mythical or supernatural entities. 'Ghost', 'wizard', and 'tiger' (as in mythical creatures like were-tigers or divine tigers) fit this theme best.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "temple": 0.7,
+              "wizard": 0.8
+            },
+            "ranked_guesses": [
+              "ghost",
+              "wizard",
+              "temple"
+            ],
+            "rationale": "ghost, wizard, and temple are strongly associated with mythology. ghost is a supernatural entity, wizard is a mythical figure with magical powers, and temple is often linked to ancient myths and legends.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.9,
+              "ghost": 0.5,
+              "temple": 0.7,
+              "wizard": 0.6
+            },
+            "ranked_guesses": [
+              "atlas",
+              "temple",
+              "wizard",
+              "ghost"
+            ],
+            "rationale": "Atlas is strongly associated with mythology as a Titan. Temple and wizard are also linked to myths and legends. Ghost has mythological connections but is less direct.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ghost"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythology",
+          "count": 3,
+          "rationale": "Atlas is a figure from Greek mythology, compass and temple can be associated with ancient myths and legends."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

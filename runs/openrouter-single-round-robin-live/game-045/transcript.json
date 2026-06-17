@@ -1,0 +1,2427 @@
+{
+  "board": {
+    "identities": {
+      "america": "neutral",
+      "bar": "red",
+      "bermuda": "blue",
+      "crane": "red",
+      "date": "neutral",
+      "dog": "blue",
+      "eagle": "neutral",
+      "face": "red",
+      "fan": "neutral",
+      "giant": "blue",
+      "hood": "red",
+      "hotel": "blue",
+      "kangaroo": "blue",
+      "knife": "assassin",
+      "olympus": "blue",
+      "pit": "blue",
+      "skyscraper": "blue",
+      "smuggler": "neutral",
+      "soldier": "red",
+      "spike": "neutral",
+      "star": "red",
+      "state": "red",
+      "tokyo": "neutral",
+      "train": "red",
+      "unicorn": "red"
+    },
+    "revealed": [
+      "america",
+      "bar",
+      "bermuda",
+      "dog",
+      "eagle",
+      "giant",
+      "hotel",
+      "kangaroo",
+      "olympus",
+      "pit",
+      "skyscraper",
+      "soldier",
+      "star"
+    ],
+    "words": {
+      "america": "neutral",
+      "bar": "red",
+      "bermuda": "blue",
+      "crane": "red",
+      "date": "neutral",
+      "dog": "blue",
+      "eagle": "neutral",
+      "face": "red",
+      "fan": "neutral",
+      "giant": "blue",
+      "hood": "red",
+      "hotel": "blue",
+      "kangaroo": "blue",
+      "knife": "assassin",
+      "olympus": "blue",
+      "pit": "blue",
+      "skyscraper": "blue",
+      "smuggler": "neutral",
+      "soldier": "red",
+      "spike": "neutral",
+      "star": "red",
+      "state": "red",
+      "tokyo": "neutral",
+      "train": "red",
+      "unicorn": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "national",
+        "count": 3,
+        "rationale": "The words 'eagle', 'star', and 'state' are all associated with national symbols or entities, particularly in the context of the United States."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "star": 0.6,
+          "state": 0.7
+        },
+        "ranked_guesses": [
+          "america",
+          "state",
+          "star"
+        ],
+        "rationale": "The clue 'national' strongly suggests 'america' as it is often referred to as 'national' in contexts like 'national anthem' or 'national pride'. 'State' and 'star' are also related to national symbols or entities, but with slightly lower confidence.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.6,
+          "star": 0.7,
+          "state": 0.9
+        },
+        "ranked_guesses": [
+          "state",
+          "star",
+          "america"
+        ],
+        "rationale": "'state' and 'star' are strongly associated with 'national' (e.g., 'nation-state', 'national star'). 'america' fits as a national symbol. Other words have weaker connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "star": 0.6,
+          "state": 0.7
+        },
+        "ranked_guesses": [
+          "america",
+          "state",
+          "star"
+        ],
+        "rationale": "'america' is strongly associated with 'national' (e.g., national anthem, national parks). 'state' and 'star' (as in star-spangled banner) are also relevant but less directly connected.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "architecture",
+        "count": 2,
+        "rationale": "Connects skyscraper and hotel, both of which are blue words."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 0.4,
+          "skyscraper": 0.9
+        },
+        "ranked_guesses": [
+          "skyscraper",
+          "hotel"
+        ],
+        "rationale": "Skyscraper is a direct example of architecture; hotel is a type of building.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 0.4,
+          "skyscraper": 0.9
+        },
+        "ranked_guesses": [
+          "skyscraper",
+          "hotel"
+        ],
+        "rationale": "Skyscraper is a direct example of architecture; hotel is a type of building.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 0.4,
+          "skyscraper": 0.9
+        },
+        "ranked_guesses": [
+          "skyscraper",
+          "hotel"
+        ],
+        "rationale": "Skyscraper is a direct example of architecture; hotel is a type of building.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "The words 'dog' and 'kangaroo' are both animals and belong to the opposing team (blue). This clue avoids revealing any board words directly and targets two blue words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dog": 0.9,
+          "kangaroo": 0.8,
+          "unicorn": 0.7
+        },
+        "ranked_guesses": [
+          "dog",
+          "kangaroo",
+          "unicorn"
+        ],
+        "rationale": "'dog' and 'kangaroo' are clear animal-related words with high confidence. 'unicorn' is mythical but still an animal.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dog": 0.9,
+          "eagle": 0.7,
+          "kangaroo": 0.6
+        },
+        "ranked_guesses": [
+          "dog",
+          "eagle",
+          "kangaroo"
+        ],
+        "rationale": "'dog' and 'eagle' are common animals with high relevance. 'kangaroo' is less common but still fits.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dog": 0.9,
+          "kangaroo": 0.8,
+          "unicorn": 0.7
+        },
+        "ranked_guesses": [
+          "dog",
+          "kangaroo",
+          "unicorn"
+        ],
+        "rationale": "'dog' and 'kangaroo' are clear animals, 'unicorn' is mythical but fits the clue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mythology",
+        "count": 2,
+        "rationale": "Connects Olympus and Giant."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olympus": 0.9,
+          "unicorn": 0.6
+        },
+        "ranked_guesses": [
+          "olympus",
+          "unicorn"
+        ],
+        "rationale": "Olympus is the home of Greek gods in mythology, and unicorns are mythical creatures.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olympus": 0.9,
+          "unicorn": 0.6
+        },
+        "ranked_guesses": [
+          "olympus",
+          "unicorn"
+        ],
+        "rationale": "Olympus is the home of the Greek gods, and a unicorn is a mythical creature.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "olympus": 0.9,
+          "unicorn": 0.6
+        },
+        "ranked_guesses": [
+          "olympus",
+          "unicorn"
+        ],
+        "rationale": "Olympus is the home of the Greek gods, and a unicorn is a mythical creature.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "military",
+        "count": 3,
+        "rationale": "The words 'soldier', 'crane', and 'bar' can be associated with military themes. 'Soldier' is directly related, 'crane' can refer to military equipment, and 'bar' can relate to military bars or establishments."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "soldier": 0.9,
+          "star": 0.6,
+          "state": 0.5
+        },
+        "ranked_guesses": [
+          "soldier",
+          "eagle",
+          "star",
+          "state"
+        ],
+        "rationale": "'soldier' is strongly associated with 'military'. 'eagle' and 'star' are common military symbols. 'state' is a weaker connection but possible.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "soldier": 0.9,
+          "star": 0.6,
+          "state": 0.5
+        },
+        "ranked_guesses": [
+          "soldier",
+          "eagle",
+          "star",
+          "state"
+        ],
+        "rationale": "soldier is directly related to military, eagle and star are symbols often associated with military, state could relate to military state.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "soldier": 0.9,
+          "state": 0.6
+        },
+        "ranked_guesses": [
+          "soldier",
+          "eagle",
+          "state"
+        ],
+        "rationale": "'soldier' is strongly associated with 'military', 'eagle' can represent military symbols, and 'state' relates to military power.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "island",
+        "count": 2,
+        "rationale": "Bermuda is an island, and a pit can be a hole in the ground, but more importantly, Bermuda and Hotel (vacation spots) or Pit (as in a pit stop/location) are less likely than Bermuda and Pit (if thinking of a pit as a hole/island contrast) - actually, Bermuda and Hotel are both travel destinations. Let's try 'vacation' for Bermuda and Hotel."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.9,
+          "tokyo": 0.4
+        },
+        "ranked_guesses": [
+          "bermuda",
+          "tokyo"
+        ],
+        "rationale": "Bermuda is a well-known island; Tokyo is located on an island (Honshu).",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.9,
+          "tokyo": 0.4
+        },
+        "ranked_guesses": [
+          "bermuda",
+          "tokyo"
+        ],
+        "rationale": "Bermuda is a well-known island. Tokyo is located on Honshu island, though less direct than Bermuda.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bermuda": 0.9,
+          "tokyo": 0.4
+        },
+        "ranked_guesses": [
+          "bermuda",
+          "tokyo"
+        ],
+        "rationale": "Bermuda is a well-known island. Tokyo is located on Honshu island, though less direct than Bermuda.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "symbol",
+        "count": 2,
+        "rationale": "The words 'star' and 'eagle' are both symbols commonly used in flags and emblems, which fits the red team's remaining words without directly revealing any board words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "star": 0.9,
+          "state": 0.6
+        },
+        "ranked_guesses": [
+          "star",
+          "eagle",
+          "state"
+        ],
+        "rationale": "'star' is a strong symbol, 'eagle' is a national symbol, and 'state' can symbolize governance or identity.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "star": 0.9,
+          "state": 0.6
+        },
+        "ranked_guesses": [
+          "star",
+          "eagle",
+          "state"
+        ],
+        "rationale": "'star' is a strong symbol, 'eagle' is a national symbol, and 'state' can symbolize governance.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.7,
+          "star": 0.9,
+          "state": 0.6
+        },
+        "ranked_guesses": [
+          "star",
+          "eagle",
+          "state"
+        ],
+        "rationale": "'star' is a strong symbol, often used in flags and emblems. 'eagle' is a national symbol for some countries. 'state' can symbolize government or authority.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mammal",
+        "count": 2,
+        "rationale": "Targets kangaroo and giant (as in giant panda or similar), though giant is a stretch, it's the best link for kangaroo and potentially others. Wait, giant is blue, kangaroo is blue. Let's use mammal for kangaroo and giant (if interpreted as giant panda) or just focus on kangaroo and maybe pit (no). Actually, kangaroo and giant are the remaining blue words along with hotel and pit. Let's try 'marsupial' for 1 or 'mammal' for kangaroo."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kangaroo": 0.9,
+          "unicorn": 0.4
+        },
+        "ranked_guesses": [
+          "kangaroo",
+          "unicorn"
+        ],
+        "rationale": "Kangaroo is a definitive mammal. Unicorn is a mythical mammal.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kangaroo": 0.9,
+          "unicorn": 0.4
+        },
+        "ranked_guesses": [
+          "kangaroo",
+          "unicorn"
+        ],
+        "rationale": "Kangaroo is a definitive mammal. Unicorn is a mythical mammal.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kangaroo": 0.9,
+          "unicorn": 0.4
+        },
+        "ranked_guesses": [
+          "kangaroo",
+          "unicorn"
+        ],
+        "rationale": "Kangaroo is a definitive mammal. Unicorn is a mythical mammal.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "patriotic",
+        "count": 3,
+        "rationale": "Connects to 'eagle' (symbol of patriotism), 'state' (as in state symbols), and 'face' (as in Mount Rushmore). Avoids assassin 'knife' and neutral words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "face": 0.5,
+          "state": 0.7
+        },
+        "ranked_guesses": [
+          "eagle",
+          "state",
+          "face"
+        ],
+        "rationale": "eagle is a patriotic symbol, state relates to national identity, face could relate to patriotic imagery like Mount Rushmore",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "state": 0.7,
+          "train": 0.6
+        },
+        "ranked_guesses": [
+          "eagle",
+          "state",
+          "train"
+        ],
+        "rationale": "eagle is a strong patriotic symbol, state relates to national identity, train could be linked to patriotic themes like national rail.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "eagle": 0.9,
+          "giant": 0.5,
+          "state": 0.7
+        },
+        "ranked_guesses": [
+          "eagle",
+          "state",
+          "giant"
+        ],
+        "rationale": "eagle is strongly associated with patriotism, state fits as a patriotic symbol, giant is less clear but could relate to national pride.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "abyss",
+        "count": 2,
+        "rationale": "Pit and Giant are both associated with deep holes or massive scale/depths."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "giant": 0.2,
+          "pit": 0.9
+        },
+        "ranked_guesses": [
+          "pit",
+          "giant"
+        ],
+        "rationale": "An abyss is defined as a deep or seemingly bottomless pit.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pit": 0.9
+        },
+        "ranked_guesses": [
+          "pit"
+        ],
+        "rationale": "An abyss is defined as a deep or seemingly bottomless chasm, which is a direct synonym for a pit.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "giant": 0.2,
+          "pit": 0.9
+        },
+        "ranked_guesses": [
+          "pit",
+          "giant"
+        ],
+        "rationale": "An abyss is defined as a deep or seemingly bottomless pit.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "alcohol",
+        "count": 2,
+        "rationale": "The words 'bar' and 'hood' can be associated with alcohol, as 'bar' is a place where alcohol is served and 'hood' can refer to a neighborhood bar."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.9,
+          "date": 0.7,
+          "hotel": 0.6
+        },
+        "ranked_guesses": [
+          "bar",
+          "date",
+          "hotel"
+        ],
+        "rationale": "'bar' is strongly associated with alcohol. 'date' and 'hotel' are less direct but possible connections.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.9,
+          "date": 0.5,
+          "hotel": 0.7
+        },
+        "ranked_guesses": [
+          "bar",
+          "hotel",
+          "date"
+        ],
+        "rationale": "'bar' is strongly associated with alcohol, 'hotel' often has bars, and 'date' can refer to a date palm which is used in some alcoholic beverages.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.9,
+          "date": 0.7,
+          "hotel": 0.6
+        },
+        "ranked_guesses": [
+          "bar",
+          "date",
+          "hotel"
+        ],
+        "rationale": "'bar' is strongly associated with alcohol. 'date' and 'hotel' are less direct but possible in contexts like 'date night drinks' or 'hotel bar'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "colossal",
+        "count": 2,
+        "rationale": "Giant and Hotel are the remaining blue words. Giant is a synonym for colossal, and Hotel can be associated with large, colossal buildings."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.3,
+          "giant": 0.9
+        },
+        "ranked_guesses": [
+          "giant",
+          "crane"
+        ],
+        "rationale": "'Giant' is a direct synonym for 'colossal'. 'Crane' could refer to the large machinery, but 'giant' is a much stronger fit.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.3,
+          "giant": 0.9
+        },
+        "ranked_guesses": [
+          "giant",
+          "crane"
+        ],
+        "rationale": "'Giant' is a direct synonym for 'colossal'. 'Crane' can refer to large machinery, but 'giant' is the primary fit.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.3,
+          "giant": 0.9
+        },
+        "ranked_guesses": [
+          "giant",
+          "crane"
+        ],
+        "rationale": "'Giant' is a direct synonym for 'colossal'. 'Crane' can refer to a large piece of machinery, though 'giant' is much stronger.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "equipment",
+        "count": 2,
+        "rationale": "The words 'crane' and 'train' are both types of equipment or machinery, fitting the red team's remaining words."
+      },
+      "agent_id": "DeepSeek V3 0324-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.7,
+          "knife": 0.6,
+          "train": 0.5
+        },
+        "ranked_guesses": [
+          "crane",
+          "knife",
+          "train"
+        ],
+        "rationale": "'crane' fits as equipment (construction equipment), 'knife' is a tool (cutting equipment), and 'train' could relate to railway equipment.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.7,
+          "knife": 0.6,
+          "train": 0.5
+        },
+        "ranked_guesses": [
+          "crane",
+          "knife",
+          "train"
+        ],
+        "rationale": "'crane' is heavy equipment, 'knife' is a tool (equipment), 'train' involves equipment but less directly.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crane": 0.6,
+          "knife": 0.7,
+          "train": 0.5
+        },
+        "ranked_guesses": [
+          "knife",
+          "crane",
+          "train"
+        ],
+        "rationale": "'knife' is a common piece of equipment, 'crane' can refer to construction equipment, and 'train' relates to railway equipment.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V3 0324-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "lodging",
+        "count": 1,
+        "rationale": "The only remaining blue word is 'hotel'."
+      },
+      "agent_id": "Gemma 4 31B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 1.0
+        },
+        "ranked_guesses": [
+          "hotel"
+        ],
+        "rationale": "The clue 'lodging' is a direct synonym for 'hotel'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 1.0
+        },
+        "ranked_guesses": [
+          "hotel"
+        ],
+        "rationale": "The clue 'lodging' directly refers to a place to stay, and 'hotel' is the only word on the board that fits this description.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "hotel": 1.0
+        },
+        "ranked_guesses": [
+          "hotel"
+        ],
+        "rationale": "The clue 'lodging' is a direct synonym for 'hotel'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 4 31B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "national"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "america"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "architecture"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "skyscraper"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dog"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythology"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "olympus"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "military"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "soldier"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "island"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "bermuda"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "symbol"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "star"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mammal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "kangaroo"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "patriotic"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "eagle"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "abyss"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pit"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "alcohol"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bar"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "colossal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "giant"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "equipment"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "lodging"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "hotel"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 56,
+    "public_event_count": 37,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-045-deepseek_deepseek_chat_v3_0324-vs-google_gemma_4_31b_it",
+    "team_blue": "Gemma 4 31B",
+    "team_red": "DeepSeek V3 0324",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "national"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "star": 0.6,
+              "state": 0.7
+            },
+            "ranked_guesses": [
+              "america",
+              "state",
+              "star"
+            ],
+            "rationale": "The clue 'national' strongly suggests 'america' as it is often referred to as 'national' in contexts like 'national anthem' or 'national pride'. 'State' and 'star' are also related to national symbols or entities, but with slightly lower confidence.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.6,
+              "star": 0.7,
+              "state": 0.9
+            },
+            "ranked_guesses": [
+              "state",
+              "star",
+              "america"
+            ],
+            "rationale": "'state' and 'star' are strongly associated with 'national' (e.g., 'nation-state', 'national star'). 'america' fits as a national symbol. Other words have weaker connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "star": 0.6,
+              "state": 0.7
+            },
+            "ranked_guesses": [
+              "america",
+              "state",
+              "star"
+            ],
+            "rationale": "'america' is strongly associated with 'national' (e.g., national anthem, national parks). 'state' and 'star' (as in star-spangled banner) are also relevant but less directly connected.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "america"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "national",
+          "count": 3,
+          "rationale": "The words 'eagle', 'star', and 'state' are all associated with national symbols or entities, particularly in the context of the United States."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "architecture"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hotel": 0.4,
+              "skyscraper": 0.9
+            },
+            "ranked_guesses": [
+              "skyscraper",
+              "hotel"
+            ],
+            "rationale": "Skyscraper is a direct example of architecture; hotel is a type of building.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hotel": 0.4,
+              "skyscraper": 0.9
+            },
+            "ranked_guesses": [
+              "skyscraper",
+              "hotel"
+            ],
+            "rationale": "Skyscraper is a direct example of architecture; hotel is a type of building.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hotel": 0.4,
+              "skyscraper": 0.9
+            },
+            "ranked_guesses": [
+              "skyscraper",
+              "hotel"
+            ],
+            "rationale": "Skyscraper is a direct example of architecture; hotel is a type of building.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "skyscraper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "architecture",
+          "count": 2,
+          "rationale": "Connects skyscraper and hotel, both of which are blue words."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "dog": 0.9,
+              "kangaroo": 0.8,
+              "unicorn": 0.7
+            },
+            "ranked_guesses": [
+              "dog",
+              "kangaroo",
+              "unicorn"
+            ],
+            "rationale": "'dog' and 'kangaroo' are clear animal-related words with high confidence. 'unicorn' is mythical but still an animal.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dog": 0.9,
+              "eagle": 0.7,
+              "kangaroo": 0.6
+            },
+            "ranked_guesses": [
+              "dog",
+              "eagle",
+              "kangaroo"
+            ],
+            "rationale": "'dog' and 'eagle' are common animals with high relevance. 'kangaroo' is less common but still fits.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dog": 0.9,
+              "kangaroo": 0.8,
+              "unicorn": 0.7
+            },
+            "ranked_guesses": [
+              "dog",
+              "kangaroo",
+              "unicorn"
+            ],
+            "rationale": "'dog' and 'kangaroo' are clear animals, 'unicorn' is mythical but fits the clue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dog"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "The words 'dog' and 'kangaroo' are both animals and belong to the opposing team (blue). This clue avoids revealing any board words directly and targets two blue words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mythology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "olympus": 0.9,
+              "unicorn": 0.6
+            },
+            "ranked_guesses": [
+              "olympus",
+              "unicorn"
+            ],
+            "rationale": "Olympus is the home of Greek gods in mythology, and unicorns are mythical creatures.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "olympus": 0.9,
+              "unicorn": 0.6
+            },
+            "ranked_guesses": [
+              "olympus",
+              "unicorn"
+            ],
+            "rationale": "Olympus is the home of the Greek gods, and a unicorn is a mythical creature.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "olympus": 0.9,
+              "unicorn": 0.6
+            },
+            "ranked_guesses": [
+              "olympus",
+              "unicorn"
+            ],
+            "rationale": "Olympus is the home of the Greek gods, and a unicorn is a mythical creature.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "olympus"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mythology",
+          "count": 2,
+          "rationale": "Connects Olympus and Giant."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "military"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "soldier": 0.9,
+              "star": 0.6,
+              "state": 0.5
+            },
+            "ranked_guesses": [
+              "soldier",
+              "eagle",
+              "star",
+              "state"
+            ],
+            "rationale": "'soldier' is strongly associated with 'military'. 'eagle' and 'star' are common military symbols. 'state' is a weaker connection but possible.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "soldier": 0.9,
+              "star": 0.6,
+              "state": 0.5
+            },
+            "ranked_guesses": [
+              "soldier",
+              "eagle",
+              "star",
+              "state"
+            ],
+            "rationale": "soldier is directly related to military, eagle and star are symbols often associated with military, state could relate to military state.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "soldier": 0.9,
+              "state": 0.6
+            },
+            "ranked_guesses": [
+              "soldier",
+              "eagle",
+              "state"
+            ],
+            "rationale": "'soldier' is strongly associated with 'military', 'eagle' can represent military symbols, and 'state' relates to military power.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "soldier"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "military",
+          "count": 3,
+          "rationale": "The words 'soldier', 'crane', and 'bar' can be associated with military themes. 'Soldier' is directly related, 'crane' can refer to military equipment, and 'bar' can relate to military bars or establishments."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "island"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.9,
+              "tokyo": 0.4
+            },
+            "ranked_guesses": [
+              "bermuda",
+              "tokyo"
+            ],
+            "rationale": "Bermuda is a well-known island; Tokyo is located on an island (Honshu).",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.9,
+              "tokyo": 0.4
+            },
+            "ranked_guesses": [
+              "bermuda",
+              "tokyo"
+            ],
+            "rationale": "Bermuda is a well-known island. Tokyo is located on Honshu island, though less direct than Bermuda.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bermuda": 0.9,
+              "tokyo": 0.4
+            },
+            "ranked_guesses": [
+              "bermuda",
+              "tokyo"
+            ],
+            "rationale": "Bermuda is a well-known island. Tokyo is located on Honshu island, though less direct than Bermuda.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "bermuda"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "island",
+          "count": 2,
+          "rationale": "Bermuda is an island, and a pit can be a hole in the ground, but more importantly, Bermuda and Hotel (vacation spots) or Pit (as in a pit stop/location) are less likely than Bermuda and Pit (if thinking of a pit as a hole/island contrast) - actually, Bermuda and Hotel are both travel destinations. Let's try 'vacation' for Bermuda and Hotel."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "symbol"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "star": 0.9,
+              "state": 0.6
+            },
+            "ranked_guesses": [
+              "star",
+              "eagle",
+              "state"
+            ],
+            "rationale": "'star' is a strong symbol, 'eagle' is a national symbol, and 'state' can symbolize governance or identity.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "star": 0.9,
+              "state": 0.6
+            },
+            "ranked_guesses": [
+              "star",
+              "eagle",
+              "state"
+            ],
+            "rationale": "'star' is a strong symbol, 'eagle' is a national symbol, and 'state' can symbolize governance.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.7,
+              "star": 0.9,
+              "state": 0.6
+            },
+            "ranked_guesses": [
+              "star",
+              "eagle",
+              "state"
+            ],
+            "rationale": "'star' is a strong symbol, often used in flags and emblems. 'eagle' is a national symbol for some countries. 'state' can symbolize government or authority.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "star"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "symbol",
+          "count": 2,
+          "rationale": "The words 'star' and 'eagle' are both symbols commonly used in flags and emblems, which fits the red team's remaining words without directly revealing any board words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "mammal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "kangaroo": 0.9,
+              "unicorn": 0.4
+            },
+            "ranked_guesses": [
+              "kangaroo",
+              "unicorn"
+            ],
+            "rationale": "Kangaroo is a definitive mammal. Unicorn is a mythical mammal.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "kangaroo": 0.9,
+              "unicorn": 0.4
+            },
+            "ranked_guesses": [
+              "kangaroo",
+              "unicorn"
+            ],
+            "rationale": "Kangaroo is a definitive mammal. Unicorn is a mythical mammal.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "kangaroo": 0.9,
+              "unicorn": 0.4
+            },
+            "ranked_guesses": [
+              "kangaroo",
+              "unicorn"
+            ],
+            "rationale": "Kangaroo is a definitive mammal. Unicorn is a mythical mammal.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "kangaroo"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mammal",
+          "count": 2,
+          "rationale": "Targets kangaroo and giant (as in giant panda or similar), though giant is a stretch, it's the best link for kangaroo and potentially others. Wait, giant is blue, kangaroo is blue. Let's use mammal for kangaroo and giant (if interpreted as giant panda) or just focus on kangaroo and maybe pit (no). Actually, kangaroo and giant are the remaining blue words along with hotel and pit. Let's try 'marsupial' for 1 or 'mammal' for kangaroo."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "patriotic"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "face": 0.5,
+              "state": 0.7
+            },
+            "ranked_guesses": [
+              "eagle",
+              "state",
+              "face"
+            ],
+            "rationale": "eagle is a patriotic symbol, state relates to national identity, face could relate to patriotic imagery like Mount Rushmore",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "state": 0.7,
+              "train": 0.6
+            },
+            "ranked_guesses": [
+              "eagle",
+              "state",
+              "train"
+            ],
+            "rationale": "eagle is a strong patriotic symbol, state relates to national identity, train could be linked to patriotic themes like national rail.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "eagle": 0.9,
+              "giant": 0.5,
+              "state": 0.7
+            },
+            "ranked_guesses": [
+              "eagle",
+              "state",
+              "giant"
+            ],
+            "rationale": "eagle is strongly associated with patriotism, state fits as a patriotic symbol, giant is less clear but could relate to national pride.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "eagle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "patriotic",
+          "count": 3,
+          "rationale": "Connects to 'eagle' (symbol of patriotism), 'state' (as in state symbols), and 'face' (as in Mount Rushmore). Avoids assassin 'knife' and neutral words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "abyss"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "giant": 0.2,
+              "pit": 0.9
+            },
+            "ranked_guesses": [
+              "pit",
+              "giant"
+            ],
+            "rationale": "An abyss is defined as a deep or seemingly bottomless pit.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "pit": 0.9
+            },
+            "ranked_guesses": [
+              "pit"
+            ],
+            "rationale": "An abyss is defined as a deep or seemingly bottomless chasm, which is a direct synonym for a pit.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "giant": 0.2,
+              "pit": 0.9
+            },
+            "ranked_guesses": [
+              "pit",
+              "giant"
+            ],
+            "rationale": "An abyss is defined as a deep or seemingly bottomless pit.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pit"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "abyss",
+          "count": 2,
+          "rationale": "Pit and Giant are both associated with deep holes or massive scale/depths."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "alcohol"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.9,
+              "date": 0.7,
+              "hotel": 0.6
+            },
+            "ranked_guesses": [
+              "bar",
+              "date",
+              "hotel"
+            ],
+            "rationale": "'bar' is strongly associated with alcohol. 'date' and 'hotel' are less direct but possible connections.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.9,
+              "date": 0.5,
+              "hotel": 0.7
+            },
+            "ranked_guesses": [
+              "bar",
+              "hotel",
+              "date"
+            ],
+            "rationale": "'bar' is strongly associated with alcohol, 'hotel' often has bars, and 'date' can refer to a date palm which is used in some alcoholic beverages.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.9,
+              "date": 0.7,
+              "hotel": 0.6
+            },
+            "ranked_guesses": [
+              "bar",
+              "date",
+              "hotel"
+            ],
+            "rationale": "'bar' is strongly associated with alcohol. 'date' and 'hotel' are less direct but possible in contexts like 'date night drinks' or 'hotel bar'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "alcohol",
+          "count": 2,
+          "rationale": "The words 'bar' and 'hood' can be associated with alcohol, as 'bar' is a place where alcohol is served and 'hood' can refer to a neighborhood bar."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "colossal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.3,
+              "giant": 0.9
+            },
+            "ranked_guesses": [
+              "giant",
+              "crane"
+            ],
+            "rationale": "'Giant' is a direct synonym for 'colossal'. 'Crane' could refer to the large machinery, but 'giant' is a much stronger fit.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.3,
+              "giant": 0.9
+            },
+            "ranked_guesses": [
+              "giant",
+              "crane"
+            ],
+            "rationale": "'Giant' is a direct synonym for 'colossal'. 'Crane' can refer to large machinery, but 'giant' is the primary fit.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.3,
+              "giant": 0.9
+            },
+            "ranked_guesses": [
+              "giant",
+              "crane"
+            ],
+            "rationale": "'Giant' is a direct synonym for 'colossal'. 'Crane' can refer to a large piece of machinery, though 'giant' is much stronger.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "giant"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "colossal",
+          "count": 2,
+          "rationale": "Giant and Hotel are the remaining blue words. Giant is a synonym for colossal, and Hotel can be associated with large, colossal buildings."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "equipment"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.7,
+              "knife": 0.6,
+              "train": 0.5
+            },
+            "ranked_guesses": [
+              "crane",
+              "knife",
+              "train"
+            ],
+            "rationale": "'crane' fits as equipment (construction equipment), 'knife' is a tool (cutting equipment), and 'train' could relate to railway equipment.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.7,
+              "knife": 0.6,
+              "train": 0.5
+            },
+            "ranked_guesses": [
+              "crane",
+              "knife",
+              "train"
+            ],
+            "rationale": "'crane' is heavy equipment, 'knife' is a tool (equipment), 'train' involves equipment but less directly.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crane": 0.6,
+              "knife": 0.7,
+              "train": 0.5
+            },
+            "ranked_guesses": [
+              "knife",
+              "crane",
+              "train"
+            ],
+            "rationale": "'knife' is a common piece of equipment, 'crane' can refer to construction equipment, and 'train' relates to railway equipment.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V3 0324-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "equipment",
+          "count": 2,
+          "rationale": "The words 'crane' and 'train' are both types of equipment or machinery, fitting the red team's remaining words."
+        },
+        "agent_id": "DeepSeek V3 0324-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "lodging"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "hotel": 1.0
+            },
+            "ranked_guesses": [
+              "hotel"
+            ],
+            "rationale": "The clue 'lodging' is a direct synonym for 'hotel'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hotel": 1.0
+            },
+            "ranked_guesses": [
+              "hotel"
+            ],
+            "rationale": "The clue 'lodging' directly refers to a place to stay, and 'hotel' is the only word on the board that fits this description.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "hotel": 1.0
+            },
+            "ranked_guesses": [
+              "hotel"
+            ],
+            "rationale": "The clue 'lodging' is a direct synonym for 'hotel'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 4 31B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "hotel"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "lodging",
+          "count": 1,
+          "rationale": "The only remaining blue word is 'hotel'."
+        },
+        "agent_id": "Gemma 4 31B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

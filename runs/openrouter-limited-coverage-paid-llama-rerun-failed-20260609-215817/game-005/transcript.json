@@ -1,0 +1,1791 @@
+{
+  "board": {
+    "identities": {
+      "america": "blue",
+      "australia": "red",
+      "bed": "red",
+      "calf": "red",
+      "church": "blue",
+      "cloak": "assassin",
+      "field": "red",
+      "foot": "red",
+      "giant": "neutral",
+      "honey": "neutral",
+      "log": "blue",
+      "mercury": "blue",
+      "mouth": "blue",
+      "nurse": "blue",
+      "olive": "red",
+      "paper": "neutral",
+      "pie": "neutral",
+      "pyramid": "blue",
+      "ray": "red",
+      "shadow": "red",
+      "teacher": "red",
+      "torch": "neutral",
+      "tube": "neutral",
+      "turkey": "blue",
+      "water": "neutral"
+    },
+    "revealed": [
+      "america",
+      "australia",
+      "bed",
+      "calf",
+      "church",
+      "log",
+      "mercury",
+      "mouth",
+      "nurse",
+      "pyramid",
+      "turkey",
+      "water"
+    ],
+    "words": {
+      "america": "blue",
+      "australia": "red",
+      "bed": "red",
+      "calf": "red",
+      "church": "blue",
+      "cloak": "assassin",
+      "field": "red",
+      "foot": "red",
+      "giant": "neutral",
+      "honey": "neutral",
+      "log": "blue",
+      "mercury": "blue",
+      "mouth": "blue",
+      "nurse": "blue",
+      "olive": "red",
+      "paper": "neutral",
+      "pie": "neutral",
+      "pyramid": "blue",
+      "ray": "red",
+      "shadow": "red",
+      "teacher": "red",
+      "torch": "neutral",
+      "tube": "neutral",
+      "turkey": "blue",
+      "water": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sleep",
+        "count": 3,
+        "rationale": "Associated with 'bed', 'calf', and 'shadow'."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9,
+          "field": 0.4,
+          "teacher": 0.7,
+          "torch": 0.5,
+          "water": 0.6
+        },
+        "ranked_guesses": [
+          "bed",
+          "teacher",
+          "water",
+          "torch",
+          "field"
+        ],
+        "rationale": "The word 'sleep' suggests connections to 'bed', 'torch', 'water', and 'teacher'. These are ranked based on their likelihood of being related to 'sleep'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9,
+          "nurse": 0.7,
+          "torch": 0.6
+        },
+        "ranked_guesses": [
+          "bed",
+          "nurse",
+          "torch"
+        ],
+        "rationale": "The clue 'sleep' suggests words related to rest or nighttime. 'Bed' is directly associated with sleep, 'nurse' with caring for patients who may need rest, and 'torch' with night-time activities.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bed": 0.9,
+          "nurse": 0.7,
+          "torch": 0.6
+        },
+        "ranked_guesses": [
+          "bed",
+          "nurse",
+          "torch"
+        ],
+        "rationale": "The clue 'sleep' strongly suggests 'bed' due to direct association. 'Nurse' and 'torch' are related to sleep in contexts like night shifts or sleep aids.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "continent",
+        "count": 2,
+        "rationale": "America and Australia are both continents, and both are blue team words. This clue avoids any substring match with board words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "australia": 0.9
+        },
+        "ranked_guesses": [
+          "america",
+          "australia"
+        ],
+        "rationale": "Clue 'continent' count 2. 'america' and 'australia' are continents. Other words like 'turkey' (country) or 'mercury' (planet) don't fit.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.9,
+          "australia": 0.9
+        },
+        "ranked_guesses": [
+          "america",
+          "australia"
+        ],
+        "rationale": "America and Australia are continents.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "america": 0.95,
+          "australia": 0.95
+        },
+        "ranked_guesses": [
+          "america",
+          "australia"
+        ],
+        "rationale": "Continent clue points to America and Australia as continents; both are on the board and unrelated to other clues.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "liquid",
+        "count": 2,
+        "rationale": "The clue 'liquid' is intended to guide the guessers towards words associated with water or fluids, such as 'water' and 'mouth'."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "water": 0.8
+        },
+        "ranked_guesses": [
+          "water"
+        ],
+        "rationale": "The clue 'liquid' suggests a connection to 'water' due to its association with liquids.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "water"
+        ],
+        "rationale": "Water is a liquid and fits the clue well.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.7,
+          "water": 0.9
+        },
+        "ranked_guesses": [
+          "mercury",
+          "water"
+        ],
+        "rationale": "The clue 'liquid' suggests words related to liquids. 'Mercury' is a liquid metal and 'water' is a common liquid. 'Water' is more likely to be a red word due to its common association with liquids and its relevance to the revealed word 'water'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "mouth",
+        "count": 2,
+        "rationale": "Mouth is a blue word, and it connects to 'log' (as in logorrhea or talking) and 'turkey' (as in turkey mouth or gobbler). Both are blue and unrevealed."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "liquid",
+        "count": 2,
+        "rationale": "Liquid connects to 'mercury' (blue) and 'honey' (neutral)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.9
+        },
+        "ranked_guesses": [
+          "mercury"
+        ],
+        "rationale": "Mercury is a liquid element and connects to 'liquid' clue, making it a strong candidate for the red team.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.9
+        },
+        "ranked_guesses": [
+          "mercury"
+        ],
+        "rationale": "Mercury is a liquid and unrevealed, fitting the clue 'liquid'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mercury": 0.9
+        },
+        "ranked_guesses": [
+          "mercury"
+        ],
+        "rationale": "Mercury is a liquid element and fits the clue 'liquid' given the context of the board. It is also unrevealed and connects to 'water' as a liquid.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "building",
+        "count": 3,
+        "rationale": "Church and pyramid are buildings, and log can refer to a log cabin or building material. These three blue words are connected by the concept of building."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.8,
+          "log": 0.7,
+          "pyramid": 0.9
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "church",
+          "log"
+        ],
+        "rationale": "Pyramid and church are types of buildings; log is a building material.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.9,
+          "log": 0.6,
+          "pyramid": 0.8
+        },
+        "ranked_guesses": [
+          "church",
+          "pyramid",
+          "log"
+        ],
+        "rationale": "'church' and 'pyramid' are types of buildings; 'log' is a building material (log cabins).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "church": 0.7,
+          "foot": 0.5,
+          "pyramid": 0.9
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "church",
+          "foot"
+        ],
+        "rationale": "Building clue: pyramid is a clear building structure, church is a building, foot could be foundation of a building but less direct. Avoid already revealed blue words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "blue",
+        "count": 3,
+        "rationale": "Blue words related to 'building' include 'pyramid', 'church', and 'log'."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "pyramid": 0.7
+        },
+        "ranked_guesses": [
+          "pyramid"
+        ],
+        "rationale": "The clue 'building' suggests words related to structures or constructions. 'Pyramid' fits this clue as it is a type of building. The word 'pyramid' has been guessed correctly by the blue team, making it a strong candidate for the next guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "liquid": 0.9
+        },
+        "ranked_guesses": [
+          "liquid"
+        ],
+        "rationale": "Liquid is a strong guess due to its connection to 'water' (blue) and 'mercury' (blue).",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mouth": 0.8
+        },
+        "ranked_guesses": [
+          "mouth"
+        ],
+        "rationale": "Mouth is a blue word that connects to 'log' and 'turkey', both unrevealed and blue, making it a strong guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "roast",
+        "count": 3,
+        "rationale": "Roast connects turkey (roast turkey), log (roast log in a fire), and mouth (verbal roast). All three are blue and unrevealed."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "calf": 0.6,
+          "mouth": 0.5,
+          "turkey": 0.9
+        },
+        "ranked_guesses": [
+          "turkey",
+          "calf",
+          "mouth"
+        ],
+        "rationale": "Turkey is the most common roast food. Calf could be veal roast. Mouth relates to comedy roast (speaking).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.4,
+          "mouth": 0.5,
+          "turkey": 0.9
+        },
+        "ranked_guesses": [
+          "turkey",
+          "mouth",
+          "honey"
+        ],
+        "rationale": "Roast commonly refers to cooking meat, especially turkey. Also comedy roast relates to mouth. Honey-roasted dishes are common.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.7,
+          "olive": 0.6,
+          "turkey": 0.9
+        },
+        "ranked_guesses": [
+          "turkey",
+          "honey",
+          "olive"
+        ],
+        "rationale": "Roast is a cooking method; turkey is a classic roast, honey is common in honey-roasted dishes, and olives can be roasted. These are likely the intended blue words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "blue",
+        "count": 3,
+        "rationale": "Blue connects to 'blue' (as in blue pyramid) and 'turkey' (as in turkey blue)."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "turkey": 0.8
+        },
+        "ranked_guesses": [
+          "turkey"
+        ],
+        "rationale": "Turkey is a blue word that connects to 'mouth' (as in turkey mouth) and 'log' (as in logorrhea), both unrevealed blue words.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "water": 0.8
+        },
+        "ranked_guesses": [
+          "water"
+        ],
+        "rationale": "The clue 'liquid' was given by the red team, and 'water' is a blue word that fits this clue. The confidence is high because 'water' is the only blue word revealed that matches the clue.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "water": 0.8
+        },
+        "ranked_guesses": [
+          "water"
+        ],
+        "rationale": "Water is a blue word that connects to 'mercury' (liquid) and 'turkey' (waterfowl), making it a strong guess.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "sound",
+        "count": 2,
+        "rationale": "Mouth produces sound, and log can be a record of sound or a wooden log that makes sound when struck. Both are blue and unrevealed."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "log": 0.7,
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth",
+          "log"
+        ],
+        "rationale": "Mouth directly produces sound, and log relates to recording or talking, fitting the sound clue. The spymaster previously attempted to clue 'mouth' with 'log' and 'turkey' as connections, so both are likely blue.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.6,
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth",
+          "foot"
+        ],
+        "rationale": "Mouth produces sound; foot makes footsteps sound.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "foot": 0.6,
+          "mouth": 0.9
+        },
+        "ranked_guesses": [
+          "mouth",
+          "foot"
+        ],
+        "rationale": "Mouth directly produces sound; foot is associated with footsteps. Both are plausible blue words under the clue 'sound' with count 2.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 3,
+        "rationale": "Animal connects to 'calf', 'ray', 'teacher', and 'turkey', all red words."
+      },
+      "agent_id": "Phi-4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "calf": 0.9
+        },
+        "ranked_guesses": [
+          "calf"
+        ],
+        "rationale": "The clue 'animal' suggests a living creature. 'Calf' is a strong candidate as it is an animal and unrevealed.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "calf": 0.9
+        },
+        "ranked_guesses": [
+          "calf"
+        ],
+        "rationale": "Calf is an animal and unrevealed, fitting the clue 'animal'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.6,
+          "building": 0.7,
+          "liquid": 0.8
+        },
+        "ranked_guesses": [
+          "liquid",
+          "building",
+          "animal"
+        ],
+        "rationale": "Liquid is a strong blue word due to its connection with 'water' and 'mercury'. Building is a strong blue word due to its connection with 'pyramid' and 'church'. Animal is a strong blue word due to its connection with 'turkey'.",
+        "stop": false
+      },
+      "agent_id": "Phi-4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "timber",
+        "count": 1,
+        "rationale": "Only blue word left is 'log', which is a piece of timber. This clue is specific and unlikely to point to other words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "log": 0.9
+        },
+        "ranked_guesses": [
+          "log"
+        ],
+        "rationale": "Timber is wood, and 'log' is a direct synonym or piece of timber. Other unrevealed words like 'field' or 'paper' are less related.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "log": 0.9
+        },
+        "ranked_guesses": [
+          "log"
+        ],
+        "rationale": "Timber is strongly associated with logs (wood). Log is unrevealed and likely a blue word.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "field": 0.1,
+          "log": 0.9
+        },
+        "ranked_guesses": [
+          "log",
+          "field"
+        ],
+        "rationale": "Timber relates to wood, and the only unrevealed word strongly associated is 'log'. Field is possible but much weaker. With 2 guesses remaining but count 1, we should guess only the best candidate and then stop.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sleep"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bed"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "nurse"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "continent"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "america"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "australia"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "liquid"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "water"
+    },
+    {
+      "clue": {
+        "clue": "mouth",
+        "count": 2,
+        "rationale": "Mouth is a blue word, and it connects to 'log' (as in logorrhea or talking) and 'turkey' (as in turkey mouth or gobbler). Both are blue and unrevealed."
+      },
+      "event": "illegal_clue",
+      "matched_word": "mouth",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "liquid"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mercury"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "building"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "church"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "blue"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "roast"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "turkey"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "blue"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sound"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mouth"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "calf"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "timber"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "log"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 45,
+    "public_event_count": 30,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-005-microsoft_phi_4-vs-deepseek_deepseek_v4_flash",
+    "team_blue": "DeepSeek V4 Flash",
+    "team_red": "Phi-4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "sleep"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9,
+              "field": 0.4,
+              "teacher": 0.7,
+              "torch": 0.5,
+              "water": 0.6
+            },
+            "ranked_guesses": [
+              "bed",
+              "teacher",
+              "water",
+              "torch",
+              "field"
+            ],
+            "rationale": "The word 'sleep' suggests connections to 'bed', 'torch', 'water', and 'teacher'. These are ranked based on their likelihood of being related to 'sleep'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9,
+              "nurse": 0.7,
+              "torch": 0.6
+            },
+            "ranked_guesses": [
+              "bed",
+              "nurse",
+              "torch"
+            ],
+            "rationale": "The clue 'sleep' suggests words related to rest or nighttime. 'Bed' is directly associated with sleep, 'nurse' with caring for patients who may need rest, and 'torch' with night-time activities.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bed": 0.9,
+              "nurse": 0.7,
+              "torch": 0.6
+            },
+            "ranked_guesses": [
+              "bed",
+              "nurse",
+              "torch"
+            ],
+            "rationale": "The clue 'sleep' strongly suggests 'bed' due to direct association. 'Nurse' and 'torch' are related to sleep in contexts like night shifts or sleep aids.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bed"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "nurse"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sleep",
+          "count": 3,
+          "rationale": "Associated with 'bed', 'calf', and 'shadow'."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "continent"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "australia": 0.9
+            },
+            "ranked_guesses": [
+              "america",
+              "australia"
+            ],
+            "rationale": "Clue 'continent' count 2. 'america' and 'australia' are continents. Other words like 'turkey' (country) or 'mercury' (planet) don't fit.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.9,
+              "australia": 0.9
+            },
+            "ranked_guesses": [
+              "america",
+              "australia"
+            ],
+            "rationale": "America and Australia are continents.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "america": 0.95,
+              "australia": 0.95
+            },
+            "ranked_guesses": [
+              "america",
+              "australia"
+            ],
+            "rationale": "Continent clue points to America and Australia as continents; both are on the board and unrelated to other clues.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "america"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "australia"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "continent",
+          "count": 2,
+          "rationale": "America and Australia are both continents, and both are blue team words. This clue avoids any substring match with board words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "liquid"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "water": 0.8
+            },
+            "ranked_guesses": [
+              "water"
+            ],
+            "rationale": "The clue 'liquid' suggests a connection to 'water' due to its association with liquids.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "water": 0.9
+            },
+            "ranked_guesses": [
+              "water"
+            ],
+            "rationale": "Water is a liquid and fits the clue well.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.7,
+              "water": 0.9
+            },
+            "ranked_guesses": [
+              "mercury",
+              "water"
+            ],
+            "rationale": "The clue 'liquid' suggests words related to liquids. 'Mercury' is a liquid metal and 'water' is a common liquid. 'Water' is more likely to be a red word due to its common association with liquids and its relevance to the revealed word 'water'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "water"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "liquid",
+          "count": 2,
+          "rationale": "The clue 'liquid' is intended to guide the guessers towards words associated with water or fluids, such as 'water' and 'mouth'."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "liquid"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mercury"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "building"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "church"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "mouth",
+          "count": 2,
+          "rationale": "Mouth is a blue word, and it connects to 'log' (as in logorrhea or talking) and 'turkey' (as in turkey mouth or gobbler). Both are blue and unrevealed."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "blue"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.9
+            },
+            "ranked_guesses": [
+              "mercury"
+            ],
+            "rationale": "Mercury is a liquid element and connects to 'liquid' clue, making it a strong candidate for the red team.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.9
+            },
+            "ranked_guesses": [
+              "mercury"
+            ],
+            "rationale": "Mercury is a liquid and unrevealed, fitting the clue 'liquid'.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mercury": 0.9
+            },
+            "ranked_guesses": [
+              "mercury"
+            ],
+            "rationale": "Mercury is a liquid element and fits the clue 'liquid' given the context of the board. It is also unrevealed and connects to 'water' as a liquid.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "liquid",
+          "count": 2,
+          "rationale": "Liquid connects to 'mercury' (blue) and 'honey' (neutral)."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "roast"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "church": 0.8,
+              "log": 0.7,
+              "pyramid": 0.9
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "church",
+              "log"
+            ],
+            "rationale": "Pyramid and church are types of buildings; log is a building material.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "church": 0.9,
+              "log": 0.6,
+              "pyramid": 0.8
+            },
+            "ranked_guesses": [
+              "church",
+              "pyramid",
+              "log"
+            ],
+            "rationale": "'church' and 'pyramid' are types of buildings; 'log' is a building material (log cabins).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "church": 0.7,
+              "foot": 0.5,
+              "pyramid": 0.9
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "church",
+              "foot"
+            ],
+            "rationale": "Building clue: pyramid is a clear building structure, church is a building, foot could be foundation of a building but less direct. Avoid already revealed blue words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "turkey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "building",
+          "count": 3,
+          "rationale": "Church and pyramid are buildings, and log can refer to a log cabin or building material. These three blue words are connected by the concept of building."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "blue"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "pyramid": 0.7
+            },
+            "ranked_guesses": [
+              "pyramid"
+            ],
+            "rationale": "The clue 'building' suggests words related to structures or constructions. 'Pyramid' fits this clue as it is a type of building. The word 'pyramid' has been guessed correctly by the blue team, making it a strong candidate for the next guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "liquid": 0.9
+            },
+            "ranked_guesses": [
+              "liquid"
+            ],
+            "rationale": "Liquid is a strong guess due to its connection to 'water' (blue) and 'mercury' (blue).",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mouth": 0.8
+            },
+            "ranked_guesses": [
+              "mouth"
+            ],
+            "rationale": "Mouth is a blue word that connects to 'log' and 'turkey', both unrevealed and blue, making it a strong guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "blue",
+          "count": 3,
+          "rationale": "Blue words related to 'building' include 'pyramid', 'church', and 'log'."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sound"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "calf": 0.6,
+              "mouth": 0.5,
+              "turkey": 0.9
+            },
+            "ranked_guesses": [
+              "turkey",
+              "calf",
+              "mouth"
+            ],
+            "rationale": "Turkey is the most common roast food. Calf could be veal roast. Mouth relates to comedy roast (speaking).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.4,
+              "mouth": 0.5,
+              "turkey": 0.9
+            },
+            "ranked_guesses": [
+              "turkey",
+              "mouth",
+              "honey"
+            ],
+            "rationale": "Roast commonly refers to cooking meat, especially turkey. Also comedy roast relates to mouth. Honey-roasted dishes are common.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.7,
+              "olive": 0.6,
+              "turkey": 0.9
+            },
+            "ranked_guesses": [
+              "turkey",
+              "honey",
+              "olive"
+            ],
+            "rationale": "Roast is a cooking method; turkey is a classic roast, honey is common in honey-roasted dishes, and olives can be roasted. These are likely the intended blue words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mouth"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "roast",
+          "count": 3,
+          "rationale": "Roast connects turkey (roast turkey), log (roast log in a fire), and mouth (verbal roast). All three are blue and unrevealed."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "turkey": 0.8
+            },
+            "ranked_guesses": [
+              "turkey"
+            ],
+            "rationale": "Turkey is a blue word that connects to 'mouth' (as in turkey mouth) and 'log' (as in logorrhea), both unrevealed blue words.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "water": 0.8
+            },
+            "ranked_guesses": [
+              "water"
+            ],
+            "rationale": "The clue 'liquid' was given by the red team, and 'water' is a blue word that fits this clue. The confidence is high because 'water' is the only blue word revealed that matches the clue.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "water": 0.8
+            },
+            "ranked_guesses": [
+              "water"
+            ],
+            "rationale": "Water is a blue word that connects to 'mercury' (liquid) and 'turkey' (waterfowl), making it a strong guess.",
+            "stop": false
+          },
+          "agent_id": "Phi-4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "calf"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "blue",
+          "count": 3,
+          "rationale": "Blue connects to 'blue' (as in blue pyramid) and 'turkey' (as in turkey blue)."
+        },
+        "agent_id": "Phi-4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "timber"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "log": 0.7,
+              "mouth": 0.9
+            },
+            "ranked_guesses": [
+              "mouth",
+              "log"
+            ],
+            "rationale": "Mouth directly produces sound, and log relates to recording or talking, fitting the sound clue. The spymaster previously attempted to clue 'mouth' with 'log' and 'turkey' as connections, so both are likely blue.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.6,
+              "mouth": 0.9
+            },
+            "ranked_guesses": [
+              "mouth",
+              "foot"
+            ],
+            "rationale": "Mouth produces sound; foot makes footsteps sound.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "foot": 0.6,
+              "mouth": 0.9
+            },
+            "ranked_guesses": [
+              "mouth",
+              "foot"
+            ],
+            "rationale": "Mouth directly produces sound; foot is associated with footsteps. Both are plausible blue words under the clue 'sound' with count 2.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "log"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sound",
+          "count": 2,
+          "rationale": "Mouth produces sound, and log can be a record of sound or a wooden log that makes sound when struck. Both are blue and unrevealed."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

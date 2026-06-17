@@ -1,0 +1,1488 @@
+{
+  "board": {
+    "identities": {
+      "airport": "blue",
+      "alien": "red",
+      "anchor": "red",
+      "animal": "red",
+      "artist": "neutral",
+      "castle": "assassin",
+      "circle": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "flower": "red",
+      "ghost": "blue",
+      "guitar": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "jungle": "neutral",
+      "kernel": "red",
+      "mirror": "blue",
+      "robot": "blue",
+      "rocket": "blue",
+      "sailor": "neutral",
+      "shadow": "red",
+      "silver": "blue",
+      "spirit": "blue",
+      "station": "neutral",
+      "summer": "red"
+    },
+    "revealed": [
+      "airport",
+      "anchor",
+      "animal",
+      "castle",
+      "circle",
+      "desert",
+      "doctor",
+      "flower",
+      "ghost",
+      "kernel",
+      "mirror",
+      "rocket",
+      "shadow",
+      "spirit",
+      "summer"
+    ],
+    "words": {
+      "airport": "blue",
+      "alien": "red",
+      "anchor": "red",
+      "animal": "red",
+      "artist": "neutral",
+      "castle": "assassin",
+      "circle": "red",
+      "desert": "neutral",
+      "doctor": "neutral",
+      "flower": "red",
+      "ghost": "blue",
+      "guitar": "red",
+      "honey": "blue",
+      "hunter": "neutral",
+      "jungle": "neutral",
+      "kernel": "red",
+      "mirror": "blue",
+      "robot": "blue",
+      "rocket": "blue",
+      "sailor": "neutral",
+      "shadow": "red",
+      "silver": "blue",
+      "spirit": "blue",
+      "station": "neutral",
+      "summer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "sun",
+        "count": 4,
+        "rationale": "Connects red words circle (shape of sun), shadow (caused by sun), summer (sunny season), and flower (needs sunlight). Minimal risk of hitting other teams' words."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.7,
+          "desert": 0.85,
+          "flower": 0.8,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "desert",
+          "flower",
+          "circle"
+        ],
+        "rationale": "Summer is directly associated with sun, desert is a hot sunny place, flower needs sunlight, and circle matches the sun's shape. Other possibilities like shadow and mirror are less direct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.7,
+          "desert": 0.9,
+          "flower": 0.8,
+          "summer": 1.0
+        },
+        "ranked_guesses": [
+          "summer",
+          "desert",
+          "flower",
+          "circle"
+        ],
+        "rationale": "The clue 'sun' (count 4) strongly associates with summer, desert, flower (sunflower), and circle (sun's shape).",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.7,
+          "desert": 0.8,
+          "flower": 0.8,
+          "summer": 0.9
+        },
+        "ranked_guesses": [
+          "summer",
+          "desert",
+          "flower",
+          "circle"
+        ],
+        "rationale": "Summer is directly associated with sun (sunny season). Desert is hot like the sun. Flower suggests sunflower. Circle represents the sun's shape.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "light",
+        "count": 4,
+        "rationale": "Ghost, spirit, mirror, and silver all relate to light or reflection. Avoids red words and assassin."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.6,
+          "mirror": 0.9,
+          "shadow": 0.85,
+          "silver": 0.7
+        },
+        "ranked_guesses": [
+          "mirror",
+          "shadow",
+          "silver",
+          "ghost"
+        ],
+        "rationale": "Mirror reflects light, shadow is created by light, silver is a reflective light color, ghost is often associated with ethereal light.",
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.8,
+          "mirror": 0.9,
+          "shadow": 0.85,
+          "spirit": 0.75
+        },
+        "ranked_guesses": [
+          "mirror",
+          "shadow",
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "Mirror reflects light, shadow is absence of light, ghost and spirit are often associated with spectral light. These are strong connections to the clue 'light'.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.85,
+          "mirror": 0.9,
+          "shadow": 0.75,
+          "silver": 0.8
+        },
+        "ranked_guesses": [
+          "mirror",
+          "ghost",
+          "silver",
+          "shadow"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "round",
+        "count": 5,
+        "rationale": "Connects several red words: circle, flower, guitar, anchor, kernel, animal, alien all have round aspects. Avoids blue words like robot (only weakly round). Count 5 to be safe."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.6,
+          "circle": 0.95,
+          "kernel": 0.55,
+          "robot": 0.45,
+          "rocket": 0.5
+        },
+        "ranked_guesses": [
+          "circle",
+          "anchor",
+          "kernel",
+          "rocket",
+          "robot"
+        ],
+        "rationale": "Clue 'round' suggests directly round shapes. Circle is most fitting. Anchor has round ring, kernel is round seed, rocket has round nose, robot often round. These are plausible red words.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.4,
+          "anchor": 0.5,
+          "circle": 0.9,
+          "robot": 0.7,
+          "rocket": 0.6
+        },
+        "ranked_guesses": [
+          "circle",
+          "robot",
+          "rocket",
+          "anchor",
+          "alien"
+        ],
+        "rationale": "The clue 'round' strongly suggests circular or spherical objects. 'circle' is the most direct match. 'robot' (e.g., R2D2), 'rocket' (cylindrical but round cross-section), 'anchor' (ring shape), and 'alien' (UFO shaped) are plausible. We stop at 5 to avoid overguessing on a count of 5.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.5,
+          "anchor": 0.7,
+          "circle": 0.9,
+          "robot": 0.6,
+          "rocket": 0.4
+        },
+        "ranked_guesses": [
+          "circle",
+          "anchor",
+          "robot",
+          "alien",
+          "rocket"
+        ],
+        "rationale": "The clue 'round' suggests circular shapes or objects. Circle is most direct. Anchor has a ring shape. Robot often has round features. Alien is associated with round UFOs. Rocket has circular windows. These are five plausible guesses.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "phantom",
+        "count": 2,
+        "rationale": "Phantom is associated with ghost and spirit, both blue, and avoids red and assassin."
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "spirit": 0.8
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "Phantom relates to ghosts and spirits. Both words are unseen and strongly connected.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.95,
+          "spirit": 0.85
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "Phantom is synonymous with ghost and spirit. Both words are unrevealed and directly related to the clue.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.95,
+          "spirit": 0.9
+        },
+        "ranked_guesses": [
+          "ghost",
+          "spirit"
+        ],
+        "rationale": "ghost and spirit are direct synonyms of phantom.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "life",
+        "count": 4,
+        "rationale": "Alien, animal, flower, and kernel are all related to life."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.9,
+          "doctor": 0.7,
+          "flower": 0.8,
+          "honey": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "flower",
+          "doctor",
+          "honey"
+        ],
+        "rationale": "Words strongly associated with life: animal (living organism), flower (living plant), doctor (saves lives), honey (produced by bees, symbol of life).",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 1.0,
+          "doctor": 1.0,
+          "flower": 1.0,
+          "hunter": 1.0
+        },
+        "ranked_guesses": [
+          "animal",
+          "flower",
+          "hunter",
+          "doctor"
+        ],
+        "rationale": "Life connects to living things: animal, flower, hunter (living being), doctor (saves lives).",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.75,
+          "animal": 0.9,
+          "flower": 0.85,
+          "jungle": 0.8
+        },
+        "ranked_guesses": [
+          "animal",
+          "flower",
+          "jungle",
+          "alien"
+        ],
+        "rationale": "'Life' strongly connects to living things: animal (animal life), flower (plant life), jungle (ecosystem full of life), and alien (extraterrestrial life). These are the most direct associations among remaining words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 2,
+        "rationale": null
+      },
+      "agent_id": "deepseek-blue-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.9,
+          "rocket": 0.8
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket"
+        ],
+        "rationale": "'Flight' relates to air travel; 'airport' and 'rocket' are the most direct connections from the unrevealed words.",
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.95,
+          "rocket": 0.9
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-blue-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "airport": 0.95,
+          "rocket": 0.75
+        },
+        "ranked_guesses": [
+          "airport",
+          "rocket"
+        ],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "deepseek-blue-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "hard",
+        "count": 3,
+        "rationale": "Anchor, guitar, and kernel are all hard objects or concepts; alien is not typically described as hard."
+      },
+      "agent_id": "deepseek-red-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "castle": 0.8,
+          "robot": 0.7
+        },
+        "ranked_guesses": [
+          "anchor",
+          "castle",
+          "robot"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.9,
+          "kernel": 0.8,
+          "silver": 0.6
+        },
+        "ranked_guesses": [
+          "anchor",
+          "kernel",
+          "silver"
+        ],
+        "rationale": "The clue 'hard' likely refers to something physically hard or difficult. Anchor (hard metal), kernel (hard core), and silver (hard metal) are strong candidates. Other possibilities like hunter or jungle are less direct.",
+        "stop": false
+      },
+      "agent_id": "deepseek-red-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.7,
+          "castle": 0.6,
+          "kernel": 0.8
+        },
+        "ranked_guesses": [
+          "kernel",
+          "anchor",
+          "castle"
+        ],
+        "rationale": null,
+        "stop": true
+      },
+      "agent_id": "deepseek-red-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "sun"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "desert"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "light"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "shadow"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "round"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "circle"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "phantom"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "ghost"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "spirit"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "life"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "animal"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "doctor"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "airport"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "rocket"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "hard"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "anchor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "kernel"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "castle"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 28,
+    "public_event_count": 25,
+    "reason": "assassin",
+    "seed": "3",
+    "team_blue": "deepseek-blue",
+    "team_red": "deepseek-red",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "sun"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.7,
+              "desert": 0.85,
+              "flower": 0.8,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "desert",
+              "flower",
+              "circle"
+            ],
+            "rationale": "Summer is directly associated with sun, desert is a hot sunny place, flower needs sunlight, and circle matches the sun's shape. Other possibilities like shadow and mirror are less direct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.7,
+              "desert": 0.9,
+              "flower": 0.8,
+              "summer": 1.0
+            },
+            "ranked_guesses": [
+              "summer",
+              "desert",
+              "flower",
+              "circle"
+            ],
+            "rationale": "The clue 'sun' (count 4) strongly associates with summer, desert, flower (sunflower), and circle (sun's shape).",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.7,
+              "desert": 0.8,
+              "flower": 0.8,
+              "summer": 0.9
+            },
+            "ranked_guesses": [
+              "summer",
+              "desert",
+              "flower",
+              "circle"
+            ],
+            "rationale": "Summer is directly associated with sun (sunny season). Desert is hot like the sun. Flower suggests sunflower. Circle represents the sun's shape.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "desert"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sun",
+          "count": 4,
+          "rationale": "Connects red words circle (shape of sun), shadow (caused by sun), summer (sunny season), and flower (needs sunlight). Minimal risk of hitting other teams' words."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "light"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.6,
+              "mirror": 0.9,
+              "shadow": 0.85,
+              "silver": 0.7
+            },
+            "ranked_guesses": [
+              "mirror",
+              "shadow",
+              "silver",
+              "ghost"
+            ],
+            "rationale": "Mirror reflects light, shadow is created by light, silver is a reflective light color, ghost is often associated with ethereal light.",
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.8,
+              "mirror": 0.9,
+              "shadow": 0.85,
+              "spirit": 0.75
+            },
+            "ranked_guesses": [
+              "mirror",
+              "shadow",
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "Mirror reflects light, shadow is absence of light, ghost and spirit are often associated with spectral light. These are strong connections to the clue 'light'.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.85,
+              "mirror": 0.9,
+              "shadow": 0.75,
+              "silver": 0.8
+            },
+            "ranked_guesses": [
+              "mirror",
+              "ghost",
+              "silver",
+              "shadow"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "shadow"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "light",
+          "count": 4,
+          "rationale": "Ghost, spirit, mirror, and silver all relate to light or reflection. Avoids red words and assassin."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "round"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.6,
+              "circle": 0.95,
+              "kernel": 0.55,
+              "robot": 0.45,
+              "rocket": 0.5
+            },
+            "ranked_guesses": [
+              "circle",
+              "anchor",
+              "kernel",
+              "rocket",
+              "robot"
+            ],
+            "rationale": "Clue 'round' suggests directly round shapes. Circle is most fitting. Anchor has round ring, kernel is round seed, rocket has round nose, robot often round. These are plausible red words.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.4,
+              "anchor": 0.5,
+              "circle": 0.9,
+              "robot": 0.7,
+              "rocket": 0.6
+            },
+            "ranked_guesses": [
+              "circle",
+              "robot",
+              "rocket",
+              "anchor",
+              "alien"
+            ],
+            "rationale": "The clue 'round' strongly suggests circular or spherical objects. 'circle' is the most direct match. 'robot' (e.g., R2D2), 'rocket' (cylindrical but round cross-section), 'anchor' (ring shape), and 'alien' (UFO shaped) are plausible. We stop at 5 to avoid overguessing on a count of 5.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.5,
+              "anchor": 0.7,
+              "circle": 0.9,
+              "robot": 0.6,
+              "rocket": 0.4
+            },
+            "ranked_guesses": [
+              "circle",
+              "anchor",
+              "robot",
+              "alien",
+              "rocket"
+            ],
+            "rationale": "The clue 'round' suggests circular shapes or objects. Circle is most direct. Anchor has a ring shape. Robot often has round features. Alien is associated with round UFOs. Rocket has circular windows. These are five plausible guesses.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "circle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "round",
+          "count": 5,
+          "rationale": "Connects several red words: circle, flower, guitar, anchor, kernel, animal, alien all have round aspects. Avoids blue words like robot (only weakly round). Count 5 to be safe."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "phantom"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "spirit": 0.8
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "Phantom relates to ghosts and spirits. Both words are unseen and strongly connected.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.95,
+              "spirit": 0.85
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "Phantom is synonymous with ghost and spirit. Both words are unrevealed and directly related to the clue.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.95,
+              "spirit": 0.9
+            },
+            "ranked_guesses": [
+              "ghost",
+              "spirit"
+            ],
+            "rationale": "ghost and spirit are direct synonyms of phantom.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "ghost"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "spirit"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "phantom",
+          "count": 2,
+          "rationale": "Phantom is associated with ghost and spirit, both blue, and avoids red and assassin."
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "life"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.9,
+              "doctor": 0.7,
+              "flower": 0.8,
+              "honey": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "flower",
+              "doctor",
+              "honey"
+            ],
+            "rationale": "Words strongly associated with life: animal (living organism), flower (living plant), doctor (saves lives), honey (produced by bees, symbol of life).",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 1.0,
+              "doctor": 1.0,
+              "flower": 1.0,
+              "hunter": 1.0
+            },
+            "ranked_guesses": [
+              "animal",
+              "flower",
+              "hunter",
+              "doctor"
+            ],
+            "rationale": "Life connects to living things: animal, flower, hunter (living being), doctor (saves lives).",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.75,
+              "animal": 0.9,
+              "flower": 0.85,
+              "jungle": 0.8
+            },
+            "ranked_guesses": [
+              "animal",
+              "flower",
+              "jungle",
+              "alien"
+            ],
+            "rationale": "'Life' strongly connects to living things: animal (animal life), flower (plant life), jungle (ecosystem full of life), and alien (extraterrestrial life). These are the most direct associations among remaining words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "animal"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "doctor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "life",
+          "count": 4,
+          "rationale": "Alien, animal, flower, and kernel are all related to life."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.9,
+              "rocket": 0.8
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket"
+            ],
+            "rationale": "'Flight' relates to air travel; 'airport' and 'rocket' are the most direct connections from the unrevealed words.",
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.95,
+              "rocket": 0.9
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-blue-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "airport": 0.95,
+              "rocket": 0.75
+            },
+            "ranked_guesses": [
+              "airport",
+              "rocket"
+            ],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "deepseek-blue-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "airport"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "rocket"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 2,
+          "rationale": null
+        },
+        "agent_id": "deepseek-blue-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "hard"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "castle": 0.8,
+              "robot": 0.7
+            },
+            "ranked_guesses": [
+              "anchor",
+              "castle",
+              "robot"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.9,
+              "kernel": 0.8,
+              "silver": 0.6
+            },
+            "ranked_guesses": [
+              "anchor",
+              "kernel",
+              "silver"
+            ],
+            "rationale": "The clue 'hard' likely refers to something physically hard or difficult. Anchor (hard metal), kernel (hard core), and silver (hard metal) are strong candidates. Other possibilities like hunter or jungle are less direct.",
+            "stop": false
+          },
+          "agent_id": "deepseek-red-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.7,
+              "castle": 0.6,
+              "kernel": 0.8
+            },
+            "ranked_guesses": [
+              "kernel",
+              "anchor",
+              "castle"
+            ],
+            "rationale": null,
+            "stop": true
+          },
+          "agent_id": "deepseek-red-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "anchor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "kernel"
+        },
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "castle"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "hard",
+          "count": 3,
+          "rationale": "Anchor, guitar, and kernel are all hard objects or concepts; alien is not typically described as hard."
+        },
+        "agent_id": "deepseek-red-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

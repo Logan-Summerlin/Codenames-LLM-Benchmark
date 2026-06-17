@@ -1,0 +1,1833 @@
+{
+  "board": {
+    "identities": {
+      "animal": "red",
+      "artist": "blue",
+      "battery": "blue",
+      "beacon": "red",
+      "butter": "blue",
+      "captain": "red",
+      "desert": "blue",
+      "ember": "neutral",
+      "flower": "neutral",
+      "harbor": "red",
+      "helmet": "red",
+      "kernel": "blue",
+      "mirror": "red",
+      "mountain": "neutral",
+      "mystery": "neutral",
+      "pilot": "blue",
+      "silver": "neutral",
+      "singer": "red",
+      "station": "red",
+      "stone": "assassin",
+      "teacher": "red",
+      "tiger": "blue",
+      "travel": "neutral",
+      "violin": "neutral",
+      "wood": "blue"
+    },
+    "revealed": [
+      "artist",
+      "battery",
+      "beacon",
+      "butter",
+      "captain",
+      "desert",
+      "harbor",
+      "helmet",
+      "kernel",
+      "mirror",
+      "mountain",
+      "pilot",
+      "station",
+      "teacher",
+      "tiger",
+      "wood"
+    ],
+    "words": {
+      "animal": "red",
+      "artist": "blue",
+      "battery": "blue",
+      "beacon": "red",
+      "butter": "blue",
+      "captain": "red",
+      "desert": "blue",
+      "ember": "neutral",
+      "flower": "neutral",
+      "harbor": "red",
+      "helmet": "red",
+      "kernel": "blue",
+      "mirror": "red",
+      "mountain": "neutral",
+      "mystery": "neutral",
+      "pilot": "blue",
+      "silver": "neutral",
+      "singer": "red",
+      "station": "red",
+      "stone": "assassin",
+      "teacher": "red",
+      "tiger": "blue",
+      "travel": "neutral",
+      "violin": "neutral",
+      "wood": "blue"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "signal",
+        "count": 4,
+        "rationale": "All four red words are strongly associated with signaling: beacon, signaling station, captain giving signals, and signaling mirror."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.95,
+          "mirror": 0.85,
+          "pilot": 0.6,
+          "station": 0.75
+        },
+        "ranked_guesses": [
+          "beacon",
+          "mirror",
+          "station",
+          "pilot"
+        ],
+        "rationale": "Words tied to signaling: beacon (signal), mirror (signal mirror), station (signal station), pilot (pilot signal).",
+        "stop": true
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beacon": 0.95,
+          "harbor": 0.65,
+          "mirror": 0.9,
+          "station": 0.75
+        },
+        "ranked_guesses": [
+          "beacon",
+          "mirror",
+          "station",
+          "harbor"
+        ],
+        "rationale": "Beacons and signaling mirrors are direct signals; stations/harbors are maritime signaling contexts.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.7,
+          "beacon": 0.92,
+          "mirror": 0.8,
+          "station": 0.75
+        },
+        "ranked_guesses": [
+          "beacon",
+          "mirror",
+          "station",
+          "battery"
+        ],
+        "rationale": "Strong signal-related candidates: beacon (a signal), mirror (signal mirror), station (signal/communication hub), battery (powering signaling devices).",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "golfer",
+        "count": 2,
+        "rationale": "Connects tiger (famous golfer Tiger Woods) and wood (golf club material)."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.9,
+          "wood": 0.8
+        },
+        "ranked_guesses": [
+          "tiger",
+          "wood"
+        ],
+        "rationale": "Tiger refers to famous golfer Tiger Woods; wood is a type of golf club. Both strongly associate with 'golfer'.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.9,
+          "wood": 0.9
+        },
+        "ranked_guesses": [
+          "tiger",
+          "wood"
+        ],
+        "rationale": "Tiger Woods is a famous golfer, and wood is a type of golf club.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "tiger": 0.9,
+          "wood": 0.85
+        },
+        "ranked_guesses": [
+          "tiger",
+          "wood"
+        ],
+        "rationale": "Tiger Woods is a famous golfer; wood is a type of golf club.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ship",
+        "count": 2,
+        "rationale": "Nautical link to harbor and captain."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [
+          "harbor"
+        ],
+        "rationale": "Harbor directly relates to ships and is a strong match for the clue 'ship'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.8,
+          "harbor": 0.8
+        },
+        "ranked_guesses": [
+          "captain",
+          "harbor"
+        ],
+        "rationale": "Two obvious ship-themed words: captain and harbor.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "captain": 0.92,
+          "harbor": 0.87
+        },
+        "ranked_guesses": [
+          "captain",
+          "harbor"
+        ],
+        "rationale": "Captains and harbors are the most direct ship-related words on the board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "corn",
+        "count": 2,
+        "rationale": "Kernel and butter are both associated with corn, as in popcorn or corn on the cob."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.6,
+          "kernel": 0.9
+        },
+        "ranked_guesses": [
+          "kernel",
+          "butter"
+        ],
+        "rationale": "Kernel is directly related to corn (corn kernel). Butter is often paired with corn (buttered corn).",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "butter": 0.8,
+          "kernel": 0.9
+        },
+        "ranked_guesses": [
+          "kernel",
+          "butter"
+        ],
+        "rationale": "Corn directly relates to kernel (kernel of corn) and butter (butter on corn). These are the most straightforward associations from the remaining words.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kernel": 0.9
+        },
+        "ranked_guesses": [
+          "kernel"
+        ],
+        "rationale": "Corn is directly associated with kernel.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "human",
+        "count": 4,
+        "rationale": "ties to red words animal, helmet, singer, and teacher (humans are animals, wear helmets, and are singers/teachers)."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8
+        },
+        "ranked_guesses": [
+          "artist"
+        ],
+        "rationale": "artist is a direct human-related role/identity",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "pilot": 0.8,
+          "singer": 0.8,
+          "teacher": 0.8
+        },
+        "ranked_guesses": [
+          "artist",
+          "teacher",
+          "pilot",
+          "singer"
+        ],
+        "rationale": "The clue 'human' points to human-related roles; these four unrevealed words (artist, teacher, pilot, singer) align with that sense.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "artist": 0.8,
+          "pilot": 0.8,
+          "singer": 0.8,
+          "teacher": 0.8
+        },
+        "ranked_guesses": [
+          "artist",
+          "pilot",
+          "singer",
+          "teacher"
+        ],
+        "rationale": "human -> human-related terms; artist/pilot/singer/teacher are professions/roles on board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "charge",
+        "count": 2,
+        "rationale": "Battery stores charge, pilot is in charge. Desert not strongly connected."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.9,
+          "pilot": 0.5
+        },
+        "ranked_guesses": [
+          "battery",
+          "pilot"
+        ],
+        "rationale": "Battery directly relates to electrical charge; pilot may relate to being in charge of a plane.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.9,
+          "pilot": 0.6
+        },
+        "ranked_guesses": [
+          "battery",
+          "pilot"
+        ],
+        "rationale": "battery closely matches charge (electric), pilot is in charge of a plane.",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "battery": 0.9,
+          "pilot": 0.8
+        },
+        "ranked_guesses": [
+          "battery",
+          "pilot"
+        ],
+        "rationale": "charge directly relates to battery (electric charge) and pilot (in charge of aircraft).",
+        "stop": true
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "head",
+        "count": 4,
+        "rationale": "relates to helmet (head protection), head of class (teacher), head voice (singer), and animals' heads (animal)"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.6,
+          "helmet": 0.82,
+          "stone": 0.75,
+          "teacher": 0.55
+        },
+        "ranked_guesses": [
+          "helmet",
+          "stone",
+          "flower",
+          "teacher"
+        ],
+        "rationale": "Helmet is the clearest head-related item; stone (headstone), flower head, and head teacher provide strong secondary links.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.8
+        },
+        "ranked_guesses": [
+          "helmet"
+        ],
+        "rationale": "Headgear directly fits the clue 'head'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "helmet": 0.8
+        },
+        "ranked_guesses": [
+          "helmet"
+        ],
+        "rationale": "helmet is head protection, a direct link to the clue 'head'",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "crash",
+        "count": 2,
+        "rationale": "Both 'desert' and 'pilot' are strongly linked to crashes (plane crash, crash landing in desert), and no other hidden words have a clear connection to this clue."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mountain": 0.7,
+          "pilot": 0.9
+        },
+        "ranked_guesses": [
+          "pilot",
+          "mountain"
+        ],
+        "rationale": "Pilot is strongly associated with crashes (plane crash). Mountain is also commonly involved in crashes (e.g., crash into a mountain).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.7,
+          "pilot": 0.9
+        },
+        "ranked_guesses": [
+          "pilot",
+          "desert"
+        ],
+        "rationale": "Crash often refers to plane crashes (pilot) or desert crash landings, both common associations.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mountain": 0.7,
+          "pilot": 0.9
+        },
+        "ranked_guesses": [
+          "pilot",
+          "mountain"
+        ],
+        "rationale": "Clue 'crash' strongly suggests plane crash, linking to pilot and likely location mountain.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "class",
+        "count": 2,
+        "rationale": "classroom/biology tie: teacher and animal."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "teacher": 0.8
+        },
+        "ranked_guesses": [
+          "teacher"
+        ],
+        "rationale": "teacher directly relates to class; strongest match among unrevealed red words.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "teacher": 0.8
+        },
+        "ranked_guesses": [
+          "teacher"
+        ],
+        "rationale": "class -> teacher",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.5,
+          "teacher": 0.85
+        },
+        "ranked_guesses": [
+          "teacher",
+          "animal"
+        ],
+        "rationale": "teacher directly matches 'class'; animal fits as a potential taxonomic 'class' reference.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "dune",
+        "count": 1,
+        "rationale": "Only blue word left is desert; 'dune' is a specific feature of deserts and avoids other board words."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.9
+        },
+        "ranked_guesses": [
+          "desert"
+        ],
+        "rationale": "Dune directly suggests a sandy hill, most strongly associated with desert.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.9
+        },
+        "ranked_guesses": [
+          "desert"
+        ],
+        "rationale": "Desert is directly related to dune (sand dune).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "desert": 0.9
+        },
+        "ranked_guesses": [
+          "desert"
+        ],
+        "rationale": "Dune is a sandy desert landform, so 'desert' is the most direct association.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "signal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "beacon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "station"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "golfer"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "tiger"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wood"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ship"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "harbor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "captain"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "corn"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "kernel"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "butter"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "human"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "artist"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "charge"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "battery"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "head"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "helmet"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "crash"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "pilot"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mountain"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "class"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "teacher"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "dune"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "desert"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 40,
+    "public_event_count": 33,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-005-openai_gpt_5_nano-vs-deepseek_deepseek_v4_flash",
+    "team_blue": "DeepSeek V4 Flash",
+    "team_red": "GPT-5 Nano",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "signal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.95,
+              "mirror": 0.85,
+              "pilot": 0.6,
+              "station": 0.75
+            },
+            "ranked_guesses": [
+              "beacon",
+              "mirror",
+              "station",
+              "pilot"
+            ],
+            "rationale": "Words tied to signaling: beacon (signal), mirror (signal mirror), station (signal station), pilot (pilot signal).",
+            "stop": true
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beacon": 0.95,
+              "harbor": 0.65,
+              "mirror": 0.9,
+              "station": 0.75
+            },
+            "ranked_guesses": [
+              "beacon",
+              "mirror",
+              "station",
+              "harbor"
+            ],
+            "rationale": "Beacons and signaling mirrors are direct signals; stations/harbors are maritime signaling contexts.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.7,
+              "beacon": 0.92,
+              "mirror": 0.8,
+              "station": 0.75
+            },
+            "ranked_guesses": [
+              "beacon",
+              "mirror",
+              "station",
+              "battery"
+            ],
+            "rationale": "Strong signal-related candidates: beacon (a signal), mirror (signal mirror), station (signal/communication hub), battery (powering signaling devices).",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "beacon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "station"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "signal",
+          "count": 4,
+          "rationale": "All four red words are strongly associated with signaling: beacon, signaling station, captain giving signals, and signaling mirror."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "golfer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.9,
+              "wood": 0.8
+            },
+            "ranked_guesses": [
+              "tiger",
+              "wood"
+            ],
+            "rationale": "Tiger refers to famous golfer Tiger Woods; wood is a type of golf club. Both strongly associate with 'golfer'.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.9,
+              "wood": 0.9
+            },
+            "ranked_guesses": [
+              "tiger",
+              "wood"
+            ],
+            "rationale": "Tiger Woods is a famous golfer, and wood is a type of golf club.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "tiger": 0.9,
+              "wood": 0.85
+            },
+            "ranked_guesses": [
+              "tiger",
+              "wood"
+            ],
+            "rationale": "Tiger Woods is a famous golfer; wood is a type of golf club.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "tiger"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wood"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "golfer",
+          "count": 2,
+          "rationale": "Connects tiger (famous golfer Tiger Woods) and wood (golf club material)."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ship"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [
+              "harbor"
+            ],
+            "rationale": "Harbor directly relates to ships and is a strong match for the clue 'ship'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.8,
+              "harbor": 0.8
+            },
+            "ranked_guesses": [
+              "captain",
+              "harbor"
+            ],
+            "rationale": "Two obvious ship-themed words: captain and harbor.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "captain": 0.92,
+              "harbor": 0.87
+            },
+            "ranked_guesses": [
+              "captain",
+              "harbor"
+            ],
+            "rationale": "Captains and harbors are the most direct ship-related words on the board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "harbor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "captain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ship",
+          "count": 2,
+          "rationale": "Nautical link to harbor and captain."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "corn"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.6,
+              "kernel": 0.9
+            },
+            "ranked_guesses": [
+              "kernel",
+              "butter"
+            ],
+            "rationale": "Kernel is directly related to corn (corn kernel). Butter is often paired with corn (buttered corn).",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "butter": 0.8,
+              "kernel": 0.9
+            },
+            "ranked_guesses": [
+              "kernel",
+              "butter"
+            ],
+            "rationale": "Corn directly relates to kernel (kernel of corn) and butter (butter on corn). These are the most straightforward associations from the remaining words.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "kernel": 0.9
+            },
+            "ranked_guesses": [
+              "kernel"
+            ],
+            "rationale": "Corn is directly associated with kernel.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "kernel"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "butter"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "corn",
+          "count": 2,
+          "rationale": "Kernel and butter are both associated with corn, as in popcorn or corn on the cob."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "human"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8
+            },
+            "ranked_guesses": [
+              "artist"
+            ],
+            "rationale": "artist is a direct human-related role/identity",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "pilot": 0.8,
+              "singer": 0.8,
+              "teacher": 0.8
+            },
+            "ranked_guesses": [
+              "artist",
+              "teacher",
+              "pilot",
+              "singer"
+            ],
+            "rationale": "The clue 'human' points to human-related roles; these four unrevealed words (artist, teacher, pilot, singer) align with that sense.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "artist": 0.8,
+              "pilot": 0.8,
+              "singer": 0.8,
+              "teacher": 0.8
+            },
+            "ranked_guesses": [
+              "artist",
+              "pilot",
+              "singer",
+              "teacher"
+            ],
+            "rationale": "human -> human-related terms; artist/pilot/singer/teacher are professions/roles on board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "artist"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "human",
+          "count": 4,
+          "rationale": "ties to red words animal, helmet, singer, and teacher (humans are animals, wear helmets, and are singers/teachers)."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "charge"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.9,
+              "pilot": 0.5
+            },
+            "ranked_guesses": [
+              "battery",
+              "pilot"
+            ],
+            "rationale": "Battery directly relates to electrical charge; pilot may relate to being in charge of a plane.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.9,
+              "pilot": 0.6
+            },
+            "ranked_guesses": [
+              "battery",
+              "pilot"
+            ],
+            "rationale": "battery closely matches charge (electric), pilot is in charge of a plane.",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "battery": 0.9,
+              "pilot": 0.8
+            },
+            "ranked_guesses": [
+              "battery",
+              "pilot"
+            ],
+            "rationale": "charge directly relates to battery (electric charge) and pilot (in charge of aircraft).",
+            "stop": true
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "battery"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "charge",
+          "count": 2,
+          "rationale": "Battery stores charge, pilot is in charge. Desert not strongly connected."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "head"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.6,
+              "helmet": 0.82,
+              "stone": 0.75,
+              "teacher": 0.55
+            },
+            "ranked_guesses": [
+              "helmet",
+              "stone",
+              "flower",
+              "teacher"
+            ],
+            "rationale": "Helmet is the clearest head-related item; stone (headstone), flower head, and head teacher provide strong secondary links.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.8
+            },
+            "ranked_guesses": [
+              "helmet"
+            ],
+            "rationale": "Headgear directly fits the clue 'head'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "helmet": 0.8
+            },
+            "ranked_guesses": [
+              "helmet"
+            ],
+            "rationale": "helmet is head protection, a direct link to the clue 'head'",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "helmet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "head",
+          "count": 4,
+          "rationale": "relates to helmet (head protection), head of class (teacher), head voice (singer), and animals' heads (animal)"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "crash"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mountain": 0.7,
+              "pilot": 0.9
+            },
+            "ranked_guesses": [
+              "pilot",
+              "mountain"
+            ],
+            "rationale": "Pilot is strongly associated with crashes (plane crash). Mountain is also commonly involved in crashes (e.g., crash into a mountain).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.7,
+              "pilot": 0.9
+            },
+            "ranked_guesses": [
+              "pilot",
+              "desert"
+            ],
+            "rationale": "Crash often refers to plane crashes (pilot) or desert crash landings, both common associations.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mountain": 0.7,
+              "pilot": 0.9
+            },
+            "ranked_guesses": [
+              "pilot",
+              "mountain"
+            ],
+            "rationale": "Clue 'crash' strongly suggests plane crash, linking to pilot and likely location mountain.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "pilot"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mountain"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "crash",
+          "count": 2,
+          "rationale": "Both 'desert' and 'pilot' are strongly linked to crashes (plane crash, crash landing in desert), and no other hidden words have a clear connection to this clue."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "class"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "teacher": 0.8
+            },
+            "ranked_guesses": [
+              "teacher"
+            ],
+            "rationale": "teacher directly relates to class; strongest match among unrevealed red words.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "teacher": 0.8
+            },
+            "ranked_guesses": [
+              "teacher"
+            ],
+            "rationale": "class -> teacher",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.5,
+              "teacher": 0.85
+            },
+            "ranked_guesses": [
+              "teacher",
+              "animal"
+            ],
+            "rationale": "teacher directly matches 'class'; animal fits as a potential taxonomic 'class' reference.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "teacher"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "class",
+          "count": 2,
+          "rationale": "classroom/biology tie: teacher and animal."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "dune"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.9
+            },
+            "ranked_guesses": [
+              "desert"
+            ],
+            "rationale": "Dune directly suggests a sandy hill, most strongly associated with desert.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.9
+            },
+            "ranked_guesses": [
+              "desert"
+            ],
+            "rationale": "Desert is directly related to dune (sand dune).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "desert": 0.9
+            },
+            "ranked_guesses": [
+              "desert"
+            ],
+            "rationale": "Dune is a sandy desert landform, so 'desert' is the most direct association.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "desert"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dune",
+          "count": 1,
+          "rationale": "Only blue word left is desert; 'dune' is a specific feature of deserts and avoids other board words."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

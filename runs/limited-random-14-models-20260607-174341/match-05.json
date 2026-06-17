@@ -1,0 +1,504 @@
+{
+  "board": {
+    "identities": {
+      "agent": "red",
+      "atlas": "neutral",
+      "beacon": "neutral",
+      "bridge": "blue",
+      "cloud": "red",
+      "compass": "neutral",
+      "flame": "red",
+      "ghost": "blue",
+      "guitar": "blue",
+      "hunter": "blue",
+      "island": "red",
+      "kernel": "neutral",
+      "lantern": "neutral",
+      "library": "red",
+      "memory": "red",
+      "metal": "blue",
+      "mirror": "red",
+      "palace": "blue",
+      "river": "assassin",
+      "salt": "blue",
+      "shadow": "red",
+      "silence": "blue",
+      "spider": "neutral",
+      "travel": "red",
+      "wood": "neutral"
+    },
+    "revealed": [
+      "cloud",
+      "flame",
+      "library",
+      "memory",
+      "mirror"
+    ],
+    "words": {
+      "agent": "red",
+      "atlas": "neutral",
+      "beacon": "neutral",
+      "bridge": "blue",
+      "cloud": "red",
+      "compass": "neutral",
+      "flame": "red",
+      "ghost": "blue",
+      "guitar": "blue",
+      "hunter": "blue",
+      "island": "red",
+      "kernel": "neutral",
+      "lantern": "neutral",
+      "library": "red",
+      "memory": "red",
+      "metal": "blue",
+      "mirror": "red",
+      "palace": "blue",
+      "river": "assassin",
+      "salt": "blue",
+      "shadow": "red",
+      "silence": "blue",
+      "spider": "neutral",
+      "travel": "red",
+      "wood": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "imagination",
+        "count": 5,
+        "rationale": "Imagination evokes library (stories), memory (recalling), mirror (reflection), cloud (daydreams), and travel (journeys of the mind)."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "library": 0.75
+        },
+        "ranked_guesses": [
+          "library"
+        ],
+        "rationale": "Books and stories fuel imagination, making 'library' a strong thematic match.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cloud": 0.78,
+          "flame": 0.73,
+          "ghost": 0.8,
+          "library": 0.85,
+          "mirror": 0.7
+        },
+        "ranked_guesses": [
+          "library",
+          "ghost",
+          "cloud",
+          "flame",
+          "mirror"
+        ],
+        "rationale": "Books spark imagination (library); ghosts are imagined beings; clouds suggest daydreams; a flame is a spark of creative ideas; mirrors reflect imagined images.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "atlas": 0.73,
+          "cloud": 0.85,
+          "flame": 0.75,
+          "library": 0.8,
+          "mirror": 0.78
+        },
+        "ranked_guesses": [
+          "cloud",
+          "library",
+          "mirror",
+          "flame",
+          "atlas"
+        ],
+        "rationale": "These words evoke daydreaming, stories, reflection, creative spark, and imagined worlds, fitting the clue 'imagination'.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "echo",
+        "count": 4,
+        "rationale": "bridge, palace, silence, and ghost can all be associated with echoes (echoing bridge, echoing palace, echoing silence, ghostly echo)."
+      },
+      "agent_id": "DeepSeek V4 Flash-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.7,
+          "memory": 0.9,
+          "river": 0.5,
+          "silence": 0.6
+        },
+        "ranked_guesses": [
+          "memory",
+          "ghost",
+          "silence",
+          "river"
+        ],
+        "rationale": "Echo relates to sound reflection; memory (echoic memory), ghost (eerie echo), silence (opposite of echo), river (echo of water).",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.9,
+          "memory": 0.7,
+          "shadow": 0.8,
+          "silence": 0.6
+        },
+        "ranked_guesses": [
+          "ghost",
+          "shadow",
+          "memory",
+          "silence"
+        ],
+        "rationale": "Echo relates to reflections and repetitions; ghost and shadow are ethereal echoes, memory is an echo of the past, and silence is where echoes are heard.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.5,
+          "memory": 0.6,
+          "shadow": 0.7,
+          "silence": 0.8
+        },
+        "ranked_guesses": [
+          "silence",
+          "shadow",
+          "memory",
+          "guitar"
+        ],
+        "rationale": "Echo is a sound reflection; silence is its absence, shadow is a visual reflection, memory is a mental echo, and guitar often uses echo effects.",
+        "stop": false
+      },
+      "agent_id": "DeepSeek V4 Flash-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 5,
+        "word": "imagination"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "library"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cloud"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mirror"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "echo"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "memory"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 8,
+    "public_event_count": 8,
+    "reason": null,
+    "seed": "limited-random-14-models-20260607-174341-m05",
+    "team_blue": "DeepSeek V4 Flash",
+    "team_red": "GPT-OSS 120B",
+    "terminal": false,
+    "winner": null
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 5,
+        "word": "imagination"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "library": 0.75
+            },
+            "ranked_guesses": [
+              "library"
+            ],
+            "rationale": "Books and stories fuel imagination, making 'library' a strong thematic match.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cloud": 0.78,
+              "flame": 0.73,
+              "ghost": 0.8,
+              "library": 0.85,
+              "mirror": 0.7
+            },
+            "ranked_guesses": [
+              "library",
+              "ghost",
+              "cloud",
+              "flame",
+              "mirror"
+            ],
+            "rationale": "Books spark imagination (library); ghosts are imagined beings; clouds suggest daydreams; a flame is a spark of creative ideas; mirrors reflect imagined images.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "atlas": 0.73,
+              "cloud": 0.85,
+              "flame": 0.75,
+              "library": 0.8,
+              "mirror": 0.78
+            },
+            "ranked_guesses": [
+              "cloud",
+              "library",
+              "mirror",
+              "flame",
+              "atlas"
+            ],
+            "rationale": "These words evoke daydreaming, stories, reflection, creative spark, and imagined worlds, fitting the clue 'imagination'.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "library"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cloud"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mirror"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "imagination",
+          "count": 5,
+          "rationale": "Imagination evokes library (stories), memory (recalling), mirror (reflection), cloud (daydreams), and travel (journeys of the mind)."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "echo"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.7,
+              "memory": 0.9,
+              "river": 0.5,
+              "silence": 0.6
+            },
+            "ranked_guesses": [
+              "memory",
+              "ghost",
+              "silence",
+              "river"
+            ],
+            "rationale": "Echo relates to sound reflection; memory (echoic memory), ghost (eerie echo), silence (opposite of echo), river (echo of water).",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "ghost": 0.9,
+              "memory": 0.7,
+              "shadow": 0.8,
+              "silence": 0.6
+            },
+            "ranked_guesses": [
+              "ghost",
+              "shadow",
+              "memory",
+              "silence"
+            ],
+            "rationale": "Echo relates to reflections and repetitions; ghost and shadow are ethereal echoes, memory is an echo of the past, and silence is where echoes are heard.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.5,
+              "memory": 0.6,
+              "shadow": 0.7,
+              "silence": 0.8
+            },
+            "ranked_guesses": [
+              "silence",
+              "shadow",
+              "memory",
+              "guitar"
+            ],
+            "rationale": "Echo is a sound reflection; silence is its absence, shadow is a visual reflection, memory is a mental echo, and guitar often uses echo effects.",
+            "stop": false
+          },
+          "agent_id": "DeepSeek V4 Flash-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "memory"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "echo",
+          "count": 4,
+          "rationale": "bridge, palace, silence, and ghost can all be associated with echoes (echoing bridge, echoing palace, echoing silence, ghostly echo)."
+        },
+        "agent_id": "DeepSeek V4 Flash-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

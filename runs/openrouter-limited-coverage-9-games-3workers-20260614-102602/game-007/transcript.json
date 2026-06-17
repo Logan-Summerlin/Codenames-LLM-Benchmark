@@ -1,0 +1,2599 @@
+{
+  "board": {
+    "identities": {
+      "air": "red",
+      "bar": "blue",
+      "beach": "red",
+      "crown": "red",
+      "disease": "red",
+      "dragon": "neutral",
+      "fly": "red",
+      "force": "red",
+      "ghost": "blue",
+      "green": "blue",
+      "horse": "red",
+      "pan": "neutral",
+      "pass": "neutral",
+      "plane": "blue",
+      "round": "red",
+      "satellite": "blue",
+      "shakespeare": "blue",
+      "snow": "neutral",
+      "spring": "blue",
+      "strike": "neutral",
+      "sub": "assassin",
+      "table": "neutral",
+      "tap": "neutral",
+      "triangle": "blue",
+      "undertaker": "red"
+    },
+    "revealed": [
+      "air",
+      "bar",
+      "beach",
+      "crown",
+      "disease",
+      "dragon",
+      "fly",
+      "force",
+      "ghost",
+      "green",
+      "horse",
+      "pass",
+      "plane",
+      "round",
+      "satellite",
+      "shakespeare",
+      "spring",
+      "strike",
+      "triangle"
+    ],
+    "words": {
+      "air": "red",
+      "bar": "blue",
+      "beach": "red",
+      "crown": "red",
+      "disease": "red",
+      "dragon": "neutral",
+      "fly": "red",
+      "force": "red",
+      "ghost": "blue",
+      "green": "blue",
+      "horse": "red",
+      "pan": "neutral",
+      "pass": "neutral",
+      "plane": "blue",
+      "round": "red",
+      "satellite": "blue",
+      "shakespeare": "blue",
+      "snow": "neutral",
+      "spring": "blue",
+      "strike": "neutral",
+      "sub": "assassin",
+      "table": "neutral",
+      "tap": "neutral",
+      "triangle": "blue",
+      "undertaker": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "power",
+        "count": 3,
+        "rationale": "associate with 'force', 'crown', 'disease'"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "force": 0.9,
+          "power": 0.85
+        },
+        "ranked_guesses": [
+          "force",
+          "power"
+        ],
+        "rationale": "Direct matches for 'power'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.85,
+          "force": 0.9,
+          "power": 0.8
+        },
+        "ranked_guesses": [
+          "force",
+          "dragon",
+          "power"
+        ],
+        "rationale": "Direct matches for 'power'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "dragon": 0.85,
+          "force": 0.9,
+          "strike": 0.8
+        },
+        "ranked_guesses": [
+          "force",
+          "dragon",
+          "strike"
+        ],
+        "rationale": "Direct matches for 'power'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "shape",
+        "count": 3,
+        "rationale": "Connects to triangle, round, and potentially plane."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plane": 0.75,
+          "round": 0.8,
+          "triangle": 0.85
+        },
+        "ranked_guesses": [
+          "triangle",
+          "round",
+          "plane"
+        ],
+        "rationale": "'Shape' directly relates to triangle, round, and plane.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plane": 0.75,
+          "round": 0.8,
+          "triangle": 0.85
+        },
+        "ranked_guesses": [
+          "triangle",
+          "round",
+          "plane"
+        ],
+        "rationale": "Shape is a direct match for triangle, round, and plane.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "plane": 0.75,
+          "round": 0.8,
+          "triangle": 0.85
+        },
+        "ranked_guesses": [
+          "triangle",
+          "round",
+          "plane"
+        ],
+        "rationale": "\"Shape\" directly relates to triangle, round, and plane.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "velocity",
+        "count": 3,
+        "rationale": "relate to speed or movement for red words"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fly": 0.85,
+          "pass": 0.8,
+          "plane": 0.9
+        },
+        "ranked_guesses": [
+          "plane",
+          "fly",
+          "pass"
+        ],
+        "rationale": "These words relate to velocity, a measure of speed or movement.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fly": 0.85,
+          "horse": 0.75,
+          "plane": 0.9
+        },
+        "ranked_guesses": [
+          "plane",
+          "fly",
+          "horse"
+        ],
+        "rationale": "Direct matches for velocity",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.8,
+          "fly": 0.85,
+          "plane": 0.9
+        },
+        "ranked_guesses": [
+          "plane",
+          "fly",
+          "air"
+        ],
+        "rationale": "velocity relates to speed, so these words relate to fast movement",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "royal",
+        "count": 2,
+        "rationale": "Connects to crown and horse."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crown": 0.85
+        },
+        "ranked_guesses": [
+          "crown"
+        ],
+        "rationale": "'Royal' strongly suggests 'crown'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crown": 0.85
+        },
+        "ranked_guesses": [
+          "crown"
+        ],
+        "rationale": "'Royal' strongly suggests 'crown'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "crown": 0.85
+        },
+        "ranked_guesses": [
+          "crown"
+        ],
+        "rationale": "'Royal' strongly suggests 'crown'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sky",
+        "count": 2,
+        "rationale": "connects to air, fly, and possibly horse"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "satellite": 0.85
+        },
+        "ranked_guesses": [
+          "air",
+          "satellite"
+        ],
+        "rationale": "The clue 'sky 2' strongly relates to 'air' and 'satellite', both fitting the sky theme.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "satellite": 0.85
+        },
+        "ranked_guesses": [
+          "air",
+          "satellite"
+        ],
+        "rationale": "The clue 'sky' is closely related to 'air' and 'satellite', both of which are plausible matches for the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "air": 0.9,
+          "satellite": 0.85
+        },
+        "ranked_guesses": [
+          "air",
+          "satellite"
+        ],
+        "rationale": "The clue 'sky 2' strongly relates to words associated with the atmosphere or space, making 'air' and 'satellite' high-confidence guesses for the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "illness",
+        "count": 2,
+        "rationale": "Connects to disease and ghost."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "disease": 0.85
+        },
+        "ranked_guesses": [
+          "disease"
+        ],
+        "rationale": "'Disease' is a direct match for 'illness'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "disease": 0.85
+        },
+        "ranked_guesses": [
+          "disease"
+        ],
+        "rationale": "'Illness' directly relates to 'disease'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "disease": 0.85
+        },
+        "ranked_guesses": [
+          "disease"
+        ],
+        "rationale": "'Illness' directly relates to 'disease'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "flight",
+        "count": 3,
+        "rationale": "connects to air, fly, and possibly horse"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.6,
+          "fly": 0.9,
+          "pass": 0.7
+        },
+        "ranked_guesses": [
+          "fly",
+          "pass",
+          "bar"
+        ],
+        "rationale": "The clue 'flight' strongly relates to 'fly'. 'Pass' and 'bar' have weaker connections but are still possible.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.8,
+          "fly": 0.9,
+          "pass": 0.75
+        },
+        "ranked_guesses": [
+          "fly",
+          "bar",
+          "pass"
+        ],
+        "rationale": "The clue 'flight' strongly relates to 'fly' and possibly 'pass' and 'bar' as less direct connections, all of which could be related to the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.75,
+          "fly": 0.9,
+          "pass": 0.8
+        },
+        "ranked_guesses": [
+          "fly",
+          "pass",
+          "bar"
+        ],
+        "rationale": "Direct matches for 'flight'",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "perform",
+        "count": 2,
+        "rationale": "Connects to Shakespeare and potentially ghost."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "shakespeare": 0.85
+        },
+        "ranked_guesses": [
+          "shakespeare"
+        ],
+        "rationale": "Shakespeare's plays are performances.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "shakespeare": 0.85
+        },
+        "ranked_guesses": [
+          "shakespeare"
+        ],
+        "rationale": "Shakespeare's plays are performances.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "shakespeare": 0.85
+        },
+        "ranked_guesses": [
+          "shakespeare"
+        ],
+        "rationale": "Shakespeare wrote plays, which are performances.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vitality",
+        "count": 2,
+        "rationale": "connects to horse and undertaker"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.75,
+          "spring": 0.8
+        },
+        "ranked_guesses": [
+          "spring",
+          "green"
+        ],
+        "rationale": "vitality relates to energy and life, spring and green fit well",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.75,
+          "spring": 0.8
+        },
+        "ranked_guesses": [
+          "spring",
+          "green"
+        ],
+        "rationale": "vitality relates to energy and life, spring and green fit well",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.75,
+          "spring": 0.8
+        },
+        "ranked_guesses": [
+          "spring",
+          "green"
+        ],
+        "rationale": "vitality relates to energy and life, spring and green fit well",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 2,
+        "rationale": "Referring to horse and potentially beach."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.85,
+          "sub": 0.75
+        },
+        "ranked_guesses": [
+          "horse",
+          "sub"
+        ],
+        "rationale": "Both relate to animals. Horse is a direct animal, and sub can be a nautical animal (submarine).",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.85,
+          "sub": 0.75
+        },
+        "ranked_guesses": [
+          "horse",
+          "sub"
+        ],
+        "rationale": "Both 'horse' and 'sub' (as in submarine) can be considered animals. 'Horse' is a more direct animal, so it's ranked higher.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "horse": 0.85,
+          "sub": 0.75
+        },
+        "ranked_guesses": [
+          "horse",
+          "sub"
+        ],
+        "rationale": "Both 'horse' and 'sub' (as in submarine) are animals. 'Horse' has a higher confidence.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "swim",
+        "count": 1,
+        "rationale": "remaining red words"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.8
+        },
+        "ranked_guesses": [
+          "bar"
+        ],
+        "rationale": "The word 'swim' is related to 'underwater' activities and 'bar' could be related to 'swim bar' or simply has a connection through sports, but more directly it relates to places or areas, and there might be a stretch in 'swim' connecting to a 'bar' as in a place where one could swim or be near water, but no strong direct link; however, given the lack of clear connections to other words and focusing on the team color red, 'bar' seems a plausible guess with some confidence.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "sub": 0.8
+        },
+        "ranked_guesses": [
+          "sub"
+        ],
+        "rationale": "The clue 'swim' is closely related to 'sub', which is a type of underwater vessel, making it a strong match for the red team's word.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.8
+        },
+        "ranked_guesses": [
+          "bar"
+        ],
+        "rationale": "The clue 'swim' is related to 'bar' as in 'barracuda', a swimmer fish.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "color",
+        "count": 2,
+        "rationale": "Refers to green and ghost"
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.85
+        },
+        "ranked_guesses": [
+          "green"
+        ],
+        "rationale": "Direct match to the clue 'color'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.85
+        },
+        "ranked_guesses": [
+          "green"
+        ],
+        "rationale": "Direct association with the clue 'color'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "green": 0.85
+        },
+        "ranked_guesses": [
+          "green"
+        ],
+        "rationale": "'Color' directly relates to 'green'.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "energy",
+        "count": 2,
+        "rationale": "hint for red words"
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fly": 0.85,
+          "force": 0.9
+        },
+        "ranked_guesses": [
+          "force",
+          "fly"
+        ],
+        "rationale": "The current clue is 'energy 2'. The words 'force' and 'fly' are related to energy and belong to the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fly": 0.85,
+          "force": 0.9
+        },
+        "ranked_guesses": [
+          "force",
+          "fly"
+        ],
+        "rationale": "The current clue is 'energy 2'. The words 'force' and 'fly' are related to energy and are part of the red team's words, with high confidence levels.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fly": 0.85,
+          "force": 0.9
+        },
+        "ranked_guesses": [
+          "force",
+          "fly"
+        ],
+        "rationale": "The current clue is 'energy 2'. The words 'force' and 'fly' are related to energy and belong to the red team.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "undertake",
+        "count": 2,
+        "rationale": "Connects to undertaker and potentially beach."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "vibe",
+        "count": 2,
+        "rationale": "Connects to disease and undertaker."
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "strike": 0.8
+        },
+        "ranked_guesses": [
+          "strike"
+        ],
+        "rationale": "The word 'strike' has a strong connection to the concept of 'vibe' or atmosphere, and also relates to energy or movement, which could be linked to the red team's previous clues like 'energy' and 'velocity'.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "strike": 0.8
+        },
+        "ranked_guesses": [
+          "strike"
+        ],
+        "rationale": "The word 'strike' has a strong connection to the concept of 'vibe' or atmosphere, and also relates to energy or movement, which could be linked to the red team's previous clues like 'energy' and 'velocity'.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "strike": 0.8
+        },
+        "ranked_guesses": [
+          "strike"
+        ],
+        "rationale": "The word 'strike' has a strong connection to the concept of 'vibe' or atmosphere, and also relates to energy or movement, which could be linked to the red team's previous clues like 'energy' and 'velocity'.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ocean",
+        "count": 2,
+        "rationale": "Connects to beach and potentially spring."
+      },
+      "agent_id": "Gemma 3 27B-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beach": 0.85,
+          "sub": 0.75
+        },
+        "ranked_guesses": [
+          "beach",
+          "sub"
+        ],
+        "rationale": "Both relate to the ocean.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beach": 0.85,
+          "sub": 0.75
+        },
+        "ranked_guesses": [
+          "beach",
+          "sub"
+        ],
+        "rationale": "Ocean relates to beach and sub (submarine).",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beach": 0.85,
+          "sub": 0.75
+        },
+        "ranked_guesses": [
+          "beach",
+          "sub"
+        ],
+        "rationale": "Both relate to the ocean.",
+        "stop": false
+      },
+      "agent_id": "Gemma 3 27B-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "pulse",
+        "count": 2,
+        "rationale": "Connects to vitality and disease, both red words."
+      },
+      "agent_id": "Llama 4 Scout-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.85,
+          "sub": 0.8,
+          "tap": 0.75
+        },
+        "ranked_guesses": [
+          "ghost",
+          "sub",
+          "tap"
+        ],
+        "rationale": "The current clue is 'pulse 2'. The words 'ghost', 'sub', and 'tap' have a strong connection to the concept of pulse, as in a pulse of energy or a pulse of electricity, and also could relate to heartbeat or rhythm which could be described as a pulse.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "ghost": 0.85,
+          "sub": 0.8,
+          "tap": 0.75
+        },
+        "ranked_guesses": [
+          "ghost",
+          "sub",
+          "tap"
+        ],
+        "rationale": "The clue 'pulse' is related to heartbeat or rhythm, which can be associated with vitality or energy. 'Ghost' could relate to a pulse of fear or a ghostly presence, 'sub' could relate to a submarine's pulse or movement underwater, and 'tap' could relate to the pulse of a rhythmic tap.",
+        "stop": false
+      },
+      "agent_id": "Llama 4 Scout-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "power"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "force"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "dragon"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "shape"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "triangle"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "round"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "velocity"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "plane"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "crown"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "air"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "satellite"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "illness"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "disease"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "fly"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pass"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "perform"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "shakespeare"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vitality"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "spring"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "horse"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "swim"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bar"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "color"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "green"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "energy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "undertake",
+        "count": 2,
+        "rationale": "Connects to undertaker and potentially beach."
+      },
+      "event": "illegal_clue",
+      "matched_word": "undertaker",
+      "reason": "morphological_variant",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vibe"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "strike"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ocean"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beach"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "pulse"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "opponent_completed",
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "ghost"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 65,
+    "public_event_count": 39,
+    "reason": "opponent_completed",
+    "seed": "openrouter-codenames-007-meta_llama_llama_4_scout-vs-google_gemma_3_27b_it",
+    "team_blue": "Gemma 3 27B",
+    "team_red": "Llama 4 Scout",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "power"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "force": 0.9,
+              "power": 0.85
+            },
+            "ranked_guesses": [
+              "force",
+              "power"
+            ],
+            "rationale": "Direct matches for 'power'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.85,
+              "force": 0.9,
+              "power": 0.8
+            },
+            "ranked_guesses": [
+              "force",
+              "dragon",
+              "power"
+            ],
+            "rationale": "Direct matches for 'power'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "dragon": 0.85,
+              "force": 0.9,
+              "strike": 0.8
+            },
+            "ranked_guesses": [
+              "force",
+              "dragon",
+              "strike"
+            ],
+            "rationale": "Direct matches for 'power'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "force"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "dragon"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "power",
+          "count": 3,
+          "rationale": "associate with 'force', 'crown', 'disease'"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "shape"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "plane": 0.75,
+              "round": 0.8,
+              "triangle": 0.85
+            },
+            "ranked_guesses": [
+              "triangle",
+              "round",
+              "plane"
+            ],
+            "rationale": "'Shape' directly relates to triangle, round, and plane.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "plane": 0.75,
+              "round": 0.8,
+              "triangle": 0.85
+            },
+            "ranked_guesses": [
+              "triangle",
+              "round",
+              "plane"
+            ],
+            "rationale": "Shape is a direct match for triangle, round, and plane.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "plane": 0.75,
+              "round": 0.8,
+              "triangle": 0.85
+            },
+            "ranked_guesses": [
+              "triangle",
+              "round",
+              "plane"
+            ],
+            "rationale": "\"Shape\" directly relates to triangle, round, and plane.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "triangle"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "round"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "shape",
+          "count": 3,
+          "rationale": "Connects to triangle, round, and potentially plane."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "velocity"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fly": 0.85,
+              "pass": 0.8,
+              "plane": 0.9
+            },
+            "ranked_guesses": [
+              "plane",
+              "fly",
+              "pass"
+            ],
+            "rationale": "These words relate to velocity, a measure of speed or movement.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fly": 0.85,
+              "horse": 0.75,
+              "plane": 0.9
+            },
+            "ranked_guesses": [
+              "plane",
+              "fly",
+              "horse"
+            ],
+            "rationale": "Direct matches for velocity",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.8,
+              "fly": 0.85,
+              "plane": 0.9
+            },
+            "ranked_guesses": [
+              "plane",
+              "fly",
+              "air"
+            ],
+            "rationale": "velocity relates to speed, so these words relate to fast movement",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "plane"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "velocity",
+          "count": 3,
+          "rationale": "relate to speed or movement for red words"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "royal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "crown": 0.85
+            },
+            "ranked_guesses": [
+              "crown"
+            ],
+            "rationale": "'Royal' strongly suggests 'crown'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crown": 0.85
+            },
+            "ranked_guesses": [
+              "crown"
+            ],
+            "rationale": "'Royal' strongly suggests 'crown'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "crown": 0.85
+            },
+            "ranked_guesses": [
+              "crown"
+            ],
+            "rationale": "'Royal' strongly suggests 'crown'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "crown"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "royal",
+          "count": 2,
+          "rationale": "Connects to crown and horse."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "sky"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "satellite": 0.85
+            },
+            "ranked_guesses": [
+              "air",
+              "satellite"
+            ],
+            "rationale": "The clue 'sky 2' strongly relates to 'air' and 'satellite', both fitting the sky theme.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "satellite": 0.85
+            },
+            "ranked_guesses": [
+              "air",
+              "satellite"
+            ],
+            "rationale": "The clue 'sky' is closely related to 'air' and 'satellite', both of which are plausible matches for the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "air": 0.9,
+              "satellite": 0.85
+            },
+            "ranked_guesses": [
+              "air",
+              "satellite"
+            ],
+            "rationale": "The clue 'sky 2' strongly relates to words associated with the atmosphere or space, making 'air' and 'satellite' high-confidence guesses for the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "air"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "satellite"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sky",
+          "count": 2,
+          "rationale": "connects to air, fly, and possibly horse"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "illness"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "disease": 0.85
+            },
+            "ranked_guesses": [
+              "disease"
+            ],
+            "rationale": "'Disease' is a direct match for 'illness'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "disease": 0.85
+            },
+            "ranked_guesses": [
+              "disease"
+            ],
+            "rationale": "'Illness' directly relates to 'disease'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "disease": 0.85
+            },
+            "ranked_guesses": [
+              "disease"
+            ],
+            "rationale": "'Illness' directly relates to 'disease'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "disease"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "illness",
+          "count": 2,
+          "rationale": "Connects to disease and ghost."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "flight"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.6,
+              "fly": 0.9,
+              "pass": 0.7
+            },
+            "ranked_guesses": [
+              "fly",
+              "pass",
+              "bar"
+            ],
+            "rationale": "The clue 'flight' strongly relates to 'fly'. 'Pass' and 'bar' have weaker connections but are still possible.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.8,
+              "fly": 0.9,
+              "pass": 0.75
+            },
+            "ranked_guesses": [
+              "fly",
+              "bar",
+              "pass"
+            ],
+            "rationale": "The clue 'flight' strongly relates to 'fly' and possibly 'pass' and 'bar' as less direct connections, all of which could be related to the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.75,
+              "fly": 0.9,
+              "pass": 0.8
+            },
+            "ranked_guesses": [
+              "fly",
+              "pass",
+              "bar"
+            ],
+            "rationale": "Direct matches for 'flight'",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "fly"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "flight",
+          "count": 3,
+          "rationale": "connects to air, fly, and possibly horse"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "perform"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "shakespeare": 0.85
+            },
+            "ranked_guesses": [
+              "shakespeare"
+            ],
+            "rationale": "Shakespeare's plays are performances.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "shakespeare": 0.85
+            },
+            "ranked_guesses": [
+              "shakespeare"
+            ],
+            "rationale": "Shakespeare's plays are performances.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "shakespeare": 0.85
+            },
+            "ranked_guesses": [
+              "shakespeare"
+            ],
+            "rationale": "Shakespeare wrote plays, which are performances.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "shakespeare"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "perform",
+          "count": 2,
+          "rationale": "Connects to Shakespeare and potentially ghost."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vitality"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "green": 0.75,
+              "spring": 0.8
+            },
+            "ranked_guesses": [
+              "spring",
+              "green"
+            ],
+            "rationale": "vitality relates to energy and life, spring and green fit well",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "green": 0.75,
+              "spring": 0.8
+            },
+            "ranked_guesses": [
+              "spring",
+              "green"
+            ],
+            "rationale": "vitality relates to energy and life, spring and green fit well",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "green": 0.75,
+              "spring": 0.8
+            },
+            "ranked_guesses": [
+              "spring",
+              "green"
+            ],
+            "rationale": "vitality relates to energy and life, spring and green fit well",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "spring"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vitality",
+          "count": 2,
+          "rationale": "connects to horse and undertaker"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.85,
+              "sub": 0.75
+            },
+            "ranked_guesses": [
+              "horse",
+              "sub"
+            ],
+            "rationale": "Both relate to animals. Horse is a direct animal, and sub can be a nautical animal (submarine).",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.85,
+              "sub": 0.75
+            },
+            "ranked_guesses": [
+              "horse",
+              "sub"
+            ],
+            "rationale": "Both 'horse' and 'sub' (as in submarine) can be considered animals. 'Horse' is a more direct animal, so it's ranked higher.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "horse": 0.85,
+              "sub": 0.75
+            },
+            "ranked_guesses": [
+              "horse",
+              "sub"
+            ],
+            "rationale": "Both 'horse' and 'sub' (as in submarine) are animals. 'Horse' has a higher confidence.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "horse"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 2,
+          "rationale": "Referring to horse and potentially beach."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "swim"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.8
+            },
+            "ranked_guesses": [
+              "bar"
+            ],
+            "rationale": "The word 'swim' is related to 'underwater' activities and 'bar' could be related to 'swim bar' or simply has a connection through sports, but more directly it relates to places or areas, and there might be a stretch in 'swim' connecting to a 'bar' as in a place where one could swim or be near water, but no strong direct link; however, given the lack of clear connections to other words and focusing on the team color red, 'bar' seems a plausible guess with some confidence.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "sub": 0.8
+            },
+            "ranked_guesses": [
+              "sub"
+            ],
+            "rationale": "The clue 'swim' is closely related to 'sub', which is a type of underwater vessel, making it a strong match for the red team's word.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.8
+            },
+            "ranked_guesses": [
+              "bar"
+            ],
+            "rationale": "The clue 'swim' is related to 'bar' as in 'barracuda', a swimmer fish.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "swim",
+          "count": 1,
+          "rationale": "remaining red words"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "color"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "green": 0.85
+            },
+            "ranked_guesses": [
+              "green"
+            ],
+            "rationale": "Direct match to the clue 'color'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "green": 0.85
+            },
+            "ranked_guesses": [
+              "green"
+            ],
+            "rationale": "Direct association with the clue 'color'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "green": 0.85
+            },
+            "ranked_guesses": [
+              "green"
+            ],
+            "rationale": "'Color' directly relates to 'green'.",
+            "stop": false
+          },
+          "agent_id": "Gemma 3 27B-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "green"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "color",
+          "count": 2,
+          "rationale": "Refers to green and ghost"
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "energy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fly": 0.85,
+              "force": 0.9
+            },
+            "ranked_guesses": [
+              "force",
+              "fly"
+            ],
+            "rationale": "The current clue is 'energy 2'. The words 'force' and 'fly' are related to energy and belong to the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fly": 0.85,
+              "force": 0.9
+            },
+            "ranked_guesses": [
+              "force",
+              "fly"
+            ],
+            "rationale": "The current clue is 'energy 2'. The words 'force' and 'fly' are related to energy and are part of the red team's words, with high confidence levels.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fly": 0.85,
+              "force": 0.9
+            },
+            "ranked_guesses": [
+              "force",
+              "fly"
+            ],
+            "rationale": "The current clue is 'energy 2'. The words 'force' and 'fly' are related to energy and belong to the red team.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "energy",
+          "count": 2,
+          "rationale": "hint for red words"
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "vibe"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "strike"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "ocean"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beach"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "undertake",
+          "count": 2,
+          "rationale": "Connects to undertaker and potentially beach."
+        },
+        "agent_id": "Gemma 3 27B-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "pulse"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "strike": 0.8
+            },
+            "ranked_guesses": [
+              "strike"
+            ],
+            "rationale": "The word 'strike' has a strong connection to the concept of 'vibe' or atmosphere, and also relates to energy or movement, which could be linked to the red team's previous clues like 'energy' and 'velocity'.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "strike": 0.8
+            },
+            "ranked_guesses": [
+              "strike"
+            ],
+            "rationale": "The word 'strike' has a strong connection to the concept of 'vibe' or atmosphere, and also relates to energy or movement, which could be linked to the red team's previous clues like 'energy' and 'velocity'.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "strike": 0.8
+            },
+            "ranked_guesses": [
+              "strike"
+            ],
+            "rationale": "The word 'strike' has a strong connection to the concept of 'vibe' or atmosphere, and also relates to energy or movement, which could be linked to the red team's previous clues like 'energy' and 'velocity'.",
+            "stop": false
+          },
+          "agent_id": "Llama 4 Scout-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "opponent_completed",
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "ghost"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "vibe",
+          "count": 2,
+          "rationale": "Connects to disease and undertaker."
+        },
+        "agent_id": "Llama 4 Scout-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

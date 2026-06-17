@@ -1,0 +1,2258 @@
+{
+  "board": {
+    "identities": {
+      "arm": "red",
+      "bar": "blue",
+      "beijing": "blue",
+      "berlin": "neutral",
+      "board": "red",
+      "fall": "blue",
+      "fan": "blue",
+      "field": "blue",
+      "grass": "red",
+      "horn": "blue",
+      "ice": "neutral",
+      "kid": "neutral",
+      "lap": "red",
+      "mug": "red",
+      "pie": "assassin",
+      "pipe": "neutral",
+      "pound": "neutral",
+      "ray": "red",
+      "root": "neutral",
+      "shakespeare": "red",
+      "square": "blue",
+      "superhero": "neutral",
+      "tick": "blue",
+      "washington": "red",
+      "worm": "red"
+    },
+    "revealed": [
+      "arm",
+      "bar",
+      "beijing",
+      "berlin",
+      "board",
+      "fall",
+      "fan",
+      "field",
+      "grass",
+      "kid",
+      "pie",
+      "ray",
+      "root",
+      "shakespeare",
+      "washington",
+      "worm"
+    ],
+    "words": {
+      "arm": "red",
+      "bar": "blue",
+      "beijing": "blue",
+      "berlin": "neutral",
+      "board": "red",
+      "fall": "blue",
+      "fan": "blue",
+      "field": "blue",
+      "grass": "red",
+      "horn": "blue",
+      "ice": "neutral",
+      "kid": "neutral",
+      "lap": "red",
+      "mug": "red",
+      "pie": "assassin",
+      "pipe": "neutral",
+      "pound": "neutral",
+      "ray": "red",
+      "root": "neutral",
+      "shakespeare": "red",
+      "square": "blue",
+      "superhero": "neutral",
+      "tick": "blue",
+      "washington": "red",
+      "worm": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "biology",
+        "count": 3,
+        "rationale": "Links worm, grass, and ray as living organisms"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.6,
+          "root": 0.75,
+          "worm": 0.85
+        },
+        "ranked_guesses": [
+          "worm",
+          "root",
+          "grass"
+        ],
+        "rationale": "All are biological terms (organism, plant part, plant) fitting the clue 'biology' for three cards.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.72,
+          "root": 0.78,
+          "worm": 0.85
+        },
+        "ranked_guesses": [
+          "worm",
+          "root",
+          "grass"
+        ],
+        "rationale": "All are living organisms or parts studied in biology",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {},
+        "ranked_guesses": [],
+        "rationale": null,
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "city",
+        "count": 2,
+        "rationale": "two blue cities"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.8,
+          "berlin": 0.8,
+          "washington": 0.8
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin",
+          "washington"
+        ],
+        "rationale": "Cities are likely to be related to the city clue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.8,
+          "berlin": 0.7,
+          "washington": 0.6
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin",
+          "washington"
+        ],
+        "rationale": "Cities are likely to be related to the clue 'city'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.8,
+          "berlin": 0.8,
+          "washington": 0.8
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin",
+          "washington"
+        ],
+        "rationale": "Cities are likely to be related to the clue 'city'.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "politics",
+        "count": 3,
+        "rationale": "Washington (capital), arm (armed forces), board (government board)"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "washington": 0.85
+        },
+        "ranked_guesses": [
+          "washington"
+        ],
+        "rationale": "Washington is the capital and central to politics",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.75,
+          "square": 0.7,
+          "washington": 0.85
+        },
+        "ranked_guesses": [
+          "washington",
+          "bar",
+          "square"
+        ],
+        "rationale": "Washington is the political capital; bar relates to legal/political arena; square often denotes public political gathering places.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "bar": 0.65,
+          "washington": 0.78
+        },
+        "ranked_guesses": [
+          "washington",
+          "bar",
+          "arm"
+        ],
+        "rationale": "Washington (capital/politics), bar (legal/political), arm (branch of government)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "capital",
+        "count": 2,
+        "rationale": "Cities are often capitals"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.8,
+          "berlin": 0.2
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "Both words are cities, and Beijing is already known to be blue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.8,
+          "berlin": 0.2
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "Both words are cities, and Beijing is already known to be blue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beijing": 0.8,
+          "berlin": 0.2
+        },
+        "ranked_guesses": [
+          "beijing",
+          "berlin"
+        ],
+        "rationale": "Both Beijing and Berlin are cities, and the clue 'capital' is likely related to cities.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sports",
+        "count": 4,
+        "rationale": "Arm, board, grass, and lap can all be associated with various sports activities."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.75,
+          "field": 0.85,
+          "grass": 0.8,
+          "ice": 0.78
+        },
+        "ranked_guesses": [
+          "field",
+          "grass",
+          "ice",
+          "fan"
+        ],
+        "rationale": "All are common sports terms (playing surfaces and spectator) fitting the clue 'sports' with count 4.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.78,
+          "field": 0.85,
+          "grass": 0.68,
+          "ice": 0.72
+        },
+        "ranked_guesses": [
+          "field",
+          "fan",
+          "ice",
+          "grass"
+        ],
+        "rationale": "These words are common sports terms: field for playing area, fan for supporters, ice for hockey/skating, grass for many field sports.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.7,
+          "field": 0.75,
+          "grass": 0.73,
+          "ice": 0.68
+        },
+        "ranked_guesses": [
+          "field",
+          "grass",
+          "fan",
+          "ice"
+        ],
+        "rationale": "These words are strongly associated with sports venues, equipment, and participants.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "government",
+        "count": 2,
+        "rationale": "connection to politics and capitals"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.6,
+          "board": 0.8
+        },
+        "ranked_guesses": [
+          "board",
+          "arm"
+        ],
+        "rationale": "Both words are related to government, with board being a common term in government institutions and arm potentially referring to armed forces.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.8
+        },
+        "ranked_guesses": [
+          "board"
+        ],
+        "rationale": "Government clue relates to board, a governing body",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.8
+        },
+        "ranked_guesses": [
+          "board"
+        ],
+        "rationale": "government clue relates to board",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "portrait",
+        "count": 3,
+        "rationale": "Mug (a face), arm (often shown in portraits), and lap (a seated pose) are all red words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kid": 0.6,
+          "mug": 0.5,
+          "shakespeare": 0.7
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "kid",
+          "mug"
+        ],
+        "rationale": "Portraits often depict people like Shakespeare, children (kid), or a face (mug)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mug": 0.78
+        },
+        "ranked_guesses": [
+          "mug"
+        ],
+        "rationale": "mugshot is a type of portrait; fits clue portrait",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kid": 0.45,
+          "shakespeare": 0.75,
+          "superhero": 0.6
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "superhero",
+          "kid"
+        ],
+        "rationale": "Portrait clue points to famous people or characters; Shakespeare and a superhero are likely red agents, kid as a generic portrait subject.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "structure",
+        "count": 2,
+        "rationale": "blue words related to buildings"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "square": 0.8
+        },
+        "ranked_guesses": [
+          "square"
+        ],
+        "rationale": "Structure is a broad concept, but square is a common structure in architecture and design.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.8,
+          "square": 0.6,
+          "superhero": 0.4
+        },
+        "ranked_guesses": [
+          "arm",
+          "square",
+          "superhero"
+        ],
+        "rationale": "Words related to structure, like arm and square, are likely to be blue.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "arm": 0.8
+        },
+        "ranked_guesses": [
+          "arm"
+        ],
+        "rationale": "structure is related to building, and arm is a part of a structure",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "animal",
+        "count": 4,
+        "rationale": "Grass is food for animals, lap suggests a lapdog, a mug can hold a pet's water bowl, and ray is a type of animal (stingray)."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.4,
+          "kid": 0.6,
+          "ray": 0.85,
+          "tick": 0.8
+        },
+        "ranked_guesses": [
+          "ray",
+          "tick",
+          "kid",
+          "grass"
+        ],
+        "rationale": "Ray (stingray) and tick are clear animals; kid is a young goat; grass could hint at grasshopper.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.6,
+          "kid": 0.85,
+          "ray": 0.78,
+          "tick": 0.72
+        },
+        "ranked_guesses": [
+          "kid",
+          "ray",
+          "tick",
+          "grass"
+        ],
+        "rationale": "Kid (young goat), ray (fish), tick (arachnid) are clear animal terms; grass hints at grasshopper, a stretch but plausible.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "kid": 0.78
+        },
+        "ranked_guesses": [
+          "kid"
+        ],
+        "rationale": "kid is a young goat, fits animal clue",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "location",
+        "count": 2,
+        "rationale": "Cities and places"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fall": 0.8
+        },
+        "ranked_guesses": [
+          "fall"
+        ],
+        "rationale": "Location clue matches fall, a type of location",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fall": 0.8,
+          "square": 0.6
+        },
+        "ranked_guesses": [
+          "fall",
+          "square"
+        ],
+        "rationale": "Both words are unrevealed and seem to fit the 'location' clue, with 'fall' potentially referring to a waterfall and 'square' being a common type of public space.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fall": 0.8,
+          "square": 0.6
+        },
+        "ranked_guesses": [
+          "fall",
+          "square"
+        ],
+        "rationale": "Both words are related to location, and 'fall' could be a location in a broader sense, while 'square' is a type of location in an urban setting.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farm",
+        "count": 4,
+        "rationale": "Grass, lap, mug, and ray can all be associated with a farm setting."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "square",
+        "count": 2,
+        "rationale": "Shape and field"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sunlight",
+        "count": 3,
+        "rationale": "Ray (a sun ray), grass (needs sunlight), and mug (often holds a hot sunny drink) are all linked to sunlight."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.65,
+          "ice": 0.55,
+          "ray": 0.85
+        },
+        "ranked_guesses": [
+          "ray",
+          "grass",
+          "ice"
+        ],
+        "rationale": "Ray is directly sunlight; grass thrives in sun; ice is affected by sunlight",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.85,
+          "ice": 0.75,
+          "ray": 0.8
+        },
+        "ranked_guesses": [
+          "grass",
+          "ray",
+          "ice"
+        ],
+        "rationale": "Sunlight helps grass grow, creates sunrays, and melts ice.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "grass": 0.7,
+          "ice": 0.6,
+          "ray": 0.85
+        },
+        "ranked_guesses": [
+          "ray",
+          "grass",
+          "ice"
+        ],
+        "rationale": "Sunlight produces rays; it helps grass grow; it melts ice.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "music",
+        "count": 2,
+        "rationale": "fan and horn"
+      },
+      "agent_id": "Llama 3 70B Instruct-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.8,
+          "horn": 0.6,
+          "lap": 0.6,
+          "mug": 0.6,
+          "pipe": 0.6,
+          "square": 0.6,
+          "superhero": 0.4,
+          "tick": 0.4
+        },
+        "ranked_guesses": [
+          "fan",
+          "horn",
+          "lap",
+          "mug",
+          "pipe",
+          "square",
+          "superhero",
+          "tick"
+        ],
+        "rationale": "Music is often associated with instruments like horn and pipe, and fan could be a music fan. Lap and mug might be related to music in a more abstract sense. Square is a word that was previously given as an illegal clue, but it could still be related to music. Superhero and tick are less likely, but still possible.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.8,
+          "horn": 0.6,
+          "lap": 0.4
+        },
+        "ranked_guesses": [
+          "fan",
+          "horn",
+          "lap"
+        ],
+        "rationale": "Music is often associated with instruments like fanfare, horn, and lap steel guitar.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "fan": 0.8,
+          "horn": 0.7,
+          "lap": 0.7,
+          "mug": 0.7,
+          "pipe": 0.6,
+          "square": 0.6,
+          "superhero": 0.5,
+          "tick": 0.5
+        },
+        "ranked_guesses": [
+          "fan",
+          "horn",
+          "lap",
+          "mug",
+          "pipe",
+          "square",
+          "superhero",
+          "tick"
+        ],
+        "rationale": "Music is often associated with instruments like horn and pipe, and fan could be a music fan. Lap and mug might be related to music in a more abstract sense. Square and superhero are less likely but still possible connections.",
+        "stop": false
+      },
+      "agent_id": "Llama 3 70B Instruct-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "home",
+        "count": 2,
+        "rationale": "Both a lap (as in sitting on someone's lap) and a mug are things commonly found at home."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mug": 0.65,
+          "pie": 0.75
+        },
+        "ranked_guesses": [
+          "pie",
+          "mug"
+        ],
+        "rationale": "Both pie and mug are common household items associated with home comfort; they are still unrevealed and fit the clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "lap": 0.75,
+          "mug": 0.7
+        },
+        "ranked_guesses": [
+          "lap",
+          "mug"
+        ],
+        "rationale": "Both lap and mug are everyday household items often associated with being at home.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mug": 0.6,
+          "pie": 0.65
+        },
+        "ranked_guesses": [
+          "pie",
+          "mug"
+        ],
+        "rationale": "Both can be associated with home (home\u2011cooked pie, a mug for a home drink).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "biology"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "worm"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "root"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "city"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "beijing"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "berlin"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "politics"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "washington"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bar"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "capital"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "sports"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "field"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "government"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "board"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "portrait"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "shakespeare"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "structure"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "arm"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "animal"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "kid"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "location"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fall"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "farm",
+        "count": 4,
+        "rationale": "Grass, lap, mug, and ray can all be associated with a farm setting."
+      },
+      "event": "illegal_clue",
+      "matched_word": "arm",
+      "reason": "substring",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "clue": "square",
+        "count": 2,
+        "rationale": "Shape and field"
+      },
+      "event": "illegal_clue",
+      "matched_word": "square",
+      "reason": "board_word",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sunlight"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "ray"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "grass"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "fan"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "home"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "assassin",
+      "revealed_identity": "assassin",
+      "team": "red",
+      "terminal": true,
+      "winner": "blue",
+      "word": "pie"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 54,
+    "public_event_count": 36,
+    "reason": "assassin",
+    "seed": "openrouter-codenames-single-004-openai_gpt_oss_120b-vs-meta_llama_llama_3_70b_instruct",
+    "team_blue": "Llama 3 70B Instruct",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "biology"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.6,
+              "root": 0.75,
+              "worm": 0.85
+            },
+            "ranked_guesses": [
+              "worm",
+              "root",
+              "grass"
+            ],
+            "rationale": "All are biological terms (organism, plant part, plant) fitting the clue 'biology' for three cards.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.72,
+              "root": 0.78,
+              "worm": 0.85
+            },
+            "ranked_guesses": [
+              "worm",
+              "root",
+              "grass"
+            ],
+            "rationale": "All are living organisms or parts studied in biology",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {},
+            "ranked_guesses": [],
+            "rationale": null,
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "worm"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "root"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "biology",
+          "count": 3,
+          "rationale": "Links worm, grass, and ray as living organisms"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "city"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.8,
+              "berlin": 0.8,
+              "washington": 0.8
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin",
+              "washington"
+            ],
+            "rationale": "Cities are likely to be related to the city clue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.8,
+              "berlin": 0.7,
+              "washington": 0.6
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin",
+              "washington"
+            ],
+            "rationale": "Cities are likely to be related to the clue 'city'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.8,
+              "berlin": 0.8,
+              "washington": 0.8
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin",
+              "washington"
+            ],
+            "rationale": "Cities are likely to be related to the clue 'city'.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "beijing"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "berlin"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "city",
+          "count": 2,
+          "rationale": "two blue cities"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "politics"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "washington": 0.85
+            },
+            "ranked_guesses": [
+              "washington"
+            ],
+            "rationale": "Washington is the capital and central to politics",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.75,
+              "square": 0.7,
+              "washington": 0.85
+            },
+            "ranked_guesses": [
+              "washington",
+              "bar",
+              "square"
+            ],
+            "rationale": "Washington is the political capital; bar relates to legal/political arena; square often denotes public political gathering places.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "bar": 0.65,
+              "washington": 0.78
+            },
+            "ranked_guesses": [
+              "washington",
+              "bar",
+              "arm"
+            ],
+            "rationale": "Washington (capital/politics), bar (legal/political), arm (branch of government)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "washington"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "politics",
+          "count": 3,
+          "rationale": "Washington (capital), arm (armed forces), board (government board)"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "capital"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.8,
+              "berlin": 0.2
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "Both words are cities, and Beijing is already known to be blue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.8,
+              "berlin": 0.2
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "Both words are cities, and Beijing is already known to be blue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beijing": 0.8,
+              "berlin": 0.2
+            },
+            "ranked_guesses": [
+              "beijing",
+              "berlin"
+            ],
+            "rationale": "Both Beijing and Berlin are cities, and the clue 'capital' is likely related to cities.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "capital",
+          "count": 2,
+          "rationale": "Cities are often capitals"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "sports"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fan": 0.75,
+              "field": 0.85,
+              "grass": 0.8,
+              "ice": 0.78
+            },
+            "ranked_guesses": [
+              "field",
+              "grass",
+              "ice",
+              "fan"
+            ],
+            "rationale": "All are common sports terms (playing surfaces and spectator) fitting the clue 'sports' with count 4.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fan": 0.78,
+              "field": 0.85,
+              "grass": 0.68,
+              "ice": 0.72
+            },
+            "ranked_guesses": [
+              "field",
+              "fan",
+              "ice",
+              "grass"
+            ],
+            "rationale": "These words are common sports terms: field for playing area, fan for supporters, ice for hockey/skating, grass for many field sports.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fan": 0.7,
+              "field": 0.75,
+              "grass": 0.73,
+              "ice": 0.68
+            },
+            "ranked_guesses": [
+              "field",
+              "grass",
+              "fan",
+              "ice"
+            ],
+            "rationale": "These words are strongly associated with sports venues, equipment, and participants.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "field"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sports",
+          "count": 4,
+          "rationale": "Arm, board, grass, and lap can all be associated with various sports activities."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "government"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.6,
+              "board": 0.8
+            },
+            "ranked_guesses": [
+              "board",
+              "arm"
+            ],
+            "rationale": "Both words are related to government, with board being a common term in government institutions and arm potentially referring to armed forces.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "board": 0.8
+            },
+            "ranked_guesses": [
+              "board"
+            ],
+            "rationale": "Government clue relates to board, a governing body",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "board": 0.8
+            },
+            "ranked_guesses": [
+              "board"
+            ],
+            "rationale": "government clue relates to board",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "board"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "government",
+          "count": 2,
+          "rationale": "connection to politics and capitals"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "portrait"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "kid": 0.6,
+              "mug": 0.5,
+              "shakespeare": 0.7
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "kid",
+              "mug"
+            ],
+            "rationale": "Portraits often depict people like Shakespeare, children (kid), or a face (mug)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mug": 0.78
+            },
+            "ranked_guesses": [
+              "mug"
+            ],
+            "rationale": "mugshot is a type of portrait; fits clue portrait",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "kid": 0.45,
+              "shakespeare": 0.75,
+              "superhero": 0.6
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "superhero",
+              "kid"
+            ],
+            "rationale": "Portrait clue points to famous people or characters; Shakespeare and a superhero are likely red agents, kid as a generic portrait subject.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "shakespeare"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "portrait",
+          "count": 3,
+          "rationale": "Mug (a face), arm (often shown in portraits), and lap (a seated pose) are all red words."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "structure"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "square": 0.8
+            },
+            "ranked_guesses": [
+              "square"
+            ],
+            "rationale": "Structure is a broad concept, but square is a common structure in architecture and design.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.8,
+              "square": 0.6,
+              "superhero": 0.4
+            },
+            "ranked_guesses": [
+              "arm",
+              "square",
+              "superhero"
+            ],
+            "rationale": "Words related to structure, like arm and square, are likely to be blue.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "arm": 0.8
+            },
+            "ranked_guesses": [
+              "arm"
+            ],
+            "rationale": "structure is related to building, and arm is a part of a structure",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "arm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "structure",
+          "count": 2,
+          "rationale": "blue words related to buildings"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "animal"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.4,
+              "kid": 0.6,
+              "ray": 0.85,
+              "tick": 0.8
+            },
+            "ranked_guesses": [
+              "ray",
+              "tick",
+              "kid",
+              "grass"
+            ],
+            "rationale": "Ray (stingray) and tick are clear animals; kid is a young goat; grass could hint at grasshopper.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.6,
+              "kid": 0.85,
+              "ray": 0.78,
+              "tick": 0.72
+            },
+            "ranked_guesses": [
+              "kid",
+              "ray",
+              "tick",
+              "grass"
+            ],
+            "rationale": "Kid (young goat), ray (fish), tick (arachnid) are clear animal terms; grass hints at grasshopper, a stretch but plausible.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "kid": 0.78
+            },
+            "ranked_guesses": [
+              "kid"
+            ],
+            "rationale": "kid is a young goat, fits animal clue",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "kid"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "animal",
+          "count": 4,
+          "rationale": "Grass is food for animals, lap suggests a lapdog, a mug can hold a pet's water bowl, and ray is a type of animal (stingray)."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "location"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "fall": 0.8
+            },
+            "ranked_guesses": [
+              "fall"
+            ],
+            "rationale": "Location clue matches fall, a type of location",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fall": 0.8,
+              "square": 0.6
+            },
+            "ranked_guesses": [
+              "fall",
+              "square"
+            ],
+            "rationale": "Both words are unrevealed and seem to fit the 'location' clue, with 'fall' potentially referring to a waterfall and 'square' being a common type of public space.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "fall": 0.8,
+              "square": 0.6
+            },
+            "ranked_guesses": [
+              "fall",
+              "square"
+            ],
+            "rationale": "Both words are related to location, and 'fall' could be a location in a broader sense, while 'square' is a type of location in an urban setting.",
+            "stop": false
+          },
+          "agent_id": "Llama 3 70B Instruct-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fall"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "location",
+          "count": 2,
+          "rationale": "Cities and places"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sunlight"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "ray"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "grass"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "farm",
+          "count": 4,
+          "rationale": "Grass, lap, mug, and ray can all be associated with a farm setting."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "music"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "fan"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "square",
+          "count": 2,
+          "rationale": "Shape and field"
+        },
+        "agent_id": "Llama 3 70B Instruct-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "home"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.65,
+              "ice": 0.55,
+              "ray": 0.85
+            },
+            "ranked_guesses": [
+              "ray",
+              "grass",
+              "ice"
+            ],
+            "rationale": "Ray is directly sunlight; grass thrives in sun; ice is affected by sunlight",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.85,
+              "ice": 0.75,
+              "ray": 0.8
+            },
+            "ranked_guesses": [
+              "grass",
+              "ray",
+              "ice"
+            ],
+            "rationale": "Sunlight helps grass grow, creates sunrays, and melts ice.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "grass": 0.7,
+              "ice": 0.6,
+              "ray": 0.85
+            },
+            "ranked_guesses": [
+              "ray",
+              "grass",
+              "ice"
+            ],
+            "rationale": "Sunlight produces rays; it helps grass grow; it melts ice.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "assassin",
+          "revealed_identity": "assassin",
+          "team": "red",
+          "terminal": true,
+          "winner": "blue",
+          "word": "pie"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sunlight",
+          "count": 3,
+          "rationale": "Ray (a sun ray), grass (needs sunlight), and mug (often holds a hot sunny drink) are all linked to sunlight."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

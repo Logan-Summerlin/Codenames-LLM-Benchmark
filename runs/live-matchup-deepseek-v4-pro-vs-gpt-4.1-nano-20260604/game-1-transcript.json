@@ -1,0 +1,2956 @@
+{
+  "board": {
+    "identities": {
+      "agent": "blue",
+      "anchor": "blue",
+      "baker": "blue",
+      "bridge": "neutral",
+      "butter": "neutral",
+      "canyon": "red",
+      "circle": "assassin",
+      "family": "blue",
+      "farmer": "red",
+      "flower": "red",
+      "guitar": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "machine": "neutral",
+      "metal": "blue",
+      "paper": "red",
+      "poet": "red",
+      "pyramid": "red",
+      "singer": "red",
+      "spirit": "blue",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "blue",
+      "travel": "neutral",
+      "village": "neutral"
+    },
+    "revealed": [
+      "bridge",
+      "canyon",
+      "farmer",
+      "flower",
+      "guitar",
+      "machine",
+      "paper",
+      "poet",
+      "pyramid",
+      "singer",
+      "storm",
+      "summer",
+      "tiger"
+    ],
+    "words": {
+      "agent": "blue",
+      "anchor": "blue",
+      "baker": "blue",
+      "bridge": "neutral",
+      "butter": "neutral",
+      "canyon": "red",
+      "circle": "assassin",
+      "family": "blue",
+      "farmer": "red",
+      "flower": "red",
+      "guitar": "red",
+      "highway": "neutral",
+      "honey": "neutral",
+      "machine": "neutral",
+      "metal": "blue",
+      "paper": "red",
+      "poet": "red",
+      "pyramid": "red",
+      "singer": "red",
+      "spirit": "blue",
+      "storm": "red",
+      "summer": "blue",
+      "tiger": "blue",
+      "travel": "neutral",
+      "village": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "music",
+        "count": 3,
+        "rationale": "Connects to guitar, singer, and possibly poet (as in lyricist) without overlapping with blue or assassin words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.5,
+          "guitar": 0.95,
+          "poet": 0.7,
+          "singer": 0.9,
+          "spirit": 0.4
+        },
+        "ranked_guesses": [
+          "guitar",
+          "singer",
+          "poet",
+          "bridge",
+          "spirit"
+        ],
+        "rationale": "Clue 'music' with count 3. Top guesses: guitar (instrument), singer (vocalist), poet (lyricist). Bridge and spirit are weaker connections.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.4,
+          "guitar": 0.95,
+          "metal": 0.3,
+          "poet": 0.6,
+          "singer": 0.85
+        },
+        "ranked_guesses": [
+          "guitar",
+          "singer",
+          "poet",
+          "bridge",
+          "metal"
+        ],
+        "rationale": "Clue 'music' with count 3. Top guesses: guitar (instrument), singer (vocalist), poet (lyricist). Bridge and metal are less direct but possible (bridge in a song, metal genre).",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flower": 0.3,
+          "guitar": 0.95,
+          "poet": 0.7,
+          "singer": 0.9,
+          "spirit": 0.2
+        },
+        "ranked_guesses": [
+          "guitar",
+          "singer",
+          "poet",
+          "flower",
+          "spirit"
+        ],
+        "rationale": "Clue 'music' (count 3) strongly suggests guitar and singer. Poet is a possible third (lyrics/poetry connection). Flower and spirit are weaker connections (flower power music, spirit of music).",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "art 2",
+        "count": 2,
+        "rationale": "Both 'family' and 'metal' can be associated with art or artistic themes."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "art": 0.8,
+          "circle": 0.6,
+          "flower": 0.4
+        },
+        "ranked_guesses": [
+          "art",
+          "circle",
+          "flower"
+        ],
+        "rationale": "The clue 'art 2' suggests words related to art or artistic concepts. 'Art' itself is a direct match. 'Circle' and 'flower' can be associated with artistic motifs or subjects. 'Guitar' and 'singer' are already revealed and belong to the red team, so they are not options. The remaining words are less directly related to art, so the guesses are ordered accordingly.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "art": 0.8,
+          "circle": 0.6,
+          "family": 0.4
+        },
+        "ranked_guesses": [
+          "art",
+          "circle",
+          "family"
+        ],
+        "rationale": "The clue 'art 2' suggests words related to art or creative expression. 'art' is the most direct match. 'circle' can relate to artistic design or patterns. 'family' is less directly related but can be associated with art themes or artistic representations of family. Other words like 'flower' or 'pyramid' are less certain in this context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "art": 0.8,
+          "circle": 0.6,
+          "family": 0.4
+        },
+        "ranked_guesses": [
+          "art",
+          "circle",
+          "family"
+        ],
+        "rationale": "The clue 'art 2' suggests words related to art or creative expression. 'Art' itself is a direct match. 'Circle' can relate to artistic shapes or forms. 'Family' might be loosely connected through themes of community or groups often depicted in art. Other words like 'flower' or 'pyramid' are less directly related to the clue, and the revealed words 'guitar' and 'singer' are already guessed and red team, so they are not options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "instrument",
+        "count": 2,
+        "rationale": "Relates to guitar and singer, both already revealed, but can also point to poet (as a lyrical instrument) and paper (as a writer's tool). Avoids remaining red words like canyon, farmer, flower, pyramid, storm."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.2,
+          "bridge": 0.3,
+          "machine": 0.9,
+          "metal": 0.7,
+          "paper": 0.1
+        },
+        "ranked_guesses": [
+          "machine",
+          "metal",
+          "bridge",
+          "anchor",
+          "paper"
+        ],
+        "rationale": "The clue 'instrument' with count 2 suggests two words related to instruments. 'Machine' is a strong candidate as it can be a type of instrument (e.g., a device or tool). 'Metal' is also plausible because many instruments are made of metal. 'Bridge' is a part of string instruments, but less direct. 'Anchor' and 'paper' are weaker connections. We have 3 guesses remaining, so we should guess the top two confidently.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.4,
+          "machine": 0.8,
+          "metal": 0.6
+        },
+        "ranked_guesses": [
+          "machine",
+          "metal",
+          "bridge"
+        ],
+        "rationale": "The clue 'instrument' with count 2 suggests two words related to tools or devices. 'Machine' is a strong candidate as a type of instrument. 'Metal' could be associated with instruments (e.g., musical instruments made of metal). 'Bridge' is a weaker connection (e.g., a bridge is an instrument in dentistry or a part of a string instrument). Considering previous guesses 'guitar' and 'singer' from 'music', 'instrument' likely points to non-musical instruments to avoid overlap. 'Machine' and 'metal' fit better than 'bridge'.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "drum": 0.7,
+          "flute": 0.6,
+          "piano": 0.9,
+          "trumpet": 0.5,
+          "violin": 0.8
+        },
+        "ranked_guesses": [
+          "piano",
+          "violin",
+          "drum",
+          "flute",
+          "trumpet"
+        ],
+        "rationale": "The clue 'instrument' with count 2 suggests two musical instruments. 'Guitar' and 'singer' are already revealed as red, but 'singer' is not an instrument. The remaining words likely include musical instruments. Common instruments not yet revealed could be 'piano', 'violin', 'drum', 'flute', 'trumpet'. However, none of these words are on the board. The board words are: agent, anchor, baker, bridge, butter, canyon, circle, family, farmer, flower, guitar, highway, honey, machine, metal, paper, poet, pyramid, singer, spirit, storm, summer, tiger, travel, village. Among these, 'guitar' is already revealed. 'Singer' is revealed but is not an instrument. The clue might be for words that are instruments or related to instruments. Possible instrument-related words on the board: 'bridge' (part of a string instrument), 'machine' (could be a musical instrument like a drum machine), 'metal' (material for instruments), 'paper' (as in paper instrument?), 'poet' (unlikely), 'spirit' (unlikely). 'Bridge' is a strong candidate as it's a part of a guitar/violin. 'Machine' could be a stretch. 'Metal' is a material. Given the clue 'instrument' with count 2, and 'guitar' already guessed, the second word might be 'bridge'. But the clue was given after 'guitar' and 'singer' were revealed, so the spymaster knows those are red. The count 2 means there are two remaining red words related to 'instrument'. So we need to find two words on the board that relate to instrument. 'Bridge' is one. Another could be 'machine' if thinking of a musical instrument machine, or 'metal' for metal instruments. 'Paper' could be a paper instrument like a paper trumpet? Unlikely. 'Poet' is not an instrument. 'Spirit' is not. 'Circle'? No. 'Family'? No. 'Flower'? No. 'Highway'? No. 'Honey'? No. 'Summer'? No. 'Tiger'? No. 'Travel'? No. 'Village'? No. 'Anchor'? No. 'Baker'? No. 'Butter'? No. 'Canyon'? No. 'Farmer'? No. 'Pyramid'? No. 'Storm'? No. So the only plausible instrument-related words are 'bridge' and maybe 'machine' or 'metal'. But 'machine' is a stretch. 'Metal' is a material, not an instrument itself. 'Bridge' is a part of an instrument. Another possibility: 'paper' could be used in a paper instrument like a kazoo? Not strong. 'Poet' might be a stretch for 'instrument' as a tool for poetry? No. Given the board, the best guess is 'bridge'. But we need two guesses. The second guess is tricky. Maybe 'machine' as in 'musical instrument' like a synthesizer? Or 'metal' as in metal instruments like trumpet? But 'metal' is a material, not an instrument. 'Machine' could be a drum machine. I'll go with 'bridge' and 'machine'. However, the assistant's response lists 'piano', 'violin', etc., which are not on the board. That's an error. The assistant must only guess words from the board. The board words are provided. So I need to correct that. The correct ranked guesses should be from the board words. Let's analyze the board words for instrument connections: guitar (already red), singer (red but not instrument), bridge (part of string instrument), machine (could be a musical machine), metal (material for instruments), paper (paper instrument? weak), poet (no), spirit (no), etc. The strongest is bridge. Next, maybe machine. But machine is not a typical instrument. Another word: 'circle'? No. 'Family'? No. 'Flower'? No. 'Highway'? No. 'Honey'? No. 'Summer'? No. 'Tiger'? No. 'Travel'? No. 'Village'? No. 'Anchor'? No. 'Baker'? No. 'Butter'? No. 'Canyon'? No. 'Farmer'? No. 'Pyramid'? No. 'Storm'? No. 'Agent'? No. So only 'bridge' and maybe 'machine' or 'metal'. But 'metal' is a material, not an instrument. 'Machine' is a device, could be a musical instrument like a drum machine or synthesizer. I think 'bridge' is a solid guess. For the second, I'll go with 'machine'. But the clue count is 2, so we need two guesses. We have 3 guesses remaining. We should guess two words. So ranked guesses: bridge, machine, metal. Confidences: bridge 0.8, machine 0.6, metal 0.4. Stop after two guesses if we are confident? We'll guess two and then stop if we think we got them. The assistant's response should be in JSON with ranked_guesses, confidences, stop, rationale. I'll provide that.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "summer",
+        "count": 1,
+        "rationale": "Associated with the blue word 'summer' and the blue team."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.3,
+          "family": 0.4,
+          "flower": 0.5,
+          "summer": 0.8,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "summer",
+          "village",
+          "flower",
+          "family",
+          "canyon"
+        ],
+        "rationale": "The clue 'summer' suggests words associated with the season, such as 'village' (many summer activities occur in villages), 'flower' (blooming in summer), 'family' (summer family gatherings), and 'canyon' (outdoor summer adventures). 'Summer' itself is the most direct guess, with others providing contextual relevance.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.45,
+          "family": 0.5,
+          "flower": 0.55,
+          "summer": 0.85,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "summer",
+          "village",
+          "flower",
+          "family",
+          "canyon"
+        ],
+        "rationale": "The clue 'summer' suggests words associated with the season, such as 'village' (often linked to summer holidays), 'flower' (blooming season), 'family' (summer gatherings), and 'canyon' (outdoor summer activities). 'Summer' itself is the most direct guess. The other options are less directly connected but still relevant to the theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.6,
+          "canyon": 0.65,
+          "family": 0.7,
+          "flower": 0.75,
+          "village": 0.8
+        },
+        "ranked_guesses": [
+          "village",
+          "flower",
+          "family",
+          "canyon",
+          "bridge"
+        ],
+        "rationale": "The clue 'summer' suggests themes related to outdoor, nature, or leisure activities. 'Village' and 'flower' are strongly associated with summer environments. 'Family' and 'canyon' also fit as summer-related settings or activities. 'Bridge' could relate to travel or scenic spots often visited in summer. Other words like 'tiger' or 'honey' are less directly connected.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "nature",
+        "count": 3,
+        "rationale": "Connects to canyon, flower, and storm, all red words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.1,
+          "anchor": 0.1,
+          "baker": 0.1,
+          "bridge": 0.1,
+          "butter": 0.4,
+          "canyon": 0.8,
+          "circle": 0.1,
+          "family": 0.1,
+          "farmer": 0.2,
+          "flower": 0.9,
+          "highway": 0.1,
+          "honey": 0.3,
+          "metal": 0.1,
+          "paper": 0.1,
+          "poet": 0.1,
+          "pyramid": 0.1,
+          "spirit": 0.1,
+          "storm": 0.6,
+          "tiger": 0.7,
+          "travel": 0.1,
+          "village": 0.5
+        },
+        "ranked_guesses": [
+          "flower",
+          "canyon",
+          "tiger",
+          "storm",
+          "village",
+          "butter",
+          "honey",
+          "farmer",
+          "circle",
+          "bridge",
+          "family",
+          "spirit",
+          "pyramid",
+          "travel",
+          "paper",
+          "metal",
+          "poet",
+          "anchor",
+          "baker",
+          "agent",
+          "highway"
+        ],
+        "rationale": "Clue 'nature' with count 3 suggests words related to the natural world. Top guesses: flower (plant), canyon (geological formation), tiger (animal). Storm and village are also nature-related but less direct. We have 4 guesses remaining, so we can guess up to 3 confidently.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.0,
+          "anchor": 0.0,
+          "baker": 0.0,
+          "bridge": 0.3,
+          "butter": 0.4,
+          "canyon": 0.8,
+          "circle": 0.2,
+          "family": 0.2,
+          "farmer": 0.3,
+          "flower": 0.9,
+          "highway": 0.0,
+          "honey": 0.4,
+          "metal": 0.0,
+          "paper": 0.0,
+          "poet": 0.1,
+          "pyramid": 0.1,
+          "spirit": 0.2,
+          "storm": 0.6,
+          "tiger": 0.7,
+          "travel": 0.1,
+          "village": 0.5
+        },
+        "ranked_guesses": [
+          "flower",
+          "canyon",
+          "tiger",
+          "storm",
+          "village",
+          "butter",
+          "honey",
+          "farmer",
+          "bridge",
+          "circle",
+          "family",
+          "spirit",
+          "travel",
+          "poet",
+          "pyramid",
+          "anchor",
+          "baker",
+          "metal",
+          "paper",
+          "agent",
+          "highway"
+        ],
+        "rationale": "Clue 'nature' (3) suggests natural elements. Top guesses: flower (plant), canyon (landform), tiger (animal). Storm, village, butter, honey, farmer also nature-related but less direct. Avoiding already revealed words and blue's summer.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "['bridge', 0.1]": 0.1,
+          "['butter', 0.4]": 0.4,
+          "['canyon', 0.8]": 0.8,
+          "['circle', 0.2]": 0.2,
+          "['flower', 0.9]": 0.9,
+          "['honey', 0.3]": 0.3,
+          "['storm', 0.6]": 0.6,
+          "['tiger', 0.7]": 0.7,
+          "['village', 0.5]": 0.5
+        },
+        "ranked_guesses": [
+          "['flower', 0.9]",
+          "['canyon', 0.8]",
+          "['tiger', 0.7]",
+          "['storm', 0.6]",
+          "['village', 0.5]",
+          "['butter', 0.4]",
+          "['honey', 0.3]",
+          "['circle', 0.2]",
+          "['bridge', 0.1]"
+        ],
+        "rationale": "The clue 'nature' with count 3 suggests words related to the natural world. 'flower' is a strong candidate as a direct element of nature. 'canyon' is a natural geological formation. 'tiger' is a wild animal, fitting the nature theme. 'storm' is a natural weather phenomenon. 'village' is less directly nature, but can be associated with rural/natural settings. Other words like 'butter', 'honey', 'circle', 'bridge' are less directly nature-related. We have 3 guesses to make, so we'll start with the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature 3",
+        "count": 3,
+        "rationale": "The words 'village', 'storm', and 'honey' relate to nature or natural elements, and are not yet revealed."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.45,
+          "family": 0.5,
+          "spirit": 0.55,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "village",
+          "spirit",
+          "family",
+          "bridge"
+        ],
+        "rationale": "The clue 'nature 3' suggests words related to natural or organic elements. 'Village' and 'family' are associated with communities and environments, fitting the nature theme. 'Spirit' can relate to natural or spiritual essence, and 'bridge' connects natural landscapes or pathways. 'Canyon' and 'flower' are already revealed and associated with nature, reinforcing these guesses. 'Tiger' and 'summer' are less directly connected but could be considered secondary associations.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.3,
+          "spirit": 0.4,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "village",
+          "spirit",
+          "family"
+        ],
+        "rationale": "The clue 'nature 3' suggests words related to natural or organic elements. 'Village' can be associated with a natural setting or community, 'spirit' can relate to natural essence or life force, and 'family' can be linked to natural human bonds. 'Flower' and 'canyon' are already guessed and revealed as red, so avoiding them. 'Tiger' and 'summer' are less directly connected to 'nature' in this context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.45,
+          "family": 0.5,
+          "spirit": 0.55,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "village",
+          "spirit",
+          "family",
+          "bridge"
+        ],
+        "rationale": "The clue 'nature 3' suggests words related to natural or organic elements. 'Village' and 'family' are associated with communities and living environments, fitting the theme. 'Spirit' can relate to natural or spiritual essence, aligning with nature. 'Bridge' connects to natural landscapes and environments. Other words like 'flower' and 'canyon' are already guessed or less directly connected, so they are lower priority.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "ancient",
+        "count": 3,
+        "rationale": "Connects to pyramid, poet, and paper (papyrus) without overlapping with remaining blue or neutral words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.5,
+          "bridge": 0.7,
+          "pyramid": 0.9,
+          "spirit": 0.4,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "bridge",
+          "village",
+          "anchor",
+          "spirit"
+        ],
+        "rationale": "The clue 'ancient' with count 3 suggests words associated with old or historical things. 'Pyramid' is strongly ancient. 'Bridge' could be ancient (like Roman bridges). 'Village' might be ancient settlements. 'Anchor' is less directly ancient but could relate to old ships. 'Spirit' could be ancient beliefs. We have 4 guesses remaining, so we can guess up to 3 (since count is 3, but we already have 5 red words revealed? Wait, we have 5 red words revealed: guitar, singer, flower, canyon, and? Actually revealed reds: guitar, singer, flower, canyon. That's 4. Plus we need 3 more? Let's check: red team started with 9 words? Standard is 9 for starting team. Revealed reds: guitar, singer, flower, canyon = 4. So we need 5 more. But the clue is count 3, so we aim for 3. We can guess up to 4 (guesses remaining = 4). So we'll guess top 3 if confident. Pyramid is top, then bridge, then village. Anchor and spirit are lower confidence. We'll guess pyramid, bridge, village.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.55,
+          "bridge": 0.85,
+          "pyramid": 0.95,
+          "spirit": 0.65,
+          "village": 0.75
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "bridge",
+          "village",
+          "spirit",
+          "anchor"
+        ],
+        "rationale": "The clue 'ancient' with count 3 suggests words associated with old civilizations or historical concepts. 'Pyramid' is strongly ancient (Egypt). 'Bridge' could be ancient Roman aqueducts or structures. 'Village' might refer to ancient settlements. 'Spirit' could relate to ancient beliefs or ghosts. 'Anchor' is less directly ancient but could be from old ships. We have 4 guesses remaining and need 3 words, so we'll guess the top 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.7,
+          "pyramid": 0.9,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "pyramid",
+          "bridge",
+          "village"
+        ],
+        "rationale": "The clue 'ancient' with count 3 suggests words related to old or historical things. 'Pyramid' is strongly associated with ancient Egypt. 'Bridge' could be an ancient structure (like Roman aqueducts). 'Village' might refer to ancient settlements. Other possibilities like 'anchor' or 'spirit' are less directly ancient. We have 4 guesses remaining, so we can guess all 3.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "wildlife",
+        "count": 2,
+        "rationale": "Focuses on animals and nature-related words that are still unguessed, helping to identify blue team words related to animals and nature."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8,
+          "tiger": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "tiger"
+        ],
+        "rationale": "The clue 'wildlife' strongly suggests animals or natural creatures. 'Tiger' is directly related to wildlife and has already been guessed as blue, making it a high-confidence choice. 'Animal' is a broad term fitting the theme and is a logical next guess, given the context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8,
+          "tiger": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "tiger"
+        ],
+        "rationale": "The clue 'wildlife' strongly suggests animals or creatures. 'Tiger' is directly related to wildlife and has already been revealed as blue, making it a high-confidence guess. 'Animal' is a broad term fitting the theme and is a logical next guess, though less specific.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8,
+          "flower": 0.3,
+          "nature": 0.7,
+          "tiger": 0.4,
+          "wildlife": 0.6
+        },
+        "ranked_guesses": [
+          "animal",
+          "nature",
+          "wildlife",
+          "tiger",
+          "flower"
+        ],
+        "rationale": "The clue 'wildlife' strongly suggests animals or natural settings. 'Animal' and 'nature' are highly relevant and common associations. 'Wildlife' itself is a direct match. 'Tiger' fits as a specific animal, and 'flower' relates to natural elements, though less directly. Other words like 'bridge' or 'canyon' are less likely given the clue context.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "writer",
+        "count": 2,
+        "rationale": "Connects to 'poet' and 'paper' (as in writing paper), both red words. Avoids 'baker' (blue) and 'circle' (assassin)."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.3,
+          "paper": 0.7,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "paper",
+          "agent"
+        ],
+        "rationale": "The clue 'writer' (count 2) strongly suggests 'poet' as a type of writer. 'Paper' is also associated with writing. 'Agent' could be a literary agent, but less direct. We have 3 guesses remaining, but only 2 words to find, so we should guess the top 2 and then stop.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.3,
+          "paper": 0.7,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "paper",
+          "agent"
+        ],
+        "rationale": "The clue 'writer' with count 2 suggests words related to writing. 'Poet' is a type of writer, and 'paper' is a medium for writing. 'Agent' could be a literary agent but is less direct. We have 3 guesses remaining, so we can guess both 'poet' and 'paper'.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.3,
+          "paper": 0.7,
+          "poet": 0.9
+        },
+        "ranked_guesses": [
+          "poet",
+          "paper",
+          "agent"
+        ],
+        "rationale": "The clue 'writer' with count 2 suggests words related to writing. 'poet' is a type of writer, and 'paper' is a medium for writing. 'agent' could be a literary agent but is less direct. We have 3 guesses remaining, so we should guess the top 2.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "beach 2",
+        "count": 2,
+        "rationale": "The words 'summer' and 'village' are associated with leisure and coastal areas, fitting the beach theme."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beach": 0.8,
+          "family": 0.3,
+          "summer": 0.6,
+          "travel": 0.2,
+          "village": 0.4
+        },
+        "ranked_guesses": [
+          "beach",
+          "summer",
+          "village",
+          "family",
+          "travel"
+        ],
+        "rationale": "The clue 'beach 2' suggests two words related to beaches or seaside environments. 'Summer' is strongly associated with beaches, and 'village' can be linked to coastal or resort areas. 'Family' and 'travel' are also somewhat related to beach vacations, but less directly. 'Summer' has the highest confidence due to its clear association with beaches.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beach": 0.8,
+          "family": 0.3,
+          "summer": 0.6,
+          "travel": 0.2,
+          "village": 0.4
+        },
+        "ranked_guesses": [
+          "beach",
+          "summer",
+          "village",
+          "family",
+          "travel"
+        ],
+        "rationale": "The clue 'beach 2' suggests two words related to beaches or seaside environments. 'Summer' is strongly associated with beaches, and 'village' can be linked to coastal or resort areas. 'Family' and 'travel' are more tangential but still relevant to beach vacations. 'Summer' has the highest confidence due to its direct association with beaches and the previous blue clue involving 'summer'.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "beach": 0.8,
+          "summer": 0.6
+        },
+        "ranked_guesses": [
+          "beach",
+          "summer"
+        ],
+        "rationale": "The clue 'beach 2' strongly suggests words related to beaches or summer activities. 'Summer' has already been guessed correctly by blue and is highly relevant. 'Beach' is directly related to the clue and is a logical next guess. Other words like 'flower' or 'canyon' are less directly connected to the clue, and the remaining options are less relevant to the 'beach' theme.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "storm",
+        "count": 1,
+        "rationale": "Only one red word remains: storm. The clue is direct and avoids all other words."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 0.95
+        },
+        "ranked_guesses": [
+          "storm"
+        ],
+        "rationale": "The clue 'storm' with count 1 strongly points to the word 'storm' itself, which is still unrevealed. No other words on the board are as directly related to 'storm'. We should guess it.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 0.95
+        },
+        "ranked_guesses": [
+          "storm"
+        ],
+        "rationale": "The clue 'storm' with count 1 directly points to the word 'storm' on the board. It is unrevealed and likely our last red word.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "storm": 1.0
+        },
+        "ranked_guesses": [
+          "storm"
+        ],
+        "rationale": "The clue 'storm' with count 1 directly points to the word 'storm' on the board, which is unrevealed and likely our team's word.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "nature 3",
+        "count": 3,
+        "rationale": "The words 'flower', 'canyon', and 'tiger' are all associated with nature."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.75,
+          "flower": 0.8,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "flower",
+          "canyon",
+          "tiger"
+        ],
+        "rationale": "The clue 'nature 3' strongly suggests natural elements. 'Flower' and 'canyon' are directly related to nature, with high confidence. 'Tiger' is also a natural creature, fitting the theme, though slightly less certain. 'Summer' and 'storm' are less directly connected to the core of 'nature' in this context, so they are lower priority guesses.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.75,
+          "flower": 0.8,
+          "storm": 0.6,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "flower",
+          "canyon",
+          "tiger",
+          "storm"
+        ],
+        "rationale": "The clue 'nature 3' strongly suggests natural elements. 'flower' and 'canyon' are directly related to nature and are unclaimed or blue, making them good initial guesses. 'tiger' is also a natural creature, fitting the theme and still unclaimed. 'storm' is a natural phenomenon, but already revealed as red, so less likely for blue. Since the team has 4 guesses remaining, these options maximize the chance of identifying correct words related to nature.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "canyon": 0.75,
+          "flower": 0.8,
+          "storm": 0.65,
+          "tiger": 0.7
+        },
+        "ranked_guesses": [
+          "flower",
+          "canyon",
+          "tiger",
+          "storm"
+        ],
+        "rationale": "The clue 'nature 3' suggests words related to natural elements or wildlife. 'flower' and 'canyon' are strongly associated with nature, and 'tiger' is a clear wildlife reference. 'storm' is also related to natural phenomena, but slightly less certain. Prioritizing the most directly connected words first.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "farmer",
+        "count": 1,
+        "rationale": "Only red word left is farmer; paper is the other but it's not strongly connected to farmer. Farmer is safe and direct."
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "agent": 0.1,
+          "anchor": 0.1,
+          "baker": 0.2,
+          "butter": 0.3,
+          "circle": 0.1,
+          "family": 0.5,
+          "farmer": 0.95,
+          "highway": 0.1,
+          "honey": 0.2,
+          "metal": 0.1,
+          "paper": 0.1,
+          "spirit": 0.1,
+          "travel": 0.1,
+          "village": 0.7
+        },
+        "ranked_guesses": [
+          "farmer",
+          "village",
+          "family",
+          "butter",
+          "honey",
+          "baker",
+          "agent",
+          "anchor",
+          "circle",
+          "highway",
+          "metal",
+          "paper",
+          "spirit",
+          "travel"
+        ],
+        "rationale": "The clue 'farmer' with count 1 strongly suggests the word 'farmer' itself, which is still unrevealed. Since we have 2 guesses remaining and only 1 word to find, we should guess 'farmer' and then stop. Other words like 'village' or 'family' are related but less direct, and we must avoid guessing wrong.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.05,
+          "farmer": 0.95
+        },
+        "ranked_guesses": [
+          "farmer",
+          "baker"
+        ],
+        "rationale": "The clue 'farmer' with count 1 strongly points to the word 'farmer' itself, which is still unrevealed. No other words on the board are closely related to 'farmer'.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "farmer": 0.95
+        },
+        "ranked_guesses": [
+          "farmer"
+        ],
+        "rationale": "The clue 'farmer' with count 1 strongly points to the word 'farmer' itself, which is still unrevealed. No other words on the board are as directly related.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "heritage",
+        "count": 2,
+        "rationale": "Both 'pyramid' and 'village' relate to historical or cultural sites, fitting the theme of heritage."
+      },
+      "agent_id": "gpt-4.1-nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "family": 0.6,
+          "heritage": 0.8,
+          "spirit": 0.4,
+          "travel": 0.3,
+          "village": 0.5
+        },
+        "ranked_guesses": [
+          "heritage",
+          "family",
+          "village",
+          "spirit",
+          "travel"
+        ],
+        "rationale": "The clue 'heritage' suggests concepts related to culture, history, and community. 'Family' and 'village' are strongly associated with heritage and community life. 'Spirit' can relate to cultural or spiritual heritage. 'Travel' might connect to exploring cultural heritage sites. Other words like 'agent', 'baker', 'flower', 'guitar', 'machine', 'poet', 'pyramid', 'singer', 'storm', 'summer', and 'tiger' are less directly connected to the theme of heritage.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "anchor": 0.55,
+          "family": 0.7,
+          "highway": 0.5,
+          "metal": 0.45,
+          "village": 0.6
+        },
+        "ranked_guesses": [
+          "family",
+          "village",
+          "anchor",
+          "highway",
+          "metal"
+        ],
+        "rationale": "The clue 'heritage' suggests words related to history, culture, or origins. 'Family' and 'village' are strongly connected to heritage and community roots. 'Anchor' and 'highway' could relate to foundational or significant elements in history or culture. 'Metal' might be less directly related but could connect to historical artifacts or traditional crafts. Prior guesses indicate a focus on cultural and natural themes, supporting these choices.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "circle": 0.5,
+          "family": 0.6,
+          "heritage": 0.75,
+          "highway": 0.45,
+          "village": 0.55
+        },
+        "ranked_guesses": [
+          "heritage",
+          "family",
+          "village",
+          "circle",
+          "highway"
+        ],
+        "rationale": "The clue 'heritage' suggests concepts related to culture, history, and community. 'Family' and 'village' are strongly associated with heritage, while 'circle' and 'highway' could relate to community and travel, respectively. Other words like 'agent', 'baker', 'flower', and 'machine' are less directly connected but could be considered secondary options.",
+        "stop": false
+      },
+      "agent_id": "gpt-4.1-nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "paper",
+        "count": 1,
+        "rationale": null
+      },
+      "agent_id": "deepseek-v4-pro-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 1.0
+        },
+        "ranked_guesses": [
+          "paper"
+        ],
+        "rationale": "The clue 'paper' with count 1 directly points to the word 'paper' on the board. Since it's a single-target clue, we guess 'paper' and then stop.",
+        "stop": true
+      },
+      "agent_id": "deepseek-v4-pro-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 1.0
+        },
+        "ranked_guesses": [
+          "paper"
+        ],
+        "rationale": "The clue is 'paper' with count 1, and 'paper' is still unrevealed. It directly matches the clue word, so it's a guaranteed red agent.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "paper": 1.0
+        },
+        "ranked_guesses": [
+          "paper"
+        ],
+        "rationale": "The clue is 'paper' with count 1. The word 'paper' is on the board and unrevealed. It's a direct match, so we guess it.",
+        "stop": false
+      },
+      "agent_id": "deepseek-v4-pro-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "singer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "art 2"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "instrument"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "machine"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "summer"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flower"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "canyon"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "tiger"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature 3"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ancient"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "pyramid"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "bridge"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wildlife"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "writer"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "poet"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "beach 2"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "storm"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "storm"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature 3"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "farmer"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "farmer"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heritage"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "paper"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": true,
+      "winner": "red",
+      "word": "paper"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 60,
+    "public_event_count": 39,
+    "reason": "all_words_found",
+    "seed": 1,
+    "team_blue": "gpt-4.1-nano",
+    "team_red": "deepseek-v4-pro",
+    "terminal": true,
+    "winner": "red"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "music"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.5,
+              "guitar": 0.95,
+              "poet": 0.7,
+              "singer": 0.9,
+              "spirit": 0.4
+            },
+            "ranked_guesses": [
+              "guitar",
+              "singer",
+              "poet",
+              "bridge",
+              "spirit"
+            ],
+            "rationale": "Clue 'music' with count 3. Top guesses: guitar (instrument), singer (vocalist), poet (lyricist). Bridge and spirit are weaker connections.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.4,
+              "guitar": 0.95,
+              "metal": 0.3,
+              "poet": 0.6,
+              "singer": 0.85
+            },
+            "ranked_guesses": [
+              "guitar",
+              "singer",
+              "poet",
+              "bridge",
+              "metal"
+            ],
+            "rationale": "Clue 'music' with count 3. Top guesses: guitar (instrument), singer (vocalist), poet (lyricist). Bridge and metal are less direct but possible (bridge in a song, metal genre).",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flower": 0.3,
+              "guitar": 0.95,
+              "poet": 0.7,
+              "singer": 0.9,
+              "spirit": 0.2
+            },
+            "ranked_guesses": [
+              "guitar",
+              "singer",
+              "poet",
+              "flower",
+              "spirit"
+            ],
+            "rationale": "Clue 'music' (count 3) strongly suggests guitar and singer. Poet is a possible third (lyrics/poetry connection). Flower and spirit are weaker connections (flower power music, spirit of music).",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "singer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "music",
+          "count": 3,
+          "rationale": "Connects to guitar, singer, and possibly poet (as in lyricist) without overlapping with blue or assassin words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "art 2"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "art": 0.8,
+              "circle": 0.6,
+              "flower": 0.4
+            },
+            "ranked_guesses": [
+              "art",
+              "circle",
+              "flower"
+            ],
+            "rationale": "The clue 'art 2' suggests words related to art or artistic concepts. 'Art' itself is a direct match. 'Circle' and 'flower' can be associated with artistic motifs or subjects. 'Guitar' and 'singer' are already revealed and belong to the red team, so they are not options. The remaining words are less directly related to art, so the guesses are ordered accordingly.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "art": 0.8,
+              "circle": 0.6,
+              "family": 0.4
+            },
+            "ranked_guesses": [
+              "art",
+              "circle",
+              "family"
+            ],
+            "rationale": "The clue 'art 2' suggests words related to art or creative expression. 'art' is the most direct match. 'circle' can relate to artistic design or patterns. 'family' is less directly related but can be associated with art themes or artistic representations of family. Other words like 'flower' or 'pyramid' are less certain in this context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "art": 0.8,
+              "circle": 0.6,
+              "family": 0.4
+            },
+            "ranked_guesses": [
+              "art",
+              "circle",
+              "family"
+            ],
+            "rationale": "The clue 'art 2' suggests words related to art or creative expression. 'Art' itself is a direct match. 'Circle' can relate to artistic shapes or forms. 'Family' might be loosely connected through themes of community or groups often depicted in art. Other words like 'flower' or 'pyramid' are less directly related to the clue, and the revealed words 'guitar' and 'singer' are already guessed and red team, so they are not options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "art 2",
+          "count": 2,
+          "rationale": "Both 'family' and 'metal' can be associated with art or artistic themes."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "instrument"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.2,
+              "bridge": 0.3,
+              "machine": 0.9,
+              "metal": 0.7,
+              "paper": 0.1
+            },
+            "ranked_guesses": [
+              "machine",
+              "metal",
+              "bridge",
+              "anchor",
+              "paper"
+            ],
+            "rationale": "The clue 'instrument' with count 2 suggests two words related to instruments. 'Machine' is a strong candidate as it can be a type of instrument (e.g., a device or tool). 'Metal' is also plausible because many instruments are made of metal. 'Bridge' is a part of string instruments, but less direct. 'Anchor' and 'paper' are weaker connections. We have 3 guesses remaining, so we should guess the top two confidently.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.4,
+              "machine": 0.8,
+              "metal": 0.6
+            },
+            "ranked_guesses": [
+              "machine",
+              "metal",
+              "bridge"
+            ],
+            "rationale": "The clue 'instrument' with count 2 suggests two words related to tools or devices. 'Machine' is a strong candidate as a type of instrument. 'Metal' could be associated with instruments (e.g., musical instruments made of metal). 'Bridge' is a weaker connection (e.g., a bridge is an instrument in dentistry or a part of a string instrument). Considering previous guesses 'guitar' and 'singer' from 'music', 'instrument' likely points to non-musical instruments to avoid overlap. 'Machine' and 'metal' fit better than 'bridge'.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "drum": 0.7,
+              "flute": 0.6,
+              "piano": 0.9,
+              "trumpet": 0.5,
+              "violin": 0.8
+            },
+            "ranked_guesses": [
+              "piano",
+              "violin",
+              "drum",
+              "flute",
+              "trumpet"
+            ],
+            "rationale": "The clue 'instrument' with count 2 suggests two musical instruments. 'Guitar' and 'singer' are already revealed as red, but 'singer' is not an instrument. The remaining words likely include musical instruments. Common instruments not yet revealed could be 'piano', 'violin', 'drum', 'flute', 'trumpet'. However, none of these words are on the board. The board words are: agent, anchor, baker, bridge, butter, canyon, circle, family, farmer, flower, guitar, highway, honey, machine, metal, paper, poet, pyramid, singer, spirit, storm, summer, tiger, travel, village. Among these, 'guitar' is already revealed. 'Singer' is revealed but is not an instrument. The clue might be for words that are instruments or related to instruments. Possible instrument-related words on the board: 'bridge' (part of a string instrument), 'machine' (could be a musical instrument like a drum machine), 'metal' (material for instruments), 'paper' (as in paper instrument?), 'poet' (unlikely), 'spirit' (unlikely). 'Bridge' is a strong candidate as it's a part of a guitar/violin. 'Machine' could be a stretch. 'Metal' is a material. Given the clue 'instrument' with count 2, and 'guitar' already guessed, the second word might be 'bridge'. But the clue was given after 'guitar' and 'singer' were revealed, so the spymaster knows those are red. The count 2 means there are two remaining red words related to 'instrument'. So we need to find two words on the board that relate to instrument. 'Bridge' is one. Another could be 'machine' if thinking of a musical instrument machine, or 'metal' for metal instruments. 'Paper' could be a paper instrument like a paper trumpet? Unlikely. 'Poet' is not an instrument. 'Spirit' is not. 'Circle'? No. 'Family'? No. 'Flower'? No. 'Highway'? No. 'Honey'? No. 'Summer'? No. 'Tiger'? No. 'Travel'? No. 'Village'? No. 'Anchor'? No. 'Baker'? No. 'Butter'? No. 'Canyon'? No. 'Farmer'? No. 'Pyramid'? No. 'Storm'? No. So the only plausible instrument-related words are 'bridge' and maybe 'machine' or 'metal'. But 'machine' is a stretch. 'Metal' is a material, not an instrument itself. 'Bridge' is a part of an instrument. Another possibility: 'paper' could be used in a paper instrument like a kazoo? Not strong. 'Poet' might be a stretch for 'instrument' as a tool for poetry? No. Given the board, the best guess is 'bridge'. But we need two guesses. The second guess is tricky. Maybe 'machine' as in 'musical instrument' like a synthesizer? Or 'metal' as in metal instruments like trumpet? But 'metal' is a material, not an instrument. 'Machine' could be a drum machine. I'll go with 'bridge' and 'machine'. However, the assistant's response lists 'piano', 'violin', etc., which are not on the board. That's an error. The assistant must only guess words from the board. The board words are provided. So I need to correct that. The correct ranked guesses should be from the board words. Let's analyze the board words for instrument connections: guitar (already red), singer (red but not instrument), bridge (part of string instrument), machine (could be a musical machine), metal (material for instruments), paper (paper instrument? weak), poet (no), spirit (no), etc. The strongest is bridge. Next, maybe machine. But machine is not a typical instrument. Another word: 'circle'? No. 'Family'? No. 'Flower'? No. 'Highway'? No. 'Honey'? No. 'Summer'? No. 'Tiger'? No. 'Travel'? No. 'Village'? No. 'Anchor'? No. 'Baker'? No. 'Butter'? No. 'Canyon'? No. 'Farmer'? No. 'Pyramid'? No. 'Storm'? No. 'Agent'? No. So only 'bridge' and maybe 'machine' or 'metal'. But 'metal' is a material, not an instrument. 'Machine' is a device, could be a musical instrument like a drum machine or synthesizer. I think 'bridge' is a solid guess. For the second, I'll go with 'machine'. But the clue count is 2, so we need two guesses. We have 3 guesses remaining. We should guess two words. So ranked guesses: bridge, machine, metal. Confidences: bridge 0.8, machine 0.6, metal 0.4. Stop after two guesses if we are confident? We'll guess two and then stop if we think we got them. The assistant's response should be in JSON with ranked_guesses, confidences, stop, rationale. I'll provide that.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "machine"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "instrument",
+          "count": 2,
+          "rationale": "Relates to guitar and singer, both already revealed, but can also point to poet (as a lyrical instrument) and paper (as a writer's tool). Avoids remaining red words like canyon, farmer, flower, pyramid, storm."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "summer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.3,
+              "family": 0.4,
+              "flower": 0.5,
+              "summer": 0.8,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "summer",
+              "village",
+              "flower",
+              "family",
+              "canyon"
+            ],
+            "rationale": "The clue 'summer' suggests words associated with the season, such as 'village' (many summer activities occur in villages), 'flower' (blooming in summer), 'family' (summer family gatherings), and 'canyon' (outdoor summer adventures). 'Summer' itself is the most direct guess, with others providing contextual relevance.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.45,
+              "family": 0.5,
+              "flower": 0.55,
+              "summer": 0.85,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "summer",
+              "village",
+              "flower",
+              "family",
+              "canyon"
+            ],
+            "rationale": "The clue 'summer' suggests words associated with the season, such as 'village' (often linked to summer holidays), 'flower' (blooming season), 'family' (summer gatherings), and 'canyon' (outdoor summer activities). 'Summer' itself is the most direct guess. The other options are less directly connected but still relevant to the theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.6,
+              "canyon": 0.65,
+              "family": 0.7,
+              "flower": 0.75,
+              "village": 0.8
+            },
+            "ranked_guesses": [
+              "village",
+              "flower",
+              "family",
+              "canyon",
+              "bridge"
+            ],
+            "rationale": "The clue 'summer' suggests themes related to outdoor, nature, or leisure activities. 'Village' and 'flower' are strongly associated with summer environments. 'Family' and 'canyon' also fit as summer-related settings or activities. 'Bridge' could relate to travel or scenic spots often visited in summer. Other words like 'tiger' or 'honey' are less directly connected.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "summer",
+          "count": 1,
+          "rationale": "Associated with the blue word 'summer' and the blue team."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.1,
+              "anchor": 0.1,
+              "baker": 0.1,
+              "bridge": 0.1,
+              "butter": 0.4,
+              "canyon": 0.8,
+              "circle": 0.1,
+              "family": 0.1,
+              "farmer": 0.2,
+              "flower": 0.9,
+              "highway": 0.1,
+              "honey": 0.3,
+              "metal": 0.1,
+              "paper": 0.1,
+              "poet": 0.1,
+              "pyramid": 0.1,
+              "spirit": 0.1,
+              "storm": 0.6,
+              "tiger": 0.7,
+              "travel": 0.1,
+              "village": 0.5
+            },
+            "ranked_guesses": [
+              "flower",
+              "canyon",
+              "tiger",
+              "storm",
+              "village",
+              "butter",
+              "honey",
+              "farmer",
+              "circle",
+              "bridge",
+              "family",
+              "spirit",
+              "pyramid",
+              "travel",
+              "paper",
+              "metal",
+              "poet",
+              "anchor",
+              "baker",
+              "agent",
+              "highway"
+            ],
+            "rationale": "Clue 'nature' with count 3 suggests words related to the natural world. Top guesses: flower (plant), canyon (geological formation), tiger (animal). Storm and village are also nature-related but less direct. We have 4 guesses remaining, so we can guess up to 3 confidently.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.0,
+              "anchor": 0.0,
+              "baker": 0.0,
+              "bridge": 0.3,
+              "butter": 0.4,
+              "canyon": 0.8,
+              "circle": 0.2,
+              "family": 0.2,
+              "farmer": 0.3,
+              "flower": 0.9,
+              "highway": 0.0,
+              "honey": 0.4,
+              "metal": 0.0,
+              "paper": 0.0,
+              "poet": 0.1,
+              "pyramid": 0.1,
+              "spirit": 0.2,
+              "storm": 0.6,
+              "tiger": 0.7,
+              "travel": 0.1,
+              "village": 0.5
+            },
+            "ranked_guesses": [
+              "flower",
+              "canyon",
+              "tiger",
+              "storm",
+              "village",
+              "butter",
+              "honey",
+              "farmer",
+              "bridge",
+              "circle",
+              "family",
+              "spirit",
+              "travel",
+              "poet",
+              "pyramid",
+              "anchor",
+              "baker",
+              "metal",
+              "paper",
+              "agent",
+              "highway"
+            ],
+            "rationale": "Clue 'nature' (3) suggests natural elements. Top guesses: flower (plant), canyon (landform), tiger (animal). Storm, village, butter, honey, farmer also nature-related but less direct. Avoiding already revealed words and blue's summer.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "['bridge', 0.1]": 0.1,
+              "['butter', 0.4]": 0.4,
+              "['canyon', 0.8]": 0.8,
+              "['circle', 0.2]": 0.2,
+              "['flower', 0.9]": 0.9,
+              "['honey', 0.3]": 0.3,
+              "['storm', 0.6]": 0.6,
+              "['tiger', 0.7]": 0.7,
+              "['village', 0.5]": 0.5
+            },
+            "ranked_guesses": [
+              "['flower', 0.9]",
+              "['canyon', 0.8]",
+              "['tiger', 0.7]",
+              "['storm', 0.6]",
+              "['village', 0.5]",
+              "['butter', 0.4]",
+              "['honey', 0.3]",
+              "['circle', 0.2]",
+              "['bridge', 0.1]"
+            ],
+            "rationale": "The clue 'nature' with count 3 suggests words related to the natural world. 'flower' is a strong candidate as a direct element of nature. 'canyon' is a natural geological formation. 'tiger' is a wild animal, fitting the nature theme. 'storm' is a natural weather phenomenon. 'village' is less directly nature, but can be associated with rural/natural settings. Other words like 'butter', 'honey', 'circle', 'bridge' are less directly nature-related. We have 3 guesses to make, so we'll start with the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flower"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "canyon"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "tiger"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature",
+          "count": 3,
+          "rationale": "Connects to canyon, flower, and storm, all red words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature 3"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.45,
+              "family": 0.5,
+              "spirit": 0.55,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "village",
+              "spirit",
+              "family",
+              "bridge"
+            ],
+            "rationale": "The clue 'nature 3' suggests words related to natural or organic elements. 'Village' and 'family' are associated with communities and environments, fitting the nature theme. 'Spirit' can relate to natural or spiritual essence, and 'bridge' connects natural landscapes or pathways. 'Canyon' and 'flower' are already revealed and associated with nature, reinforcing these guesses. 'Tiger' and 'summer' are less directly connected but could be considered secondary associations.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "family": 0.3,
+              "spirit": 0.4,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "village",
+              "spirit",
+              "family"
+            ],
+            "rationale": "The clue 'nature 3' suggests words related to natural or organic elements. 'Village' can be associated with a natural setting or community, 'spirit' can relate to natural essence or life force, and 'family' can be linked to natural human bonds. 'Flower' and 'canyon' are already guessed and revealed as red, so avoiding them. 'Tiger' and 'summer' are less directly connected to 'nature' in this context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.45,
+              "family": 0.5,
+              "spirit": 0.55,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "village",
+              "spirit",
+              "family",
+              "bridge"
+            ],
+            "rationale": "The clue 'nature 3' suggests words related to natural or organic elements. 'Village' and 'family' are associated with communities and living environments, fitting the theme. 'Spirit' can relate to natural or spiritual essence, aligning with nature. 'Bridge' connects to natural landscapes and environments. Other words like 'flower' and 'canyon' are already guessed or less directly connected, so they are lower priority.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature 3",
+          "count": 3,
+          "rationale": "The words 'village', 'storm', and 'honey' relate to nature or natural elements, and are not yet revealed."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ancient"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.5,
+              "bridge": 0.7,
+              "pyramid": 0.9,
+              "spirit": 0.4,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "bridge",
+              "village",
+              "anchor",
+              "spirit"
+            ],
+            "rationale": "The clue 'ancient' with count 3 suggests words associated with old or historical things. 'Pyramid' is strongly ancient. 'Bridge' could be ancient (like Roman bridges). 'Village' might be ancient settlements. 'Anchor' is less directly ancient but could relate to old ships. 'Spirit' could be ancient beliefs. We have 4 guesses remaining, so we can guess up to 3 (since count is 3, but we already have 5 red words revealed? Wait, we have 5 red words revealed: guitar, singer, flower, canyon, and? Actually revealed reds: guitar, singer, flower, canyon. That's 4. Plus we need 3 more? Let's check: red team started with 9 words? Standard is 9 for starting team. Revealed reds: guitar, singer, flower, canyon = 4. So we need 5 more. But the clue is count 3, so we aim for 3. We can guess up to 4 (guesses remaining = 4). So we'll guess top 3 if confident. Pyramid is top, then bridge, then village. Anchor and spirit are lower confidence. We'll guess pyramid, bridge, village.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.55,
+              "bridge": 0.85,
+              "pyramid": 0.95,
+              "spirit": 0.65,
+              "village": 0.75
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "bridge",
+              "village",
+              "spirit",
+              "anchor"
+            ],
+            "rationale": "The clue 'ancient' with count 3 suggests words associated with old civilizations or historical concepts. 'Pyramid' is strongly ancient (Egypt). 'Bridge' could be ancient Roman aqueducts or structures. 'Village' might refer to ancient settlements. 'Spirit' could relate to ancient beliefs or ghosts. 'Anchor' is less directly ancient but could be from old ships. We have 4 guesses remaining and need 3 words, so we'll guess the top 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.7,
+              "pyramid": 0.9,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "pyramid",
+              "bridge",
+              "village"
+            ],
+            "rationale": "The clue 'ancient' with count 3 suggests words related to old or historical things. 'Pyramid' is strongly associated with ancient Egypt. 'Bridge' could be an ancient structure (like Roman aqueducts). 'Village' might refer to ancient settlements. Other possibilities like 'anchor' or 'spirit' are less directly ancient. We have 4 guesses remaining, so we can guess all 3.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "pyramid"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "bridge"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ancient",
+          "count": 3,
+          "rationale": "Connects to pyramid, poet, and paper (papyrus) without overlapping with remaining blue or neutral words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "wildlife"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8,
+              "tiger": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "tiger"
+            ],
+            "rationale": "The clue 'wildlife' strongly suggests animals or natural creatures. 'Tiger' is directly related to wildlife and has already been guessed as blue, making it a high-confidence choice. 'Animal' is a broad term fitting the theme and is a logical next guess, given the context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8,
+              "tiger": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "tiger"
+            ],
+            "rationale": "The clue 'wildlife' strongly suggests animals or creatures. 'Tiger' is directly related to wildlife and has already been revealed as blue, making it a high-confidence guess. 'Animal' is a broad term fitting the theme and is a logical next guess, though less specific.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8,
+              "flower": 0.3,
+              "nature": 0.7,
+              "tiger": 0.4,
+              "wildlife": 0.6
+            },
+            "ranked_guesses": [
+              "animal",
+              "nature",
+              "wildlife",
+              "tiger",
+              "flower"
+            ],
+            "rationale": "The clue 'wildlife' strongly suggests animals or natural settings. 'Animal' and 'nature' are highly relevant and common associations. 'Wildlife' itself is a direct match. 'Tiger' fits as a specific animal, and 'flower' relates to natural elements, though less directly. Other words like 'bridge' or 'canyon' are less likely given the clue context.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "wildlife",
+          "count": 2,
+          "rationale": "Focuses on animals and nature-related words that are still unguessed, helping to identify blue team words related to animals and nature."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "writer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.3,
+              "paper": 0.7,
+              "poet": 0.9
+            },
+            "ranked_guesses": [
+              "poet",
+              "paper",
+              "agent"
+            ],
+            "rationale": "The clue 'writer' (count 2) strongly suggests 'poet' as a type of writer. 'Paper' is also associated with writing. 'Agent' could be a literary agent, but less direct. We have 3 guesses remaining, but only 2 words to find, so we should guess the top 2 and then stop.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.3,
+              "paper": 0.7,
+              "poet": 0.9
+            },
+            "ranked_guesses": [
+              "poet",
+              "paper",
+              "agent"
+            ],
+            "rationale": "The clue 'writer' with count 2 suggests words related to writing. 'Poet' is a type of writer, and 'paper' is a medium for writing. 'Agent' could be a literary agent but is less direct. We have 3 guesses remaining, so we can guess both 'poet' and 'paper'.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.3,
+              "paper": 0.7,
+              "poet": 0.9
+            },
+            "ranked_guesses": [
+              "poet",
+              "paper",
+              "agent"
+            ],
+            "rationale": "The clue 'writer' with count 2 suggests words related to writing. 'poet' is a type of writer, and 'paper' is a medium for writing. 'agent' could be a literary agent but is less direct. We have 3 guesses remaining, so we should guess the top 2.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "poet"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "writer",
+          "count": 2,
+          "rationale": "Connects to 'poet' and 'paper' (as in writing paper), both red words. Avoids 'baker' (blue) and 'circle' (assassin)."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "beach 2"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "beach": 0.8,
+              "family": 0.3,
+              "summer": 0.6,
+              "travel": 0.2,
+              "village": 0.4
+            },
+            "ranked_guesses": [
+              "beach",
+              "summer",
+              "village",
+              "family",
+              "travel"
+            ],
+            "rationale": "The clue 'beach 2' suggests two words related to beaches or seaside environments. 'Summer' is strongly associated with beaches, and 'village' can be linked to coastal or resort areas. 'Family' and 'travel' are also somewhat related to beach vacations, but less directly. 'Summer' has the highest confidence due to its clear association with beaches.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beach": 0.8,
+              "family": 0.3,
+              "summer": 0.6,
+              "travel": 0.2,
+              "village": 0.4
+            },
+            "ranked_guesses": [
+              "beach",
+              "summer",
+              "village",
+              "family",
+              "travel"
+            ],
+            "rationale": "The clue 'beach 2' suggests two words related to beaches or seaside environments. 'Summer' is strongly associated with beaches, and 'village' can be linked to coastal or resort areas. 'Family' and 'travel' are more tangential but still relevant to beach vacations. 'Summer' has the highest confidence due to its direct association with beaches and the previous blue clue involving 'summer'.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "beach": 0.8,
+              "summer": 0.6
+            },
+            "ranked_guesses": [
+              "beach",
+              "summer"
+            ],
+            "rationale": "The clue 'beach 2' strongly suggests words related to beaches or summer activities. 'Summer' has already been guessed correctly by blue and is highly relevant. 'Beach' is directly related to the clue and is a logical next guess. Other words like 'flower' or 'canyon' are less directly connected to the clue, and the remaining options are less relevant to the 'beach' theme.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "beach 2",
+          "count": 2,
+          "rationale": "The words 'summer' and 'village' are associated with leisure and coastal areas, fitting the beach theme."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "storm"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "storm": 0.95
+            },
+            "ranked_guesses": [
+              "storm"
+            ],
+            "rationale": "The clue 'storm' with count 1 strongly points to the word 'storm' itself, which is still unrevealed. No other words on the board are as directly related to 'storm'. We should guess it.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "storm": 0.95
+            },
+            "ranked_guesses": [
+              "storm"
+            ],
+            "rationale": "The clue 'storm' with count 1 directly points to the word 'storm' on the board. It is unrevealed and likely our last red word.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "storm": 1.0
+            },
+            "ranked_guesses": [
+              "storm"
+            ],
+            "rationale": "The clue 'storm' with count 1 directly points to the word 'storm' on the board, which is unrevealed and likely our team's word.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "storm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "storm",
+          "count": 1,
+          "rationale": "Only one red word remains: storm. The clue is direct and avoids all other words."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "nature 3"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.75,
+              "flower": 0.8,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "flower",
+              "canyon",
+              "tiger"
+            ],
+            "rationale": "The clue 'nature 3' strongly suggests natural elements. 'Flower' and 'canyon' are directly related to nature, with high confidence. 'Tiger' is also a natural creature, fitting the theme, though slightly less certain. 'Summer' and 'storm' are less directly connected to the core of 'nature' in this context, so they are lower priority guesses.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.75,
+              "flower": 0.8,
+              "storm": 0.6,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "flower",
+              "canyon",
+              "tiger",
+              "storm"
+            ],
+            "rationale": "The clue 'nature 3' strongly suggests natural elements. 'flower' and 'canyon' are directly related to nature and are unclaimed or blue, making them good initial guesses. 'tiger' is also a natural creature, fitting the theme and still unclaimed. 'storm' is a natural phenomenon, but already revealed as red, so less likely for blue. Since the team has 4 guesses remaining, these options maximize the chance of identifying correct words related to nature.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "canyon": 0.75,
+              "flower": 0.8,
+              "storm": 0.65,
+              "tiger": 0.7
+            },
+            "ranked_guesses": [
+              "flower",
+              "canyon",
+              "tiger",
+              "storm"
+            ],
+            "rationale": "The clue 'nature 3' suggests words related to natural elements or wildlife. 'flower' and 'canyon' are strongly associated with nature, and 'tiger' is a clear wildlife reference. 'storm' is also related to natural phenomena, but slightly less certain. Prioritizing the most directly connected words first.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "nature 3",
+          "count": 3,
+          "rationale": "The words 'flower', 'canyon', and 'tiger' are all associated with nature."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "farmer"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "agent": 0.1,
+              "anchor": 0.1,
+              "baker": 0.2,
+              "butter": 0.3,
+              "circle": 0.1,
+              "family": 0.5,
+              "farmer": 0.95,
+              "highway": 0.1,
+              "honey": 0.2,
+              "metal": 0.1,
+              "paper": 0.1,
+              "spirit": 0.1,
+              "travel": 0.1,
+              "village": 0.7
+            },
+            "ranked_guesses": [
+              "farmer",
+              "village",
+              "family",
+              "butter",
+              "honey",
+              "baker",
+              "agent",
+              "anchor",
+              "circle",
+              "highway",
+              "metal",
+              "paper",
+              "spirit",
+              "travel"
+            ],
+            "rationale": "The clue 'farmer' with count 1 strongly suggests the word 'farmer' itself, which is still unrevealed. Since we have 2 guesses remaining and only 1 word to find, we should guess 'farmer' and then stop. Other words like 'village' or 'family' are related but less direct, and we must avoid guessing wrong.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.05,
+              "farmer": 0.95
+            },
+            "ranked_guesses": [
+              "farmer",
+              "baker"
+            ],
+            "rationale": "The clue 'farmer' with count 1 strongly points to the word 'farmer' itself, which is still unrevealed. No other words on the board are closely related to 'farmer'.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "farmer": 0.95
+            },
+            "ranked_guesses": [
+              "farmer"
+            ],
+            "rationale": "The clue 'farmer' with count 1 strongly points to the word 'farmer' itself, which is still unrevealed. No other words on the board are as directly related.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "farmer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "farmer",
+          "count": 1,
+          "rationale": "Only red word left is farmer; paper is the other but it's not strongly connected to farmer. Farmer is safe and direct."
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "heritage"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "family": 0.6,
+              "heritage": 0.8,
+              "spirit": 0.4,
+              "travel": 0.3,
+              "village": 0.5
+            },
+            "ranked_guesses": [
+              "heritage",
+              "family",
+              "village",
+              "spirit",
+              "travel"
+            ],
+            "rationale": "The clue 'heritage' suggests concepts related to culture, history, and community. 'Family' and 'village' are strongly associated with heritage and community life. 'Spirit' can relate to cultural or spiritual heritage. 'Travel' might connect to exploring cultural heritage sites. Other words like 'agent', 'baker', 'flower', 'guitar', 'machine', 'poet', 'pyramid', 'singer', 'storm', 'summer', and 'tiger' are less directly connected to the theme of heritage.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "anchor": 0.55,
+              "family": 0.7,
+              "highway": 0.5,
+              "metal": 0.45,
+              "village": 0.6
+            },
+            "ranked_guesses": [
+              "family",
+              "village",
+              "anchor",
+              "highway",
+              "metal"
+            ],
+            "rationale": "The clue 'heritage' suggests words related to history, culture, or origins. 'Family' and 'village' are strongly connected to heritage and community roots. 'Anchor' and 'highway' could relate to foundational or significant elements in history or culture. 'Metal' might be less directly related but could connect to historical artifacts or traditional crafts. Prior guesses indicate a focus on cultural and natural themes, supporting these choices.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "circle": 0.5,
+              "family": 0.6,
+              "heritage": 0.75,
+              "highway": 0.45,
+              "village": 0.55
+            },
+            "ranked_guesses": [
+              "heritage",
+              "family",
+              "village",
+              "circle",
+              "highway"
+            ],
+            "rationale": "The clue 'heritage' suggests concepts related to culture, history, and community. 'Family' and 'village' are strongly associated with heritage, while 'circle' and 'highway' could relate to community and travel, respectively. Other words like 'agent', 'baker', 'flower', and 'machine' are less directly connected but could be considered secondary options.",
+            "stop": false
+          },
+          "agent_id": "gpt-4.1-nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "heritage",
+          "count": 2,
+          "rationale": "Both 'pyramid' and 'village' relate to historical or cultural sites, fitting the theme of heritage."
+        },
+        "agent_id": "gpt-4.1-nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "paper"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "paper": 1.0
+            },
+            "ranked_guesses": [
+              "paper"
+            ],
+            "rationale": "The clue 'paper' with count 1 directly points to the word 'paper' on the board. Since it's a single-target clue, we guess 'paper' and then stop.",
+            "stop": true
+          },
+          "agent_id": "deepseek-v4-pro-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "paper": 1.0
+            },
+            "ranked_guesses": [
+              "paper"
+            ],
+            "rationale": "The clue is 'paper' with count 1, and 'paper' is still unrevealed. It directly matches the clue word, so it's a guaranteed red agent.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "paper": 1.0
+            },
+            "ranked_guesses": [
+              "paper"
+            ],
+            "rationale": "The clue is 'paper' with count 1. The word 'paper' is on the board and unrevealed. It's a direct match, so we guess it.",
+            "stop": false
+          },
+          "agent_id": "deepseek-v4-pro-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": true,
+          "winner": "red",
+          "word": "paper"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "paper",
+          "count": 1,
+          "rationale": null
+        },
+        "agent_id": "deepseek-v4-pro-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    }
+  ]
+}

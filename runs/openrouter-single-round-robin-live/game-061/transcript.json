@@ -1,0 +1,2302 @@
+{
+  "board": {
+    "identities": {
+      "bar": "red",
+      "belt": "blue",
+      "board": "neutral",
+      "capital": "red",
+      "cycle": "red",
+      "diamond": "neutral",
+      "dwarf": "neutral",
+      "face": "red",
+      "jack": "blue",
+      "kiwi": "assassin",
+      "laser": "blue",
+      "microscope": "neutral",
+      "mount": "blue",
+      "mug": "red",
+      "rose": "neutral",
+      "school": "red",
+      "scientist": "red",
+      "shakespeare": "blue",
+      "shot": "blue",
+      "time": "red",
+      "tooth": "neutral",
+      "track": "red",
+      "wave": "blue",
+      "well": "blue",
+      "wind": "neutral"
+    },
+    "revealed": [
+      "belt",
+      "capital",
+      "diamond",
+      "face",
+      "jack",
+      "laser",
+      "microscope",
+      "mount",
+      "mug",
+      "school",
+      "scientist",
+      "shakespeare",
+      "shot",
+      "time",
+      "track",
+      "wave",
+      "well"
+    ],
+    "words": {
+      "bar": "red",
+      "belt": "blue",
+      "board": "neutral",
+      "capital": "red",
+      "cycle": "red",
+      "diamond": "neutral",
+      "dwarf": "neutral",
+      "face": "red",
+      "jack": "blue",
+      "kiwi": "assassin",
+      "laser": "blue",
+      "microscope": "neutral",
+      "mount": "blue",
+      "mug": "red",
+      "rose": "neutral",
+      "school": "red",
+      "scientist": "red",
+      "shakespeare": "blue",
+      "shot": "blue",
+      "time": "red",
+      "tooth": "neutral",
+      "track": "red",
+      "wave": "blue",
+      "well": "blue",
+      "wind": "neutral"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "clock",
+        "count": 4,
+        "rationale": "Connects to time (clock time), cycle (clock cycle), face (clock face), and track (race track timing), all red words"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cycle": 0.6,
+          "face": 0.9,
+          "shot": 0.5,
+          "time": 0.95,
+          "track": 0.7,
+          "wave": 0.7
+        },
+        "ranked_guesses": [
+          "time",
+          "face",
+          "wave",
+          "track",
+          "cycle",
+          "shot"
+        ],
+        "rationale": "Clock directly relates to time and clock face. Wave and track are plausible but less direct. Cycle and shot are possible but weaker connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cycle": 0.75,
+          "face": 0.9,
+          "time": 0.95,
+          "track": 0.8
+        },
+        "ranked_guesses": [
+          "time",
+          "face",
+          "track",
+          "cycle"
+        ],
+        "rationale": "'clock' strongly relates to time measurement. 'time' is a direct match, 'face' refers to clock face, 'track' implies time tracking, and 'cycle' relates to time cycles.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cycle": 0.7,
+          "face": 0.9,
+          "shot": 0.5,
+          "time": 0.95
+        },
+        "ranked_guesses": [
+          "time",
+          "face",
+          "cycle",
+          "shot"
+        ],
+        "rationale": "The clue 'clock' strongly suggests time-related words. 'time' and 'face' (clock face) are direct matches. 'cycle' relates to time cycles. 'shot' may refer to a shot clock in sports.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "physics",
+        "count": 3,
+        "rationale": "Connects laser, microscope, and scientist, which are all related to scientific study."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "laser": 0.9,
+          "microscope": 0.9,
+          "wave": 0.8
+        },
+        "ranked_guesses": [
+          "laser",
+          "microscope",
+          "wave"
+        ],
+        "rationale": "Laser, microscope, and wave are all fundamental concepts or tools in physics.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "laser": 0.9,
+          "microscope": 0.9,
+          "wave": 0.8
+        },
+        "ranked_guesses": [
+          "laser",
+          "microscope",
+          "wave"
+        ],
+        "rationale": "Laser, microscope, and wave are all fundamental concepts or tools in physics.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "laser": 0.9,
+          "microscope": 0.9,
+          "wave": 0.8
+        },
+        "ranked_guesses": [
+          "laser",
+          "microscope",
+          "wave"
+        ],
+        "rationale": "Laser, microscope, and wave are all fundamental concepts or tools directly associated with physics.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "drink",
+        "count": 2,
+        "rationale": "Connects to 'bar' and 'mug' which are both red team words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mug": 0.75,
+          "shot": 0.85
+        },
+        "ranked_guesses": [
+          "shot",
+          "mug"
+        ],
+        "rationale": "'drink' clue with count 2 strongly suggests 'shot' (a drink) and 'mug' (drinking vessel) as the most likely targets.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.9,
+          "mug": 0.85
+        },
+        "ranked_guesses": [
+          "bar",
+          "mug"
+        ],
+        "rationale": "'bar' and 'mug' are the most direct associations to the clue 'drink' on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mug": 0.9,
+          "shot": 0.85
+        },
+        "ranked_guesses": [
+          "mug",
+          "shot"
+        ],
+        "rationale": "'mug' and 'shot' are the most direct associations to the drink clue (coffee mug, shot of alcohol). 'bar' is also possible but less likely given the count of 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "literature",
+        "count": 2,
+        "rationale": "Shakespeare is a famous author, and school is a place where literature is studied."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.6,
+          "shakespeare": 0.95
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "school"
+        ],
+        "rationale": "Shakespeare is a direct association with literature, and school is a common setting for literature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.6,
+          "shakespeare": 0.95
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "school"
+        ],
+        "rationale": "Shakespeare is a direct association with literature, and school is a common setting for studying literature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.6,
+          "shakespeare": 0.95
+        },
+        "ranked_guesses": [
+          "shakespeare",
+          "school"
+        ],
+        "rationale": "Shakespeare is the most iconic figure in literature, and school is a common setting for studying literature.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "history",
+        "count": 5,
+        "rationale": "Connects to all 5 remaining red words: bar (history of bars), capital (capital history), cycle (historical cycles), school (school history), scientist (history of science)."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "capital": 0.8,
+          "school": 0.9,
+          "scientist": 0.9,
+          "wave": 0.6,
+          "wind": 0.6
+        },
+        "ranked_guesses": [
+          "school",
+          "scientist",
+          "capital",
+          "wave",
+          "wind"
+        ],
+        "rationale": "Clue 'history' with count 5 suggests strong connections to education/science history ('school', 'scientist'), historical contexts ('capital'), and metaphorical historical change ('wave', 'wind').",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "school": 0.75
+        },
+        "ranked_guesses": [
+          "school"
+        ],
+        "rationale": "'school' is strongly associated with history as a subject of study, fitting the 'history' clue with count 5. Other remaining words have weaker historical connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "capital": 0.85,
+          "rose": 0.7,
+          "school": 0.8,
+          "scientist": 0.75,
+          "wave": 0.65
+        },
+        "ranked_guesses": [
+          "capital",
+          "school",
+          "scientist",
+          "rose",
+          "wave"
+        ],
+        "rationale": "'history' clue with count 5 suggests 5 related words. 'capital' (cities/capitals), 'school' (historical schools), 'scientist' (historical figures), 'rose' (Wars of the Roses), and 'wave' (historical waves) are plausible hidden connections.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ocean",
+        "count": 3,
+        "rationale": "Ocean relates to wave, mount (as in sea mount), and well (as in water source)."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mount": 0.4,
+          "wave": 0.95,
+          "well": 0.7
+        },
+        "ranked_guesses": [
+          "wave",
+          "well",
+          "mount"
+        ],
+        "rationale": "Wave is directly related to ocean. Well can be associated with water/depth. Mount is a weak association but fits the remaining board.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wave": 0.9,
+          "well": 0.6,
+          "wind": 0.5
+        },
+        "ranked_guesses": [
+          "wave",
+          "well",
+          "wind"
+        ],
+        "rationale": "Wave is directly associated with ocean. Well and wind are secondary associations.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "wave": 0.95,
+          "well": 0.6,
+          "wind": 0.5
+        },
+        "ranked_guesses": [
+          "wave",
+          "well",
+          "wind"
+        ],
+        "rationale": "Wave is directly associated with ocean. Well and wind are secondary associations related to water or weather at sea.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "round",
+        "count": 2,
+        "rationale": "Connects to both remaining red words: 'cycle' (as in a round cycle) and 'bar' (as in a round bar or rounds of drinks)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.7,
+          "board": 0.7
+        },
+        "ranked_guesses": [
+          "belt",
+          "board"
+        ],
+        "rationale": "Both 'belt' and 'board' can be round objects, matching the clue 'round' with a count of 2.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "diamond": 0.9,
+          "tooth": 0.8
+        },
+        "ranked_guesses": [
+          "diamond",
+          "tooth"
+        ],
+        "rationale": "The clue 'round' with count 2 likely refers to two round-shaped objects. 'diamond' (round cut) and 'tooth' (round shape) are the strongest remaining matches on the board.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cycle": 0.7,
+          "diamond": 0.7
+        },
+        "ranked_guesses": [
+          "diamond",
+          "cycle"
+        ],
+        "rationale": "'round' likely refers to shape; 'diamond' and 'cycle' are round objects and plausible remaining red team words",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "climb",
+        "count": 3,
+        "rationale": "Mount, belt, and jack can all be associated with climbing or gear used in climbing/harnessing."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.5,
+          "cycle": 0.6,
+          "mount": 0.95
+        },
+        "ranked_guesses": [
+          "mount",
+          "cycle",
+          "belt"
+        ],
+        "rationale": "Mount is a direct synonym for climb. Cycle and belt are associated with climbing gear or activities.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mount": 0.9
+        },
+        "ranked_guesses": [
+          "mount"
+        ],
+        "rationale": "Mount is a direct synonym for climb.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mount": 0.9
+        },
+        "ranked_guesses": [
+          "mount"
+        ],
+        "rationale": "Mount is a direct synonym for climb.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "spring",
+        "count": 3,
+        "rationale": "Connects to cycle (spring cycle), rose (spring rose), and wind (spring wind)"
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.9,
+          "cycle": 0.7,
+          "well": 0.85
+        },
+        "ranked_guesses": [
+          "board",
+          "well",
+          "cycle"
+        ],
+        "rationale": "'spring' strongly suggests 'springboard' (board), 'spring' as water source (well), and 'spring cycle' (cycle) as the most plausible connections among remaining words.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.88,
+          "cycle": 0.85,
+          "well": 0.92
+        },
+        "ranked_guesses": [
+          "well",
+          "board",
+          "cycle"
+        ],
+        "rationale": "spring directly connects to water spring (well), springboard (board), and seasonal/life cycles (cycle)",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "board": 0.7,
+          "rose": 0.95,
+          "well": 0.95
+        },
+        "ranked_guesses": [
+          "rose",
+          "well",
+          "board",
+          "bar"
+        ],
+        "rationale": "spring directly relates to rose (flower), well (water source), board (springboard), and bar (spring mechanism) among unrevealed words",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "clothing",
+        "count": 2,
+        "rationale": "The remaining blue words are belt and jack, both of which are related to clothing."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.9
+        },
+        "ranked_guesses": [
+          "belt"
+        ],
+        "rationale": "Belt is a clear item of clothing.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.9
+        },
+        "ranked_guesses": [
+          "belt"
+        ],
+        "rationale": "Belt is a clear item of clothing.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "belt": 0.9,
+          "jack": 0.6
+        },
+        "ranked_guesses": [
+          "belt",
+          "jack"
+        ],
+        "rationale": "Belt is a direct piece of clothing. Jack can refer to a jacket.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "turn",
+        "count": 2,
+        "rationale": "Both remaining red words 'cycle' and 'bar' can be loosely associated with the concept of 'turn' (e.g., a cycle involves turning, and a bar can be part of a turning mechanism like a turnstile)."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.7,
+          "cycle": 0.5
+        },
+        "ranked_guesses": [
+          "board",
+          "cycle"
+        ],
+        "rationale": "'turn' most directly relates to 'board' (board game turn) and 'cycle' (cycle has turns). 'board' is the stronger connection.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.6,
+          "board": 0.5,
+          "cycle": 0.5
+        },
+        "ranked_guesses": [
+          "bar",
+          "board",
+          "cycle"
+        ],
+        "rationale": "'turn' likely refers to turning motions in sports/activities; 'bar' (gymnastics/weightlifting), 'board' (skateboard/snowboard), and 'cycle' (cycling) are plausible connections",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bar": 0.7,
+          "cycle": 0.9
+        },
+        "ranked_guesses": [
+          "cycle",
+          "bar"
+        ],
+        "rationale": "Clue 'turn' with count 2 strongly suggests 'cycle' (directly related to turning) and 'bar' (as in turnstile or barrel roll). Other unrevealed words have weaker connections to 'turn'.",
+        "stop": false
+      },
+      "agent_id": "Mistral Small 4-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "playing",
+        "count": 1,
+        "rationale": "The remaining blue word is 'jack', which is a playing card."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.6
+        },
+        "ranked_guesses": [
+          "board"
+        ],
+        "rationale": "Board games are commonly associated with playing.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.6
+        },
+        "ranked_guesses": [
+          "board"
+        ],
+        "rationale": "Board games are commonly associated with playing.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "board": 0.6
+        },
+        "ranked_guesses": [
+          "board"
+        ],
+        "rationale": "Board games are commonly associated with playing.",
+        "stop": false
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "cycle",
+        "count": 2,
+        "rationale": "Connects the remaining red words 'cycle' and 'wind' without risking the assassin or blue words."
+      },
+      "agent_id": "Mistral Small 4-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "poker",
+        "count": 1,
+        "rationale": "The remaining blue word is 'jack', which is a face card in a deck used for poker."
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jack": 0.9
+        },
+        "ranked_guesses": [
+          "jack"
+        ],
+        "rationale": "Jack is a standard playing card in poker.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jack": 0.9
+        },
+        "ranked_guesses": [
+          "jack"
+        ],
+        "rationale": "Jack is a common card in poker.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "jack": 0.9
+        },
+        "ranked_guesses": [
+          "jack"
+        ],
+        "rationale": "Jack is a common playing card in poker.",
+        "stop": true
+      },
+      "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "clock"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "time"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "face"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "track"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "physics"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "laser"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "microscope"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "drink"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "mug"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "shot"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "literature"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "shakespeare"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "history"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "school"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "capital"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "scientist"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ocean"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wave"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "round"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "diamond"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "climb"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "mount"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "spring"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "well"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "clothing"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "belt"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "turn"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "playing"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "clue": "cycle",
+        "count": 2,
+        "rationale": "Connects the remaining red words 'cycle' and 'wind' without risking the assassin or blue words."
+      },
+      "event": "illegal_clue",
+      "matched_word": "cycle",
+      "reason": "board_word",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "poker"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "jack"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 53,
+    "public_event_count": 39,
+    "reason": "all_words_found",
+    "seed": "openrouter-codenames-single-061-mistralai_mistral_small_2603-vs-google_gemini_3_1_flash_lite",
+    "team_blue": "Gemini 3.1 Flash Lite",
+    "team_red": "Mistral Small 4",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 4,
+        "word": "clock"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cycle": 0.6,
+              "face": 0.9,
+              "shot": 0.5,
+              "time": 0.95,
+              "track": 0.7,
+              "wave": 0.7
+            },
+            "ranked_guesses": [
+              "time",
+              "face",
+              "wave",
+              "track",
+              "cycle",
+              "shot"
+            ],
+            "rationale": "Clock directly relates to time and clock face. Wave and track are plausible but less direct. Cycle and shot are possible but weaker connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cycle": 0.75,
+              "face": 0.9,
+              "time": 0.95,
+              "track": 0.8
+            },
+            "ranked_guesses": [
+              "time",
+              "face",
+              "track",
+              "cycle"
+            ],
+            "rationale": "'clock' strongly relates to time measurement. 'time' is a direct match, 'face' refers to clock face, 'track' implies time tracking, and 'cycle' relates to time cycles.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cycle": 0.7,
+              "face": 0.9,
+              "shot": 0.5,
+              "time": 0.95
+            },
+            "ranked_guesses": [
+              "time",
+              "face",
+              "cycle",
+              "shot"
+            ],
+            "rationale": "The clue 'clock' strongly suggests time-related words. 'time' and 'face' (clock face) are direct matches. 'cycle' relates to time cycles. 'shot' may refer to a shot clock in sports.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "time"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "face"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "track"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "clock",
+          "count": 4,
+          "rationale": "Connects to time (clock time), cycle (clock cycle), face (clock face), and track (race track timing), all red words"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "physics"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "laser": 0.9,
+              "microscope": 0.9,
+              "wave": 0.8
+            },
+            "ranked_guesses": [
+              "laser",
+              "microscope",
+              "wave"
+            ],
+            "rationale": "Laser, microscope, and wave are all fundamental concepts or tools in physics.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "laser": 0.9,
+              "microscope": 0.9,
+              "wave": 0.8
+            },
+            "ranked_guesses": [
+              "laser",
+              "microscope",
+              "wave"
+            ],
+            "rationale": "Laser, microscope, and wave are all fundamental concepts or tools in physics.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "laser": 0.9,
+              "microscope": 0.9,
+              "wave": 0.8
+            },
+            "ranked_guesses": [
+              "laser",
+              "microscope",
+              "wave"
+            ],
+            "rationale": "Laser, microscope, and wave are all fundamental concepts or tools directly associated with physics.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "laser"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "microscope"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "physics",
+          "count": 3,
+          "rationale": "Connects laser, microscope, and scientist, which are all related to scientific study."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "drink"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mug": 0.75,
+              "shot": 0.85
+            },
+            "ranked_guesses": [
+              "shot",
+              "mug"
+            ],
+            "rationale": "'drink' clue with count 2 strongly suggests 'shot' (a drink) and 'mug' (drinking vessel) as the most likely targets.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.9,
+              "mug": 0.85
+            },
+            "ranked_guesses": [
+              "bar",
+              "mug"
+            ],
+            "rationale": "'bar' and 'mug' are the most direct associations to the clue 'drink' on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mug": 0.9,
+              "shot": 0.85
+            },
+            "ranked_guesses": [
+              "mug",
+              "shot"
+            ],
+            "rationale": "'mug' and 'shot' are the most direct associations to the drink clue (coffee mug, shot of alcohol). 'bar' is also possible but less likely given the count of 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "mug"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "shot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "drink",
+          "count": 2,
+          "rationale": "Connects to 'bar' and 'mug' which are both red team words."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "literature"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "school": 0.6,
+              "shakespeare": 0.95
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "school"
+            ],
+            "rationale": "Shakespeare is a direct association with literature, and school is a common setting for literature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.6,
+              "shakespeare": 0.95
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "school"
+            ],
+            "rationale": "Shakespeare is a direct association with literature, and school is a common setting for studying literature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.6,
+              "shakespeare": 0.95
+            },
+            "ranked_guesses": [
+              "shakespeare",
+              "school"
+            ],
+            "rationale": "Shakespeare is the most iconic figure in literature, and school is a common setting for studying literature.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "shakespeare"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "literature",
+          "count": 2,
+          "rationale": "Shakespeare is a famous author, and school is a place where literature is studied."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 5,
+        "word": "history"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "capital": 0.8,
+              "school": 0.9,
+              "scientist": 0.9,
+              "wave": 0.6,
+              "wind": 0.6
+            },
+            "ranked_guesses": [
+              "school",
+              "scientist",
+              "capital",
+              "wave",
+              "wind"
+            ],
+            "rationale": "Clue 'history' with count 5 suggests strong connections to education/science history ('school', 'scientist'), historical contexts ('capital'), and metaphorical historical change ('wave', 'wind').",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "school": 0.75
+            },
+            "ranked_guesses": [
+              "school"
+            ],
+            "rationale": "'school' is strongly associated with history as a subject of study, fitting the 'history' clue with count 5. Other remaining words have weaker historical connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "capital": 0.85,
+              "rose": 0.7,
+              "school": 0.8,
+              "scientist": 0.75,
+              "wave": 0.65
+            },
+            "ranked_guesses": [
+              "capital",
+              "school",
+              "scientist",
+              "rose",
+              "wave"
+            ],
+            "rationale": "'history' clue with count 5 suggests 5 related words. 'capital' (cities/capitals), 'school' (historical schools), 'scientist' (historical figures), 'rose' (Wars of the Roses), and 'wave' (historical waves) are plausible hidden connections.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "school"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "capital"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "scientist"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "history",
+          "count": 5,
+          "rationale": "Connects to all 5 remaining red words: bar (history of bars), capital (capital history), cycle (historical cycles), school (school history), scientist (history of science)."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ocean"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mount": 0.4,
+              "wave": 0.95,
+              "well": 0.7
+            },
+            "ranked_guesses": [
+              "wave",
+              "well",
+              "mount"
+            ],
+            "rationale": "Wave is directly related to ocean. Well can be associated with water/depth. Mount is a weak association but fits the remaining board.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "wave": 0.9,
+              "well": 0.6,
+              "wind": 0.5
+            },
+            "ranked_guesses": [
+              "wave",
+              "well",
+              "wind"
+            ],
+            "rationale": "Wave is directly associated with ocean. Well and wind are secondary associations.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "wave": 0.95,
+              "well": 0.6,
+              "wind": 0.5
+            },
+            "ranked_guesses": [
+              "wave",
+              "well",
+              "wind"
+            ],
+            "rationale": "Wave is directly associated with ocean. Well and wind are secondary associations related to water or weather at sea.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wave"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ocean",
+          "count": 3,
+          "rationale": "Ocean relates to wave, mount (as in sea mount), and well (as in water source)."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "round"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.7,
+              "board": 0.7
+            },
+            "ranked_guesses": [
+              "belt",
+              "board"
+            ],
+            "rationale": "Both 'belt' and 'board' can be round objects, matching the clue 'round' with a count of 2.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "diamond": 0.9,
+              "tooth": 0.8
+            },
+            "ranked_guesses": [
+              "diamond",
+              "tooth"
+            ],
+            "rationale": "The clue 'round' with count 2 likely refers to two round-shaped objects. 'diamond' (round cut) and 'tooth' (round shape) are the strongest remaining matches on the board.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cycle": 0.7,
+              "diamond": 0.7
+            },
+            "ranked_guesses": [
+              "diamond",
+              "cycle"
+            ],
+            "rationale": "'round' likely refers to shape; 'diamond' and 'cycle' are round objects and plausible remaining red team words",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "diamond"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "round",
+          "count": 2,
+          "rationale": "Connects to both remaining red words: 'cycle' (as in a round cycle) and 'bar' (as in a round bar or rounds of drinks)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "climb"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.5,
+              "cycle": 0.6,
+              "mount": 0.95
+            },
+            "ranked_guesses": [
+              "mount",
+              "cycle",
+              "belt"
+            ],
+            "rationale": "Mount is a direct synonym for climb. Cycle and belt are associated with climbing gear or activities.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mount": 0.9
+            },
+            "ranked_guesses": [
+              "mount"
+            ],
+            "rationale": "Mount is a direct synonym for climb.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mount": 0.9
+            },
+            "ranked_guesses": [
+              "mount"
+            ],
+            "rationale": "Mount is a direct synonym for climb.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "mount"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "climb",
+          "count": 3,
+          "rationale": "Mount, belt, and jack can all be associated with climbing or gear used in climbing/harnessing."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "spring"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "board": 0.9,
+              "cycle": 0.7,
+              "well": 0.85
+            },
+            "ranked_guesses": [
+              "board",
+              "well",
+              "cycle"
+            ],
+            "rationale": "'spring' strongly suggests 'springboard' (board), 'spring' as water source (well), and 'spring cycle' (cycle) as the most plausible connections among remaining words.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "board": 0.88,
+              "cycle": 0.85,
+              "well": 0.92
+            },
+            "ranked_guesses": [
+              "well",
+              "board",
+              "cycle"
+            ],
+            "rationale": "spring directly connects to water spring (well), springboard (board), and seasonal/life cycles (cycle)",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "board": 0.7,
+              "rose": 0.95,
+              "well": 0.95
+            },
+            "ranked_guesses": [
+              "rose",
+              "well",
+              "board",
+              "bar"
+            ],
+            "rationale": "spring directly relates to rose (flower), well (water source), board (springboard), and bar (spring mechanism) among unrevealed words",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "well"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "spring",
+          "count": 3,
+          "rationale": "Connects to cycle (spring cycle), rose (spring rose), and wind (spring wind)"
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "clothing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.9
+            },
+            "ranked_guesses": [
+              "belt"
+            ],
+            "rationale": "Belt is a clear item of clothing.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.9
+            },
+            "ranked_guesses": [
+              "belt"
+            ],
+            "rationale": "Belt is a clear item of clothing.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "belt": 0.9,
+              "jack": 0.6
+            },
+            "ranked_guesses": [
+              "belt",
+              "jack"
+            ],
+            "rationale": "Belt is a direct piece of clothing. Jack can refer to a jacket.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "belt"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "clothing",
+          "count": 2,
+          "rationale": "The remaining blue words are belt and jack, both of which are related to clothing."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "turn"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "board": 0.7,
+              "cycle": 0.5
+            },
+            "ranked_guesses": [
+              "board",
+              "cycle"
+            ],
+            "rationale": "'turn' most directly relates to 'board' (board game turn) and 'cycle' (cycle has turns). 'board' is the stronger connection.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.6,
+              "board": 0.5,
+              "cycle": 0.5
+            },
+            "ranked_guesses": [
+              "bar",
+              "board",
+              "cycle"
+            ],
+            "rationale": "'turn' likely refers to turning motions in sports/activities; 'bar' (gymnastics/weightlifting), 'board' (skateboard/snowboard), and 'cycle' (cycling) are plausible connections",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bar": 0.7,
+              "cycle": 0.9
+            },
+            "ranked_guesses": [
+              "cycle",
+              "bar"
+            ],
+            "rationale": "Clue 'turn' with count 2 strongly suggests 'cycle' (directly related to turning) and 'bar' (as in turnstile or barrel roll). Other unrevealed words have weaker connections to 'turn'.",
+            "stop": false
+          },
+          "agent_id": "Mistral Small 4-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "turn",
+          "count": 2,
+          "rationale": "Both remaining red words 'cycle' and 'bar' can be loosely associated with the concept of 'turn' (e.g., a cycle involves turning, and a bar can be part of a turning mechanism like a turnstile)."
+        },
+        "agent_id": "Mistral Small 4-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "playing"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "board": 0.6
+            },
+            "ranked_guesses": [
+              "board"
+            ],
+            "rationale": "Board games are commonly associated with playing.",
+            "stop": true
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "board": 0.6
+            },
+            "ranked_guesses": [
+              "board"
+            ],
+            "rationale": "Board games are commonly associated with playing.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "board": 0.6
+            },
+            "ranked_guesses": [
+              "board"
+            ],
+            "rationale": "Board games are commonly associated with playing.",
+            "stop": false
+          },
+          "agent_id": "Gemini 3.1 Flash Lite-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [],
+      "spymaster_action": {
+        "action": {
+          "clue": "playing",
+          "count": 1,
+          "rationale": "The remaining blue word is 'jack', which is a playing card."
+        },
+        "agent_id": "Gemini 3.1 Flash Lite-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "poker"
+      },
+      "guesser_actions": [],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "jack"
+        }
+      ],
+      "spymaster_action": null,
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}

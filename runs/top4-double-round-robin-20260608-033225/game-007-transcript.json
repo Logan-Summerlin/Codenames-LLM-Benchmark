@@ -1,0 +1,1795 @@
+{
+  "board": {
+    "identities": {
+      "alien": "red",
+      "animal": "blue",
+      "baker": "red",
+      "bridge": "neutral",
+      "cheese": "red",
+      "comet": "neutral",
+      "copper": "assassin",
+      "festival": "neutral",
+      "flame": "red",
+      "guitar": "red",
+      "harbor": "neutral",
+      "honey": "red",
+      "magnet": "red",
+      "memory": "blue",
+      "mystery": "blue",
+      "nurse": "neutral",
+      "poet": "neutral",
+      "robot": "blue",
+      "sailor": "red",
+      "silver": "neutral",
+      "storm": "blue",
+      "summer": "blue",
+      "temple": "blue",
+      "wizard": "blue",
+      "writer": "red"
+    },
+    "revealed": [
+      "animal",
+      "cheese",
+      "flame",
+      "guitar",
+      "harbor",
+      "honey",
+      "memory",
+      "mystery",
+      "robot",
+      "sailor",
+      "storm",
+      "summer",
+      "temple",
+      "wizard"
+    ],
+    "words": {
+      "alien": "red",
+      "animal": "blue",
+      "baker": "red",
+      "bridge": "neutral",
+      "cheese": "red",
+      "comet": "neutral",
+      "copper": "assassin",
+      "festival": "neutral",
+      "flame": "red",
+      "guitar": "red",
+      "harbor": "neutral",
+      "honey": "red",
+      "magnet": "red",
+      "memory": "blue",
+      "mystery": "blue",
+      "nurse": "neutral",
+      "poet": "neutral",
+      "robot": "blue",
+      "sailor": "red",
+      "silver": "neutral",
+      "storm": "blue",
+      "summer": "blue",
+      "temple": "blue",
+      "wizard": "blue",
+      "writer": "red"
+    }
+  },
+  "private_actions": [
+    {
+      "action": {
+        "clue": "heat",
+        "count": 3,
+        "rationale": "Links flame, magnet (magnetic fields generate heat) and sailor (heat of the sun on deck)"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.65,
+          "flame": 0.85,
+          "summer": 0.78
+        },
+        "ranked_guesses": [
+          "flame",
+          "summer",
+          "cheese"
+        ],
+        "rationale": "All three directly evoke heat: flame burns, summer is hot season, cheese melts with heat.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "flame": 0.85,
+          "storm": 0.65,
+          "summer": 0.78
+        },
+        "ranked_guesses": [
+          "flame",
+          "summer",
+          "storm"
+        ],
+        "rationale": "Flame and summer are directly about heat; storm can be hot (heat wave).",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "cheese": 0.6,
+          "flame": 0.85,
+          "summer": 0.75
+        },
+        "ranked_guesses": [
+          "flame",
+          "summer",
+          "cheese"
+        ],
+        "rationale": "Flame is directly heat, summer is hot season, cheese relates to heat (melting)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ancient",
+        "count": 4,
+        "rationale": "Links to temple (sacred site), wizard (magic), memory (ancient memories), and mystery (unresolved puzzles)."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "copper": 0.8,
+          "festival": 0.8,
+          "temple": 0.8,
+          "wizard": 0.8
+        },
+        "ranked_guesses": [
+          "temple",
+          "wizard",
+          "festival",
+          "copper"
+        ],
+        "rationale": "Ancient-leaning links: temple, wizard, festival, copper",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "temple": 0.8
+        },
+        "ranked_guesses": [
+          "temple"
+        ],
+        "rationale": "Strong association with ancient times; temple is a classic ancient landmark.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "memory": 0.8,
+          "mystery": 0.8,
+          "temple": 0.8,
+          "wizard": 0.8
+        },
+        "ranked_guesses": [
+          "temple",
+          "wizard",
+          "mystery",
+          "memory"
+        ],
+        "rationale": "Ancient-themed terms on board closely match the clue 'ancient'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "craft",
+        "count": 3,
+        "rationale": "Baker (crafts bread), writer (crafts stories), and guitarist (crafts music) all involve crafting"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.65,
+          "harbor": 0.7,
+          "sailor": 0.75
+        },
+        "ranked_guesses": [
+          "sailor",
+          "harbor",
+          "bridge"
+        ],
+        "rationale": "craft suggests boats/ships and building them",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.65,
+          "harbor": 0.74,
+          "sailor": 0.78
+        },
+        "ranked_guesses": [
+          "sailor",
+          "harbor",
+          "bridge"
+        ],
+        "rationale": "craft suggests vessels and places for them; sailor operates a craft, harbor houses them, bridge relates to navigating waterways",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.78,
+          "guitar": 0.71,
+          "writer": 0.74
+        },
+        "ranked_guesses": [
+          "baker",
+          "writer",
+          "guitar"
+        ],
+        "rationale": "craft as a skill or trade: baker (baking craft), writer (craft of writing), guitar (craft of making/playing instruments)",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "ram",
+        "count": 3,
+        "rationale": "links memory, animal, and robotics."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "memory": 0.8
+        },
+        "ranked_guesses": [
+          "memory"
+        ],
+        "rationale": "RAM stands for memory; direct association with 'ram' clue.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.5,
+          "memory": 0.92,
+          "robot": 0.4
+        },
+        "ranked_guesses": [
+          "memory",
+          "animal",
+          "robot"
+        ],
+        "rationale": "RAM directly suggests memory; ram is an animal (ram) and can hint at electronics/robot themes.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "memory": 0.95
+        },
+        "ranked_guesses": [
+          "memory"
+        ],
+        "rationale": "Direct match: RAM stands for memory (random-access memory).",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "sweet",
+        "count": 3,
+        "rationale": "honey, baker (makes sweets), and cheese can be sweet varieties"
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.85
+        },
+        "ranked_guesses": [
+          "honey"
+        ],
+        "rationale": "Honey is directly associated with sweetness",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.6,
+          "festival": 0.55,
+          "honey": 0.85
+        },
+        "ranked_guesses": [
+          "honey",
+          "baker",
+          "festival"
+        ],
+        "rationale": "sweet clue points to honey directly; baker makes sweets; festival often involves sweet treats",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "honey": 0.85
+        },
+        "ranked_guesses": [
+          "honey"
+        ],
+        "rationale": "sweet clue likely points to honey, a literal sweet item",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "android",
+        "count": 1,
+        "rationale": "refers to a mechanical helper"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "Android is synonymous with robot, so 'robot' is the best blue match.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "Android is commonly linked to robots; the word 'robot' exists on the board.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "robot": 0.8
+        },
+        "ranked_guesses": [
+          "robot"
+        ],
+        "rationale": "android -> robot (strong association)",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "instrument",
+        "count": 3,
+        "rationale": "guitar, writer, and baker are all types of instruments (musical, writing, cooking) and are red words."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.85
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Instrument clue likely points to guitar as a clear musical instrument among remaining words",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "bridge": 0.65,
+          "festival": 0.55,
+          "guitar": 0.85
+        },
+        "ranked_guesses": [
+          "guitar",
+          "bridge",
+          "festival"
+        ],
+        "rationale": "Instrument clue points to musical items; guitar is a clear instrument, bridge is part of many instruments, festival often features instruments.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "guitar": 0.85
+        },
+        "ranked_guesses": [
+          "guitar"
+        ],
+        "rationale": "Guitar is a clear musical instrument matching the clue",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "wild",
+        "count": 3,
+        "rationale": "links to wild animals, wild storms, and a sense of mystery"
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8,
+          "mystery": 0.8,
+          "storm": 0.8
+        },
+        "ranked_guesses": [
+          "animal",
+          "storm",
+          "mystery"
+        ],
+        "rationale": "animal and storm strongly connect with 'wild'; mystery is a plausible secondary link",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "alien": 0.6,
+          "animal": 0.8,
+          "storm": 0.7
+        },
+        "ranked_guesses": [
+          "animal",
+          "storm",
+          "alien"
+        ],
+        "rationale": "wild -> animal (wild animal), storm (wild weather), alien (loose connection as a wild/unknown entity)",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "animal": 0.8
+        },
+        "ranked_guesses": [
+          "animal"
+        ],
+        "rationale": "wild + animal is a common phrase; matches a plausible blue word target under 'wild'.",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "clue": "dairy",
+        "count": 2,
+        "rationale": "Both CHEESE and BAKER are associated with dairy products."
+      },
+      "agent_id": "GPT-OSS 120B-spymaster",
+      "event": "spymaster_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.45,
+          "cheese": 0.85
+        },
+        "ranked_guesses": [
+          "cheese",
+          "baker"
+        ],
+        "rationale": "Cheese is directly dairy; baker often uses dairy products, making it the next likely association.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-0",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.45,
+          "cheese": 0.85
+        },
+        "ranked_guesses": [
+          "cheese",
+          "baker"
+        ],
+        "rationale": "Cheese is a direct dairy product; baker often uses dairy ingredients, making it the next likely link.",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-1",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "confidences": {
+          "baker": 0.45,
+          "cheese": 0.92
+        },
+        "ranked_guesses": [
+          "cheese",
+          "baker"
+        ],
+        "rationale": "cheese is a direct dairy product; baker often uses dairy ingredients",
+        "stop": false
+      },
+      "agent_id": "GPT-OSS 120B-guesser-2",
+      "event": "guesser_action",
+      "team": "red"
+    },
+    {
+      "action": {
+        "clue": "enigma",
+        "count": 1,
+        "rationale": "Only blue word remaining is mystery; enigma is a synonym."
+      },
+      "agent_id": "GPT-5 Nano-spymaster",
+      "event": "spymaster_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mystery": 0.8
+        },
+        "ranked_guesses": [
+          "mystery"
+        ],
+        "rationale": "enigma is a synonym of mystery",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-0",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mystery": 0.8
+        },
+        "ranked_guesses": [
+          "mystery"
+        ],
+        "rationale": "direct synonym of enigma",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-1",
+      "event": "guesser_action",
+      "team": "blue"
+    },
+    {
+      "action": {
+        "confidences": {
+          "mystery": 0.8
+        },
+        "ranked_guesses": [
+          "mystery"
+        ],
+        "rationale": "enigma is a synonym of mystery; matches the unrevealed word 'mystery' on board",
+        "stop": false
+      },
+      "agent_id": "GPT-5 Nano-guesser-2",
+      "event": "guesser_action",
+      "team": "blue"
+    }
+  ],
+  "public_events": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "heat"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "flame"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "summer"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "ancient"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "temple"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "wizard"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "craft"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "sailor"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "neutral",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "harbor"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ram"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "memory"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sweet"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "honey"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "android"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "robot"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "instrument"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "guitar"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "wild"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "animal"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": false,
+      "winner": null,
+      "word": "storm"
+    },
+    {
+      "event": "stop",
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "dairy"
+      },
+      "event": "clue",
+      "team": "red"
+    },
+    {
+      "event": "guess",
+      "reason": null,
+      "revealed_identity": "red",
+      "team": "red",
+      "terminal": false,
+      "winner": null,
+      "word": "cheese"
+    },
+    {
+      "event": "stop",
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "enigma"
+      },
+      "event": "clue",
+      "team": "blue"
+    },
+    {
+      "event": "guess",
+      "reason": "all_words_found",
+      "revealed_identity": "blue",
+      "team": "blue",
+      "terminal": true,
+      "winner": "blue",
+      "word": "mystery"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "private_action_count": 40,
+    "public_event_count": 31,
+    "reason": "all_words_found",
+    "seed": "top4-double-round-robin-007-openai_gpt_oss_120b-vs-openai_gpt_5_nano",
+    "team_blue": "GPT-5 Nano",
+    "team_red": "GPT-OSS 120B",
+    "terminal": true,
+    "winner": "blue"
+  },
+  "turns": [
+    {
+      "clue": {
+        "count": 3,
+        "word": "heat"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.65,
+              "flame": 0.85,
+              "summer": 0.78
+            },
+            "ranked_guesses": [
+              "flame",
+              "summer",
+              "cheese"
+            ],
+            "rationale": "All three directly evoke heat: flame burns, summer is hot season, cheese melts with heat.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "flame": 0.85,
+              "storm": 0.65,
+              "summer": 0.78
+            },
+            "ranked_guesses": [
+              "flame",
+              "summer",
+              "storm"
+            ],
+            "rationale": "Flame and summer are directly about heat; storm can be hot (heat wave).",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "cheese": 0.6,
+              "flame": 0.85,
+              "summer": 0.75
+            },
+            "ranked_guesses": [
+              "flame",
+              "summer",
+              "cheese"
+            ],
+            "rationale": "Flame is directly heat, summer is hot season, cheese relates to heat (melting)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "flame"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "summer"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "heat",
+          "count": 3,
+          "rationale": "Links flame, magnet (magnetic fields generate heat) and sailor (heat of the sun on deck)"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 4,
+        "word": "ancient"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "copper": 0.8,
+              "festival": 0.8,
+              "temple": 0.8,
+              "wizard": 0.8
+            },
+            "ranked_guesses": [
+              "temple",
+              "wizard",
+              "festival",
+              "copper"
+            ],
+            "rationale": "Ancient-leaning links: temple, wizard, festival, copper",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "temple": 0.8
+            },
+            "ranked_guesses": [
+              "temple"
+            ],
+            "rationale": "Strong association with ancient times; temple is a classic ancient landmark.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "memory": 0.8,
+              "mystery": 0.8,
+              "temple": 0.8,
+              "wizard": 0.8
+            },
+            "ranked_guesses": [
+              "temple",
+              "wizard",
+              "mystery",
+              "memory"
+            ],
+            "rationale": "Ancient-themed terms on board closely match the clue 'ancient'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "temple"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "wizard"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ancient",
+          "count": 4,
+          "rationale": "Links to temple (sacred site), wizard (magic), memory (ancient memories), and mystery (unresolved puzzles)."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "craft"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.65,
+              "harbor": 0.7,
+              "sailor": 0.75
+            },
+            "ranked_guesses": [
+              "sailor",
+              "harbor",
+              "bridge"
+            ],
+            "rationale": "craft suggests boats/ships and building them",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.65,
+              "harbor": 0.74,
+              "sailor": 0.78
+            },
+            "ranked_guesses": [
+              "sailor",
+              "harbor",
+              "bridge"
+            ],
+            "rationale": "craft suggests vessels and places for them; sailor operates a craft, harbor houses them, bridge relates to navigating waterways",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.78,
+              "guitar": 0.71,
+              "writer": 0.74
+            },
+            "ranked_guesses": [
+              "baker",
+              "writer",
+              "guitar"
+            ],
+            "rationale": "craft as a skill or trade: baker (baking craft), writer (craft of writing), guitar (craft of making/playing instruments)",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "sailor"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "neutral",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "harbor"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "craft",
+          "count": 3,
+          "rationale": "Baker (crafts bread), writer (crafts stories), and guitarist (crafts music) all involve crafting"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": false,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "ram"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "memory": 0.8
+            },
+            "ranked_guesses": [
+              "memory"
+            ],
+            "rationale": "RAM stands for memory; direct association with 'ram' clue.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.5,
+              "memory": 0.92,
+              "robot": 0.4
+            },
+            "ranked_guesses": [
+              "memory",
+              "animal",
+              "robot"
+            ],
+            "rationale": "RAM directly suggests memory; ram is an animal (ram) and can hint at electronics/robot themes.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "memory": 0.95
+            },
+            "ranked_guesses": [
+              "memory"
+            ],
+            "rationale": "Direct match: RAM stands for memory (random-access memory).",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "memory"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "ram",
+          "count": 3,
+          "rationale": "links memory, animal, and robotics."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "sweet"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.85
+            },
+            "ranked_guesses": [
+              "honey"
+            ],
+            "rationale": "Honey is directly associated with sweetness",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.6,
+              "festival": 0.55,
+              "honey": 0.85
+            },
+            "ranked_guesses": [
+              "honey",
+              "baker",
+              "festival"
+            ],
+            "rationale": "sweet clue points to honey directly; baker makes sweets; festival often involves sweet treats",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "honey": 0.85
+            },
+            "ranked_guesses": [
+              "honey"
+            ],
+            "rationale": "sweet clue likely points to honey, a literal sweet item",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "honey"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "sweet",
+          "count": 3,
+          "rationale": "honey, baker (makes sweets), and cheese can be sweet varieties"
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "android"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "Android is synonymous with robot, so 'robot' is the best blue match.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "Android is commonly linked to robots; the word 'robot' exists on the board.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "robot": 0.8
+            },
+            "ranked_guesses": [
+              "robot"
+            ],
+            "rationale": "android -> robot (strong association)",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "robot"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "android",
+          "count": 1,
+          "rationale": "refers to a mechanical helper"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "instrument"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.85
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Instrument clue likely points to guitar as a clear musical instrument among remaining words",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "bridge": 0.65,
+              "festival": 0.55,
+              "guitar": 0.85
+            },
+            "ranked_guesses": [
+              "guitar",
+              "bridge",
+              "festival"
+            ],
+            "rationale": "Instrument clue points to musical items; guitar is a clear instrument, bridge is part of many instruments, festival often features instruments.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "guitar": 0.85
+            },
+            "ranked_guesses": [
+              "guitar"
+            ],
+            "rationale": "Guitar is a clear musical instrument matching the clue",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "guitar"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "instrument",
+          "count": 3,
+          "rationale": "guitar, writer, and baker are all types of instruments (musical, writing, cooking) and are red words."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 3,
+        "word": "wild"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8,
+              "mystery": 0.8,
+              "storm": 0.8
+            },
+            "ranked_guesses": [
+              "animal",
+              "storm",
+              "mystery"
+            ],
+            "rationale": "animal and storm strongly connect with 'wild'; mystery is a plausible secondary link",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "alien": 0.6,
+              "animal": 0.8,
+              "storm": 0.7
+            },
+            "ranked_guesses": [
+              "animal",
+              "storm",
+              "alien"
+            ],
+            "rationale": "wild -> animal (wild animal), storm (wild weather), alien (loose connection as a wild/unknown entity)",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "animal": 0.8
+            },
+            "ranked_guesses": [
+              "animal"
+            ],
+            "rationale": "wild + animal is a common phrase; matches a plausible blue word target under 'wild'.",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "animal"
+        },
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": false,
+          "winner": null,
+          "word": "storm"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "wild",
+          "count": 3,
+          "rationale": "links to wild animals, wild storms, and a sense of mystery"
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": true,
+      "team": "blue"
+    },
+    {
+      "clue": {
+        "count": 2,
+        "word": "dairy"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.45,
+              "cheese": 0.85
+            },
+            "ranked_guesses": [
+              "cheese",
+              "baker"
+            ],
+            "rationale": "Cheese is directly dairy; baker often uses dairy products, making it the next likely association.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-0",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.45,
+              "cheese": 0.85
+            },
+            "ranked_guesses": [
+              "cheese",
+              "baker"
+            ],
+            "rationale": "Cheese is a direct dairy product; baker often uses dairy ingredients, making it the next likely link.",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-1",
+          "event": "guesser_action",
+          "team": "red"
+        },
+        {
+          "action": {
+            "confidences": {
+              "baker": 0.45,
+              "cheese": 0.92
+            },
+            "ranked_guesses": [
+              "cheese",
+              "baker"
+            ],
+            "rationale": "cheese is a direct dairy product; baker often uses dairy ingredients",
+            "stop": false
+          },
+          "agent_id": "GPT-OSS 120B-guesser-2",
+          "event": "guesser_action",
+          "team": "red"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": null,
+          "revealed_identity": "red",
+          "team": "red",
+          "terminal": false,
+          "winner": null,
+          "word": "cheese"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "dairy",
+          "count": 2,
+          "rationale": "Both CHEESE and BAKER are associated with dairy products."
+        },
+        "agent_id": "GPT-OSS 120B-spymaster",
+        "event": "spymaster_action",
+        "team": "red"
+      },
+      "stopped": true,
+      "team": "red"
+    },
+    {
+      "clue": {
+        "count": 1,
+        "word": "enigma"
+      },
+      "guesser_actions": [
+        {
+          "action": {
+            "confidences": {
+              "mystery": 0.8
+            },
+            "ranked_guesses": [
+              "mystery"
+            ],
+            "rationale": "enigma is a synonym of mystery",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-0",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mystery": 0.8
+            },
+            "ranked_guesses": [
+              "mystery"
+            ],
+            "rationale": "direct synonym of enigma",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-1",
+          "event": "guesser_action",
+          "team": "blue"
+        },
+        {
+          "action": {
+            "confidences": {
+              "mystery": 0.8
+            },
+            "ranked_guesses": [
+              "mystery"
+            ],
+            "rationale": "enigma is a synonym of mystery; matches the unrevealed word 'mystery' on board",
+            "stop": false
+          },
+          "agent_id": "GPT-5 Nano-guesser-2",
+          "event": "guesser_action",
+          "team": "blue"
+        }
+      ],
+      "reveals": [
+        {
+          "event": "guess",
+          "reason": "all_words_found",
+          "revealed_identity": "blue",
+          "team": "blue",
+          "terminal": true,
+          "winner": "blue",
+          "word": "mystery"
+        }
+      ],
+      "spymaster_action": {
+        "action": {
+          "clue": "enigma",
+          "count": 1,
+          "rationale": "Only blue word remaining is mystery; enigma is a synonym."
+        },
+        "agent_id": "GPT-5 Nano-spymaster",
+        "event": "spymaster_action",
+        "team": "blue"
+      },
+      "stopped": false,
+      "team": "blue"
+    }
+  ]
+}
