@@ -22,7 +22,7 @@ The agent protocol defines private spymaster observations, public-only guesser o
 
 The runner can execute seeded games between mock teams or LLM-backed teams. It records public events and private actions, and transcripts can be written as JSON for later audit.
 
-The reporting layer includes tournament scheduling, Elo-style ratings, diagnostic metrics, Markdown report generation, response caching, and reproducibility manifests.
+The reporting layer includes tournament scheduling, Elo-style ratings, diagnostic metrics, per-run model summaries, Markdown report generation, response caching, and reproducibility manifests.
 
 ## Canonical OpenRouter launcher
 
@@ -40,7 +40,7 @@ python3 scripts/run_openrouter_tournament.py \
   --output-dir runs/test-double-round-robin-dry-run
 ```
 
-A live tournament uses the same launcher after `OPENROUTER_API_KEY` is present in the environment. The launcher pins OpenRouter `provider.order` per model and disables provider fallback so results do not silently mix backends:
+A live tournament uses the same launcher after `OPENROUTER_API_KEY` is present in the environment. The launcher pins OpenRouter `provider.order` per model from the live active-provider allowlist. Provider fallback stays disabled when a model resolves to a single route and is only enabled when multiple healthy routes exist, so results do not silently mix backends without that being recorded in the run manifest:
 
 ```bash
 OPENROUTER_NODE_TIMEOUT_SECONDS=75 \
@@ -87,7 +87,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/run_deterministic_smoke.py
 ```
 
-Expected current behavior: compilation succeeds, the unittest suite passes, and the deterministic smoke script prints a terminal mock-game result similar to:
+Expected current behavior: compilation succeeds, the unittest suite passes (115 tests), and the deterministic smoke script prints a terminal mock-game result similar to:
 
 ```json
 {"events": 20, "reason": "all_words_found", "terminal": true, "winner": "red"}
@@ -102,6 +102,14 @@ A transcript records the board, public event log, private spymaster and guesser 
 A terminal game with `reason: all_words_found` or an assassin-loss reason is a completed game outcome. A transcript with `winner: null` and `reason: null` usually means the game ended because the configured turn bound was reached or the live run was stopped before a natural terminal condition. Do not treat bounded non-terminal games as normal wins or losses without an explicit scoring policy.
 
 Diagnostics should track illegal clues, invalid JSON, off-board guesses, neutral hits, opponent hits, assassin hits, stop behavior, clue efficiency, token usage, latency, and provider errors separately. This benchmark is most valuable when it explains why a model wins, not merely whether it wins.
+
+To turn a finished run directory into a per-model summary, use the run-summary tool. It reads the `game-*/transcript.json` artifacts (no provider calls) and reports per-model records, terminal-vs-bounded game counts, illegal clue rates, clue efficiency, and assassin/neutral/opponent hit counts:
+
+```bash
+python3 scripts/summarize_run.py runs/<run-directory>
+```
+
+Pass `--output summary.json` to also write the summary to a file.
 
 ## Project layout
 
@@ -119,9 +127,9 @@ Diagnostics should track illegal clues, invalid JSON, off-board guesses, neutral
 
 `data/board_suites/adversarial.jsonl` contains an adversarial board-suite example.
 
-`scripts/` contains the active deterministic smoke script and the canonical OpenRouter tournament launcher.
+`scripts/` contains the three active entrypoints: the deterministic smoke script (`run_deterministic_smoke.py`), the canonical OpenRouter tournament launcher (`run_openrouter_tournament.py`), and the run-summary tool (`summarize_run.py`).
 
-`ARCHIVE/` contains retired launchers and diagnostics that are preserved for reference only.
+`ARCHIVE/` contains retired launchers, one-off recovery scripts, and diagnostics that are preserved for reference only.
 
 ## Development notes
 
@@ -133,14 +141,27 @@ When adding new model providers, keep provider code isolated behind the LLM clie
 
 When changing prompts, rule profiles, model IDs, sampling settings, word lists, or seeds, record those details in manifests or run output directories so results remain reproducible.
 
+## Is Codenames a valid LLM benchmark?
+
+Codenames is a defensible probe of two capabilities that are otherwise hard to isolate:
+
+- **Semantic association under constraint.** A spymaster must compress several hidden target words into one legal clue while steering clear of opponent, neutral, and especially assassin associations. This rewards graded, multi-word semantic reasoning rather than single-fact recall, and the strict legality checker (board-word, morphological-variant, substring, and multiword rejection) prevents trivially literal clues.
+- **Inference and risk management.** Guessers see only public information and must infer partner intent, weigh confidence, and stop before overreaching. The hidden/public observation split is enforced by the protocol layer and asserted by privacy-boundary tests, so a guesser cannot peek at hidden identities.
+
+The benchmark is therefore a reasonable measure of in-context semantic and strategic skill, but a few design choices bound what its scores mean, and these should be reported alongside any leaderboard:
+
+- **Homogeneous teams.** Each team is one model playing both spymaster and all guessers. This measures a model's internal self-consistency (does it guess the way it cues?) more than open coordination with a different partner. Cross-model pairings would isolate coordination separately.
+- **The three guessers are an ensemble of one model.** Three guesser instances of the same model at low temperature vote through a deterministic aggregator (`confidence_threshold=0.7`, `min_consensus_votes=2`). This stabilizes parsing noise but is closer to self-consistency sampling than to three independent reasoners; the prompt's `0.70` confidence gate is intentionally coupled to the aggregator threshold.
+- **Small-sample, high-variance outcomes.** Limited-coverage and single-round-robin schedules give each model very few games, so Elo and win-rate are noisy. Prefer double round robin (or many seeds) before ranking, and lean on the diagnostic rates from `summarize_run.py` rather than win/loss alone.
+- **Bounded games dilute the win signal.** Live games that hit `--max-turns` end non-terminal with `winner: null`. Treat these as ties only under an explicit policy; `summarize_run.py` reports terminal-vs-bounded counts so this is visible.
+- **Legality is heuristic.** Substring and morphological rejection are deliberately strict and can occasionally reject a defensible clue. This is a conservative trade-off (no illegal clue slips through) that should be kept in mind when comparing illegal-clue rates.
+
+In short: it is a legitimate semantic-plus-strategy benchmark, best read through per-model diagnostics rather than raw win counts, and strongest when run with a full double round robin and many seeds.
+
 ## Known current limitations
 
-The live-model path is operational but still early. Recent live transcripts in `runs/` are often non-terminal, so full benchmark interpretation needs explicit handling for bounded games and incomplete runs.
+The live-model path is operational but still early. Recent live transcripts in `runs/` are often non-terminal, so full benchmark interpretation needs explicit handling for bounded games and incomplete runs (see `summarize_run.py`).
 
-The README and design documents may not capture every implementation detail yet. The source tests are currently the most reliable specification for exact behavior.
+The README and design documents aim to describe current behavior, but the source tests remain the most precise specification of exact engine and protocol semantics.
 
-There is no local Git metadata in this workspace copy, so branch, commit, and diff provenance cannot be inferred from the checked-out directory alone.
-
-## Recommended next milestone
-
-The best next milestone is a small transcript-analysis command that summarizes a run directory into model outcomes, terminal-vs-bounded counts, illegal clue rates, off-board guess rates, assassin/neutral/opponent hit rates, and parser failures. That will make live benchmarks easier to trust before scaling to larger OpenRouter tournaments.
+Per-model diagnostics are currently aggregated after the fact from transcripts by `summarize_run.py` rather than written inline during the tournament run; wiring those rates directly into each round summary is a natural next step.
