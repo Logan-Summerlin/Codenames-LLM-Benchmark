@@ -33,10 +33,10 @@ from codenames_benchmark.tournament import (
 from codenames_benchmark.transcript import write_transcript
 
 TOP4_MODEL_SLUGS = [
-    "meta-llama/llama-3.3-70b-instruct",
+    "meta-llama/llama-4-maverick",
     "openai/gpt-5.4-nano",
     "microsoft/phi-4",
-    "qwen/qwen3-32b",
+    "mistralai/mistral-small-3.2-24b-instruct",
 ]
 
 

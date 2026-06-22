@@ -64,6 +64,24 @@ python3 scripts/run_openrouter_tournament.py \
   --output-dir runs/openrouter-limited-coverage-live
 ```
 
+### Adaptive provider failover
+
+When a model lists more than one route in `OPENROUTER_PROVIDER_ORDER_JSON`, the OpenRouter client tracks slow and failing providers and rearranges `provider.order` so a flaky provider stops being tried first. A provider earns a strike each time a request to it times out (`OPENROUTER_NODE_TIMEOUT_SECONDS`) or returns successfully but slower than the slow threshold. Once a provider reaches the strike limit it is rotated to the back of `provider.order` for the rest of the run (fallbacks stay enabled, so it remains a last resort). Strike counts are sticky for the life of the client, so later games in the same run do not keep re-hitting the slow provider first.
+
+Two knobs control this (defaults reproduce "rearrange after 2 timeouts or responses slower than 60 seconds"):
+
+```bash
+OPENROUTER_PROVIDER_STRIKE_LIMIT=2 \
+OPENROUTER_PROVIDER_SLOW_SECONDS=60 \
+OPENROUTER_NODE_TIMEOUT_SECONDS=75 \
+OPENROUTER_NODE_ATTEMPTS=4 \
+python3 scripts/run_openrouter_tournament.py \
+  --schedule-mode limited-coverage \
+  --output-dir runs/openrouter-limited-coverage-live
+```
+
+Note: the slow-response strike can only fire when a request actually returns, so keep `OPENROUTER_NODE_TIMEOUT_SECONDS` above `OPENROUTER_PROVIDER_SLOW_SECONDS`; otherwise a response slower than the slow threshold is cut off first and counts as a timeout strike instead (which still demotes the provider).
+
 For the four-model preset, add `--model-preset top4`.
 
 A canonical dry run with the top-four preset looks like this:
@@ -87,7 +105,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/run_deterministic_smoke.py
 ```
 
-Expected current behavior: compilation succeeds, the unittest suite passes (115 tests), and the deterministic smoke script prints a terminal mock-game result similar to:
+Expected current behavior: compilation succeeds, the unittest suite passes (119 tests), and the deterministic smoke script prints a terminal mock-game result similar to:
 
 ```json
 {"events": 20, "reason": "all_words_found", "terminal": true, "winner": "red"}

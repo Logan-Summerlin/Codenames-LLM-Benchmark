@@ -1,3 +1,4 @@
+import json
 import os
 import subprocess
 import sys
@@ -95,6 +96,78 @@ class OpenRouterTests(unittest.TestCase):
                 client.complete(LLMRequest(model="fake-model", messages=[{"role": "user", "content": "Return json."}], json_schema={"type": "object"}))
 
         self.assertIn("after 4 attempts", str(ctx.exception))
+
+    def test_provider_rotated_to_back_after_two_timeouts(self):
+        old_value = os.environ.get("OPENROUTER_PROVIDER_ORDER_JSON")
+        os.environ["OPENROUTER_PROVIDER_ORDER_JSON"] = '{"fake-model": ["Alpha", "Beta"]}'
+        captured_orders = []
+
+        def fake_run(*_args, **kwargs):
+            with open(kwargs["env"]["OPENROUTER_BODY_PATH"], encoding="utf-8") as fh:
+                body = json.load(fh)
+            captured_orders.append(body.get("provider", {}).get("order"))
+            if len(captured_orders) <= 2:
+                raise subprocess.TimeoutExpired(cmd=["node"], timeout=20)
+            return subprocess.CompletedProcess(
+                args=["node"],
+                returncode=0,
+                stdout="{\"choices\": [{\"message\": {\"content\": \"{\\\"ok\\\": true}\"}}]}",
+                stderr="",
+            )
+
+        try:
+            client = OpenRouterClient(api_key="test-key")
+            with patch("codenames_benchmark.llm.openrouter.subprocess.run", side_effect=fake_run), patch("codenames_benchmark.llm.openrouter.time.sleep", return_value=None):
+                client.complete(LLMRequest(model="fake-model", messages=[{"role": "user", "content": "Return json."}], json_schema={"type": "object"}))
+        finally:
+            if old_value is None:
+                os.environ.pop("OPENROUTER_PROVIDER_ORDER_JSON", None)
+            else:
+                os.environ["OPENROUTER_PROVIDER_ORDER_JSON"] = old_value
+
+        # First two attempts keep Alpha in front; after its second strike it is
+        # rotated to the back for the third (successful) attempt.
+        self.assertEqual(captured_orders, [["Alpha", "Beta"], ["Alpha", "Beta"], ["Beta", "Alpha"]])
+        self.assertEqual(client._provider_strikes["fake-model"]["Alpha"], 2)
+
+    def test_slow_successful_response_records_strike(self):
+        old_order = os.environ.get("OPENROUTER_PROVIDER_ORDER_JSON")
+        old_slow = os.environ.get("OPENROUTER_PROVIDER_SLOW_SECONDS")
+        os.environ["OPENROUTER_PROVIDER_ORDER_JSON"] = '{"fake-model": ["Alpha", "Beta"]}'
+        os.environ["OPENROUTER_PROVIDER_SLOW_SECONDS"] = "60"
+        completed = subprocess.CompletedProcess(
+            args=["node"],
+            returncode=0,
+            stdout="{\"choices\": [{\"message\": {\"content\": \"{\\\"ok\\\": true}\"}}], \"provider\": \"Alpha\"}",
+            stderr="",
+        )
+        try:
+            client = OpenRouterClient(api_key="test-key")
+            with patch("codenames_benchmark.llm.openrouter.subprocess.run", return_value=completed), patch("codenames_benchmark.llm.openrouter.time.monotonic", side_effect=[0.0, 61.0]):
+                client.complete(LLMRequest(model="fake-model", messages=[{"role": "user", "content": "Return json."}], json_schema={"type": "object"}))
+        finally:
+            for key, value in (("OPENROUTER_PROVIDER_ORDER_JSON", old_order), ("OPENROUTER_PROVIDER_SLOW_SECONDS", old_slow)):
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
+
+        self.assertEqual(client._provider_strikes["fake-model"]["Alpha"], 1)
+
+    def test_demotion_is_sticky_across_requests(self):
+        old_value = os.environ.get("OPENROUTER_PROVIDER_ORDER_JSON")
+        os.environ["OPENROUTER_PROVIDER_ORDER_JSON"] = '{"fake-model": ["Alpha", "Beta"]}'
+        try:
+            client = RecordingOpenRouterClient()
+            client._provider_strikes["fake-model"] = {"Alpha": 2}
+            client.complete(LLMRequest(model="fake-model", messages=[{"role": "user", "content": "Return json."}], json_schema={"type": "object"}))
+        finally:
+            if old_value is None:
+                os.environ.pop("OPENROUTER_PROVIDER_ORDER_JSON", None)
+            else:
+                os.environ["OPENROUTER_PROVIDER_ORDER_JSON"] = old_value
+
+        self.assertEqual(client.payload["provider"], {"order": ["Beta", "Alpha"], "allow_fallbacks": True})
 
     def test_node_subprocess_decodes_as_utf8(self):
         # Node emits UTF-8; on Windows text=True defaults to cp1252 and crashes

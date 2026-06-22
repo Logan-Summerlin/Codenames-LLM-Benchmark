@@ -26,7 +26,7 @@ class ModelSpec:
 
 
 OPENROUTER_CODENAMES_MODELS: list[ModelSpec] = [
-    ModelSpec("Llama 3.3 70B Instruct", "meta-llama/llama-3.3-70b-instruct", "Novita", "novita/bf16", "low"),
+    ModelSpec("Llama 4 Maverick", "meta-llama/llama-4-maverick", "Parasail", "parasail/fp8", "low"),
     ModelSpec("GPT-4o mini", "openai/gpt-4o-mini", "Azure", "azure/swedencentral", "low"),
     ModelSpec("Qwen2.5 72B Instruct", "qwen/qwen-2.5-72b-instruct", "DeepInfra", "deepinfra/fp8", "low"),
     ModelSpec("DeepSeek V3 0324", "deepseek/deepseek-chat-v3-0324", "ModelRun", "modelrun/fp4", "low"),
@@ -36,14 +36,14 @@ OPENROUTER_CODENAMES_MODELS: list[ModelSpec] = [
     ModelSpec("Phi-4", "microsoft/phi-4", "Microsoft", None, "low"),
     ModelSpec("Gemini 3.1 Flash Lite", "google/gemini-3.1-flash-lite", "Google", "google-vertex/global", "low"),
     ModelSpec("Gemini 2.5 Flash Lite", "google/gemini-2.5-flash-lite", "Google", "google-vertex/global", "low"),
-    ModelSpec("Gemma 4 31B", "google/gemma-4-31b-it", "Parasail", "parasail/fp8", "low"),
+    ModelSpec("GLM 4.6V", "z-ai/glm-4.6v", "NovitaAI", None, "low"),
     ModelSpec("GPT-5.4-nano", "openai/gpt-5.4-nano", "Azure", "azure", "low"),
     ModelSpec("Llama 4 Scout", "meta-llama/llama-4-scout", "Meta", None, "low"),
     ModelSpec("Gemma 3 27B", "google/gemma-3-27b-it", "Google", None, "low"),
     ModelSpec("Nova Lite 1.0", "amazon/nova-lite-v1", "Amazon", None, "low"),
     ModelSpec("Claude 3 Haiku", "anthropic/claude-3-haiku", "Anthropic", None, "low"),
     ModelSpec("GPT-OSS 20B", "openai/gpt-oss-20b", "Groq", "groq", "low"),
-    ModelSpec("Qwen 3 32B", "qwen/qwen3-32b", "Qwen", None, "low"),
+    ModelSpec("Mistral Small 3.2", "mistralai/mistral-small-3.2-24b-instruct", "DeepInfra", None, "low"),
 ]
 
 

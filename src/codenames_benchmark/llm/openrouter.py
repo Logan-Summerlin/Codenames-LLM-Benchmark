@@ -72,18 +72,58 @@ fetch(url, {
 });
 '''
 
+def _provider_strike_limit() -> int:
+    """Number of timeouts/slow responses before a provider is demoted."""
+    try:
+        return max(1, int(os.environ.get("OPENROUTER_PROVIDER_STRIKE_LIMIT", "2")))
+    except (TypeError, ValueError):
+        return 2
+
+
+def _provider_slow_seconds() -> float:
+    """Wall-clock seconds above which a successful response counts as a strike."""
+    try:
+        return float(os.environ.get("OPENROUTER_PROVIDER_SLOW_SECONDS", "60"))
+    except (TypeError, ValueError):
+        return 60.0
+
+
 class OpenRouterClient:
     def __init__(self, api_key: str | None = None, *, url: str = OPENROUTER_URL):
         self.api_key = api_key or os.environ.get("OPENROUTER_API_KEY")
         self.url = url
+        # Sticky per-run strike counts: model -> provider name -> strikes. A
+        # provider that times out or responds slowly accrues strikes and, once it
+        # reaches the limit, is rotated to the back of provider.order for the rest
+        # of the run instead of being retried first on every later request.
+        self._provider_strikes: dict[str, dict[str, int]] = {}
         if not self.api_key: raise RuntimeError("OPENROUTER_API_KEY is not set")
+
+    def _record_provider_strike(self, model: str, provider: str) -> None:
+        strikes = self._provider_strikes.setdefault(model, {})
+        strikes[provider] = strikes.get(provider, 0) + 1
+
+    def _effective_provider_order(self, model: str, base_order: list[str]) -> list[str]:
+        """Return ``base_order`` with struck-out providers rotated to the back.
+
+        Relative order within the kept group and within the demoted group is
+        preserved, so a single slow provider simply drops to last preference.
+        """
+        strikes = self._provider_strikes.get(model, {})
+        limit = _provider_strike_limit()
+        demoted = [p for p in base_order if strikes.get(p, 0) >= limit]
+        if not demoted:
+            return list(base_order)
+        kept = [p for p in base_order if strikes.get(p, 0) < limit]
+        return kept + demoted
     def complete(self, request: LLMRequest) -> LLMResponse:
         payload = {"model": request.model, "messages": request.messages, "temperature": request.temperature}
         max_tokens = os.environ.get("OPENROUTER_MAX_TOKENS", "10000")
         payload["max_tokens"] = int(max_tokens)
         provider_order = _provider_order_for_model(request.model)
         if provider_order:
-            payload["provider"] = {"order": provider_order, "allow_fallbacks": len(provider_order) > 1}
+            effective = self._effective_provider_order(request.model, provider_order)
+            payload["provider"] = {"order": effective, "allow_fallbacks": len(effective) > 1}
         reasoning_effort = _reasoning_effort_for_model(request.model)
         if reasoning_effort:
             payload["reasoning"] = {"effort": reasoning_effort}
@@ -103,12 +143,26 @@ class OpenRouterClient:
         try:
             attempts = int(os.environ.get("OPENROUTER_NODE_ATTEMPTS", os.environ.get("OPENROUTER_CURL_ATTEMPTS", "4")))
             timeout_seconds = float(os.environ.get("OPENROUTER_NODE_TIMEOUT_SECONDS", "20"))
+            slow_seconds = _provider_slow_seconds()
+            model = payload.get("model", "")
+            base_order = _provider_order_for_model(model) if model else None
             last_error = ""
             env = dict(os.environ)
             env["OPENROUTER_API_KEY"] = self.api_key
             env["OPENROUTER_URL"] = self.url
             env["OPENROUTER_BODY_PATH"] = body_path
             for attempt in range(1, attempts + 1):
+                # Re-apply sticky provider demotion before every attempt so a
+                # provider that struck out on an earlier attempt (or earlier
+                # request this run) is no longer tried first.
+                lead_provider = None
+                if base_order:
+                    effective = self._effective_provider_order(model, base_order)
+                    payload["provider"] = {"order": effective, "allow_fallbacks": len(effective) > 1}
+                    lead_provider = effective[0] if effective else None
+                    with open(body_path, "w", encoding="utf-8") as fh:
+                        json.dump(payload, fh)
+                started = time.monotonic()
                 try:
                     proc = subprocess.run(
                         ["node", "-e", _NODE_FETCH_SCRIPT],
@@ -121,6 +175,8 @@ class OpenRouterClient:
                     )
                 except subprocess.TimeoutExpired as exc:
                     last_error = f"node fetch timed out after {exc.timeout} seconds"
+                    if lead_provider:
+                        self._record_provider_strike(model, lead_provider)
                     if attempt == attempts:
                         break
                     time.sleep(min(3 * attempt, 20))
@@ -129,6 +185,11 @@ class OpenRouterClient:
                     data = json.loads(proc.stdout)
                     choices = data.get("choices")
                     if isinstance(choices, list) and choices:
+                        if time.monotonic() - started > slow_seconds:
+                            served_by = data.get("provider")
+                            slow_provider = served_by if isinstance(served_by, str) and served_by else lead_provider
+                            if slow_provider:
+                                self._record_provider_strike(model, slow_provider)
                         return data
                     err = data.get("error") if isinstance(data, dict) else None
                     if isinstance(err, dict):
